@@ -285,7 +285,7 @@ export async function run() {
       log.d(`outputFilePath=${outputFilePath}`)
       let outputData = normalizeData(await readJsonFile(outputFilePath)) || {}
       log.d('outputData', outputData)
-      log.d(Object.keys(outputData))
+      log.t(Object.keys(outputData))
 
       // Initialize language in cache if it doesn't exist
       if (!cache.state[lang]) {
