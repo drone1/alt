@@ -7,6 +7,12 @@
 ▐   ▐     █         █         
           ▐         ▐        
 ```
+![Anthropic](https://img.shields.io/badge/Anthropic-black?logo=anthropic&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # AI Localization Tool
 * Generates and synchronizes your app's localization strings from a reference file, for all specified languages
 * Reads a .js reference file for strings
