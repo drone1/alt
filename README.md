@@ -44,7 +44,7 @@ You can specify an exported variable instead. See `--referenceVarName`.
 
 3. Localize
 ```bash
-CLAUDE_API_KEY=<secret> alt --reference reference.js --provider claude
+ANTHROPIC_API_KEY=<secret> alt --reference reference.js --provider anthropic
 ```
 or
 ```bash
@@ -60,22 +60,33 @@ alt [options]
 Options:
   -V, --version                       output the version number
   -r, --reference <path>              Path to reference JSONC file (default language)
-  -p, --provider <name>               AI provider to use for translations (claude, openai)
+  -p, --provider <name>               AI provider to use for translations (anthropic, openai)
   -o, --output-dir <path>             Output directory for localized files (default:
                                       "/home/jonl/dev/lightwall/private/localization")
   -l, --languages <list>              Comma-separated list of language codes
   -k, --keys <list>                   Comma-separated list of keys to process
   -g, --referenceLanguage <language>  The reference file's language (default: "en")
-  -j, --referenceVarName <var name>   The exported variable in the reference file, e.g. export
-                                      default = {...} you'd use 'default' (default: "default")
+  -j, --referenceVarName <var name>   The exported variable in the reference file, e.g. export default
+                                      = {...} you'd use 'default' (default: "default")
   -f, --force                         Force regeneration of all translations (default: false)
-  -s, --simpleRenderer                Use simple renderer; useful for CI (default: false)
+  -y, --tty                           Use tty/simple renderer; useful for CI (default: false)
   -c, --config <path>                 Path to config file (default: null)
   -t, --maxRetries <integer>          Maximum retries on failure (default: 100)
-  -c, --concurrent <integer>          Maximum # of concurrent tasks (default: 5)
-  -v, --verbose                       Enables verbose spew (default: false)
-  -d, --debug                         Enables debug spew (default: false)
-  -h, --help                          display help for command
+  -e, --concurrent <integer>          Maximum # of concurrent tasks (default: 5)
+  -n, --normalize                     Normalizes output filenames (to all lower-case) (default: false)
+  --contextPrefix <value>             String to be prefixed to all keys to search for additional
+                                      context, which are passed along to the AI for context (default:
+                                      "")
+  --contextSuffix <value>             String to be suffixed to all keys to search for additional
+                                      context, which are passed along to the AI for context (default:
+                                      "")
+  --lookForContextData                If specified, ALT will pass any context data specified in the
+                                      reference file to the AI provider for translation. At least one
+                                      of --contextPrefix or --contextSuffix must be specified (default:
+                                      false)
+  --verbose                           Enables verbose spew (default: false)
+  --debug                             Enables debug spew (default: false)
+  --trace                             Enables trace spew (
 ```
 
 ## Next steps
