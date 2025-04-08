@@ -46,6 +46,10 @@ You can specify an exported variable instead. See `--referenceVarName`.
 ```bash
 CLAUDE_API_KEY=<secret> alt --reference reference.js --provider claude
 ```
+or
+```bash
+OPENAI_API_KEY=<secret> alt --reference reference.js --provider openai
+```
 This will generate all tokens in `./reference.js` for all languages specified in `config.json`/``languages``, and output to `./en.json`, `./es-mx.json`, `zh-sg.json`.
 Note that output files are all normalized to lower-case.
 
