@@ -142,7 +142,7 @@ async function loadTranslationProvider(providerName) {
   }
 }
 
-const VALID_TRANSLATION_PROVIDERS = ['claude', 'openai']
+const VALID_TRANSLATION_PROVIDERS = ['anthropic', 'openai']
 
 async function printLogo({ tagline }) {
   const fontName = 'THIS.flf'
@@ -183,7 +183,7 @@ export async function run() {
       .version(p.version)
       .description(p.description)
       .requiredOption('-r, --reference <path>', 'Path to reference JSONC file (default language)')
-      .requiredOption('-p, --provider <name>', 'AI provider to use for translations (claude, openai)')
+      .requiredOption('-p, --provider <name>', 'AI provider to use for translations (anthropic, openai)')
       .option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
       .option('-l, --languages <list>', 'Comma-separated list of language codes', languageList)
       .option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)

@@ -1,5 +1,5 @@
 export function name() {
-  return "Claude"
+  return "Anthropic"
 }
 
 export function getTranslationRequestDetails({text, context, sourceLang, targetLang, apiKey, log }) {
