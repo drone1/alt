@@ -96,9 +96,11 @@ Options:
 ```
 
 ## Next steps
-1. Add support for other providers, like Google.
-2. Add support for reference files in JSON format
-3. Less dumb backoff algorithm. Currently, any rate-limiting response from a provider will cause all Listr tasks to back off and then hammer again and see what sticks. Going for reduced code complexity here and I have higher priority tasks to work on at the moment. It's working well enough for my use case, but feel free to submit a PR if you can improve on it.
-4. Tests :]
+- Rather than adding tasks for each lang/key, only add a key task if it actually needs to be updated; otherwise spew in verbose the 'No update needed'; it's too cluttered now with all this spew and feels unnecessary
+- If a context value changes, we need to detect & re-translate
+- Add support for other providers, like Google.
+- Add support for reference files in JSON format
+- Less dumb backoff algorithm. Currently, any rate-limiting response from a provider will cause all Listr tasks to back off and then hammer again and see what sticks. Going for reduced code complexity here and I have higher priority tasks to work on at the moment. It's working well enough for my use case, but feel free to submit a PR if you can improve on it.
+- Tests :]
 
 Feel free to submit a PR.
