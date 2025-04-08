@@ -187,6 +187,8 @@ export async function run() {
       .option('-n, --normalize', `Normalizes output filenames (to all lower-case)`, false)
       .option('-v, --verbose', `Enables verbose spew`, false)
       .option('-d, --debug', `Enables debug spew`, false)
+      .option('--verbose', `Enables verbose spew`, false)
+      .option('--debug', `Enables debug spew`, false)
       .option('--trace', `Enables trace spew`, false)
       .parse(process.argv)
 
