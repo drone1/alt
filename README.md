@@ -90,5 +90,9 @@ Options:
 ```
 
 ## Next steps
-1. This project could use hints, to be passed along with each token, if present, to give context for a given token.
-2. Less dumb backoff algorithm.
+1. Add support for other providers, like Google.
+2. Add support for reference files in JSON format
+3. Less dumb backoff algorithm. Currently, any rate-limiting response from a provider will cause all Listr tasks to back off and then hammer again and see what sticks. Going for reduced code complexity here and I have higher priority tasks to work on at the moment. It's working well enough for my use case, but feel free to submit a PR if you can improve on it.
+4. Tests :]
+
+Feel free to submit a PR.
