@@ -2,7 +2,8 @@ export function name() {
   return "Claude"
 }
 
-export function getTranslationRequestDetails({text, sourceLang, targetLang, apiKey, log }) {
+export function getTranslationRequestDetails({text, context, sourceLang, targetLang, apiKey, log }) {
+  context = context?.length ? ` (and for context, this string will be used for the following reason: ${context})` : ''
   return {
     url: 'https://api.anthropic.com/v1/messages',
     params: {
@@ -11,7 +12,7 @@ export function getTranslationRequestDetails({text, sourceLang, targetLang, apiK
       messages: [
         {
           role: "user",
-          content: `Translate the following text from ${sourceLang} to ${targetLang}. Only return the translated text, no explanations or additional comments:
+          content: `Translate the following text from ${sourceLang} to ${targetLang}. Only return the translated text, no explanations or additional comments${context}:
 
 ${text}`
         }

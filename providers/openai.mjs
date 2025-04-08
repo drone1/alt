@@ -2,7 +2,8 @@ export function name() {
   return "OpenAI"
 }
 
-export function getTranslationRequestDetails({text, sourceLang, targetLang, apiKey, log }) {
+export function getTranslationRequestDetails({text, context, sourceLang, targetLang, apiKey, log }) {
+  context = context?.length ? ` (and for context, this string will be used for the following reason: ${context})` : ''
   return {
       url: 'https://api.openai.com/v1/chat/completions',
       params: {
@@ -14,7 +15,7 @@ export function getTranslationRequestDetails({text, sourceLang, targetLang, apiK
           },
           {
             role: "user", 
-            content: `Translate the following text from ${sourceLang} to ${targetLang}:\n\n${text}`
+            content: `Translate the following text from ${sourceLang} to ${targetLang}${context}:\n\n${text}`
           }
         ],
         temperature: 0.3,

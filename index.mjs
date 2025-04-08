@@ -158,6 +158,16 @@ async function printLogo({ tagline }) {
   console.log(`\n${gradient(['#000FFF', '#ed00b1'])(asciiTitle)}\n`)
 }
 
+function isContextKey({key, contextPrefix, contextSuffix}) {
+  if (contextPrefix?.length) return key.startsWith(contextPrefix)
+  if (contextSuffix?.length) return key.endsWith(contextSuffix)
+  throw new Error(`Either the context prefix or context suffix must be defined`)
+}
+
+function formatContextKeyFromKey({key, prefix, suffix}) {
+  return `${prefix}${key}${suffix}`
+}
+
 function normalizeOutputPath({dir, filename, normalize}) {
   return path.join(dir, normalize ? filename.toLowerCase() : filename)
 }
@@ -185,8 +195,15 @@ export async function run() {
       .option('-t, --maxRetries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
       .option('-e, --concurrent <integer>', `Maximum # of concurrent tasks`, 5)
       .option('-n, --normalize', `Normalizes output filenames (to all lower-case)`, false)
-      .option('-v, --verbose', `Enables verbose spew`, false)
-      .option('-d, --debug', `Enables debug spew`, false)
+      .option('--contextPrefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`, '')
+      .option('--contextSuffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`, '')
+      .option('--lookForContextData', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
+      .hook('preAction', (thisCommand) => {
+        const opts = thisCommand.opts()
+        if (opts.lookForContextData && !(opts.contextPrefix?.length || opts.contextSuffix?.length)) {
+          thisCommand.error('--lookForContextData requires at least 1 of --contextPrefix or --contextSuffix be defined and non-empty')
+        }
+      }).action(() => {}) // Dummy required for preAction to trigger
       .option('--verbose', `Enables verbose spew`, false)
       .option('--debug', `Enables debug spew`, false)
       .option('--trace', `Enables trace spew`, false)
@@ -274,6 +291,8 @@ export async function run() {
 
     appState.tasks = tasks
 
+    const addContextToTranslation = options.lookForContextData
+
     // Process each language
     for (const lang of languages) {
       log.d(`Processing language ${lang}...`)
@@ -300,19 +319,24 @@ export async function run() {
         needsUpdate = true
       }
 
-      log.d(outputData)
-
-      Object.keys(outputData).forEach(key => {
-        log.d(`Output key: "${key}", Bytes:`, Buffer.from(key).toString('hex'))
-      })
-
       tasks.add([{
           title: `Localize "${lang}"`,
           task: async (ctx, task) => {
             ctx.nextTaskDelayMs = 0
-            const keysToProcess = options.keys?.length ? options.keys : Object.keys(referenceData)
+
+            let keysToProcess = options.keys?.length
+                ? options.keys
+                : Object.keys(referenceData)
+
+            if (addContextToTranslation) {
+              keysToProcess = keysToProcess
+                  .filter(key => !isContextKey({ key, contextPrefix: options.contextPrefix, contextSuffix: options.contextSuffix }))
+            }
+
             log.d(`keys to process: ${keysToProcess.join(',')}`)
             const subtasks = keysToProcess.map(key => {
+              const contextKey = formatContextKeyFromKey({key, prefix: options.contextPrefix, suffix: options.contextSuffix})
+              log.d(`contextKey=${contextKey}`)
               const storedHashForLangAndValue = cache.state[lang]?.keyHashes?.[key]
               return {
                 title: `Processing "${key}"`,
@@ -326,6 +350,7 @@ export async function run() {
                     lang,
                     key,
                     refValue: referenceData[key],
+                    refContextValue: (contextKey in referenceData) ? referenceData[contextKey] : null,
                     curValue: (key in outputData) ? outputData[key] : null,
                     options,
                     log
@@ -390,7 +415,7 @@ export async function run() {
   }
 }
 
-async function translateKeyForLanguage({task, ctx, translationProvider, apiKey, storedHashForLangAndValue, lang, key, refValue, curValue, options: { force, referenceLanguage, maxRetries }, log}) {
+async function translateKeyForLanguage({task, ctx, translationProvider, apiKey, storedHashForLangAndValue, lang, key, refValue, refContextValue, curValue, options: { force, referenceLanguage, maxRetries }, log}) {
   const result = { success: true, translated: false, userModifiedTargetValue: false, newValue: null, error: null }
 
   // When reading keys from files
@@ -460,6 +485,7 @@ async function translateKeyForLanguage({task, ctx, translationProvider, apiKey, 
         task,
         provider: translationProvider,
         text: refValue,
+        context: refContextValue,
         sourceLang: referenceLanguage,
         targetLang: lang,
         apiKey,
@@ -536,13 +562,13 @@ export function sleep(ms, log) {
 	return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function translate({task, provider, text, sourceLang, targetLang, apiKey, attemptStr, log }) {
+async function translate({task, provider, text, context, sourceLang, targetLang, apiKey, attemptStr, log }) {
   const result = { translated: null, backoffInterval: 0 }
 
   try {
     const providerName = provider.name()
     task.title = `Preparing endpoint configuration...`
-    const { url, params, config } = provider.getTranslationRequestDetails({ text, sourceLang, targetLang, apiKey, log })
+    const { url, params, config } = provider.getTranslationRequestDetails({ text, context, sourceLang, targetLang, apiKey, log })
     task.title = `Hitting ${providerName} endpoint${attemptStr}...`
     const response = await axios.post(url, params, config)
     log.d('response headers', response.headers)
