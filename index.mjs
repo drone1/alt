@@ -195,9 +195,10 @@ export async function run() {
     const log = {
       e: function(...args) { console.error(...args)},
       w: function(...args) { console.warn(...args)},
-      d: options.debug ? function(...args) { console.debug(...args)} : () => {},
-      v: (options.debug || options.verbose) ? function(...args) { console.log(...args)} : () => {},
-      i: function(...args) { console.log(...args)}
+      i: function(...args) { console.log(...args)},
+      v: (options.trace || options.debug || options.verbose) ? function(...args) { console.log(...args)} : () => {},
+      d: (options.trace || options.debug) ? function(...args) { console.debug(...args)} : () => {},
+      t: options.trace ? function(...args) { console.debug(...args)} : () => {}
     }
 
     appState.log = log
