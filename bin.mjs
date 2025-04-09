@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import('./index.mjs')
+import('./src/alt.mjs')
   .then(mod => {
     if (typeof mod.run === 'function') {
       mod.run().then(() => console.log('Done.'))

@@ -1,9 +1,9 @@
 {
   "type": "module",
   "name": "alt",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "An AI-powered localization tool",
-  "main": "index.mjs",
+  "main": "src/index.mjs",
   "bin": {
     "alt": "./bin.mjs"
   },

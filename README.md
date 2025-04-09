@@ -32,18 +32,19 @@ npm install -g https://github.com/drone1/ai-localization-tool.git
 1. Create a config file, ``config.json``:
 ```
 {
-  "referenceLanguage": "en",
-  "languages": [
-	"en", "es-MX", "zh-SG"
-  ]
+	"appContextMessage": "Optional message for the AI where you can describe your app for context.",
+	"referenceLanguage": "en",
+	"languages": [
+		"en", "es-MX", "zh-SG"
+	]
 }
 ```
 ``languages`` is optional and can be specified with ``--languages``
 2. Create a reference file, e.g. ``reference.json``:
 ```javascript
 export default {
-    'error-msg': `Sorry, we don't know how to do anything`,
-    'success-msg': `A massive achievement`,
+	'error-msg': `Sorry, we don't know how to do anything`,
+	'success-msg': `A massive achievement`,
 }
 ```
 You can specify an exported variable instead. See `--referenceVarName`.
@@ -96,11 +97,13 @@ Options:
 ```
 
 ## Next steps
+- No need to translate the reference language, just write it directly
 - Rather than adding tasks for each lang/key, only add a key task if it actually needs to be updated; otherwise spew in verbose the 'No update needed'; it's too cluttered now with all this spew and feels unnecessary
 - If a context value changes, we need to detect & re-translate
 - Add support for other providers, like Google.
 - Add support for reference files in JSON format
 - Less dumb backoff algorithm. Currently, any rate-limiting response from a provider will cause all Listr tasks to back off and then hammer again and see what sticks. Going for reduced code complexity here and I have higher priority tasks to work on at the moment. It's working well enough for my use case, but feel free to submit a PR if you can improve on it.
+- Bug: If a user modifies a reference value, then runs and cancels, then runs again, any language/key values which would have been affected by the change will no longer be modified. The tool needs to detect these types of changes at a higher level than it is currently so that key/values can be deleted for all languages and written to disk, so that they're effectively missing and will have to be re-translated. The state that a reference value changed would be lost across runs of the tool, however, but at least the reuslt would be a fix, with this approach.
 - Tests :]
 
 Feel free to submit a PR.
