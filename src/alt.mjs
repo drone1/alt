@@ -376,7 +376,9 @@ export async function run() {
 						const storedHashForReferenceValue = cache?.referenceKeyHashes?.[key]
 						const storedHashForLangAndValue = cache.state[lang]?.keyHashes?.[key]
 						const refValue = referenceData[key]
-						const referenceValueHash = calculateHash(refValue)
+						const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
+						const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
+						const curValue = (key in outputData) ? outputData[key] : null
 						return {
 							title: `Processing "${key}"`,
 							task: async (ctx, subtask) => {
@@ -398,8 +400,8 @@ export async function run() {
 									lang,
 									key,
 									refValue,
-									refContextValue: (contextKey in referenceData) ? referenceData[contextKey] : null,
-									curValue: (key in outputData) ? outputData[key] : null,
+									refContextValue,
+									curValue,
 									options,
 									log,
 								})
