@@ -274,7 +274,7 @@ export async function run() {
 
 		const cacheFilePath = path.resolve(options.outputDir, DEFAULT_CACHE_FILENAME)
 		log.v(`Attempting to load cache file from "${cacheFilePath}"`)
-		const cache = await loadCache(cacheFilePath)
+		const readOnlyCache = await loadCache(cacheFilePath)
 		log.d(`Loaded cache file`)
 
 		// Copy to a temp location first so we can ensure it has an .mjs extension
@@ -291,7 +291,7 @@ export async function run() {
 		}
 
 		const referenceHash = calculateHash(await readFileAsText(options.reference))
-		const referenceChanged = referenceHash !== cache.referenceHash
+		const referenceChanged = referenceHash !== readOnlyCache.referenceHash
 		if (referenceChanged) {
 			log.v('Reference file has changed since last run')
 		}
@@ -303,8 +303,11 @@ export async function run() {
 			process.exit(2)
 		}
 
-		cache.referenceHash = referenceHash
-		cache.lastRun = new Date().toISOString()
+		// Clone the cache for writing to
+		const writableCache = JSON.parse(JSON.stringify(readOnlyCache))
+
+		writableCache.referenceHash = referenceHash
+		writableCache.lastRun = new Date().toISOString()
 
 		const { apiKey, api: translationProvider } = await loadTranslationProvider(options.provider)
 		log.v(`translation provider "${options.provider}" loaded`)
@@ -337,9 +340,9 @@ export async function run() {
 			log.t(Object.keys(outputData))
 
 			// Initialize language in cache if it doesn't exist
-			if (!cache.state[lang]) {
+			if (!writableCache.state[lang]) {
 				log.v(`lang ${lang} not in cache; update needed...`)
-				cache.state[lang] = { keyHashes: {} }
+				writableCache.state[lang] = { keyHashes: {} }
 			}
 
 			// Check if output file exists and has correct structure
@@ -365,16 +368,16 @@ export async function run() {
 							}))
 					}
 
-					log.d(`keys to process: ${keysToProcess.join(',')}`)
+					log.t(`keys to process: ${keysToProcess.join(',')}`)
 					const subtasks = keysToProcess.map(key => {
 						const contextKey = formatContextKeyFromKey({
 							key,
 							prefix: options.contextPrefix,
 							suffix: options.contextSuffix,
 						})
-						log.d(`contextKey=${contextKey}`)
-						const storedHashForReferenceValue = cache?.referenceKeyHashes?.[key]
-						const storedHashForLangAndValue = cache.state[lang]?.keyHashes?.[key]
+						log.t(`contextKey=${contextKey}`)
+						const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
+						const storedHashForLangAndValue = readOnlyCache.state[lang]?.keyHashes?.[key]
 						const refValue = referenceData[key]
 						const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
 						const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
@@ -417,14 +420,14 @@ export async function run() {
 
 										const hashForTranslated = calculateHash(newValue)
 										log.d(`Updating hash for translated ${lang}.${key}: ${hashForTranslated}`)
-										cache.state[lang].keyHashes[key] = hashForTranslated
+										writableCache.state[lang].keyHashes[key] = hashForTranslated
 										subtask.title = `Translated ${key}: "${newValue}"`
 
 										// Update the hash for the reference key, so we can monitor if the user changed a specific key
-										cache.referenceKeyHashes[key] = referenceValueHash
+										writableCache.referenceKeyHashes[key] = referenceValueHash
 
 										// Update state file every time, in case the user kills the process
-										await writeJsonFile(cacheFilePath, cache)
+										await writeJsonFile(cacheFilePath, writableCache)
 										log.v(`Wrote ${cacheFilePath}`)
 									} else {
 										log.v(`Keeping existing translation and hash for ${lang}/${key}...`)
