@@ -47,17 +47,35 @@ You can specify an exported variable instead of using `default`. See `--referenc
 2. Running
 ```bash
 ANTHROPIC_API_KEY=<secret>
-alt --reference ./reference.js --reference-language en --target-languages aa,es-MX,hi,zh-SG --provider anthropic
+alt --reference ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
 ```
 or
 ```bash
 OPENAI_API_KEY=<secret>
-alt --reference ./reference.js --reference-language en --target-languages aa,es-MX,hi,zh-SG --provider openai
+alt --reference ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
 ```
-This will iterate across all key/value pairs in the variable exported from `./reference.js`. For each key/value pair, and for each language specified in `config.json`/``targetLanguages``, `ALT` 
-will translate (if needed) and output files for each language (e.g. `./en.json`, `./es-MX.json`, `zh-SG.json`, etc.). Note that output files can be lower-cased if you pass the 
-``--normalize-output-filenames`` option. You can override the languages specified in the `config` with the ``--target-languages`` flag. You can process specific keys by passing a comma-delimited 
-list of keys.
+These commands would iterate across all key/value pairs in the variable exported from `./reference.js` and if needed, translate.
+
+The examples above would write `aa.json`, `bo.json`, etc., to the current working directory.
+
+`bo.json` might look like this:
+```json
+{
+	"error-msg": "དགོངས་དག་ང་ཚོས་ག་རེ་བྱེད་དགོས་མིན་ཤེས་ཀྱི་མི་འདུག",
+	"success-msg": "གྲུབ་འབྲས་\"ཆེན་པོ་\"ཞིག"
+}
+```
+
+Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option.
+
+## Rules
+Translation will occur for a given target language & key if any of the following are true:
+* The reference value was modified and translation has not yet occurred for the given language/key
+* If a context value for the given target language/key is found and has been modified. 
+* The `--force` flag is used
+
+Translation will _not_ occur if `alt` detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated 
+later, you can just delete that key/value pair from the given file.
 
 ## Config file
 [_optional_] You can create a config file for less verbose commands. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using `--config`. 
@@ -69,6 +87,9 @@ config:
 	"appContextMessage": "This is a description of my app",
 	"referenceLanguage": "ar",
 	"provider": "anthropic",
+	"lookForContextData": true,
+	"contextPrefix": "_context:",
+	"contextSuffix": "",
 	"targetLanguages": [
 		"es-MX", "zh-SG"
 	]
@@ -173,6 +194,21 @@ alt --config config.json
   --target-languages vi,aa
   --keys error-msg,title-hero,button-text-send
 ```
+
+## Formatting
+If your reference values include formatting information like this:
+```javascript
+"error-msg": "The server returned an error: %%details%%"
+```
+or
+```javascript
+"error-msg": "The server returned an error: {{details}}"
+```
+...or whatever syntax your app may use, I've found the AI's are consistently smart enough not to translate "details" into the target language.
+
+There is currently nothing in the prompt about this. I've tested with `%%var%%` syntax, and it hasn't failed yet.
+
+Please submit an issue if it causes you any trouble.
 
 ## Notes
 - `--write-on-quit` is useful for writing on shutdown (including `SIGTERM`, so yes, you can `Ctrl+C` safely). This can be useful if your server is constantly reloading due to `ALT` writing localization files to disk.
