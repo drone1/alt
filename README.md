@@ -36,7 +36,7 @@ npm install -g https://github.com/drone1/ai-localization-tool.git
 1. [Optional] Create a config file, ``config.json``:
 ```
 {
-	"appContextMessage": "Optional message for the AI where you can describe your app for context.",
+	"appContextMessage": "Optional app-level context for the AI",
 	"referenceLanguage": "en",
 	"languages": [
 		"en", "es-MX", "zh-SG"
