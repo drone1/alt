@@ -69,45 +69,47 @@ This will iterate across all key/value pairs in the variable exported from `./re
 alt [options]
 
 Options:
-  -V, --version                        output the version number
-  -r, --reference <path>               Path to reference JSONC file (default language)
-  -p, --provider <name>                AI provider to use for translations (anthropic,
-                                       openai)
-  -o, --output-dir <path>              Output directory for localized files (default:
-                                       "/home/jonl/dev/alt")
-  -l, --languages <list>               Comma-separated list of language codes
-  -k, --keys <list>                    Comma-separated list of keys to process
-  -g, --reference-language <language>  The reference file's language (default: "en")
-  -j, --reference-var-name <var name>  The exported variable in the reference file, e.g.
-                                       export default = {...} you'd use 'default' (default:
-                                       "default")
-  -f, --force                          Force regeneration of all translations (default:
-                                       false)
-  -y, --tty                            Use tty/simple renderer; useful for CI (default:
-                                       false)
-  -c, --config <path>                  Path to config file; defaults to <output
-                                       dir>/config.json (default: null)
-  -x, --max-retries <integer>          Maximum retries on failure (default: 100)
-  -e, --concurrent <integer>           Maximum # of concurrent tasks (default: 5)
-  -n, --normalize-output-filenames     Normalizes output filenames (to all lower-case)
-                                       (default: false)
-  --context-prefix <value>             String to be prefixed to all keys to search for
-                                       additional context, which are passed along to the AI
-                                       for context (default: "")
-  --context-suffix <value>             String to be suffixed to all keys to search for
-                                       additional context, which are passed along to the AI
-                                       for context (default: "")
-  --look-for-context-data              If specified, ALT will pass any context data
-                                       specified in the reference file to the AI provider
-                                       for translation. At least one of --contextPrefix or
-                                       --contextSuffix must be specified (default: false)
-  -w, --write-on-quit                  Write files to disk only on quit (including SIGTERM);
-                                       useful if running ALT causes your server to restart
-                                       constantly (default: false)
-  -v, --verbose                        Enables verbose spew (default: false)
-  -d, --debug                          Enables debug spew (default: false)
-  -t, --trace                          Enables trace spew (default: false)
-  -h, --help                           display help for command
+  -V, --version                         output the version number
+  -r, --reference <path>                Path to reference JSONC file (default language)
+  -p, --provider <name>                 AI provider to use for translations (anthropic,
+                                        openai)
+  -o, --output-dir <path>               Output directory for localized files (default:
+                                        "/home/jonl/dev/lightwall")
+  -l, --languages <list>                Comma-separated list of language codes; overrides
+                                        languages specified in the config
+  -k, --keys <list>                     Comma-separated list of keys to process
+  -rl, --reference-language <language>  The reference file's language; overrides any
+                                        'referenceLanguage' config setting
+  -j, --reference-var-name <var name>   The exported variable in the reference file, e.g.
+                                        export default = {...} you'd use 'default' (default:
+                                        "default")
+  -f, --force                           Force regeneration of all translations (default:
+                                        false)
+  -y, --tty                             Use tty/simple renderer; useful for CI (default:
+                                        false)
+  -c, --config <path>                   Path to config file; defaults to <output
+                                        dir>/config.json (default: null)
+  -x, --max-retries <integer>           Maximum retries on failure (default: 100)
+  -e, --concurrent <integer>            Maximum # of concurrent tasks (default: 5)
+  -n, --normalize-output-filenames      Normalizes output filenames (to all lower-case)
+                                        (default: false)
+  --context-prefix <value>              String to be prefixed to all keys to search for
+                                        additional context, which are passed along to the AI
+                                        for context (default: "")
+  --context-suffix <value>              String to be suffixed to all keys to search for
+                                        additional context, which are passed along to the AI
+                                        for context (default: "")
+  --look-for-context-data               If specified, ALT will pass any context data
+                                        specified in the reference file to the AI provider
+                                        for translation. At least one of --contextPrefix or
+                                        --contextSuffix must be specified (default: false)
+  -w, --write-on-quit                   Write files to disk only on quit (including
+                                        SIGTERM); useful if running ALT causes your server
+                                        to restart constantly (default: false)
+  -v, --verbose                         Enables verbose spew (default: false)
+  -d, --debug                           Enables debug spew (default: false)
+  -t, --trace                           Enables trace spew (default: false)
+  -h, --help                            display help for command
 ``` 
 
 ## Examples
