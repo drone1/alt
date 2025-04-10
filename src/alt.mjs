@@ -620,16 +620,14 @@ async function rmDir(dir) {
 	}
 }
 
-async function shutdown(appState, exit) {
-	console.log('Shutting down...')
+async function shutdown(appState, kill) {
+	if (kill) console.log('Forcing shutdown...')
 
-	if (appState) {
-		if (appState?.tmpDir) {
-			await rmDir(appState.tmpDir)
-		}
+	if (appState?.tmpDir) {
+		await rmDir(appState.tmpDir)
 	}
 
-	if (exit) process.exit(1)
+	if (kill) process.exit(1)
 }
 
 export function sleep(ms, log) {
