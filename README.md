@@ -18,7 +18,9 @@
 * Reads a .js reference file for strings
 * Localizes using AI as needed, writing to a .json file per language
 * User-modifications to output files are safe
-* Supports multiple AI providers: Claude, OpenAI
+* Additional context can be given per string (see `--contextPrefix`, `--contextSuffix`)
+* App-level context (see `appContextMessage`)
+* Supports multiple AI providers: Claude, OpenAI (see `--provider`)
 
 ## Installation
 ```bash
@@ -29,7 +31,7 @@ or
 npm install -g https://github.com/drone1/ai-localization-tool.git
 ```
 ## Setup
-1. Create a config file, ``config.json``:
+1. [Optional] Create a config file, ``config.json``:
 ```
 {
 	"appContextMessage": "Optional message for the AI where you can describe your app for context.",
@@ -40,22 +42,23 @@ npm install -g https://github.com/drone1/ai-localization-tool.git
 }
 ```
 ``languages`` is optional and can be specified with ``--languages``
-2. Create a reference file, e.g. ``reference.json``:
+2. Create a reference file for your reference data, ``reference.js``. Example data:
 ```javascript
 export default {
 	'error-msg': `Sorry, we don't know how to do anything`,
 	'success-msg': `A massive achievement`,
 }
 ```
+Use whatever filename you prefer, but currently a .js extension is required.
 You can specify an exported variable instead. See `--referenceVarName`.
 
 3. Localize
 ```bash
-ANTHROPIC_API_KEY=<secret> alt --reference reference.js --provider anthropic
+ANTHROPIC_API_KEY=<secret> alt --config config.js --reference reference.js --provider anthropic
 ```
 or
 ```bash
-OPENAI_API_KEY=<secret> alt --reference reference.js --provider openai
+OPENAI_API_KEY=<secret> alt --config config.js --reference reference.js --provider openai
 ```
 This will generate all tokens in `./reference.js` for all languages specified in `config.json`/``languages``, and output to `./en.json`, `./es-mx.json`, `zh-sg.json`.
 Note that output files are all normalized to lower-case.
@@ -65,40 +68,77 @@ Note that output files are all normalized to lower-case.
 alt [options]
 
 Options:
-  -V, --version                       output the version number
-  -r, --reference <path>              Path to reference JSONC file (default language)
-  -p, --provider <name>               AI provider to use for translations (anthropic, openai)
-  -o, --output-dir <path>             Output directory for localized files (default:
-                                      "/home/jonl/dev/lightwall/private/localization")
-  -l, --languages <list>              Comma-separated list of language codes
-  -k, --keys <list>                   Comma-separated list of keys to process
-  -g, --referenceLanguage <language>  The reference file's language (default: "en")
-  -j, --referenceVarName <var name>   The exported variable in the reference file, e.g. export default
-                                      = {...} you'd use 'default' (default: "default")
-  -f, --force                         Force regeneration of all translations (default: false)
-  -y, --tty                           Use tty/simple renderer; useful for CI (default: false)
-  -c, --config <path>                 Path to config file (default: null)
-  -t, --maxRetries <integer>          Maximum retries on failure (default: 100)
-  -e, --concurrent <integer>          Maximum # of concurrent tasks (default: 5)
-  -n, --normalize                     Normalizes output filenames (to all lower-case) (default: false)
-  --contextPrefix <value>             String to be prefixed to all keys to search for additional
-                                      context, which are passed along to the AI for context (default:
-                                      "")
-  --contextSuffix <value>             String to be suffixed to all keys to search for additional
-                                      context, which are passed along to the AI for context (default:
-                                      "")
-  --lookForContextData                If specified, ALT will pass any context data specified in the
-                                      reference file to the AI provider for translation. At least one
-                                      of --contextPrefix or --contextSuffix must be specified (default:
-                                      false)
-  --verbose                           Enables verbose spew (default: false)
-  --debug                             Enables debug spew (default: false)
-  --trace                             Enables trace spew (
+  -V, --version                        output the version number
+  -r, --reference <path>               Path to reference JSONC file (default language)
+  -p, --provider <name>                AI provider to use for translations (anthropic, openai)
+  -o, --output-dir <path>              Output directory for localized files (default: "/home/jonl/dev/alt")
+  -l, --languages <list>               Comma-separated list of language codes
+  -k, --keys <list>                    Comma-separated list of keys to process
+  -g, --reference-language <language>  The reference file's language (default: "en")
+  -j, --reference-var-name <var name>  The exported variable in the reference file, e.g. export default =
+                                       {...} you'd use 'default' (default: "default")
+  -f, --force                          Force regeneration of all translations (default: false)
+  -y, --tty                            Use tty/simple renderer; useful for CI (default: false)
+  -c, --config <path>                  Path to config file; defaults to <output dir>/config.json (default:
+                                       null)
+  -x, --max-retries <integer>          Maximum retries on failure (default: 100)
+  -e, --concurrent <integer>           Maximum # of concurrent tasks (default: 5)
+  -n, --normalize-output-filenames     Normalizes output filenames (to all lower-case) (default: false)
+  --context-prefix <value>             String to be prefixed to all keys to search for additional context,
+                                       which are passed along to the AI for context (default: "")
+  --context-suffix <value>             String to be suffixed to all keys to search for additional context,
+                                       which are passed along to the AI for context (default: "")
+  --look-for-context-data              If specified, ALT will pass any context data specified in the
+                                       reference file to the AI provider for translation. At least one of
+                                       --contextPrefix or --contextSuffix must be specified (default:
+                                       false)
+  -w, --write-on-quit                  Write files to disk only on quit (including SIGTERM); useful if
+                                       running ALT causes your server to restart constantly (default:
+                                       false)
+  -v, --verbose                        Enables verbose spew (default: false)
+  -d, --debug                          Enables debug spew (default: false)
+  -t, --trace                          Enables trace spew (default: false)
+  -h, --help                           display help for command
+``` 
+
+## Examples
+### Example I
+* Import from ``loc.js``
+* Look for exported variable ``data``
+* Translate with Claude
+* Look for context keys starting with `_context:`
+* Write to disk on quit or SIGTERM only
+* Write output files to the current working directory
+```bash
+alt --reference loc.js
+  --reference-var-name data
+  --provider anthropic
+  --look-for-context-data
+  --context-prefix _context:
+  --write-on-quit
+```
+### Example II
+* Import config from `./localization-config.json`
+* Import from ``loc.js``
+* Look for exported ``default`` value
+* Translate with ChatGPT
+* Look for context keys ending with `[context]`
+* Write to disk repeatedly, as changes are processed
+* Write files to `./localization`
+```bash
+alt --config ./localization-config.json
+  --reference loc.js
+  --output-dir localization
+  --provider openai
+  --look-for-context-data
+  --context-suffix "[context]"
 ```
 
+## Notes
+- `--writeOnQuit` is useful for writing on shutdown (including `SIGTERM`, so yes, you can `Ctrl+C` safely). This can be useful if your server is constantly reloading due to `ALT` writing localization files to disk.
+
 ## Next steps
-- --saveOnQuit option, to delay writing any language files to disk until shutdown. Currently, running a long-running translation process causes my app server to restart constantly
-- No need to translate the reference language, just write it directly
+- No need to translate the reference language; just write it directly
 - Rather than adding tasks for each lang/key, only add a key task if it actually needs to be updated; otherwise spew in verbose the 'No update needed'; it's too cluttered now with all this spew and feels unnecessary
 - If a context value changes, we need to detect & re-translate
 - Add support for other providers, like Google.

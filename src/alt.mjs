@@ -8,7 +8,8 @@ import stripJsonComments from 'strip-json-comments'
 import figlet from 'figlet'
 import gradient from 'gradient-string'
 import * as locale from 'locale-codes'
-import * as fs from 'fs/promises'
+import * as fs from 'fs'
+import * as fsp from 'fs/promises'
 import * as crypto from 'crypto'
 import * as path from 'path'
 import { TRANSLATION_FAILED_RESPONSE_TEXT } from './consts.js'
@@ -20,18 +21,32 @@ const DEFAULT_CONFIG_FILENAME = 'config.json'
 const OVERLOADED_BACKOFF_INTERVAL_MS = 30 * 1000
 
 const CWD = process.cwd()
-const appState = {}
+const appState = {
+	filesToWrite: {},	// Map of file path => JSON data to write
+
+	log: {
+		e: function (...args) {
+			console.error(...args)
+		},
+		w: function (...args) {
+			console.warn(...args)
+		},
+		i: function (...args) {
+			console.log(...args)
+		},
+	},
+}
 
 function unique(array) {
 	return [...new Set(array)]
 }
 
 // Helper function to parse comma-separated list
-function languageList(value) {
+function languageList(value, log) {
 	const languages = unique(value.split(',').map(item => item.trim()))
 	const invalid = languages.filter(lang => !locale.getByTag(lang))
 	if (invalid.length) {
-		console.error(`Found invalid language(s): ${invalid.join(', ')}`)
+		log.e(`Found invalid language(s): ${invalid.join(', ')}`)
 		process.exit(1)
 	}
 	return languages
@@ -48,7 +63,7 @@ function calculateHash(content) {
 
 async function readFileAsText(filePath) {
 	try {
-		return await fs.readFile(filePath, 'utf8')
+		return await fsp.readFile(filePath, 'utf8')
 	} catch (error) {
 		if (error.code === 'ENOENT') {
 			return null
@@ -122,16 +137,50 @@ function bufferToUtf8(buffer) {
 	return String(buffer)
 }
 
+function dirExists(dir, log) {
+	try {
+		log.d(`fetching stats for ${dir}...`)
+		return fs.statSync(dir).isDirectory()
+	} catch (error) {
+		console.error('aslkdjalksdfjlaksjd')
+		log.e(error)
+		return false
+	}
+}
+
 // Write JSON file
-async function writeJsonFile(filePath, data) {
+function writeJsonFile(filePath, data, log) {
+	assertValidPath(filePath)
+	assertIsObj(data)
+	log.v(`Preparing to write ${filePath}...`)
+
 	// Create normalized version of data with consistent key encoding
+	log.d(`Normaliziing data...`)
 	const normalizedData = {}
 	for (const [key, value] of Object.entries(data)) {
 		normalizedData[normalizeKey(key)] = value
 	}
+	log.d(`Done.`)
 
-	await fs.mkdir(path.dirname(filePath), { recursive: true })
-	await fs.writeFile(filePath, JSON.stringify(normalizedData, null, 2), 'utf8')
+	try {
+		const dir = path.dirname(filePath)
+		log.d(`Ensuring directory ${dir} exists...`)
+		if (!dirExists(dir, log)) {
+			log.d(`Directory ${dir} did not exist; creating...`)
+			fs.mkdirSync(dir, { recursive: true })
+		}
+		log.d(`Done.`)
+	} catch (err) {
+		log.e(err)
+	}
+
+	log.i(`Writing ${filePath}...`)
+	try {
+		fs.writeFileSync(filePath, JSON.stringify(normalizedData, null, 2), 'utf8')
+	} catch (err) {
+		log.e(err)
+	}
+	log.d(`Done.`)
 }
 
 async function loadCache(path) {
@@ -156,10 +205,10 @@ async function loadTranslationProvider(providerName) {
 
 const VALID_TRANSLATION_PROVIDERS = ['anthropic', 'openai']
 
-async function printLogo({ tagline }) {
+async function printLogo({ tagline, log }) {
 	const fontName = 'THIS.flf'
 	const fontPath = path.resolve(__dirname, `../assets/figlet-fonts/${fontName}`)
-	const fontData = await fs.readFile(fontPath, 'utf8')
+	const fontData = await fsp.readFile(fontPath, 'utf8')
 	figlet.parseFont(fontName, fontData)
 	const asciiTitle = figlet.textSync('ALT', {
 		font: fontName,
@@ -167,7 +216,7 @@ async function printLogo({ tagline }) {
 		verticalLayout: 'default',
 	})
 
-	console.log(`\n${gradient(['#000FFF', '#ed00b1'])(asciiTitle)}\n`)
+	log.i(`\n${gradient(['#000FFF', '#ed00b1'])(asciiTitle)}\n`)
 }
 
 function isContextKey({ key, contextPrefix, contextSuffix }) {
@@ -186,6 +235,9 @@ function normalizeOutputPath({ dir, filename, normalize }) {
 
 // Main function
 export async function run() {
+	const { log } = appState
+
+	let exitCode = 0
 	try {
 		const p = await readJsonFile(path.resolve(__dirname, '../package.json'))
 		if (!p) throw new Error(`Couldn't read 'package.json'`)
@@ -197,19 +249,19 @@ export async function run() {
 			.requiredOption('-r, --reference <path>', 'Path to reference JSONC file (default language)')
 			.requiredOption('-p, --provider <name>', 'AI provider to use for translations (anthropic, openai)')
 			.option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
-			.option('-l, --languages <list>', 'Comma-separated list of language codes', languageList)
+			.option('-l, --languages <list>', 'Comma-separated list of language codes', value => languageList(value, log))
 			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
-			.option('-g, --referenceLanguage <language>', `The reference file's language`, 'en')
-			.option('-j, --referenceVarName <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
+			.option('-g, --reference-language <language>', `The reference file's language`, 'en')
+			.option('-j, --reference-var-name <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
 			.option('-f, --force', 'Force regeneration of all translations', false)
 			.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
-			.option('-c, --config <path>', 'Path to config file', null)
-			.option('-t, --maxRetries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
+			.option('-c, --config <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`, null)
+			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
 			.option('-e, --concurrent <integer>', `Maximum # of concurrent tasks`, 5)
-			.option('-n, --normalize', `Normalizes output filenames (to all lower-case)`, false)
-			.option('--contextPrefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`, '')
-			.option('--contextSuffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`, '')
-			.option('--lookForContextData', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
+			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case)`, false)
+			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`, '')
+			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`, '')
+			.option('--look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
 			.hook('preAction', (thisCommand) => {
 				const opts = thisCommand.opts()
 				if (opts.lookForContextData && !(opts.contextPrefix?.length || opts.contextSuffix?.length)) {
@@ -217,43 +269,32 @@ export async function run() {
 				}
 			}).action(() => {
 		}) // Dummy required for preAction to trigger
-			.option('--verbose', `Enables verbose spew`, false)
-			.option('--debug', `Enables debug spew`, false)
-			.option('--trace', `Enables trace spew`, false)
+			.option('-w, --write-on-quit', `Write files to disk only on quit (including SIGTERM); useful if running ALT causes your server to restart constantly`, false)
+			.option('-v, --verbose', `Enables verbose spew`, false)
+			.option('-d, --debug', `Enables debug spew`, false)
+			.option('-t, --trace', `Enables trace spew`, false)
 			.parse(process.argv)
 
-		await printLogo({ tagline: p.description })
+		await printLogo({ tagline: p.description, log })
 		const options = program.opts()
 
-		const log = {
-			e: function (...args) {
-				console.error(...args)
-			},
-			w: function (...args) {
-				console.warn(...args)
-			},
-			i: function (...args) {
-				console.log(...args)
-			},
-			v: (options.trace || options.debug || options.verbose) ? function (...args) {
-				console.log(...args)
-			} : () => {
-			},
-			d: (options.trace || options.debug) ? function (...args) {
-				console.debug(...args)
-			} : () => {
-			},
-			t: options.trace ? function (...args) {
-				console.debug(...args)
-			} : () => {
-			},
+		// Init optional logging functions
+		log.v = (options.trace || options.debug || options.verbose) ? function (...args) {
+			console.log(...args)
+		} : () => {
 		}
-
-		appState.log = log
+		log.d = (options.trace || options.debug) ? function (...args) {
+			console.debug(...args)
+		} : () => {
+		}
+		log.t = options.trace ? function (...args) {
+			console.debug(...args)
+		} : () => {
+		}
 
 		// Validate provider
 		if (!VALID_TRANSLATION_PROVIDERS.includes(options.provider)) {
-			console.error(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
+			log.e(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
 			process.exit(2)
 		}
 
@@ -273,6 +314,7 @@ export async function run() {
 		}
 
 		const cacheFilePath = path.resolve(options.outputDir, DEFAULT_CACHE_FILENAME)
+
 		log.v(`Attempting to load cache file from "${cacheFilePath}"`)
 		const readOnlyCache = await loadCache(cacheFilePath)
 		log.d(`Loaded cache file`)
@@ -299,7 +341,7 @@ export async function run() {
 		// Get languages from CLI or config
 		const languages = options.languages || config.languages
 		if (!languages || !languages.length) {
-			console.error('Error: No languages specified. Use --languages option or add languages to your config file')
+			log.e('Error: No languages specified. Use --languages option or add languages to your config file')
 			process.exit(2)
 		}
 
@@ -308,6 +350,10 @@ export async function run() {
 
 		writableCache.referenceHash = referenceHash
 		writableCache.lastRun = new Date().toISOString()
+
+		// Always write this file, since it changes every run ('lastRun')
+		assertValidPath(cacheFilePath)
+		appState.filesToWrite[cacheFilePath] = writableCache
 
 		const { apiKey, api: translationProvider } = await loadTranslationProvider(options.provider)
 		log.v(`translation provider "${options.provider}" loaded`)
@@ -329,25 +375,26 @@ export async function run() {
 			log.d(`Processing language ${lang}...`)
 			let stringsTranslatedForLanguage = 0
 
+			let outputDataModified = false
+
 			const outputFilePath = normalizeOutputPath({
 				dir: options.outputDir,
 				filename: `${lang}.json`,
-				normalize: options.normalize,
+				normalize: options.normalizeOutputFilenames,
 			})
 			log.d(`outputFilePath=${outputFilePath}`)
+
+			// Read existing output data
 			let outputData = normalizeData(await readJsonFile(outputFilePath)) || {}
-			log.t('outputData', outputData)
-			log.t(Object.keys(outputData))
+			if (!outputData) {
+				outputData = {}
+				outputDataModified = true
+			}
 
 			// Initialize language in cache if it doesn't exist
 			if (!writableCache.state[lang]) {
 				log.v(`lang ${lang} not in cache; update needed...`)
 				writableCache.state[lang] = { keyHashes: {} }
-			}
-
-			// Check if output file exists and has correct structure
-			if (!outputData) {
-				outputData = {}
 			}
 
 			tasks.add([{
@@ -413,10 +460,16 @@ export async function run() {
 									++stringsTranslatedForLanguage
 
 									if (translated) {
-										// Write updated translations
+										outputDataModified = true
 										outputData[key] = newValue
-										await writeJsonFile(outputFilePath, outputData)
-										log.v(`Wrote ${outputFilePath}`)
+
+										// Write real-time translation updates
+										if (!options.writeOnQuit) {
+											await writeJsonFile(outputFilePath, outputData, log)
+											log.v(`Wrote ${outputFilePath}`)
+										} else {
+											log.v(`Delaying write for ${outputFilePath} due to --writeOnQuit...`)
+										}
 
 										const hashForTranslated = calculateHash(newValue)
 										log.d(`Updating hash for translated ${lang}.${key}: ${hashForTranslated}`)
@@ -427,8 +480,12 @@ export async function run() {
 										writableCache.referenceKeyHashes[key] = referenceValueHash
 
 										// Update state file every time, in case the user kills the process
-										await writeJsonFile(cacheFilePath, writableCache)
-										log.v(`Wrote ${cacheFilePath}`)
+										if (!options.writeOnQuit) {
+											await writeJsonFile(cacheFilePath, writableCache, log)
+											log.v(`Wrote ${cacheFilePath}`)
+										} else {
+											log.v(`Delaying write for ${cacheFilePath} due to --writeOnQuit...`)
+										}
 									} else {
 										log.v(`Keeping existing translation and hash for ${lang}/${key}...`)
 
@@ -440,12 +497,19 @@ export async function run() {
 										}
 									}
 
-									// This will allow the app to shutdown with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving immediately but rendering is far behind
+									// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving immediately but rendering is far behind
 									await sleep(1)
 								} else if (error) {
 									throw new Error(error)
 								}
-							}
+
+								log.d('writeOnQuit', options.writeOnQuit)
+								log.d(outputDataModified)
+								if (options.writeOnQuit && outputDataModified && !(outputFilePath in appState.filesToWrite)) {
+									log.d(`Noting write-on-quit needed for ${outputFilePath}...`)
+									appState.filesToWrite[outputFilePath] = outputData
+								}
+							}	// End of task function
 						}
 					})
 
@@ -461,10 +525,15 @@ export async function run() {
 		}
 
 		await tasks.run()
-		await shutdown(appState, false)
 	} catch (error) {
-		console.error('Error:', error)  // NB: 'log' doesn't exist here
-		process.exit(2)
+		log.e('Error:', error)
+		exitCode = 2
+	}
+
+	await shutdown(appState, false)
+
+	if (exitCode > 0) {
+		process.exit(exitCode)
 	}
 }
 
@@ -590,7 +659,7 @@ async function translateKeyForLanguage({
 }
 
 async function mkTmpDir() {
-	return await fs.mkdtemp(path.join(os.tmpdir(), 'alt-'))
+	return await fsp.mkdtemp(path.join(os.tmpdir(), 'alt-'))
 }
 
 function ensureExtension(filename, extension) {
@@ -603,28 +672,44 @@ async function copyFileToTempAndEnsureExtension({ filePath, tmpDir, ext }) {
 	try {
 		const fileName = ensureExtension(path.basename(filePath), ext)
 		const destPath = path.join(tmpDir, fileName)
-		await fs.copyFile(filePath, destPath)
+		await fsp.copyFile(filePath, destPath)
 		return destPath
 	} catch (error) {
-		console.error(`Error copying file to temp directory: ${error.message}`)
+		log.e(`Error copying file to temp directory: ${error.message}`)
 		throw error
 	}
 }
 
-async function rmDir(dir) {
+function rmDir(dir, log) {
 	try {
-		await fs.rm(dir, { recursive: true, force: true })
+		fs.rmSync(dir, { recursive: true, force: true })
+		log.d(`Removed dir ${dir}`)
 	} catch (error) {
-		console.error(`Error cleaning up temp directory "${dir}": ${error.message}`)
+		log.e(`Error cleaning up temp directory "${dir}": ${error.message}`)
 		throw error
 	}
 }
 
-async function shutdown(appState, kill) {
-	if (kill) console.log('Forcing shutdown...')
+function shutdown(appState, kill) {
+	const { log, filesToWrite } = appState
+
+	if (kill) log.i('Forcing shutdown...')
+
+	// Write any data to disk
+	//log.d('filesToWrite keys:', Object.keys(filesToWrite))
+	let filesWrittenCount = 0
+	for (const path of Object.keys(filesToWrite)) {
+		log.d('path:', path)
+		const json = filesToWrite[path]
+		log.d('json:', json)
+		writeJsonFile(path, json, appState.log)
+		++filesWrittenCount
+	}
+
+	log.d(`Wrote ${filesWrittenCount} files to disk.`)
 
 	if (appState?.tmpDir) {
-		await rmDir(appState.tmpDir)
+		rmDir(appState.tmpDir, log)
 	}
 
 	if (kill) process.exit(1)
@@ -696,8 +781,28 @@ async function translate({
 	return result
 }
 
+function assert(b, msg) {
+	if (!b) {
+		debugger
+		throw new Error(msg || `Assertion failed`)
+	}
+}
+
+function assertIsNonEmptyString(s, msg) {
+	assert(s?.length, msg || `parameter was not a non-empty string`)
+}
+
+function assertValidPath(path, msg) {
+	assertIsNonEmptyString(path, msg || `parameter was not a valid path`)
+}
+
+function assertIsObj(x, msg) {
+	assert(typeof x === 'object', msg || `parameter was not an object`)
+}
+
 // Shutdown in the normal render mode may seem to be failing, but technically it's not; if you're processing all languages,
 // and a lot of tokens do not need to be updated, the promises have likely already completed but rendering takes ages to
 // catch up; this means SIGTERM will only work if there are strings that need translation, since they take actual time
-process.on('SIGINT', async () => await shutdown(appState, true))
-process.on('SIGTERM', async () => await shutdown(appState, true))
+// NB: Using async fs API's isn't reliable here; use the sync API otherwise only the first file can be written to disk
+process.on('SIGINT', () => shutdown(appState, true))
+process.on('SIGTERM', () => shutdown(appState, true))
