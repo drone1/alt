@@ -247,11 +247,11 @@ export async function run() {
 			.version(p.version)
 			.description(p.description)
 			.requiredOption('-r, --reference <path>', 'Path to reference JSONC file (default language)')
-			.requiredOption('-p, --provider <name>', 'AI provider to use for translations (anthropic, openai)')
-			.option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
-			.option('-l, --languages <list>', 'Comma-separated list of language codes; overrides languages specified in the config', value => languageList(value, log))
-			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 			.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
+			.option('-p, --provider <name>', `AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting`)
+			.option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
+			.option('-l, --languages <list>', `Comma-separated list of language codes; overrides any 'languages' config setting`, value => languageList(value, log))
+			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 			.option('-j, --reference-var-name <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
 			.option('-f, --force', 'Force regeneration of all translations', false)
 			.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
@@ -292,16 +292,6 @@ export async function run() {
 		} : () => {
 		}
 
-		// Validate provider
-		if (!VALID_TRANSLATION_PROVIDERS.includes(options.provider)) {
-			log.e(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
-			process.exit(2)
-		}
-
-		// Create a tmp dir for storing the .mjs reference file; we can't dynamically import .js files directly, so we make a copy...
-		const tmpDir = await mkTmpDir()
-		appState.tmpDir = tmpDir
-
 		// Load config file or create default
 		const configFilePath = options.config ??
 			path.resolve(options.outputDir, DEFAULT_CONFIG_FILENAME)
@@ -309,6 +299,13 @@ export async function run() {
 		let config = await readJsonFile(configFilePath) || {
 			languages: [],
 			referenceLanguage: null
+		}
+
+		// Validate provider
+		const provider = options.provider ?? config.provider
+		if (!VALID_TRANSLATION_PROVIDERS.includes(options.provider)) {
+			log.e(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
+			process.exit(2)
 		}
 
 		const referenceLanguage = options.referenceLanguage || config.referenceLanguage
@@ -329,6 +326,10 @@ export async function run() {
 		log.v(`Attempting to load cache file from "${cacheFilePath}"`)
 		const readOnlyCache = await loadCache(cacheFilePath)
 		log.d(`Loaded cache file`)
+
+		// Create a tmp dir for storing the .mjs reference file; we can't dynamically import .js files directly, so we make a copy...
+		const tmpDir = await mkTmpDir()
+		appState.tmpDir = tmpDir
 
 		// Copy to a temp location first so we can ensure it has an .mjs extension
 		const tmpReferencePath = await copyFileToTempAndEnsureExtension({
