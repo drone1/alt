@@ -236,7 +236,6 @@ function normalizeOutputPath({ dir, filename, normalize }) {
 export async function run() {
 	const { log } = appState
 
-	let exitCode = 0
 	try {
 		const p = await readJsonFile(path.resolve(__dirname, '../package.json'))
 		if (!p) throw new Error(`Couldn't read 'package.json'`)
@@ -259,6 +258,10 @@ export async function run() {
 			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
 			.option('-e, --concurrent <integer>', `Maximum # of concurrent tasks`, 5)
 			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case)`, false)
+			.option('-w, --write-on-quit', `Write files to disk only on quit (including SIGTERM); useful if running ALT causes your server to restart constantly`, false)
+			.option('-v, --verbose', `Enables verbose spew`, false)
+			.option('-d, --debug', `Enables debug spew`, false)
+			.option('-t, --trace', `Enables trace spew`, false)
 			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
@@ -267,31 +270,45 @@ export async function run() {
 				if (opts.lookForContextData && !(opts.contextPrefix?.length || opts.contextSuffix?.length)) {
 					thisCommand.error('--lookForContextData requires at least 1 of --contextPrefix or --contextSuffix be defined and non-empty')
 				}
-			}).action(() => {
-		}) // Dummy required for preAction to trigger
-			.option('-w, --write-on-quit', `Write files to disk only on quit (including SIGTERM); useful if running ALT causes your server to restart constantly`, false)
-			.option('-v, --verbose', `Enables verbose spew`, false)
-			.option('-d, --debug', `Enables debug spew`, false)
-			.option('-t, --trace', `Enables trace spew`, false)
-			.parse(process.argv)
+			})
+			.action(async (thisCommand) => {
+			})	// Dummy action() for preAction
+
+		program
+			.command('translate', { isDefault: true }) // This makes it the default command
+			.action(async () => {
+				const options = program.opts()
+				initLog({ options, log })
+				await runTranslation({ options, log })
+			})
+
+		program.parse(process.argv)
 
 		await printLogo({ tagline: p.description, log })
-		const options = program.opts()
+	} catch (error) {
+		log.e(error)
+	}
+}
 
-		// Init optional logging functions
-		log.v = (options.trace || options.debug || options.verbose) ? function (...args) {
-			console.log(...args)
-		} : () => {
-		}
-		log.d = (options.trace || options.debug) ? function (...args) {
-			console.debug(...args)
-		} : () => {
-		}
-		log.t = options.trace ? function (...args) {
-			console.debug(...args)
-		} : () => {
-		}
+function initLog({ options, log }) {
+	// Init optional logging functions
+	log.v = (options.trace || options.debug || options.verbose) ? function(...args) {
+		console.log(...args)
+	} : () => {
+	}
+	log.d = (options.trace || options.debug) ? function(...args) {
+		console.debug(...args)
+	} : () => {
+	}
+	log.t = options.trace ? function(...args) {
+		console.debug(...args)
+	} : () => {
+	}
+}
 
+async function runTranslation({ options, log }) {
+	let exitCode = 0
+	try {
 		// Load config file or create default
 		const configFilePath = options.config ??
 			path.resolve(options.outputDir, DEFAULT_CONFIG_FILENAME)
@@ -409,132 +426,135 @@ export async function run() {
 				writableCache.state[lang] = { keyHashes: {} }
 			}
 
-			tasks.add([{
-				title: `Localize "${lang}"`,
-				task: async (ctx, task) => {
-					ctx.nextTaskDelayMs = 0
+			tasks.add([
+				{
+					title: `Localize "${lang}"`,
+					task: async (ctx, task) => {
+						ctx.nextTaskDelayMs = 0
 
-					let keysToProcess = options.keys?.length
-						? options.keys
-						: Object.keys(referenceData)
+						let keysToProcess = options.keys?.length
+							? options.keys
+							: Object.keys(referenceData)
 
-					if (addContextToTranslation) {
-						keysToProcess = keysToProcess
-							.filter(key => !isContextKey({
-								key,
-								contextPrefix: options.contextPrefix ?? config.contextPrefix,
-								contextSuffix: options.contextSuffix ?? config.contextSuffix
-							}))
-					}
-
-					log.t(`keys to process: ${keysToProcess.join(',')}`)
-					const subtasks = keysToProcess.map(key => {
-						const contextKey = formatContextKeyFromKey({
-							key,
-							prefix: options.contextPrefix,
-							suffix: options.contextSuffix,
-						})
-						log.t(`contextKey=${contextKey}`)
-						const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
-						const storedHashForLangAndValue = readOnlyCache.state[lang]?.keyHashes?.[key]
-						const refValue = referenceData[key]
-						const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
-						const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
-						const curValue = (key in outputData) ? outputData[key] : null
-						return {
-							title: `Processing "${key}"`,
-							task: async (ctx, subtask) => {
-								const {
-									success,
-									translated,
-									newValue,
-									userModifiedTargetValue,
-									error,
-								} = await translateKeyForLanguage({
-									task: subtask,
-									ctx,
-									config,
-									translationProvider,
-									apiKey,
-									appContextMessage,
-									referenceValueHash,
-									storedHashForReferenceValue,
-									storedHashForLangAndValue,
-									lang,
+						if (addContextToTranslation) {
+							keysToProcess = keysToProcess
+								.filter(key => !isContextKey({
 									key,
-									refValue,
-									refContextValue,
-									curValue,
-									options,
-									log,
-								})
+									contextPrefix: options.contextPrefix ?? config.contextPrefix,
+									contextSuffix: options.contextSuffix ?? config.contextSuffix
+								}))
+						}
 
-								if (success) {
-									++stringsTranslatedForLanguage
+						log.t(`keys to process: ${keysToProcess.join(',')}`)
+						const subtasks = keysToProcess.map(key => {
+							const contextKey = formatContextKeyFromKey({
+								key,
+								prefix: options.contextPrefix,
+								suffix: options.contextSuffix
+							})
+							log.t(`contextKey=${contextKey}`)
+							const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
+							const storedHashForLangAndValue = readOnlyCache.state[lang]?.keyHashes?.[key]
+							const refValue = referenceData[key]
+							const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
+							const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
+							const curValue = (key in outputData) ? outputData[key] : null
+							return {
+								title: `Processing "${key}"`,
+								task: async (ctx, subtask) => {
+									const {
+										success,
+										translated,
+										newValue,
+										userModifiedTargetValue,
+										error
+									} = await translateKeyForLanguage({
+										task: subtask,
+										ctx,
+										config,
+										translationProvider,
+										apiKey,
+										appContextMessage,
+										referenceValueHash,
+										storedHashForReferenceValue,
+										storedHashForLangAndValue,
+										lang,
+										key,
+										refValue,
+										refContextValue,
+										curValue,
+										options,
+										log
+									})
 
-									if (translated) {
-										outputDataModified = true
-										outputData[key] = newValue
+									if (success) {
+										++stringsTranslatedForLanguage
 
-										// Write real-time translation updates
-										if (!options.writeOnQuit) {
-											await writeJsonFile(outputFilePath, outputData, log)
-											log.v(`Wrote ${outputFilePath}`)
+										if (translated) {
+											outputDataModified = true
+											outputData[key] = newValue
+
+											// Write real-time translation updates
+											if (!options.writeOnQuit) {
+												await writeJsonFile(outputFilePath, outputData, log)
+												log.v(`Wrote ${outputFilePath}`)
+											} else {
+												log.v(`Delaying write for ${outputFilePath} due to --writeOnQuit...`)
+											}
+
+											const hashForTranslated = calculateHash(newValue)
+											log.d(`Updating hash for translated ${lang}.${key}: ${hashForTranslated}`)
+											writableCache.state[lang].keyHashes[key] = hashForTranslated
+											subtask.title = `Translated ${key}: "${newValue}"`
+
+											// Update the hash for the reference key, so we can monitor if the user changed a specific key
+											writableCache.referenceKeyHashes[key] = referenceValueHash
+
+											// Update state file every time, in case the user kills the process
+											if (!options.writeOnQuit) {
+												await writeJsonFile(cacheFilePath, writableCache, log)
+												log.v(`Wrote ${cacheFilePath}`)
+											} else {
+												log.v(`Delaying write for ${cacheFilePath} due to --writeOnQuit...`)
+											}
 										} else {
-											log.v(`Delaying write for ${outputFilePath} due to --writeOnQuit...`)
+											log.v(`Keeping existing translation and hash for ${lang}/${key}...`)
+
+											// Allow the user to directly edit/tweak output key values
+											if (userModifiedTargetValue) {
+												subtask.title = `Skipping ${key}; value modified by user`
+											} else {
+												subtask.title = `No update needed for ${key}`
+											}
 										}
 
-										const hashForTranslated = calculateHash(newValue)
-										log.d(`Updating hash for translated ${lang}.${key}: ${hashForTranslated}`)
-										writableCache.state[lang].keyHashes[key] = hashForTranslated
-										subtask.title = `Translated ${key}: "${newValue}"`
-
-										// Update the hash for the reference key, so we can monitor if the user changed a specific key
-										writableCache.referenceKeyHashes[key] = referenceValueHash
-
-										// Update state file every time, in case the user kills the process
-										if (!options.writeOnQuit) {
-											await writeJsonFile(cacheFilePath, writableCache, log)
-											log.v(`Wrote ${cacheFilePath}`)
-										} else {
-											log.v(`Delaying write for ${cacheFilePath} due to --writeOnQuit...`)
-										}
-									} else {
-										log.v(`Keeping existing translation and hash for ${lang}/${key}...`)
-
-										// Allow the user to directly edit/tweak output key values
-										if (userModifiedTargetValue) {
-											subtask.title = `Skipping ${key}; value modified by user`
-										} else {
-											subtask.title = `No update needed for ${key}`
-										}
+										// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving
+										// immediately but rendering is far behind
+										await sleep(1)
+									} else if (error) {
+										throw new Error(error)
 									}
 
-									// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving immediately but rendering is far behind
-									await sleep(1)
-								} else if (error) {
-									throw new Error(error)
-								}
+									log.d('writeOnQuit', options.writeOnQuit)
+									log.d(outputDataModified)
+									if (options.writeOnQuit && outputDataModified && !(outputFilePath in appState.filesToWrite)) {
+										log.d(`Noting write-on-quit needed for ${outputFilePath}...`)
+										appState.filesToWrite[outputFilePath] = outputData
+									}
+								}	// End of task function
+							}
+						})
 
-								log.d('writeOnQuit', options.writeOnQuit)
-								log.d(outputDataModified)
-								if (options.writeOnQuit && outputDataModified && !(outputFilePath in appState.filesToWrite)) {
-									log.d(`Noting write-on-quit needed for ${outputFilePath}...`)
-									appState.filesToWrite[outputFilePath] = outputData
-								}
-							}	// End of task function
-						}
-					})
-
-					return task.newListr(
-						subtasks, {
-							concurrent: parseInt(options.concurrent),
-							rendererOptions: { collapse: true, persistentOutput: true },
-							registerSignalListeners: true,
-						},
-					)
+						return task.newListr(
+							subtasks, {
+								concurrent: parseInt(options.concurrent),
+								rendererOptions: { collapse: true, persistentOutput: true },
+								registerSignalListeners: true
+							}
+						)
+					}
 				}
-			}])
+			])
 		}
 
 		await tasks.run()
