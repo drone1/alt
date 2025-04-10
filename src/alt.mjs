@@ -259,8 +259,8 @@ export async function run() {
 			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
 			.option('-e, --concurrent <integer>', `Maximum # of concurrent tasks`, 5)
 			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case)`, false)
-			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`, '')
-			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`, '')
+			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
+			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
 			.hook('preAction', (thisCommand) => {
 				const opts = thisCommand.opts()
@@ -298,6 +298,9 @@ export async function run() {
 		log.v(`Attempting to load config file from "${configFilePath}"`)
 		let config = await readJsonFile(configFilePath) || {
 			targetLanguages: [],
+			lookForContextData: true,
+			contextPrefix: '',
+			contextSuffix: '',
 			referenceLanguage: null
 		}
 
@@ -377,7 +380,7 @@ export async function run() {
 
 		appState.tasks = tasks
 
-		const addContextToTranslation = options.lookForContextData
+		const addContextToTranslation = options.lookForContextData || config.lookForContextData
 
 		// Process each language
 		for (const lang of targetLanguages) {
@@ -419,8 +422,8 @@ export async function run() {
 						keysToProcess = keysToProcess
 							.filter(key => !isContextKey({
 								key,
-								contextPrefix: options.contextPrefix,
-								contextSuffix: options.contextSuffix,
+								contextPrefix: options.contextPrefix ?? config.contextPrefix,
+								contextSuffix: options.contextSuffix ?? config.contextSuffix
 							}))
 					}
 
