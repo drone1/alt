@@ -97,6 +97,7 @@ Options:
 ```
 
 ## Next steps
+- --saveOnQuit option, to delay writing any language files to disk until shutdown. Currently, running a long-running translation process causes my app server to restart constantly
 - No need to translate the reference language, just write it directly
 - Rather than adding tasks for each lang/key, only add a key task if it actually needs to be updated; otherwise spew in verbose the 'No update needed'; it's too cluttered now with all this spew and feels unnecessary
 - If a context value changes, we need to detect & re-translate
