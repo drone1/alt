@@ -773,7 +773,7 @@ async function translate({
 		const response = await axios.post(url, params, config)
 		log.t('response headers', response.headers)
 		const translated = provider.getResult(response, log)
-		if (!translated?.length) throw new Error(`${providerName} translated text to empty string`)
+		if (!translated?.length) throw new Error(`${providerName} translated text to empty string. You may need to top up your credits.`)
 		log.d(`${translated}`)
 		if (translated === TRANSLATION_FAILED_RESPONSE_TEXT) throw new Error(`${providerName} failed to translate string to ${targetLang}; string: ${text}`)
 		result.translated = translated
