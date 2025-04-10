@@ -658,7 +658,7 @@ async function translateKeyForLanguage({
 			}
 		}
 
-		if (!newValue?.length) throw new Error(`Translation was empty`)
+		if (!newValue?.length) throw new Error(`Translation was empty; target lanugage=${lang}; key=${key}; text=${refValue}`)
 
 		log.d('translated text', newValue)
 		result.translated = true
@@ -742,6 +742,7 @@ async function translate({
 							 attemptStr,
 							 log,
 						 }) {
+	log.d(`[translate] targetLang=${targetLang}; text=${text}`)
 	const result = { translated: null, backoffInterval: 0 }
 
 	try {
