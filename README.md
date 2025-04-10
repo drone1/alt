@@ -33,36 +33,49 @@ or
 npm install -g https://github.com/drone1/ai-localization-tool.git
 ```
 ## Setup
-1. Create a config file, ``config.json``:
-```
-{
-	"appContextMessage": "Optional app-level context for the AI",
-	"referenceLanguage": "en",
-	"languages": [
-		"en", "es-MX", "zh-SG"
-	]
-}
-```
-``languages`` is optional and can be specified with ``--languages``
-2. Create a reference file for your reference data, ``reference.js``. Example data:
+Create a reference file for your reference data. For example, ``reference.js``:
 ```javascript
 export default {
 	'error-msg': `Sorry, we don't know how to do anything`,
-	'success-msg': `A massive achievement`,
+	'success-msg': `A massive "achievement"`,
+	'_context:success-msg': `This text is for a button when a user completes a task`
 }
 ```
 Use whatever filename you prefer, but currently a .js extension is required.
-You can specify an exported variable instead. See `--referenceVarName`.
+You can specify an exported variable instead of using `default`. See `--referenceVarName`.
 
-3. Localize
+2. Running
 ```bash
-ANTHROPIC_API_KEY=<secret> alt --config config.js --reference reference.js --provider anthropic
+ANTHROPIC_API_KEY=<secret>
+alt --reference ./reference.js --reference-language en --target-languages aa,es-MX,hi,zh-SG --provider anthropic
 ```
 or
 ```bash
-OPENAI_API_KEY=<secret> alt --config config.js --reference reference.js --provider openai
+OPENAI_API_KEY=<secret>
+alt --reference ./reference.js --reference-language en --target-languages aa,es-MX,hi,zh-SG --provider openai
 ```
-This will iterate across all key/value pairs in the variable exported from `./reference.js`. For each key/value pair, and for each language specified in `config.json`/``languages``, `ALT` will translate (if needed) and output files for each language (e.g. `./en.json`, `./es-MX.json`, `zh-SG.json`, etc.). Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option. You can override the languages specified in the `config` with the ``--languages`` flag. You can process specific keys by passing a comma-delimited list of keys.
+This will iterate across all key/value pairs in the variable exported from `./reference.js`. For each key/value pair, and for each language specified in `config.json`/``targetLanguages``, `ALT` 
+will translate (if needed) and output files for each language (e.g. `./en.json`, `./es-MX.json`, `zh-SG.json`, etc.). Note that output files can be lower-cased if you pass the 
+``--normalize-output-filenames`` option. You can override the languages specified in the `config` with the ``--target-languages`` flag. You can process specific keys by passing a comma-delimited 
+list of keys.
+
+## Config file
+[_optional_] You can create a config file for less verbose commands. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using `--config`. 
+Example 
+config:
+
+```
+{
+	"appContextMessage": "This is a description of my app",
+	"referenceLanguage": "ar",
+	"provider": "anthropic",
+	"targetLanguages": [
+		"es-MX", "zh-SG"
+	]
+}
+```
+
+Any of the above settings can be specified using command-line arguments (`--app-context-message`, `--reference-language`, `--provider`, `--target-languages`). Command-line arguments take precedence.
 
 ## Usage
 ```
@@ -71,24 +84,27 @@ alt [options]
 Options:
   -V, --version                         output the version number
   -r, --reference <path>                Path to reference JSONC file (default language)
-  -p, --provider <name>                 AI provider to use for translations (anthropic,
-                                        openai)
-  -o, --output-dir <path>               Output directory for localized files (default:
-                                        "/home/jonl/dev/lightwall")
-  -l, --languages <list>                Comma-separated list of language codes; overrides
-                                        languages specified in the config
-  -k, --keys <list>                     Comma-separated list of keys to process
   -rl, --reference-language <language>  The reference file's language; overrides any
                                         'referenceLanguage' config setting
+  -p, --provider <name>                 AI provider to use for translations (anthropic,
+                                        openai); overrides any 'provider' config setting
+  -o, --output-dir <path>               Output directory for localized files (default:
+                                        "/home/jonl/dev/alt")
+  -l, --target-languages <list>         Comma-separated list of language codes; overrides
+                                        any 'taretLanguages' config setting
+  -k, --keys <list>                     Comma-separated list of keys to process
   -j, --reference-var-name <var name>   The exported variable in the reference file, e.g.
                                         export default = {...} you'd use 'default' (default:
                                         "default")
   -f, --force                           Force regeneration of all translations (default:
                                         false)
+  -m, --app-context-message <message>   Description of your app to give context. Passed with
+                                        each translation request; overrides any
+                                        'appContextMessage' config setting
   -y, --tty                             Use tty/simple renderer; useful for CI (default:
                                         false)
   -c, --config <path>                   Path to config file; defaults to <output
-                                        dir>/config.json (default: null)
+                                        dir>/config.json
   -x, --max-retries <integer>           Maximum retries on failure (default: 100)
   -e, --concurrent <integer>            Maximum # of concurrent tasks (default: 5)
   -n, --normalize-output-filenames      Normalizes output filenames (to all lower-case)
@@ -109,7 +125,7 @@ Options:
   -v, --verbose                         Enables verbose spew (default: false)
   -d, --debug                           Enables debug spew (default: false)
   -t, --trace                           Enables trace spew (default: false)
-  -h, --help                            display help for command
+  -h, --help                            display help for comman
 ``` 
 
 ## Examples
@@ -154,12 +170,14 @@ alt --config config.json
   --provider openai
   --look-for-context-data
   --context-suffix "[context]"
-  --languages vi,aa
+  --target-languages vi,aa
   --keys error-msg,title-hero,button-text-send
 ```
 
 ## Notes
 - `--write-on-quit` is useful for writing on shutdown (including `SIGTERM`, so yes, you can `Ctrl+C` safely). This can be useful if your server is constantly reloading due to `ALT` writing localization files to disk.
+- On CI, use `--tty` for Listr2's `simpleRenderer`
+- Languages are specified using BCP47 tags.
 
 ## Next steps
 - Add Google provider.

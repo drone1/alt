@@ -142,7 +142,6 @@ function dirExists(dir, log) {
 		log.d(`fetching stats for ${dir}...`)
 		return fs.statSync(dir).isDirectory()
 	} catch (error) {
-		console.error('aslkdjalksdfjlaksjd')
 		log.e(error)
 		return false
 	}
@@ -250,10 +249,11 @@ export async function run() {
 			.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
 			.option('-p, --provider <name>', `AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting`)
 			.option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
-			.option('-l, --languages <list>', `Comma-separated list of language codes; overrides any 'languages' config setting`, value => languageList(value, log))
+			.option('-l, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
 			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 			.option('-j, --reference-var-name <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
 			.option('-f, --force', 'Force regeneration of all translations', false)
+			.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
 			.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
 			.option('-c, --config <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
 			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
@@ -297,7 +297,7 @@ export async function run() {
 			path.resolve(options.outputDir, DEFAULT_CONFIG_FILENAME)
 		log.v(`Attempting to load config file from "${configFilePath}"`)
 		let config = await readJsonFile(configFilePath) || {
-			languages: [],
+			targetLanguages: [],
 			referenceLanguage: null
 		}
 
@@ -314,12 +314,16 @@ export async function run() {
 			process.exit(2)
 		}
 
-		// Get languages from CLI or config
-		const languages = options.languages || config.languages
-		if (!languages || !languages.length) {
-			log.e('Error: No languages specified. Use --languages option or add languages to your config file')
+		// Get target languages from CLI or config
+		const targetLanguages = options.targetLanguages || config.targetLanguages
+		if (!targetLanguages || !targetLanguages.length) {
+			log.e(`Error: No target languages specified. Use --target-languages option or add 'targetLanguages' to your config file`)
 			process.exit(2)
 		}
+
+		// No app context message is OK
+		const appContextMessage = options.appContextMessage ?? config.appContextMessage ?? null
+		log.d(`appContextMessage:`, appContextMessage)
 
 		const cacheFilePath = path.resolve(options.outputDir, DEFAULT_CACHE_FILENAME)
 
@@ -376,7 +380,7 @@ export async function run() {
 		const addContextToTranslation = options.lookForContextData
 
 		// Process each language
-		for (const lang of languages) {
+		for (const lang of targetLanguages) {
 			log.d(`Processing language ${lang}...`)
 			let stringsTranslatedForLanguage = 0
 
@@ -449,6 +453,7 @@ export async function run() {
 									config,
 									translationProvider,
 									apiKey,
+									appContextMessage,
 									referenceValueHash,
 									storedHashForReferenceValue,
 									storedHashForLangAndValue,
@@ -545,9 +550,9 @@ export async function run() {
 async function translateKeyForLanguage({
 										   task,
 										   ctx,
-										   config,
 										   translationProvider,
 										   apiKey,
+																				 appContextMessage,
 										   referenceValueHash,
 										   storedHashForReferenceValue,
 										   storedHashForLangAndValue,
@@ -636,7 +641,7 @@ async function translateKeyForLanguage({
 				context: refContextValue,
 				sourceLang: referenceLanguage,
 				targetLang: lang,
-				appContextMessage: config.appContextMessage ?? null,
+				appContextMessage,
 				apiKey,
 				maxRetries: maxRetries,
 				attemptStr,
@@ -706,7 +711,7 @@ function shutdown(appState, kill) {
 	for (const path of Object.keys(filesToWrite)) {
 		log.d('path:', path)
 		const json = filesToWrite[path]
-		log.d('json:', json)
+		log.t('json:', json)
 		writeJsonFile(path, json, appState.log)
 		++filesWrittenCount
 	}
