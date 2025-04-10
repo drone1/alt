@@ -23,14 +23,15 @@ Translates all strings in a reference `.js` file to all target languages using A
 * Additional context can be given per string [`--contextPrefix`, `--contextSuffix`]
 * Supports multiple AI providers: Claude, OpenAI [`--provider`]
 * User-modifications to output files are safe
+* Languages are specified using BCP47 tags
 
 ## Installation
 ```bash
-npm install -g github:drone1/ai-localization-tool
+npm install -g github:drone1/alt
 ```
 or
 ```bash
-npm install -g https://github.com/drone1/ai-localization-tool.git
+npm install -g https://github.com/drone1/alt.git
 ```
 ## Setup
 Create a reference file for your reference data. For example, ``reference.js``:
@@ -58,7 +59,7 @@ These commands would iterate across all key/value pairs in the variable exported
 
 The examples above would write `aa.json`, `bo.json`, etc., to the current working directory.
 
-`bo.json` might look like this:
+Sample output:
 ```json
 {
 	"error-msg": "དགོངས་དག་ང་ཚོས་ག་རེ་བྱེད་དགོས་མིན་ཤེས་ཀྱི་མི་འདུག",
@@ -66,7 +67,7 @@ The examples above would write `aa.json`, `bo.json`, etc., to the current workin
 }
 ```
 
-Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option.
+Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
 
 ## Rules
 Translation will occur for a given target language & key if any of the following are true:
@@ -78,7 +79,8 @@ Translation will _not_ occur if `alt` detects that the given value in the target
 later, you can just delete that key/value pair from the given file.
 
 ## Config file
-[_optional_] You can create a config file for less verbose commands. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using `--config`. 
+[_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
+`--config`. 
 Example 
 config:
 
@@ -100,7 +102,7 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Usage
 ```
-alt [options]
+alt [options] [command]
 
 Options:
   -V, --version                         output the version number
@@ -147,6 +149,9 @@ Options:
   -d, --debug                           Enables debug spew (default: false)
   -t, --trace                           Enables trace spew (default: false)
   -h, --help                            display help for comman
+  
+Commands:
+  translate (default)
 ``` 
 
 ## Examples
@@ -155,7 +160,6 @@ Options:
 * Look for exported variable ``data``
 * Translate with Claude
 * Look for context keys starting with `_context:`
-* Write to disk on quit or SIGTERM only
 * Write output files to the current working directory
 ```bash
 alt --reference loc.js
@@ -163,7 +167,6 @@ alt --reference loc.js
   --provider anthropic
   --look-for-context-data
   --context-prefix _context:
-  --write-on-quit
 ```
 ### Example II
 * Import config from `./localization-config.json`
@@ -204,16 +207,23 @@ or
 ```javascript
 "error-msg": "The server returned an error: {{details}}"
 ```
-...or whatever syntax your app may use, I've found the AI's are consistently smart enough not to translate "details" into the target language.
+...or whatever syntax your app may use, I've found the AI's consistently smart enough not to translate `%%details%%` or `{{details}}` into the target language, and will leave it untouched.
 
-There is currently nothing in the prompt about this. I've tested with `%%var%%` syntax, and it hasn't failed yet.
+Internally, there is currently nothing in the prompt about this. I've tested with `%%var%%` syntax, and it hasn't failed yet.
 
 Please submit an issue if it causes you any trouble.
 
-## Notes
-- `--write-on-quit` is useful for writing on shutdown (including `SIGTERM`, so yes, you can `Ctrl+C` safely). This can be useful if your server is constantly reloading due to `ALT` writing localization files to disk.
-- On CI, use `--tty` for Listr2's `simpleRenderer`
-- Languages are specified using BCP47 tags.
+## Additional notes
+### Delayed vs. realtime writes
+By default, `alt` will not write to disk until the tool is shutting down (including SIGTERM &ndash; yes, `Ctrl+C` is safe).
+
+This behavior is useful if your application is monitoring the output directory and you don't want your server 
+constantly restarting, for example.
+
+If you prefer to write updates to disk in real-time (anytime any output data changes, due to translation, etc), you can pass `--realtime-writes`.
+
+### CI
+You may want to use `--tty` for more useful output.
 
 ## Next steps
 - Add Google provider.
