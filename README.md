@@ -33,7 +33,7 @@ or
 npm install -g https://github.com/drone1/ai-localization-tool.git
 ```
 ## Setup
-1. [Optional] Create a config file, ``config.json``:
+1. Create a config file, ``config.json``:
 ```
 {
 	"appContextMessage": "Optional app-level context for the AI",
@@ -62,8 +62,7 @@ or
 ```bash
 OPENAI_API_KEY=<secret> alt --config config.js --reference reference.js --provider openai
 ```
-This will generate all tokens in `./reference.js` for all languages specified in `config.json`/``languages``, and output to `./en.json`, `./es-mx.json`, `zh-sg.json`.
-Note that output files are all normalized to lower-case.
+This will iterate across all key/value pairs in the variable exported from `./reference.js`. For each key/value pair, and for each language specified in `config.json`/``languages``, `ALT` will translate (if needed) and output files for each language (e.g. `./en.json`, `./es-MX.json`, `zh-SG.json`, etc.). Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option. You can override the languages specified in the `config` with the ``--languages`` flag. You can process specific keys by passing a comma-delimited list of keys.
 
 ## Usage
 ```
@@ -72,31 +71,39 @@ alt [options]
 Options:
   -V, --version                        output the version number
   -r, --reference <path>               Path to reference JSONC file (default language)
-  -p, --provider <name>                AI provider to use for translations (anthropic, openai)
-  -o, --output-dir <path>              Output directory for localized files (default: "/home/jonl/dev/alt")
+  -p, --provider <name>                AI provider to use for translations (anthropic,
+                                       openai)
+  -o, --output-dir <path>              Output directory for localized files (default:
+                                       "/home/jonl/dev/alt")
   -l, --languages <list>               Comma-separated list of language codes
   -k, --keys <list>                    Comma-separated list of keys to process
   -g, --reference-language <language>  The reference file's language (default: "en")
-  -j, --reference-var-name <var name>  The exported variable in the reference file, e.g. export default =
-                                       {...} you'd use 'default' (default: "default")
-  -f, --force                          Force regeneration of all translations (default: false)
-  -y, --tty                            Use tty/simple renderer; useful for CI (default: false)
-  -c, --config <path>                  Path to config file; defaults to <output dir>/config.json (default:
-                                       null)
+  -j, --reference-var-name <var name>  The exported variable in the reference file, e.g.
+                                       export default = {...} you'd use 'default' (default:
+                                       "default")
+  -f, --force                          Force regeneration of all translations (default:
+                                       false)
+  -y, --tty                            Use tty/simple renderer; useful for CI (default:
+                                       false)
+  -c, --config <path>                  Path to config file; defaults to <output
+                                       dir>/config.json (default: null)
   -x, --max-retries <integer>          Maximum retries on failure (default: 100)
   -e, --concurrent <integer>           Maximum # of concurrent tasks (default: 5)
-  -n, --normalize-output-filenames     Normalizes output filenames (to all lower-case) (default: false)
-  --context-prefix <value>             String to be prefixed to all keys to search for additional context,
-                                       which are passed along to the AI for context (default: "")
-  --context-suffix <value>             String to be suffixed to all keys to search for additional context,
-                                       which are passed along to the AI for context (default: "")
-  --look-for-context-data              If specified, ALT will pass any context data specified in the
-                                       reference file to the AI provider for translation. At least one of
-                                       --contextPrefix or --contextSuffix must be specified (default:
-                                       false)
-  -w, --write-on-quit                  Write files to disk only on quit (including SIGTERM); useful if
-                                       running ALT causes your server to restart constantly (default:
-                                       false)
+  -n, --normalize-output-filenames     Normalizes output filenames (to all lower-case)
+                                       (default: false)
+  --context-prefix <value>             String to be prefixed to all keys to search for
+                                       additional context, which are passed along to the AI
+                                       for context (default: "")
+  --context-suffix <value>             String to be suffixed to all keys to search for
+                                       additional context, which are passed along to the AI
+                                       for context (default: "")
+  --look-for-context-data              If specified, ALT will pass any context data
+                                       specified in the reference file to the AI provider
+                                       for translation. At least one of --contextPrefix or
+                                       --contextSuffix must be specified (default: false)
+  -w, --write-on-quit                  Write files to disk only on quit (including SIGTERM);
+                                       useful if running ALT causes your server to restart
+                                       constantly (default: false)
   -v, --verbose                        Enables verbose spew (default: false)
   -d, --debug                          Enables debug spew (default: false)
   -t, --trace                          Enables trace spew (default: false)
@@ -134,6 +141,19 @@ alt --config ./localization-config.json
   --provider openai
   --look-for-context-data
   --context-suffix "[context]"
+```
+### Example III
+* Overrides any config's languages
+* Only process the specified strings
+```bash
+alt --config config.json
+  --reference reference.js
+  --output-dir localization
+  --provider openai
+  --look-for-context-data
+  --context-suffix "[context]"
+  --languages vi,aa
+  --keys error-msg,title-hero,button-text-send
 ```
 
 ## Notes
