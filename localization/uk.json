@@ -14,5 +14,11 @@
   "translation-reason-outputFileDidNotExist": "Вихідний файл %%outputFile%% не існує",
   "translation-reason-userMissingReferenceValueHash": "Не знайдено контрольної суми",
   "translation-reason-missingOutputKey": "Наявний переклад не знайдено",
-  "translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу"
+  "translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу",
+  "msg-translation-reason-forced": "Примусове оновлення",
+  "msg-translation-reason-outputFileDidNotExist": "Вихідний файл %%outputFile%% не існує",
+  "msg-translation-reason-userMissingReferenceValueHash": "Еталонний хеш не знайдено",
+  "msg-translation-reason-userModifiedReferenceValue": "Користувач змінив рядок посилання",
+  "msg-translation-reason-missingOutputKey": "Не знайдено існуючого перекладу",
+  "msg-translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу"
 }

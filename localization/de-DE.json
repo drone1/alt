@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Keine bestehende Übersetzung gefunden",
   "translation-reason-missingOutputValueHash": "Kein Hash in der Cache-Datei gefunden",
   "msg-no-update-needed-for-key": "Kein Update für %%key%% erforderlich",
-  "msg-rate-limited-sleeping": "Rate-limitiert; pausiere für %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate-limitiert; pausiere für %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Erzwungenes Update",
+  "msg-translation-reason-outputFileDidNotExist": "Ausgabedatei %%outputFile%% existierte nicht",
+  "msg-translation-reason-userMissingReferenceValueHash": "Kein Referenzhash gefunden",
+  "msg-translation-reason-userModifiedReferenceValue": "Benutzer hat Referenzzeichenfolge geändert",
+  "msg-translation-reason-missingOutputKey": "Keine bestehende Übersetzung gefunden",
+  "msg-translation-reason-missingOutputValueHash": "Kein Hash in Cache-Datei gefunden"
 }

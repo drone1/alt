@@ -12,10 +12,10 @@ export default {
 	'msg-show-translation-result': `Translated %%key%%: "%%newValue%%"`,
 	'msg-processing-lang-and-key': `[%%progress%%%] Processing %%targetLang%% – %%key%%...`,
 
-	'translation-reason-forced': `Forced update`,
-	'translation-reason-outputFileDidNotExist': `Output file %%outputFile%% did not exist`,
-	'translation-reason-userMissingReferenceValueHash': `No reference hash found`,
-	'translation-reason-userModifiedReferenceValue': `User modified reference string`,
-	'translation-reason-missingOutputKey': `No existing translation found`,
-	'translation-reason-missingOutputValueHash': `No hash found in cache file`
+	'msg-translation-reason-forced': `Forced update`,
+	'msg-translation-reason-outputFileDidNotExist': `Output file %%outputFile%% did not exist`,
+	'msg-translation-reason-userMissingReferenceValueHash': `No reference hash found`,
+	'msg-translation-reason-userModifiedReferenceValue': `User modified reference string`,
+	'msg-translation-reason-missingOutputKey': `No existing translation found`,
+	'msg-translation-reason-missingOutputValueHash': `No hash found in cache file`
 }

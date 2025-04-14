@@ -14,5 +14,11 @@
   "translation-reason-outputFileDidNotExist": "ไฟล์ผลลัพธ์ %%outputFile%% ไม่มีอยู่",
   "translation-reason-userMissingReferenceValueHash": "ไม่พบแฮชอ้างอิง",
   "translation-reason-userModifiedReferenceValue": "ผู้ใช้ได้แก้ไขข้อความอ้างอิง",
-  "translation-reason-missingOutputValueHash": "ไม่พบแฮชในไฟล์แคช"
+  "translation-reason-missingOutputValueHash": "ไม่พบแฮชในไฟล์แคช",
+  "msg-translation-reason-forced": "การอัปเดตที่บังคับ",
+  "msg-translation-reason-outputFileDidNotExist": "ไฟล์ผลลัพธ์ %%outputFile%% ไม่มีอยู่",
+  "msg-translation-reason-userMissingReferenceValueHash": "ไม่พบแฮชอ้างอิง",
+  "msg-translation-reason-userModifiedReferenceValue": "ผู้ใช้แก้ไขสตริงอ้างอิง",
+  "msg-translation-reason-missingOutputKey": "ไม่พบคำแปลที่มีอยู่",
+  "msg-translation-reason-missingOutputValueHash": "ไม่พบแฮชในไฟล์แคช"
 }

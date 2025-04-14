@@ -14,5 +14,11 @@
   "translation-reason-userMissingReferenceValueHash": "未找到参考哈希值",
   "translation-reason-userModifiedReferenceValue": "用户修改了引用字符串",
   "translation-reason-missingOutputKey": "未找到现有翻译",
-  "translation-reason-missingOutputValueHash": "在缓存文件中未找到哈希值"
+  "translation-reason-missingOutputValueHash": "在缓存文件中未找到哈希值",
+  "msg-translation-reason-forced": "强制更新",
+  "msg-translation-reason-userMissingReferenceValueHash": "未找到引用哈希值",
+  "msg-translation-reason-userModifiedReferenceValue": "用户修改了参考字符串",
+  "msg-translation-reason-missingOutputKey": "未找到现有翻译",
+  "msg-translation-reason-missingOutputValueHash": "在缓存文件中未找到哈希值",
+  "msg-translation-reason-outputFileDidNotExist": "输出文件 %%outputFile%% 不存在"
 }

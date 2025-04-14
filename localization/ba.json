@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Baraƙar fassara bata samu ba",
   "translation-reason-missingOutputValueHash": "Ma ala wani hash a cikin fayil ɗin cache",
   "msg-no-update-needed-for-key": "Ажаралманы керек жок %%key%% үчүн",
-  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Majburi ažuriranje",
+  "msg-translation-reason-outputFileDidNotExist": "Harago %%outputFile%% faili babu",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nikin haʃ nupuun a za",
+  "msg-translation-reason-userModifiedReferenceValue": "Looydii bedreensii string",
+  "msg-translation-reason-missingOutputKey": "Ko ba si ìtumọ tí a ti ṣelọ́lẹ́",
+  "msg-translation-reason-missingOutputValueHash": "Нет хэша в файле кэша"
 }

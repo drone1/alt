@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Mövcud tərcümə tapılmadı",
   "translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı",
   "msg-no-update-needed-for-key": "%%key%% üçün yeniləmə tələb olunmur",
-  "msg-rate-limited-sleeping": "Rate lımıtlı; %%interval%% saniyə yatır...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate lımıtlı; %%interval%% saniyə yatır...%%attemptStr%%",
+  "msg-translation-reason-forced": "Məcburi yeniləmə",
+  "msg-translation-reason-outputFileDidNotExist": "Çıxış faylı %%outputFile%% mövcud deyil",
+  "msg-translation-reason-userMissingReferenceValueHash": "Referans heş tapılmadı",
+  "msg-translation-reason-userModifiedReferenceValue": "İstifadəçi istinad sətrini dəyişdi",
+  "msg-translation-reason-missingOutputKey": "Mövcud tərcümə tapılmadı",
+  "msg-translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı"
 }

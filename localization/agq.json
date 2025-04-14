@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ndiŋ a ntoŋ mɨlʉ mbu a tsu",
   "translation-reason-missingOutputValueHash": "Ɛ̀ ghè tso ha mu atu nchyɛ̀ ntsɨ'",
   "msg-no-update-needed-for-key": "Kɨ ntsɨʼɨ kɨ ŋkfɛ kɨ a %%key%%",
-  "msg-rate-limited-sleeping": "Ngɛ nzɨ fʉ̀ʉ̀; a tsa nɨɨn ghɨ nɨn ba fʉ nɨ %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Ngɛ nzɨ fʉ̀ʉ̀; a tsa nɨɨn ghɨ nɨn ba fʉ nɨ %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Nchɨsè tswe yii",
+  "msg-translation-reason-outputFileDidNotExist": "Fajì è fɛ̀ ntè %%outputFile%% ka nà tó",
+  "msg-translation-reason-userMissingReferenceValueHash": "Kpâ kènyǔ kɨ̀tɨɨŋtɨ̀",
+  "msg-translation-reason-userModifiedReferenceValue": "A fe ku le nda ghɔ̀",
+  "msg-translation-reason-missingOutputKey": "Kaa pfɛ ntè e kwàʼnə",
+  "msg-translation-reason-missingOutputValueHash": "Kà à ghʉ̀ hash à tɨghe ntɨgha à pɨ'ɨ nchwìʼɨ yi"
 }

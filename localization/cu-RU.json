@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Не обрѣтесѧ сѫщее прѣложеніе",
   "translation-reason-missingOutputValueHash": "Не ѡбрѣтесѧ хашь въ кашеистѣи дѣльницѣ",
   "msg-no-update-needed-for-key": "Нѣстъ трѣбѣ ѻбновлениꙗ длѧ %%key%%",
-  "msg-rate-limited-sleeping": "Превышенъ лимитъ запросѡвъ; ожиданїе %%interval%% сек...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Превышенъ лимитъ запросѡвъ; ожиданїе %%interval%% сек...%%attemptStr%%",
+  "msg-translation-reason-forced": "Ну́жьноѥ обновлѥ́ніѥ",
+  "msg-translation-reason-outputFileDidNotExist": "Исходный файл %%outputFile%% не существует",
+  "msg-translation-reason-userMissingReferenceValueHash": "Нѣтъ хеш-кода пѡ ссꙑлцѣ",
+  "msg-translation-reason-userModifiedReferenceValue": "Оужичьникъ измѣни строкоу съсылъкы",
+  "msg-translation-reason-missingOutputKey": "Не обнаружено существующего перевода",
+  "msg-translation-reason-missingOutputValueHash": "Не ѡбрѣтесѧ хашь въ кашевѣмь фаилѣ"
 }

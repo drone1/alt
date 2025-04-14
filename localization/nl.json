@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Geen bestaande vertaling gevonden",
   "translation-reason-missingOutputValueHash": "Geen hash gevonden in cachebestand",
   "msg-no-update-needed-for-key": "Geen update nodig voor %%key%%",
-  "msg-rate-limited-sleeping": "Rate limiet bereikt; wachten voor %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limiet bereikt; wachten voor %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Gedwongen update",
+  "msg-translation-reason-outputFileDidNotExist": "Uitvoerbestand %%outputFile%% bestond niet",
+  "msg-translation-reason-userMissingReferenceValueHash": "Geen referentiehash gevonden",
+  "msg-translation-reason-missingOutputKey": "Geen bestaande vertaling gevonden",
+  "msg-translation-reason-missingOutputValueHash": "Geen hash gevonden in cachebestand",
+  "msg-translation-reason-userModifiedReferenceValue": "Referentietekst gewijzigd door gebruiker"
 }

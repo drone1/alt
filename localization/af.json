@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Geen bestaande vertaling gevind",
   "translation-reason-missingOutputValueHash": "Geen sleutelkode gevind in die kasgeheuelêer nie",
   "msg-no-update-needed-for-key": "Geen opdatering nodig vir %%key%%",
-  "msg-rate-limited-sleeping": "Tempo beperk; slaap vir %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Tempo beperk; slaap vir %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Geforseerde opdatering",
+  "msg-translation-reason-outputFileDidNotExist": "Afvoerlêer %%outputFile%% het nie bestaan nie",
+  "msg-translation-reason-userMissingReferenceValueHash": "Geen verwysingshuts gevind",
+  "msg-translation-reason-userModifiedReferenceValue": "Gebruiker gewysigde verwysingstring",
+  "msg-translation-reason-missingOutputKey": "Geen bestaande vertaling gevind nie",
+  "msg-translation-reason-missingOutputValueHash": "Geen hutsmerker in kaslêer gevind nie"
 }

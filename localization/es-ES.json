@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "No se ha encontrado ninguna traducción existente",
   "translation-reason-missingOutputValueHash": "No se encontró hash en el archivo caché",
   "msg-no-update-needed-for-key": "No se necesita actualización para %%key%%",
-  "msg-rate-limited-sleeping": "Tasa limitada; durmiendo durante %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Tasa limitada; durmiendo durante %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Actualización forzada",
+  "msg-translation-reason-outputFileDidNotExist": "El archivo de salida %%outputFile%% no existía",
+  "msg-translation-reason-userMissingReferenceValueHash": "No se ha encontrado el hash de referencia",
+  "msg-translation-reason-userModifiedReferenceValue": "Usuario modificó cadena de referencia",
+  "msg-translation-reason-missingOutputKey": "No se ha encontrado una traducción existente",
+  "msg-translation-reason-missingOutputValueHash": "No se encontró hash en el archivo de caché"
 }

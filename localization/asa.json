@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ibi mawu a yimbwo ma isa",
   "translation-reason-missingOutputValueHash": "Ibai ihye jisipatu mana iheyeti mboki jaani",
   "msg-no-update-needed-for-key": "Isiyo haja ya kuboresha kwa %%key%%",
-  "msg-rate-limited-sleeping": "Nkutɨndɨ wʉkɨpimɨka; kʉɨndɨla kɨlala pɨtʉ %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Nkutɨndɨ wʉkɨpimɨka; kʉɨndɨla kɨlala pɨtʉ %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Mbutu kuyuma",
+  "msg-translation-reason-outputFileDidNotExist": "Apĕ ĕchũtũ %%outputFile%% lĕchǔgǔ kũsa",
+  "msg-translation-reason-userMissingReferenceValueHash": "Ikọ ŋkọpn idat mbed idi",
+  "msg-translation-reason-userModifiedReferenceValue": "Nyàkùndà nàrèàmbùwó nê nyàkùndà nàpêntèsé",
+  "msg-translation-reason-missingOutputKey": "Ahanangata ihe nsụgharị e nwere",
+  "msg-translation-reason-missingOutputValueHash": "Ma taihu itungu cha hash kwenye faili ya cache"
 }

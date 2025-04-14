@@ -14,5 +14,11 @@
   "translation-reason-outputFileDidNotExist": "Արտահանվածի ֆայլը %%outputFile%% գոյություն չունի",
   "translation-reason-userMissingReferenceValueHash": "Հղման հեշը չի գտնվել",
   "translation-reason-userModifiedReferenceValue": "Օգտատերը փոփոխել է հղման տողը",
-  "translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել"
+  "translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել",
+  "msg-translation-reason-forced": "Պարտադրված թարմացում",
+  "msg-translation-reason-outputFileDidNotExist": "Ելքային ֆայլը %%outputFile%% գոյություն չունի",
+  "msg-translation-reason-userMissingReferenceValueHash": "Հղում չի գտնվել",
+  "msg-translation-reason-userModifiedReferenceValue": "Օգտատերը փոփոխեց հղման տողը",
+  "msg-translation-reason-missingOutputKey": "Գոյություն ունեցող թարգմանություն չի գտնվել",
+  "msg-translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել"
 }

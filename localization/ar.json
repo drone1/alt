@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "لم يتم العثور على ترجمة موجودة",
   "translation-reason-missingOutputValueHash": "لم يتم العثور على هاش في ملف الكاش",
   "msg-no-update-needed-for-key": "لا يوجد تحديث مطلوب لـ %%key%%",
-  "msg-rate-limited-sleeping": "تم تقييد المعدل؛ جارٍ النوم لمدة %%interval%% ثانية...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "تم تقييد المعدل؛ جارٍ النوم لمدة %%interval%% ثانية...%%attemptStr%%",
+  "msg-translation-reason-forced": "التحديث الإجباري",
+  "msg-translation-reason-outputFileDidNotExist": "لم يكن ملف الإخراج %%outputFile%% موجودًا",
+  "msg-translation-reason-userMissingReferenceValueHash": "لم يتم العثور على قيمة التشفير المرجعية",
+  "msg-translation-reason-userModifiedReferenceValue": "تم تعديل سلسلة المرجع من قبل المستخدم",
+  "msg-translation-reason-missingOutputKey": "لا توجد ترجمة موجودة",
+  "msg-translation-reason-missingOutputValueHash": "لم يتم العثور على التجزئة في ملف التخزين المؤقت"
 }

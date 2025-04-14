@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Makaundwa badzamu woumbidwa unatengeka",
   "translation-reason-missingOutputValueHash": "Ɓɨɓaonae kwayi gwayi ŋu tiniŋu bana'a kwugboɗa",
   "msg-no-update-needed-for-key": "No shesh eza n'yi'g pom %%key%%",
-  "msg-rate-limited-sleeping": "Mgawanyiko wa kiwango; kulala kwa sekunde za %%interval%%...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Mgawanyiko wa kiwango; kulala kwa sekunde za %%interval%%...%%attemptStr%%",
+  "msg-translation-reason-forced": "Mbodza kushandisa iyo nhepfenyuro yekupedzisira",
+  "msg-translation-reason-outputFileDidNotExist": "Output file %%outputFile%% di don de",
+  "msg-translation-reason-userMissingReferenceValueHash": "Tɛ'ɛ wuni e kpaar yɛ ki",
+  "msg-translation-reason-userModifiedReferenceValue": "Muvavi uvahindili muradanho ya malemelelo",
+  "msg-translation-reason-missingOutputKey": "Kuupi tafsiri iliyopo",
+  "msg-translation-reason-missingOutputValueHash": "Hakuna hashi iliyopatikana kwenye faili ya akiba"
 }

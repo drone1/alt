@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "दंदो सोलोबाय बेयाव थानाय हेंथाइ मोनाखै",
   "translation-reason-missingOutputValueHash": "File cache आव hash मोनफिन्दि आखाय",
   "msg-no-update-needed-for-key": "%%key%% नि थाखाय सुदुर खालामनांगौनि गैया",
-  "msg-rate-limited-sleeping": "Rate limited; प्रसिपु %%interval%%s हामदां लाखिबाय ...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; प्रसिपु %%interval%%s हामदां लाखिबाय ...%%attemptStr%%",
+  "msg-translation-reason-forced": "थुलुंगा सोलायनाय",
+  "msg-translation-reason-outputFileDidNotExist": "आउटपुट फाइल %%outputFile%% दंखाया",
+  "msg-translation-reason-userMissingReferenceValueHash": "नंङै reference hash खोनाख'नाय जाय्आखै",
+  "msg-translation-reason-userModifiedReferenceValue": "ओ सोलोंथाइ स्ट्रिं खौ सुजुदों",
+  "msg-translation-reason-missingOutputKey": "जेब्लाबो आनजाद सोलायनाय मोनाखौनाय जायाखै",
+  "msg-translation-reason-missingOutputValueHash": "थिका फाइला हैश मोनाखै"
 }

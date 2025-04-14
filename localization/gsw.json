@@ -14,5 +14,11 @@
   "translation-reason-forced": "Erzwungets Update",
   "translation-reason-outputFileDidNotExist": "D Usegaabi %%outputFile%% hät nid existiert",
   "translation-reason-userModifiedReferenceValue": "Benutzer het Referänz-String gänderet",
-  "translation-reason-missingOutputKey": "Kei bestehendi Übersetzig gfunde"
+  "translation-reason-missingOutputKey": "Kei bestehendi Übersetzig gfunde",
+  "msg-translation-reason-forced": "Erzwungets Update",
+  "msg-translation-reason-outputFileDidNotExist": "Uusgabdatei %%outputFile%% het nöd existiert",
+  "msg-translation-reason-userMissingReferenceValueHash": "Ke Referenz-Häsch gfunde",
+  "msg-translation-reason-userModifiedReferenceValue": "Benutzer hät Referenztext gänderet",
+  "msg-translation-reason-missingOutputKey": "Kei bestehendi Öbersätzig gfonde",
+  "msg-translation-reason-missingOutputValueHash": "Ke Hash im Cache-File gfunde"
 }

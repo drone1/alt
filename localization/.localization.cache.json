@@ -1,5 +1,5 @@
 {
-  "referenceHash": "0ef9985fc13ac68625caaafe2c479289a836cbd7cb3a45b71812d64229e2a3be",
+  "referenceHash": "c640a5cfa3b560d4a5419b27bc361940457d824679dfba3377b46fa254442bb5",
   "referenceKeyHashes": {
     "nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
     "finished-with-errors": "785ba4b7e062d66506cf7bce6cb85dd9de9f753902a64dbd50e814cd0d1c9366",
@@ -18,7 +18,13 @@
     "msg-show-translation-result": "4f39c97c14f1e42033aba7a970bfc464577b1cc1652ac99dfc8a0bf548f7e640",
     "msg-processing-lang-and-key": "ff8482b1855e94f2744a0445fe3e523c5d540cd5fc02c9c76fe84cbc6d8dd9ea",
     "msg-no-update-needed-for-key": "76f2fe40a5bb72defe90f9e6f6656055ab7d0eba84570b6fd09f204c88f376f4",
-    "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d"
+    "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d",
+    "msg-translation-reason-forced": "c77dd1c641d2d35dd383099aceb3c3b0c169a72f5be54dbe49eeb8530c6f63eb",
+    "msg-translation-reason-outputFileDidNotExist": "69c09339ed1fcc919b7172b72e9c0fbaaeed5d3fe4e5133fd3608df905926d60",
+    "msg-translation-reason-userMissingReferenceValueHash": "eef6b13b53f94674d3981898ac262e5712539a1180f49d9b4ba0ed356a5a6cb5",
+    "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
+    "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
+    "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c"
   },
   "state": {
     "es-MX": {
@@ -40,7 +46,13 @@
         "translation-reason-missingOutputKey": "111256454d182f1296cc208ee043bef254e5d665b5059465e108f4f0c1f3448f",
         "translation-reason-missingOutputValueHash": "5d9c5682214647cbcb3676bcd6a57696012ba4672daa324dd5ba018de08b34bc",
         "msg-no-update-needed-for-key": "356f31addcf0262a99ef485c4e26bff392f611501d798c17497d424e8ca78473",
-        "msg-rate-limited-sleeping": "8a5998e6706d909909ec2e1777b501cf248537fb1d8de701835f15ec20a60d8f"
+        "msg-rate-limited-sleeping": "8a5998e6706d909909ec2e1777b501cf248537fb1d8de701835f15ec20a60d8f",
+        "msg-translation-reason-forced": "379d719817dacab8dadae55017ae164b5e8788cd0f5fde15f84ecfea2010953f",
+        "msg-translation-reason-outputFileDidNotExist": "767f804b6a7ae2f4792a54392f6ed4b152d8c0c4246edd89f9690d9d60b462a7",
+        "msg-translation-reason-userMissingReferenceValueHash": "ae725a0f6ac4a1ade0cca2c55f75277545288a1c0ffe2f27c7dc19b1772ad6c4",
+        "msg-translation-reason-userModifiedReferenceValue": "cda5ccf2a97d4797c34b64f23d46262c7840953ce68eeccfeb4b88bb06446a50",
+        "msg-translation-reason-missingOutputKey": "c2b75d4f320aab0282d8c8d3ae04f61a3495f5ffdf736aca8052cb02eb566e29",
+        "msg-translation-reason-missingOutputValueHash": "de98a66b6392e105be49da384cd64548c62a37d4e7e35d5c7632856ca693b3e8"
       }
     },
     "zh-TW": {
@@ -84,7 +96,13 @@
         "msg-show-translation-result": "4f39c97c14f1e42033aba7a970bfc464577b1cc1652ac99dfc8a0bf548f7e640",
         "msg-processing-lang-and-key": "dbb638d13438600d79b49b7037a5835cded1af8e4208d1d9fed309a302bb4043",
         "msg-no-update-needed-for-key": "76f2fe40a5bb72defe90f9e6f6656055ab7d0eba84570b6fd09f204c88f376f4",
-        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d"
+        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d",
+        "msg-translation-reason-forced": "c77dd1c641d2d35dd383099aceb3c3b0c169a72f5be54dbe49eeb8530c6f63eb",
+        "msg-translation-reason-outputFileDidNotExist": "69c09339ed1fcc919b7172b72e9c0fbaaeed5d3fe4e5133fd3608df905926d60",
+        "msg-translation-reason-userMissingReferenceValueHash": "eef6b13b53f94674d3981898ac262e5712539a1180f49d9b4ba0ed356a5a6cb5",
+        "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
+        "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
+        "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c"
       }
     },
     "aa": {
@@ -104,7 +122,13 @@
         "translation-reason-missingOutputKey": "9c516fb93f0d9df3a0fd260685d5247920b9955a67a6a64423b27803851af882",
         "translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c",
         "msg-no-update-needed-for-key": "42729800a8c7e2a21bd12f3a4fb9b153c8925405a051170ca1386ec38d9bc92a",
-        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d"
+        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d",
+        "msg-translation-reason-forced": "2426284446038bab77cb3d10253608a750194dded2676fcb240fe4c6b8b41d38",
+        "msg-translation-reason-outputFileDidNotExist": "841e1b4f787f786078f6c9aa200f5e5a198357359fcdf87a4b98c5a4e10485e2",
+        "msg-translation-reason-userMissingReferenceValueHash": "43687cc90ba581c7aa443e64427f499a9370b180cbe59bee215fdc5f97ae1f91",
+        "msg-translation-reason-userModifiedReferenceValue": "1df5960403b49e014c84aad8df1078f28409c2eb4fa6c4f5e6558be376ab308a",
+        "msg-translation-reason-missingOutputKey": "9796f80d59b195cb1e1649dd4b2249a7b935bb12f376cd0ffd3dab39ff5e0a19",
+        "msg-translation-reason-missingOutputValueHash": "1cdb931dcccfd2d6cfb3503f923ae6ae5d41fc65fd6fdc5661de318234d7e592"
       }
     },
     "af": {
@@ -124,7 +148,13 @@
         "translation-reason-missingOutputKey": "3e67773824d632b7038e05b909c4bc304130822358fb2559c1e67f132a4f6a0d",
         "translation-reason-missingOutputValueHash": "8ad1bd615d67aa5bbf875d72c9ad15f5c8671204aaf4da363555625b9fe4a70b",
         "msg-no-update-needed-for-key": "7ba44fd5e17c0cb366c90c543bd0bbbe61ecb1a02f024d80d0e4fc3ea5881994",
-        "msg-rate-limited-sleeping": "e36b73a37ac4f72bce4651e18a68cca5946cfee4a5923e204cbf90293a2cf261"
+        "msg-rate-limited-sleeping": "e36b73a37ac4f72bce4651e18a68cca5946cfee4a5923e204cbf90293a2cf261",
+        "msg-translation-reason-forced": "12d81cbbceda78a634c02f244b2ce04a707d76ac5372d503a67d0622c7c8f03e",
+        "msg-translation-reason-outputFileDidNotExist": "93c5d60ce8b50431e29ae2db8d610f7ee5043dfbcd30dbcea06891ce6eea32ad",
+        "msg-translation-reason-userMissingReferenceValueHash": "a07fde76e2a2a147cb2378583279e6f06837c31fa2cd25ad896dc3078e3ea225",
+        "msg-translation-reason-userModifiedReferenceValue": "3f269642da8218f41fb24d73219c8a54ca5f188eaa562b00032e18ea179cfe8c",
+        "msg-translation-reason-missingOutputKey": "df6b225c07983ce436f074327762d6a587869447ce65e7ddeccd44bdfa14dc2d",
+        "msg-translation-reason-missingOutputValueHash": "ec454827a869da7b883639a22b7231ba064e1db029b2e14d0a9296863dfc07c7"
       }
     },
     "agq": {
@@ -144,7 +174,13 @@
         "translation-reason-missingOutputKey": "9893601f60a9ee04b7afd5737f05b8402e0a6b315e32c32eeb953928f040ec83",
         "translation-reason-missingOutputValueHash": "58c54ef3f86e18c97e5b220c94e0cd8786f265cad1c39933cdd3f96421711e1d",
         "msg-no-update-needed-for-key": "00c50ef33025e13c2cfd77945e7d5e32fb2b76069af9e4f02547422214664b4d",
-        "msg-rate-limited-sleeping": "c7234ac82b873656484530317eb12a15f68abb30778881fbd82a16fd8418a788"
+        "msg-rate-limited-sleeping": "c7234ac82b873656484530317eb12a15f68abb30778881fbd82a16fd8418a788",
+        "msg-translation-reason-forced": "ba8b4019d24e6556ffdf188bfea8f22b622e8a280380dacaad1c4b0158664522",
+        "msg-translation-reason-outputFileDidNotExist": "c223f40e9d6211a51879808a02e0c5101fff2f5d5da52ed3e65ae447e6f8cd5b",
+        "msg-translation-reason-userMissingReferenceValueHash": "27a221a9cb95cc20e532b9e29ec83b60fa88adb1094308c802391576260f976f",
+        "msg-translation-reason-userModifiedReferenceValue": "b55aa523aafa602fe9952632b921be94ca47efef84703b8d8e89bd8a5348c7a7",
+        "msg-translation-reason-missingOutputKey": "3d13c0c72bd3aeb1239b05520e7628cbcb4f1478a702055b3e336af3b072ff10",
+        "msg-translation-reason-missingOutputValueHash": "8c7bad75e1cb3b93ff76869f712616854d5cd0f57e2ea46a1256e5246f39050e"
       }
     },
     "ak": {
@@ -164,7 +200,13 @@
         "translation-reason-missingOutputKey": "ffc357ef856b60946a55c12142d8ea76a64bb063e16cb47cc6e82fdfda31a1fc",
         "translation-reason-missingOutputValueHash": "03751ccf68f66dd15ca1dadd915cf7d1adb8c1f28d2a9403d2640cc830ee2f8c",
         "msg-no-update-needed-for-key": "194bd9760532a3c5426ab36b14225e39627c5782138a73a2d8ad1483d77d7f86",
-        "msg-rate-limited-sleeping": "60401ce588947f1442c31acc7559b1978cae2b4e4a721a186c3e3d6dab3a1cdc"
+        "msg-rate-limited-sleeping": "60401ce588947f1442c31acc7559b1978cae2b4e4a721a186c3e3d6dab3a1cdc",
+        "msg-translation-reason-forced": "bc9f8aa6aab58465e6e9547cb08a5beaa8a3e06754f47fc64822848701e86ca3",
+        "msg-translation-reason-outputFileDidNotExist": "cf6e3cd75303527fe222d3afbdb02a5099f3a037476205134b00814f30e015c6",
+        "msg-translation-reason-userMissingReferenceValueHash": "cd31ced712e34677fdf6712e11d0aaffc45d5f826209528a6ad79bc59456189a",
+        "msg-translation-reason-userModifiedReferenceValue": "d779b3516fad4dfef86bd0ca273ae616f5e93d7a69c53056de5f1a5c891dca55",
+        "msg-translation-reason-missingOutputKey": "d050e3af193c32c309f3b94ec26ef77544b1cdcae4305dd99cd999eba2965ee5",
+        "msg-translation-reason-missingOutputValueHash": "03751ccf68f66dd15ca1dadd915cf7d1adb8c1f28d2a9403d2640cc830ee2f8c"
       }
     },
     "am": {
@@ -184,7 +226,13 @@
         "translation-reason-missingOutputKey": "76e2a28c55f552cef0bc727f0f96f269aec50dbcc813a50d5952ea425a6f4538",
         "translation-reason-missingOutputValueHash": "57c6d8d6668b3925458c31deb8fbb9438cfffd039611994e92da7092c03523d0",
         "msg-no-update-needed-for-key": "c202419333b433c10ed11c05ec71f318b2c3d1f92bf8834a71b85c850f2238bc",
-        "msg-rate-limited-sleeping": "0033f2bf31847f3417546dfda89d003829c7d004fa842903ef25b8990bdac081"
+        "msg-rate-limited-sleeping": "0033f2bf31847f3417546dfda89d003829c7d004fa842903ef25b8990bdac081",
+        "msg-translation-reason-forced": "dd48f2864f54ed877577a68b233822c6aad0837fc4f8282290afd905165f920a",
+        "msg-translation-reason-outputFileDidNotExist": "c57f817a43d09a9e380be35dbb65e3980b97af7ebec2f947f2876219d8ea962f",
+        "msg-translation-reason-userMissingReferenceValueHash": "8f058187b085cc04f856ea7135fa23b8afe5f5dbd615be9c0321f85b9a70d28a",
+        "msg-translation-reason-userModifiedReferenceValue": "4b03c0c6e4778ca1295c6567802a5a40ec1996502ac35c7e68d2f012c584b2ca",
+        "msg-translation-reason-missingOutputKey": "76e2a28c55f552cef0bc727f0f96f269aec50dbcc813a50d5952ea425a6f4538",
+        "msg-translation-reason-missingOutputValueHash": "f06161177050bbea4b248481d13b292152ea79758d2aaf9ee7aa8a868d0f917b"
       }
     },
     "ar": {
@@ -204,7 +252,13 @@
         "translation-reason-missingOutputKey": "ec70bf89b48cda726d9b730a1f8acbb878ee8fe06a85ee6af351364c4b3be98d",
         "translation-reason-missingOutputValueHash": "695a3a1430b2ede06ee0eaae4b0a1760ef327f2c412e3357d7bfe6fe2c25ba78",
         "msg-no-update-needed-for-key": "751d414b4221a1f73af7502e9e76512ea2fc60375953febfb572e1450b8c5ac9",
-        "msg-rate-limited-sleeping": "d8f05939a63dbb8c1fab22258a4808af6c5eaf67a5b65844fec98865719f859e"
+        "msg-rate-limited-sleeping": "d8f05939a63dbb8c1fab22258a4808af6c5eaf67a5b65844fec98865719f859e",
+        "msg-translation-reason-forced": "b6c881eed25b6b75773e026bb1abcae536ea7e58c1cca1c46b6163d5064ca25d",
+        "msg-translation-reason-outputFileDidNotExist": "840a12f0771446745a9a2c40c2f97c3b2a28157f5ed8460e5889f02e9f682199",
+        "msg-translation-reason-userMissingReferenceValueHash": "9c8a7244e6ef1017952bee4547a3714873996a8cc801f521854680d309855cd2",
+        "msg-translation-reason-userModifiedReferenceValue": "fe57625bcf56d19483563c60c31d25440a33de3b5155684f5af731de3f2c51ae",
+        "msg-translation-reason-missingOutputKey": "7ca92eb5612e1ebfbd68d6fd25cd4a4ab0c059433cb864d4f7bb2e7b07215525",
+        "msg-translation-reason-missingOutputValueHash": "b84295cc0a82d89c77071acd9e342665ee4967bebf8120743725c08d26e790d3"
       }
     },
     "as": {
@@ -224,7 +278,13 @@
         "translation-reason-missingOutputKey": "cdde96d6f22e3dd070598f5a0155962bf8903f1e3d911ab92468f273746ce615",
         "translation-reason-missingOutputValueHash": "05cbfe9339e7d1ada321a35918a90e19aab8a6bdde936ea1f5a48234f31eb442",
         "msg-no-update-needed-for-key": "4b641e981401ac864f13c41c5d5d35f78789fd553a2b82c890218d32328f7f51",
-        "msg-rate-limited-sleeping": "7fc20e0814d6544e275d5444fb4b0cca4563b2c9f6874c0acd2ebb334b744f7a"
+        "msg-rate-limited-sleeping": "7fc20e0814d6544e275d5444fb4b0cca4563b2c9f6874c0acd2ebb334b744f7a",
+        "msg-translation-reason-forced": "da9f0869a761eac28305a7c7532cabb78c5d2c2a52990d9c2623bca6a63fb4df",
+        "msg-translation-reason-outputFileDidNotExist": "84d61d92c8463e7117adc5fd0453738cdbfbd220c1c5806326c3eaaeb7a925e6",
+        "msg-translation-reason-userMissingReferenceValueHash": "abf3c4738bb7a8a3627c5cd1fd0ab060f62cc9b3cf91f04560444466a4a56a2b",
+        "msg-translation-reason-userModifiedReferenceValue": "4a1ce89dd256edecb4c4503d75bac89d7a240e9a5bf599c5204b956a3fe6f575",
+        "msg-translation-reason-missingOutputKey": "c2b8dfa60671b5258827e3da0c2486f3c453978a150dbfb9c5c0e3e8a6232393",
+        "msg-translation-reason-missingOutputValueHash": "0c6446099b4d9c48a6f071acb84a4b5bcd8e42332883822cfa1eb245b03e9aae"
       }
     },
     "asa": {
@@ -244,7 +304,13 @@
         "translation-reason-missingOutputKey": "4898b88ab399b0a96cba73bae3a916ebd4f0b881b16b1694848f9c4fccc9c0ee",
         "translation-reason-missingOutputValueHash": "9dede43fd23787ce2e4142c4d38ea7f00008a46ce20883ea3832ac18cabdf3ec",
         "msg-no-update-needed-for-key": "aaa7ad4f1d71a8507d567b312aa9571ac88c2d21fbd4e1a892b9b35b6b0ff54a",
-        "msg-rate-limited-sleeping": "982fe1bc6dd4b2aaeff2de098be06a146a45ea968cdaa0b1c85e49bcdfc68d6b"
+        "msg-rate-limited-sleeping": "982fe1bc6dd4b2aaeff2de098be06a146a45ea968cdaa0b1c85e49bcdfc68d6b",
+        "msg-translation-reason-forced": "3a3371630a57d2809d4e333a68613745b436cd0a82c61165cdc7b59fa0d072cc",
+        "msg-translation-reason-outputFileDidNotExist": "e3c82cd5da40bf34b22b1a8b58e83f425239a838d8f6f144b33fa2984489169b",
+        "msg-translation-reason-userMissingReferenceValueHash": "cf54eb7b6eda42a88214ba5e40a2f80538d87703059c1f7210f4f6ad001e3819",
+        "msg-translation-reason-userModifiedReferenceValue": "a1c1bcc99e97ec2c8b836e4b1769d024dae00f0e2310323eef1229fddff2e445",
+        "msg-translation-reason-missingOutputKey": "c1bc2f32477728d3a60ce3969b53cb45b04825e176f248538f60fecf0035da27",
+        "msg-translation-reason-missingOutputValueHash": "98e4c1c4fc8a77dd0c5e4adf90b84cf1244f2e5a631e67e57bab2d676054be3a"
       }
     },
     "ast": {
@@ -264,7 +330,13 @@
         "translation-reason-missingOutputKey": "b93041c5eb1a7355c39d49de71a00f7f39009f5fb63e4d74a7ab7bcb63b712c5",
         "translation-reason-missingOutputValueHash": "429e864ee27ffaeac19017ea90713b9e7deff4705dc8c1e164f5e0dc21815d08",
         "msg-no-update-needed-for-key": "7a468fa69c31d24921d31788a7f8941f3b313b63daa2e58785a6d9a00fc66357",
-        "msg-rate-limited-sleeping": "d8566612d7eba08e07c649cc693bd1eaaf827d175112640601d252e9fc77c3d8"
+        "msg-rate-limited-sleeping": "d8566612d7eba08e07c649cc693bd1eaaf827d175112640601d252e9fc77c3d8",
+        "msg-translation-reason-forced": "379d719817dacab8dadae55017ae164b5e8788cd0f5fde15f84ecfea2010953f",
+        "msg-translation-reason-outputFileDidNotExist": "0cad4e3c3627cbd67a4fbb8ca43b1f1cc059f515905ccd7a4a85c6a4474d33e8",
+        "msg-translation-reason-userMissingReferenceValueHash": "ec87a14751bdf21ef78381e57ec85cef99e6a993110c718f91f9277ef283ba8f",
+        "msg-translation-reason-userModifiedReferenceValue": "7fa54290f6e873b5edbb618d0adc5f2e46b2151f81e2842a35b331fa5c68259b",
+        "msg-translation-reason-missingOutputKey": "1d23a430259b7512f31a144247ce30aa77736772de26ef2f016f0b3d33c0c9ec",
+        "msg-translation-reason-missingOutputValueHash": "6919a612e2651fb5f70b81bef0da0e902c1825472d34dd7895899fe94095b007"
       }
     },
     "az": {
@@ -284,7 +356,13 @@
         "translation-reason-missingOutputKey": "800c99b1bafcdb9d32b1e21c3926856f57399ab1ebdc3d846a1a7f1efe4bc8a9",
         "translation-reason-missingOutputValueHash": "11b4cbb5823be969fd5982e54c2618eee9ca52ab4e776456cc36967e8486d3e7",
         "msg-no-update-needed-for-key": "4a5c31deecb3249060d9048c044c5b6b27ed8cefd14bf82d5e86fae779eb6cad",
-        "msg-rate-limited-sleeping": "fb35807c84ea880ab2c96f51da22be9cf6a25cb278a7ecb457da1be03bcf049f"
+        "msg-rate-limited-sleeping": "fb35807c84ea880ab2c96f51da22be9cf6a25cb278a7ecb457da1be03bcf049f",
+        "msg-translation-reason-forced": "b81e6f86126d5a031b992ac774db6f4123f03017f57e2256cb2af73749721c0f",
+        "msg-translation-reason-outputFileDidNotExist": "6e6a5ee3f7004cd6e9a5edc251aaed053ed4c132f310f5f3899e9cd55f2e4161",
+        "msg-translation-reason-userMissingReferenceValueHash": "2fbca2910458b0835c1c32e8a030f0f4dc4a9e7b9dfe08cab011aa9df72049be",
+        "msg-translation-reason-userModifiedReferenceValue": "5772bf70a6cfe5a080f83389be3286355faebe0214b91bd4e87906c80dbd8af5",
+        "msg-translation-reason-missingOutputKey": "800c99b1bafcdb9d32b1e21c3926856f57399ab1ebdc3d846a1a7f1efe4bc8a9",
+        "msg-translation-reason-missingOutputValueHash": "11b4cbb5823be969fd5982e54c2618eee9ca52ab4e776456cc36967e8486d3e7"
       }
     },
     "ba": {
@@ -304,7 +382,13 @@
         "translation-reason-missingOutputKey": "766d8fdc4e169a1448d617aa01c3c13cf5b17ae8d8e8000ec5dd5a07be439b22",
         "translation-reason-missingOutputValueHash": "75d3a9f0b6ac39c18d8fb14572c3742f785de43ead6695f40abcb80f317e10a7",
         "msg-no-update-needed-for-key": "f3b8b300af291a0a128087df2f8d39bf7d70f18e1b09dec5b47d46fdae3a1ad4",
-        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d"
+        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d",
+        "msg-translation-reason-forced": "f06b96eea67d463ff5442722a985cf68611a2302933fc760b35e8d8ee79a0d57",
+        "msg-translation-reason-outputFileDidNotExist": "a1a3115fccf663598542bd981799b64e15294c81d9413ec25e8476d071f16dbe",
+        "msg-translation-reason-userMissingReferenceValueHash": "7a255bf66046cc866ddbf8fbd1b51b676f4fdb7c13b883e1c6152bc666f75d7d",
+        "msg-translation-reason-userModifiedReferenceValue": "8b7f23e95c21cfe3104ec38502c2124d03ffaf84debd3059034cbc6cda6cec57",
+        "msg-translation-reason-missingOutputKey": "9be32a0970e798d00ae2651129e6bf5ae786d7c25c30b8c4375724d47413ce71",
+        "msg-translation-reason-missingOutputValueHash": "5c4d87ba6844d51efa96857153a73256ee661441a3f0b670e06031f316a6b3d2"
       }
     },
     "bas": {
@@ -324,7 +408,13 @@
         "translation-reason-missingOutputKey": "f9f639d82c11231f54086db7d62d54809da4f0200d6a8ff1b0f360ddfec46a50",
         "translation-reason-missingOutputValueHash": "be05988bb1aa703ba6969500f6fc73f40f4f8318f14d5cd975a83c48895a13bc",
         "msg-no-update-needed-for-key": "d2d979af85f5b5004bec907c16f1861da9b66b97cfec8a4f95e27dcb552b6fb0",
-        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d"
+        "msg-rate-limited-sleeping": "07c2e6eab1983a2cd48030e6edb24d559aca82135f2b272d14321c2b5e0fb25d",
+        "msg-translation-reason-forced": "4d93266164db198ff22d670f5ea3a91303e396ecb5c79debee0d23f83bdb06f4",
+        "msg-translation-reason-outputFileDidNotExist": "f5910effcb6e92478ba927e378a51cc6136b128dec7102f8d6b27762108e819a",
+        "msg-translation-reason-userMissingReferenceValueHash": "b555fe21e9e4d5c22bd978d4a36bee713c7c43e6a340fc6dd101a2f0757e8345",
+        "msg-translation-reason-userModifiedReferenceValue": "a6e2cfa787657ad5986af200a7e415dbb496729ec2965dcfd034c5d737ad637a",
+        "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
+        "msg-translation-reason-missingOutputValueHash": "ef95774092f874060b98bc5babebb2fc44867520ff33d018d861e4b946ebe7b5"
       }
     },
     "be": {
@@ -344,7 +434,13 @@
         "translation-reason-missingOutputKey": "b3a8af16b5314d0d5e34fdb466d700530ba9f5654e2c73253414589c64212d77",
         "translation-reason-missingOutputValueHash": "de5d6301c9ee36dfd075f6c092e3e2f489a204ea8eebe58cda9a9f78180ef128",
         "msg-no-update-needed-for-key": "e1e19a8723165f88214844b9338b514d8be6ec87e0979e851a523a477fa9ea82",
-        "msg-rate-limited-sleeping": "b38965f10b266d4842ca3ffd79daa8aac7135b6f0221989836109979455a894b"
+        "msg-rate-limited-sleeping": "b38965f10b266d4842ca3ffd79daa8aac7135b6f0221989836109979455a894b",
+        "msg-translation-reason-forced": "8051544767d9c32d7ec7f1e02a1728488d2a75e0e0b2affec0ea37824c4a74f0",
+        "msg-translation-reason-outputFileDidNotExist": "871a6aa700f9aad6a18498990de236a7604121fd5e3eee16b26acecf34ef68e1",
+        "msg-translation-reason-userMissingReferenceValueHash": "396b8b471e791c66adcebbcd733a07ccfd5c75a500a31e80e0e64bcb72e8aec5",
+        "msg-translation-reason-userModifiedReferenceValue": "9f40b46f8d99d76876c7cbd64ce9dd91681aecb7862b510b3905fd1772aa8cd2",
+        "msg-translation-reason-missingOutputKey": "b4bce1b79e465b151cd2c36b945f4e4fecc659e60661a4979f44f8ee41d85231",
+        "msg-translation-reason-missingOutputValueHash": "de5d6301c9ee36dfd075f6c092e3e2f489a204ea8eebe58cda9a9f78180ef128"
       }
     },
     "bem": {
@@ -364,7 +460,13 @@
         "translation-reason-missingOutputKey": "150b3d90d3b48c232219a2512a66635eb43df92b348dc88e06f32718aac5847c",
         "translation-reason-missingOutputValueHash": "dd0c2c706e262e81f72cb74f581b50327105bdc570c06541a53715cb53dd034a",
         "msg-no-update-needed-for-key": "30cfa6596b0d0ac32a27320f9beb1562ebcf602e2a01b5b8e449830f5c2dda26",
-        "msg-rate-limited-sleeping": "69c1961a605428ce16fe2e59f7cd75b9c2e9d063423d3aff513e31ea364b58ac"
+        "msg-rate-limited-sleeping": "69c1961a605428ce16fe2e59f7cd75b9c2e9d063423d3aff513e31ea364b58ac",
+        "msg-translation-reason-forced": "3e67dedbf24ee090176d218ec4ab6fd3c1d467a173ee1cfa03ad1a31d808fb01",
+        "msg-translation-reason-outputFileDidNotExist": "65f8882745ffae70332b3fc70da79042a6786a43569df94b8f344487e37cbd68",
+        "msg-translation-reason-userMissingReferenceValueHash": "938a9e5de612a648482d1551506ac08be4a0b26e31d009ba145204f5c1538ffe",
+        "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
+        "msg-translation-reason-missingOutputKey": "1cd81a59797112aef560a319e4552d040729a4b16a96dbbeff69a95468bb5764",
+        "msg-translation-reason-missingOutputValueHash": "35ba69836a476bf12ac9de133ca77a7029c45b7df1dcb32d9cc3bf993c2d88bf"
       }
     },
     "bez": {
@@ -384,7 +486,13 @@
         "translation-reason-missingOutputKey": "89e4252135bfea5a7ccde62464e7dfe6491ff20a3243fc05d7817459e04f0b4d",
         "translation-reason-missingOutputValueHash": "d83bbc357838f9deef5e30106a9d1d85b5f6176da92d8a85b0e5d2ce54958766",
         "msg-no-update-needed-for-key": "d43e57d0720edfbbf2817a856ea9beadfa7a97233900d177b0519584a29cf312",
-        "msg-rate-limited-sleeping": "27dfe2771aaeaf91abef0e084c825322911a2018b5cab14d8e6fcf9aee111112"
+        "msg-rate-limited-sleeping": "27dfe2771aaeaf91abef0e084c825322911a2018b5cab14d8e6fcf9aee111112",
+        "msg-translation-reason-forced": "766da25cc590bcd874797ae934d1cc697d8f3e84e36856c2d2da3edabe91849b",
+        "msg-translation-reason-outputFileDidNotExist": "277c1d1b7e0b1efc2df6e03bfb2cc59475dd264f7fad448c41996cbe92513708",
+        "msg-translation-reason-userMissingReferenceValueHash": "dd41a64ad6a5fed040717032aa7a5013e690010999a2741b365a336d81184958",
+        "msg-translation-reason-userModifiedReferenceValue": "7b3e5d5893c7de2148a32b1f2d3cc7b91014e73aa5498f7e2f5eec3d7206e0d2",
+        "msg-translation-reason-missingOutputKey": "fa1b66608ca36d3d45bf4fd61535ad56b6b1c13992daec92ba9f969e1fce4dea",
+        "msg-translation-reason-missingOutputValueHash": "2e726bfba273a068f6e5535de1c6b577d33fe5bedd9812e358c0581e09b52824"
       }
     },
     "bg": {
@@ -404,7 +512,13 @@
         "translation-reason-missingOutputKey": "3d3898a510e72f549c7744d0c2ff6ed899d6fbbd0b4c42aa16490e633981ec5c",
         "translation-reason-missingOutputValueHash": "f9d8ec5341d0f9881b14dc7fee73f26537fdbedf79a3a28698e86593b4cc2b1c",
         "msg-no-update-needed-for-key": "971aca6f691a45eb7204920fcf06e7432d411a8150d4a63d30e8acc16ae6330b",
-        "msg-rate-limited-sleeping": "5a1ae4bf5148f5e6d5e14fcd3866124691ef8bc082696f373451bab281707e47"
+        "msg-rate-limited-sleeping": "5a1ae4bf5148f5e6d5e14fcd3866124691ef8bc082696f373451bab281707e47",
+        "msg-translation-reason-forced": "caab2c8550929778d1c9886fa1c59224c11c5fe586970f30a55edb887c3d3d03",
+        "msg-translation-reason-outputFileDidNotExist": "5cf2d5555e5d54063a22564b8d574e742a2274191678e01916bd4ea2e65a97e0",
+        "msg-translation-reason-userMissingReferenceValueHash": "71519e694d52dc152806dcc8c67cdb950a20e34a0220c8b9164ecc095ee1eaff",
+        "msg-translation-reason-userModifiedReferenceValue": "188941d3505517389fab6dda67ea10b1bd8b932857f8c689162f6002bec6fa39",
+        "msg-translation-reason-missingOutputKey": "cbc3e53ab8cb4f426abe483a228e1b51b42701bbcb453d735858c41fc3f8c43e",
+        "msg-translation-reason-missingOutputValueHash": "544b7da2f7a2d192b42ea0eab324a7abf7d97691f6dd993b8d2eb3b79b77ef79"
       }
     },
     "bm": {
@@ -424,7 +538,13 @@
         "translation-reason-missingOutputKey": "4d7e394b6c4034cbe7794abec75d13c923430369159d65d4dcdea555d5444284",
         "translation-reason-missingOutputValueHash": "cb5e675a4445e81d4e588170ca5dbb7ce33a3f01e8753f3d02de818b05a86d34",
         "msg-no-update-needed-for-key": "bc2bc9bd1443e1a5d4f1cee949837ea096f762245f94864470e6628bcde12473",
-        "msg-rate-limited-sleeping": "87421566d54f0c3b57f92132eefdab51af1366769f7bf1f186b307751a1a8dad"
+        "msg-rate-limited-sleeping": "87421566d54f0c3b57f92132eefdab51af1366769f7bf1f186b307751a1a8dad",
+        "msg-translation-reason-forced": "c8945446df6b65fb54c683efd029abe032e319b2e5bbe6403226c0e8284a6859",
+        "msg-translation-reason-outputFileDidNotExist": "362c69223c6b91ac17126a5fb49dffd74ee5efb325560e36da7c7471a648c731",
+        "msg-translation-reason-userMissingReferenceValueHash": "216130a98cb608f085c532d379e580b13e0601f791ea587d88faab0c634fb16a",
+        "msg-translation-reason-userModifiedReferenceValue": "fbd97d817344c2bb7ca5d64506db07cdee4540d9589ce79d91f3470835218397",
+        "msg-translation-reason-missingOutputKey": "4d7e394b6c4034cbe7794abec75d13c923430369159d65d4dcdea555d5444284",
+        "msg-translation-reason-missingOutputValueHash": "54d0046fd29a52bb986c61902f799c203c3c7b328e856b05df8cfb69f121a1ee"
       }
     },
     "bn": {
@@ -444,7 +564,13 @@
         "translation-reason-missingOutputKey": "b4bce1b79e465b151cd2c36b945f4e4fecc659e60661a4979f44f8ee41d85231",
         "translation-reason-missingOutputValueHash": "588f90b0762e40a9d7fa36654c27f51b4596bbb5998124922ff937dc24ad6c83",
         "msg-no-update-needed-for-key": "dafca6fc40ee3fc0c9de437bb3b7a00f4be82032cdd2db57441b85e8cb99f2b1",
-        "msg-rate-limited-sleeping": "6a9d38e87487a8baf06a1f45eed595987281e3a65b2f6fd612b595331f792ca1"
+        "msg-rate-limited-sleeping": "6a9d38e87487a8baf06a1f45eed595987281e3a65b2f6fd612b595331f792ca1",
+        "msg-translation-reason-forced": "26d5c67442f8b2c8695a5920e1cb3ab3632f604472d1594ea08f83944b37dcf4",
+        "msg-translation-reason-outputFileDidNotExist": "dde9a3b894e852d8a756873dc89c8719b3013516a78ababb42e24a54db6ff9b9",
+        "msg-translation-reason-userMissingReferenceValueHash": "0212de5f940c225128e3d69fac8b669c9fa5708fc35486aa65077d295501b80d",
+        "msg-translation-reason-userModifiedReferenceValue": "df49882a6c5dab629534ff87025b65fcca87b3fecf72fae49ae02ba7f5ca3ba7",
+        "msg-translation-reason-missingOutputKey": "b4bce1b79e465b151cd2c36b945f4e4fecc659e60661a4979f44f8ee41d85231",
+        "msg-translation-reason-missingOutputValueHash": "588f90b0762e40a9d7fa36654c27f51b4596bbb5998124922ff937dc24ad6c83"
       }
     },
     "bo": {
@@ -464,7 +590,13 @@
         "translation-reason-missingOutputKey": "22bd9b71b91d690c52583ed8b6861ec195b6753b52e644faf00fb61165cdbe59",
         "translation-reason-missingOutputValueHash": "749b258824af3eccea447dbea061043486605afc57d382a5fff98df6cf7442ab",
         "msg-no-update-needed-for-key": "442677f7243cafac31407c0cc7274b893779d27c7a0b07d3e6888152af312bb0",
-        "msg-rate-limited-sleeping": "0a02dd24b79dd90eb643f0777fa22af973e638fd0a769321a648f876e8429234"
+        "msg-rate-limited-sleeping": "0a02dd24b79dd90eb643f0777fa22af973e638fd0a769321a648f876e8429234",
+        "msg-translation-reason-forced": "d47771241e13ac28cd381c50bef057c5a1eefe69ebbea4d31c1da0503065d1c8",
+        "msg-translation-reason-outputFileDidNotExist": "d68b8b9faf0abdda44123815dcb9df269ea3c152d71fa6a6cc0cbd6450d81c56",
+        "msg-translation-reason-userMissingReferenceValueHash": "645865c7cff74b7919f8f47b99f274094d9b136a90cdaae27d2e541b05f2bf22",
+        "msg-translation-reason-userModifiedReferenceValue": "1cc6a46eb0ddd8a5f1951f669dc4a24af70c9f0c2040ee74d94fe742fb199b92",
+        "msg-translation-reason-missingOutputKey": "bed81f67d9560fd29c3a049e11e4373ed9caac5fdea23fc9308137ebbd1ec463",
+        "msg-translation-reason-missingOutputValueHash": "59d05755be10b2186d65653b8138eddf21f7d630d28535e7b0f6963dcb363055"
       }
     },
     "br": {
@@ -484,7 +616,13 @@
         "translation-reason-missingOutputKey": "4ca4e266a7094d2e3c19a3913dae836a6273b113f5ed761d785a85b9f36aebd6",
         "translation-reason-missingOutputValueHash": "133909b09da50f3dd59edec053de1a8cd569118e4ac5270482a5013555cddb8e",
         "msg-no-update-needed-for-key": "c459355e1c592b3a711134ec3909c371a66f86c1841eff64ba24d69ff0961e4b",
-        "msg-rate-limited-sleeping": "91c6f5d1b51a22dbb96a16afe7248bfd6d5f7cb67d430ddad0882b62895bbde9"
+        "msg-rate-limited-sleeping": "91c6f5d1b51a22dbb96a16afe7248bfd6d5f7cb67d430ddad0882b62895bbde9",
+        "msg-translation-reason-forced": "e2eaa229bc7ece478efce2d0c83e1416c36f427a7a154a845cea2648e1a28f8c",
+        "msg-translation-reason-outputFileDidNotExist": "4a31f6a206f94c1deb5cdbb450771112488a336dc55eead111b4a55e94f503d5",
+        "msg-translation-reason-userMissingReferenceValueHash": "66cb1212ff5bcd9118307eac083c22dc83a04a86961d98ab3007d33397fbe44f",
+        "msg-translation-reason-userModifiedReferenceValue": "19835a2226f8a09f2ec10dcda7ef9377ac6144f750dc6baecf9a659ec51dab27",
+        "msg-translation-reason-missingOutputKey": "4ca4e266a7094d2e3c19a3913dae836a6273b113f5ed761d785a85b9f36aebd6",
+        "msg-translation-reason-missingOutputValueHash": "ab2f2918ee048c041b0eb1795358eae9a6f27a3873c3c30ded0eb82663108d66"
       }
     },
     "brx": {
@@ -504,7 +642,13 @@
         "translation-reason-missingOutputKey": "a70728c4c8ea1fed56b4bc3f26f9670864a36d68f5c129afa262244db6e06ea2",
         "translation-reason-missingOutputValueHash": "9fde04890c32f01529007e691e394c0e05c0a3aebe452f8fc95730c12a5dd2c0",
         "msg-no-update-needed-for-key": "457813cf58a0b7ba876f60ea0e1d894e191fa7b2bb64cf9e4c1bbc34521c31af",
-        "msg-rate-limited-sleeping": "062f3f27fc250abc441f2c5888a10ea9dec3254a36229e836cfa03e277a9d365"
+        "msg-rate-limited-sleeping": "062f3f27fc250abc441f2c5888a10ea9dec3254a36229e836cfa03e277a9d365",
+        "msg-translation-reason-forced": "bdd72acd576eb8dfcbb4bde192c730ff53a86bea37e11f51ff39c8498de2b2f9",
+        "msg-translation-reason-outputFileDidNotExist": "0b1db4e8a84ca816d628e6437cc625aae95a4275007b87176b42a15b26664bf4",
+        "msg-translation-reason-userMissingReferenceValueHash": "53b29f6fafc654827d8ae233ae5b5d188086840e25db26de2777fcf7b018c5d9",
+        "msg-translation-reason-userModifiedReferenceValue": "bd9339c253e2af0959b677610426dd4554f220e156741503ba688bb107d2da66",
+        "msg-translation-reason-missingOutputKey": "3b143034e47ea6ad86115a6e32a067e8139dbb1524136c69c47153bbd8c84ae0",
+        "msg-translation-reason-missingOutputValueHash": "8dc343f9182ce5da1bcddc4ae1561c0a933e8019844919710968faef7f9c7a43"
       }
     },
     "bs": {
@@ -524,7 +668,13 @@
         "translation-reason-missingOutputKey": "11d1733d2bfb84b1d99d3e331dd05cdfe4293352795c4b4ba24e9d8cc93593d6",
         "translation-reason-missingOutputValueHash": "c88bc4ad32f8978b8bea41afbf750b6a04339d697fa90318efc327e9f7b573ad",
         "msg-no-update-needed-for-key": "e98edec5e350a675992c6cd9d70cf8bc6bf8c025e6654f35fdff4575416e7286",
-        "msg-rate-limited-sleeping": "8d97fa94bd932bba0d5d6a28c4f14087b2018ff0cb6d0c2df79fde4c0a472562"
+        "msg-rate-limited-sleeping": "8d97fa94bd932bba0d5d6a28c4f14087b2018ff0cb6d0c2df79fde4c0a472562",
+        "msg-translation-reason-forced": "cf000fbff13d5f48a9384f07df5f9f2390c872c303194d640f2988af621348f5",
+        "msg-translation-reason-outputFileDidNotExist": "4f3d081015e30f6705f086f51715c73ac12b7f76299fdd385ad176b6552d33b9",
+        "msg-translation-reason-userMissingReferenceValueHash": "892710d14215a396af4129e34162370c9282a97b0ba181aceb04bd3254016d46",
+        "msg-translation-reason-userModifiedReferenceValue": "cc15b635efc01c42ae75b9c32f226200da1e6bc44a85557827ef0e0625377e9d",
+        "msg-translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2",
+        "msg-translation-reason-missingOutputValueHash": "0f0814b39104b4c266bca1e9023da0cde6cb5b73b3230125af681ae377b1dd08"
       }
     },
     "byn": {
@@ -544,7 +694,13 @@
         "translation-reason-missingOutputKey": "f691da5e01a1d6f41f1bf3a66bf1fcf31e41052db27a6f69feee4f0d9f9994eb",
         "translation-reason-missingOutputValueHash": "ecac60841b25f65e8ca7e3435df0162c41f29d4e7a759f041007eeb7829bc639",
         "msg-no-update-needed-for-key": "85c02170c93fc5fff476c81edc27ae6863bcee957e2a071d34de72a1137f422e",
-        "msg-rate-limited-sleeping": "3599cb7a81b2759dacf76bf2731624aeaa9b7c066f1daa91d724267f9f684687"
+        "msg-rate-limited-sleeping": "3599cb7a81b2759dacf76bf2731624aeaa9b7c066f1daa91d724267f9f684687",
+        "msg-translation-reason-forced": "8b492e26e4c5c11f739c48fdb51ad7ac93de0ac2b4c1fd442f8511aa099a8a43",
+        "msg-translation-reason-outputFileDidNotExist": "173e545af7817717d3c252d408ae1eaa37119b6fca7e786021908610d8f8eb85",
+        "msg-translation-reason-userMissingReferenceValueHash": "e2ae58fef0c311f68c9f5aac33459a5c2ac97980acf7ad2b2d9ceda16d517f08",
+        "msg-translation-reason-userModifiedReferenceValue": "16594f72d68b168da72713d449d04c1b2c6b73ff22df581deeb2b5348fe08a0b",
+        "msg-translation-reason-missingOutputKey": "a78f6af0c220ac9e3351d98bb2cea888103793e083bb21048903462fef5132d9",
+        "msg-translation-reason-missingOutputValueHash": "fc5be4520c4a386ccf16f38124086a07b8bbe50b03885c745206d06adfdaed5e"
       }
     },
     "ca": {
@@ -564,7 +720,13 @@
         "translation-reason-missingOutputKey": "d4c58aeaa9788883b6cf29b5a6d8044ae21cecf8c2fdef3c66950700708dd878",
         "translation-reason-missingOutputValueHash": "2720b5ba752715353f1772f624f049aea8e75c4db56400bddecdcd67bf704168",
         "msg-no-update-needed-for-key": "395721e62310bb799b9c46ffb1949254d3a390e153a89d080888e17ac9403f40",
-        "msg-rate-limited-sleeping": "6ee15dc81b1d827f3c036f4bd445fee7bb1150141d94979eda287657ba1d3c06"
+        "msg-rate-limited-sleeping": "6ee15dc81b1d827f3c036f4bd445fee7bb1150141d94979eda287657ba1d3c06",
+        "msg-translation-reason-forced": "250829a86ed5cb3dcbfb0641d6a33606a71653d28fc0dbb84a23d255aa46c892",
+        "msg-translation-reason-outputFileDidNotExist": "58eae893c611bafc872d42ca09af371d42408de6a995f7226fe88800069542d0",
+        "msg-translation-reason-userMissingReferenceValueHash": "206cc040bc2a4b61f277221001be5e4c706cf388092d70b8c4070d663e3f9344",
+        "msg-translation-reason-userModifiedReferenceValue": "3df64700f9de75c302e14e328168e3ffd2d51ffcfb80df57bfb46ea0534c0a1f",
+        "msg-translation-reason-missingOutputKey": "d4c58aeaa9788883b6cf29b5a6d8044ae21cecf8c2fdef3c66950700708dd878",
+        "msg-translation-reason-missingOutputValueHash": "2b2d76f71c3f9e2c6455957bc4d2fb140b46b5835f0dc7c4dba545ce4a93543d"
       }
     },
     "ccp": {
@@ -584,7 +746,13 @@
         "translation-reason-missingOutputKey": "1d03df49071d7d8e504e3aca11e9721936ce9613d0c8062fc942992f42331d9b",
         "translation-reason-missingOutputValueHash": "d4d3b5a463618e5c834e971bd40e296a72cfd467c443cd14dba649df8fc8a836",
         "msg-no-update-needed-for-key": "ed92d2348cf6e0bf4bb34d78786c03b7bd9d914362eeea2af33e3627df0c3059",
-        "msg-rate-limited-sleeping": "aa3053a0e791d9534d7eb7a9b20af07770d54cbc6c550edd66f43457fcbb3931"
+        "msg-rate-limited-sleeping": "aa3053a0e791d9534d7eb7a9b20af07770d54cbc6c550edd66f43457fcbb3931",
+        "msg-translation-reason-forced": "44684bcd37ff5746ce2930e4278a4eac0372c4191c56152cb90694e6b8f28af8",
+        "msg-translation-reason-outputFileDidNotExist": "a61c24329319a73094281d9e47a4b9c2615b04f84779674d912c80e1eb4718ec",
+        "msg-translation-reason-userMissingReferenceValueHash": "616cd6b4e2585a480c2a8b9a1291bae3bb1db6c809728be4134e106f0e0b51e7",
+        "msg-translation-reason-userModifiedReferenceValue": "372dc7893e3e1467be0d72f205a859c3ebbf917884f02c140a4b5c830e27c066",
+        "msg-translation-reason-missingOutputKey": "a798381cfa1730d07d48a5a27519bd8c352df022ebd42baa054336b718db4cbc",
+        "msg-translation-reason-missingOutputValueHash": "de5f55b2bef0a186877948f0ea04e29252bbecfb0a90f9b5ba74ae4332c3f5ca"
       }
     },
     "cd-RU": {
@@ -604,7 +772,13 @@
         "translation-reason-missingOutputKey": "da10bd47395bfc5fb76d6d12d2276b1eb7517482a2f5a885cde1cdf0e73aebdf",
         "translation-reason-missingOutputValueHash": "8de3014722cb9bc694c09ea03c38ecc2742e7c010a596bc05ada14c30e22df72",
         "msg-no-update-needed-for-key": "81ff33ecd7fdff5c181d3ade86213630d62f7e9b7029432e11652623beafe319",
-        "msg-rate-limited-sleeping": "eae5863260e7ae9edd98f3b464bb4ed4d134b62655f74b8bcb96b384361e044c"
+        "msg-rate-limited-sleeping": "eae5863260e7ae9edd98f3b464bb4ed4d134b62655f74b8bcb96b384361e044c",
+        "msg-translation-reason-forced": "85bec46c65a044bdbbbe16fe3dbf65e431bd6971fe9b7c8e5c2b259072315df5",
+        "msg-translation-reason-outputFileDidNotExist": "bba390f6635babc7a87dfddf6a4fad41111cb68acb0202ac00929002d79bdfb8",
+        "msg-translation-reason-userMissingReferenceValueHash": "4547dac6cee7febd9eeebcf1332fb76e1ffdf34264bd21b0a5c99590e1eb9209",
+        "msg-translation-reason-userModifiedReferenceValue": "092e111a2636ed2deeb9535759e29c18ff2f8cdb21cd475f36dae9cacbc0724d",
+        "msg-translation-reason-missingOutputKey": "0a2da5bbe41df4ecd84a49fdfdb5a2c8782974e1287e29e31ace5a564d326839",
+        "msg-translation-reason-missingOutputValueHash": "6d78f671ee210422ba0bd35112a819aad02ae20d905bd6953b8a484f4bf3367f"
       }
     },
     "ceb": {
@@ -624,7 +798,13 @@
         "translation-reason-missingOutputKey": "89a082acc4a38f31f0d39e6e48fdf24efa7666887058de836e14d7193e4a5297",
         "translation-reason-missingOutputValueHash": "0bc379eeff6533b2691987ec54016e78b0e5873ced826bd775b6ea9d365487e0",
         "msg-no-update-needed-for-key": "0cde5c5ee6520343cc39affac797d782e1c405ecfd550c93479a5dd951e18027",
-        "msg-rate-limited-sleeping": "7595ab6e33f8059c88e33ddafdbdb53a5b868209101cf8d4b7fc8192a5ac65ba"
+        "msg-rate-limited-sleeping": "7595ab6e33f8059c88e33ddafdbdb53a5b868209101cf8d4b7fc8192a5ac65ba",
+        "msg-translation-reason-forced": "38f6d33928cf0a94cb8bf9e5a470fbda2b018582a1d26043981a7871d890f0a7",
+        "msg-translation-reason-outputFileDidNotExist": "55d8b8c01fced0ec053e5c89064742f1cedfcd3a42e62e026168dc910549946f",
+        "msg-translation-reason-userMissingReferenceValueHash": "2a13e8b740d69d72f01a448d4fcd7e785a110a5ac8b900901880ca3a7ce9a567",
+        "msg-translation-reason-userModifiedReferenceValue": "b73960f7d41a860b6e0fecc8e566ece1e34560276558f9601689de152062d31b",
+        "msg-translation-reason-missingOutputKey": "97c50a714b7ebcb055f54dfc1601bde3d12fb463adc94c19ba2e096b1dc0baaf",
+        "msg-translation-reason-missingOutputValueHash": "1f6aadffe7f458ef5b97dfa941e975f85efd4af0a6c19137779476117ef1ec69"
       }
     },
     "cgg": {
@@ -644,7 +824,13 @@
         "translation-reason-missingOutputKey": "a3c696d1bbd26ed743ba515bcdea24ec8a893b9694e1f367c65fa469462b375e",
         "translation-reason-missingOutputValueHash": "874d975410fd5fd3d93b02b1768b4f21d47ed1c320ea7cd33211d2e4daecdf2f",
         "msg-no-update-needed-for-key": "37e21aae784da43a2dd575bfd86dacbb0ec35188bccef42923cf6c8ec9b1f010",
-        "msg-rate-limited-sleeping": "eb4fa217f2f169f11728376ee94b6716d5c023d2257d7310116973b02af7e0ee"
+        "msg-rate-limited-sleeping": "eb4fa217f2f169f11728376ee94b6716d5c023d2257d7310116973b02af7e0ee",
+        "msg-translation-reason-forced": "edc2e93c687dcdb01ee0c2cb6bee95716cde7eb9c552b589755229ed8b8b7ef9",
+        "msg-translation-reason-outputFileDidNotExist": "2e9ebd076ccdebed13b8289de8bc4344be6d5b8d19474c0dd843ac0ccf1fb026",
+        "msg-translation-reason-userMissingReferenceValueHash": "e7a58631ceb7538074aa766b5501e04cdb204ed907ec39417f43a370179be818",
+        "msg-translation-reason-userModifiedReferenceValue": "7d9e05d234d13835d2e7beeee43ab2c20a7d84c51cdf480f809487510a8080ef",
+        "msg-translation-reason-missingOutputKey": "79cb2edc4357a422f36cc8468619f14a9d36c7035ee07847364a95674b46b578",
+        "msg-translation-reason-missingOutputValueHash": "e49f93c03413cafc22b4806c3a4f4db3f264a93828a5bc50279a63b7bf33f4d4"
       }
     },
     "chr": {
@@ -664,7 +850,13 @@
         "translation-reason-missingOutputKey": "73a57f3a3f74a56a6f28fdbc8fb0077c673b98d174722161327181de3a8ba325",
         "translation-reason-missingOutputValueHash": "3114c0ebd8262fd31a636060478414dbe64fbc23563e21a0ae1476b95f759041",
         "msg-no-update-needed-for-key": "f39ff9ee1d80909670374e49a3b3c6cf388572463ba4c86bdcd2fa43e0999038",
-        "msg-rate-limited-sleeping": "cd8c17418d33edf80e132c0516fcd4e4466fde11391ae161ef329469d73838a1"
+        "msg-rate-limited-sleeping": "cd8c17418d33edf80e132c0516fcd4e4466fde11391ae161ef329469d73838a1",
+        "msg-translation-reason-forced": "c7aedd723c286be173d265c20e8c48ad7f0c46440788e3e0d903a49e53d56a35",
+        "msg-translation-reason-outputFileDidNotExist": "b69d170d2372f6e7de57e7795a9dbd6465ee8d152fee8997e2414ed61b9009b8",
+        "msg-translation-reason-userMissingReferenceValueHash": "235840c4e6edc53a45c084db10a904a03323db91bd668d8d7d79ada7c1abc642",
+        "msg-translation-reason-userModifiedReferenceValue": "ec78929ec51e9fb0e63a82e63dc0c920eb50e145306c84b959c672f7ca3567e7",
+        "msg-translation-reason-missingOutputKey": "d169b830005687615ae62c39c3d568b6925ec3438ed47742db8095263e94cea3",
+        "msg-translation-reason-missingOutputValueHash": "9a31f7dddd98d8d37c443d5714ddfed086747d32a3fd138cac420097b067d249"
       }
     },
     "co": {
@@ -684,7 +876,13 @@
         "translation-reason-missingOutputKey": "c27be38b15ee1623377402af66d60e6a8b74dbcd64fb3a3074d67652231d29a7",
         "translation-reason-missingOutputValueHash": "ea1d45d94cd199beea556a5cebb176d4efff8330f32feb134c006203e269504f",
         "msg-no-update-needed-for-key": "fd0484bdffbab0e77e7764dd2598c83eea136329eb563ed4a28859b1992bfb0e",
-        "msg-rate-limited-sleeping": "6490a1aa2fbe6bd7ccac640848b6d73de05f714b86db82314dbe7222ae8329fe"
+        "msg-rate-limited-sleeping": "6490a1aa2fbe6bd7ccac640848b6d73de05f714b86db82314dbe7222ae8329fe",
+        "msg-translation-reason-forced": "c2f33edd19f101d039495eff8cf53f9dac16a52c92e48eefb462db03d4b23a1e",
+        "msg-translation-reason-outputFileDidNotExist": "eaaae7fc5efb1a0efeadfb3150d88df30864e377a69ea75c9499cab3b5e50611",
+        "msg-translation-reason-userMissingReferenceValueHash": "6a963e6eb861e25a19b73b090b32b4c14a898f246d662b183974b0e6b9c87286",
+        "msg-translation-reason-userModifiedReferenceValue": "626904bdc738c40fce5ffee558b6bf42d3025c2a00df3d113b117307a68ef5d3",
+        "msg-translation-reason-missingOutputKey": "5e402629bc99f001c5c227e859efcabf8d09a5caad30425c78864264a3845c77",
+        "msg-translation-reason-missingOutputValueHash": "1b791a530667e138116ef45cc7ec543a457115c827fb3307a5b9ca6ca7f14750"
       }
     },
     "cs": {
@@ -704,7 +902,13 @@
         "translation-reason-missingOutputKey": "c8b6c6853eb7d066d6dfcc587268778d13b38df98603185b02f309ef86fb97f4",
         "translation-reason-missingOutputValueHash": "9cf00422276a8ed9da774f82fc69fc4e4380846a2985e4c64cfa8f955ecc2184",
         "msg-no-update-needed-for-key": "2f6a99bfbd915e2d3f6761759fa5c0a270c8fe5b82ccd13a486a7e7d31544f8f",
-        "msg-rate-limited-sleeping": "d4d2fe65d0dd766f4d6050a8391ff2ee7dc0a73a8ba0eeb31ef75de2bc6640dd"
+        "msg-rate-limited-sleeping": "d4d2fe65d0dd766f4d6050a8391ff2ee7dc0a73a8ba0eeb31ef75de2bc6640dd",
+        "msg-translation-reason-forced": "3ae710f2570703b3a0f65d82127ff66724ea184aa3461d2dc9ad99752e75987d",
+        "msg-translation-reason-outputFileDidNotExist": "6b6e671bc8d382169650c14ce32a77d67074336e9e9650ff03d852eaf5376eb5",
+        "msg-translation-reason-userMissingReferenceValueHash": "6f65cadab2949126880b012c5756fb55c2f7e281a60ef361b328a4d479624fbc",
+        "msg-translation-reason-userModifiedReferenceValue": "a84a3a715f7511b27fae8701351e8affd0704f9f2f4da3d6cb160dae822fb1ae",
+        "msg-translation-reason-missingOutputKey": "f7961a5146259a748b5d52c7f8add69dc0fa04b1ab80ec414f556d83130b2251",
+        "msg-translation-reason-missingOutputValueHash": "f6f992b73842d4cb885a2d8c349245ac46bd928eec1d936f27a41dc4621e3329"
       }
     },
     "cu-RU": {
@@ -724,7 +928,13 @@
         "translation-reason-missingOutputKey": "67d71d4be43bfa89482bf19badeaa4086437513dd5b66fb281b31a4e9d935ca9",
         "translation-reason-missingOutputValueHash": "a89a78da8d2bc30fba86541b05552fc900fc8f5468a50b0a19c022b9cfe00d8f",
         "msg-no-update-needed-for-key": "d9d6a5636dc3064de5134e6058051cfd4745d9c3b082af09e6f929cb8415ac76",
-        "msg-rate-limited-sleeping": "d9f1af3ad84098d03bf730ef4d0efd008f51c12bdd19a8608cd604a1fccc678d"
+        "msg-rate-limited-sleeping": "d9f1af3ad84098d03bf730ef4d0efd008f51c12bdd19a8608cd604a1fccc678d",
+        "msg-translation-reason-forced": "026953bc504057189f35d75922395dd7d8d07ff1e46d094fd7bcd42f8b70a59d",
+        "msg-translation-reason-outputFileDidNotExist": "d849e2e9498bb750d0be571af5264ef9b0ab9d177be0e9432363a4e28e1a565e",
+        "msg-translation-reason-userMissingReferenceValueHash": "8e0e0920ac2efe07516157d779feeeeb51761a42989c9aa8a1eecf9e6f0e8673",
+        "msg-translation-reason-userModifiedReferenceValue": "522ba69514cdc4c902e5e559476b8e107b0d8d667cc32917578b7c8b639481e5",
+        "msg-translation-reason-missingOutputKey": "2522ee67e4974a321743dad1b54a5bd185753226045d20a90b97daf2d7a166e1",
+        "msg-translation-reason-missingOutputValueHash": "94dec878267fd060c83310830ceb47c3d11514fb69f5bf5c99696bb9e81674e2"
       }
     },
     "da": {
@@ -744,7 +954,13 @@
         "translation-reason-missingOutputKey": "278ffdfca33da7d9d876065dfb57c8350b931fe855086517f73eba9240525dad",
         "translation-reason-missingOutputValueHash": "85868b53d2f086d0fe04427a2a08d29dadb8cea353a02f44af68c0e94fc0b8d6",
         "msg-no-update-needed-for-key": "059c5f22610390d2ba18b28a39c2c2dbf78f462961f6b961622d6d64f4727dd5",
-        "msg-rate-limited-sleeping": "4449fe75742527a174cc238df7cb6b061f2ad95e65194e4dfed163dfaba94c95"
+        "msg-rate-limited-sleeping": "4449fe75742527a174cc238df7cb6b061f2ad95e65194e4dfed163dfaba94c95",
+        "msg-translation-reason-forced": "f84fc2e2609c6288bf53ca865cf48aed88955614147d2f5beda44564a8ab3a98",
+        "msg-translation-reason-outputFileDidNotExist": "ccb57bf999ba36c6f25f56a64952ba56c887f077db8f6728a64eb2c89a8bafa7",
+        "msg-translation-reason-userMissingReferenceValueHash": "09373614883c84ceda8f4e1eb4898d91a6188108fdf3af2f7f3711255e63b19d",
+        "msg-translation-reason-userModifiedReferenceValue": "d38d9a5f763e67d18b7486b211c7f88e4a7e74ed336cc7d4520ae0ea377015c8",
+        "msg-translation-reason-missingOutputKey": "278ffdfca33da7d9d876065dfb57c8350b931fe855086517f73eba9240525dad",
+        "msg-translation-reason-missingOutputValueHash": "4cd4f5ee0f10bb7ab9f28b269bd7eee148a6e2027cd96db3768892ed22d286e0"
       }
     },
     "de-AT": {
@@ -764,7 +980,13 @@
         "translation-reason-missingOutputKey": "23c9705fcb78e55c293b125a4d669362c99153f2c5ff01fa05be792dbb97ff33",
         "translation-reason-missingOutputValueHash": "6910b9aff2ebba457e73f9dfb7c070c3ddd150f743891b5a546a38a6732ed310",
         "msg-no-update-needed-for-key": "e9aa9e4c8bf76c7b3ff5423f8cb434a54aac12325f34d9d2e2d5f01eef8cd0f5",
-        "msg-rate-limited-sleeping": "e5f71a617c58973e00728ef3b39a5234abe82736978fe92c8f11afc09c581830"
+        "msg-rate-limited-sleeping": "e5f71a617c58973e00728ef3b39a5234abe82736978fe92c8f11afc09c581830",
+        "msg-translation-reason-forced": "5ae4e28fb5e2fac1e3c7961a182dc4325e0c15c0374973a784d28f49efcdfbbd",
+        "msg-translation-reason-outputFileDidNotExist": "31e2713bdcab345436c4046b2886b52344b672a8d325b0bb5498f04129b73cc8",
+        "msg-translation-reason-userMissingReferenceValueHash": "c94c8756e9364847c8b05835a9599a99e323bf8fc301a96ae25e6b851d311afe",
+        "msg-translation-reason-userModifiedReferenceValue": "cf3a49973b315ed31a41bcf643189746f884c2b1e6ce0e2476e220dd8440f455",
+        "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
+        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427"
       }
     },
     "de-CH": {
@@ -784,7 +1006,13 @@
         "translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
         "translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427",
         "msg-no-update-needed-for-key": "096cb898f791e5e423c79d093b672480b04836cc85dab14f753d8701bf8f3074",
-        "msg-rate-limited-sleeping": "0fdf1e720048f1d9caedfd2f8a166c9b6cca90e9e66e9db591e391277e77808c"
+        "msg-rate-limited-sleeping": "0fdf1e720048f1d9caedfd2f8a166c9b6cca90e9e66e9db591e391277e77808c",
+        "msg-translation-reason-forced": "5ae4e28fb5e2fac1e3c7961a182dc4325e0c15c0374973a784d28f49efcdfbbd",
+        "msg-translation-reason-outputFileDidNotExist": "31e2713bdcab345436c4046b2886b52344b672a8d325b0bb5498f04129b73cc8",
+        "msg-translation-reason-userMissingReferenceValueHash": "a029c2f35edc4d5f34f6702c11244a5840767160b334efe5d5f3f04928dda981",
+        "msg-translation-reason-userModifiedReferenceValue": "a61e99c7e7a9a6c5c564a203e493433f738ff13ebe5572d42135ab963378eca4",
+        "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
+        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427"
       }
     },
     "de-DE": {
@@ -804,7 +1032,13 @@
         "translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
         "translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427",
         "msg-no-update-needed-for-key": "f487bab326c1e8f44ec731fcef92063bab41402f864473f2085d2cc783e3caf8",
-        "msg-rate-limited-sleeping": "32606a5c336d3d85afbfab9634356149aa99e13e12067e7db44b23647d91babb"
+        "msg-rate-limited-sleeping": "32606a5c336d3d85afbfab9634356149aa99e13e12067e7db44b23647d91babb",
+        "msg-translation-reason-forced": "5ae4e28fb5e2fac1e3c7961a182dc4325e0c15c0374973a784d28f49efcdfbbd",
+        "msg-translation-reason-outputFileDidNotExist": "31e2713bdcab345436c4046b2886b52344b672a8d325b0bb5498f04129b73cc8",
+        "msg-translation-reason-userMissingReferenceValueHash": "a029c2f35edc4d5f34f6702c11244a5840767160b334efe5d5f3f04928dda981",
+        "msg-translation-reason-userModifiedReferenceValue": "cf3a49973b315ed31a41bcf643189746f884c2b1e6ce0e2476e220dd8440f455",
+        "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
+        "msg-translation-reason-missingOutputValueHash": "b430a08d100037298f1e8404146e43885d717c7004ae4659d181d86589d0e48b"
       }
     },
     "dua": {
@@ -824,7 +1058,13 @@
         "translation-reason-missingOutputKey": "6eb6ec69f9f9949211db8978bbe941867ecbeb5b20734568dee1ca3390a06e31",
         "translation-reason-missingOutputValueHash": "50293d2f9401e0c90a548fb6b5bbf4a3a6a93f122f8882b26622c950f2989999",
         "msg-no-update-needed-for-key": "86ee215321511f024e9915ddff7ea841bc14ca532fe0a02e9f981c6c0a332ca4",
-        "msg-rate-limited-sleeping": "4449fe75742527a174cc238df7cb6b061f2ad95e65194e4dfed163dfaba94c95"
+        "msg-rate-limited-sleeping": "4449fe75742527a174cc238df7cb6b061f2ad95e65194e4dfed163dfaba94c95",
+        "msg-translation-reason-forced": "ccca37762158c506f849e23b193467f76ad715aa0a154177476b568342ccf367",
+        "msg-translation-reason-outputFileDidNotExist": "0cb055d27212ab9dc6760d46ba9cdb199b9a046ce3bf92bd7f637bf0dcd8e757",
+        "msg-translation-reason-userMissingReferenceValueHash": "e0f78d923653e2d1e0dadfd5e9458960213cbcf2f41a9d696ef80fc7afd70bdc",
+        "msg-translation-reason-userModifiedReferenceValue": "b03bd7d14e86293d8b9626f37fef233a03d1c47d70e842ad822261ff5acf7470",
+        "msg-translation-reason-missingOutputKey": "2672625c566409dccd88a25345263706bfd83b076152e8d36497e18597378700",
+        "msg-translation-reason-missingOutputValueHash": "418b289fcc6749b5ca1fd064e3936911a91ba4771eae37ce6184cbb9392ccf41"
       }
     },
     "dv": {
@@ -844,7 +1084,13 @@
         "translation-reason-missingOutputKey": "31fd6d890cc76c505d4c99ee4793255364cae587214d53f82b9f585f08d7e29f",
         "translation-reason-missingOutputValueHash": "5cc115ff5992d20e57fe62f916f04204144c46848ddfba5825ef2cfd19666e10",
         "msg-no-update-needed-for-key": "d47f23a5e9bc82d708e760e339d0969be58c0a73df5066f554fa514b1760c813",
-        "msg-rate-limited-sleeping": "c31e4213f45efa0a2b6344a5bee9d5cb8bf8820925d9de546891ba4bb49f6596"
+        "msg-rate-limited-sleeping": "c31e4213f45efa0a2b6344a5bee9d5cb8bf8820925d9de546891ba4bb49f6596",
+        "msg-translation-reason-forced": "bebf00399911f1aead1e6bb0cd5c1c9e6e3d585c95d25e9c8fb50626c3fbff96",
+        "msg-translation-reason-outputFileDidNotExist": "e076c0ba801c31c8cb576fac9c44b868d1a755aaa371ce58278b1f8a166c4e9e",
+        "msg-translation-reason-userMissingReferenceValueHash": "53ecf19f8cfe8c1cbdaa162d1d66deefb3196e8555b04a2c2f39dd8f7e6c61e2",
+        "msg-translation-reason-userModifiedReferenceValue": "5f4a6c635321545d5bf5e7e115ca23bd6cdace2333abf4024e62ae05dd7904a6",
+        "msg-translation-reason-missingOutputKey": "31fd6d890cc76c505d4c99ee4793255364cae587214d53f82b9f585f08d7e29f",
+        "msg-translation-reason-missingOutputValueHash": "3ed47107974f62af74714c8ccce32ec0940431b073f2a900d2b27c865851337d"
       }
     },
     "dz": {
@@ -864,7 +1110,13 @@
         "translation-reason-missingOutputKey": "0aeeda4df777ebbf91b59ed2339d33fc3a65552a447007c53e873deddad4549b",
         "translation-reason-missingOutputValueHash": "97847908b23fa71eebc74838f61bfff5c382fc559e2b1d60f77082d85f2b9734",
         "msg-no-update-needed-for-key": "3bb63b3c3fcb3ffe016ff95e283b021cd450baef55e10073e4a4058f0e117ce8",
-        "msg-rate-limited-sleeping": "a0ba3605df67c2ff4970ef128f8078f43812e1b0c16213b8f672fec22859692b"
+        "msg-rate-limited-sleeping": "a0ba3605df67c2ff4970ef128f8078f43812e1b0c16213b8f672fec22859692b",
+        "msg-translation-reason-forced": "ec576d51ec0b7b621e44543fe122067b6f065869e7031448be389bf5c2c9ed6f",
+        "msg-translation-reason-outputFileDidNotExist": "09051bef52a92ce6f472a4605f557fe5b77e719f485d08fb8347516dfd7b5b80",
+        "msg-translation-reason-userMissingReferenceValueHash": "daf741dc375fee0a03cd28988327d77bf264398fe58244a83573a507298bdeb6",
+        "msg-translation-reason-userModifiedReferenceValue": "21e80522ccf59b83f3ff09e88f41cdeeac22be6e0d9943077dac45df06121043",
+        "msg-translation-reason-missingOutputKey": "0b6304e802249d04f0ca82235d56303e20a1504e589db0a79ac24270e44782e9",
+        "msg-translation-reason-missingOutputValueHash": "b342d8f2aae809a9b23c4d5ef815877d1d2314e2068ac5d643e897b2572ed183"
       }
     },
     "ebu": {
@@ -884,7 +1136,13 @@
         "translation-reason-missingOutputKey": "70075626892c625114735840c7753173c34472b59160bd53eea1d888dd9f9f7b",
         "translation-reason-missingOutputValueHash": "c33ec43f16b1929b1f51045594dfef4953cd7c0c48ddcfb9b1ab4c5a49d5e9f2",
         "msg-no-update-needed-for-key": "1244e2ab4c145290792c33e4ba166bf1936269befebadc815d48610663ca5abe",
-        "msg-rate-limited-sleeping": "11d9e5084de67d640f268c352d77f9d2bc0878bde9812998f6fc092be49d61aa"
+        "msg-rate-limited-sleeping": "11d9e5084de67d640f268c352d77f9d2bc0878bde9812998f6fc092be49d61aa",
+        "msg-translation-reason-forced": "b88270b9ef2a6832bf6095b96ad70131246e961ab1665e4ebd04a1e8c934f9f7",
+        "msg-translation-reason-outputFileDidNotExist": "4fc9e74a251a049acc391dfb28a094df1c851414a3022f6b2b0619f5792e3ae6",
+        "msg-translation-reason-userMissingReferenceValueHash": "2ae03bae5359d8f63611cf065867e128c295f061ef0383dde7792dcd62068189",
+        "msg-translation-reason-userModifiedReferenceValue": "6c0eeddb3dea7b7c2aa7f0bd0b0dc765d1aba2a311764514ef19cfd149e671f6",
+        "msg-translation-reason-missingOutputKey": "f69e5fbfcde775c4a6df3097a6a5ade5b0b228156793ca4a436afa6effda1dc6",
+        "msg-translation-reason-missingOutputValueHash": "b8a0610049ed0c92c1a9dea68c7c4cded344debace5dedb6d3f125e90dd69550"
       }
     },
     "es-ES": {
@@ -904,7 +1162,13 @@
         "translation-reason-missingOutputKey": "36ed481cd40cec4dc4230caac2efb582cec9dbd4a7f849c52af0fdbd1b866b2b",
         "translation-reason-missingOutputValueHash": "280ede56e3fba4b573dc1dc7da69d464a9053f05daf3002e07517ce32a675dba",
         "msg-no-update-needed-for-key": "a85765f0b5358790d7361bd13d5ce3c88290c1637b5d1c7b3be3f23a0798a3c3",
-        "msg-rate-limited-sleeping": "ace69db56f14184727fb439a5c24d1e808b0d44f86bb46440df82b784869b379"
+        "msg-rate-limited-sleeping": "ace69db56f14184727fb439a5c24d1e808b0d44f86bb46440df82b784869b379",
+        "msg-translation-reason-forced": "379d719817dacab8dadae55017ae164b5e8788cd0f5fde15f84ecfea2010953f",
+        "msg-translation-reason-outputFileDidNotExist": "767f804b6a7ae2f4792a54392f6ed4b152d8c0c4246edd89f9690d9d60b462a7",
+        "msg-translation-reason-userMissingReferenceValueHash": "8a1282f95c7ea334f544e63488712e11c975f0b62e73a9b3ff5c8444dc8a5002",
+        "msg-translation-reason-userModifiedReferenceValue": "cda5ccf2a97d4797c34b64f23d46262c7840953ce68eeccfeb4b88bb06446a50",
+        "msg-translation-reason-missingOutputKey": "42fff8dcf49d52f1165059753bb8902b55e93840addd68ac779fe84f147299de",
+        "msg-translation-reason-missingOutputValueHash": "5d9c5682214647cbcb3676bcd6a57696012ba4672daa324dd5ba018de08b34bc"
       }
     },
     "et": {
@@ -924,7 +1188,13 @@
         "translation-reason-missingOutputKey": "bdc94125e5f2a94ed9e583424cfc25393fcdfc4fda549a31d62373b51915a05d",
         "translation-reason-missingOutputValueHash": "555ee40c75ae13c948e748f1d8d9c6f230aa492857ac690941e004c7a776667e",
         "msg-no-update-needed-for-key": "40e3b9b3ee87a5088e2159151a6b0078a42fc7e4189c246cdd840dbf05ddcaf4",
-        "msg-rate-limited-sleeping": "8e3747b7c668584b66d579f2c62dea2deebdf7ba0305937a122bece4fce0d30f"
+        "msg-rate-limited-sleeping": "8e3747b7c668584b66d579f2c62dea2deebdf7ba0305937a122bece4fce0d30f",
+        "msg-translation-reason-forced": "f1f604a50ecc530ae2b2a76f199e6b2ce4b345a7b89d9babc0405c2129f67d28",
+        "msg-translation-reason-outputFileDidNotExist": "4104096a681b44f89ee1d32dd375ae90dd49f6de643f4c848d81cba33e956b51",
+        "msg-translation-reason-userMissingReferenceValueHash": "61263ef06c4249d6a64d7aca46813dbb6b97f2d8f755977088893e7de1b26f81",
+        "msg-translation-reason-userModifiedReferenceValue": "56827d5be8ba29e77c36c1b335b5aba0cf47aec1079a116082b0ab8a2bc275b1",
+        "msg-translation-reason-missingOutputKey": "bdc94125e5f2a94ed9e583424cfc25393fcdfc4fda549a31d62373b51915a05d",
+        "msg-translation-reason-missingOutputValueHash": "83797c9674780cff98c01751453cd38d86cd1479f7bdd95b4a0852db2acad6ac"
       }
     },
     "eu": {
@@ -944,7 +1214,13 @@
         "translation-reason-missingOutputKey": "049da8974ad621dc8736b5f4db73c0bdd9dc8ae1d8661c67dae072ca486aa80d",
         "translation-reason-missingOutputValueHash": "477a9fdc3dc660957dd5d4f82f221bda690b699ee076b00829f79462b68ef9d7",
         "msg-no-update-needed-for-key": "acf4eff8b2ae68cc98a5f3e6354e2e1d64906abba80b12074d6455f231ec9195",
-        "msg-rate-limited-sleeping": "440eeb3e6b4805cb71e10fe1605d0e71c16d947a05209f01d5085424186f3cf4"
+        "msg-rate-limited-sleeping": "440eeb3e6b4805cb71e10fe1605d0e71c16d947a05209f01d5085424186f3cf4",
+        "msg-translation-reason-forced": "36e2e7bfb521337642f326f13b1ed4add6ba6b7268841e0b26bfa72f043a6018",
+        "msg-translation-reason-outputFileDidNotExist": "26db8190e65eca70be597b9947056438e9fd421bf293d135bda48b8044447429",
+        "msg-translation-reason-userMissingReferenceValueHash": "7dd5cf6868b172faa07c4bc2f13a142745cc81c9ccd3f21a5a5cdcddcdc15755",
+        "msg-translation-reason-userModifiedReferenceValue": "8fd6f93ed1b609e6869a57fbd33cb4f893f5e683b7bb2924d4fe191f3dfa8474",
+        "msg-translation-reason-missingOutputKey": "c9b1e79fc38821e601e1ab14eafca9ddd759bef88e0c0d2125f1991523217bf9",
+        "msg-translation-reason-missingOutputValueHash": "889590c783031f1d56a20a19974294e025338f89b1b30f52b50606dcc861cc62"
       }
     },
     "fr-CA": {
@@ -964,7 +1240,13 @@
         "translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
         "translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01",
         "msg-no-update-needed-for-key": "89d296dbe60bd9f019c4be3a4c288078c8af0252135c532b9f0deb6919d87840",
-        "msg-rate-limited-sleeping": "5e404ba3a1857acf5a7597896dc7b766cd3f33b558e5bde7f0282747b6298c5d"
+        "msg-rate-limited-sleeping": "5e404ba3a1857acf5a7597896dc7b766cd3f33b558e5bde7f0282747b6298c5d",
+        "msg-translation-reason-forced": "9829f19cae529f8a9b048dd0c54f5a5b1bb847579794eb372bf182843bd9aae1",
+        "msg-translation-reason-outputFileDidNotExist": "498aeb7c6280a60224ea358b374364c47f5b50477a116f1a3aa74356e39cc2dd",
+        "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
+        "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
+        "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
+        "msg-translation-reason-missingOutputValueHash": "66554e3d65ac3c75cad7318f46453f6e6b0b9ba9bdd8aa651fa3ae8ad547e06a"
       }
     },
     "fr-CH": {
@@ -984,7 +1266,13 @@
         "translation-reason-forced": "9829f19cae529f8a9b048dd0c54f5a5b1bb847579794eb372bf182843bd9aae1",
         "translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
         "translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
-        "translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
+        "translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01",
+        "msg-translation-reason-forced": "9829f19cae529f8a9b048dd0c54f5a5b1bb847579794eb372bf182843bd9aae1",
+        "msg-translation-reason-outputFileDidNotExist": "498aeb7c6280a60224ea358b374364c47f5b50477a116f1a3aa74356e39cc2dd",
+        "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
+        "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
+        "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
+        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
       }
     },
     "fr-FR": {
@@ -1004,7 +1292,13 @@
         "translation-reason-outputFileDidNotExist": "498aeb7c6280a60224ea358b374364c47f5b50477a116f1a3aa74356e39cc2dd",
         "translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
         "translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
-        "translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
+        "translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01",
+        "msg-translation-reason-forced": "9829f19cae529f8a9b048dd0c54f5a5b1bb847579794eb372bf182843bd9aae1",
+        "msg-translation-reason-outputFileDidNotExist": "498aeb7c6280a60224ea358b374364c47f5b50477a116f1a3aa74356e39cc2dd",
+        "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
+        "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
+        "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
+        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
       }
     },
     "gsw": {
@@ -1024,7 +1318,13 @@
         "translation-reason-forced": "05761874e3630493b46f72cc1dd1bdde51511092a5c7ef94312d00ee8bcad7d8",
         "translation-reason-outputFileDidNotExist": "4b24e041c21801304ccf67cc63255bab907c37b10a1ee42705bb4eb83ff47f29",
         "translation-reason-userModifiedReferenceValue": "d4cfd85d052b6418864c5a69f699ac81b2b3af94ea226d3b64bfd716eec9f227",
-        "translation-reason-missingOutputKey": "361b55233119e74a872d836b525771152f98df218d777729ee98c6820318400b"
+        "translation-reason-missingOutputKey": "361b55233119e74a872d836b525771152f98df218d777729ee98c6820318400b",
+        "msg-translation-reason-forced": "05761874e3630493b46f72cc1dd1bdde51511092a5c7ef94312d00ee8bcad7d8",
+        "msg-translation-reason-outputFileDidNotExist": "a10c28b143c980064dd16571ff1537054f5469312926c38ee71ba3ea0556a26d",
+        "msg-translation-reason-userMissingReferenceValueHash": "df2f86c32af2b6f4b1ed963e80b8322e1c007c64713815284badae0700a7e04e",
+        "msg-translation-reason-userModifiedReferenceValue": "adf6157d23250a8251bb600b5b64bb5d9baeb96bd65e81310f50c79cab1c846e",
+        "msg-translation-reason-missingOutputKey": "4a43dcad4a8368ddf1aabad7fb5bb53a77dce24d2c9d62ef8b8f165285d78ffb",
+        "msg-translation-reason-missingOutputValueHash": "9554b2c82565d34401390d10d033619876879b691ad8962d60d68396c9cd42cb"
       }
     },
     "hi": {
@@ -1044,7 +1344,13 @@
         "translation-reason-forced": "e7e76062daf878e0d74b7a19503173746fe8e037da738d30320ac44edabd2f2f",
         "translation-reason-outputFileDidNotExist": "8cb587b2fb0cd49ba95ede34f61b2baf48866cc4dabd482264451e8e7b46d50a",
         "translation-reason-userModifiedReferenceValue": "a20d0cadc28e83119156c1704481a73f9d173d6e6a420ecb1ed7a0470e0d08d9",
-        "translation-reason-missingOutputKey": "38ce003811abf63257b5c4dc9548a5b393abd03db86788534e60eb1ac14927bd"
+        "translation-reason-missingOutputKey": "38ce003811abf63257b5c4dc9548a5b393abd03db86788534e60eb1ac14927bd",
+        "msg-translation-reason-forced": "dc29a3d36a5b26752396342b49e65bee46744f074a75b10a38af1d6116f26930",
+        "msg-translation-reason-outputFileDidNotExist": "8cb587b2fb0cd49ba95ede34f61b2baf48866cc4dabd482264451e8e7b46d50a",
+        "msg-translation-reason-userMissingReferenceValueHash": "c7c6386573b0921abe1eb64d2bca6dc9c808deba930043cd7c1d05a43625b658",
+        "msg-translation-reason-userModifiedReferenceValue": "a20d0cadc28e83119156c1704481a73f9d173d6e6a420ecb1ed7a0470e0d08d9",
+        "msg-translation-reason-missingOutputKey": "38ce003811abf63257b5c4dc9548a5b393abd03db86788534e60eb1ac14927bd",
+        "msg-translation-reason-missingOutputValueHash": "3890c8ece799dab0a20fbd6b93bb3e2bfaee7b83b2651068f447b35d3200325c"
       }
     },
     "hr": {
@@ -1064,7 +1370,13 @@
         "msg-processing-lang-and-key": "ba417fc2e87961a52ddfe5b46da0d1efb1eaa081a1084a83629a42355e553ea3",
         "translation-reason-userMissingReferenceValueHash": "4262d636ae4a1e44727812ce5e178f5a9e21598f5cb99e964809687a57eb735f",
         "translation-reason-userModifiedReferenceValue": "75cdfecc4991bb0864a420f45dd8d64db23c62c7c099bedb673834c490f37b17",
-        "translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2"
+        "translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2",
+        "msg-translation-reason-forced": "cf000fbff13d5f48a9384f07df5f9f2390c872c303194d640f2988af621348f5",
+        "msg-translation-reason-outputFileDidNotExist": "4f3d081015e30f6705f086f51715c73ac12b7f76299fdd385ad176b6552d33b9",
+        "msg-translation-reason-userMissingReferenceValueHash": "892710d14215a396af4129e34162370c9282a97b0ba181aceb04bd3254016d46",
+        "msg-translation-reason-userModifiedReferenceValue": "75cdfecc4991bb0864a420f45dd8d64db23c62c7c099bedb673834c490f37b17",
+        "msg-translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2",
+        "msg-translation-reason-missingOutputValueHash": "1ecf518e911b61e21e68e1d0b16f4abd1643d53b0c3181769305ade01d40666a"
       }
     },
     "hy": {
@@ -1084,7 +1396,13 @@
         "translation-reason-outputFileDidNotExist": "ac282c42d7efd3fec54cd6a3d5cadcea5bfbec9aff4d5fa567f06eda1f64e0db",
         "translation-reason-userMissingReferenceValueHash": "836dd69797883626a854ed6aa6b8ad2116e7ff5059c9fe7b8dc3856d77d58134",
         "translation-reason-userModifiedReferenceValue": "0a46e8f0e9f839b3f61fb9abb1d5458b8a1dfc66e2d9851fef7cbf099af090dd",
-        "translation-reason-missingOutputValueHash": "c584effd0f0c35f6bb92f50a3e654e3b29406066e5d770b357e91eb327d0fd32"
+        "translation-reason-missingOutputValueHash": "c584effd0f0c35f6bb92f50a3e654e3b29406066e5d770b357e91eb327d0fd32",
+        "msg-translation-reason-forced": "630760a470be4cb217b4f752a9819457c7fc814c9fb6344f659b4f785cc5935c",
+        "msg-translation-reason-outputFileDidNotExist": "19f0880c77474b9acc36c43095c49acac2d5cf2594ff97bb943310b27699c97b",
+        "msg-translation-reason-userMissingReferenceValueHash": "190cbecb809527ee7532e8ac117d1c9d71197b3855f2b7b75d70ed5967ad809f",
+        "msg-translation-reason-userModifiedReferenceValue": "315127639d0a4fa37320fa1b1cfc78d72ccd19a88b391cced1df838e60f5445c",
+        "msg-translation-reason-missingOutputKey": "ed87b43e22a451bb4ac43bac55afc4009f730b0bce0c2a0b3da6d25f8df9f42a",
+        "msg-translation-reason-missingOutputValueHash": "c584effd0f0c35f6bb92f50a3e654e3b29406066e5d770b357e91eb327d0fd32"
       }
     },
     "ja": {
@@ -1104,7 +1422,13 @@
         "translation-reason-outputFileDidNotExist": "b655cc44c24ae6e9fc54d42cb5d784de236d3826adbc444329ace9f0b8bea165",
         "translation-reason-userMissingReferenceValueHash": "693650cd3d864c6634674c1c759f91f0a01faa3947c17e06825bfc5c69773d38",
         "translation-reason-userModifiedReferenceValue": "e557c476b14a6d1ba9b90279f99e69f28744b4de0236ef7c4a74af1ad03006e7",
-        "translation-reason-missingOutputValueHash": "a22e83a51d10f12cb40cadac43f68266766fba512d70a79645f26967732f4193"
+        "translation-reason-missingOutputValueHash": "a22e83a51d10f12cb40cadac43f68266766fba512d70a79645f26967732f4193",
+        "msg-translation-reason-forced": "30b464a86f1a81ba6bcda6f503117be1f9510ebac668752c1c981370129c7920",
+        "msg-translation-reason-outputFileDidNotExist": "b655cc44c24ae6e9fc54d42cb5d784de236d3826adbc444329ace9f0b8bea165",
+        "msg-translation-reason-userMissingReferenceValueHash": "693650cd3d864c6634674c1c759f91f0a01faa3947c17e06825bfc5c69773d38",
+        "msg-translation-reason-userModifiedReferenceValue": "769bdb7095e0e9ed933805af5440b6eb53735488db4aed82ea407fa6c63e1e4b",
+        "msg-translation-reason-missingOutputKey": "96076fbd16826a44102efab24f0db812b0b88351bdd7d5288c0a018297a8ba6e",
+        "msg-translation-reason-missingOutputValueHash": "a22e83a51d10f12cb40cadac43f68266766fba512d70a79645f26967732f4193"
       }
     },
     "ksf": {
@@ -1124,7 +1448,13 @@
         "msg-no-update-needed-for-key": "e3f54badfb38015f2c8613961f7b6e7ec9caf1447c98b157bbd3f2c41d44a8a3",
         "msg-rate-limited-sleeping": "f5e98d44bd0465d7b588c37502c6893f97edac68e63fa1159f5cd3ca10dcf0ab",
         "msg-processing-lang-and-key": "8a6fb54b39a70519ef7d0fc2b8a09a451b7ab2f76cdea7983a8faf0cfec19a38",
-        "translation-reason-forced": "2cae322d46f15b714895c23a3307a0b0db35b964180833fc41b5dedfb77c769b"
+        "translation-reason-forced": "2cae322d46f15b714895c23a3307a0b0db35b964180833fc41b5dedfb77c769b",
+        "msg-translation-reason-forced": "8dac99b886f10517a09b6a986916bd4c964fc9cba7dfb5e09aac02a49d405863",
+        "msg-translation-reason-outputFileDidNotExist": "e23a52060dc48ccef0a91a893b19f0a9b6b05c851269e8e25bce1949a4f69fd4",
+        "msg-translation-reason-userMissingReferenceValueHash": "b43a39b181bbd1de5a3f2e1f01e30a4ec8e59b1f3311ef8cbf842f2a69f94eaf",
+        "msg-translation-reason-userModifiedReferenceValue": "4522e667c86673028aa5fa477fa1fadef2d46005c76e0604fd10358366fdb14a",
+        "msg-translation-reason-missingOutputKey": "440936e31410eb1f9569fa60f3b2e2f61cd3d0c3365016b11dee80b37bae3a83",
+        "msg-translation-reason-missingOutputValueHash": "a42346c8c7b7a2b4ff84dcf725d30fb1ea41ad49c4296b0a10e909b17a603f45"
       }
     },
     "km": {
@@ -1144,7 +1474,13 @@
         "translation-reason-missingOutputKey": "a763ef5112cfd40b606310950bdf52ba1f4a320e2d8c7425dedd0fc0cf77c8ac",
         "translation-reason-missingOutputValueHash": "dd7bc5026ca87ed48cd59e28ae180b61e3b7c7c66952c864a9f8341b91632278",
         "msg-no-update-needed-for-key": "d49592b4fdcc1371f98f7009eaf63df313923d83df6c1b8798667e8f82545da5",
-        "msg-rate-limited-sleeping": "8d867693f430f95d17913d3131584e6959bdbb23f0b6da796cbb9d5acec9d969"
+        "msg-rate-limited-sleeping": "8d867693f430f95d17913d3131584e6959bdbb23f0b6da796cbb9d5acec9d969",
+        "msg-translation-reason-forced": "bc90b3fce7efb6983d13752dcb339349b3aa43023b54f871692816c3b0eeee6b",
+        "msg-translation-reason-outputFileDidNotExist": "6e5591c034a152c7166290b848ed5691f2d70c586ce2566462f839cc0b69b91c",
+        "msg-translation-reason-userMissingReferenceValueHash": "b5cf544c028862ebe4cd44bad52b244af3f438ecf7752b1e7372eac1c7a00fec",
+        "msg-translation-reason-userModifiedReferenceValue": "6831ead55fac32e7ca10eea6bd1bb4c4c881c40448bad008e79e6b487a8b2709",
+        "msg-translation-reason-missingOutputKey": "8c6ac58313856061d13f1eab09982abd831d64887301752f4fe3cb0b469292a3",
+        "msg-translation-reason-missingOutputValueHash": "d59d5a6661b25e1608e80750a4abbb10b72fb6d385f5540d7a295a38f1a80671"
       }
     },
     "ku": {
@@ -1164,7 +1500,13 @@
         "translation-reason-missingOutputKey": "11b1a7f744254451dc558ecd19be66909ab52dc2ce531ec2b0ede645eb897294",
         "translation-reason-missingOutputValueHash": "a70dfe0bfb863f9bbcd0889caf545bdc585ba540dbd04f662ac02ad9679831be",
         "msg-no-update-needed-for-key": "676a2724420a8bf6a14b69982bf82c3a9d60d3dc532702269620c4b627f93beb",
-        "msg-rate-limited-sleeping": "80fb7bd44abd6458e2c39eadd07829d61d6a3fb868127ea66570823cc016719d"
+        "msg-rate-limited-sleeping": "80fb7bd44abd6458e2c39eadd07829d61d6a3fb868127ea66570823cc016719d",
+        "msg-translation-reason-forced": "02b150647a7b148fd2661b25caa204e9745413b2170d1d1756d44416f7e1abe9",
+        "msg-translation-reason-outputFileDidNotExist": "68fd26325c0c85e557031c9e8e81a813ec3d78bd26010610603e1213386c6d13",
+        "msg-translation-reason-userMissingReferenceValueHash": "2dad802d9f09c6c4600ec93e0c2eae51ed5823cd777d9330b79bf11dc9feb7f9",
+        "msg-translation-reason-userModifiedReferenceValue": "cb224a90fb2ab8ff8a3a6f5748a309c61545780c0cac18440f35096da5f683fe",
+        "msg-translation-reason-missingOutputKey": "5bbee61d16cc6a59b46911686cf73be8afdd4fdb653572e92f576f2fb35ba2cb",
+        "msg-translation-reason-missingOutputValueHash": "a70dfe0bfb863f9bbcd0889caf545bdc585ba540dbd04f662ac02ad9679831be"
       }
     },
     "kw": {
@@ -1184,7 +1526,13 @@
         "translation-reason-missingOutputKey": "479a53c8710e9ba78b54a18a890c809d9f36ee0197dadf03198ec0b9a710e1d5",
         "translation-reason-missingOutputValueHash": "f58d1bb2bfa2e0c8ea3277dbfa7f579386473b761a7b3406bff78754fba4581d",
         "msg-no-update-needed-for-key": "6d25f02aaa4d90f95a53fb7a16828ffd00b769cc29bbf6022476778177f47c9e",
-        "msg-rate-limited-sleeping": "e7d0c2ebfc4c00ac73bb01cfe208a74d65cc1c58e61875aaf17e66c77e34fae7"
+        "msg-rate-limited-sleeping": "e7d0c2ebfc4c00ac73bb01cfe208a74d65cc1c58e61875aaf17e66c77e34fae7",
+        "msg-translation-reason-forced": "9aa60bc4bd18489f4983a4d25c5972ca1aec0d3fed8b1deb5a6b97bb810eba50",
+        "msg-translation-reason-outputFileDidNotExist": "b1117d56af44e4d57326ab31de6b2f7df8f40b3eb553db4fb5fc935712db7335",
+        "msg-translation-reason-userMissingReferenceValueHash": "5f73aee474fb2c0e50f0f416c6e77541e22ecbedc5848c14799a873914477bd8",
+        "msg-translation-reason-userModifiedReferenceValue": "1ce862b6d8d50b1d2fca50265d43fa7e301f3b170d904e112cfd8afb6b320421",
+        "msg-translation-reason-missingOutputKey": "4095bd6724bd608190ba04f964dcfe1a23582ecafe4e55a1093ebd7a0e4ab365",
+        "msg-translation-reason-missingOutputValueHash": "11be37856df02f9ee03e6097e9f8040d1050c21196de166bf332869e789890b0"
       }
     },
     "my": {
@@ -1204,7 +1552,13 @@
         "translation-reason-missingOutputKey": "74e9e68f24a35b05c517a1ee5e3f8c3d24525c79e5f052e2a23a7f6f52234c05",
         "translation-reason-missingOutputValueHash": "3c75f1bea081c91a5c2d9ece009210e578dd3de3c3dc91eafbbfe65b9453e249",
         "msg-no-update-needed-for-key": "fb25225d21823fd47e1989c2e85c1ea3c8de018c9149370c561181fdd4abe7e0",
-        "msg-rate-limited-sleeping": "ffec39eba1da1cced3eff3290206a88962e27000e57fc9f591ceea20bde0d4c8"
+        "msg-rate-limited-sleeping": "ffec39eba1da1cced3eff3290206a88962e27000e57fc9f591ceea20bde0d4c8",
+        "msg-translation-reason-forced": "26d4567db254438f4ef279379b3d4c593f4ffa2a0eb9047e17ec743e4af832fe",
+        "msg-translation-reason-outputFileDidNotExist": "0e086fce3ac860da8ee47bfe007a752d7777ab3b6a9d7e3955374129ccdbd305",
+        "msg-translation-reason-userMissingReferenceValueHash": "385556e25975e2a0506db6c5c3e61fc94ecdfb82bb93ae6ea2d5a59fec1cd95c",
+        "msg-translation-reason-userModifiedReferenceValue": "591e3fb023de4e9f65a9374bfca4941bc76b9f0b301e227fb00caddf6fb7369e",
+        "msg-translation-reason-missingOutputKey": "49c4625237c0411515213547a41ff673d605f9e873223481f444c22db596039d",
+        "msg-translation-reason-missingOutputValueHash": "f8221a13650d0a3e7f8ec46c6bf27459c8e6c275309846c911791db2a495515a"
       }
     },
     "nl": {
@@ -1224,7 +1578,13 @@
         "translation-reason-missingOutputKey": "a1f488a16ee430024cb98d8723c6d41f890991713b30a24251d94bda5da4dcdc",
         "translation-reason-missingOutputValueHash": "16539bac46b28affc2f23b1bb741026a14af1fdc64373a6674ab0537ad263739",
         "msg-no-update-needed-for-key": "44ba5b843406630f35d32990613ab5394aa77482c2253612f94bbad3d60da647",
-        "msg-rate-limited-sleeping": "d1276e64c7a2142cce3ea6355a07a45e0cee1fa37876745577de0cffe2fbe1b5"
+        "msg-rate-limited-sleeping": "d1276e64c7a2142cce3ea6355a07a45e0cee1fa37876745577de0cffe2fbe1b5",
+        "msg-translation-reason-forced": "cf3bdcc822e30f61a98bb408c416862a0b221d45f9f573095af105f55d764ea8",
+        "msg-translation-reason-outputFileDidNotExist": "ec4b4521e4316a4867aea46cb51777a6e34640da65d9aa45bdd4ac68bc65c742",
+        "msg-translation-reason-userMissingReferenceValueHash": "4d32087e67f50fda2c3d16515676f7e6280bf054bb2203afce0932b084f86a14",
+        "msg-translation-reason-missingOutputKey": "a1f488a16ee430024cb98d8723c6d41f890991713b30a24251d94bda5da4dcdc",
+        "msg-translation-reason-missingOutputValueHash": "16539bac46b28affc2f23b1bb741026a14af1fdc64373a6674ab0537ad263739",
+        "msg-translation-reason-userModifiedReferenceValue": "65799bbd8509228b818ca6ea8ef25d5708b1418e3c9c2fe5474f5f266fe5d75f"
       }
     },
     "ru": {
@@ -1244,7 +1604,13 @@
         "translation-reason-missingOutputKey": "caa49fe2f8d2acee23913d01b06180c81055ba5ea969f885152af7e21dc5ba28",
         "translation-reason-missingOutputValueHash": "bb92aefc86865483336019978757409c5a6b52d1a04838413e8c81c417d432f2",
         "msg-no-update-needed-for-key": "777aabb87d4e24e1bbc82afadc6991c5726482c8f7846f9c176dc6c5f62afe4c",
-        "msg-rate-limited-sleeping": "ac830142a0d4605737877fbdfd629072f3e77da7ad10b680e9009416a50749d9"
+        "msg-rate-limited-sleeping": "ac830142a0d4605737877fbdfd629072f3e77da7ad10b680e9009416a50749d9",
+        "msg-translation-reason-forced": "85bec46c65a044bdbbbe16fe3dbf65e431bd6971fe9b7c8e5c2b259072315df5",
+        "msg-translation-reason-outputFileDidNotExist": "bba390f6635babc7a87dfddf6a4fad41111cb68acb0202ac00929002d79bdfb8",
+        "msg-translation-reason-userMissingReferenceValueHash": "4f4829ed5154a8a7f0e81ba74ec0b6e088afb8bd4a97d51655de3cf60d1f9e5d",
+        "msg-translation-reason-userModifiedReferenceValue": "5b870ed0d79460606e01673f6b30882ad9e1fc143a3a28532902d86bc745b474",
+        "msg-translation-reason-missingOutputKey": "97ef8861e2f61a59ab7b0b6f794554c3c97e49cbe2f57852e0ffcf32bf3b07f2",
+        "msg-translation-reason-missingOutputValueHash": "591297b25ecfbd7ff9fd35cf85ffb7075b6b2033242c18ed0ec9560e6dab8887"
       }
     },
     "prs": {
@@ -1264,7 +1630,13 @@
         "translation-reason-missingOutputKey": "04cc838241b7c99743e5648d7f7ebff80ec063c6688b7c0492a3639c3daaf4ee",
         "translation-reason-missingOutputValueHash": "99c013de90284644957962a4a5d303474855389071682d580b6a2f4f42d038f4",
         "msg-no-update-needed-for-key": "0295a6758af3ff21c09b77246e6b5c71e733262821e861ccc2162270ab7d89bc",
-        "msg-rate-limited-sleeping": "97b2ec94cd740b5ee017cd99b5eecee2ec923435f2d64e48ded781aaa5c0f3ef"
+        "msg-rate-limited-sleeping": "97b2ec94cd740b5ee017cd99b5eecee2ec923435f2d64e48ded781aaa5c0f3ef",
+        "msg-translation-reason-forced": "b9c28a8fdf13d18176c828081c0ad69d9e47f9fd98fea8e3bbe4b39d41e9f96d",
+        "msg-translation-reason-outputFileDidNotExist": "046e404a9db838330c342c804156abadd9bc35acba30aff6aaf76cb36ae6b788",
+        "msg-translation-reason-userMissingReferenceValueHash": "d6aae3e16b4f29dc3031877d629a66dbd28099e9a435c18d6859eaf5ed537b77",
+        "msg-translation-reason-userModifiedReferenceValue": "1c531c2afe89533d9ddb0142085d341653f2e9c2afa3f38c420457b87f6e7bf9",
+        "msg-translation-reason-missingOutputKey": "f5ebe58bff1642b88efe3ada59d04d3386d2a2be3f544b5b6569ee38403189ac",
+        "msg-translation-reason-missingOutputValueHash": "681577d0c4cb1015de423e21d3061debace5f4434bf46ed0da0b5700ef2037af"
       }
     },
     "sq": {
@@ -1284,7 +1656,13 @@
         "msg-rate-limited-sleeping": "3104bf5d40707e66861357d102d22c5d2453747b35daf6253cfa47f0725092a3",
         "translation-reason-userMissingReferenceValueHash": "5992c247b671ae9e4a98fa2ae816cc63722890071e532e23a4ce51ce5b2b170d",
         "translation-reason-userModifiedReferenceValue": "fc53bbe7058cb6409b674abca74dd104baaa8b9a9004ae01b02f08d1670d4b6d",
-        "translation-reason-missingOutputValueHash": "814ab9c98eb57ca215191cbc9f800b98ebf41bc265e79184cb57ddbc30cf9589"
+        "translation-reason-missingOutputValueHash": "814ab9c98eb57ca215191cbc9f800b98ebf41bc265e79184cb57ddbc30cf9589",
+        "msg-translation-reason-forced": "d44d35a03ba4effe16f5d6c4ea057496cfa590fb85a119a9475f9d119bbed6ce",
+        "msg-translation-reason-outputFileDidNotExist": "a239ca6a542e3105e673f2bbafc5f019ff9abef0895fe75d4829ccce9d2264d2",
+        "msg-translation-reason-userMissingReferenceValueHash": "4837e30e11ec8d7cbc763c4b09485f47c51663e9a34c8e90b1ee339332d94b83",
+        "msg-translation-reason-userModifiedReferenceValue": "fc53bbe7058cb6409b674abca74dd104baaa8b9a9004ae01b02f08d1670d4b6d",
+        "msg-translation-reason-missingOutputKey": "8b3a19622d563e853426bbd0d73c2dd206add8abec10fd8190efe3a61d725c6d",
+        "msg-translation-reason-missingOutputValueHash": "c967b080f1cf66ab2931e86f1272ece72889eb8655be834cf851d965bffeabe3"
       }
     },
     "swc": {
@@ -1304,7 +1682,13 @@
         "translation-reason-outputFileDidNotExist": "7f7e6f2a3fa051e000aa1d23d329cad135223c898b183ba3df403d6e51a5cd18",
         "translation-reason-userMissingReferenceValueHash": "ea99659226567ff9289d5ed8ac61a35917cd08e742c14461cd4b840ca11c7c73",
         "translation-reason-userModifiedReferenceValue": "53b9441cab7859abc6c4d3acdb8b6db393f225ed449c45fb414fa0c7e0da6282",
-        "translation-reason-missingOutputValueHash": "18575e560c1d21e17608f746cfc4291d6be6e494e53f1841baf02fa60e3d47ef"
+        "translation-reason-missingOutputValueHash": "18575e560c1d21e17608f746cfc4291d6be6e494e53f1841baf02fa60e3d47ef",
+        "msg-translation-reason-forced": "9345a2a8130ad84f306527b872ac06d4dfffbcf0645bdf99dec7493f9ce3a1b8",
+        "msg-translation-reason-outputFileDidNotExist": "a63726465be81f64dfbcbc917b254a3809e3db9a18c47eed581525adb15169ad",
+        "msg-translation-reason-userMissingReferenceValueHash": "0b33051bda1345f3da2ced9fffacd23bf29a0603a994e7899ff8bbaa916f433e",
+        "msg-translation-reason-userModifiedReferenceValue": "5520da3d19b847ae6c06a6351b8d9cef04bf9066595d66d5af192c6ee8104c91",
+        "msg-translation-reason-missingOutputKey": "dd7b5f3120a85ae69a5e390eab1089e06225dee0904126be76c57cf4135cd5a6",
+        "msg-translation-reason-missingOutputValueHash": "7dd77602ac001460a0e1592534fc5192059991f142dc60f24663e61ebdf48412"
       }
     },
     "th": {
@@ -1324,7 +1708,13 @@
         "translation-reason-outputFileDidNotExist": "3c96bb8e3cf4316277577b94285bd2d26dcfbabe60dfeb373e116ddd0c2c4056",
         "translation-reason-userMissingReferenceValueHash": "aedcf32ab72c8218689fbed7d6d9330ede8898a5a3bd9f97a74e44ddf8e08705",
         "translation-reason-userModifiedReferenceValue": "6b3c063a478296d12185ceedd49f9ee92e1d7f7935aa878b20c0a57cf738df6f",
-        "translation-reason-missingOutputValueHash": "fe6923765b3044c4f13012a397ad8cd47ff6b8e9479ade300ebfed0f8c66e753"
+        "translation-reason-missingOutputValueHash": "fe6923765b3044c4f13012a397ad8cd47ff6b8e9479ade300ebfed0f8c66e753",
+        "msg-translation-reason-forced": "c82616aeb67ecc1e62ef6af2af90d626d307aef09a786132b81c9c39e3cbb78f",
+        "msg-translation-reason-outputFileDidNotExist": "3c96bb8e3cf4316277577b94285bd2d26dcfbabe60dfeb373e116ddd0c2c4056",
+        "msg-translation-reason-userMissingReferenceValueHash": "aedcf32ab72c8218689fbed7d6d9330ede8898a5a3bd9f97a74e44ddf8e08705",
+        "msg-translation-reason-userModifiedReferenceValue": "ab678aac7d01a41543dddb7648655cf5c22172b689962b54605d0c8561db4b44",
+        "msg-translation-reason-missingOutputKey": "301c2135d8baf7fd9ee3f1abaf7ab0363f1d680e2d96b154aaade66177c4c478",
+        "msg-translation-reason-missingOutputValueHash": "fe6923765b3044c4f13012a397ad8cd47ff6b8e9479ade300ebfed0f8c66e753"
       }
     },
     "tzm-Latn-": {
@@ -1344,7 +1734,13 @@
         "msg-processing-lang-and-key": "728c9805ca6402948857ddd4abbfbf6f83f211af1622b5d708b26f425ce39923",
         "translation-reason-forced": "fdeec064b6368cd39e085253fe6b49e731e12453e669506d18adf60fb029b142",
         "translation-reason-userMissingReferenceValueHash": "41e6d2e1c5eac6c9e547147e287db976ab031cc4f89d7b6bfff87b11d801a775",
-        "translation-reason-missingOutputValueHash": "3d019b6890d34469e58546bb2e28ff31bbf166f4a8d8e253905610dfdf5b1cea"
+        "translation-reason-missingOutputValueHash": "3d019b6890d34469e58546bb2e28ff31bbf166f4a8d8e253905610dfdf5b1cea",
+        "msg-translation-reason-forced": "c31d3190b366afb43dd0424e1410beb1fc0d16c7712b47d59b617a40aa68d742",
+        "msg-translation-reason-outputFileDidNotExist": "3349487b3b0941398dacc5bb82fe6b28c8e2752df99dc4d7b60c92f8f3394596",
+        "msg-translation-reason-userMissingReferenceValueHash": "b6c7d82075295d3e25ffc381f6dbcae397a9d263714b5273e5d2c11028a78a8d",
+        "msg-translation-reason-userModifiedReferenceValue": "0670b127a37433b435d2c40acacfa6c0a53d1aaef6d2605f6420d76433d4ad7f",
+        "msg-translation-reason-missingOutputKey": "de6883954eaff82f4e65816b478b5438537f25244d76fa8e391b9ddff52fa5f0",
+        "msg-translation-reason-missingOutputValueHash": "7ae36b0a1ad7620b54712aad742434e53927256248b117147582890764a96b0d"
       }
     },
     "uk": {
@@ -1364,7 +1760,13 @@
         "translation-reason-outputFileDidNotExist": "4bcff1dd0cb11890e13be4f2e031281d9a94b6f7c678d91e1b4279faba5ba080",
         "translation-reason-userMissingReferenceValueHash": "3b5f7049a020a1c103f05a6bc908c304d628d7da68f1265bc2b34c3022c87483",
         "translation-reason-missingOutputKey": "e50374131387c836649a76a7bfe304016d413ded56493712b54a3caa987f6c9a",
-        "translation-reason-missingOutputValueHash": "33e64b13592e99d80e1258f08571b0d048c35857e661ff78480167ead1e167fd"
+        "translation-reason-missingOutputValueHash": "33e64b13592e99d80e1258f08571b0d048c35857e661ff78480167ead1e167fd",
+        "msg-translation-reason-forced": "06d19349ae8130e30530a3534183cdf085267b272582bbae1f65ea15293f2a0b",
+        "msg-translation-reason-outputFileDidNotExist": "4bcff1dd0cb11890e13be4f2e031281d9a94b6f7c678d91e1b4279faba5ba080",
+        "msg-translation-reason-userMissingReferenceValueHash": "ad8f86626564893a0b2e2f58e1d345e28437a9af6ee9ef6ab86a2fdc6e5b736a",
+        "msg-translation-reason-userModifiedReferenceValue": "ab9e0bfff39c739c45acf79d38913860e266da2ed70b492935f365a2b1eb3ccf",
+        "msg-translation-reason-missingOutputKey": "277bf17ee6075db4aba344a5acc0d472e56eebff0b6be7747ac515b3f162cd5e",
+        "msg-translation-reason-missingOutputValueHash": "33e64b13592e99d80e1258f08571b0d048c35857e661ff78480167ead1e167fd"
       }
     },
     "vi": {
@@ -1384,7 +1786,13 @@
         "translation-reason-forced": "e0d7351d1da6cf27c74a0b36ec402941c584577da2b073a4bc361a51ecc4fed7",
         "translation-reason-outputFileDidNotExist": "5b9ec3e5ffb8d583108373809b20d611738cfc42a7fd39e9acc7c9035d0aff3b",
         "translation-reason-userMissingReferenceValueHash": "6a3042018f12a8c9905946fab64569cc3447b32ca730466621b97ec97375bb44",
-        "translation-reason-missingOutputKey": "981eac94ddf9d434f1f375813198cdedbc0776307a4aee6ad8bb26bc66f883ef"
+        "translation-reason-missingOutputKey": "981eac94ddf9d434f1f375813198cdedbc0776307a4aee6ad8bb26bc66f883ef",
+        "msg-translation-reason-forced": "e0d7351d1da6cf27c74a0b36ec402941c584577da2b073a4bc361a51ecc4fed7",
+        "msg-translation-reason-outputFileDidNotExist": "6b755462013cc7947bbb3400e85336ddcd48bdbb8424a2b9767c30582cec0a77",
+        "msg-translation-reason-userMissingReferenceValueHash": "6a3042018f12a8c9905946fab64569cc3447b32ca730466621b97ec97375bb44",
+        "msg-translation-reason-userModifiedReferenceValue": "6442c32917111fe77032a6ec348213932eca9f0a0e3ed728d097138f3c56216e",
+        "msg-translation-reason-missingOutputKey": "637036fbad345d5b9dc5567ad9525ccf57f727baa1cd4054abc4e17b8822b13c",
+        "msg-translation-reason-missingOutputValueHash": "3ef7867dd9fd5fcab26e6fb063ff3d9c38b300e2f0f350f0a08dc9e54df0acc7"
       }
     },
     "zh-SG": {
@@ -1424,7 +1832,13 @@
         "translation-reason-userMissingReferenceValueHash": "31bdbb277cfba5feac646d2268e419f15ac5686c441f8ba848ec48f52ed2b611",
         "translation-reason-userModifiedReferenceValue": "fa6c92cdd06ed172becf1e7aaf049fc4b90e923c3955f06c65fb7a2c4f2b7419",
         "translation-reason-missingOutputKey": "ef4dc613b89d787366a49b755ff37b889fd610cd77decc14021a8868ff357fad",
-        "translation-reason-missingOutputValueHash": "82527c68fecaaf09092819fa750090f0cc50d5c4d1ed01b7342d3738224a1d95"
+        "translation-reason-missingOutputValueHash": "82527c68fecaaf09092819fa750090f0cc50d5c4d1ed01b7342d3738224a1d95",
+        "msg-translation-reason-forced": "4464ff8b17c0c8ac2a1a5e8325aa32f12a4758d7aeaed1d16c86d70e5099c317",
+        "msg-translation-reason-userMissingReferenceValueHash": "cd6762da69db6fa60f77b350b1f722a669ae649cfd783bb0ffdd36775b26c087",
+        "msg-translation-reason-userModifiedReferenceValue": "9a6b4b5aa797eeb6cda8e32cc4de105ff68aa5c6dd5d0a767a15151391579018",
+        "msg-translation-reason-missingOutputKey": "ef4dc613b89d787366a49b755ff37b889fd610cd77decc14021a8868ff357fad",
+        "msg-translation-reason-missingOutputValueHash": "82527c68fecaaf09092819fa750090f0cc50d5c4d1ed01b7342d3738224a1d95",
+        "msg-translation-reason-outputFileDidNotExist": "045906c9c10f7ded517f893d76cea1c6a8f94fe3c7a2362e8051f6d1a334033a"
       }
     },
     "zh-Hant": {
@@ -1444,9 +1858,15 @@
         "translation-reason-userMissingReferenceValueHash": "4929e0b8d248f7a7a7f2f834e6af3d0a2ef1bcbb7688531e441332d55577d9e4",
         "translation-reason-userModifiedReferenceValue": "7062f8624491ec52b521e52333b5e6856cdb2cdd030fa3a77059fdcefcd4e1c2",
         "translation-reason-missingOutputKey": "2a456dabfc344c3cd370adb86774c9f891412344dbfa5a7ea7564b3009632420",
-        "translation-reason-missingOutputValueHash": "9ed09122ea44054e33194609a76b2874df70df926ef8258a975514b54d2d2530"
+        "translation-reason-missingOutputValueHash": "9ed09122ea44054e33194609a76b2874df70df926ef8258a975514b54d2d2530",
+        "msg-translation-reason-forced": "0afff740e0a70118c051be7fc1571361abba07d63981590bd61513d5c1dcfdac",
+        "msg-translation-reason-userMissingReferenceValueHash": "4929e0b8d248f7a7a7f2f834e6af3d0a2ef1bcbb7688531e441332d55577d9e4",
+        "msg-translation-reason-userModifiedReferenceValue": "7062f8624491ec52b521e52333b5e6856cdb2cdd030fa3a77059fdcefcd4e1c2",
+        "msg-translation-reason-missingOutputKey": "2a456dabfc344c3cd370adb86774c9f891412344dbfa5a7ea7564b3009632420",
+        "msg-translation-reason-missingOutputValueHash": "a125e7d75250864509d30bbdaa92e9064c61e0944b76759281e2065da425713f",
+        "msg-translation-reason-outputFileDidNotExist": "7c44afa57262076c92f763d11111d4b48fe89914edfe3e305f1ecae8963a1b77"
       }
     }
   },
-  "lastRun": "2025-04-14T17:08:32.214Z"
+  "lastRun": "2025-04-14T18:40:59.075Z"
 }

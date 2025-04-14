@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "هیچ وەرگێڕانێکی بەردەست نەدۆزرایەوە",
   "translation-reason-missingOutputValueHash": "Hîç hash di pelê cache de nehat dîtin",
   "msg-no-update-needed-for-key": "Bo %%key%% pêdiviya rojanekirinê tune ye",
-  "msg-rate-limited-sleeping": "Tixûbkirin a rêjeyê; niha razan bo %%interval%%ç...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Tixûbkirin a rêjeyê; niha razan bo %%interval%%ç...%%attemptStr%%",
+  "msg-translation-reason-forced": "Nûvekirina neçarî",
+  "msg-translation-reason-outputFileDidNotExist": "Faylî derxistinê %%outputFile%% nebû",
+  "msg-translation-reason-userMissingReferenceValueHash": "Hîç pêhejmara referansê nehat dîtin",
+  "msg-translation-reason-userModifiedReferenceValue": "Bikaranvan jora riste ya referans guherand",
+  "msg-translation-reason-missingOutputKey": "Wergera heyî nehat dîtin",
+  "msg-translation-reason-missingOutputValueHash": "Hîç hash di pelê cache de nehat dîtin"
 }

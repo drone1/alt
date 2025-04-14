@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "কোনো বিদ্যমান অনুবাদ পোৱা নাই",
   "translation-reason-missingOutputValueHash": "ডেট'চৰ চিফাইলত কোনো হেচ্‌ পোৱা নাই",
   "msg-no-update-needed-for-key": "%%key%%ৰ বাবে আপডেট প্ৰয়োজন নাই",
-  "msg-rate-limited-sleeping": "Rate limited; %%interval%%ছেকেণ্ডৰ বাবে শুই থকা হৈছে...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; %%interval%%ছেকেণ্ডৰ বাবে শুই থকা হৈছে...%%attemptStr%%",
+  "msg-translation-reason-forced": "জবৰদস্তিমূলক আপডেট",
+  "msg-translation-reason-outputFileDidNotExist": "আউটপুট ফাইল %%outputFile%% অস্তিত্ৱত নাছিল",
+  "msg-translation-reason-userMissingReferenceValueHash": "কোনো ৰেফাৰেন্স হেচ্‌ পোৱা নগ'ল",
+  "msg-translation-reason-userModifiedReferenceValue": "ব্যৱহাৰকাৰীয়ে সন্দৰ্ভ ষ্ট্ৰিং পৰিৱৰ্তন কৰিছে",
+  "msg-translation-reason-missingOutputKey": "অস্তিত্বৰ থকা অনুবাদ পোৱা নগ'ল",
+  "msg-translation-reason-missingOutputValueHash": "নো হেছ ফাউণ্ড ইন কেচ ফাইল"
 }

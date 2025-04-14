@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Walay nakit-ang hubad",
   "translation-reason-missingOutputValueHash": "Walay nakitang hash sa cache file",
   "msg-no-update-needed-for-key": "Walay kinahanglan nga pag-update para sa %%key%%",
-  "msg-rate-limited-sleeping": "Rate limited; nagpahulay sa %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; nagpahulay sa %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Gipugos nga update",
+  "msg-translation-reason-outputFileDidNotExist": "Ang file nga ipaluwas %%outputFile%% wala maglungtad",
+  "msg-translation-reason-userMissingReferenceValueHash": "Walay nakit-ang reference hash",
+  "msg-translation-reason-userModifiedReferenceValue": "Ang user niusab sa reference string",
+  "msg-translation-reason-missingOutputKey": "Walay nakit-ang kabahin nga gihubad",
+  "msg-translation-reason-missingOutputValueHash": "Walay nakit-ang hash sa cache file"
 }

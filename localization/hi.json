@@ -14,5 +14,11 @@
   "translation-reason-forced": "बाध्य अद्यतन",
   "translation-reason-outputFileDidNotExist": "आउटपुट फ़ाइल %%outputFile%% मौजूद नहीं थी",
   "translation-reason-userModifiedReferenceValue": "उपयोगकर्ता द्वारा संशोधित संदर्भ स्ट्रिंग",
-  "translation-reason-missingOutputKey": "कोई मौजूदा अनुवाद नहीं मिला"
+  "translation-reason-missingOutputKey": "कोई मौजूदा अनुवाद नहीं मिला",
+  "msg-translation-reason-forced": "अनिवार्य अपडेट",
+  "msg-translation-reason-outputFileDidNotExist": "आउटपुट फ़ाइल %%outputFile%% मौजूद नहीं थी",
+  "msg-translation-reason-userMissingReferenceValueHash": "कोई संदर्भ हैश नहीं मिला",
+  "msg-translation-reason-userModifiedReferenceValue": "उपयोगकर्ता द्वारा संशोधित संदर्भ स्ट्रिंग",
+  "msg-translation-reason-missingOutputKey": "कोई मौजूदा अनुवाद नहीं मिला",
+  "msg-translation-reason-missingOutputValueHash": "कैश फ़ाइल में कोई हैश नहीं मिला"
 }

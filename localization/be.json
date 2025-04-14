@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "কোনো বিদ্যমান অনুবাদ পাওয়া যায়নি",
   "translation-reason-missingOutputValueHash": "কোনো হ্যাশ ক্যাশে ফাইলে পাওয়া যায়নি",
   "msg-no-update-needed-for-key": "Ніякае абнаўленне не патрабуецца для %%key%%",
-  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%%s এর জন্য ঘুমাচ্ছে...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%%s এর জন্য ঘুমাচ্ছে...%%attemptStr%%",
+  "msg-translation-reason-forced": "ফৰ্চড আপডেট",
+  "msg-translation-reason-outputFileDidNotExist": "Output файл %%outputFile%% не існаваў",
+  "msg-translation-reason-userMissingReferenceValueHash": "কোনো রেফারেন্স হ্যাশ পাওয়া যায়নি",
+  "msg-translation-reason-userModifiedReferenceValue": "Юзэр/карыстальнік змяніў эталонны радок",
+  "msg-translation-reason-missingOutputKey": "কোন বিদ্যমান অনুবাদ পাওয়া যায়নি",
+  "msg-translation-reason-missingOutputValueHash": "কোনো হ্যাশ ক্যাশে ফাইলে পাওয়া যায়নি"
 }

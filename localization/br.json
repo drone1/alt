@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Nenhuma tradução existente encontrada",
   "translation-reason-missingOutputValueHash": "Hag ebed kavet er restr krubuilh",
   "msg-no-update-needed-for-key": "Ne da ket ezhomm eus ur bajenn nevez evit %%key%%",
-  "msg-rate-limited-sleeping": "Limitado por taxa; dormindo por %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Limitado por taxa; dormindo por %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Atualização forçada",
+  "msg-translation-reason-outputFileDidNotExist": "O arquivo de saída %%outputFile%% não existia",
+  "msg-translation-reason-userMissingReferenceValueHash": "Goude hash daveenn ebet",
+  "msg-translation-reason-userModifiedReferenceValue": "Refe rensia mweo-ke i bin modifié ó jẹnia",
+  "msg-translation-reason-missingOutputKey": "Nenhuma tradução existente encontrada",
+  "msg-translation-reason-missingOutputValueHash": "Nenhum hash encontrado no arquivo de cache"
 }

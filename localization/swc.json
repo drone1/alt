@@ -14,5 +14,11 @@
   "translation-reason-outputFileDidNotExist": "Faili ya matokeo %%outputFile%% haipo",
   "translation-reason-userMissingReferenceValueHash": "Hakuna hash ya kumbukumbu iliyopatikana",
   "translation-reason-userModifiedReferenceValue": "Mtumiaji amefanyia marekebisho uzi wa rejeleo",
-  "translation-reason-missingOutputValueHash": "Hakuna alama ya hash iliyopatikana katika faili la akiba"
+  "translation-reason-missingOutputValueHash": "Hakuna alama ya hash iliyopatikana katika faili la akiba",
+  "msg-translation-reason-forced": "Sasisho ya nguvu",
+  "msg-translation-reason-outputFileDidNotExist": "Faili ya majibu %%outputFile%% haikuwepo",
+  "msg-translation-reason-userMissingReferenceValueHash": "Hakuna hashi ya kumbukumbu iliyopatikana",
+  "msg-translation-reason-userModifiedReferenceValue": "Mtumiaji amebadilisha neno la marejeleo",
+  "msg-translation-reason-missingOutputKey": "Hakuna tafsiri iliyo po",
+  "msg-translation-reason-missingOutputValueHash": "Hakuna hash iliyopatikana kwa kitabu cha kashe"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "ምንም የነበረ ትርጉም አልተገኘም",
   "translation-reason-missingOutputValueHash": "በካሽ ፋይሉ ውስጥ ምንም ሃሽ አልተገኘም",
   "msg-no-update-needed-for-key": "%%key%% ላይ ምንም ማዘመኛ አያስፈልግም",
-  "msg-rate-limited-sleeping": "የተወሰነ መጠን ደርሷል፤ ለ%%interval%%ሰ... እየተኛ ነው%%attemptStr%%"
+  "msg-rate-limited-sleeping": "የተወሰነ መጠን ደርሷል፤ ለ%%interval%%ሰ... እየተኛ ነው%%attemptStr%%",
+  "msg-translation-reason-forced": "አስገዳጅ ማዘመን",
+  "msg-translation-reason-outputFileDidNotExist": "የውጤት ፋይል %%outputFile%% አልነበረም",
+  "msg-translation-reason-userMissingReferenceValueHash": "ምንም የማጣቀሻ ሃሽ አልተገኘም",
+  "msg-translation-reason-userModifiedReferenceValue": "ተጠቃሚው የማጣቀሻ ሕብረቁምፊን አሻሽሏል",
+  "msg-translation-reason-missingOutputKey": "ምንም የነበረ ትርጉም አልተገኘም",
+  "msg-translation-reason-missingOutputValueHash": "ከመከማቻ ፋይሉ ውስጥ ምንም ሃሽ አልተገኘም"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "အရှိတော့ ဘာသာပြန်ချက် မရှိသေးပါ",
   "translation-reason-missingOutputValueHash": "ကက်ချ် ဖိုင်တွင် ဟက်ရှ် မတွေ့ရှိပါ",
   "msg-no-update-needed-for-key": "%%key%% အတွက် အပ်ဒိတ်လုပ်ရန် မလိုအပ်ပါ",
-  "msg-rate-limited-sleeping": "Rate ကန့်သတ်ခံရသည်။ %%interval%% စက္ကန့်အတွင်း စောင့်နေပါသည်...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate ကန့်သတ်ခံရသည်။ %%interval%% စက္ကန့်အတွင်း စောင့်နေပါသည်...%%attemptStr%%",
+  "msg-translation-reason-forced": "အတင်းအကျပ် အပ်ဒိတ်လုပ်ခြင်း",
+  "msg-translation-reason-outputFileDidNotExist": "အထွက်ဖိုင် %%outputFile%% မရှိပါ",
+  "msg-translation-reason-userMissingReferenceValueHash": "ရည်ညွှန်းကုဒ် မတွေ့ရှိပါ။",
+  "msg-translation-reason-userModifiedReferenceValue": "အသုံးပြုသူ ပြင်ဆင်ထားသော ရည်ညွှန်းစာသား",
+  "msg-translation-reason-missingOutputKey": "မရှိသေးသော ဘာသာပြန်ကို မတွေ့ရှိပါ",
+  "msg-translation-reason-missingOutputValueHash": "ကက်ရှ်ဖိုင်တွင် hash မတွေ့ရှိပါ"
 }

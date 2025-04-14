@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Существующего перевода не найдено",
   "translation-reason-missingOutputValueHash": "Хеш не найден в кеш-файле",
   "msg-no-update-needed-for-key": "Не требуется обновление для %%key%%",
-  "msg-rate-limited-sleeping": "Превышен лимит запросов; ожидание %%interval%% сек...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Превышен лимит запросов; ожидание %%interval%% сек...%%attemptStr%%",
+  "msg-translation-reason-forced": "Принудительное обновление",
+  "msg-translation-reason-outputFileDidNotExist": "Выходной файл %%outputFile%% не существует",
+  "msg-translation-reason-userMissingReferenceValueHash": "Хеш-код для сравнения не найден",
+  "msg-translation-reason-userModifiedReferenceValue": "Пользователь изменил строку ссылки",
+  "msg-translation-reason-missingOutputKey": "Нет существующего перевода",
+  "msg-translation-reason-missingOutputValueHash": "Хеш не найден в файле кеша"
 }

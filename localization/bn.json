@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "কোন বিদ্যমান অনুবাদ পাওয়া যায়নি",
   "translation-reason-missingOutputValueHash": "ক্যাশে ফাইলে কোনো হ্যাশ পাওয়া যায়নি",
   "msg-no-update-needed-for-key": "%%key%% এর জন্য কোন আপডেট প্রয়োজন নেই",
-  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%% সেকেন্ড ঘুমিয়ে নিচ্ছে...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%% সেকেন্ড ঘুমিয়ে নিচ্ছে...%%attemptStr%%",
+  "msg-translation-reason-forced": "জোর করে আপডেট",
+  "msg-translation-reason-outputFileDidNotExist": "আউটপুট ফাইল %%outputFile%% অস্তিত্ব ছিল না",
+  "msg-translation-reason-userMissingReferenceValueHash": "কোন রেফারেন্স হ্যাশ পাওয়া যায়নি",
+  "msg-translation-reason-userModifiedReferenceValue": "ব্যবহারকারী রেফারেন্স স্ট্রিং পরিবর্তন করেছেন",
+  "msg-translation-reason-missingOutputKey": "কোন বিদ্যমান অনুবাদ পাওয়া যায়নি",
+  "msg-translation-reason-missingOutputValueHash": "ক্যাশে ফাইলে কোনো হ্যাশ পাওয়া যায়নি"
 }

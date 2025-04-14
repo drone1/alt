@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ez da aurkitu dagoeneko itzulpenik",
   "translation-reason-missingOutputValueHash": "Cacheko fitxategian ez da hash-rik aurkitu",
   "msg-no-update-needed-for-key": "%%key%% eguneratu gabe",
-  "msg-rate-limited-sleeping": "Abiadura mugatua; %%interval%% segundo itxaroten...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Abiadura mugatua; %%interval%% segundo itxaroten...%%attemptStr%%",
+  "msg-translation-reason-forced": "Nahitaezko eguneratzea",
+  "msg-translation-reason-outputFileDidNotExist": "Irteera fitxategia %%outputFile%% ez da existitzen",
+  "msg-translation-reason-userMissingReferenceValueHash": "Ez da erreferentzia hash-a aurkitu",
+  "msg-translation-reason-userModifiedReferenceValue": "Erabiltzaileak erreferentziako katea aldatu du",
+  "msg-translation-reason-missingOutputKey": "Ez da aurkitu aurreko itzulpenik",
+  "msg-translation-reason-missingOutputValueHash": "Hash ez da cache fitxategian aurkitu"
 }

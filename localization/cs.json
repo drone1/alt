@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Nebyl nalezen žádný existující překlad",
   "translation-reason-missingOutputValueHash": "V souboru mezipaměti nebyl nalezen žádný hash",
   "msg-no-update-needed-for-key": "Žádná aktualizace není potřeba pro %%key%%",
-  "msg-rate-limited-sleeping": "Překročen limit frekvence; čekám %%interval%% s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Překročen limit frekvence; čekám %%interval%% s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Vynucená aktualizace",
+  "msg-translation-reason-outputFileDidNotExist": "Výstupní soubor %%outputFile%% neexistoval",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nebyl nalezen žádný referenční hash",
+  "msg-translation-reason-userModifiedReferenceValue": "Uživatelem upravený referenční řetězec",
+  "msg-translation-reason-missingOutputKey": "Nebyly nalezeny žádné existující překlady",
+  "msg-translation-reason-missingOutputValueHash": "Nenalezen žádný hash v souboru mezipaměti"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
   "translation-reason-missingOutputValueHash": "Ingen hash fundet i cache-fil",
   "msg-no-update-needed-for-key": "Ingen opdatering nødvendig for %%key%%",
-  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Tvungen opdatering",
+  "msg-translation-reason-outputFileDidNotExist": "Outputfil %%outputFile%% eksisterede ikke",
+  "msg-translation-reason-userMissingReferenceValueHash": "Ingen reference-hash fundet",
+  "msg-translation-reason-userModifiedReferenceValue": "Bruger ændrede referencestreng",
+  "msg-translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
+  "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cache-fil"
 }

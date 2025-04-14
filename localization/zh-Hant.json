@@ -14,5 +14,11 @@
   "translation-reason-userMissingReferenceValueHash": "找不到參考雜湊值",
   "translation-reason-userModifiedReferenceValue": "用戶修改了參考字串",
   "translation-reason-missingOutputKey": "找不到現有翻譯",
-  "translation-reason-missingOutputValueHash": "在快取檔案中找不到雜湊值"
+  "translation-reason-missingOutputValueHash": "在快取檔案中找不到雜湊值",
+  "msg-translation-reason-forced": "強制更新",
+  "msg-translation-reason-userMissingReferenceValueHash": "找不到參考雜湊值",
+  "msg-translation-reason-userModifiedReferenceValue": "用戶修改了參考字串",
+  "msg-translation-reason-missingOutputKey": "找不到現有翻譯",
+  "msg-translation-reason-missingOutputValueHash": "快取檔案中找不到雜湊值",
+  "msg-translation-reason-outputFileDidNotExist": "輸出檔案 %%outputFile%% 不存在"
 }

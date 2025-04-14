@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Tarin saamootiin horachuun hin jiru",
   "translation-reason-missingOutputValueHash": "No hash found in cache file",
   "msg-no-update-needed-for-key": "Amba akilivu nfaaniyu alaele %%key%%",
-  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Yaɣhiriqatuk aaliugiyumiñaitchaq",
+  "msg-translation-reason-outputFileDidNotExist": "Taka file %%outputFile%% ji ada ji khiri",
+  "msg-translation-reason-userMissingReferenceValueHash": "Gomaʻ geŋenoʻa hash ŋo ciiduŋ",
+  "msg-translation-reason-userModifiedReferenceValue": "Kaasalaŋga naawo string uɗɗisoojo",
+  "msg-translation-reason-missingOutputKey": "Han juba fassirka jira la helay",
+  "msg-translation-reason-missingOutputValueHash": "Payi kɛsh fayl nɔ hosh fɔn na i"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "ད་ཡོད་ཀྱི་སྒྱུར་བཤད་གང་ཡང་མ་རྙེད།",
   "translation-reason-missingOutputValueHash": "མཛོད་ཁང་ཡིག་སྣོད་ནང་ནས་རིས་རགས་མ་རྙེད།",
   "msg-no-update-needed-for-key": "%%key%% ལ་གསར་བསྒྱུར་མི་དགོས།",
-  "msg-rate-limited-sleeping": "འཁོར་ཚད་ཅན། %%interval%%s རིང་ཉལ་རྒྱུ།།%%attemptStr%%"
+  "msg-rate-limited-sleeping": "འཁོར་ཚད་ཅན། %%interval%%s རིང་ཉལ་རྒྱུ།།%%attemptStr%%",
+  "msg-translation-reason-forced": "བཙན་དབང་གིས་གསར་སྒྱུར།",
+  "msg-translation-reason-outputFileDidNotExist": "ཕྱིར་འདོན་ཡིག་ཆ་ %%outputFile%% མེད་པ།",
+  "msg-translation-reason-userMissingReferenceValueHash": "དཔེ་བལྟའི་ཨང་བརྡ་རྡོག་རྫིས་རྙེད་མ་སོང་།",
+  "msg-translation-reason-userModifiedReferenceValue": "སྤྱོད་མཁན་གྱིས་བཟོ་བཅོས་བྱས་པའི་ནང་འདྲེན་ཐག་གཅོད།",
+  "msg-translation-reason-missingOutputKey": "མི་གནས་པའི་སྒྱུར་ཡིག་རྙེད་མ་སོང་།",
+  "msg-translation-reason-missingOutputValueHash": "མཆོད་སྒམ་ཡིག་ཆའི་ནང་བསྐྱར་ཐོའི་ཧཤ་རྙེད་མེད་"
 }

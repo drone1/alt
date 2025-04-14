@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Olemasolevat tõlget ei leitud",
   "translation-reason-missingOutputValueHash": "Räsi ei leitud puhverfailist",
   "msg-no-update-needed-for-key": "%%key%% ei vaja värskendamist",
-  "msg-rate-limited-sleeping": "Tasakaalustatult piiratud; ootan %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Tasakaalustatult piiratud; ootan %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Sunnitud värskendus",
+  "msg-translation-reason-outputFileDidNotExist": "Väljundfaili %%outputFile%% ei eksisteeri",
+  "msg-translation-reason-userMissingReferenceValueHash": "Võrdlushäshi ei leitud",
+  "msg-translation-reason-userModifiedReferenceValue": "Kasutaja muudetud viitesõne",
+  "msg-translation-reason-missingOutputKey": "Olemasolevat tõlget ei leitud",
+  "msg-translation-reason-missingOutputValueHash": "Räsikoodi ei leitud vahemälufailist"
 }

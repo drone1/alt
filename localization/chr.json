@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ꮭ ᎤᏁᎳᏅᎯ ᏗᏃᏪᎵᏍᎩ ᏱᏚᏩᏛᎲᎩ",
   "translation-reason-missingOutputValueHash": "Ꮭ ᎤᏍᏓᏩᏛᏍᏗ ᏓᏒᏚᎢ ᎾᎿ ᎤᏍᏆᏂᎪᏙᏗ ᎪᏪᎵ",
   "msg-no-update-needed-for-key": "ᎥᏝ ᎠᏁᏟᏗ ᎠᏓᏁᏟᏗ ᎪᎷᎾᎬᏍᏓ ᎤᏍᏗ ᎯᎠ %%key%%",
-  "msg-rate-limited-sleeping": "ᎥᏐᏗᏍᏔᏅ; ᏃᏥᏩᏘᏍᎬ %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "ᎥᏐᏗᏍᏔᏅ; ᏃᏥᏩᏘᏍᎬ %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "ᎠᏏᏗᎾᏪᏍᏗ ᎠᏍᏕᎵᏗ",
+  "msg-translation-reason-outputFileDidNotExist": "ᎤᏄᎪᏫᏒ ᎪᏪᎳᏅ %%outputFile%% ᎥᏝ ᏳᎾᏄᎪᏫᏒᎩ",
+  "msg-translation-reason-userMissingReferenceValueHash": "ᏧᎸᏢ ᎠᏚᏓᏛ ᏕᏉᎷᏍᏓ",
+  "msg-translation-reason-userModifiedReferenceValue": "ᏗᎾᏓᏩᏛᎲᏍᎩ ᎤᏂᏁᏟᏴᏍᏔᏅ ᎧᏁᎢᏍᏗ ᏗᎪᏪᎶᏗ",
+  "msg-translation-reason-missingOutputKey": "Ꮭ ᎠᏓᏎᏗ ᎠᏁᎳᏗᏍᏙᏗ ᎠᏩᏛᎮᎢ",
+  "msg-translation-reason-missingOutputValueHash": "ᎥᏝ ᎪᏎᎸᎯ ᎠᏩᏛᏗ ᏱᏍᎩ ᎦᎸᎳᏗ ᎦᏁᎳᏫᏙᎲ"
 }

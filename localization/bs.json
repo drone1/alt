@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Nije pronađen postojeći prevod",
   "translation-reason-missingOutputValueHash": "Nijedan hash nije pronađen u datoteci predmemorije",
   "msg-no-update-needed-for-key": "Za %%key%% nije potrebno ažuriranje",
-  "msg-rate-limited-sleeping": "Ograničena stopa; spavanje za %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Ograničena stopa; spavanje za %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Prisilno ažuriranje",
+  "msg-translation-reason-outputFileDidNotExist": "Izlazna datoteka %%outputFile%% nije postojala",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nije pronađena referentna hash vrijednost",
+  "msg-translation-reason-userModifiedReferenceValue": "Korisnik izmijenio referentni niz",
+  "msg-translation-reason-missingOutputKey": "Nije pronađen postojeći prijevod",
+  "msg-translation-reason-missingOutputValueHash": "Ni jedan heš nije pronađen u datoteci keša"
 }

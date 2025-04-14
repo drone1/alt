@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Wɔnnhuu nkyerɛase biara a ɛwɔ hɔ dedaw",
   "translation-reason-missingOutputValueHash": "Wɔanhunu hash biara wɔ cache file no mu",
   "msg-no-update-needed-for-key": "Nhwɛsoɔ wohia mma %%key%%",
-  "msg-rate-limited-sleeping": "Wɔahyɛ no ka; ɛredae %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Wɔahyɛ no ka; ɛredae %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Ɔhyɛ no mmiɛnsa",
+  "msg-translation-reason-outputFileDidNotExist": "Mfɛnsɛm file %%outputFile%% nni hɔ",
+  "msg-translation-reason-userMissingReferenceValueHash": "Wonnya ɔkwan bi a wɔde si bi nnye ho",
+  "msg-translation-reason-userModifiedReferenceValue": "Ɔdefoɔ asesa nhwɛsoɔ no",
+  "msg-translation-reason-missingOutputKey": "Wonhyɛ wɔntɔtɔ nkyerɛase biara",
+  "msg-translation-reason-missingOutputValueHash": "Wɔanhunu hash biara wɔ cache file no mu"
 }

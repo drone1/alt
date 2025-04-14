@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "ᐝᙍᑥ ᑦᘍᒚᓕᓗᔅᘉ ᕪᘍᒨᐧ ᐊᙍᒥᓕ",
   "translation-reason-missingOutputValueHash": "ነዝ ፍጻሜ ኣብ ፋይል ሳሕቲ ኣይተረክበን",
   "msg-no-update-needed-for-key": "ንዝኾነ %%key%% ምሕዳስ ኣየድልን",
-  "msg-rate-limited-sleeping": "ናይ መጠን መኽፍሊት ተኸልኪሉ፡ ን %%interval%%ዘመናት ኣብ ድቃስ...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "ናይ መጠን መኽፍሊት ተኸልኪሉ፡ ን %%interval%%ዘመናት ኣብ ድቃስ...%%attemptStr%%",
+  "msg-translation-reason-forced": "ጉምጾም ለውጢ",
+  "msg-translation-reason-outputFileDidNotExist": "ናይ ውፅኢት ፋይል %%outputFile%% ኣይተረኸበን",
+  "msg-translation-reason-userMissingReferenceValueHash": "ህዋላሕ መረጀ ሓሽ አይተረከበን",
+  "msg-translation-reason-userModifiedReferenceValue": "ሊቀ ሱቑ ሰሚ ካብ ዋሕዝ መረጃ ክለው።",
+  "msg-translation-reason-missingOutputKey": "ኣድልዎ ትርጉም ኣይተረኸበን",
+  "msg-translation-reason-missingOutputValueHash": "ኣብቲ ድህረ ቤት ሃሽ ኣይተረኽበን"
 }

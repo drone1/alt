@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ti hari okuhindurwa okwabaire kwahingwire",
   "translation-reason-missingOutputValueHash": "Tihariho hash eshangirwe omu fairo ya cache",
   "msg-no-update-needed-for-key": "Tihariho okukyorora okwa %%key%%",
-  "msg-rate-limited-sleeping": "Ekigaruka kine ekigombe; okuhuuramu ahamunyi %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Ekigaruka kine ekigombe; okuhuuramu ahamunyi %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Kusisiimizibwa aha icocu",
+  "msg-translation-reason-outputFileDidNotExist": "Faaira y'okuhandiikamu %%outputFile%% tiriho",
+  "msg-translation-reason-userMissingReferenceValueHash": "Tihariho ekikwasiraine ekijwaro kyashobire kuboneka",
+  "msg-translation-reason-userModifiedReferenceValue": "Omukozesa ahaindwiire ebigambo by'okureeba",
+  "msg-translation-reason-missingOutputKey": "Tihariho obuhindure bwabanzire",
+  "msg-translation-reason-missingOutputValueHash": "Tiharimu omu failo za sito"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Takwaba libuku lyapilibulwa",
   "translation-reason-missingOutputValueHash": "Takwaba ba hash ubwasangwa mu failo lya cibikwa",
   "msg-no-update-needed-for-key": "Takwaikabila kubinga %%key%%",
-  "msg-rate-limited-sleeping": "Kupekwa kufinga; kugona pa %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Kupekwa kufinga; kugona pa %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Ukwisula kwa mumaka",
+  "msg-translation-reason-outputFileDidNotExist": "Ifaileni yakufumyako %%outputFile%% tayalipo",
+  "msg-translation-reason-userMissingReferenceValueHash": "Takwaba hash yakusuminina yasangilwe",
+  "msg-translation-reason-userModifiedReferenceValue": "User modified reference string",
+  "msg-translation-reason-missingOutputKey": "Takwaba bakulula amusango aya bonawamwa",
+  "msg-translation-reason-missingOutputValueHash": "Tapali hashi mu ma failo ya kulondola"
 }

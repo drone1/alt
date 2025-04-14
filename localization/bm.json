@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Tiada terjemahan sedia ada dijumpai",
   "translation-reason-missingOutputValueHash": "Tiada cincang dijumpai dalam fail cache",
   "msg-no-update-needed-for-key": "Tiada kemas kini diperlukan untuk %%key%%",
-  "msg-rate-limited-sleeping": "Had terhad; tidur selama %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Had terhad; tidur selama %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Kemas kini paksa",
+  "msg-translation-reason-outputFileDidNotExist": "Fail output %%outputFile%% tidak wujud",
+  "msg-translation-reason-userMissingReferenceValueHash": "Tiada cincangan rujukan ditemui",
+  "msg-translation-reason-userModifiedReferenceValue": "Pengguna mengubah suai rentetan rujukan",
+  "msg-translation-reason-missingOutputKey": "Tiada terjemahan sedia ada dijumpai",
+  "msg-translation-reason-missingOutputValueHash": "Tiada hash dijumpai dalam fail cache"
 }

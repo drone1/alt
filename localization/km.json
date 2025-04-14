@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "មិនមានការបកប្រែដែលមានស្រាប់ឡើយ",
   "translation-reason-missingOutputValueHash": "មិនមានរកឃើញ hash នៅក្នុងឯកសារ cache ទេ",
   "msg-no-update-needed-for-key": "មិនត្រូវការធ្វើបច្ចុប្បន្នភាពទេសម្រាប់ %%key%%",
-  "msg-rate-limited-sleeping": "បានកំណត់អត្រា; កំពុងសម្ងំ %%interval%%វិ...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "បានកំណត់អត្រា; កំពុងសម្ងំ %%interval%%វិ...%%attemptStr%%",
+  "msg-translation-reason-forced": "បច្ចុប្បន្នភាពដោយបង្ខំ",
+  "msg-translation-reason-outputFileDidNotExist": "ឯកសារទិន្នផល %%outputFile%% មិនមាន",
+  "msg-translation-reason-userMissingReferenceValueHash": "មិនមានរកឃើញ hash សម្រាប់ជាឯកសារយោង",
+  "msg-translation-reason-userModifiedReferenceValue": "អ្នកប្រើបានកែប្រែឃ្លារេហ្វឺរង់",
+  "msg-translation-reason-missingOutputKey": "មិនមានការបកប្រែដែលមានស្រាប់ត្រូវបានរកឃើញទេ",
+  "msg-translation-reason-missingOutputValueHash": "មិនបានរកឃើញ hash នៅក្នុងឯកសារឃ្លាំង"
 }

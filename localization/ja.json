@@ -14,5 +14,11 @@
   "translation-reason-outputFileDidNotExist": "出力ファイル %%outputFile%% が存在しませんでした",
   "translation-reason-userMissingReferenceValueHash": "参照ハッシュが見つかりません",
   "translation-reason-userModifiedReferenceValue": "ユーザーが改変した参照文字列",
-  "translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした"
+  "translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした",
+  "msg-translation-reason-forced": "強制アップデート",
+  "msg-translation-reason-outputFileDidNotExist": "出力ファイル %%outputFile%% が存在しませんでした",
+  "msg-translation-reason-userMissingReferenceValueHash": "参照ハッシュが見つかりません",
+  "msg-translation-reason-userModifiedReferenceValue": "ユーザー変更参照文字列",
+  "msg-translation-reason-missingOutputKey": "既存の翻訳が見つかりません",
+  "msg-translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした"
 }

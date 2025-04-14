@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Nun s'alcontró traducción esistente",
   "translation-reason-missingOutputValueHash": "Nun s'alcontró'l hash na caché",
   "msg-no-update-needed-for-key": "Nun se precisa actualización pa %%key%%",
-  "msg-rate-limited-sleeping": "Rate limited; esperando %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; esperando %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Actualización forzada",
+  "msg-translation-reason-outputFileDidNotExist": "El ficheru de salida %%outputFile%% nun esistía",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nun s'atopó ningún hash de referencia",
+  "msg-translation-reason-userModifiedReferenceValue": "L'usuariu modificó la cadena de referencia",
+  "msg-translation-reason-missingOutputKey": "Nun s'alcontró una traducción esistente",
+  "msg-translation-reason-missingOutputValueHash": "Nun s'atopó'l hash nel ficheru caché"
 }

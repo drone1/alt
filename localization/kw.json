@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Nyns eus treylyans kavys",
   "translation-reason-missingOutputValueHash": "Ny veu has kevys y'n restren gachedya",
   "msg-no-update-needed-for-key": "Nyns yw edhomm nowedhi rag %%key%%",
-  "msg-rate-limited-sleeping": "Termyn settys; koska rag %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Termyn settys; koska rag %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Nowednas gorfys",
+  "msg-translation-reason-outputFileDidNotExist": "Restrenn filen %%outputFile%% ny veu yn kewsel",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nyns yw kevys has gorhemmyn veth",
+  "msg-translation-reason-userModifiedReferenceValue": "Linen restrans kenedhlek gans an devnydhyer",
+  "msg-translation-reason-missingOutputKey": "Nyns eus scantlyn ambos cavys",
+  "msg-translation-reason-missingOutputValueHash": "Nyns eus kevren (hash) kevys y'n restren goffa"
 }

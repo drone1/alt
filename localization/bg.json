@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Не е намерен съществуващ превод",
   "translation-reason-missingOutputValueHash": "Не е намерен хеш във файла на кеша",
   "msg-no-update-needed-for-key": "Не е необходима актуализация за %%key%%",
-  "msg-rate-limited-sleeping": "Ограничение; изчакване за %%interval%%с...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Ограничение; изчакване за %%interval%%с...%%attemptStr%%",
+  "msg-translation-reason-forced": "Принудително обновяване",
+  "msg-translation-reason-outputFileDidNotExist": "Изходният файл %%outputFile%% не съществува",
+  "msg-translation-reason-userMissingReferenceValueHash": "Не е намерен референтен хеш",
+  "msg-translation-reason-userModifiedReferenceValue": "Потребителят промени референтния низ",
+  "msg-translation-reason-missingOutputKey": "Няма намерен съществуващ превод",
+  "msg-translation-reason-missingOutputValueHash": "Не е намерен хеш във файла за кеширане"
 }

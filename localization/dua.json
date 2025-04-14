@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ɖe gɔmeɖeɖe aɖeke meli o",
   "translation-reason-missingOutputValueHash": "Iyafeama ho ʔafomawho awa caɕe fajl kpe",
   "msg-no-update-needed-for-key": "Onni nkɔso nnhiã mma %%key%%",
-  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Kisa mizasè jou",
+  "msg-translation-reason-outputFileDidNotExist": "Output fail %%outputFile%% na yɛ ha o",
+  "msg-translation-reason-userMissingReferenceValueHash": "Wɔ anhu hash biara a wɔde bɛyɛ reference",
+  "msg-translation-reason-userModifiedReferenceValue": "Utente ha modificato la stringa di riferimento",
+  "msg-translation-reason-missingOutputKey": "Yeɛ wo nkranneɛ bi nni hɔ",
+  "msg-translation-reason-missingOutputValueHash": "Èbí kankan kò sí nínú fáìlì àkójọpọ̀"
 }

@@ -14,5 +14,11 @@
   "translation-reason-forced": "Cập nhật bắt buộc",
   "translation-reason-outputFileDidNotExist": "Tệp đầu ra %%outputFile%% không tồn tại",
   "translation-reason-userMissingReferenceValueHash": "Không tìm thấy mã hash tham chiếu",
-  "translation-reason-missingOutputKey": "Không tìm thấy bản dịch nào"
+  "translation-reason-missingOutputKey": "Không tìm thấy bản dịch nào",
+  "msg-translation-reason-forced": "Cập nhật bắt buộc",
+  "msg-translation-reason-outputFileDidNotExist": "Tệp xuất %%outputFile%% không tồn tại",
+  "msg-translation-reason-userMissingReferenceValueHash": "Không tìm thấy mã hash tham chiếu",
+  "msg-translation-reason-userModifiedReferenceValue": "Người dùng đã sửa đổi chuỗi tham chiếu",
+  "msg-translation-reason-missingOutputKey": "Không tìm thấy bản dịch hiện có",
+  "msg-translation-reason-missingOutputValueHash": "Không tìm thấy hash trong tệp cache"
 }

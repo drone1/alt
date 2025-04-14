@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Ùn ci hè traduzzione esistente",
   "translation-reason-missingOutputValueHash": "Ùn hè stata trova nissun hash in u schedariu di cache",
   "msg-no-update-needed-for-key": "Ùn hè micca bisognu di aghjurnamentu per %%key%%",
-  "msg-rate-limited-sleeping": "Otri limitatu; riposu %% interval%%s... %%attemptStr%%"
+  "msg-rate-limited-sleeping": "Otri limitatu; riposu %% interval%%s... %%attemptStr%%",
+  "msg-translation-reason-forced": "Ajornament forçat",
+  "msg-translation-reason-outputFileDidNotExist": "Tèdü èkkèg %%outputFile%% dè zí è̂g",
+  "msg-translation-reason-userMissingReferenceValueHash": "Nissuna referenza hash truvata",
+  "msg-translation-reason-userModifiedReferenceValue": "Ùsùárìò mòdìfìcátò ré tèstò dì rìférìméntò",
+  "msg-translation-reason-missingOutputKey": "Ùn ci hè nisuna traduzzione esistente",
+  "msg-translation-reason-missingOutputValueHash": "Nisun hash truvatu intu u schedariu cache"
 }

@@ -14,5 +14,11 @@
   "msg-processing-lang-and-key": "[%%progress%%%] Assmuttg i %%targetLang%% – %%key%%...",
   "translation-reason-forced": "Tasinmirt tuḥtemt",
   "translation-reason-userMissingReferenceValueHash": "War-xtyan tamdayt ummsswm n tsulit",
-  "translation-reason-missingOutputValueHash": "Ur ittuf umaway d usdal n ufaylu"
+  "translation-reason-missingOutputValueHash": "Ur ittuf umaway d usdal n ufaylu",
+  "msg-translation-reason-forced": "Amrmed anasaḍuf",
+  "msg-translation-reason-outputFileDidNotExist": "Afaylu n tefaɣt %%outputFile%% ur illi ca",
+  "msg-translation-reason-userMissingReferenceValueHash": "Ur ttafn ara inaw n ireffern",
+  "msg-translation-reason-userModifiedReferenceValue": "Asqdac ibddl asuɣl n uznbaḍ",
+  "msg-translation-reason-missingOutputKey": "Ur yuffi tafssart i tlla yaḍn",
+  "msg-translation-reason-missingOutputValueHash": "Ⲩⲣ ⵉⵍⵍⵉ ⵃⴰⵛⵀ ⴳ ⵓⵙⴷⴰⵡ ⵏ ⵜⴽⵛⵛⵓⵎⵜ"
 }

@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Walang natumiskay na pagsasalin",
   "translation-reason-missingOutputValueHash": "Daa hêch fâwnd in kêch faayl",
   "msg-no-update-needed-for-key": "Hug ehn udèt ñed fò %%key%%",
-  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Mia-iyiniye àpdet",
+  "msg-translation-reason-outputFileDidNotExist": "Output file %%outputFile%% tidi existed",
+  "msg-translation-reason-userMissingReferenceValueHash": "Masad pahamak kadiksyunaryo ay nasumpungan",
+  "msg-translation-reason-userModifiedReferenceValue": "User apa moddyfy reference string",
+  "msg-translation-reason-missingOutputKey": "No existing translation found",
+  "msg-translation-reason-missingOutputValueHash": "Babaigba hash i hukuba a bebi cache file"
 }

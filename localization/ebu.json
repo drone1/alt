@@ -14,5 +14,11 @@
   "translation-reason-missingOutputKey": "Gũtirĩ ũtaũri ũcio ũthinganĩte ũronekete",
   "translation-reason-missingOutputValueHash": "Gutiri hash yonekete kiri faili ya cache",
   "msg-no-update-needed-for-key": "Gutiri kionereri kionetie gia %%key%%",
-  "msg-rate-limited-sleeping": "Gwitia ntuku; gukoma kwa %%interval%%s...%%attemptStr%%"
+  "msg-rate-limited-sleeping": "Gwitia ntuku; gukoma kwa %%interval%%s...%%attemptStr%%",
+  "msg-translation-reason-forced": "Kinduthīrīīrwa kũthongomia",
+  "msg-translation-reason-outputFileDidNotExist": "Faili ya kuthiũrũka %%outputFile%% ndĩarĩ yo",
+  "msg-translation-reason-userMissingReferenceValueHash": "Gũtirĩ mũthingatho wa kũrũmanĩria wondetwe",
+  "msg-translation-reason-userModifiedReferenceValue": "Mutumia atuithitie ndeto ya uthimio",
+  "msg-translation-reason-missingOutputKey": "Gutiri mathaura makoretwe",
+  "msg-translation-reason-missingOutputValueHash": "Hatina hash ndonekete uthaonire thĩinĩ wa cache file"
 }
