@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nuk u gjet hash referimi",
   "msg-translation-reason-userModifiedReferenceValue": "Përdoruesi modifikoi vargun e referencës",
   "msg-translation-reason-missingOutputKey": "Nuk u gjet përkthim ekzistues",
-  "msg-translation-reason-missingOutputValueHash": "Nuk u gjet asnjë hash në skedarin e memories"
+  "msg-translation-reason-missingOutputValueHash": "Nuk u gjet asnjë hash në skedarin e memories",
+  "error-value-not-a-string": "Vlera për çelësin e referencës \"%%key%%\" ishte \"%%type%%\". Pritej një varg! Po anashkalohet...",
+  "error-value-not-in-reference-data": "Çelësi \"%%key%%\" nuk ekzistonte në skedarin e referencës."
 }

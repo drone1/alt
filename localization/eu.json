@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ez da erreferentzia hash-a aurkitu",
   "msg-translation-reason-userModifiedReferenceValue": "Erabiltzaileak erreferentziako katea aldatu du",
   "msg-translation-reason-missingOutputKey": "Ez da aurkitu aurreko itzulpenik",
-  "msg-translation-reason-missingOutputValueHash": "Hash ez da cache fitxategian aurkitu"
+  "msg-translation-reason-missingOutputValueHash": "Hash ez da cache fitxategian aurkitu",
+  "error-value-not-a-string": "Erreferentziako gakoaren \"%%key%%\" balioa \"%%type%%\" izan zen. Katea espero zen! Saltatzen...",
+  "error-value-not-in-reference-data": "\"%%key%%\" gakoa ez zen erreferentzia fitxategian existitzen"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nissuna referenza hash truvata",
   "msg-translation-reason-userModifiedReferenceValue": "Ùsùárìò mòdìfìcátò ré tèstò dì rìférìméntò",
   "msg-translation-reason-missingOutputKey": "Ùn ci hè nisuna traduzzione esistente",
-  "msg-translation-reason-missingOutputValueHash": "Nisun hash truvatu intu u schedariu cache"
+  "msg-translation-reason-missingOutputValueHash": "Nisun hash truvatu intu u schedariu cache",
+  "error-value-not-a-string": "Valore per a chjave di riferimentu \"%%key%%\" era \"%%type%%\". Si aspettava una stringa! Saltendu...",
+  "error-value-not-in-reference-data": "A chjave \"%%key%%\" ùn esistia micca in u fugliale di riferimentu"
 }

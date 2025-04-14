@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "नंङै reference hash खोनाख'नाय जाय्आखै",
   "msg-translation-reason-userModifiedReferenceValue": "ओ सोलोंथाइ स्ट्रिं खौ सुजुदों",
   "msg-translation-reason-missingOutputKey": "जेब्लाबो आनजाद सोलायनाय मोनाखौनाय जायाखै",
-  "msg-translation-reason-missingOutputValueHash": "थिका फाइला हैश मोनाखै"
+  "msg-translation-reason-missingOutputValueHash": "थिका फाइला हैश मोनाखै",
+  "error-value-not-a-string": "\"%%key%%\" बर' \"%%type%%\" मान आछिल। एकटा स्ट्रिंग आशा करायो! छोड़ाय देनाय...",
+  "error-value-not-in-reference-data": "\"%%key%%\" gubun bwrsethouni ongkhaidwmsa phaido bwrsethaba"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userModifiedReferenceValue": "用户修改了参考字符串",
   "msg-translation-reason-missingOutputKey": "未找到现有翻译",
   "msg-translation-reason-missingOutputValueHash": "在缓存文件中未找到哈希值",
-  "msg-translation-reason-outputFileDidNotExist": "输出文件 %%outputFile%% 不存在"
+  "msg-translation-reason-outputFileDidNotExist": "输出文件 %%outputFile%% 不存在",
+  "error-value-not-a-string": "引用键“%%key%%”的值为“%%type%%”。本应为字符串！正在跳过...",
+  "error-value-not-in-reference-data": "键“%%key%%”在参考文件中不存在"
 }

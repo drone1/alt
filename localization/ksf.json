@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ka pɔh to′ kʉ pə li nu pɔn",
   "msg-translation-reason-userModifiedReferenceValue": "Ŋwɛn a kwi'ti litye'nyɛ ɛ yʉ́ nsas",
   "msg-translation-reason-missingOutputKey": "Pá mvap ntǔʼ sòm",
-  "msg-translation-reason-missingOutputValueHash": "Pǝm təm mbɛt ntúŋ lǝ tiy kí kɛŋsa"
+  "msg-translation-reason-missingOutputValueHash": "Pǝm təm mbɛt ntúŋ lǝ tiy kí kɛŋsa",
+  "error-value-not-a-string": "Valeûr pô clé de référence \"%%key%%\" été \"%%type%%\". On s'attendait à un texte ! On passe...",
+  "error-value-not-in-reference-data": "Klɛ \"%%key%%\" pɛnɛn naa na fii dɔsye referɛnce"
 }

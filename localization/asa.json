@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ikọ ŋkọpn idat mbed idi",
   "msg-translation-reason-userModifiedReferenceValue": "Nyàkùndà nàrèàmbùwó nê nyàkùndà nàpêntèsé",
   "msg-translation-reason-missingOutputKey": "Ahanangata ihe nsụgharị e nwere",
-  "msg-translation-reason-missingOutputValueHash": "Ma taihu itungu cha hash kwenye faili ya cache"
+  "msg-translation-reason-missingOutputValueHash": "Ma taihu itungu cha hash kwenye faili ya cache",
+  "error-value-not-a-string": "Thamani kwa ufunguo wa rejeleo \"%%key%%\" ilikuwa \"%%type%%\". Ilitarajiwa kuwa mnyororo! Inarukwa...",
+  "error-value-not-in-reference-data": "Funguo \"%%key%%\" haikuwepo katika faili ya rejea"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "هش مرجع یافت نشد",
   "msg-translation-reason-userModifiedReferenceValue": "کاربر سلسلهٔ مرجع را تغییر داد",
   "msg-translation-reason-missingOutputKey": "ترجمه موجود یافت نشد",
-  "msg-translation-reason-missingOutputValueHash": "ممکن هیچ هش در فایل کش پیدا نشد"
+  "msg-translation-reason-missingOutputValueHash": "ممکن هیچ هش در فایل کش پیدا نشد",
+  "error-value-not-a-string": "ارزش برای کلید مرجع \"%%key%%\" \"%%type%%\" بود. انتظار یک رشته بود! در حال رد کردن...",
+  "error-value-not-in-reference-data": "کلید \"%%key%%\" در فایل مرجع وجود نداشت"
 }

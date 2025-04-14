@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Geen referentiehash gevonden",
   "msg-translation-reason-missingOutputKey": "Geen bestaande vertaling gevonden",
   "msg-translation-reason-missingOutputValueHash": "Geen hash gevonden in cachebestand",
-  "msg-translation-reason-userModifiedReferenceValue": "Referentietekst gewijzigd door gebruiker"
+  "msg-translation-reason-userModifiedReferenceValue": "Referentietekst gewijzigd door gebruiker",
+  "error-value-not-a-string": "Waarde voor referentiesleutel \"%%key%%\" was \"%%type%%\". Er werd een tekenreeks verwacht! Wordt overgeslagen...",
+  "error-value-not-in-reference-data": "Sleutel \"%%key%%\" bestond niet in het referentiebestand."
 }

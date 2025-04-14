@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ingen reference-hash fundet",
   "msg-translation-reason-userModifiedReferenceValue": "Bruger ændrede referencestreng",
   "msg-translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
-  "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cache-fil"
+  "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cache-fil",
+  "error-value-not-a-string": "Værdien for reference nøglen \"%%key%%\" var \"%%type%%\". Forventede en streng! Springer over...",
+  "error-value-not-in-reference-data": "Nøglen \"%%key%%\" fandtes ikke i referencefilen"
 }

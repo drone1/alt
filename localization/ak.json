@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Wonnya ɔkwan bi a wɔde si bi nnye ho",
   "msg-translation-reason-userModifiedReferenceValue": "Ɔdefoɔ asesa nhwɛsoɔ no",
   "msg-translation-reason-missingOutputKey": "Wonhyɛ wɔntɔtɔ nkyerɛase biara",
-  "msg-translation-reason-missingOutputValueHash": "Wɔanhunu hash biara wɔ cache file no mu"
+  "msg-translation-reason-missingOutputValueHash": "Wɔanhunu hash biara wɔ cache file no mu",
+  "error-value-not-a-string": "Ɛyɛ sɛ ɛka a ɛwɔ \"%%key%%\" ho nhunumu yɛ \"%%type%%\". Wɔretwa sɛ ɛbɛyɛ nkuran! Rekɔ so...",
+  "error-value-not-in-reference-data": "Bɔkɔ \"%%key%%\" nni hɔ wɔ fael a ɛyɛ adanse no mu"
 }

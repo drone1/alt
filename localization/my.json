@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "ရည်ညွှန်းကုဒ် မတွေ့ရှိပါ။",
   "msg-translation-reason-userModifiedReferenceValue": "အသုံးပြုသူ ပြင်ဆင်ထားသော ရည်ညွှန်းစာသား",
   "msg-translation-reason-missingOutputKey": "မရှိသေးသော ဘာသာပြန်ကို မတွေ့ရှိပါ",
-  "msg-translation-reason-missingOutputValueHash": "ကက်ရှ်ဖိုင်တွင် hash မတွေ့ရှိပါ"
+  "msg-translation-reason-missingOutputValueHash": "ကက်ရှ်ဖိုင်တွင် hash မတွေ့ရှိပါ",
+  "error-value-not-a-string": "ကိုးကားချက်သော့ \"%%key%%\" အတွက် တန်ဖိုးမှာ \"%%type%%\" ဖြစ်ခဲ့သည်။ စာသားတစ်ခုကို မျှော်လင့်ထားသည်! ကျော်လွှားနေပါသည်...",
+  "error-value-not-in-reference-data": "\"%%key%%\" သော့ချက်သည် ကိုးကားဖိုင်တွင် မတည်ရှိခဲ့ပါ။"
 }

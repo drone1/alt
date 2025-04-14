@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "ህዋላሕ መረጀ ሓሽ አይተረከበን",
   "msg-translation-reason-userModifiedReferenceValue": "ሊቀ ሱቑ ሰሚ ካብ ዋሕዝ መረጃ ክለው።",
   "msg-translation-reason-missingOutputKey": "ኣድልዎ ትርጉም ኣይተረኸበን",
-  "msg-translation-reason-missingOutputValueHash": "ኣብቲ ድህረ ቤት ሃሽ ኣይተረኽበን"
+  "msg-translation-reason-missingOutputValueHash": "ኣብቲ ድህረ ቤት ሃሽ ኣይተረኽበን",
+  "error-value-not-a-string": "ብዛት ኣብ ምልክት ቁልፍ \"%%key%%\" ነበረ \"%%type%%\"። ስትሪንግ ተጠቐመ! ተዘይትካ...",
+  "error-value-not-in-reference-data": "ቁልፍ \"%%key%%\" በማእከላዊ ፋይል አልነበረም"
 }

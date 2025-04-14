@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nebyl nalezen žádný referenční hash",
   "msg-translation-reason-userModifiedReferenceValue": "Uživatelem upravený referenční řetězec",
   "msg-translation-reason-missingOutputKey": "Nebyly nalezeny žádné existující překlady",
-  "msg-translation-reason-missingOutputValueHash": "Nenalezen žádný hash v souboru mezipaměti"
+  "msg-translation-reason-missingOutputValueHash": "Nenalezen žádný hash v souboru mezipaměti",
+  "error-value-not-a-string": "Hodnota pro referenční klíč \"%%key%%\" byla \"%%type%%\". Očekával se řetězec! Přeskakuji...",
+  "error-value-not-in-reference-data": "Klíč \"%%key%%\" neexistoval v referenčním souboru."
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "لم يتم العثور على قيمة التشفير المرجعية",
   "msg-translation-reason-userModifiedReferenceValue": "تم تعديل سلسلة المرجع من قبل المستخدم",
   "msg-translation-reason-missingOutputKey": "لا توجد ترجمة موجودة",
-  "msg-translation-reason-missingOutputValueHash": "لم يتم العثور على التجزئة في ملف التخزين المؤقت"
+  "msg-translation-reason-missingOutputValueHash": "لم يتم العثور على التجزئة في ملف التخزين المؤقت",
+  "error-value-not-a-string": "القيمة لمفتاح المرجع \"%%key%%\" كانت \"%%type%%\". كان من المتوقع أن تكون نصًا! جاري التخطي...",
+  "error-value-not-in-reference-data": "المفتاح \"%%key%%\" غير موجود في ملف المرجع"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Kpâ kènyǔ kɨ̀tɨɨŋtɨ̀",
   "msg-translation-reason-userModifiedReferenceValue": "A fe ku le nda ghɔ̀",
   "msg-translation-reason-missingOutputKey": "Kaa pfɛ ntè e kwàʼnə",
-  "msg-translation-reason-missingOutputValueHash": "Kà à ghʉ̀ hash à tɨghe ntɨgha à pɨ'ɨ nchwìʼɨ yi"
+  "msg-translation-reason-missingOutputValueHash": "Kà à ghʉ̀ hash à tɨghe ntɨgha à pɨ'ɨ nchwìʼɨ yi",
+  "error-value-not-a-string": "Njìi ɛ́ fɛ́ a ntsɛ́ \"%%key%%\" bɛ́ \"%%type%%\". Bɛ́ kɛ́ mɛ́nɛ́ a kɛ́ kɛ́ mɛ́nɛ́! Njìi ɛ́ mɛ́nɛ́...",
+  "error-value-not-in-reference-data": "Njìy \"%%key%%\" à kɛ́ ghɔ́ mbi mǝ̀ ndáa zhiy njyìi"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Еталонний хеш не знайдено",
   "msg-translation-reason-userModifiedReferenceValue": "Користувач змінив рядок посилання",
   "msg-translation-reason-missingOutputKey": "Не знайдено існуючого перекладу",
-  "msg-translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу"
+  "msg-translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу",
+  "error-value-not-a-string": "Значення для ключа посилання \"%%key%%\" було \"%%type%%\". Очікувалася рядкова змінна! Пропускаємо...",
+  "error-value-not-in-reference-data": "Ключ \"%%key%%\" не існував у довідковому файлі"
 }

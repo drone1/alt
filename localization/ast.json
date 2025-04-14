@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nun s'atopó ningún hash de referencia",
   "msg-translation-reason-userModifiedReferenceValue": "L'usuariu modificó la cadena de referencia",
   "msg-translation-reason-missingOutputKey": "Nun s'alcontró una traducción esistente",
-  "msg-translation-reason-missingOutputValueHash": "Nun s'atopó'l hash nel ficheru caché"
+  "msg-translation-reason-missingOutputValueHash": "Nun s'atopó'l hash nel ficheru caché",
+  "error-value-not-a-string": "El valor pa la clave de referencia \"%%key%%\" yera \"%%type%%\". Esperábase una cadena de testu. Saltando...",
+  "error-value-not-in-reference-data": "La clave \"%%key%%\" nun esistía nel ficheru de referencia."
 }

@@ -1,5 +1,5 @@
 {
-  "referenceHash": "c640a5cfa3b560d4a5419b27bc361940457d824679dfba3377b46fa254442bb5",
+  "referenceHash": "72ba2f06836ba2c1339689e6ddfd9a55106cb359454985f2695a5e175152bca1",
   "referenceKeyHashes": {
     "nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
     "finished-with-errors": "785ba4b7e062d66506cf7bce6cb85dd9de9f753902a64dbd50e814cd0d1c9366",
@@ -24,7 +24,9 @@
     "msg-translation-reason-userMissingReferenceValueHash": "eef6b13b53f94674d3981898ac262e5712539a1180f49d9b4ba0ed356a5a6cb5",
     "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
     "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
-    "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c"
+    "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c",
+    "error-value-not-a-string": "73c6865250ee34ae02d78522c6037a701a19d2a48072367b0e3da684b788a0fd",
+    "error-value-not-in-reference-data": "fe7bfabe59270d0716109e95baac754975b25c45e2a8ba5fc87d2f7687ee2e88"
   },
   "state": {
     "es-MX": {
@@ -52,7 +54,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "ae725a0f6ac4a1ade0cca2c55f75277545288a1c0ffe2f27c7dc19b1772ad6c4",
         "msg-translation-reason-userModifiedReferenceValue": "cda5ccf2a97d4797c34b64f23d46262c7840953ce68eeccfeb4b88bb06446a50",
         "msg-translation-reason-missingOutputKey": "c2b75d4f320aab0282d8c8d3ae04f61a3495f5ffdf736aca8052cb02eb566e29",
-        "msg-translation-reason-missingOutputValueHash": "de98a66b6392e105be49da384cd64548c62a37d4e7e35d5c7632856ca693b3e8"
+        "msg-translation-reason-missingOutputValueHash": "de98a66b6392e105be49da384cd64548c62a37d4e7e35d5c7632856ca693b3e8",
+        "error-value-not-a-string": "ba34cc9cfaed7e6e9a7fad5d4aa5c160bd64a391ee8148dfdd8a4325bb9d6459",
+        "error-value-not-in-reference-data": "fb9d4b732c8f22f8ad1760753601b23ec7b14aa72f794f59f6a1c24476136dcd"
       }
     },
     "zh-TW": {
@@ -102,14 +106,16 @@
         "msg-translation-reason-userMissingReferenceValueHash": "eef6b13b53f94674d3981898ac262e5712539a1180f49d9b4ba0ed356a5a6cb5",
         "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
         "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
-        "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c"
+        "msg-translation-reason-missingOutputValueHash": "ebf1f1459d74c298fe3637d2d0c519af3f7c4c19d7c810cd89bd8191b0840c6c",
+        "error-value-not-a-string": "73c6865250ee34ae02d78522c6037a701a19d2a48072367b0e3da684b788a0fd",
+        "error-value-not-in-reference-data": "fe7bfabe59270d0716109e95baac754975b25c45e2a8ba5fc87d2f7687ee2e88"
       }
     },
     "aa": {
       "keyHashes": {
-        "msg-nothing-to-do": "eb1c98a88075580574f358b2875f9fa93f61726517f0bc01e59aa2e0381170cd",
-        "msg-finished-with-errors": "31dde44880c599062ecb7a097abd3618e293d5e07b677f2b3000a1d4e01d0e0a",
-        "msg-translating": "33d306e0855fafd923b1187411c2f61cc4182ece209c3d345ed865fe0ab34b4f",
+        "msg-nothing-to-do": "081d0c3c67a6143b868e6bfcba2e0f7fb2c9f29ad74323928363438d14385b82",
+        "msg-finished-with-errors": "abe419268ae887c04aea13b679a6f4a10f8000a012cce1762c7e4957c5b861ca",
+        "msg-translating": "c2c61ddc1eed133b4395c8be7d89ac973fde7289a030718f49b768616b024018",
         "msg-translating-key": "ce18af9ddb2c75d0451faa201c369d84af3093858dbad28da1f723d0eb567655",
         "msg-preparing-endpoint-config": "cd29107c06e9cb6491557b8c7bfcce7db6ace3b92e41754f0c64159d446665b8",
         "msg-hitting-provider-endpoint": "afd347fdcca3ddca6c6a8dc1ac1098ffbea9e5d622f577111be9791a4f216803",
@@ -128,7 +134,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "43687cc90ba581c7aa443e64427f499a9370b180cbe59bee215fdc5f97ae1f91",
         "msg-translation-reason-userModifiedReferenceValue": "1df5960403b49e014c84aad8df1078f28409c2eb4fa6c4f5e6558be376ab308a",
         "msg-translation-reason-missingOutputKey": "9796f80d59b195cb1e1649dd4b2249a7b935bb12f376cd0ffd3dab39ff5e0a19",
-        "msg-translation-reason-missingOutputValueHash": "1cdb931dcccfd2d6cfb3503f923ae6ae5d41fc65fd6fdc5661de318234d7e592"
+        "msg-translation-reason-missingOutputValueHash": "1cdb931dcccfd2d6cfb3503f923ae6ae5d41fc65fd6fdc5661de318234d7e592",
+        "error-value-not-a-string": "1cd8c0719ca5d1729d78fca2aeb8fa29fae697de1a17469cc080225e7cdd0dbd",
+        "error-value-not-in-reference-data": "dd079a69c5f45d02bc4999b5ab0eddfbed7f6f1ff572e096032eb8c50c8c9e0e"
       }
     },
     "af": {
@@ -154,7 +162,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "a07fde76e2a2a147cb2378583279e6f06837c31fa2cd25ad896dc3078e3ea225",
         "msg-translation-reason-userModifiedReferenceValue": "3f269642da8218f41fb24d73219c8a54ca5f188eaa562b00032e18ea179cfe8c",
         "msg-translation-reason-missingOutputKey": "df6b225c07983ce436f074327762d6a587869447ce65e7ddeccd44bdfa14dc2d",
-        "msg-translation-reason-missingOutputValueHash": "ec454827a869da7b883639a22b7231ba064e1db029b2e14d0a9296863dfc07c7"
+        "msg-translation-reason-missingOutputValueHash": "ec454827a869da7b883639a22b7231ba064e1db029b2e14d0a9296863dfc07c7",
+        "error-value-not-a-string": "762d07c96cb0cbba08da3b9b6f3eefc97a6a6f691513ff6fc1144ab1a956c3c2",
+        "error-value-not-in-reference-data": "5d1538a9f6c0fa82ec9a2de4a63ce88f6d6110a34422f59bb23f09bd0d8e4eda"
       }
     },
     "agq": {
@@ -180,7 +190,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "27a221a9cb95cc20e532b9e29ec83b60fa88adb1094308c802391576260f976f",
         "msg-translation-reason-userModifiedReferenceValue": "b55aa523aafa602fe9952632b921be94ca47efef84703b8d8e89bd8a5348c7a7",
         "msg-translation-reason-missingOutputKey": "3d13c0c72bd3aeb1239b05520e7628cbcb4f1478a702055b3e336af3b072ff10",
-        "msg-translation-reason-missingOutputValueHash": "8c7bad75e1cb3b93ff76869f712616854d5cd0f57e2ea46a1256e5246f39050e"
+        "msg-translation-reason-missingOutputValueHash": "8c7bad75e1cb3b93ff76869f712616854d5cd0f57e2ea46a1256e5246f39050e",
+        "error-value-not-a-string": "8123c783db6dd0a7ef5f6def4d57bbca8977af4efbdf1b75bfb8555d2392be9b",
+        "error-value-not-in-reference-data": "66d0e1c8e5161a232a9c4660938afe7e172a324626885522130bd328c303d973"
       }
     },
     "ak": {
@@ -206,7 +218,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "cd31ced712e34677fdf6712e11d0aaffc45d5f826209528a6ad79bc59456189a",
         "msg-translation-reason-userModifiedReferenceValue": "d779b3516fad4dfef86bd0ca273ae616f5e93d7a69c53056de5f1a5c891dca55",
         "msg-translation-reason-missingOutputKey": "d050e3af193c32c309f3b94ec26ef77544b1cdcae4305dd99cd999eba2965ee5",
-        "msg-translation-reason-missingOutputValueHash": "03751ccf68f66dd15ca1dadd915cf7d1adb8c1f28d2a9403d2640cc830ee2f8c"
+        "msg-translation-reason-missingOutputValueHash": "03751ccf68f66dd15ca1dadd915cf7d1adb8c1f28d2a9403d2640cc830ee2f8c",
+        "error-value-not-a-string": "3441e9315f6800b03c6c5aff9ef3a039866eaad0396330627f1137d266ca342c",
+        "error-value-not-in-reference-data": "fba9509826517d796261486382b4f3325e3f473efc65c484ccfe619934a07926"
       }
     },
     "am": {
@@ -232,7 +246,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "8f058187b085cc04f856ea7135fa23b8afe5f5dbd615be9c0321f85b9a70d28a",
         "msg-translation-reason-userModifiedReferenceValue": "4b03c0c6e4778ca1295c6567802a5a40ec1996502ac35c7e68d2f012c584b2ca",
         "msg-translation-reason-missingOutputKey": "76e2a28c55f552cef0bc727f0f96f269aec50dbcc813a50d5952ea425a6f4538",
-        "msg-translation-reason-missingOutputValueHash": "f06161177050bbea4b248481d13b292152ea79758d2aaf9ee7aa8a868d0f917b"
+        "msg-translation-reason-missingOutputValueHash": "f06161177050bbea4b248481d13b292152ea79758d2aaf9ee7aa8a868d0f917b",
+        "error-value-not-a-string": "b05c0a09f8b94a8d68cd3fa7a819e2ec9e54be6dc53ee9bf2e536756283e2a99",
+        "error-value-not-in-reference-data": "558bd8b723fab1c2e04cd42417df293c267f68dd82ee95e88c328ffd61223da5"
       }
     },
     "ar": {
@@ -258,7 +274,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "9c8a7244e6ef1017952bee4547a3714873996a8cc801f521854680d309855cd2",
         "msg-translation-reason-userModifiedReferenceValue": "fe57625bcf56d19483563c60c31d25440a33de3b5155684f5af731de3f2c51ae",
         "msg-translation-reason-missingOutputKey": "7ca92eb5612e1ebfbd68d6fd25cd4a4ab0c059433cb864d4f7bb2e7b07215525",
-        "msg-translation-reason-missingOutputValueHash": "b84295cc0a82d89c77071acd9e342665ee4967bebf8120743725c08d26e790d3"
+        "msg-translation-reason-missingOutputValueHash": "b84295cc0a82d89c77071acd9e342665ee4967bebf8120743725c08d26e790d3",
+        "error-value-not-a-string": "5e7f4b0d4e35f5c82419336bd2c8673c49cfb76cc27f7546cbd3d14594870689",
+        "error-value-not-in-reference-data": "6cc3f5be26c96f29d2fc4db6efa7be0c95d2cbda479d86e97bd3de16d8b87ce0"
       }
     },
     "as": {
@@ -284,7 +302,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "abf3c4738bb7a8a3627c5cd1fd0ab060f62cc9b3cf91f04560444466a4a56a2b",
         "msg-translation-reason-userModifiedReferenceValue": "4a1ce89dd256edecb4c4503d75bac89d7a240e9a5bf599c5204b956a3fe6f575",
         "msg-translation-reason-missingOutputKey": "c2b8dfa60671b5258827e3da0c2486f3c453978a150dbfb9c5c0e3e8a6232393",
-        "msg-translation-reason-missingOutputValueHash": "0c6446099b4d9c48a6f071acb84a4b5bcd8e42332883822cfa1eb245b03e9aae"
+        "msg-translation-reason-missingOutputValueHash": "0c6446099b4d9c48a6f071acb84a4b5bcd8e42332883822cfa1eb245b03e9aae",
+        "error-value-not-a-string": "dcacad2b70322e050a112060e6641881365e29336f22e536bef2616a0cc9173c",
+        "error-value-not-in-reference-data": "f8d0b839e037e804c3ef25aeb1fb7b8056117bc961cd62a75e0178169417147f"
       }
     },
     "asa": {
@@ -310,7 +330,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "cf54eb7b6eda42a88214ba5e40a2f80538d87703059c1f7210f4f6ad001e3819",
         "msg-translation-reason-userModifiedReferenceValue": "a1c1bcc99e97ec2c8b836e4b1769d024dae00f0e2310323eef1229fddff2e445",
         "msg-translation-reason-missingOutputKey": "c1bc2f32477728d3a60ce3969b53cb45b04825e176f248538f60fecf0035da27",
-        "msg-translation-reason-missingOutputValueHash": "98e4c1c4fc8a77dd0c5e4adf90b84cf1244f2e5a631e67e57bab2d676054be3a"
+        "msg-translation-reason-missingOutputValueHash": "98e4c1c4fc8a77dd0c5e4adf90b84cf1244f2e5a631e67e57bab2d676054be3a",
+        "error-value-not-a-string": "3cf4285b38ac3af8d291d067e441bc71290f0f102dc62e17644eb6cb1fd8b01e",
+        "error-value-not-in-reference-data": "c0a16776eefe9850c2f00c510967d69461b161ccc90305c09cd8e99fd0b6369f"
       }
     },
     "ast": {
@@ -336,7 +358,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "ec87a14751bdf21ef78381e57ec85cef99e6a993110c718f91f9277ef283ba8f",
         "msg-translation-reason-userModifiedReferenceValue": "7fa54290f6e873b5edbb618d0adc5f2e46b2151f81e2842a35b331fa5c68259b",
         "msg-translation-reason-missingOutputKey": "1d23a430259b7512f31a144247ce30aa77736772de26ef2f016f0b3d33c0c9ec",
-        "msg-translation-reason-missingOutputValueHash": "6919a612e2651fb5f70b81bef0da0e902c1825472d34dd7895899fe94095b007"
+        "msg-translation-reason-missingOutputValueHash": "6919a612e2651fb5f70b81bef0da0e902c1825472d34dd7895899fe94095b007",
+        "error-value-not-a-string": "33b8a18c33e47f7bddd2f5f3cb9f5b65b135cecc1fbd410351f1a2f1c14d9d00",
+        "error-value-not-in-reference-data": "69bd1e803ed8162d4ad1ec3976a43b1c510991e5a8833b38ca45bae7a919c15f"
       }
     },
     "az": {
@@ -362,7 +386,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "2fbca2910458b0835c1c32e8a030f0f4dc4a9e7b9dfe08cab011aa9df72049be",
         "msg-translation-reason-userModifiedReferenceValue": "5772bf70a6cfe5a080f83389be3286355faebe0214b91bd4e87906c80dbd8af5",
         "msg-translation-reason-missingOutputKey": "800c99b1bafcdb9d32b1e21c3926856f57399ab1ebdc3d846a1a7f1efe4bc8a9",
-        "msg-translation-reason-missingOutputValueHash": "11b4cbb5823be969fd5982e54c2618eee9ca52ab4e776456cc36967e8486d3e7"
+        "msg-translation-reason-missingOutputValueHash": "11b4cbb5823be969fd5982e54c2618eee9ca52ab4e776456cc36967e8486d3e7",
+        "error-value-not-a-string": "7f1dae335c022fdd77725712d45f4a1250353ae9dbb38b7e50cf9bfa70e3bc98",
+        "error-value-not-in-reference-data": "871d972e52765809e641ff326d3a1f7ea22c3c5cd51e6597ccbc90e816b34a66"
       }
     },
     "ba": {
@@ -388,7 +414,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "7a255bf66046cc866ddbf8fbd1b51b676f4fdb7c13b883e1c6152bc666f75d7d",
         "msg-translation-reason-userModifiedReferenceValue": "8b7f23e95c21cfe3104ec38502c2124d03ffaf84debd3059034cbc6cda6cec57",
         "msg-translation-reason-missingOutputKey": "9be32a0970e798d00ae2651129e6bf5ae786d7c25c30b8c4375724d47413ce71",
-        "msg-translation-reason-missingOutputValueHash": "5c4d87ba6844d51efa96857153a73256ee661441a3f0b670e06031f316a6b3d2"
+        "msg-translation-reason-missingOutputValueHash": "5c4d87ba6844d51efa96857153a73256ee661441a3f0b670e06031f316a6b3d2",
+        "error-value-not-a-string": "b72bb388f85653197d5e93456df84ed641af1550e9713793593eb8f86c0132f1",
+        "error-value-not-in-reference-data": "e8d90d5c0b58e8a6f42cd7f781277fe8a0a7eaf26a4833cd5332fb3ad029ddb9"
       }
     },
     "bas": {
@@ -414,7 +442,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "b555fe21e9e4d5c22bd978d4a36bee713c7c43e6a340fc6dd101a2f0757e8345",
         "msg-translation-reason-userModifiedReferenceValue": "a6e2cfa787657ad5986af200a7e415dbb496729ec2965dcfd034c5d737ad637a",
         "msg-translation-reason-missingOutputKey": "393a71afaf70a555b50bfdc20e0fa1f90bdff84080340149b34b1d99f13abb2e",
-        "msg-translation-reason-missingOutputValueHash": "ef95774092f874060b98bc5babebb2fc44867520ff33d018d861e4b946ebe7b5"
+        "msg-translation-reason-missingOutputValueHash": "ef95774092f874060b98bc5babebb2fc44867520ff33d018d861e4b946ebe7b5",
+        "error-value-not-a-string": "2b05d8f6f9281ac22102bb3fa237ce0d371deedc00e03ef1f7b3764aca4eff11",
+        "error-value-not-in-reference-data": "e8d90d5c0b58e8a6f42cd7f781277fe8a0a7eaf26a4833cd5332fb3ad029ddb9"
       }
     },
     "be": {
@@ -440,7 +470,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "396b8b471e791c66adcebbcd733a07ccfd5c75a500a31e80e0e64bcb72e8aec5",
         "msg-translation-reason-userModifiedReferenceValue": "9f40b46f8d99d76876c7cbd64ce9dd91681aecb7862b510b3905fd1772aa8cd2",
         "msg-translation-reason-missingOutputKey": "b4bce1b79e465b151cd2c36b945f4e4fecc659e60661a4979f44f8ee41d85231",
-        "msg-translation-reason-missingOutputValueHash": "de5d6301c9ee36dfd075f6c092e3e2f489a204ea8eebe58cda9a9f78180ef128"
+        "msg-translation-reason-missingOutputValueHash": "de5d6301c9ee36dfd075f6c092e3e2f489a204ea8eebe58cda9a9f78180ef128",
+        "error-value-not-a-string": "bc0a51c6ea3572854d7c35065d1921dbb34e625cb35ad9052e5e88cab5ea1a70",
+        "error-value-not-in-reference-data": "13e4ceaf6182a7f2eea04bec96fb34a150375dbd005f11a01204ed88062867e1"
       }
     },
     "bem": {
@@ -466,7 +498,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "938a9e5de612a648482d1551506ac08be4a0b26e31d009ba145204f5c1538ffe",
         "msg-translation-reason-userModifiedReferenceValue": "77fe79709589b3e6f8d6fd0d3988c993c90d93e0cc934ceb81bcf28263a19a90",
         "msg-translation-reason-missingOutputKey": "1cd81a59797112aef560a319e4552d040729a4b16a96dbbeff69a95468bb5764",
-        "msg-translation-reason-missingOutputValueHash": "35ba69836a476bf12ac9de133ca77a7029c45b7df1dcb32d9cc3bf993c2d88bf"
+        "msg-translation-reason-missingOutputValueHash": "35ba69836a476bf12ac9de133ca77a7029c45b7df1dcb32d9cc3bf993c2d88bf",
+        "error-value-not-a-string": "fdc874aeef4f33d5d81d83b1e5ff6e33442423e6dc16d035daa1dfdf84328781",
+        "error-value-not-in-reference-data": "f296c980661bc14e574cd5dc943c64af448748dfc1bb82e9f39535fe18343628"
       }
     },
     "bez": {
@@ -492,7 +526,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "dd41a64ad6a5fed040717032aa7a5013e690010999a2741b365a336d81184958",
         "msg-translation-reason-userModifiedReferenceValue": "7b3e5d5893c7de2148a32b1f2d3cc7b91014e73aa5498f7e2f5eec3d7206e0d2",
         "msg-translation-reason-missingOutputKey": "fa1b66608ca36d3d45bf4fd61535ad56b6b1c13992daec92ba9f969e1fce4dea",
-        "msg-translation-reason-missingOutputValueHash": "2e726bfba273a068f6e5535de1c6b577d33fe5bedd9812e358c0581e09b52824"
+        "msg-translation-reason-missingOutputValueHash": "2e726bfba273a068f6e5535de1c6b577d33fe5bedd9812e358c0581e09b52824",
+        "error-value-not-a-string": "14ad84c0848ed4b56509655e9b359085fd2db316920eea4dfdec746dfe4a0f08",
+        "error-value-not-in-reference-data": "fb223a770a0689c22a6561512ac2f2538c8c09ee7ba709c63db0ebe47eec1399"
       }
     },
     "bg": {
@@ -518,7 +554,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "71519e694d52dc152806dcc8c67cdb950a20e34a0220c8b9164ecc095ee1eaff",
         "msg-translation-reason-userModifiedReferenceValue": "188941d3505517389fab6dda67ea10b1bd8b932857f8c689162f6002bec6fa39",
         "msg-translation-reason-missingOutputKey": "cbc3e53ab8cb4f426abe483a228e1b51b42701bbcb453d735858c41fc3f8c43e",
-        "msg-translation-reason-missingOutputValueHash": "544b7da2f7a2d192b42ea0eab324a7abf7d97691f6dd993b8d2eb3b79b77ef79"
+        "msg-translation-reason-missingOutputValueHash": "544b7da2f7a2d192b42ea0eab324a7abf7d97691f6dd993b8d2eb3b79b77ef79",
+        "error-value-not-a-string": "c7c4f332bf297c0e7cd90286ad3865808fe061df89676b890df8237eac57fc4d",
+        "error-value-not-in-reference-data": "f3b47ac0af6fce87887a70b7516ad28a0e6556620081be832167e5f5e18e0542"
       }
     },
     "bm": {
@@ -544,7 +582,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "216130a98cb608f085c532d379e580b13e0601f791ea587d88faab0c634fb16a",
         "msg-translation-reason-userModifiedReferenceValue": "fbd97d817344c2bb7ca5d64506db07cdee4540d9589ce79d91f3470835218397",
         "msg-translation-reason-missingOutputKey": "4d7e394b6c4034cbe7794abec75d13c923430369159d65d4dcdea555d5444284",
-        "msg-translation-reason-missingOutputValueHash": "54d0046fd29a52bb986c61902f799c203c3c7b328e856b05df8cfb69f121a1ee"
+        "msg-translation-reason-missingOutputValueHash": "54d0046fd29a52bb986c61902f799c203c3c7b328e856b05df8cfb69f121a1ee",
+        "error-value-not-a-string": "a4f9b5329801a23636b5afa832e6b29e1c260ef81fbfb2c6ade193d38f6ca2f6",
+        "error-value-not-in-reference-data": "93e7bab3e0dca392dbd5755921a9e7c50390042cd4b8d98c74721ff27e6cf929"
       }
     },
     "bn": {
@@ -570,7 +610,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "0212de5f940c225128e3d69fac8b669c9fa5708fc35486aa65077d295501b80d",
         "msg-translation-reason-userModifiedReferenceValue": "df49882a6c5dab629534ff87025b65fcca87b3fecf72fae49ae02ba7f5ca3ba7",
         "msg-translation-reason-missingOutputKey": "b4bce1b79e465b151cd2c36b945f4e4fecc659e60661a4979f44f8ee41d85231",
-        "msg-translation-reason-missingOutputValueHash": "588f90b0762e40a9d7fa36654c27f51b4596bbb5998124922ff937dc24ad6c83"
+        "msg-translation-reason-missingOutputValueHash": "588f90b0762e40a9d7fa36654c27f51b4596bbb5998124922ff937dc24ad6c83",
+        "error-value-not-a-string": "25e514718d353a8b44374f7f71cede6be996e2fc60f394b319b59eff562df946",
+        "error-value-not-in-reference-data": "4cc25311bd22949ec69f3a406cc6c11d6f746395d37d3a90899d70f30d49ee49"
       }
     },
     "bo": {
@@ -596,7 +638,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "645865c7cff74b7919f8f47b99f274094d9b136a90cdaae27d2e541b05f2bf22",
         "msg-translation-reason-userModifiedReferenceValue": "1cc6a46eb0ddd8a5f1951f669dc4a24af70c9f0c2040ee74d94fe742fb199b92",
         "msg-translation-reason-missingOutputKey": "bed81f67d9560fd29c3a049e11e4373ed9caac5fdea23fc9308137ebbd1ec463",
-        "msg-translation-reason-missingOutputValueHash": "59d05755be10b2186d65653b8138eddf21f7d630d28535e7b0f6963dcb363055"
+        "msg-translation-reason-missingOutputValueHash": "59d05755be10b2186d65653b8138eddf21f7d630d28535e7b0f6963dcb363055",
+        "error-value-not-a-string": "6911074c4ec38c8f999ecb3740957d5f980b41fae97127f00fdc507a92bbb014",
+        "error-value-not-in-reference-data": "2c7d7912767f209fa99d3464e2912c1b9e1af2f6dbe021ae391e65e4eefe3458"
       }
     },
     "br": {
@@ -622,7 +666,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "66cb1212ff5bcd9118307eac083c22dc83a04a86961d98ab3007d33397fbe44f",
         "msg-translation-reason-userModifiedReferenceValue": "19835a2226f8a09f2ec10dcda7ef9377ac6144f750dc6baecf9a659ec51dab27",
         "msg-translation-reason-missingOutputKey": "4ca4e266a7094d2e3c19a3913dae836a6273b113f5ed761d785a85b9f36aebd6",
-        "msg-translation-reason-missingOutputValueHash": "ab2f2918ee048c041b0eb1795358eae9a6f27a3873c3c30ded0eb82663108d66"
+        "msg-translation-reason-missingOutputValueHash": "ab2f2918ee048c041b0eb1795358eae9a6f27a3873c3c30ded0eb82663108d66",
+        "error-value-not-a-string": "a964a15a43fb39d77080dba6ac3a6e793dc04401ef561ed46f9fbca45ea798d4",
+        "error-value-not-in-reference-data": "483640b1a975e084f593802c2d87794f2bfe49571d922e397cdd6920babd5c7f"
       }
     },
     "brx": {
@@ -648,7 +694,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "53b29f6fafc654827d8ae233ae5b5d188086840e25db26de2777fcf7b018c5d9",
         "msg-translation-reason-userModifiedReferenceValue": "bd9339c253e2af0959b677610426dd4554f220e156741503ba688bb107d2da66",
         "msg-translation-reason-missingOutputKey": "3b143034e47ea6ad86115a6e32a067e8139dbb1524136c69c47153bbd8c84ae0",
-        "msg-translation-reason-missingOutputValueHash": "8dc343f9182ce5da1bcddc4ae1561c0a933e8019844919710968faef7f9c7a43"
+        "msg-translation-reason-missingOutputValueHash": "8dc343f9182ce5da1bcddc4ae1561c0a933e8019844919710968faef7f9c7a43",
+        "error-value-not-a-string": "30824a8ab23dd4a7dee37c94677d56c78b9cff94df6913727f3e1f545761b2a3",
+        "error-value-not-in-reference-data": "8d3766aac1d71eb38ae8017db3dc224b7e001f5aed0719fff5c243467113d306"
       }
     },
     "bs": {
@@ -674,7 +722,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "892710d14215a396af4129e34162370c9282a97b0ba181aceb04bd3254016d46",
         "msg-translation-reason-userModifiedReferenceValue": "cc15b635efc01c42ae75b9c32f226200da1e6bc44a85557827ef0e0625377e9d",
         "msg-translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2",
-        "msg-translation-reason-missingOutputValueHash": "0f0814b39104b4c266bca1e9023da0cde6cb5b73b3230125af681ae377b1dd08"
+        "msg-translation-reason-missingOutputValueHash": "0f0814b39104b4c266bca1e9023da0cde6cb5b73b3230125af681ae377b1dd08",
+        "error-value-not-a-string": "13215c3524292236c227603f8ae40999743c0c0a6a02d7c275dfd21c9b3495f0",
+        "error-value-not-in-reference-data": "6e4a98e6742660dc4aadbbcb097091fcccddfe4e6f8a6154bfd9f0ab5c40213f"
       }
     },
     "byn": {
@@ -700,7 +750,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "e2ae58fef0c311f68c9f5aac33459a5c2ac97980acf7ad2b2d9ceda16d517f08",
         "msg-translation-reason-userModifiedReferenceValue": "16594f72d68b168da72713d449d04c1b2c6b73ff22df581deeb2b5348fe08a0b",
         "msg-translation-reason-missingOutputKey": "a78f6af0c220ac9e3351d98bb2cea888103793e083bb21048903462fef5132d9",
-        "msg-translation-reason-missingOutputValueHash": "fc5be4520c4a386ccf16f38124086a07b8bbe50b03885c745206d06adfdaed5e"
+        "msg-translation-reason-missingOutputValueHash": "fc5be4520c4a386ccf16f38124086a07b8bbe50b03885c745206d06adfdaed5e",
+        "error-value-not-a-string": "01f98a46563b80903ffd984c5ddcc2361cc060728c3e6f48f8a6e94bbf5dec8e",
+        "error-value-not-in-reference-data": "c2037e3539267607402306974c78728a7c578f96c3cad802b419c3533aff27bc"
       }
     },
     "ca": {
@@ -726,7 +778,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "206cc040bc2a4b61f277221001be5e4c706cf388092d70b8c4070d663e3f9344",
         "msg-translation-reason-userModifiedReferenceValue": "3df64700f9de75c302e14e328168e3ffd2d51ffcfb80df57bfb46ea0534c0a1f",
         "msg-translation-reason-missingOutputKey": "d4c58aeaa9788883b6cf29b5a6d8044ae21cecf8c2fdef3c66950700708dd878",
-        "msg-translation-reason-missingOutputValueHash": "2b2d76f71c3f9e2c6455957bc4d2fb140b46b5835f0dc7c4dba545ce4a93543d"
+        "msg-translation-reason-missingOutputValueHash": "2b2d76f71c3f9e2c6455957bc4d2fb140b46b5835f0dc7c4dba545ce4a93543d",
+        "error-value-not-a-string": "9108f6080b109d09dc839d9d0d33cd95149f5569f66fd0bf996ac4f363619526",
+        "error-value-not-in-reference-data": "61e5036e8003c60e71c403073f699f2b00583a974e9b185f93af559ae42c9f7a"
       }
     },
     "ccp": {
@@ -752,7 +806,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "616cd6b4e2585a480c2a8b9a1291bae3bb1db6c809728be4134e106f0e0b51e7",
         "msg-translation-reason-userModifiedReferenceValue": "372dc7893e3e1467be0d72f205a859c3ebbf917884f02c140a4b5c830e27c066",
         "msg-translation-reason-missingOutputKey": "a798381cfa1730d07d48a5a27519bd8c352df022ebd42baa054336b718db4cbc",
-        "msg-translation-reason-missingOutputValueHash": "de5f55b2bef0a186877948f0ea04e29252bbecfb0a90f9b5ba74ae4332c3f5ca"
+        "msg-translation-reason-missingOutputValueHash": "de5f55b2bef0a186877948f0ea04e29252bbecfb0a90f9b5ba74ae4332c3f5ca",
+        "error-value-not-a-string": "1266c118f5bb9e1b94769c3fe58fc72a53dcd911780d70ae277b08578a06e77e",
+        "error-value-not-in-reference-data": "3bd3d6ae118a00f6776174b8554319770ace5e0d4e1921f268aa3d62606230be"
       }
     },
     "cd-RU": {
@@ -778,7 +834,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "4547dac6cee7febd9eeebcf1332fb76e1ffdf34264bd21b0a5c99590e1eb9209",
         "msg-translation-reason-userModifiedReferenceValue": "092e111a2636ed2deeb9535759e29c18ff2f8cdb21cd475f36dae9cacbc0724d",
         "msg-translation-reason-missingOutputKey": "0a2da5bbe41df4ecd84a49fdfdb5a2c8782974e1287e29e31ace5a564d326839",
-        "msg-translation-reason-missingOutputValueHash": "6d78f671ee210422ba0bd35112a819aad02ae20d905bd6953b8a484f4bf3367f"
+        "msg-translation-reason-missingOutputValueHash": "6d78f671ee210422ba0bd35112a819aad02ae20d905bd6953b8a484f4bf3367f",
+        "error-value-not-a-string": "616cb4618ac665095427ff410245d2de0cbe2416758d87e23b8e41806a31fde5",
+        "error-value-not-in-reference-data": "082ffe8ce597639ba595c3ae5bd07e532f0068197c5dcabf3cee82493713a5cb"
       }
     },
     "ceb": {
@@ -804,7 +862,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "2a13e8b740d69d72f01a448d4fcd7e785a110a5ac8b900901880ca3a7ce9a567",
         "msg-translation-reason-userModifiedReferenceValue": "b73960f7d41a860b6e0fecc8e566ece1e34560276558f9601689de152062d31b",
         "msg-translation-reason-missingOutputKey": "97c50a714b7ebcb055f54dfc1601bde3d12fb463adc94c19ba2e096b1dc0baaf",
-        "msg-translation-reason-missingOutputValueHash": "1f6aadffe7f458ef5b97dfa941e975f85efd4af0a6c19137779476117ef1ec69"
+        "msg-translation-reason-missingOutputValueHash": "1f6aadffe7f458ef5b97dfa941e975f85efd4af0a6c19137779476117ef1ec69",
+        "error-value-not-a-string": "e729f152628fb52299b1097db4e018d6397bde962d3205b4ab5a33e56707bb30",
+        "error-value-not-in-reference-data": "56073d71e0061afe6ed9e7424762f9130dca6c394d83e6248a1de4efdb54b2b7"
       }
     },
     "cgg": {
@@ -830,7 +890,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "e7a58631ceb7538074aa766b5501e04cdb204ed907ec39417f43a370179be818",
         "msg-translation-reason-userModifiedReferenceValue": "7d9e05d234d13835d2e7beeee43ab2c20a7d84c51cdf480f809487510a8080ef",
         "msg-translation-reason-missingOutputKey": "79cb2edc4357a422f36cc8468619f14a9d36c7035ee07847364a95674b46b578",
-        "msg-translation-reason-missingOutputValueHash": "e49f93c03413cafc22b4806c3a4f4db3f264a93828a5bc50279a63b7bf33f4d4"
+        "msg-translation-reason-missingOutputValueHash": "e49f93c03413cafc22b4806c3a4f4db3f264a93828a5bc50279a63b7bf33f4d4",
+        "error-value-not-a-string": "728766a41f15b9db3533c0e42bbacfe920577bb7e915b68543bd63b4e1dfe549",
+        "error-value-not-in-reference-data": "f33ef00c193edac434b25a7c5e12c485ab83d8e9ec197b7e29a4f19d7f792101"
       }
     },
     "chr": {
@@ -856,7 +918,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "235840c4e6edc53a45c084db10a904a03323db91bd668d8d7d79ada7c1abc642",
         "msg-translation-reason-userModifiedReferenceValue": "ec78929ec51e9fb0e63a82e63dc0c920eb50e145306c84b959c672f7ca3567e7",
         "msg-translation-reason-missingOutputKey": "d169b830005687615ae62c39c3d568b6925ec3438ed47742db8095263e94cea3",
-        "msg-translation-reason-missingOutputValueHash": "9a31f7dddd98d8d37c443d5714ddfed086747d32a3fd138cac420097b067d249"
+        "msg-translation-reason-missingOutputValueHash": "9a31f7dddd98d8d37c443d5714ddfed086747d32a3fd138cac420097b067d249",
+        "error-value-not-a-string": "87689cfe89b12035e4def171e178d4af3e9e5652fa3b9577f381b1fa865e9312",
+        "error-value-not-in-reference-data": "98a68d2b15a62368d011d32736eba391675d1b96555388fbfcd1a455cfe91739"
       }
     },
     "co": {
@@ -882,7 +946,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "6a963e6eb861e25a19b73b090b32b4c14a898f246d662b183974b0e6b9c87286",
         "msg-translation-reason-userModifiedReferenceValue": "626904bdc738c40fce5ffee558b6bf42d3025c2a00df3d113b117307a68ef5d3",
         "msg-translation-reason-missingOutputKey": "5e402629bc99f001c5c227e859efcabf8d09a5caad30425c78864264a3845c77",
-        "msg-translation-reason-missingOutputValueHash": "1b791a530667e138116ef45cc7ec543a457115c827fb3307a5b9ca6ca7f14750"
+        "msg-translation-reason-missingOutputValueHash": "1b791a530667e138116ef45cc7ec543a457115c827fb3307a5b9ca6ca7f14750",
+        "error-value-not-a-string": "996399df429e8c2c05fdc4eba341d6d414a1e8ccf6f40fd9531724d54533e1fc",
+        "error-value-not-in-reference-data": "2084a33ecfdcd3ac8c758345503fc20cd0d233cb8e39bc4f13d375f38b76bcbe"
       }
     },
     "cs": {
@@ -908,7 +974,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "6f65cadab2949126880b012c5756fb55c2f7e281a60ef361b328a4d479624fbc",
         "msg-translation-reason-userModifiedReferenceValue": "a84a3a715f7511b27fae8701351e8affd0704f9f2f4da3d6cb160dae822fb1ae",
         "msg-translation-reason-missingOutputKey": "f7961a5146259a748b5d52c7f8add69dc0fa04b1ab80ec414f556d83130b2251",
-        "msg-translation-reason-missingOutputValueHash": "f6f992b73842d4cb885a2d8c349245ac46bd928eec1d936f27a41dc4621e3329"
+        "msg-translation-reason-missingOutputValueHash": "f6f992b73842d4cb885a2d8c349245ac46bd928eec1d936f27a41dc4621e3329",
+        "error-value-not-a-string": "bc27c4df33774e9ab5e825f24e4a159d1202ba78454cb84d7005847f48149499",
+        "error-value-not-in-reference-data": "98cc5eb66dd2430f4c8322034e5772f35485b3f05edfde99ea4e45331c019627"
       }
     },
     "cu-RU": {
@@ -934,7 +1002,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "8e0e0920ac2efe07516157d779feeeeb51761a42989c9aa8a1eecf9e6f0e8673",
         "msg-translation-reason-userModifiedReferenceValue": "522ba69514cdc4c902e5e559476b8e107b0d8d667cc32917578b7c8b639481e5",
         "msg-translation-reason-missingOutputKey": "2522ee67e4974a321743dad1b54a5bd185753226045d20a90b97daf2d7a166e1",
-        "msg-translation-reason-missingOutputValueHash": "94dec878267fd060c83310830ceb47c3d11514fb69f5bf5c99696bb9e81674e2"
+        "msg-translation-reason-missingOutputValueHash": "94dec878267fd060c83310830ceb47c3d11514fb69f5bf5c99696bb9e81674e2",
+        "error-value-not-a-string": "0edac5c6fac1bc11234ecedc34d04414206ed079fc76793d86ce2ef3833b62a9",
+        "error-value-not-in-reference-data": "d8a82ddd78865c633cc8011d1afd0b9349ae6ab089d2d0a3397e1840a2c31fdb"
       }
     },
     "da": {
@@ -960,7 +1030,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "09373614883c84ceda8f4e1eb4898d91a6188108fdf3af2f7f3711255e63b19d",
         "msg-translation-reason-userModifiedReferenceValue": "d38d9a5f763e67d18b7486b211c7f88e4a7e74ed336cc7d4520ae0ea377015c8",
         "msg-translation-reason-missingOutputKey": "278ffdfca33da7d9d876065dfb57c8350b931fe855086517f73eba9240525dad",
-        "msg-translation-reason-missingOutputValueHash": "4cd4f5ee0f10bb7ab9f28b269bd7eee148a6e2027cd96db3768892ed22d286e0"
+        "msg-translation-reason-missingOutputValueHash": "4cd4f5ee0f10bb7ab9f28b269bd7eee148a6e2027cd96db3768892ed22d286e0",
+        "error-value-not-a-string": "40813773c2edff07daf81b2ec1760792837e458789a93aeb7a242ba9024d255c",
+        "error-value-not-in-reference-data": "2abdc7969762194b52af516a2273f641a2433d55aeabde26419571f69e47d9d1"
       }
     },
     "de-AT": {
@@ -986,7 +1058,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "c94c8756e9364847c8b05835a9599a99e323bf8fc301a96ae25e6b851d311afe",
         "msg-translation-reason-userModifiedReferenceValue": "cf3a49973b315ed31a41bcf643189746f884c2b1e6ce0e2476e220dd8440f455",
         "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
-        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427"
+        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427",
+        "error-value-not-a-string": "8558caf5027aecf06abb7a3fe5b9721c748d9e970c41f20dab71b387ccabf18b",
+        "error-value-not-in-reference-data": "ae93f35c6ef0ade62ea46318a8140f6d9e6c348e586add5969f0612af38a457a"
       }
     },
     "de-CH": {
@@ -1012,7 +1086,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "a029c2f35edc4d5f34f6702c11244a5840767160b334efe5d5f3f04928dda981",
         "msg-translation-reason-userModifiedReferenceValue": "a61e99c7e7a9a6c5c564a203e493433f738ff13ebe5572d42135ab963378eca4",
         "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
-        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427"
+        "msg-translation-reason-missingOutputValueHash": "6a833366addef1bbca2e16d902156fc0dd17d7cba83b4975220f109b4e7e9427",
+        "error-value-not-a-string": "5d42e488a73a9047caca8962aa853ac67809469b7ae9aa444d58f1f58bc454ad",
+        "error-value-not-in-reference-data": "9d0082ff859bae15f82576d6e7be5b1d39b91df20586bfbb58a2e740ad62cf06"
       }
     },
     "de-DE": {
@@ -1038,7 +1114,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "a029c2f35edc4d5f34f6702c11244a5840767160b334efe5d5f3f04928dda981",
         "msg-translation-reason-userModifiedReferenceValue": "cf3a49973b315ed31a41bcf643189746f884c2b1e6ce0e2476e220dd8440f455",
         "msg-translation-reason-missingOutputKey": "a345905fdaa15f66315de06c53e25520d1f996241637d74503ff20f4871d05a2",
-        "msg-translation-reason-missingOutputValueHash": "b430a08d100037298f1e8404146e43885d717c7004ae4659d181d86589d0e48b"
+        "msg-translation-reason-missingOutputValueHash": "b430a08d100037298f1e8404146e43885d717c7004ae4659d181d86589d0e48b",
+        "error-value-not-a-string": "8558caf5027aecf06abb7a3fe5b9721c748d9e970c41f20dab71b387ccabf18b",
+        "error-value-not-in-reference-data": "9d0082ff859bae15f82576d6e7be5b1d39b91df20586bfbb58a2e740ad62cf06"
       }
     },
     "dua": {
@@ -1064,7 +1142,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "e0f78d923653e2d1e0dadfd5e9458960213cbcf2f41a9d696ef80fc7afd70bdc",
         "msg-translation-reason-userModifiedReferenceValue": "b03bd7d14e86293d8b9626f37fef233a03d1c47d70e842ad822261ff5acf7470",
         "msg-translation-reason-missingOutputKey": "2672625c566409dccd88a25345263706bfd83b076152e8d36497e18597378700",
-        "msg-translation-reason-missingOutputValueHash": "418b289fcc6749b5ca1fd064e3936911a91ba4771eae37ce6184cbb9392ccf41"
+        "msg-translation-reason-missingOutputValueHash": "418b289fcc6749b5ca1fd064e3936911a91ba4771eae37ce6184cbb9392ccf41",
+        "error-value-not-a-string": "88f0c9ac90ba8c8d4a5fb80706ac4f30d3e13f7cbe0fbb3fbaad08765d325596",
+        "error-value-not-in-reference-data": "b3e3790ee52e99b110eefdc2176481033b951aada2072fe33fad47b7d4959b44"
       }
     },
     "dv": {
@@ -1090,7 +1170,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "53ecf19f8cfe8c1cbdaa162d1d66deefb3196e8555b04a2c2f39dd8f7e6c61e2",
         "msg-translation-reason-userModifiedReferenceValue": "5f4a6c635321545d5bf5e7e115ca23bd6cdace2333abf4024e62ae05dd7904a6",
         "msg-translation-reason-missingOutputKey": "31fd6d890cc76c505d4c99ee4793255364cae587214d53f82b9f585f08d7e29f",
-        "msg-translation-reason-missingOutputValueHash": "3ed47107974f62af74714c8ccce32ec0940431b073f2a900d2b27c865851337d"
+        "msg-translation-reason-missingOutputValueHash": "3ed47107974f62af74714c8ccce32ec0940431b073f2a900d2b27c865851337d",
+        "error-value-not-a-string": "f6cbc57ca5f8d58175e6bcef76958147a93c771ebc1029225f442781e4064b78",
+        "error-value-not-in-reference-data": "5e5e8f615d1e6d7a127cbfc1dec3e91d48a61e8d93dabdebf0ecf7b5f2bd95e8"
       }
     },
     "dz": {
@@ -1116,7 +1198,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "daf741dc375fee0a03cd28988327d77bf264398fe58244a83573a507298bdeb6",
         "msg-translation-reason-userModifiedReferenceValue": "21e80522ccf59b83f3ff09e88f41cdeeac22be6e0d9943077dac45df06121043",
         "msg-translation-reason-missingOutputKey": "0b6304e802249d04f0ca82235d56303e20a1504e589db0a79ac24270e44782e9",
-        "msg-translation-reason-missingOutputValueHash": "b342d8f2aae809a9b23c4d5ef815877d1d2314e2068ac5d643e897b2572ed183"
+        "msg-translation-reason-missingOutputValueHash": "b342d8f2aae809a9b23c4d5ef815877d1d2314e2068ac5d643e897b2572ed183",
+        "error-value-not-a-string": "e07e1edb3174fbd907e3c8f30c2f55528a541514f9979dd100ba9631f732b514",
+        "error-value-not-in-reference-data": "e60fd1595c22f0cedab3d698997bbda6657cc5ff38d203e40e92b18c7e690220"
       }
     },
     "ebu": {
@@ -1142,7 +1226,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "2ae03bae5359d8f63611cf065867e128c295f061ef0383dde7792dcd62068189",
         "msg-translation-reason-userModifiedReferenceValue": "6c0eeddb3dea7b7c2aa7f0bd0b0dc765d1aba2a311764514ef19cfd149e671f6",
         "msg-translation-reason-missingOutputKey": "f69e5fbfcde775c4a6df3097a6a5ade5b0b228156793ca4a436afa6effda1dc6",
-        "msg-translation-reason-missingOutputValueHash": "b8a0610049ed0c92c1a9dea68c7c4cded344debace5dedb6d3f125e90dd69550"
+        "msg-translation-reason-missingOutputValueHash": "b8a0610049ed0c92c1a9dea68c7c4cded344debace5dedb6d3f125e90dd69550",
+        "error-value-not-a-string": "dd64975672b11314b6a433709dc7bd7800980bd857b5c444c2534d00b17f1ba7",
+        "error-value-not-in-reference-data": "ef6ee3d2838f1c3ea18797fa62264b3c0508104863de69b35f37489d52245935"
       }
     },
     "es-ES": {
@@ -1168,7 +1254,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "8a1282f95c7ea334f544e63488712e11c975f0b62e73a9b3ff5c8444dc8a5002",
         "msg-translation-reason-userModifiedReferenceValue": "cda5ccf2a97d4797c34b64f23d46262c7840953ce68eeccfeb4b88bb06446a50",
         "msg-translation-reason-missingOutputKey": "42fff8dcf49d52f1165059753bb8902b55e93840addd68ac779fe84f147299de",
-        "msg-translation-reason-missingOutputValueHash": "5d9c5682214647cbcb3676bcd6a57696012ba4672daa324dd5ba018de08b34bc"
+        "msg-translation-reason-missingOutputValueHash": "5d9c5682214647cbcb3676bcd6a57696012ba4672daa324dd5ba018de08b34bc",
+        "error-value-not-a-string": "58d54594fa8690af2dab048ff2254d87fa5ba69ef9124bd2681bb5ed67093f8a",
+        "error-value-not-in-reference-data": "fb9d4b732c8f22f8ad1760753601b23ec7b14aa72f794f59f6a1c24476136dcd"
       }
     },
     "et": {
@@ -1194,7 +1282,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "61263ef06c4249d6a64d7aca46813dbb6b97f2d8f755977088893e7de1b26f81",
         "msg-translation-reason-userModifiedReferenceValue": "56827d5be8ba29e77c36c1b335b5aba0cf47aec1079a116082b0ab8a2bc275b1",
         "msg-translation-reason-missingOutputKey": "bdc94125e5f2a94ed9e583424cfc25393fcdfc4fda549a31d62373b51915a05d",
-        "msg-translation-reason-missingOutputValueHash": "83797c9674780cff98c01751453cd38d86cd1479f7bdd95b4a0852db2acad6ac"
+        "msg-translation-reason-missingOutputValueHash": "83797c9674780cff98c01751453cd38d86cd1479f7bdd95b4a0852db2acad6ac",
+        "error-value-not-a-string": "c0c8d7339743060dd48823fcc7bc8888dc37ec32960306fd1d7d28eff3ea9264",
+        "error-value-not-in-reference-data": "248dedf2408e59cba9f9caea2d790284b970efebcd207fde258d8b26799a60d6"
       }
     },
     "eu": {
@@ -1220,7 +1310,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "7dd5cf6868b172faa07c4bc2f13a142745cc81c9ccd3f21a5a5cdcddcdc15755",
         "msg-translation-reason-userModifiedReferenceValue": "8fd6f93ed1b609e6869a57fbd33cb4f893f5e683b7bb2924d4fe191f3dfa8474",
         "msg-translation-reason-missingOutputKey": "c9b1e79fc38821e601e1ab14eafca9ddd759bef88e0c0d2125f1991523217bf9",
-        "msg-translation-reason-missingOutputValueHash": "889590c783031f1d56a20a19974294e025338f89b1b30f52b50606dcc861cc62"
+        "msg-translation-reason-missingOutputValueHash": "889590c783031f1d56a20a19974294e025338f89b1b30f52b50606dcc861cc62",
+        "error-value-not-a-string": "18f7068fdec048263324fa38e6ecd4d960ac414dea2034a9ddf68f67cadbb500",
+        "error-value-not-in-reference-data": "a052c47c16fc4e5dbdc7d7a57a50d20698e05c39d71700bd812721a0e8892d3b"
       }
     },
     "fr-CA": {
@@ -1246,7 +1338,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
         "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
         "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
-        "msg-translation-reason-missingOutputValueHash": "66554e3d65ac3c75cad7318f46453f6e6b0b9ba9bdd8aa651fa3ae8ad547e06a"
+        "msg-translation-reason-missingOutputValueHash": "66554e3d65ac3c75cad7318f46453f6e6b0b9ba9bdd8aa651fa3ae8ad547e06a",
+        "error-value-not-a-string": "c22ff715d41ae820c434af24393b9121655674e87927d37500227c3c9a0d467f",
+        "error-value-not-in-reference-data": "4d30241d388d2f49b039f2caf1423590b217426e07c0485dfdc6d1639c539243"
       }
     },
     "fr-CH": {
@@ -1272,7 +1366,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
         "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
         "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
-        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
+        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01",
+        "error-value-not-a-string": "c22ff715d41ae820c434af24393b9121655674e87927d37500227c3c9a0d467f",
+        "error-value-not-in-reference-data": "4d30241d388d2f49b039f2caf1423590b217426e07c0485dfdc6d1639c539243"
       }
     },
     "fr-FR": {
@@ -1298,7 +1394,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "9adea5190b560056ded277ee0b1108fab1438cf4c40185c86c22e53cd6fb302b",
         "msg-translation-reason-userModifiedReferenceValue": "53a7612a28a873c9ad623fe9298d8abdb85ab5d8bf86ec1d196c555f023f9bb3",
         "msg-translation-reason-missingOutputKey": "08ad8dbbc704a541a254716b4ae921e73f3f801eca3ee51c71839155c9077bc0",
-        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01"
+        "msg-translation-reason-missingOutputValueHash": "5db61146431737c1826b7b419b3796a844c96d616d4f8915ed06d7f6a9059b01",
+        "error-value-not-a-string": "c22ff715d41ae820c434af24393b9121655674e87927d37500227c3c9a0d467f",
+        "error-value-not-in-reference-data": "4d30241d388d2f49b039f2caf1423590b217426e07c0485dfdc6d1639c539243"
       }
     },
     "gsw": {
@@ -1324,7 +1422,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "df2f86c32af2b6f4b1ed963e80b8322e1c007c64713815284badae0700a7e04e",
         "msg-translation-reason-userModifiedReferenceValue": "adf6157d23250a8251bb600b5b64bb5d9baeb96bd65e81310f50c79cab1c846e",
         "msg-translation-reason-missingOutputKey": "4a43dcad4a8368ddf1aabad7fb5bb53a77dce24d2c9d62ef8b8f165285d78ffb",
-        "msg-translation-reason-missingOutputValueHash": "9554b2c82565d34401390d10d033619876879b691ad8962d60d68396c9cd42cb"
+        "msg-translation-reason-missingOutputValueHash": "9554b2c82565d34401390d10d033619876879b691ad8962d60d68396c9cd42cb",
+        "error-value-not-a-string": "5077272b2087a3f1dd52f2290ff62448e9537c0b12468c0caeafb180dbc722d3",
+        "error-value-not-in-reference-data": "179965731235484facd8dcabedb2e4aaac83ded48b1309cc4cd54e0617c8826b"
       }
     },
     "hi": {
@@ -1350,7 +1450,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "c7c6386573b0921abe1eb64d2bca6dc9c808deba930043cd7c1d05a43625b658",
         "msg-translation-reason-userModifiedReferenceValue": "a20d0cadc28e83119156c1704481a73f9d173d6e6a420ecb1ed7a0470e0d08d9",
         "msg-translation-reason-missingOutputKey": "38ce003811abf63257b5c4dc9548a5b393abd03db86788534e60eb1ac14927bd",
-        "msg-translation-reason-missingOutputValueHash": "3890c8ece799dab0a20fbd6b93bb3e2bfaee7b83b2651068f447b35d3200325c"
+        "msg-translation-reason-missingOutputValueHash": "3890c8ece799dab0a20fbd6b93bb3e2bfaee7b83b2651068f447b35d3200325c",
+        "error-value-not-a-string": "5917089f9d231dd2f6715108616974879f6c63a77d59e9bb248a41e31b51bb7f",
+        "error-value-not-in-reference-data": "b7ed98d162b47b60c19bcc11b68b91076cb9a7e9dd44df59ebfbac4c9c275726"
       }
     },
     "hr": {
@@ -1376,7 +1478,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "892710d14215a396af4129e34162370c9282a97b0ba181aceb04bd3254016d46",
         "msg-translation-reason-userModifiedReferenceValue": "75cdfecc4991bb0864a420f45dd8d64db23c62c7c099bedb673834c490f37b17",
         "msg-translation-reason-missingOutputKey": "f186233f267315fb9871d322007039b870e289c9b76132eb06bd27f650640fe2",
-        "msg-translation-reason-missingOutputValueHash": "1ecf518e911b61e21e68e1d0b16f4abd1643d53b0c3181769305ade01d40666a"
+        "msg-translation-reason-missingOutputValueHash": "1ecf518e911b61e21e68e1d0b16f4abd1643d53b0c3181769305ade01d40666a",
+        "error-value-not-a-string": "e93dc591a827319f047214ff6a5f447aa9e630b4ad1410177112c9ca1b34dc26",
+        "error-value-not-in-reference-data": "e8d90d5c0b58e8a6f42cd7f781277fe8a0a7eaf26a4833cd5332fb3ad029ddb9"
       }
     },
     "hy": {
@@ -1402,7 +1506,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "190cbecb809527ee7532e8ac117d1c9d71197b3855f2b7b75d70ed5967ad809f",
         "msg-translation-reason-userModifiedReferenceValue": "315127639d0a4fa37320fa1b1cfc78d72ccd19a88b391cced1df838e60f5445c",
         "msg-translation-reason-missingOutputKey": "ed87b43e22a451bb4ac43bac55afc4009f730b0bce0c2a0b3da6d25f8df9f42a",
-        "msg-translation-reason-missingOutputValueHash": "c584effd0f0c35f6bb92f50a3e654e3b29406066e5d770b357e91eb327d0fd32"
+        "msg-translation-reason-missingOutputValueHash": "c584effd0f0c35f6bb92f50a3e654e3b29406066e5d770b357e91eb327d0fd32",
+        "error-value-not-a-string": "481f3906b41f167dd7e0a177f842eebeeee92b3fbdde3d5edfc920722685113c",
+        "error-value-not-in-reference-data": "3f0e2730e4de97f11c02538034bac19e3c70026d637ae97e187469a530f6ba00"
       }
     },
     "ja": {
@@ -1428,7 +1534,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "693650cd3d864c6634674c1c759f91f0a01faa3947c17e06825bfc5c69773d38",
         "msg-translation-reason-userModifiedReferenceValue": "769bdb7095e0e9ed933805af5440b6eb53735488db4aed82ea407fa6c63e1e4b",
         "msg-translation-reason-missingOutputKey": "96076fbd16826a44102efab24f0db812b0b88351bdd7d5288c0a018297a8ba6e",
-        "msg-translation-reason-missingOutputValueHash": "a22e83a51d10f12cb40cadac43f68266766fba512d70a79645f26967732f4193"
+        "msg-translation-reason-missingOutputValueHash": "a22e83a51d10f12cb40cadac43f68266766fba512d70a79645f26967732f4193",
+        "error-value-not-a-string": "c693d8fc91453cb9e3f186ae8505935f530b6713c0e042e4a9577508a932e206",
+        "error-value-not-in-reference-data": "ca1f4a71bc81321f6b6c71f27159107aa1984626a48fa30d5c5e1b944d7c5589"
       }
     },
     "ksf": {
@@ -1454,7 +1562,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "b43a39b181bbd1de5a3f2e1f01e30a4ec8e59b1f3311ef8cbf842f2a69f94eaf",
         "msg-translation-reason-userModifiedReferenceValue": "4522e667c86673028aa5fa477fa1fadef2d46005c76e0604fd10358366fdb14a",
         "msg-translation-reason-missingOutputKey": "440936e31410eb1f9569fa60f3b2e2f61cd3d0c3365016b11dee80b37bae3a83",
-        "msg-translation-reason-missingOutputValueHash": "a42346c8c7b7a2b4ff84dcf725d30fb1ea41ad49c4296b0a10e909b17a603f45"
+        "msg-translation-reason-missingOutputValueHash": "a42346c8c7b7a2b4ff84dcf725d30fb1ea41ad49c4296b0a10e909b17a603f45",
+        "error-value-not-a-string": "8bbdfea9e8206fcf07874b5dadf6fee9bc5e600f04da94ead38d347c8739906f",
+        "error-value-not-in-reference-data": "d339c08507c273c8143f22bf068d1b043c7d553a526fe8112a9f8aedf8e589e0"
       }
     },
     "km": {
@@ -1480,7 +1590,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "b5cf544c028862ebe4cd44bad52b244af3f438ecf7752b1e7372eac1c7a00fec",
         "msg-translation-reason-userModifiedReferenceValue": "6831ead55fac32e7ca10eea6bd1bb4c4c881c40448bad008e79e6b487a8b2709",
         "msg-translation-reason-missingOutputKey": "8c6ac58313856061d13f1eab09982abd831d64887301752f4fe3cb0b469292a3",
-        "msg-translation-reason-missingOutputValueHash": "d59d5a6661b25e1608e80750a4abbb10b72fb6d385f5540d7a295a38f1a80671"
+        "msg-translation-reason-missingOutputValueHash": "d59d5a6661b25e1608e80750a4abbb10b72fb6d385f5540d7a295a38f1a80671",
+        "error-value-not-a-string": "f582a5d10f51326ae3290187cc6066cd9da859377017b1e31be606bdde9f956f",
+        "error-value-not-in-reference-data": "fadde36c075dde528f21d75004e47d5a7493907a6b30f17f43f6277302852ed1"
       }
     },
     "ku": {
@@ -1506,7 +1618,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "2dad802d9f09c6c4600ec93e0c2eae51ed5823cd777d9330b79bf11dc9feb7f9",
         "msg-translation-reason-userModifiedReferenceValue": "cb224a90fb2ab8ff8a3a6f5748a309c61545780c0cac18440f35096da5f683fe",
         "msg-translation-reason-missingOutputKey": "5bbee61d16cc6a59b46911686cf73be8afdd4fdb653572e92f576f2fb35ba2cb",
-        "msg-translation-reason-missingOutputValueHash": "a70dfe0bfb863f9bbcd0889caf545bdc585ba540dbd04f662ac02ad9679831be"
+        "msg-translation-reason-missingOutputValueHash": "a70dfe0bfb863f9bbcd0889caf545bdc585ba540dbd04f662ac02ad9679831be",
+        "error-value-not-a-string": "37e446ec582a47ac5efe21bb2f3d7bae22e76ebc7f2140fbce9e0758798b7eb5",
+        "error-value-not-in-reference-data": "d8bd06038cc312eb1cc07ba37bede2f4ef022860f4d8a5cade631490c588ba32"
       }
     },
     "kw": {
@@ -1532,7 +1646,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "5f73aee474fb2c0e50f0f416c6e77541e22ecbedc5848c14799a873914477bd8",
         "msg-translation-reason-userModifiedReferenceValue": "1ce862b6d8d50b1d2fca50265d43fa7e301f3b170d904e112cfd8afb6b320421",
         "msg-translation-reason-missingOutputKey": "4095bd6724bd608190ba04f964dcfe1a23582ecafe4e55a1093ebd7a0e4ab365",
-        "msg-translation-reason-missingOutputValueHash": "11be37856df02f9ee03e6097e9f8040d1050c21196de166bf332869e789890b0"
+        "msg-translation-reason-missingOutputValueHash": "11be37856df02f9ee03e6097e9f8040d1050c21196de166bf332869e789890b0",
+        "error-value-not-a-string": "53cc0854f2c579b2691b606165e791bda6414309b4bafefb9d89a57acfbf0739",
+        "error-value-not-in-reference-data": "a01edf0998bf1f2eb9c65a436e82147c6d1c94b6cf1bd9b2da1e5a37f2170e48"
       }
     },
     "my": {
@@ -1558,7 +1674,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "385556e25975e2a0506db6c5c3e61fc94ecdfb82bb93ae6ea2d5a59fec1cd95c",
         "msg-translation-reason-userModifiedReferenceValue": "591e3fb023de4e9f65a9374bfca4941bc76b9f0b301e227fb00caddf6fb7369e",
         "msg-translation-reason-missingOutputKey": "49c4625237c0411515213547a41ff673d605f9e873223481f444c22db596039d",
-        "msg-translation-reason-missingOutputValueHash": "f8221a13650d0a3e7f8ec46c6bf27459c8e6c275309846c911791db2a495515a"
+        "msg-translation-reason-missingOutputValueHash": "f8221a13650d0a3e7f8ec46c6bf27459c8e6c275309846c911791db2a495515a",
+        "error-value-not-a-string": "e7e407c06d11365153295d0ecdce6062f605540da66f067b9e4213f89557e5a7",
+        "error-value-not-in-reference-data": "09e7444709174c4823fdd6adcf036f55f73a3c32ad841d3d517a07a9b2fd56c2"
       }
     },
     "nl": {
@@ -1584,7 +1702,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "4d32087e67f50fda2c3d16515676f7e6280bf054bb2203afce0932b084f86a14",
         "msg-translation-reason-missingOutputKey": "a1f488a16ee430024cb98d8723c6d41f890991713b30a24251d94bda5da4dcdc",
         "msg-translation-reason-missingOutputValueHash": "16539bac46b28affc2f23b1bb741026a14af1fdc64373a6674ab0537ad263739",
-        "msg-translation-reason-userModifiedReferenceValue": "65799bbd8509228b818ca6ea8ef25d5708b1418e3c9c2fe5474f5f266fe5d75f"
+        "msg-translation-reason-userModifiedReferenceValue": "65799bbd8509228b818ca6ea8ef25d5708b1418e3c9c2fe5474f5f266fe5d75f",
+        "error-value-not-a-string": "40aa415f52f5b70c175302bbe50c574ea69ea2208d3e074c2ea93e4308df744b",
+        "error-value-not-in-reference-data": "61e37dd96b6150dc636328016c03dc01a7f5d1668d7a25cf58d90e962d7025b2"
       }
     },
     "ru": {
@@ -1610,7 +1730,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "4f4829ed5154a8a7f0e81ba74ec0b6e088afb8bd4a97d51655de3cf60d1f9e5d",
         "msg-translation-reason-userModifiedReferenceValue": "5b870ed0d79460606e01673f6b30882ad9e1fc143a3a28532902d86bc745b474",
         "msg-translation-reason-missingOutputKey": "97ef8861e2f61a59ab7b0b6f794554c3c97e49cbe2f57852e0ffcf32bf3b07f2",
-        "msg-translation-reason-missingOutputValueHash": "591297b25ecfbd7ff9fd35cf85ffb7075b6b2033242c18ed0ec9560e6dab8887"
+        "msg-translation-reason-missingOutputValueHash": "591297b25ecfbd7ff9fd35cf85ffb7075b6b2033242c18ed0ec9560e6dab8887",
+        "error-value-not-a-string": "7dc99e1c5e511dc192eae7010b6656b5fa03771ea195278a1c43453fc9721f7a",
+        "error-value-not-in-reference-data": "681c12c61421a929f6865d78f19e5f35f32405034adb08f2db7c70b04aa1f76e"
       }
     },
     "prs": {
@@ -1636,7 +1758,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "d6aae3e16b4f29dc3031877d629a66dbd28099e9a435c18d6859eaf5ed537b77",
         "msg-translation-reason-userModifiedReferenceValue": "1c531c2afe89533d9ddb0142085d341653f2e9c2afa3f38c420457b87f6e7bf9",
         "msg-translation-reason-missingOutputKey": "f5ebe58bff1642b88efe3ada59d04d3386d2a2be3f544b5b6569ee38403189ac",
-        "msg-translation-reason-missingOutputValueHash": "681577d0c4cb1015de423e21d3061debace5f4434bf46ed0da0b5700ef2037af"
+        "msg-translation-reason-missingOutputValueHash": "681577d0c4cb1015de423e21d3061debace5f4434bf46ed0da0b5700ef2037af",
+        "error-value-not-a-string": "dc2de9fbeb8bb0d0cb8969f120b99316cfe4215a79499be75447c500282a8210",
+        "error-value-not-in-reference-data": "e915b181ca43b19533b8845ab02829d4730bbea02f16b7d0b3f218e79a09e656"
       }
     },
     "sq": {
@@ -1662,7 +1786,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "4837e30e11ec8d7cbc763c4b09485f47c51663e9a34c8e90b1ee339332d94b83",
         "msg-translation-reason-userModifiedReferenceValue": "fc53bbe7058cb6409b674abca74dd104baaa8b9a9004ae01b02f08d1670d4b6d",
         "msg-translation-reason-missingOutputKey": "8b3a19622d563e853426bbd0d73c2dd206add8abec10fd8190efe3a61d725c6d",
-        "msg-translation-reason-missingOutputValueHash": "c967b080f1cf66ab2931e86f1272ece72889eb8655be834cf851d965bffeabe3"
+        "msg-translation-reason-missingOutputValueHash": "c967b080f1cf66ab2931e86f1272ece72889eb8655be834cf851d965bffeabe3",
+        "error-value-not-a-string": "18038a79b29df1c076736ba637007b6da4a4669da3bcf6767cc01b6acf5ad732",
+        "error-value-not-in-reference-data": "d7de15e0810773ce153f3ca1f0077c9eb7e9d38048e58b493da4de301f3dbf52"
       }
     },
     "swc": {
@@ -1688,7 +1814,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "0b33051bda1345f3da2ced9fffacd23bf29a0603a994e7899ff8bbaa916f433e",
         "msg-translation-reason-userModifiedReferenceValue": "5520da3d19b847ae6c06a6351b8d9cef04bf9066595d66d5af192c6ee8104c91",
         "msg-translation-reason-missingOutputKey": "dd7b5f3120a85ae69a5e390eab1089e06225dee0904126be76c57cf4135cd5a6",
-        "msg-translation-reason-missingOutputValueHash": "7dd77602ac001460a0e1592534fc5192059991f142dc60f24663e61ebdf48412"
+        "msg-translation-reason-missingOutputValueHash": "7dd77602ac001460a0e1592534fc5192059991f142dc60f24663e61ebdf48412",
+        "error-value-not-a-string": "14ad84c0848ed4b56509655e9b359085fd2db316920eea4dfdec746dfe4a0f08",
+        "error-value-not-in-reference-data": "2b1d4250851f7a8db63429ab1197f20cb73164bdd6c90b58bb22a5f0a740bec0"
       }
     },
     "th": {
@@ -1714,7 +1842,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "aedcf32ab72c8218689fbed7d6d9330ede8898a5a3bd9f97a74e44ddf8e08705",
         "msg-translation-reason-userModifiedReferenceValue": "ab678aac7d01a41543dddb7648655cf5c22172b689962b54605d0c8561db4b44",
         "msg-translation-reason-missingOutputKey": "301c2135d8baf7fd9ee3f1abaf7ab0363f1d680e2d96b154aaade66177c4c478",
-        "msg-translation-reason-missingOutputValueHash": "fe6923765b3044c4f13012a397ad8cd47ff6b8e9479ade300ebfed0f8c66e753"
+        "msg-translation-reason-missingOutputValueHash": "fe6923765b3044c4f13012a397ad8cd47ff6b8e9479ade300ebfed0f8c66e753",
+        "error-value-not-a-string": "d0195676f90931761e5f3f98d86ef1f97121e3f19ba8f62bb63bb19e0813edd1",
+        "error-value-not-in-reference-data": "fa7d576daeda4866871079b588a44a51491c1253c72dceebaee58b721bd00434"
       }
     },
     "tzm-Latn-": {
@@ -1740,7 +1870,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "b6c7d82075295d3e25ffc381f6dbcae397a9d263714b5273e5d2c11028a78a8d",
         "msg-translation-reason-userModifiedReferenceValue": "0670b127a37433b435d2c40acacfa6c0a53d1aaef6d2605f6420d76433d4ad7f",
         "msg-translation-reason-missingOutputKey": "de6883954eaff82f4e65816b478b5438537f25244d76fa8e391b9ddff52fa5f0",
-        "msg-translation-reason-missingOutputValueHash": "7ae36b0a1ad7620b54712aad742434e53927256248b117147582890764a96b0d"
+        "msg-translation-reason-missingOutputValueHash": "7ae36b0a1ad7620b54712aad742434e53927256248b117147582890764a96b0d",
+        "error-value-not-a-string": "226fb036a497aa7b4ba04c2cf8a26fc4ae17e2360b51c1c778d0c14d9b7ee346",
+        "error-value-not-in-reference-data": "237dee4e2ca9de8976356ac6f8164c7505edb0621d752d4b3a5285bf08eed9e3"
       }
     },
     "uk": {
@@ -1766,7 +1898,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "ad8f86626564893a0b2e2f58e1d345e28437a9af6ee9ef6ab86a2fdc6e5b736a",
         "msg-translation-reason-userModifiedReferenceValue": "ab9e0bfff39c739c45acf79d38913860e266da2ed70b492935f365a2b1eb3ccf",
         "msg-translation-reason-missingOutputKey": "277bf17ee6075db4aba344a5acc0d472e56eebff0b6be7747ac515b3f162cd5e",
-        "msg-translation-reason-missingOutputValueHash": "33e64b13592e99d80e1258f08571b0d048c35857e661ff78480167ead1e167fd"
+        "msg-translation-reason-missingOutputValueHash": "33e64b13592e99d80e1258f08571b0d048c35857e661ff78480167ead1e167fd",
+        "error-value-not-a-string": "7daffbdbf501af00051d889d611862f5dd0dc6134a91341b819ea165d9b35d51",
+        "error-value-not-in-reference-data": "b6038c6c8a99fec44f3c148338567d793c7c66febec2d5b4b33c840f43a523ac"
       }
     },
     "vi": {
@@ -1792,7 +1926,9 @@
         "msg-translation-reason-userMissingReferenceValueHash": "6a3042018f12a8c9905946fab64569cc3447b32ca730466621b97ec97375bb44",
         "msg-translation-reason-userModifiedReferenceValue": "6442c32917111fe77032a6ec348213932eca9f0a0e3ed728d097138f3c56216e",
         "msg-translation-reason-missingOutputKey": "637036fbad345d5b9dc5567ad9525ccf57f727baa1cd4054abc4e17b8822b13c",
-        "msg-translation-reason-missingOutputValueHash": "3ef7867dd9fd5fcab26e6fb063ff3d9c38b300e2f0f350f0a08dc9e54df0acc7"
+        "msg-translation-reason-missingOutputValueHash": "3ef7867dd9fd5fcab26e6fb063ff3d9c38b300e2f0f350f0a08dc9e54df0acc7",
+        "error-value-not-a-string": "548a811afef766319b17d78ab33c027abae962a50320e3b799062a4051034168",
+        "error-value-not-in-reference-data": "eec7d3bdeec9590d12ac28247e0dc0c05b12a62993b8dda92b60cf5201b784bf"
       }
     },
     "zh-SG": {
@@ -1838,7 +1974,9 @@
         "msg-translation-reason-userModifiedReferenceValue": "9a6b4b5aa797eeb6cda8e32cc4de105ff68aa5c6dd5d0a767a15151391579018",
         "msg-translation-reason-missingOutputKey": "ef4dc613b89d787366a49b755ff37b889fd610cd77decc14021a8868ff357fad",
         "msg-translation-reason-missingOutputValueHash": "82527c68fecaaf09092819fa750090f0cc50d5c4d1ed01b7342d3738224a1d95",
-        "msg-translation-reason-outputFileDidNotExist": "045906c9c10f7ded517f893d76cea1c6a8f94fe3c7a2362e8051f6d1a334033a"
+        "msg-translation-reason-outputFileDidNotExist": "045906c9c10f7ded517f893d76cea1c6a8f94fe3c7a2362e8051f6d1a334033a",
+        "error-value-not-a-string": "edbc5e0ebdffa1c452394f09df6327643dd05a8688a48da439aa9877a44960f6",
+        "error-value-not-in-reference-data": "9de1a460d3107a0973aa8f836361af7f1b35fb9c6f2f2ea5dd838aab621409b5"
       }
     },
     "zh-Hant": {
@@ -1864,9 +2002,11 @@
         "msg-translation-reason-userModifiedReferenceValue": "7062f8624491ec52b521e52333b5e6856cdb2cdd030fa3a77059fdcefcd4e1c2",
         "msg-translation-reason-missingOutputKey": "2a456dabfc344c3cd370adb86774c9f891412344dbfa5a7ea7564b3009632420",
         "msg-translation-reason-missingOutputValueHash": "a125e7d75250864509d30bbdaa92e9064c61e0944b76759281e2065da425713f",
-        "msg-translation-reason-outputFileDidNotExist": "7c44afa57262076c92f763d11111d4b48fe89914edfe3e305f1ecae8963a1b77"
+        "msg-translation-reason-outputFileDidNotExist": "7c44afa57262076c92f763d11111d4b48fe89914edfe3e305f1ecae8963a1b77",
+        "error-value-not-a-string": "4c310e3743c557e5f741396ef1c3278f03aa3bf88254aee2f5e164399897b6a1",
+        "error-value-not-in-reference-data": "cdd87aa3fcb40086dbdcae370fbdf48bc1e426bc537bc85642bccd687015735f"
       }
     }
   },
-  "lastRun": "2025-04-14T18:40:59.075Z"
+  "lastRun": "2025-04-14T21:37:51.627Z"
 }

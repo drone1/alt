@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "কোনো ৰেফাৰেন্স হেচ্‌ পোৱা নগ'ল",
   "msg-translation-reason-userModifiedReferenceValue": "ব্যৱহাৰকাৰীয়ে সন্দৰ্ভ ষ্ট্ৰিং পৰিৱৰ্তন কৰিছে",
   "msg-translation-reason-missingOutputKey": "অস্তিত্বৰ থকা অনুবাদ পোৱা নগ'ল",
-  "msg-translation-reason-missingOutputValueHash": "নো হেছ ফাউণ্ড ইন কেচ ফাইল"
+  "msg-translation-reason-missingOutputValueHash": "নো হেছ ফাউণ্ড ইন কেচ ফাইল",
+  "error-value-not-a-string": "প্ৰাসঙ্গিক কী \"%%key%%\" ৰ মান আছিল \"%%type%%\"। এটা ছ্ট্ৰিং আশা কৰা হৈছিল! বাদ দি আগুৱাই যাওঁ...",
+  "error-value-not-in-reference-data": "\"%%key%%\" চাবি তথ্যসূত্র ফাইলত নাছিল"
 }

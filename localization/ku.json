@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Hîç pêhejmara referansê nehat dîtin",
   "msg-translation-reason-userModifiedReferenceValue": "Bikaranvan jora riste ya referans guherand",
   "msg-translation-reason-missingOutputKey": "Wergera heyî nehat dîtin",
-  "msg-translation-reason-missingOutputValueHash": "Hîç hash di pelê cache de nehat dîtin"
+  "msg-translation-reason-missingOutputValueHash": "Hîç hash di pelê cache de nehat dîtin",
+  "error-value-not-a-string": "Nirxa ji bo kîlîda referansê \"%%key%%\" \"%%type%%\" bû. String bûyîna tê xwestin! Vedigerînin...",
+  "error-value-not-in-reference-data": "Kilîd \"%%key%%\" di pelê referansê de nebû"
 }

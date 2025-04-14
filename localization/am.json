@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "ምንም የማጣቀሻ ሃሽ አልተገኘም",
   "msg-translation-reason-userModifiedReferenceValue": "ተጠቃሚው የማጣቀሻ ሕብረቁምፊን አሻሽሏል",
   "msg-translation-reason-missingOutputKey": "ምንም የነበረ ትርጉም አልተገኘም",
-  "msg-translation-reason-missingOutputValueHash": "ከመከማቻ ፋይሉ ውስጥ ምንም ሃሽ አልተገኘም"
+  "msg-translation-reason-missingOutputValueHash": "ከመከማቻ ፋይሉ ውስጥ ምንም ሃሽ አልተገኘም",
+  "error-value-not-a-string": "ለማጣቀሻ ቁልፍ \"%%key%%\" የተሰጠው እሴት \"%%type%%\" ነበር። የተጠበቀ የጽሑፍ ነበረ! ተዘንጋቸው...",
+  "error-value-not-in-reference-data": "ቁልፍ \"%%key%%\" በማጣቀሻ ፋይል ውስጥ አልነበረም"
 }

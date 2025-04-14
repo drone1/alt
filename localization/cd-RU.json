@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Хэш-сумма не найдена",
   "msg-translation-reason-userModifiedReferenceValue": "Строка ссылки, измененная пользователем",
   "msg-translation-reason-missingOutputKey": "Существующий перевод не найден",
-  "msg-translation-reason-missingOutputValueHash": "Хэш не найден в файле кэша"
+  "msg-translation-reason-missingOutputValueHash": "Хэш не найден в файле кэша",
+  "error-value-not-a-string": "Для ключа ссылки \"%%key%%\" было значение \"%%type%%\". Ожидалась строка! Пропускаем...",
+  "error-value-not-in-reference-data": "Ключ \"%%key%%\" отсутствовал в файле справочника"
 }

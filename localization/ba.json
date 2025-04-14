@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nikin haʃ nupuun a za",
   "msg-translation-reason-userModifiedReferenceValue": "Looydii bedreensii string",
   "msg-translation-reason-missingOutputKey": "Ko ba si ìtumọ tí a ti ṣelọ́lẹ́",
-  "msg-translation-reason-missingOutputValueHash": "Нет хэша в файле кэша"
+  "msg-translation-reason-missingOutputValueHash": "Нет хэша в файле кэша",
+  "error-value-not-a-string": "Referentni ključ \"%%key%%\" je imao vrijednost \"%%type%%\". Očekivan je string! Preskače se...",
+  "error-value-not-in-reference-data": "Ključ \"%%key%%\" nije postojao u referentnoj datoteci"
 }

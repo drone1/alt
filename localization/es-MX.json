@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "No se encontró el hash de referencia",
   "msg-translation-reason-userModifiedReferenceValue": "Usuario modificó cadena de referencia",
   "msg-translation-reason-missingOutputKey": "No se encontró ninguna traducción existente",
-  "msg-translation-reason-missingOutputValueHash": "No se encontró hash en archivo de caché"
+  "msg-translation-reason-missingOutputValueHash": "No se encontró hash en archivo de caché",
+  "error-value-not-a-string": "Valor para la clave de referencia \"%%key%%\" fue \"%%type%%\". ¡Se esperaba una cadena! Omitiendo...",
+  "error-value-not-in-reference-data": "La clave \"%%key%%\" no existía en el archivo de referencia."
 }

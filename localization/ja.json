@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "参照ハッシュが見つかりません",
   "msg-translation-reason-userModifiedReferenceValue": "ユーザー変更参照文字列",
   "msg-translation-reason-missingOutputKey": "既存の翻訳が見つかりません",
-  "msg-translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした"
+  "msg-translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした",
+  "error-value-not-a-string": "参照キー「%%key%%」の値は「%%type%%」でした。文字列を期待していました！スキップします...",
+  "error-value-not-in-reference-data": "参照ファイルに「%%key%%」キーが存在しませんでした。"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userModifiedReferenceValue": "用戶修改了參考字串",
   "msg-translation-reason-missingOutputKey": "找不到現有翻譯",
   "msg-translation-reason-missingOutputValueHash": "快取檔案中找不到雜湊值",
-  "msg-translation-reason-outputFileDidNotExist": "輸出檔案 %%outputFile%% 不存在"
+  "msg-translation-reason-outputFileDidNotExist": "輸出檔案 %%outputFile%% 不存在",
+  "error-value-not-a-string": "參考鍵 \"%%key%%\" 的值是 \"%%type%%\"。預期為字符串！正在跳過...",
+  "error-value-not-in-reference-data": "鍵 \"%%key%%\" 在參考檔案中不存在"
 }

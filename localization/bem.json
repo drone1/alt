@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Takwaba hash yakusuminina yasangilwe",
   "msg-translation-reason-userModifiedReferenceValue": "User modified reference string",
   "msg-translation-reason-missingOutputKey": "Takwaba bakulula amusango aya bonawamwa",
-  "msg-translation-reason-missingOutputValueHash": "Tapali hashi mu ma failo ya kulondola"
+  "msg-translation-reason-missingOutputValueHash": "Tapali hashi mu ma failo ya kulondola",
+  "error-value-not-a-string": "Ubwina bwa kiyi yopimira \"%%key%%\" bwali \"%%type%%\". Pali kuyembekezera ulusi! Tukuleka...",
+  "error-value-not-in-reference-data": "Ukufungulula \"%%key%%\" kulibe mu fayilo ya ukusambilila"
 }

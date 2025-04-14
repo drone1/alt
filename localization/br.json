@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Goude hash daveenn ebet",
   "msg-translation-reason-userModifiedReferenceValue": "Refe rensia mweo-ke i bin modifié ó jẹnia",
   "msg-translation-reason-missingOutputKey": "Nenhuma tradução existente encontrada",
-  "msg-translation-reason-missingOutputValueHash": "Nenhum hash encontrado no arquivo de cache"
+  "msg-translation-reason-missingOutputValueHash": "Nenhum hash encontrado no arquivo de cache",
+  "error-value-not-a-string": "Valor para a chave de referência \"%%key%%\" era \"%%type%%\". Esperava-se uma string! Ignorando...",
+  "error-value-not-in-reference-data": "A chave \"%%key%%\" não existia no arquivo de referência."
 }

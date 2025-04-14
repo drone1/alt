@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Tɛ'ɛ wuni e kpaar yɛ ki",
   "msg-translation-reason-userModifiedReferenceValue": "Muvavi uvahindili muradanho ya malemelelo",
   "msg-translation-reason-missingOutputKey": "Kuupi tafsiri iliyopo",
-  "msg-translation-reason-missingOutputValueHash": "Hakuna hashi iliyopatikana kwenye faili ya akiba"
+  "msg-translation-reason-missingOutputValueHash": "Hakuna hashi iliyopatikana kwenye faili ya akiba",
+  "error-value-not-a-string": "Thamani ya ufunguo wa rejea \"%%key%%\" ilikuwa \"%%type%%\". Ilitarajiwa kuwa mstari! Inarukwa...",
+  "error-value-not-in-reference-data": "Funguo \"%%key%%\" haikupatikana kwenye faili ya marejeo"
 }

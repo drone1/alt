@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Võrdlushäshi ei leitud",
   "msg-translation-reason-userModifiedReferenceValue": "Kasutaja muudetud viitesõne",
   "msg-translation-reason-missingOutputKey": "Olemasolevat tõlget ei leitud",
-  "msg-translation-reason-missingOutputValueHash": "Räsikoodi ei leitud vahemälufailist"
+  "msg-translation-reason-missingOutputValueHash": "Räsikoodi ei leitud vahemälufailist",
+  "error-value-not-a-string": "Viitevõtme \"%%key%%\" väärtus oli \"%%type%%\". Oodati stringi! Jäetakse vahele...",
+  "error-value-not-in-reference-data": "Võti \"%%key%%\" ei eksisteerinud viitefailis"
 }

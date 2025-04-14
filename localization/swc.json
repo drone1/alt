@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Hakuna hashi ya kumbukumbu iliyopatikana",
   "msg-translation-reason-userModifiedReferenceValue": "Mtumiaji amebadilisha neno la marejeleo",
   "msg-translation-reason-missingOutputKey": "Hakuna tafsiri iliyo po",
-  "msg-translation-reason-missingOutputValueHash": "Hakuna hash iliyopatikana kwa kitabu cha kashe"
+  "msg-translation-reason-missingOutputValueHash": "Hakuna hash iliyopatikana kwa kitabu cha kashe",
+  "error-value-not-a-string": "Thamani ya ufunguo wa rejea \"%%key%%\" ilikuwa \"%%type%%\". Ilitarajiwa kuwa mstari! Inarukwa...",
+  "error-value-not-in-reference-data": "Ufunguo \"%%key%%\" haupo katika faili ya marejeo"
 }

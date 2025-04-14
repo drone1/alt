@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Referans heş tapılmadı",
   "msg-translation-reason-userModifiedReferenceValue": "İstifadəçi istinad sətrini dəyişdi",
   "msg-translation-reason-missingOutputKey": "Mövcud tərcümə tapılmadı",
-  "msg-translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı"
+  "msg-translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı",
+  "error-value-not-a-string": "Referans açarı \"%%key%%\" üçün dəyər \"%%type%%\" idi. Gözlənilən mətn idi! Atlıyırıq...",
+  "error-value-not-in-reference-data": "\"%%key%%\" açarı istinad faylında mövcud deyildi"
 }

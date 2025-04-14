@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Wɔ anhu hash biara a wɔde bɛyɛ reference",
   "msg-translation-reason-userModifiedReferenceValue": "Utente ha modificato la stringa di riferimento",
   "msg-translation-reason-missingOutputKey": "Yeɛ wo nkranneɛ bi nni hɔ",
-  "msg-translation-reason-missingOutputValueHash": "Èbí kankan kò sí nínú fáìlì àkójọpọ̀"
+  "msg-translation-reason-missingOutputValueHash": "Èbí kankan kò sí nínú fáìlì àkójọpọ̀",
+  "error-value-not-a-string": "Valɛ fɔ rɛfɛrɛns kɛ \"%%key%%\" ɛdi \"%%type%%\". A hɔpɛ mɔ string! A na bípa...",
+  "error-value-not-in-reference-data": "Bii \"%%key%%\" soŋ naa na faala na faayl na lonki"
 }

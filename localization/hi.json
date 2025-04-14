@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "कोई संदर्भ हैश नहीं मिला",
   "msg-translation-reason-userModifiedReferenceValue": "उपयोगकर्ता द्वारा संशोधित संदर्भ स्ट्रिंग",
   "msg-translation-reason-missingOutputKey": "कोई मौजूदा अनुवाद नहीं मिला",
-  "msg-translation-reason-missingOutputValueHash": "कैश फ़ाइल में कोई हैश नहीं मिला"
+  "msg-translation-reason-missingOutputValueHash": "कैश फ़ाइल में कोई हैश नहीं मिला",
+  "error-value-not-a-string": "संदर्भ कुंजी \"%%key%%\" का मान \"%%type%%\" था। एक स्ट्रिंग की अपेक्षा थी! छोड़ रहे हैं...",
+  "error-value-not-in-reference-data": "\"%%key%%\" कुंजी संदर्भ फ़ाइल में मौजूद नहीं थी"
 }

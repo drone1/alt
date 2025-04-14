@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nije pronađena referentna hash vrijednost",
   "msg-translation-reason-userModifiedReferenceValue": "Korisnik je modificirao referentni niz",
   "msg-translation-reason-missingOutputKey": "Nije pronađen postojeći prijevod",
-  "msg-translation-reason-missingOutputValueHash": "Nema pronađene hash vrijednosti u datoteci predmemorije"
+  "msg-translation-reason-missingOutputValueHash": "Nema pronađene hash vrijednosti u datoteci predmemorije",
+  "error-value-not-a-string": "Vrijednost za referentni ključ \"%%key%%\" bila je \"%%type%%\". Očekivan je niz! Preskače se...",
+  "error-value-not-in-reference-data": "Ključ \"%%key%%\" nije postojao u referentnoj datoteci"
 }

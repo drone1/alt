@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Gũtirĩ mũthingatho wa kũrũmanĩria wondetwe",
   "msg-translation-reason-userModifiedReferenceValue": "Mutumia atuithitie ndeto ya uthimio",
   "msg-translation-reason-missingOutputKey": "Gutiri mathaura makoretwe",
-  "msg-translation-reason-missingOutputValueHash": "Hatina hash ndonekete uthaonire thĩinĩ wa cache file"
+  "msg-translation-reason-missingOutputValueHash": "Hatina hash ndonekete uthaonire thĩinĩ wa cache file",
+  "error-value-not-a-string": "Uru maka isi ihe odide \"%%key%%\" bụ \"%%type%%\". A tụrụ anya na ọ ga-abụ ederede! Ana-ewepụ...",
+  "error-value-not-in-reference-data": "Igodo \"%%key%%\" adịghị na faịlụ ntụaka"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Không tìm thấy mã hash tham chiếu",
   "msg-translation-reason-userModifiedReferenceValue": "Người dùng đã sửa đổi chuỗi tham chiếu",
   "msg-translation-reason-missingOutputKey": "Không tìm thấy bản dịch hiện có",
-  "msg-translation-reason-missingOutputValueHash": "Không tìm thấy hash trong tệp cache"
+  "msg-translation-reason-missingOutputValueHash": "Không tìm thấy hash trong tệp cache",
+  "error-value-not-a-string": "Giá trị cho khóa tham chiếu \"%%key%%\" là \"%%type%%\". Mong đợi một chuỗi! Đang bỏ qua...",
+  "error-value-not-in-reference-data": "Khóa \"%%key%%\" không tồn tại trong tệp tham khảo"
 }

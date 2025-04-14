@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ur ttafn ara inaw n ireffern",
   "msg-translation-reason-userModifiedReferenceValue": "Asqdac ibddl asuɣl n uznbaḍ",
   "msg-translation-reason-missingOutputKey": "Ur yuffi tafssart i tlla yaḍn",
-  "msg-translation-reason-missingOutputValueHash": "Ⲩⲣ ⵉⵍⵍⵉ ⵃⴰⵛⵀ ⴳ ⵓⵙⴷⴰⵡ ⵏ ⵜⴽⵛⵛⵓⵎⵜ"
+  "msg-translation-reason-missingOutputValueHash": "Ⲩⲣ ⵉⵍⵍⵉ ⵃⴰⵛⵀ ⴳ ⵓⵙⴷⴰⵡ ⵏ ⵜⴽⵛⵛⵓⵎⵜ",
+  "error-value-not-a-string": "Azday i usnulfu n umatar \"%%key%%\" d \"%%type%%\". Tettu-d kra n usnulfu! Ad yili...",
+  "error-value-not-in-reference-data": "Tasɣunt \"%%key%%\" ur tettuɣal ara deg ufaylu n umeskar"
 }

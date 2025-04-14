@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "មិនមានរកឃើញ hash សម្រាប់ជាឯកសារយោង",
   "msg-translation-reason-userModifiedReferenceValue": "អ្នកប្រើបានកែប្រែឃ្លារេហ្វឺរង់",
   "msg-translation-reason-missingOutputKey": "មិនមានការបកប្រែដែលមានស្រាប់ត្រូវបានរកឃើញទេ",
-  "msg-translation-reason-missingOutputValueHash": "មិនបានរកឃើញ hash នៅក្នុងឯកសារឃ្លាំង"
+  "msg-translation-reason-missingOutputValueHash": "មិនបានរកឃើញ hash នៅក្នុងឯកសារឃ្លាំង",
+  "error-value-not-a-string": "តម្លៃសម្រាប់កូនសោយោង \"%%key%%\" គឺ \"%%type%%\"។ បានរំពឹងថាជាអក្សរសម្រាប់! រំលង...",
+  "error-value-not-in-reference-data": "លេខកូដ \"%%key%%\" មិនមាននៅក្នុងឯកសារយោង។"
 }

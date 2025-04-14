@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Հղում չի գտնվել",
   "msg-translation-reason-userModifiedReferenceValue": "Օգտատերը փոփոխեց հղման տողը",
   "msg-translation-reason-missingOutputKey": "Գոյություն ունեցող թարգմանություն չի գտնվել",
-  "msg-translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել"
+  "msg-translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել",
+  "error-value-not-a-string": "Տեղեկատվության բանալիության \"%%key%%\" արժեքը \"%%type%%\" էր։ Սպասվում էր տող։ Բաց թողնվում է...",
+  "error-value-not-in-reference-data": "Բանալին \"%%key%%\" չկար հղումների ֆայլում"
 }

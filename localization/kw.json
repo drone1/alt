@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Nyns yw kevys has gorhemmyn veth",
   "msg-translation-reason-userModifiedReferenceValue": "Linen restrans kenedhlek gans an devnydhyer",
   "msg-translation-reason-missingOutputKey": "Nyns eus scantlyn ambos cavys",
-  "msg-translation-reason-missingOutputValueHash": "Nyns eus kevren (hash) kevys y'n restren goffa"
+  "msg-translation-reason-missingOutputValueHash": "Nyns eus kevren (hash) kevys y'n restren goffa",
+  "error-value-not-a-string": "Valyow rag kewsel anki \"%%key%%\" o \"%%type%%\". Gorrhemmyn a strîng a vynnys! Ow tremenya...",
+  "error-value-not-in-reference-data": "Ankewer \"%%key%%\" ny wrug esista yn restren arfer"
 }

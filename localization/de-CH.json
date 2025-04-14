@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Kein Referenzhash gefunden",
   "msg-translation-reason-userModifiedReferenceValue": "Referenzstring vom Benutzer geändert",
   "msg-translation-reason-missingOutputKey": "Keine bestehende Übersetzung gefunden",
-  "msg-translation-reason-missingOutputValueHash": "Kein Hash in der Cache-Datei gefunden"
+  "msg-translation-reason-missingOutputValueHash": "Kein Hash in der Cache-Datei gefunden",
+  "error-value-not-a-string": "Wert für Referenzschlüssel \"%%key%%\" war \"%%type%%\". Ein String wurde erwartet! Überspringe...",
+  "error-value-not-in-reference-data": "Der Schlüssel \"%%key%%\" existierte nicht in der Referenzdatei."
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Нѣтъ хеш-кода пѡ ссꙑлцѣ",
   "msg-translation-reason-userModifiedReferenceValue": "Оужичьникъ измѣни строкоу съсылъкы",
   "msg-translation-reason-missingOutputKey": "Не обнаружено существующего перевода",
-  "msg-translation-reason-missingOutputValueHash": "Не ѡбрѣтесѧ хашь въ кашевѣмь фаилѣ"
+  "msg-translation-reason-missingOutputValueHash": "Не ѡбрѣтесѧ хашь въ кашевѣмь фаилѣ",
+  "error-value-not-a-string": "Въздохъ за справочьнаго ключа \"%%key%%\" бысть \"%%type%%\". Очековахомъ строкꙑ! Прескачамъ...",
+  "error-value-not-in-reference-data": "Ключь \"%%key%%\" не бысть въ списоцѣ референтныхъ файлъ"
 }

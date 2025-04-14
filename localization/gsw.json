@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Ke Referenz-Häsch gfunde",
   "msg-translation-reason-userModifiedReferenceValue": "Benutzer hät Referenztext gänderet",
   "msg-translation-reason-missingOutputKey": "Kei bestehendi Öbersätzig gfonde",
-  "msg-translation-reason-missingOutputValueHash": "Ke Hash im Cache-File gfunde"
+  "msg-translation-reason-missingOutputValueHash": "Ke Hash im Cache-File gfunde",
+  "error-value-not-a-string": "Wärt für Referänzschlüssel \"%%key%%\" isch \"%%type%%\" gsi. Es hät en String erwartet! Wird übersprunge...",
+  "error-value-not-in-reference-data": "Dr Schlüssel \"%%key%%\" isch nit im Referänzedatei vorhande gsi."
 }

@@ -1,7 +1,7 @@
 {
-  "msg-nothing-to-do": "Naafi gafibiiee",
-  "msg-finished-with-errors": "Ɛɔˈɔʃɛ ʊɪð %%errorsEncountered%% ɛɹɔ%%s%%",
-  "msg-translating": "Fanseñgiratoiŋ...",
+  "msg-nothing-to-do": "Mbaayy akukkay",
+  "msg-finished-with-errors": "Dhamme %%errorsEncountered%% qalad%%s%%",
+  "msg-translating": "Turjumaya...",
   "msg-translating-key": "Haawa %%key%%",
   "msg-preparing-endpoint-config": "Paŋfan oketjur endpoint konfigureshan...",
   "msg-hitting-provider-endpoint": "Bheeşin %%providerName%% endpoint%%attemptStr%%...",
@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Gomaʻ geŋenoʻa hash ŋo ciiduŋ",
   "msg-translation-reason-userModifiedReferenceValue": "Kaasalaŋga naawo string uɗɗisoojo",
   "msg-translation-reason-missingOutputKey": "Han juba fassirka jira la helay",
-  "msg-translation-reason-missingOutputValueHash": "Payi kɛsh fayl nɔ hosh fɔn na i"
+  "msg-translation-reason-missingOutputValueHash": "Payi kɛsh fayl nɔ hosh fɔn na i",
+  "error-value-not-a-string": "Qiixxixxik kah tanneekah diidah \"%%key%%\" naanik \"%%type%%\". Ummallee keezi! Faarri...",
+  "error-value-not-in-reference-data": "Teeh \"%%key%%\" did not exist in reference file"
 }

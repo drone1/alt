@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Tihariho ekikwasiraine ekijwaro kyashobire kuboneka",
   "msg-translation-reason-userModifiedReferenceValue": "Omukozesa ahaindwiire ebigambo by'okureeba",
   "msg-translation-reason-missingOutputKey": "Tihariho obuhindure bwabanzire",
-  "msg-translation-reason-missingOutputValueHash": "Tiharimu omu failo za sito"
+  "msg-translation-reason-missingOutputValueHash": "Tiharimu omu failo za sito",
+  "error-value-not-a-string": "Eki ky'okureeba \"%%key%%\" kiri \"%%type%%\". Eki ky'okushaba kiri eki ky'okushoma! Tukahurira...",
+  "error-value-not-in-reference-data": "Ekikorwa \"%%key%%\" tikikabaho mu fayiro erikwataho"
 }

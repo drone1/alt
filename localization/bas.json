@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Masad pahamak kadiksyunaryo ay nasumpungan",
   "msg-translation-reason-userModifiedReferenceValue": "User apa moddyfy reference string",
   "msg-translation-reason-missingOutputKey": "No existing translation found",
-  "msg-translation-reason-missingOutputValueHash": "Babaigba hash i hukuba a bebi cache file"
+  "msg-translation-reason-missingOutputValueHash": "Babaigba hash i hukuba a bebi cache file",
+  "error-value-not-a-string": "Valore per la chiave di riferimento \"%%key%%\" era \"%%type%%\". Ci si aspettava una stringa! Saltando...",
+  "error-value-not-in-reference-data": "Ključ \"%%key%%\" nije postojao u referentnoj datoteci"
 }

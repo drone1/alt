@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Не е намерен референтен хеш",
   "msg-translation-reason-userModifiedReferenceValue": "Потребителят промени референтния низ",
   "msg-translation-reason-missingOutputKey": "Няма намерен съществуващ превод",
-  "msg-translation-reason-missingOutputValueHash": "Не е намерен хеш във файла за кеширане"
+  "msg-translation-reason-missingOutputValueHash": "Не е намерен хеш във файла за кеширане",
+  "error-value-not-a-string": "Стойността за референтен ключ \"%%key%%\" беше \"%%type%%\". Очакваше се низ! Пропускане...",
+  "error-value-not-in-reference-data": "Ключ \"%%key%%\" не съществува в референтния файл."
 }

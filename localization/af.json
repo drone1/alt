@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Geen verwysingshuts gevind",
   "msg-translation-reason-userModifiedReferenceValue": "Gebruiker gewysigde verwysingstring",
   "msg-translation-reason-missingOutputKey": "Geen bestaande vertaling gevind nie",
-  "msg-translation-reason-missingOutputValueHash": "Geen hutsmerker in kaslêer gevind nie"
+  "msg-translation-reason-missingOutputValueHash": "Geen hutsmerker in kaslêer gevind nie",
+  "error-value-not-a-string": "Waarde vir verwysingsleutel \"%%key%%\" was \"%%type%%\". 'n String is verwag! Oorslaan...",
+  "error-value-not-in-reference-data": "Sleutel \"%%key%%\" het nie in verwysingslêer bestaan nie."
 }

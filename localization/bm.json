@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Tiada cincangan rujukan ditemui",
   "msg-translation-reason-userModifiedReferenceValue": "Pengguna mengubah suai rentetan rujukan",
   "msg-translation-reason-missingOutputKey": "Tiada terjemahan sedia ada dijumpai",
-  "msg-translation-reason-missingOutputValueHash": "Tiada hash dijumpai dalam fail cache"
+  "msg-translation-reason-missingOutputValueHash": "Tiada hash dijumpai dalam fail cache",
+  "error-value-not-a-string": "Nilai untuk kunci rujukan \"%%key%%\" adalah \"%%type%%\". Dijangka sebuah rentetan! Melangkau...",
+  "error-value-not-in-reference-data": "Kunci \"%%key%%\" tidak wujud dalam fail rujukan"
 }

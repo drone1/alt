@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Aucun hachage de référence trouvé",
   "msg-translation-reason-userModifiedReferenceValue": "L'utilisateur a modifié la chaîne de référence",
   "msg-translation-reason-missingOutputKey": "Aucune traduction existante trouvée",
-  "msg-translation-reason-missingOutputValueHash": "Aucun hachage trouvé dans le fichier de cache"
+  "msg-translation-reason-missingOutputValueHash": "Aucun hachage trouvé dans le fichier de cache",
+  "error-value-not-a-string": "Valeur pour la clé de référence \"%%key%%\" était \"%%type%%\". Une chaîne était attendue ! Ignoré...",
+  "error-value-not-in-reference-data": "La clé \"%%key%%\" n'existait pas dans le fichier de référence."
 }

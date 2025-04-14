@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "འགྲོ་གཞི་མ་རྙེད་པ།",
   "msg-translation-reason-userModifiedReferenceValue": "མཁོ་མཁན་གྱིས་ཞུ་ཚིག་གི་རིམ་པ་བསྒྱུར་བཅོས་བྱས་ཡོད།",
   "msg-translation-reason-missingOutputKey": "མཐུན་སྦྱོར་ཡོད་པའི་ཡིག་སྒྱུར་མ་རྙེད།",
-  "msg-translation-reason-missingOutputValueHash": "ཁེཆེ་ཡིག་སྣོད་ནང་ལུ་ཧཱཤི་མ་རྙེད།"
+  "msg-translation-reason-missingOutputValueHash": "ཁེཆེ་ཡིག་སྣོད་ནང་ལུ་ཧཱཤི་མ་རྙེད།",
+  "error-value-not-a-string": "གནས་སྐོར་ལྡེ་མིག་གི་བརྡ་བཟོ་\"%%key%%\"ལུ་བརྡ་བཟོ་ནི་\"%%type%%\"ཡིན། མི་འདོད་པའི་ཚིག་ཡིག་གི་སྐོར་ཡིན། སླར་ལྟ་བཤོལ་བཞིན།",
+  "error-value-not-in-reference-data": "ཨང་ཀྱི་གསལ་བྱ་ \"%%key%%\" འདི་མིག་སྣོན་ཡིག་ཆ་འགྲེལ་ནང་མེད།"
 }

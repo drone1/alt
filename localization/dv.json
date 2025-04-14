@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "ރެފަރެންސް ހޭޝްއެއް ލިބިފައިނުވޭ",
   "msg-translation-reason-userModifiedReferenceValue": "ބޭނުންކުރާ ފަރާތުން ބަދަލުކޮށްފައިވާ ރިފަރެންސް ލިޔުން",
   "msg-translation-reason-missingOutputKey": "ކުރިން ކުރެވިފައިވާ ތަރުޖަމާއެއް ނުފެނުނެވެ",
-  "msg-translation-reason-missingOutputValueHash": "ކޭޝް ފައިލްގައި ހޭޝްއެއް ފެނިފައެއް ނުވޭ"
+  "msg-translation-reason-missingOutputValueHash": "ކޭޝް ފައިލްގައި ހޭޝްއެއް ފެނިފައެއް ނުވޭ",
+  "error-value-not-a-string": "އިންތިޚާބު ކީއަށް \"%%key%%\" އަށްގެ އަދި \"%%type%%\" އަށްގެ އަދި އެއްވެސް އެއްޗެއް އަންނަންވީތަ! އެއްޗެއް އަންނަންވީތަ...",
+  "error-value-not-in-reference-data": "\"%%key%%\" ކީ ރެފަރަންސް ފައިލުގައި ނެތް"
 }

@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "কোনো রেফারেন্স হ্যাশ পাওয়া যায়নি",
   "msg-translation-reason-userModifiedReferenceValue": "Юзэр/карыстальнік змяніў эталонны радок",
   "msg-translation-reason-missingOutputKey": "কোন বিদ্যমান অনুবাদ পাওয়া যায়নি",
-  "msg-translation-reason-missingOutputValueHash": "কোনো হ্যাশ ক্যাশে ফাইলে পাওয়া যায়নি"
+  "msg-translation-reason-missingOutputValueHash": "কোনো হ্যাশ ক্যাশে ফাইলে পাওয়া যায়নি",
+  "error-value-not-a-string": "Значэнне для ключа спасылкі \"%%key%%\" было \"%%type%%\". Чакалася радок! Прапускаем...",
+  "error-value-not-in-reference-data": "Ключ \"%%key%%\" не існаваў у даведніку"
 }

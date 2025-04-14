@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "Хеш-код для сравнения не найден",
   "msg-translation-reason-userModifiedReferenceValue": "Пользователь изменил строку ссылки",
   "msg-translation-reason-missingOutputKey": "Нет существующего перевода",
-  "msg-translation-reason-missingOutputValueHash": "Хеш не найден в файле кеша"
+  "msg-translation-reason-missingOutputValueHash": "Хеш не найден в файле кеша",
+  "error-value-not-a-string": "Значение для ключа ссылки \"%%key%%\" было \"%%type%%\". Ожидалась строка! Пропускаем...",
+  "error-value-not-in-reference-data": "Ключ \"%%key%%\" отсутствовал в эталонном файле"
 }

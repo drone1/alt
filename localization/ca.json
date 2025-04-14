@@ -20,5 +20,7 @@
   "msg-translation-reason-userMissingReferenceValueHash": "No s'ha trobat un valor hash de referència",
   "msg-translation-reason-userModifiedReferenceValue": "L'usuari ha modificat la cadena de referència",
   "msg-translation-reason-missingOutputKey": "No s'ha trobat cap traducció existent",
-  "msg-translation-reason-missingOutputValueHash": "No s'ha trobat cap hash en el fitxer de la cau"
+  "msg-translation-reason-missingOutputValueHash": "No s'ha trobat cap hash en el fitxer de la cau",
+  "error-value-not-a-string": "El valor per a la clau de referència \"%%key%%\" era \"%%type%%\". S'esperava una cadena! S'omet...",
+  "error-value-not-in-reference-data": "La clau \"%%key%%\" no existia en el fitxer de referència."
 }
