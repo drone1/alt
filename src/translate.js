@@ -153,7 +153,7 @@ export async function runTranslation({ appState, options, log }) {
 					suffix: contextSuffix
 				})
 				log.T(`contextKey=${contextKey}`)
-				const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
+				const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[targetLang]?.[key]	// See https://github.com/drone1/alt/issues/1
 				const storedHashForTargetLangAndValue = readOnlyCache.state[targetLang]?.keyHashes?.[key]
 				const refValue = referenceData[key]
 				const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
@@ -398,7 +398,8 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 			listrTask.output = localizeFormatted({ token: 'msg-show-translation-result', data: { key, newValue }, lang: appState.lang, log })
 
 			// Update the hash for the reference key, so we can monitor if the user changed a specific key
-			writableCache.referenceKeyHashes[key] = referenceValueHash
+			writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
+			writableCache.referenceKeyHashes[targetLang][key] = referenceValueHash
 
 			// Update state file every time, in case the user kills the process
 			if (options.realtimeWrites) {
