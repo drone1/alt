@@ -604,14 +604,12 @@ async function translate({
 	log.D(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
 	const result = { translated: null, backoffInterval: 0 }
 
-	const providerName = provider.name()
-
 	if (sourceLang === targetLang) {
 		log.D(`Using reference value since source & target language are the same`)
 		result.translated = text
 	} else {
 		await translateTextViaProvider({
-			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName, outResult: result
+			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName: provider.name(), outResult: result
 		})
 	}
 
