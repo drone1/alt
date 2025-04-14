@@ -486,7 +486,7 @@ async function translateKeyForLanguage({
 		result.translated = true
 		result.newValue = newValue
 	} else {
-		result.error = `Translation was empty; target language=${targetLang}; key=${key}; text=${refValue}`
+		result.error = localizeFormatted({ token: 'error-translation-failed', data: { targetLang, key, refValue }, lang: appState.lang, log })
 	}
 
 	return result
