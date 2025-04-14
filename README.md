@@ -20,9 +20,9 @@ Translates all strings in a reference `.js` file to all target languages using A
 * Loads reference key/value pairs from a reference file 
 * Localizes using AI as needed, writing to a .json file per language
 * App-level context can be specified [`appContextMessage`]
-* Additional context can be given per string [`--contextPrefix`, `--contextSuffix`]
+* Additional context can be specified per string [`--contextPrefix`, `--contextSuffix`]
 * Supports multiple AI providers: Claude, OpenAI [`--provider`]
-* User-modifications to output files are safe
+* User-modifications to output files are safe and will not be overwritten
 * Languages are specified using BCP47 tags
 
 ## Installation
@@ -68,6 +68,10 @@ Sample output:
 ```
 
 Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
+
+## Display language
+ALT CLI itself has been localized so you can use it many languages. For non-English languages, you can set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit 
+an issue or a PR if you'd like to add another language.
 
 ## Rules
 Translation will occur for a given target language & key if any of the following are true:
