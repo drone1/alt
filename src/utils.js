@@ -1,3 +1,6 @@
+import { Buffer } from 'buffer'
+import * as crypto from 'crypto'
+
 export function obj2Str(obj, exclude = null, expandJson = false) {
 	let result = ''
 
@@ -20,16 +23,6 @@ export function obj2Str(obj, exclude = null, expandJson = false) {
 
 export const REPLACESTRINGVARSWITHOBJECTVALUESWARNINGCODE_MISSINGVAR = 0
 export const REPLACESTRINGVARSWITHOBJECTVALUESWARNINGCODE_UNKNOWNVARSPECIFIED = 1
-
-const ReplaceStringVarsWithObjectValuesWarningCodeToStringMap = {
-	[REPLACESTRINGVARSWITHOBJECTVALUESWARNINGCODE_MISSINGVAR]: 'missing variable',
-	[REPLACESTRINGVARSWITHOBJECTVALUESWARNINGCODE_UNKNOWNVARSPECIFIED]: 'unknown var specified'
-}
-
-export function replaceStringVarsWithObjectValuesWarningCodeToString(code) {
-	if (!(code in ReplaceStringVarsWithObjectValuesWarningCodeToStringMap)) throw new Error(`replaceStringVarsWithObjectValues() warning code ${code} does not exist`)
-	return ReplaceStringVarsWithObjectValuesWarningCodeToStringMap[code]
-}
 
 /**
  * Replaces variables in a string (format %%varName%%) with their corresponding values
@@ -72,4 +65,44 @@ export function replaceStringVarsWithObjectValues({format, data, outWarningsArra
 	}
 
 	return result
+}
+
+export function sleep(ms, log) {
+	if (ms === 0) return
+	return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+export function ensureExtension(filename, extension) {
+	if (!extension.startsWith('.')) extension = '.' + extension
+	return filename.endsWith(extension) ? filename : filename + extension
+}
+
+export function unique(array) {
+	return [ ...new Set(array) ]
+}
+
+// Calculate hash of a string
+export function calculateHash(content) {
+	return crypto.createHash('sha256').update(content).digest('hex')
+}
+
+export function normalizeKey(key) {
+	return key.normalize('NFC')
+}
+
+export function normalizeData(data) {
+	if (!data) return null
+	const normalizedData = {}
+	for (const [ key, value ] of Object.entries(data)) {
+		// Force UTF-8 encoding for the key
+		const utf8Key = Buffer.from(key, 'utf8').toString('utf8')
+
+		// Force UTF-8 encoding for string values
+		const utf8Value = typeof value === 'string'
+			? Buffer.from(value, 'utf8').toString('utf8')
+			: value
+
+		normalizedData[normalizeKey(utf8Key)] = utf8Value
+	}
+	return normalizedData
 }

@@ -155,7 +155,7 @@ Commands:
 Environment variables:
   ANTHROPIC_API_KEY                     Your Anthropic API key
   OPENAI_API_KEY                        Your OpenAI API key
-  LANGUAGE                              CLI display language
+  ALT_LANGUAGE                          CLI display language
 ``` 
 
 ## Examples
@@ -201,6 +201,10 @@ alt --config-file config.json
   --target-languages vi,aa
   --keys error-msg,title-hero,button-text-send
 ```
+### Example: ALT's localized display strings
+See `/localization`, which contains a `config.js` file and localization files used for the tool's own display strings.
+
+Generated with `npm run localize-display-strings`
 
 ## Formatting
 If your reference values include formatting information like this:
@@ -232,6 +236,7 @@ You may want to use `--tty` for more useful output.
 ## Next steps
 - Add Google provider.
 - Add support for reference files in JSON format
+- It'd be nice to rely on $LANG in POSIX, but I didn't find a clean and reliable conversion from POSIX to BCP47 when I did a cursory search, which includes edge cases
 - Bug: If a user modifies a reference value, then runs and cancels, then runs again, any language/key values which would have been affected by the change will no longer be modified. The tool needs to detect these types of changes at a higher level than it is currently so that key/values can be deleted for all languages and written to disk, so that they're effectively missing and will have to be re-translated. The state that a reference value changed would be lost across runs of the tool, however, but at least the result would be a fix, with this approach.
 - Tests :]
 
