@@ -102,6 +102,8 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Usage
 ```
+alt [options] [command]
+
 Options:
   -V, --version                         output the version number
   -r, --reference-file <path>           Path to reference JSONC file (default language)
@@ -109,8 +111,7 @@ Options:
                                         'referenceLanguage' config setting
   -p, --provider <name>                 AI provider to use for translations (anthropic,
                                         openai); overrides any 'provider' config setting
-  -o, --output-dir <path>               Output directory for localized files (default:
-                                        "/home/jonl/dev/lightwall")
+  -o, --output-dir <path>               Output directory for localized files
   -l, --target-languages <list>         Comma-separated list of language codes; overrides
                                         any 'targetLanguages' config setting
   -k, --keys <list>                     Comma-separated list of keys to process
@@ -150,6 +151,11 @@ Options:
 
 Commands:
   translate
+
+Environment variables:
+  ANTHROPIC_API_KEY                     Your Anthropic API key
+  OPENAI_API_KEY                        Your OpenAI API key
+  LANGUAGE                              CLI display language
 ``` 
 
 ## Examples

@@ -11,7 +11,7 @@ import * as fs from 'fs'
 import * as fsp from 'fs/promises'
 import * as crypto from 'crypto'
 import * as path from 'path'
-import { LANGTAG_DEFAULT, TRANSLATION_FAILED_RESPONSE_TEXT } from './consts.js'
+import { ENV_VARS, LANGTAG_DEFAULT, TRANSLATION_FAILED_RESPONSE_TEXT } from './consts.js'
 import { assertValidPath, assertIsObj } from './assert.js'
 import { readFileAsText, readJsonFile } from './io.js'
 
@@ -244,6 +244,13 @@ export async function run() {
 		program
 			.version(p.version)
 			.description(p.description)
+			.on('--help', () => {
+				log.I()
+				log.I('Environment variables:')
+				ENV_VARS.forEach(v => {
+					log.I(`  ${v.name.padEnd(37)} ${v.description}`)
+				})
+			})
 			.requiredOption('-r, --reference-file <path>', 'Path to reference JSONC file (default language)')
 			.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
 			.option('-p, --provider <name>', `AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting`)
