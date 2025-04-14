@@ -354,20 +354,7 @@ export async function runTranslation({ appState, options, log }) {
 
 export async function processTranslationTask({ appState, taskInfo, listrTask, listrCtx, options, log }) {
 	const { key, sourceLang, targetLang, reasonsForTranslationMap, outputData, outputFilePath, writableCache, cacheFilePath, state } = taskInfo
-	const {
-		translationProvider,
-		apiKey,
-		appContextMessage,
-		storedHashForReferenceValue,
-		refValue,
-		refContextValue,
-		referenceValueHash,
-		userMissingReferenceValueHash,
-		userModifiedReferenceValue,
-		curValue,
-		currentValueHash,
-		storedHashForTargetLangAndValue
-	} = state
+	const { referenceValueHash } = state
 
 	let reasons = Object.keys(reasonsForTranslationMap)
 		.map(k => localize({ token: `msg-translation-reason-${k}`, lang: appState.lang, log }))
@@ -384,18 +371,11 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 		appState,
 		listrTask,
 		ctx: listrCtx,
-		translationProvider,
-		apiKey,
-		referenceValueHash,
-		storedHashForReferenceValue,
-		storedHashForTargetLangAndValue,
 		sourceLang,
 		targetLang,
 		key,
-		refValue,
-		refContextValue,
-		curValue,
 		options,
+		state,
 		log
 	})
 
@@ -447,17 +427,14 @@ async function translateKeyForLanguage({
 																				 appState,
 																				 listrTask,
 																				 ctx,
-																				 translationProvider,
-																				 apiKey,
-																				 appContextMessage,
 																				 sourceLang,
 																				 targetLang,
+																				 state,
 																				 key,
-																				 refValue,
-																				 refContextValue,
 																				 options: { maxRetries },
 																				 log
 																			 }) {
+	const { translationProvider, apiKey, appContextMessage, refValue, refContextValue } = state
 	const result = { success: false, translated: false, newValue: null, nextTaskDelayMs: 0, error: null }
 
 	// Call translation provider
