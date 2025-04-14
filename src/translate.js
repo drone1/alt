@@ -483,7 +483,7 @@ async function translateKeyForLanguage({
 		if (translateResult.backoffInterval > 0) {
 			log.D(`backing off... interval: ${translateResult.backoffInterval}`)
 			log.D(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
-			result.nextTaskDelayMs = Math.max(ctx.nextTaskDelayMs, translateResult.backoffInterval)
+			result.nextTaskDelayMs = translateResult.backoffInterval
 		} else {
 			newValue = translateResult.translated
 			result.success = true
