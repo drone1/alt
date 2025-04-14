@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "ག་ནི་ཡང་མི་འབད།",
+  "msg-finished-with-errors": "མཇུག་བསྡུ་ཟིན་པ། %%errorsEncountered%% ནོར་འཁྲུལ་%%s%%",
+  "msg-translating": "འགྱུར་བཞིན་པ།།།",
+  "msg-translating-key": "ཊ་སྡེ་ཕྱི་%%key%%",
+  "msg-preparing-endpoint-config": "ཕྱི་ཕྱོགས་གནས་ཚུལ་བཀོད་སྒྲིག་གྲ་སྒྲིག་བྱེད་བཞིན་པ་་་",
+  "msg-hitting-provider-endpoint": "རྒྱབ་རྟེན་%%providerName%% གི་མཐའ་སྣེར་%%attemptStr%%...",
+  "msg-show-translation-result": "འགྱུར་བཅོས་བྱས་པའི་ %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] གསར་སྒྲིག་འབད་བཞིན་ཡོད་ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "བཙན་དབང་གིས་གསར་བཅོས།",
+  "translation-reason-outputFileDidNotExist": "འཐོན་ཡིག་ཡིག་སྣོད་ %%outputFile%% འདི་མེད་པ།",
+  "translation-reason-userMissingReferenceValueHash": "རྒྱབ་རྟེན་ཧེ་ཤི་མ་རྙེད།",
+  "translation-reason-userModifiedReferenceValue": "མཁོ་སྤྱོད་བྱེད་མཁན་གྱིས་གཏག་འབྲེལ་ཡིག་ཕྲེང་བཟོ་བཅོས་བྱས་ཡོད།",
+  "translation-reason-missingOutputKey": "མོ་བསྒྱུར་ཡོད་པ་མ་རྙེད།",
+  "translation-reason-missingOutputValueHash": "གསོག་མཛོད་ཡིག་སྣོད་ནང་དུ་ཐིག་རྟགས་རྙེད་མ་སོང་།",
+  "msg-no-update-needed-for-key": "མར་སྤོ་སྤར་མི་དགོས་ %%key%% ལུ།",
+  "msg-rate-limited-sleeping": "མཚམས་རྒྱ་བཅད་པ; %%interval%%s...%%attemptStr%% ལ་ཉལ་བཞིན་ཡོད།"
+}

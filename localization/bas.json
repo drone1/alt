@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Gema kolos manam",
+  "msg-finished-with-errors": "Finis wid %%errorsEncountered%% wahala%%s%%",
+  "msg-translating": "Abọta degedemaku...",
+  "msg-translating-key": "Ka n lɔgɔsi %%key%%",
+  "msg-preparing-endpoint-config": "Apreteán o konfigurasyon o endpoint...",
+  "msg-hitting-provider-endpoint": "Ngak mbal di endpoint di %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traduit %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Wokkeng %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Mise à jour forcée",
+  "translation-reason-outputFileDidNotExist": "Output file %%outputFile%% no exist",
+  "translation-reason-userMissingReferenceValueHash": "No hash for bicomparison encontró",
+  "translation-reason-userModifiedReferenceValue": "Mim ibok reference string",
+  "translation-reason-missingOutputKey": "Walang natumiskay na pagsasalin",
+  "translation-reason-missingOutputValueHash": "Daa hêch fâwnd in kêch faayl",
+  "msg-no-update-needed-for-key": "Hug ehn udèt ñed fò %%key%%",
+  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%"
+}

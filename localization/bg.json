@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Няма какво да се прави",
+  "msg-finished-with-errors": "Завършено с %%errorsEncountered%% грешк%%s%%",
+  "msg-translating": "Превежда се...",
+  "msg-translating-key": "Превод на %%key%%",
+  "msg-preparing-endpoint-config": "Подготвяне на конфигурацията на крайната точка...",
+  "msg-hitting-provider-endpoint": "Свързване към крайна точка на %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Преведен %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Обработване на %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Принудителна актуализация",
+  "translation-reason-outputFileDidNotExist": "Изходен файл %%outputFile%% не съществува",
+  "translation-reason-userMissingReferenceValueHash": "Не е намерен референтен хеш",
+  "translation-reason-userModifiedReferenceValue": "Потребителят промени референтния низ",
+  "translation-reason-missingOutputKey": "Не е намерен съществуващ превод",
+  "translation-reason-missingOutputValueHash": "Не е намерен хеш във файла на кеша",
+  "msg-no-update-needed-for-key": "Не е необходима актуализация за %%key%%",
+  "msg-rate-limited-sleeping": "Ограничение; изчакване за %%interval%%с...%%attemptStr%%"
+}

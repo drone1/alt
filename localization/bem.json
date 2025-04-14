@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Tapali cakucita",
+  "msg-finished-with-errors": "Yapwa na %%errorsEncountered%% ubwafya%%s%%",
+  "msg-translating": "Kwalulila...",
+  "msg-translating-key": "Ukulondolola %%key%%",
+  "msg-preparing-endpoint-config": "Kupekanisha kulondolola kwa mpela...",
+  "msg-hitting-provider-endpoint": "Mu kubwa aku %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Ukupilibula %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Ukubomba %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Ukokololwa kwa maka",
+  "translation-reason-outputFileDidNotExist": "Output file %%outputFile%% tachiliko",
+  "translation-reason-userMissingReferenceValueHash": "Takwaba ama hash yakusansha ayasangwa",
+  "translation-reason-userModifiedReferenceValue": "Usetemwa ibela",
+  "translation-reason-missingOutputKey": "Takwaba libuku lyapilibulwa",
+  "translation-reason-missingOutputValueHash": "Takwaba ba hash ubwasangwa mu failo lya cibikwa",
+  "msg-no-update-needed-for-key": "Takwaikabila kubinga %%key%%",
+  "msg-rate-limited-sleeping": "Kupekwa kufinga; kugona pa %%interval%%s...%%attemptStr%%"
+}

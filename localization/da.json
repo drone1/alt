@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Intet at foretage",
+  "msg-finished-with-errors": "Færdig med %%errorsEncountered%% fejl%%s%%",
+  "msg-translating": "Oversætter...",
+  "msg-translating-key": "Oversætter %%key%%",
+  "msg-preparing-endpoint-config": "Forbereder endpunktkonfiguration...",
+  "msg-hitting-provider-endpoint": "Rammer %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Oversat %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Behandler %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Tvungen opdatering",
+  "translation-reason-outputFileDidNotExist": "Outputfil %%outputFile%% eksisterede ikke",
+  "translation-reason-userMissingReferenceValueHash": "Ingen reference-hash fundet",
+  "translation-reason-userModifiedReferenceValue": "Bruger ændrede referencestrengen",
+  "translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
+  "translation-reason-missingOutputValueHash": "Ingen hash fundet i cache-fil",
+  "msg-no-update-needed-for-key": "Ingen opdatering nødvendig for %%key%%",
+  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%"
+}

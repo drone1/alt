@@ -1,0 +1,18 @@
+{
+  "msg-translating-key": "Prevođenje %%key%%",
+  "msg-hitting-provider-endpoint": "Dohvaćanje %%providerName%% krajnje točke%%attemptStr%%...",
+  "translation-reason-forced": "Prisilno ažuriranje",
+  "translation-reason-outputFileDidNotExist": "Izlazna datoteka %%outputFile%% ne postoji",
+  "translation-reason-missingOutputValueHash": "Nije pronađen hash u datoteci predmemorije",
+  "msg-nothing-to-do": "Ništa za raditi",
+  "msg-finished-with-errors": "Završeno s %%errorsEncountered%% pogrešk%%s%%",
+  "msg-translating": "Prevodi se...",
+  "msg-preparing-endpoint-config": "Priprema konfiguracije krajnje točke...",
+  "msg-no-update-needed-for-key": "Za %%key%% nije potrebno ažuriranje",
+  "msg-rate-limited-sleeping": "Ograničena stopa; spavanje u trajanju od %%interval%%s...%%attemptStr%%",
+  "msg-show-translation-result": "Prevedeni %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Obrada %%targetLang%% – %%key%%...",
+  "translation-reason-userMissingReferenceValueHash": "Nije pronađen referentni hash",
+  "translation-reason-userModifiedReferenceValue": "Korisnik je modificirao referentni niz",
+  "translation-reason-missingOutputKey": "Nije pronađen postojeći prijevod"
+}

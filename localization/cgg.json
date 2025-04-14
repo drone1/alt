@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Tihariho ekyokukora",
+  "msg-finished-with-errors": "Yahendeire n'enshobe %%errorsEncountered%% %%s%%",
+  "msg-translating": "Nikuhandikaho...",
+  "msg-translating-key": "Okuhindura %%key%%",
+  "msg-preparing-endpoint-config": "Kutebekanisa obuhamiso bw'emiteganuro...",
+  "msg-hitting-provider-endpoint": "Okuramba ahariho %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Nikihindwiire %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Guhwereza %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Okuhereza ky'amaani",
+  "translation-reason-outputFileDidNotExist": "Faira y'ebirugire %%outputFile%% terikyo",
+  "translation-reason-userMissingReferenceValueHash": "Tihariho hash y'okurebereraho",
+  "translation-reason-userModifiedReferenceValue": "Omukozesa ahindwiire enguuto z'okwebaziraho",
+  "translation-reason-missingOutputKey": "Ti hari okuhindurwa okwabaire kwahingwire",
+  "translation-reason-missingOutputValueHash": "Tihariho hash eshangirwe omu fairo ya cache",
+  "msg-no-update-needed-for-key": "Tihariho okukyorora okwa %%key%%",
+  "msg-rate-limited-sleeping": "Ekigaruka kine ekigombe; okuhuuramu ahamunyi %%interval%%s...%%attemptStr%%"
+}

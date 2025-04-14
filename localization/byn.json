@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "ዋላ ጠቦ የሌለኒ",
+  "msg-finished-with-errors": "%%errorsEncountered%% ናይ ጌጋ%%s%% ካብ ተፈፂሙ",
+  "msg-translating": "ኣብ ትርግም...",
+  "msg-translating-key": "መተርጒም %%key%%",
+  "msg-preparing-endpoint-config": "ክፍለ-እንጥቅዕት እውሳን ምድላው...",
+  "msg-hitting-provider-endpoint": "ናብ መዕለቢ %%providerName%% ምውቃዕ%%attemptStr%%...",
+  "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] ኣብ መስርሕ %%targetLang%% - %%key%%...",
+  "translation-reason-forced": "ሓይሊተወሳኺ ዘድሊ",
+  "translation-reason-outputFileDidNotExist": "ናይ ውፂኢት ፋይል %%outputFile%% ኣይነበረን",
+  "translation-reason-userMissingReferenceValueHash": "ኣማሕድሮ ጸብጻብ ኣይተረክበን።",
+  "translation-reason-userModifiedReferenceValue": "ዓራቶ ናይ ረፈረንስ ሓረገ ቀየሮ።",
+  "translation-reason-missingOutputKey": "ᐝᙍᑥ ᑦᘍᒚᓕᓗᔅᘉ ᕪᘍᒨᐧ ᐊᙍᒥᓕ",
+  "translation-reason-missingOutputValueHash": "ነዝ ፍጻሜ ኣብ ፋይል ሳሕቲ ኣይተረክበን",
+  "msg-no-update-needed-for-key": "ንዝኾነ %%key%% ምሕዳስ ኣየድልን",
+  "msg-rate-limited-sleeping": "ናይ መጠን መኽፍሊት ተኸልኪሉ፡ ን %%interval%%ዘመናት ኣብ ድቃስ...%%attemptStr%%"
+}

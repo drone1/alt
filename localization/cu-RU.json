@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Ничьсоже дѣлати",
+  "msg-finished-with-errors": "Завершено съ %%errorsEncountered%% ошибк%%s%%",
+  "msg-translating": "Преложение...",
+  "msg-translating-key": "Прѣводѧ %%key%%",
+  "msg-preparing-endpoint-config": "Приѹготовлѧѥмъ строѥниѥ чѧсти...",
+  "msg-hitting-provider-endpoint": "Ѹдарѧѥмъ %%providerName%% конєчнѫѭ точкѫ%%attemptStr%%...",
+  "msg-show-translation-result": "Преведено %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Обрабатывается %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Принужденное обновление",
+  "translation-reason-outputFileDidNotExist": "Исходный файлъ %%outputFile%% не сѹществѹетъ",
+  "translation-reason-userMissingReferenceValueHash": "Ни единаго хашя обрѣтено не бысть",
+  "translation-reason-userModifiedReferenceValue": "Пользователь измѣни строкѹ ссылкы",
+  "translation-reason-missingOutputKey": "Не обрѣтесѧ сѫщее прѣложеніе",
+  "translation-reason-missingOutputValueHash": "Не ѡбрѣтесѧ хашь въ кашеистѣи дѣльницѣ",
+  "msg-no-update-needed-for-key": "Нѣстъ трѣбѣ ѻбновлениꙗ длѧ %%key%%",
+  "msg-rate-limited-sleeping": "Превышенъ лимитъ запросѡвъ; ожиданїе %%interval%% сек...%%attemptStr%%"
+}

@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nada que hacer",
+  "msg-finished-with-errors": "Finalizado con %%errorsEncountered%% error%%s%%",
+  "msg-translating": "Traduciendo...",
+  "msg-translating-key": "Traduciendo %%key%%",
+  "msg-preparing-endpoint-config": "Preparando la configuración del punto final...",
+  "msg-hitting-provider-endpoint": "Conectando con el punto de acceso de %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traducido %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Procesando %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Actualización forzada",
+  "translation-reason-outputFileDidNotExist": "El archivo de salida %%outputFile%% no existía",
+  "translation-reason-userMissingReferenceValueHash": "No se ha encontrado hash de referencia",
+  "translation-reason-userModifiedReferenceValue": "Usuario modificó cadena de referencia",
+  "translation-reason-missingOutputKey": "No se ha encontrado ninguna traducción existente",
+  "translation-reason-missingOutputValueHash": "No se encontró hash en el archivo caché",
+  "msg-no-update-needed-for-key": "No se necesita actualización para %%key%%",
+  "msg-rate-limited-sleeping": "Tasa limitada; durmiendo durante %%interval%%s...%%attemptStr%%"
+}

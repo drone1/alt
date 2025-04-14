@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Midagi teha pole",
+  "msg-finished-with-errors": "Lõpetatud %%errorsEncountered%% veaga%%s%%",
+  "msg-translating": "Tõlkimine...",
+  "msg-translating-key": "Tõlgitakse %%key%%",
+  "msg-preparing-endpoint-config": "Lõpp-punkti konfiguratsiooni ettevalmistamine...",
+  "msg-hitting-provider-endpoint": "%%providerName%% lõpp-punkti tabamine%%attemptStr%%...",
+  "msg-show-translation-result": "Tõlgitud %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Töötlemine %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Sunnitud uuendus",
+  "translation-reason-outputFileDidNotExist": "Väljundfaili %%outputFile%% ei eksisteeri",
+  "translation-reason-userMissingReferenceValueHash": "Viidet räsi ei leitud",
+  "translation-reason-userModifiedReferenceValue": "Kasutaja muutis viitenumbrit",
+  "translation-reason-missingOutputKey": "Olemasolevat tõlget ei leitud",
+  "translation-reason-missingOutputValueHash": "Räsi ei leitud puhverfailist",
+  "msg-no-update-needed-for-key": "%%key%% ei vaja värskendamist",
+  "msg-rate-limited-sleeping": "Tasakaalustatult piiratud; ootan %%interval%%s...%%attemptStr%%"
+}

@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Нічога рабіць",
+  "msg-finished-with-errors": "Завяршылі з %%errorsEncountered%% памылк%%s%%",
+  "msg-translating": "Tłumaczэnje...",
+  "msg-translating-key": "Tarjamahan %%key%%",
+  "msg-preparing-endpoint-config": "Pryparam kanfiguracyju kanečnaha punktu...",
+  "msg-hitting-provider-endpoint": "Ударам па канцавым пункце %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "অনুবাদিত %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Praladan %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "ফৰ্চড আপডেট",
+  "translation-reason-outputFileDidNotExist": "Fajlo %%outputFile%% ne ekzistis",
+  "translation-reason-userMissingReferenceValueHash": "ଟି ରେଫେରେନ୍ସ ହ୍ୟାସ୍ ମିଳିଲା ନାହିଁ",
+  "translation-reason-userModifiedReferenceValue": "ব্যবহারকারী রেফারেন্স স্ট্রিং পরিবর্তন করেছেন",
+  "translation-reason-missingOutputKey": "কোনো বিদ্যমান অনুবাদ পাওয়া যায়নি",
+  "translation-reason-missingOutputValueHash": "কোনো হ্যাশ ক্যাশে ফাইলে পাওয়া যায়নি",
+  "msg-no-update-needed-for-key": "Ніякае абнаўленне не патрабуецца для %%key%%",
+  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%%s এর জন্য ঘুমাচ্ছে...%%attemptStr%%"
+}

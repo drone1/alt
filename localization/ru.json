@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Нечего делать",
+  "msg-finished-with-errors": "Завершено с %%errorsEncountered%% ошибк%%s%%",
+  "msg-translating": "Выполняется перевод...",
+  "msg-translating-key": "Перевод %%key%%",
+  "msg-preparing-endpoint-config": "Подготовка конфигурации конечной точки...",
+  "msg-hitting-provider-endpoint": "Выполняется запрос к конечной точке %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Переведено %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Обработка %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Принудительное обновление",
+  "translation-reason-outputFileDidNotExist": "Выходной файл %%outputFile%% не существовал",
+  "translation-reason-userMissingReferenceValueHash": "Эталонный хеш не найден",
+  "translation-reason-userModifiedReferenceValue": "Пользователь изменил эталонную строку",
+  "translation-reason-missingOutputKey": "Существующего перевода не найдено",
+  "translation-reason-missingOutputValueHash": "Хеш не найден в кеш-файле",
+  "msg-no-update-needed-for-key": "Не требуется обновление для %%key%%",
+  "msg-rate-limited-sleeping": "Превышен лимит запросов; ожидание %%interval%% сек...%%attemptStr%%"
+}

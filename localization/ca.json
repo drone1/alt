@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "No hi ha res a fer",
+  "msg-finished-with-errors": "Finalitzat amb %%errorsEncountered%% error%%s%%",
+  "msg-translating": "Traduint...",
+  "msg-translating-key": "Traduint %%key%%",
+  "msg-preparing-endpoint-config": "Preparant la configuració del punt final...",
+  "msg-hitting-provider-endpoint": "Contactant amb el punt final de %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traduït %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Processant %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Actualització forçada",
+  "translation-reason-outputFileDidNotExist": "El fitxer de sortida %%outputFile%% no existia",
+  "translation-reason-userMissingReferenceValueHash": "No s'ha trobat cap hash de referència",
+  "translation-reason-userModifiedReferenceValue": "L'usuari ha modificat la cadena de referència",
+  "translation-reason-missingOutputKey": "No s'ha trobat cap traducció existent",
+  "translation-reason-missingOutputValueHash": "No s'ha trobat el hash al fitxer de la memòria cau",
+  "msg-no-update-needed-for-key": "No es necessària cap actualització per a %%key%%",
+  "msg-rate-limited-sleeping": "Rate limitat; esperant %%interval%%s...%%attemptStr%%"
+}

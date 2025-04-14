@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Tiada apa yang perlu dilakukan",
+  "msg-finished-with-errors": "Selesai dengan %%errorsEncountered%% ralat%%s%%",
+  "msg-translating": "Menterjemah...",
+  "msg-translating-key": "Menterjemah %%key%%",
+  "msg-preparing-endpoint-config": "Menyediakan konfigurasi titik akhir...",
+  "msg-hitting-provider-endpoint": "Melanggar titik akhir %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Diterjemahkan %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Memproses %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Kemas kini paksa",
+  "translation-reason-outputFileDidNotExist": "Fail output %%outputFile%% tidak wujud",
+  "translation-reason-userMissingReferenceValueHash": "Tiada cincang rujukan dijumpai",
+  "translation-reason-userModifiedReferenceValue": "Pengguna mengubah rujukan rentetan",
+  "translation-reason-missingOutputKey": "Tiada terjemahan sedia ada dijumpai",
+  "translation-reason-missingOutputValueHash": "Tiada cincang dijumpai dalam fail cache",
+  "msg-no-update-needed-for-key": "Tiada kemas kini diperlukan untuk %%key%%",
+  "msg-rate-limited-sleeping": "Had terhad; tidur selama %%interval%%s...%%attemptStr%%"
+}

@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "无事可做",
+  "msg-finished-with-errors": "已完成，出现了 %%errorsEncountered%% 个错误%%s%%",
+  "msg-translating": "正在翻译...",
+  "msg-translating-key": "正在翻译%%key%%",
+  "msg-preparing-endpoint-config": "正在准备端点配置...",
+  "msg-hitting-provider-endpoint": "正在连接 %%providerName%% 端点%%attemptStr%%...",
+  "msg-no-update-needed-for-key": "无需更新%%key%%",
+  "msg-rate-limited-sleeping": "已达到速率限制；暂停 %%interval%% 秒...%%attemptStr%%",
+  "msg-show-translation-result": "已翻译 %%key%%：\"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] 正在处理 %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "强制更新",
+  "translation-reason-outputFileDidNotExist": "输出文件 %%outputFile%% 不存在",
+  "translation-reason-userMissingReferenceValueHash": "未找到参考哈希值",
+  "translation-reason-userModifiedReferenceValue": "用户修改了引用字符串",
+  "translation-reason-missingOutputKey": "未找到现有翻译",
+  "translation-reason-missingOutputValueHash": "在缓存文件中未找到哈希值"
+}

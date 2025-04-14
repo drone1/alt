@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "沒有任何操作",
+  "msg-finished-with-errors": "已完成，發生了 %%errorsEncountered%% 個錯誤%%s%%",
+  "msg-translating": "正在翻譯...",
+  "msg-translating-key": "正在翻譯%%key%%",
+  "msg-preparing-endpoint-config": "正在準備端點配置...",
+  "msg-hitting-provider-endpoint": "正在連線 %%providerName%% 端點%%attemptStr%%...",
+  "msg-no-update-needed-for-key": "不需要更新 %%key%%",
+  "msg-rate-limited-sleeping": "已達流量限制；暫停 %%interval%% 秒...%%attemptStr%%",
+  "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] 處理中 %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "強制更新",
+  "translation-reason-outputFileDidNotExist": "輸出檔案%%outputFile%%不存在",
+  "translation-reason-userMissingReferenceValueHash": "找不到參考雜湊值",
+  "translation-reason-userModifiedReferenceValue": "用戶修改了參考字串",
+  "translation-reason-missingOutputKey": "找不到現有翻譯",
+  "translation-reason-missingOutputValueHash": "在快取檔案中找不到雜湊值"
+}

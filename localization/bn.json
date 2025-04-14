@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "করার কিছু নেই",
+  "msg-finished-with-errors": "%%errorsEncountered%% টি ত্রুটি%%s%% সহ সম্পন্ন হয়েছে",
+  "msg-translating": "অনুবাদ করা হচ্ছে...",
+  "msg-translating-key": "অনুবাদ করা হচ্ছে %%key%%",
+  "msg-preparing-endpoint-config": "এন্ডপয়েন্ট কনফিগারেশন প্রস্তুত করা হচ্ছে...",
+  "msg-hitting-provider-endpoint": "%%providerName%% এন্ডপয়েন্ট%%attemptStr%% আঘাত করছি...",
+  "msg-show-translation-result": "অনুবাদিত %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] প্রক্রিয়াকরণ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "জোরপূর্বক আপডেট",
+  "translation-reason-outputFileDidNotExist": "আউটপুট ফাইল %%outputFile%% অস্তিত্বে নেই",
+  "translation-reason-userMissingReferenceValueHash": "কোন রেফারেন্স হ্যাশ পাওয়া যায়নি",
+  "translation-reason-userModifiedReferenceValue": "ব্যবহারকারী রেফারেন্স স্ট্রিং পরিবর্তন করেছেন",
+  "translation-reason-missingOutputKey": "কোন বিদ্যমান অনুবাদ পাওয়া যায়নি",
+  "translation-reason-missingOutputValueHash": "ক্যাশে ফাইলে কোনো হ্যাশ পাওয়া যায়নি",
+  "msg-no-update-needed-for-key": "%%key%% এর জন্য কোন আপডেট প্রয়োজন নেই",
+  "msg-rate-limited-sleeping": "রেট সীমিত; %%interval%% সেকেন্ড ঘুমিয়ে নিচ্ছে...%%attemptStr%%"
+}

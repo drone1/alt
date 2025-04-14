@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "هیچ کاری برای انجام نیست",
+  "msg-finished-with-errors": "پایان با %%errorsEncountered%% خطا%%s%%",
+  "msg-translating": "در حال ترجمه...",
+  "msg-translating-key": "ترجمه %%key%%",
+  "msg-preparing-endpoint-config": "در حال آماده‌سازی تنظیمات نقطه پایانی...",
+  "msg-hitting-provider-endpoint": "به پایانه %%providerName%% ضربه می‌زند%%attemptStr%%...",
+  "msg-show-translation-result": "ترجمه شده %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] در حال پردازش %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "تجدید اجباری",
+  "translation-reason-outputFileDidNotExist": "فایل خروجی %%outputFile%% وجود نداشت",
+  "translation-reason-userMissingReferenceValueHash": "هیچ هش مرجع یافت نشد",
+  "translation-reason-userModifiedReferenceValue": "کاربر رشته مرجع را اصلاح کرد",
+  "translation-reason-missingOutputKey": "ترجمهٔ موجود یافت نشد",
+  "translation-reason-missingOutputValueHash": "درکش فایل هیچ هش یافت نشد",
+  "msg-no-update-needed-for-key": "برای %%key%% هیچ به‌روزرسانی نیاز نیست",
+  "msg-rate-limited-sleeping": "ترافیک محدود شده است؛ برای %%interval%% ثانیه در حال استراحت... %%attemptStr%%"
+}

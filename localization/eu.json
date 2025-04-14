@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Ez dago ezer egiteko",
+  "msg-finished-with-errors": "%%errorsEncountered%% errore%%s%% aurkituta",
+  "msg-translating": "Itzultzen...",
+  "msg-translating-key": "%%key%% itzultzen",
+  "msg-preparing-endpoint-config": "Amaiera-puntuen konfigurazioa prestatzen...",
+  "msg-hitting-provider-endpoint": "%%providerName%% endpointera iristea%%attemptStr%%...",
+  "msg-show-translation-result": "Itzulia %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] %%targetLang%% prozesatzen – %%key%%...",
+  "translation-reason-forced": "Behartutako eguneratzea",
+  "translation-reason-outputFileDidNotExist": "Irteera-fitxategia %%outputFile%% ez da existitzen",
+  "translation-reason-userMissingReferenceValueHash": "Ez da erreferentzia hash-ik aurkitu",
+  "translation-reason-userModifiedReferenceValue": "Erabiltzaileak erreferentzia-katea aldatu du",
+  "translation-reason-missingOutputKey": "Ez da aurkitu dagoeneko itzulpenik",
+  "translation-reason-missingOutputValueHash": "Cacheko fitxategian ez da hash-rik aurkitu",
+  "msg-no-update-needed-for-key": "%%key%% eguneratu gabe",
+  "msg-rate-limited-sleeping": "Abiadura mugatua; %%interval%% segundo itxaroten...%%attemptStr%%"
+}

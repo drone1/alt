@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "কৰিবলৈ একো নাই",
+  "msg-finished-with-errors": "কাম %%errorsEncountered%% টা ত্ৰুটি%%s%% সৈতে সমাপ্ত কৰা হৈছে",
+  "msg-translating": "অনুবাদ কৰা হৈছে...",
+  "msg-translating-key": "অনুবাদ কৰা %%key%%",
+  "msg-preparing-endpoint-config": "এণ্ডপইণ্ট কনফিগাৰেচন প্ৰস্তুত কৰি আছে...",
+  "msg-hitting-provider-endpoint": "এতিয়া %%providerName%% এণ্ডপইণ্ট%%attemptStr%% ত আঘাত কৰা হৈছে...",
+  "msg-show-translation-result": "অনুবাদ কৰা %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] প্ৰক্ৰিয়াকৰণ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "বাধ্যতামূলক আপডেট",
+  "translation-reason-outputFileDidNotExist": "আউটপুট ফাইল %%outputFile%% মৌজুদ নাছিল",
+  "translation-reason-userMissingReferenceValueHash": "কোনো সন্দৰ্ভ হেছ্‌ পোৱা নাই",
+  "translation-reason-userModifiedReferenceValue": "ব্যৱহাৰকাৰীয়ে তথ্য সংশোধন কৰিছে",
+  "translation-reason-missingOutputKey": "কোনো বিদ্যমান অনুবাদ পোৱা নাই",
+  "translation-reason-missingOutputValueHash": "ডেট'চৰ চিফাইলত কোনো হেচ্‌ পোৱা নাই",
+  "msg-no-update-needed-for-key": "%%key%%ৰ বাবে আপডেট প্ৰয়োজন নাই",
+  "msg-rate-limited-sleeping": "Rate limited; %%interval%%ছেকেণ্ডৰ বাবে শুই থকা হৈছে...%%attemptStr%%"
+}

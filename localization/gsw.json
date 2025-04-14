@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nüt z'tue",
+  "msg-preparing-endpoint-config": "Endpunkt-Konfiguration wird vorbereitet...",
+  "msg-processing-lang-and-key": "[%%progress%%%] Verarbeite %%targetLang%% – %%key%%...",
+  "translation-reason-userMissingReferenceValueHash": "Kei Referänz-Hash gfunde",
+  "translation-reason-missingOutputValueHash": "Kein Hash im Cache-File gfunde",
+  "msg-finished-with-errors": "Abgschlosse mit %%errorsEncountered%% Fehler%%s%%",
+  "msg-translating": "S'wird grad übersetzt...",
+  "msg-translating-key": "Übersetze %%key%%",
+  "msg-hitting-provider-endpoint": "%%providerName%%-Endpunkt%%attemptStr%% kontaktiere...",
+  "msg-no-update-needed-for-key": "Kei Update nötig für %%key%%",
+  "msg-rate-limited-sleeping": "Rate limit; schloof für %%interval%%s...%%attemptStr%%",
+  "msg-show-translation-result": "Übersetzt %%key%%: \"%%newValue%%\"",
+  "translation-reason-forced": "Erzwungets Update",
+  "translation-reason-outputFileDidNotExist": "D Usegaabi %%outputFile%% hät nid existiert",
+  "translation-reason-userModifiedReferenceValue": "Benutzer het Referänz-String gänderet",
+  "translation-reason-missingOutputKey": "Kei bestehendi Übersetzig gfunde"
+}

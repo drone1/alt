@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nag eus tra veth dhe wul",
+  "msg-finished-with-errors": "Gorfednys gans %%errorsEncountered%% gwall%%s%%",
+  "msg-translating": "Ow treylya...",
+  "msg-translating-key": "Treuslya %%key%%",
+  "msg-preparing-endpoint-config": "Ow paruji kungrontieth an diwedh-point...",
+  "msg-hitting-provider-endpoint": "Godhvos arbennek %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Tradudhys %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Ow processya %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Nowedhydjyans konys",
+  "translation-reason-outputFileDidNotExist": "Restrenn ancressyans %%outputFile%% ny veu y'n bos",
+  "translation-reason-userMissingReferenceValueHash": "Nyns eus kothmen-drestav kevys",
+  "translation-reason-userModifiedReferenceValue": "Nebes amendys gans devnydhyer",
+  "translation-reason-missingOutputKey": "Nyns eus treylyans kavys",
+  "translation-reason-missingOutputValueHash": "Ny veu has kevys y'n restren gachedya",
+  "msg-no-update-needed-for-key": "Nyns yw edhomm nowedhi rag %%key%%",
+  "msg-rate-limited-sleeping": "Termyn settys; koska rag %%interval%%s...%%attemptStr%%"
+}

@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "やるべきことはありません",
+  "msg-hitting-provider-endpoint": "%%providerName%%エンドポイントに接続中%%attemptStr%%...",
+  "translation-reason-forced": "強制アップデート",
+  "translation-reason-missingOutputKey": "既存の翻訳が見つかりません",
+  "msg-finished-with-errors": "%%errorsEncountered%% エラー%%s%%で完了",
+  "msg-translating": "翻訳中...",
+  "msg-translating-key": "%%key%%を翻訳中",
+  "msg-preparing-endpoint-config": "エンドポイント設定を準備中...",
+  "msg-no-update-needed-for-key": "%%key%%の更新は必要ありません",
+  "msg-rate-limited-sleeping": "レート制限に達しました。%%interval%%秒間待機中...%%attemptStr%%",
+  "msg-show-translation-result": "翻訳された%%key%%：「%%newValue%%」",
+  "msg-processing-lang-and-key": "[%%progress%%%] 処理中 %%targetLang%% – %%key%%...",
+  "translation-reason-outputFileDidNotExist": "出力ファイル %%outputFile%% が存在しませんでした",
+  "translation-reason-userMissingReferenceValueHash": "参照ハッシュが見つかりません",
+  "translation-reason-userModifiedReferenceValue": "ユーザーが改変した参照文字列",
+  "translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした"
+}

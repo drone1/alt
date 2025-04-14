@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Netra da ober",
+  "msg-finished-with-errors": "Finalizado com %%errorsEncountered%% erro%%s%%",
+  "msg-translating": "Treiñ...",
+  "msg-translating-key": "Trosi %%key%%",
+  "msg-preparing-endpoint-config": "Preparando configuração do endpoint...",
+  "msg-hitting-provider-endpoint": "Batendo no endpoint do %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traduzido %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Processando %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Atualização forçada",
+  "translation-reason-outputFileDidNotExist": "O arquivo de saída %%outputFile%% não existe",
+  "translation-reason-userMissingReferenceValueHash": "Nenhum hash de referência encontrado",
+  "translation-reason-userModifiedReferenceValue": "Utilisateur a modifié la chaîne de référence",
+  "translation-reason-missingOutputKey": "Nenhuma tradução existente encontrada",
+  "translation-reason-missingOutputValueHash": "Hag ebed kavet er restr krubuilh",
+  "msg-no-update-needed-for-key": "Ne da ket ezhomm eus ur bajenn nevez evit %%key%%",
+  "msg-rate-limited-sleeping": "Limitado por taxa; dormindo por %%interval%%s...%%attemptStr%%"
+}

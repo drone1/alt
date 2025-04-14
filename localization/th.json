@@ -1,0 +1,18 @@
+{
+  "msg-finished-with-errors": "เสร็จสิ้นโดยมี %%errorsEncountered%% ข้อผิดพลาด%%s%%",
+  "msg-translating": "กำลังแปล...",
+  "msg-translating-key": "การแปล %%key%%",
+  "translation-reason-forced": "บังคับอัปเดต",
+  "translation-reason-missingOutputKey": "ไม่พบการแปลที่มีอยู่",
+  "msg-nothing-to-do": "ไม่มีอะไรต้องทำ",
+  "msg-preparing-endpoint-config": "กำลังเตรียมการกำหนดค่าจุดสิ้นสุด...",
+  "msg-hitting-provider-endpoint": "กำลังเข้าถึงจุดสิ้นสุดของ %%providerName%% %%attemptStr%%...",
+  "msg-no-update-needed-for-key": "ไม่จำเป็นต้องอัปเดตสำหรับ %%key%%",
+  "msg-rate-limited-sleeping": "ถูกจำกัดอัตรา กำลังพักเป็นเวลา %%interval%% วินาที...%%attemptStr%%",
+  "msg-show-translation-result": "แปลแล้ว %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] กำลังประมวลผล %%targetLang%% – %%key%%...",
+  "translation-reason-outputFileDidNotExist": "ไฟล์ผลลัพธ์ %%outputFile%% ไม่มีอยู่",
+  "translation-reason-userMissingReferenceValueHash": "ไม่พบแฮชอ้างอิง",
+  "translation-reason-userModifiedReferenceValue": "ผู้ใช้ได้แก้ไขข้อความอ้างอิง",
+  "translation-reason-missingOutputValueHash": "ไม่พบแฮชในไฟล์แคช"
+}

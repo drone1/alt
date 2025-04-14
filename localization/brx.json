@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "मावबो जायै गैया",
+  "msg-finished-with-errors": "मोजां जाबाय %%errorsEncountered%% गोरोन्थि%%s%%",
+  "msg-translating": "बिरियसायनानै...",
+  "msg-translating-key": "%%key%% आ बोसोन खालामनानै",
+  "msg-preparing-endpoint-config": "फुङआवरि आलादारि फोसाबदों दं...",
+  "msg-hitting-provider-endpoint": "%%providerName%% सिफायाव लांनो मावनाय%%attemptStr%%...",
+  "msg-show-translation-result": "सोलाय जाबाय %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] हाबाफारि %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "बिथोनो आपडेट",
+  "translation-reason-outputFileDidNotExist": "Output file %%outputFile%% खौ नुजाथि",
+  "translation-reason-userMissingReferenceValueHash": "एसेफोरखो रेफारेन्स हेस मोनाखै",
+  "translation-reason-userModifiedReferenceValue": "खनथाय सेंजायखौ बाहायग्रा हालायबाय",
+  "translation-reason-missingOutputKey": "दंदो सोलोबाय बेयाव थानाय हेंथाइ मोनाखै",
+  "translation-reason-missingOutputValueHash": "File cache आव hash मोनफिन्दि आखाय",
+  "msg-no-update-needed-for-key": "%%key%% नि थाखाय सुदुर खालामनांगौनि गैया",
+  "msg-rate-limited-sleeping": "Rate limited; प्रसिपु %%interval%%s हामदां लाखिबाय ...%%attemptStr%%"
+}

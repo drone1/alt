@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "မလုပ်စရာမရှိ",
+  "msg-finished-with-errors": "အမှားအယွင်း %%errorsEncountered%% ခုဖြင့် ပြီးဆုံးသွားပါပြီ%%s%%",
+  "msg-translating": "ဘာသာပြန်ဆိုနေသည်...",
+  "msg-translating-key": "%%key%% ကို ဘာသာပြန်နေသည်",
+  "msg-preparing-endpoint-config": "နှစ်ဖက်ဆက်သွယ်ရာ အဆုံးစွန်အပိုင်း ပြင်ဆင်နေသည်...",
+  "msg-hitting-provider-endpoint": "%%providerName%% အစွန်းအဖျား%%attemptStr%%ကို ထိနေသည်...",
+  "msg-show-translation-result": "Bmdk;aygif;xnfhNyD; %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] %%targetLang%% - %%key%% ကို စိစစ်ဆောင်ရွက်နေသည်...",
+  "translation-reason-forced": "အတင်းအကျပ် အပ်ဒိတ်ဖြစ်စေခြင်း",
+  "translation-reason-outputFileDidNotExist": "အထွက်ဖိုင် %%outputFile%% မရှိပါ",
+  "translation-reason-userMissingReferenceValueHash": "သတ်မှတ်ထားသည့် ဟက်ရှ် မတွေ့ရှိပါ",
+  "translation-reason-userModifiedReferenceValue": "အသုံးပြုသူက ကိုးကားစာသားကို ပြင်ဆင်လိုက်သည်",
+  "translation-reason-missingOutputKey": "အရှိတော့ ဘာသာပြန်ချက် မရှိသေးပါ",
+  "translation-reason-missingOutputValueHash": "ကက်ချ် ဖိုင်တွင် ဟက်ရှ် မတွေ့ရှိပါ",
+  "msg-no-update-needed-for-key": "%%key%% အတွက် အပ်ဒိတ်လုပ်ရန် မလိုအပ်ပါ",
+  "msg-rate-limited-sleeping": "Rate ကန့်သတ်ခံရသည်။ %%interval%% စက္ကန့်အတွင်း စောင့်နေပါသည်...%%attemptStr%%"
+}

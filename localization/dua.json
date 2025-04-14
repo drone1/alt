@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nua sa mia.",
+  "msg-finished-with-errors": "Empeɛiɛ ne %%errorsEncountered%% mfomsoɔ%%s%%",
+  "msg-translating": "Tɔnsegbenɔ...",
+  "msg-translating-key": "Tɔmaa %%key%%",
+  "msg-preparing-endpoint-config": "Sesiesie ŋutitɔtrɔ nuɖoanyi...",
+  "msg-hitting-provider-endpoint": "Cɔ %%providerName%% afisensuanii%%attemptStr%%...",
+  "msg-show-translation-result": "Ahinlɛ %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Ɛreyɛ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Kũa maniemane",
+  "translation-reason-outputFileDidNotExist": "Файл вывода %%outputFile%% не существовал",
+  "translation-reason-userMissingReferenceValueHash": "Wo yɛ ahwehwɛ hash bi ho nsɛm annya",
+  "translation-reason-userModifiedReferenceValue": "Kͻmpiniwa ɛsesa ɛkwan a wɔde yɛ adwendwen no anim",
+  "translation-reason-missingOutputKey": "Ɖe gɔmeɖeɖe aɖeke meli o",
+  "translation-reason-missingOutputValueHash": "Iyafeama ho ʔafomawho awa caɕe fajl kpe",
+  "msg-no-update-needed-for-key": "Onni nkɔso nnhiã mma %%key%%",
+  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%"
+}

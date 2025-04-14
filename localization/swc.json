@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Hakuna la kufanya",
+  "msg-translating-key": "Kutafsiri %%key%%",
+  "msg-show-translation-result": "Imetafsiriwa %%key%%: \"%%newValue%%\"",
+  "translation-reason-forced": "Masasisho ya lazima",
+  "translation-reason-missingOutputKey": "Hakuna tafsiri iliyopo imepatikana",
+  "msg-finished-with-errors": "Imemaliza na kosa %%errorsEncountered%% la%%s%%",
+  "msg-translating": "Kutafsiri...",
+  "msg-preparing-endpoint-config": "Kuandalia usanidi wa mwisho...",
+  "msg-hitting-provider-endpoint": "Nawafikia mwisho wa %%providerName%% %%attemptStr%%...",
+  "msg-no-update-needed-for-key": "Hakuna sasisho linahitajika ya %%key%%",
+  "msg-rate-limited-sleeping": "Imepungwa kasi; kulala kwa sekunde %%interval%%...%%attemptStr%%",
+  "msg-processing-lang-and-key": "[%%progress%%%] Kutumia %%targetLang%% – %%key%%...",
+  "translation-reason-outputFileDidNotExist": "Faili ya matokeo %%outputFile%% haipo",
+  "translation-reason-userMissingReferenceValueHash": "Hakuna hash ya kumbukumbu iliyopatikana",
+  "translation-reason-userModifiedReferenceValue": "Mtumiaji amefanyia marekebisho uzi wa rejeleo",
+  "translation-reason-missingOutputValueHash": "Hakuna alama ya hash iliyopatikana katika faili la akiba"
+}

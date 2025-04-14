@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "មិនមានអ្វីត្រូវធ្វើ",
+  "msg-finished-with-errors": "បញ្ចប់ជាមួយនឹង%%errorsEncountered%% កំហុស%%s%%",
+  "msg-translating": "កំពុង​បក​ប្រែ...",
+  "msg-translating-key": "បកប្រែ %%key%%",
+  "msg-preparing-endpoint-config": "កំពុងរៀបចំការកំណត់រចនាសម្ព័ន្ធចំណុចចុងក្រោយ...",
+  "msg-hitting-provider-endpoint": "កំពុងដំណើរការទៅកាន់ចំណុចចុងបញ្ចប់របស់ %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "បានបកប្រែ %%key%%៖ \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] កំពុងដំណើរការ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "ការធ្វើបច្ចុប្បន្នភាពដោយបង្ខំ",
+  "translation-reason-outputFileDidNotExist": "ឯកសារបញ្ចេញ %%outputFile%% មិនមាន",
+  "translation-reason-userMissingReferenceValueHash": "មិនទាន់មានអត្តសញ្ញាណបង្ហាញយោងទេ",
+  "translation-reason-userModifiedReferenceValue": "អ្នកប្រើបានកែប្រែឃ្លាយោង",
+  "translation-reason-missingOutputKey": "មិនមានការបកប្រែដែលមានស្រាប់ឡើយ",
+  "translation-reason-missingOutputValueHash": "មិនមានរកឃើញ hash នៅក្នុងឯកសារ cache ទេ",
+  "msg-no-update-needed-for-key": "មិនត្រូវការធ្វើបច្ចុប្បន្នភាពទេសម្រាប់ %%key%%",
+  "msg-rate-limited-sleeping": "បានកំណត់អត្រា; កំពុងសម្ងំ %%interval%%វិ...%%attemptStr%%"
+}

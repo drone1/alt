@@ -1,0 +1,18 @@
+{
+  "msg-translating-key": "Targemt %%key%%",
+  "msg-show-translation-result": "Ittubddl %%key%%: \"%%newValue%%\"",
+  "translation-reason-outputFileDidNotExist": "Afaylu n umṭṭay %%outputFile%% ur ittwaf",
+  "translation-reason-userModifiedReferenceValue": "Amsqdac iẓṛig awal n tmatart",
+  "translation-reason-missingOutputKey": "War ulfigh tarjamt izrin",
+  "msg-nothing-to-do": "Ur ugir ad yskar",
+  "msg-finished-with-errors": "Ikmmal s %%errorsEncountered%% tghawsa%%s%%",
+  "msg-translating": "Assuγls...",
+  "msg-preparing-endpoint-config": "Aheggi asewjed n twira n tgensast...",
+  "msg-hitting-provider-endpoint": "Ar nɣwwer i wsɣzen n %%providerName%%%%attemptStr%%...",
+  "msg-no-update-needed-for-key": "Ur ittxṣṣa umijdid i %%key%%",
+  "msg-rate-limited-sleeping": "Gat limité; aqezzem i %%interval%%s...%%attemptStr%%",
+  "msg-processing-lang-and-key": "[%%progress%%%] Assmuttg i %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Tasinmirt tuḥtemt",
+  "translation-reason-userMissingReferenceValueHash": "War-xtyan tamdayt ummsswm n tsulit",
+  "translation-reason-missingOutputValueHash": "Ur ittuf umaway d usdal n ufaylu"
+}

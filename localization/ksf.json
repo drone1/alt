@@ -1,0 +1,18 @@
+{
+  "msg-finished-with-errors": "Ɣoo nɨ %%errorsEncountered%% tɨtɨ%%s%%",
+  "msg-translating-key": "Ɔ ncɛŋ %%key%%",
+  "msg-preparing-endpoint-config": "Sɔ̌ŋnɛ tɛnʃwē pā̰ ndōnʃí pā jā-à...",
+  "msg-hitting-provider-endpoint": "Ntúr ŋúkjó%%providerName%%nɔ́%%attemptStr%%...",
+  "msg-show-translation-result": "V'ah ntɛnri %%key%%: \"%%newValue%%\"",
+  "translation-reason-outputFileDidNotExist": "Nshwìʼ nsùʼ mbè %%outputFile%% kàʼá mbɛ̀",
+  "translation-reason-userMissingReferenceValueHash": "Kɔb ki hash yǝ kwɔbtǝ",
+  "translation-reason-userModifiedReferenceValue": "Rɛ́vîs yi̤ ntɛ́t rɨ mkpàŋsǝʼ",
+  "translation-reason-missingOutputKey": "Ŋjɨ ŋɨnɨŋ pɛn mɨnɨŋ",
+  "translation-reason-missingOutputValueHash": "Kɑh kón khǝ yɑ yu ncɑʼ yu lɑb e lin yú",
+  "msg-nothing-to-do": "Ap̓ ŋkɛma ɛtu lika",
+  "msg-translating": "Nstúŋə́....",
+  "msg-no-update-needed-for-key": "Ŋkɛt yo yɛn yé njyɛ tsɛm pú %%key%%",
+  "msg-rate-limited-sleeping": "Riŋé limitéɛ ; ntalé yi %%interval%%s…%%attemptStr%%",
+  "msg-processing-lang-and-key": "[%%progress%%%] Njʉ nkɔ' n‍tɛt %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Ntswa᷆ ntáŋntáŋ"
+}

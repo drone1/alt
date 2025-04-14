@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "ކުރާނެ އެއްވެސް ކަމެއް ނެތް",
+  "msg-finished-with-errors": "ނިމިއްޖެ، %%errorsEncountered%% އެރަރު%%s%% އާއެކު",
+  "msg-translating": "ތަރުޖަމާކުރެވެމުން...",
+  "msg-translating-key": "%%key%% ތަރުޖަމާކުރަނީ",
+  "msg-preparing-endpoint-config": "ކޮޅުމަގު ކޮންފިގަރޭޝަން ތައްޔާރުކުރަމުން...",
+  "msg-hitting-provider-endpoint": "%%providerName%% އެންޑްޕޮއިންޓަށް%%attemptStr%% ޖެހެމުން...",
+  "msg-show-translation-result": "Translate ވެފައިވަނީ %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] ޕްރޮސެސްކުރަނީ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "މަޖުބޫރު އަޕްޑޭޓް",
+  "translation-reason-outputFileDidNotExist": "އައުޓްޕުޓް ފައިލް %%outputFile%% ވުޖޫދުގައި ނެތް",
+  "translation-reason-userMissingReferenceValueHash": "ރެފެރެންސް ހޭޝްއެއް ފެނިފައެއް ނުވޭ",
+  "translation-reason-userModifiedReferenceValue": "ޔޫޒަރ ބަދަލުކޮށްފައިވާ ރެފަރެންސް ސްޓްރިންގ",
+  "translation-reason-missingOutputKey": "ކުރިން ކުރެވިފައިވާ ތަރުޖަމާއެއް ނުފެނުނެވެ",
+  "translation-reason-missingOutputValueHash": "ހާޝް ފައިންޑް ނުވި ކޭޝް ފައިލްގައި",
+  "msg-no-update-needed-for-key": "%%key%% އަށް އަޕްޑޭޓެއް ބޭނުމެއް ނޫން",
+  "msg-rate-limited-sleeping": "ރޭޓު ލިމިޓުކުރެވިފައި؛ %%interval%%s ވަންދެން މަޑުކުރަނީ...%%attemptStr%%"
+}

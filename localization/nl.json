@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Niets te doen",
+  "msg-finished-with-errors": "Afgerond met %%errorsEncountered%% fout%%s%%",
+  "msg-translating": "Bezig met vertalen...",
+  "msg-translating-key": "Het vertalen van %%key%%",
+  "msg-preparing-endpoint-config": "Endpoint-configuratie voorbereiden...",
+  "msg-hitting-provider-endpoint": "Contact maken met %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Vertaald %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Verwerken van %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Gedwongen update",
+  "translation-reason-outputFileDidNotExist": "Uitvoerbestand %%outputFile%% bestond niet",
+  "translation-reason-userMissingReferenceValueHash": "Geen referentiehash gevonden",
+  "translation-reason-userModifiedReferenceValue": "Gebruiker heeft referentiestring aangepast",
+  "translation-reason-missingOutputKey": "Geen bestaande vertaling gevonden",
+  "translation-reason-missingOutputValueHash": "Geen hash gevonden in cachebestand",
+  "msg-no-update-needed-for-key": "Geen update nodig voor %%key%%",
+  "msg-rate-limited-sleeping": "Rate limiet bereikt; wachten voor %%interval%%s...%%attemptStr%%"
+}

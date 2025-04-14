@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Heç nə etmək lazım deyil",
+  "msg-finished-with-errors": "%%errorsEncountered%% xəta%%s%% ilə tamamlandı",
+  "msg-translating": "Tərcümə edilir...",
+  "msg-translating-key": "%%key%% tərcümə edilir",
+  "msg-preparing-endpoint-config": "Sonluq konfiqurasiyası hazırlanır...",
+  "msg-hitting-provider-endpoint": "%%providerName%% sonluğuna çatma%%attemptStr%%...",
+  "msg-show-translation-result": "Tərcümə edilmiş %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] %%targetLang%% – %%key%% emal edilir...",
+  "translation-reason-forced": "Məcburi yeniləmə",
+  "translation-reason-outputFileDidNotExist": "Çıxış faylı %%outputFile%% mövcud deyil",
+  "translation-reason-userMissingReferenceValueHash": "Heç bir istinad heşi tapılmadı",
+  "translation-reason-userModifiedReferenceValue": "İstifadəçi istinad sətrini dəyişdirdi",
+  "translation-reason-missingOutputKey": "Mövcud tərcümə tapılmadı",
+  "translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı",
+  "msg-no-update-needed-for-key": "%%key%% üçün yeniləmə tələb olunmur",
+  "msg-rate-limited-sleeping": "Rate lımıtlı; %%interval%% saniyə yatır...%%attemptStr%%"
+}

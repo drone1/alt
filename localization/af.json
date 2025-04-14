@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Niks om te doen nie",
+  "msg-finished-with-errors": "Klaar met %%errorsEncountered%% fout%%s%%",
+  "msg-translating": "Vertaal...",
+  "msg-translating-key": "Besig om %%key%% te vertaal",
+  "msg-preparing-endpoint-config": "Besig om endpuntkonfigurasie voor te berei...",
+  "msg-hitting-provider-endpoint": "Tref %%providerName%% eindpunt%%attemptStr%%...",
+  "msg-show-translation-result": "Vertaalde %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Verwerking %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Gedwonge opdatering",
+  "translation-reason-outputFileDidNotExist": "Uitvoerlêer %%outputFile%% het nie bestaan nie",
+  "translation-reason-userMissingReferenceValueHash": "Geen verwysingshuts gevind",
+  "translation-reason-userModifiedReferenceValue": "Gebruiker het verwysingstring gewysig",
+  "translation-reason-missingOutputKey": "Geen bestaande vertaling gevind",
+  "translation-reason-missingOutputValueHash": "Geen sleutelkode gevind in die kasgeheuelêer nie",
+  "msg-no-update-needed-for-key": "Geen opdatering nodig vir %%key%%",
+  "msg-rate-limited-sleeping": "Tempo beperk; slaap vir %%interval%%s...%%attemptStr%%"
+}

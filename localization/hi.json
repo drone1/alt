@@ -1,0 +1,18 @@
+{
+  "msg-translating-key": "%%key%% का अनुवाद करना",
+  "msg-preparing-endpoint-config": "एंडपॉइंट कॉन्फ़िगरेशन तैयार कर रहा है...",
+  "msg-show-translation-result": "अनुवादित %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] प्रोसेसिंग %%targetLang%% – %%key%%...",
+  "translation-reason-userMissingReferenceValueHash": "कोई संदर्भ हैश नहीं मिला",
+  "translation-reason-missingOutputValueHash": "कैश फ़ाइल में कोई हैश नहीं मिला",
+  "msg-nothing-to-do": "कुछ नहीं करना है",
+  "msg-finished-with-errors": "%%errorsEncountered%% त्रुटि%%s%% के साथ समाप्त हुआ",
+  "msg-translating": "अनुवाद किया जा रहा है...",
+  "msg-hitting-provider-endpoint": "%%providerName%% एंडपॉइंट%%attemptStr%% हिट कर रहा है...",
+  "msg-no-update-needed-for-key": "%%key%% के लिए कोई अपडेट आवश्यक नहीं है",
+  "msg-rate-limited-sleeping": "रेट लिमिटेड; %%interval%%s के लिए सोया जा रहा है...%%attemptStr%%",
+  "translation-reason-forced": "बाध्य अद्यतन",
+  "translation-reason-outputFileDidNotExist": "आउटपुट फ़ाइल %%outputFile%% मौजूद नहीं थी",
+  "translation-reason-userModifiedReferenceValue": "उपयोगकर्ता द्वारा संशोधित संदर्भ स्ट्रिंग",
+  "translation-reason-missingOutputKey": "कोई मौजूदा अनुवाद नहीं मिला"
+}

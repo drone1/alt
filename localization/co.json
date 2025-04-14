@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nunda à fà",
+  "msg-finished-with-errors": "Terminatu cù %%errorsEncountered%% errore%%s%%",
+  "msg-translating": "Traduisant...",
+  "msg-translating-key": "Traduzindomi %%key%%",
+  "msg-preparing-endpoint-config": "Preparandu configurazione d'u puntu d'accesso…",
+  "msg-hitting-provider-endpoint": "Accoppendu l'endpoint di %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traduit %%key%% : « %%newValue%% »",
+  "msg-processing-lang-and-key": "[%%progress%%%] Trattamentu %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Aghjurnamentu forzatu",
+  "translation-reason-outputFileDidNotExist": "U schedariu d'esciuta %%outputFile%% ùn esistia micca",
+  "translation-reason-userMissingReferenceValueHash": "Ùn truòva micca ùn hash di riferimentu",
+  "translation-reason-userModifiedReferenceValue": "Utilizzaturi hà mudificatu a stringa di riferimentu",
+  "translation-reason-missingOutputKey": "Ùn ci hè traduzzione esistente",
+  "translation-reason-missingOutputValueHash": "Ùn hè stata trova nissun hash in u schedariu di cache",
+  "msg-no-update-needed-for-key": "Ùn hè micca bisognu di aghjurnamentu per %%key%%",
+  "msg-rate-limited-sleeping": "Otri limitatu; riposu %% interval%%s... %%attemptStr%%"
+}

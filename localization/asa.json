@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Sìtã̀ kãti ákõ̃",
+  "msg-finished-with-errors": "Nkʉwíya na %%errorsEncountered%% ʉbaya%%s%%",
+  "msg-translating": "Ewalasai...",
+  "msg-translating-key": "Ye alwo bicha %%key%%",
+  "msg-preparing-endpoint-config": "Afasaa idui giri...",
+  "msg-hitting-provider-endpoint": "Tienga afasi achi %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Ɔsɛan %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Nsinikinaa %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Bikyiwa ahùabeë",
+  "translation-reason-outputFileDidNotExist": "Fɨkiɨ yɛ ŋgwasali %%outputFile%% ka ɨ́ ɓoʼo",
+  "translation-reason-userMissingReferenceValueHash": "Ndoijaṅguta ḿtëëíí ẃaa ëtikaré",
+  "translation-reason-userModifiedReferenceValue": "Utampya siuketa ngoloboi owuaapala",
+  "translation-reason-missingOutputKey": "Ibi mawu a yimbwo ma isa",
+  "translation-reason-missingOutputValueHash": "Ibai ihye jisipatu mana iheyeti mboki jaani",
+  "msg-no-update-needed-for-key": "Isiyo haja ya kuboresha kwa %%key%%",
+  "msg-rate-limited-sleeping": "Nkutɨndɨ wʉkɨpimɨka; kʉɨndɨla kɨlala pɨtʉ %%interval%%s...%%attemptStr%%"
+}

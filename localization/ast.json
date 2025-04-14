@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Nada que facer",
+  "msg-finished-with-errors": "Acabáu con %%errorsEncountered%% error%%s%%",
+  "msg-translating": "Traduciendo...",
+  "msg-translating-key": "Traduciendo %%key%%",
+  "msg-preparing-endpoint-config": "Preparando configuración del puntu terminal...",
+  "msg-hitting-provider-endpoint": "Acutando nel puntu d'accesu de %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Traducíu %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Procesando %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Anovamientu forzosu",
+  "translation-reason-outputFileDidNotExist": "El ficheru de salida %%outputFile%% nun esistía",
+  "translation-reason-userMissingReferenceValueHash": "Nun s'atopó nengún hash de referencia",
+  "translation-reason-userModifiedReferenceValue": "L'usuariu modificó la cuerda de referencia",
+  "translation-reason-missingOutputKey": "Nun s'alcontró traducción esistente",
+  "translation-reason-missingOutputValueHash": "Nun s'alcontró'l hash na caché",
+  "msg-no-update-needed-for-key": "Nun se precisa actualización pa %%key%%",
+  "msg-rate-limited-sleeping": "Rate limited; esperando %%interval%%s...%%attemptStr%%"
+}

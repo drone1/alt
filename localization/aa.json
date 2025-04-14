@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Naafi gafibiiee",
+  "msg-finished-with-errors": "Ɛɔˈɔʃɛ ʊɪð %%errorsEncountered%% ɛɹɔ%%s%%",
+  "msg-translating": "Fanseñgiratoiŋ...",
+  "msg-translating-key": "Haawa %%key%%",
+  "msg-preparing-endpoint-config": "Paŋfan oketjur endpoint konfigureshan...",
+  "msg-hitting-provider-endpoint": "Bheeşin %%providerName%% endpoint%%attemptStr%%...",
+  "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] %%targetLang%% daagii daraq – %%key%%...",
+  "translation-reason-forced": "A gboye didi",
+  "translation-reason-outputFileDidNotExist": "Output file %%outputFile%% ti'ay akka'an",
+  "translation-reason-userMissingReferenceValueHash": "Weeyi tirootoo piŋpiŋ suŋ gɔ̀-nɛ̀",
+  "translation-reason-userModifiedReferenceValue": "Faayaa gabattatino maqaa shoshila",
+  "translation-reason-missingOutputKey": "Tarin saamootiin horachuun hin jiru",
+  "translation-reason-missingOutputValueHash": "No hash found in cache file",
+  "msg-no-update-needed-for-key": "Amba akilivu nfaaniyu alaele %%key%%",
+  "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%"
+}

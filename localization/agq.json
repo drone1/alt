@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Ā ye kɔ ntsàʼ mɔ ŋgàʼ",
+  "msg-finished-with-errors": "À nju yī %%errorsEncountered%% fa%%s%%",
+  "msg-translating": "A lòʼò yɨ...",
+  "msg-translating-key": "Ntsa̱'átə %%key%%",
+  "msg-preparing-endpoint-config": "A-nkɨɨ ŋgɨŋ nɔ̀ŋkù nkfʉ ɨfɛɛ...",
+  "msg-hitting-provider-endpoint": "Ŋgà ŋʉ̀kì %%providerName%% ntsè bɨ nyɨm%%attemptStr%%...",
+  "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Tsi'gha %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Ntsèʼ ndî nɨ lam",
+  "translation-reason-outputFileDidNotExist": "Nd̄ŋgɨm atɛtɛ %%outputFile%% agā kɨ̄ dzɨ̄",
+  "translation-reason-userMissingReferenceValueHash": "Kāŋ kɨ tɨm tɨ̄ kɨ ghɨ̄ī fɨ̀f wū",
+  "translation-reason-userModifiedReferenceValue": "Ndo\"ò zo' a wɛn nu ngo ngwò' a mò'tē àmūŋ",
+  "translation-reason-missingOutputKey": "Ndiŋ a ntoŋ mɨlʉ mbu a tsu",
+  "translation-reason-missingOutputValueHash": "Ɛ̀ ghè tso ha mu atu nchyɛ̀ ntsɨ'",
+  "msg-no-update-needed-for-key": "Kɨ ntsɨʼɨ kɨ ŋkfɛ kɨ a %%key%%",
+  "msg-rate-limited-sleeping": "Ngɛ nzɨ fʉ̀ʉ̀; a tsa nɨɨn ghɨ nɨn ba fʉ nɨ %%interval%%s...%%attemptStr%%"
+}

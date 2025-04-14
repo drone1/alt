@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "ምንም የሚደረግ ነገር የለም",
+  "msg-finished-with-errors": "ያለቀው ከ %%errorsEncountered%% ስህተት%%s%%",
+  "msg-translating": "ተርጉሞ...",
+  "msg-translating-key": "%%key%% በመተርጎም ላይ",
+  "msg-preparing-endpoint-config": "የመዳረሻ ነጥብ ውቅር በማዘጋጀት ላይ...",
+  "msg-hitting-provider-endpoint": "%%providerName%% መድረሻን%%attemptStr%% እየመታ ነው...",
+  "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] በማቀናበር ላይ %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "የግድ ማዘመን",
+  "translation-reason-outputFileDidNotExist": "የውጤት ፋይል %%outputFile%% የለም",
+  "translation-reason-userMissingReferenceValueHash": "ምንም የማጣቀሻ ሃሽ አልተገኘም",
+  "translation-reason-userModifiedReferenceValue": "የተጠቃሚ የተቀየረው የማጣቀሻ ሕብረቁምፊ",
+  "translation-reason-missingOutputKey": "ምንም የነበረ ትርጉም አልተገኘም",
+  "translation-reason-missingOutputValueHash": "በካሽ ፋይሉ ውስጥ ምንም ሃሽ አልተገኘም",
+  "msg-no-update-needed-for-key": "%%key%% ላይ ምንም ማዘመኛ አያስፈልግም",
+  "msg-rate-limited-sleeping": "የተወሰነ መጠን ደርሷል፤ ለ%%interval%%ሰ... እየተኛ ነው%%attemptStr%%"
+}

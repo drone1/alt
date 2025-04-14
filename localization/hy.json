@@ -1,0 +1,18 @@
+{
+  "msg-finished-with-errors": "Ավարտված է %%errorsEncountered%% սխալ%%s%%-ով",
+  "msg-translating": "Թարգմանվում է...",
+  "msg-preparing-endpoint-config": "Վերջնակետի կարգավորումը նախապատրաստվում է...",
+  "msg-show-translation-result": "Թարգմանված %%key%%: \"%%newValue%%\"",
+  "translation-reason-forced": "Պարտադիր թարմացում",
+  "translation-reason-missingOutputKey": "Գոյություն ունեցող թարգմանություն չի գտնվել",
+  "msg-nothing-to-do": "Անելիք չկա",
+  "msg-translating-key": "Թարգմանել %%key%%",
+  "msg-hitting-provider-endpoint": "Սեղմում %%providerName%% վերջնակետին%%attemptStr%%...",
+  "msg-no-update-needed-for-key": "%%key%%-ի համար թարմացում հարկավոր չէ",
+  "msg-rate-limited-sleeping": "Արագության սահմանափակում; քնելով %%interval%%վ...%%attemptStr%%",
+  "msg-processing-lang-and-key": "[%%progress%%%] Մշակում %%targetLang%% – %%key%%...",
+  "translation-reason-outputFileDidNotExist": "Արտահանվածի ֆայլը %%outputFile%% գոյություն չունի",
+  "translation-reason-userMissingReferenceValueHash": "Հղման հեշը չի գտնվել",
+  "translation-reason-userModifiedReferenceValue": "Օգտատերը փոփոխել է հղման տողը",
+  "translation-reason-missingOutputValueHash": "Քեշ ֆայլում հեշ չի գտնվել"
+}

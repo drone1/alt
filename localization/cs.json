@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Není co dělat",
+  "msg-finished-with-errors": "Hotovo s %%errorsEncountered%% chybou/chybami%%s%%",
+  "msg-translating": "Překládám...",
+  "msg-translating-key": "Překládání %%key%%",
+  "msg-preparing-endpoint-config": "Připravuje se konfigurace koncového bodu...",
+  "msg-hitting-provider-endpoint": "Kontaktuji endpoint služby %%providerName%%%%attemptStr%%...",
+  "msg-show-translation-result": "Přeloženo %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Zpracování %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Vynucená aktualizace",
+  "translation-reason-outputFileDidNotExist": "Výstupní soubor %%outputFile%% neexistuje",
+  "translation-reason-userMissingReferenceValueHash": "Žádný referenční hash nenalezen",
+  "translation-reason-userModifiedReferenceValue": "Uživatel změnil referenční řetězec",
+  "translation-reason-missingOutputKey": "Nebyl nalezen žádný existující překlad",
+  "translation-reason-missingOutputValueHash": "V souboru mezipaměti nebyl nalezen žádný hash",
+  "msg-no-update-needed-for-key": "Žádná aktualizace není potřeba pro %%key%%",
+  "msg-rate-limited-sleeping": "Překročen limit frekvence; čekám %%interval%% s...%%attemptStr%%"
+}

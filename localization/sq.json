@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Asgjë për të bërë",
+  "msg-finished-with-errors": "Përfunduar me %%errorsEncountered%% gabim%%s%%",
+  "msg-translating": "Duke përkthyer...",
+  "msg-show-translation-result": "Përkthyer %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Duke përpunuar %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Përditësim i detyruar",
+  "translation-reason-outputFileDidNotExist": "Skedari i daljes %%outputFile%% nuk ekzistonte",
+  "translation-reason-missingOutputKey": "Nuk u gjet përkthim ekzistues",
+  "msg-translating-key": "Duke përkthyer %%key%%",
+  "msg-preparing-endpoint-config": "Duke përgatitur konfigurimin e pikës fundore...",
+  "msg-hitting-provider-endpoint": "Duke goditur pikën përfundimtare të %%providerName%%%%attemptStr%%...",
+  "msg-no-update-needed-for-key": "Nuk ka nevojë për përditësim për %%key%%",
+  "msg-rate-limited-sleeping": "Kufizim ritme; po bëj pushim për %%interval%%s...%%attemptStr%%",
+  "translation-reason-userMissingReferenceValueHash": "Asnjë hash reference i gjetur",
+  "translation-reason-userModifiedReferenceValue": "Përdoruesi modifikoi vargun e referencës",
+  "translation-reason-missingOutputValueHash": "Në skedarin e memories nuk u gjet asnjë hash"
+}

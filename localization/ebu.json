@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Gutiri gututhiria",
+  "msg-finished-with-errors": "Niukunjite na makosa %%errorsEncountered%% mak%%s%%",
+  "msg-translating": "Gũtaũra...",
+  "msg-translating-key": "Gutaũra %%key%%",
+  "msg-preparing-endpoint-config": "Guthondekania kwambiriria kia njira...",
+  "msg-hitting-provider-endpoint": "Kuringiria kiringiro kya %%providerName%% %%attemptStr%%...",
+  "msg-show-translation-result": "Ukũretwe %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Gutua %%targetLang%% – %%key%%...",
+  "translation-reason-forced": "Kuringirithia kwa kibango",
+  "translation-reason-outputFileDidNotExist": "Failu ya kuuma %%outputFile%% ndyaari kuo",
+  "translation-reason-userMissingReferenceValueHash": "Gūtirī reference hash yonekete",
+  "translation-reason-userModifiedReferenceValue": "Muūthũri akraĩkya kirevi kya nthĩgũrũko",
+  "translation-reason-missingOutputKey": "Gũtirĩ ũtaũri ũcio ũthinganĩte ũronekete",
+  "translation-reason-missingOutputValueHash": "Gutiri hash yonekete kiri faili ya cache",
+  "msg-no-update-needed-for-key": "Gutiri kionereri kionetie gia %%key%%",
+  "msg-rate-limited-sleeping": "Gwitia ntuku; gukoma kwa %%interval%%s...%%attemptStr%%"
+}

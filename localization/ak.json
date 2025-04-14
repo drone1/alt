@@ -1,0 +1,18 @@
+{
+  "msg-nothing-to-do": "Hwee ho nni hɔ",
+  "msg-finished-with-errors": "Wawie ɛwɔ %%errorsEncountered%% mfomsoɔ%%s%%",
+  "msg-translating": "Rekyerɛ...",
+  "msg-translating-key": "Rekyerɛ %%key%%",
+  "msg-preparing-endpoint-config": "Resiesie endpoint nhyehyɛe no...",
+  "msg-hitting-provider-endpoint": "Rehyɛ %%providerName%% ahwɛbea%%attemptStr%%...",
+  "msg-show-translation-result": "Ɛdi nkyer̃easeɛ %%key%%: \"%%newValue%%\"",
+  "msg-processing-lang-and-key": "[%%progress%%%] Reyɛ adwumaden wɔ %%targetLang%% mu - %%key%%...",
+  "translation-reason-forced": "Nhyɛsoɔ foforo",
+  "translation-reason-outputFileDidNotExist": "Awiemfoɔ fael %%outputFile%% no nnyi hɔ",
+  "translation-reason-userMissingReferenceValueHash": "Wonhunhunu referɛns hash biara",
+  "translation-reason-userModifiedReferenceValue": "Ɔdeɛfoɔ asesa nhwɛsoɔ hantam no",
+  "translation-reason-missingOutputKey": "Wɔnnhuu nkyerɛase biara a ɛwɔ hɔ dedaw",
+  "translation-reason-missingOutputValueHash": "Wɔanhunu hash biara wɔ cache file no mu",
+  "msg-no-update-needed-for-key": "Nhwɛsoɔ wohia mma %%key%%",
+  "msg-rate-limited-sleeping": "Wɔahyɛ no ka; ɛredae %%interval%%s...%%attemptStr%%"
+}
