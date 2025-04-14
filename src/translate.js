@@ -468,7 +468,6 @@ async function translateKeyForLanguage({
 		const translateResult = await translate({
 			appState,
 			listrTask,
-			ctx,
 			provider: translationProvider,
 			text: refValue,
 			context: refContextValue,
@@ -574,7 +573,6 @@ async function translateTextViaProvider({
 async function translate({
 													 appState,
 													 listrTask,
-													 ctx,
 													 provider,
 													 appContextMessage,
 													 text,
