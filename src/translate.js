@@ -161,8 +161,28 @@ export async function runTranslation({ appState, options, log }) {
 				const curValue = (key in outputData) ? outputData[key] : null
 
 				// Skip non-string values (objects, arrays, etc.)
-				if (typeof refValue !== 'string') {
-					errors.push(`Value for reference key "${key}" was not a string! Skipping...`)
+				const refValueType = typeof refValue
+				if (refValueType !== 'string') {
+					if (refValueType === 'undefined') {
+						// This can happen if a user specifies a key explicitly via --keys
+						errors.push(
+							localizeFormatted({
+								token: 'error-value-not-in-reference-data',
+								data: { key },
+								lang: appState.lang,
+								log
+							})
+						)
+					} else {
+						errors.push(
+							localizeFormatted({
+								token: 'error-value-not-a-string',
+								data: { key, type: refValueType },
+								lang: appState.lang,
+								log
+							})
+						)
+					}
 					continue
 				}
 
@@ -485,7 +505,6 @@ async function translateKeyForLanguage({
 
 		if (translateResult.backoffInterval > 0) {
 			log.D(`backing off... interval: ${translateResult.backoffInterval}`)
-			//listrTask.output = 'Rate limited'
 			log.D(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
 			result.nextTaskDelayMs = Math.max(ctx.nextTaskDelayMs, translateResult.backoffInterval)
 		} else {
@@ -517,8 +536,8 @@ async function translateTextViaProvider({
 																					log,
 																					apiKey,
 																					attemptStr,
-																					result,
-																					providerName
+																					providerName,
+																					outResult
 																				}) {
 	try {
 		const providerName = provider.name()
@@ -550,17 +569,17 @@ async function translateTextViaProvider({
 		if (!translated?.length) throw new Error(`${providerName} translated text to empty string. You may need to top up your credits.`)
 		log.D(`${translated}`)
 		if (translated === TRANSLATION_FAILED_RESPONSE_TEXT) throw new Error(`${providerName} failed to translate string to ${targetLang}; string: ${text}`)
-		result.translated = translated
+		outResult.translated = translated
 	} catch (error) {
 		const response = error?.response
 		if (response) {
 			if (response.status === 429) {
-				result.backoffInterval = provider.getSleepInterval(response.headers, log)
-				log.D(`Rate limited; retrying in ${result.backoffInterval}`)
+				outResult.backoffInterval = provider.getSleepInterval(response.headers, log)
+				log.D(`Rate limited; retrying in ${outResult.backoffInterval}`)
 			} else if (error.response.status === 529) { // Unofficial 'overloaded' code
-				result.backoffInterval = OVERLOADED_BACKOFF_INTERVAL_MS
-				log.D(`Overloaded; retrying in ${result.backoffInterval}`)
-				listrTask.output = `${providerName} overloaded; retrying in ${result.backoffInterval / 1000}s `
+				outResult.backoffInterval = OVERLOADED_BACKOFF_INTERVAL_MS
+				log.D(`Overloaded; retrying in ${outResult.backoffInterval}`)
+				listrTask.output = `${providerName} overloaded; retrying in ${outResult.backoffInterval / 1000}s `
 			}
 		} else {
 			log.W(`API failed. Error:`, error.message)
@@ -592,7 +611,7 @@ async function translate({
 		result.translated = text
 	} else {
 		await translateTextViaProvider({
-			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, result, providerName
+			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName, outResult: result
 		})
 	}
 

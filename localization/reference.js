@@ -17,5 +17,8 @@ export default {
 	'msg-translation-reason-userMissingReferenceValueHash': `No reference hash found`,
 	'msg-translation-reason-userModifiedReferenceValue': `User modified reference string`,
 	'msg-translation-reason-missingOutputKey': `No existing translation found`,
-	'msg-translation-reason-missingOutputValueHash': `No hash found in cache file`
+	'msg-translation-reason-missingOutputValueHash': `No hash found in cache file`,
+
+	'error-value-not-a-string': `Value for reference key "%%key%%" was "%%type%%". Expected a string! Skipping...`,
+	'error-value-not-in-reference-data': `Key "%%key%%" did not exist in reference file`
 }
