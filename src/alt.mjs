@@ -24,6 +24,8 @@ const CWD = process.cwd()
 const appState = {
 	filesToWrite: {},	// Map of file path => JSON data to write
 
+	errors: [],
+
 	log: {
 		e: function (...args) {
 			console.error(...args)
@@ -154,7 +156,7 @@ function writeJsonFile(filePath, data, log) {
 	log.v(`Preparing to write ${filePath}...`)
 
 	// Create normalized version of data with consistent key encoding
-	log.d(`Normaliziing data...`)
+	log.d(`Normalizing data...`)
 	const normalizedData = {}
 	for (const [key, value] of Object.entries(data)) {
 		normalizedData[normalizeKey(key)] = value
@@ -173,7 +175,7 @@ function writeJsonFile(filePath, data, log) {
 		log.e(err)
 	}
 
-	log.i(`Writing ${filePath}...`)
+	log.v(`Writing ${filePath}...`)
 	try {
 		fs.writeFileSync(filePath, JSON.stringify(normalizedData, null, 2), 'utf8')
 	} catch (err) {
@@ -192,10 +194,13 @@ async function loadCache(path) {
 	}
 }
 
-async function loadTranslationProvider(providerName) {
+async function loadTranslationProvider(providerName, log) {
 	const apiKeyName = `${providerName.toUpperCase()}_API_KEY`
 	const apiKey = process.env[apiKeyName]
-	if (!apiKey?.length) throw new Error('${apiKeyName} environment variable is not set')
+	if (!apiKey?.length) {
+		log.e(`${apiKeyName} environment variable is not set`)
+		process.exit(1)
+	}
 	return {
 		apiKey,
 		api: await importJsFile(path.resolve(__dirname, `providers/${providerName}.mjs`)),
@@ -244,21 +249,20 @@ export async function run() {
 		program
 			.version(p.version)
 			.description(p.description)
-			.requiredOption('-r, --reference <path>', 'Path to reference JSONC file (default language)')
+			.requiredOption('-r, --reference-file <path>', 'Path to reference JSONC file (default language)')
 			.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
 			.option('-p, --provider <name>', `AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting`)
-			.option('-o, --output-dir <path>', 'Output directory for localized files', process.cwd())
+			.option('-o, --output-dir <path>', 'Output directory for localized files')
 			.option('-l, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
 			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 			.option('-j, --reference-var-name <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
 			.option('-f, --force', 'Force regeneration of all translations', false)
+			.option('-rtw, --realtime-writes', 'Write updates to disk immediately, rather than on shutdown', false)
 			.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
 			.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
-			.option('-c, --config <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
-			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 100)  // This is super high because of the extra-simple way we handle being rate-limited; essentially we want to continue retrying forever but not forever; see comment near relevant code
-			.option('-e, --concurrent <integer>', `Maximum # of concurrent tasks`, 5)
-			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case)`, false)
-			.option('-w, --write-on-quit', `Write files to disk only on quit (including SIGTERM); useful if running ALT causes your server to restart constantly`, false)
+			.option('-c, --config-file <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
+			.option('-x, --max-retries <integer>', 'Maximum retries on failure', 3)
+			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
 			.option('-v, --verbose', `Enables verbose spew`, false)
 			.option('-d, --debug', `Enables debug spew`, false)
 			.option('-t, --trace', `Enables trace spew`, false)
@@ -306,24 +310,44 @@ function initLog({ options, log }) {
 	}
 }
 
+async function loadConfig({ configFile, refFileDir, log }) {
+	let configFilePath
+	if (configFile?.length) {
+		log.v(`Using config file specified by --config-file "${configFile}"...`)
+		configFilePath = configFile
+	} else {
+		log.v(`Using config file path based on reference file dir, "${refFileDir}"...`)
+		configFilePath = path.resolve(refFileDir, DEFAULT_CONFIG_FILENAME)
+	}
+
+	log.v(`Attempting to load config file from "${configFilePath}"`)
+	return await readJsonFile(configFilePath) || {
+		provider: null,
+		targetLanguages: [],
+		lookForContextData: true,
+		contextPrefix: '',
+		contextSuffix: '',
+		referenceLanguage: null,
+		normalizeOutputFilenames: false
+	}
+}
+
 async function runTranslation({ options, log }) {
 	let exitCode = 0
 	try {
+		const refFileDir = path.dirname(options.referenceFile)
+		let outputDir = options.outputDir ?? refFileDir
+
 		// Load config file or create default
-		const configFilePath = options.config ??
-			path.resolve(options.outputDir, DEFAULT_CONFIG_FILENAME)
-		log.v(`Attempting to load config file from "${configFilePath}"`)
-		let config = await readJsonFile(configFilePath) || {
-			targetLanguages: [],
-			lookForContextData: true,
-			contextPrefix: '',
-			contextSuffix: '',
-			referenceLanguage: null
-		}
+		const config = await loadConfig({
+			configFile: options.configFile,
+			refFileDir,
+			log
+		})
 
 		// Validate provider
 		const provider = options.provider ?? config.provider
-		if (!VALID_TRANSLATION_PROVIDERS.includes(options.provider)) {
+		if (!VALID_TRANSLATION_PROVIDERS.includes(provider)) {
 			log.e(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
 			process.exit(2)
 		}
@@ -341,11 +365,13 @@ async function runTranslation({ options, log }) {
 			process.exit(2)
 		}
 
+		const normalizeOutputFilenames = options.normalizeOutputFilenames || config.normalizeOutputFilenames
+
 		// No app context message is OK
 		const appContextMessage = options.appContextMessage ?? config.appContextMessage ?? null
 		log.d(`appContextMessage:`, appContextMessage)
 
-		const cacheFilePath = path.resolve(options.outputDir, DEFAULT_CACHE_FILENAME)
+		const cacheFilePath = path.resolve(outputDir, DEFAULT_CACHE_FILENAME)
 
 		log.v(`Attempting to load cache file from "${cacheFilePath}"`)
 		const readOnlyCache = await loadCache(cacheFilePath)
@@ -357,18 +383,18 @@ async function runTranslation({ options, log }) {
 
 		// Copy to a temp location first so we can ensure it has an .mjs extension
 		const tmpReferencePath = await copyFileToTempAndEnsureExtension({
-			filePath: options.reference,
+			filePath: options.referenceFile,
 			tmpDir,
 			ext: 'mjs',
 		})
 		const referenceContent = normalizeData(JSON.parse(JSON.stringify(await importJsFile(tmpReferencePath))), log)  // TODO: Don't do this
 		const referenceData = referenceContent[options.referenceVarName]
 		if (!referenceData) {
-			log.e(`No reference data found in variable "${options.referenceVarName}" in ${options.reference}`)
+			log.e(`No reference data found in variable "${options.referenceVarName}" in ${options.referenceFile}`)
 			process.exit(2)
 		}
 
-		const referenceHash = calculateHash(await readFileAsText(options.reference))
+		const referenceHash = calculateHash(await readFileAsText(options.referenceFile))
 		const referenceChanged = referenceHash !== readOnlyCache.referenceHash
 		if (referenceChanged) {
 			log.v('Reference file has changed since last run')
@@ -384,180 +410,211 @@ async function runTranslation({ options, log }) {
 		assertValidPath(cacheFilePath)
 		appState.filesToWrite[cacheFilePath] = writableCache
 
-		const { apiKey, api: translationProvider } = await loadTranslationProvider(options.provider)
+		const { apiKey, api: translationProvider } = await loadTranslationProvider(provider, log)
 		log.v(`translation provider "${options.provider}" loaded`)
-
-		const tasks = new Listr([], {
-			concurrent: false, // Process languages one by one
-			...(options.tty ? { renderer: 'simple' } : {}),
-			rendererOptions: { collapse: true, clearOutput: true },
-			clearOutput: false,
-			registerSignalListeners: true,
-		})
-
-		appState.tasks = tasks
 
 		const addContextToTranslation = options.lookForContextData || config.lookForContextData
 
+		const workQueue = []
+		const errors = appState.errors
+
 		// Process each language
-		for (const lang of targetLanguages) {
-			log.d(`Processing language ${lang}...`)
-			let stringsTranslatedForLanguage = 0
-
-			let outputDataModified = false
-
+		for (const targetLang of targetLanguages) {
+			log.d(`Processing language ${targetLang}...`)
 			const outputFilePath = normalizeOutputPath({
-				dir: options.outputDir,
-				filename: `${lang}.json`,
-				normalize: options.normalizeOutputFilenames,
+				dir: outputDir,
+				filename: `${targetLang}.json`,
+				normalize: normalizeOutputFilenames
 			})
 			log.d(`outputFilePath=${outputFilePath}`)
 
 			// Read existing output data
 			let outputData = normalizeData(await readJsonFile(outputFilePath)) || {}
+			let outputFileDidNotExist = false
 			if (!outputData) {
-				outputData = {}
-				outputDataModified = true
+				outputFileDidNotExist = true
 			}
 
 			// Initialize language in cache if it doesn't exist
-			if (!writableCache.state[lang]) {
-				log.v(`lang ${lang} not in cache; update needed...`)
-				writableCache.state[lang] = { keyHashes: {} }
+			if (!writableCache.state[targetLang]) {
+				log.v(`target language ${targetLang} not in cache; update needed...`)
+				writableCache.state[targetLang] = { keyHashes: {} }
 			}
 
-			tasks.add([
-				{
-					title: `Localize "${lang}"`,
-					task: async (ctx, task) => {
-						ctx.nextTaskDelayMs = 0
+			let keysToProcess = options.keys?.length
+				? options.keys
+				: Object.keys(referenceData)
 
-						let keysToProcess = options.keys?.length
-							? options.keys
-							: Object.keys(referenceData)
+			if (addContextToTranslation) {
+				keysToProcess = keysToProcess
+					.filter(key => !isContextKey({
+						key,
+						contextPrefix: options.contextPrefix ?? config.contextPrefix,
+						contextSuffix: options.contextSuffix ?? config.contextSuffix
+					}))
+			}
 
-						if (addContextToTranslation) {
-							keysToProcess = keysToProcess
-								.filter(key => !isContextKey({
-									key,
-									contextPrefix: options.contextPrefix ?? config.contextPrefix,
-									contextSuffix: options.contextSuffix ?? config.contextSuffix
-								}))
-						}
+			log.t(`keys to process: ${keysToProcess.join(',')}`)
+			for (const key of keysToProcess) {
+				const contextKey = formatContextKeyFromKey({
+					key,
+					prefix: options.contextPrefix,
+					suffix: options.contextSuffix
+				})
+				log.t(`contextKey=${contextKey}`)
+				const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
+				const storedHashForTargetLangAndValue = readOnlyCache.state[targetLang]?.keyHashes?.[key]
+				const refValue = referenceData[key]
+				const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
+				const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
+				const curValue = (key in outputData) ? outputData[key] : null
 
-						log.t(`keys to process: ${keysToProcess.join(',')}`)
-						const subtasks = keysToProcess.map(key => {
-							const contextKey = formatContextKeyFromKey({
-								key,
-								prefix: options.contextPrefix,
-								suffix: options.contextSuffix
-							})
-							log.t(`contextKey=${contextKey}`)
-							const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[key]
-							const storedHashForLangAndValue = readOnlyCache.state[lang]?.keyHashes?.[key]
-							const refValue = referenceData[key]
-							const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
-							const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
-							const curValue = (key in outputData) ? outputData[key] : null
-							return {
-								title: `Processing "${key}"`,
-								task: async (ctx, subtask) => {
-									const {
-										success,
-										translated,
-										newValue,
-										userModifiedTargetValue,
-										error
-									} = await translateKeyForLanguage({
-										task: subtask,
-										ctx,
-										config,
-										translationProvider,
-										apiKey,
-										appContextMessage,
-										referenceValueHash,
-										storedHashForReferenceValue,
-										storedHashForLangAndValue,
-										lang,
-										key,
-										refValue,
-										refContextValue,
-										curValue,
-										options,
-										log
-									})
-
-									if (success) {
-										++stringsTranslatedForLanguage
-
-										if (translated) {
-											outputDataModified = true
-											outputData[key] = newValue
-
-											// Write real-time translation updates
-											if (!options.writeOnQuit) {
-												await writeJsonFile(outputFilePath, outputData, log)
-												log.v(`Wrote ${outputFilePath}`)
-											} else {
-												log.v(`Delaying write for ${outputFilePath} due to --writeOnQuit...`)
-											}
-
-											const hashForTranslated = calculateHash(newValue)
-											log.d(`Updating hash for translated ${lang}.${key}: ${hashForTranslated}`)
-											writableCache.state[lang].keyHashes[key] = hashForTranslated
-											subtask.title = `Translated ${key}: "${newValue}"`
-
-											// Update the hash for the reference key, so we can monitor if the user changed a specific key
-											writableCache.referenceKeyHashes[key] = referenceValueHash
-
-											// Update state file every time, in case the user kills the process
-											if (!options.writeOnQuit) {
-												await writeJsonFile(cacheFilePath, writableCache, log)
-												log.v(`Wrote ${cacheFilePath}`)
-											} else {
-												log.v(`Delaying write for ${cacheFilePath} due to --writeOnQuit...`)
-											}
-										} else {
-											log.v(`Keeping existing translation and hash for ${lang}/${key}...`)
-
-											// Allow the user to directly edit/tweak output key values
-											if (userModifiedTargetValue) {
-												subtask.title = `Skipping ${key}; value modified by user`
-											} else {
-												subtask.title = `No update needed for ${key}`
-											}
-										}
-
-										// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving
-										// immediately but rendering is far behind
-										await sleep(1)
-									} else if (error) {
-										throw new Error(error)
-									}
-
-									log.d('writeOnQuit', options.writeOnQuit)
-									log.d(outputDataModified)
-									if (options.writeOnQuit && outputDataModified && !(outputFilePath in appState.filesToWrite)) {
-										log.d(`Noting write-on-quit needed for ${outputFilePath}...`)
-										appState.filesToWrite[outputFilePath] = outputData
-									}
-								}	// End of task function
-							}
-						})
-
-						return task.newListr(
-							subtasks, {
-								concurrent: parseInt(options.concurrent),
-								rendererOptions: { collapse: true, persistentOutput: true },
-								registerSignalListeners: true
-							}
-						)
-					}
+				// Skip non-string values (objects, arrays, etc.)
+				if (typeof refValue !== 'string') {
+					errors.push(`Value for reference key "${key}" was not a string! Skipping...`)
+					continue
 				}
-			])
+
+				const currentValueHash = curValue?.length ? calculateHash(curValue) : null
+
+				// Check if translation needs update
+				const missingOutputKey = curValue === null
+				const missingOutputValueHash = storedHashForTargetLangAndValue === null
+
+				// Calculate reference value hash and compare with stored hash
+				const userMissingReferenceValueHash = !storedHashForReferenceValue?.length
+				const userModifiedReferenceValue = Boolean(referenceValueHash) && Boolean(storedHashForReferenceValue) && referenceValueHash !== storedHashForReferenceValue
+				const userModifiedTargetValue = Boolean(storedHashForTargetLangAndValue) && Boolean(currentValueHash) && currentValueHash !== storedHashForTargetLangAndValue
+
+				log.d(`Reference key: "${key}"`)
+				log.d('storedHashForReferenceValue', storedHashForReferenceValue)
+				log.d('referenceValueHash ', referenceValueHash)
+				log.d('userMissingReferenceValueHash', userMissingReferenceValueHash)
+				log.d('userModifiedReferenceValue', userModifiedReferenceValue)
+				log.d('curValue', curValue)
+				log.d('currentValueHash', currentValueHash)
+				log.d('storedHashForTargetLangAndValue', storedHashForTargetLangAndValue)
+				log.d('userModifiedTargetValue ', userModifiedTargetValue)
+
+				// Map reason key => true/false
+				const possibleReasonsForTranslationMap = {
+					forced: options.force,
+					outputFileDidNotExist,
+					userMissingReferenceValueHash,
+					userModifiedReferenceValue,
+					missingOutputKey,
+					missingOutputValueHash
+				}
+				log.d(`possibleReasonsForTranslationMap`, possibleReasonsForTranslationMap)
+
+				// Filter out keys which are not true
+				let reasonsForTranslationMap = {}
+				let needsTranslation = false
+				Object.keys(possibleReasonsForTranslationMap)
+					.forEach(k => {
+						if (possibleReasonsForTranslationMap[k]) {
+							reasonsForTranslationMap[k] = true
+							needsTranslation = true
+						}
+					})
+				log.d(`reasonsForTranslationMap`, reasonsForTranslationMap)
+
+				if (needsTranslation && !userModifiedTargetValue) {
+					log.d(`Translation needed for ${targetLang}/${key}...`)
+					if (reasonsForTranslationMap.forced) log.d(`Forcing update...`)
+					if (reasonsForTranslationMap.missingOutputKey) log.d(`No "${key}" in output data...`)
+					if (!reasonsForTranslationMap.storedHashForTargetLangAndValue) log.d(`Hash was not found in storage...`)
+
+					const newTask = {
+						key,
+						sourceLang: referenceLanguage,
+						targetLang,
+						reasonsForTranslationMap,
+						outputData,
+						outputFilePath,
+						writableCache,
+						cacheFilePath,
+						state: {
+							translationProvider,
+							apiKey,
+							appContextMessage,
+							storedHashForReferenceValue,
+							refValue,
+							refContextValue,
+							referenceValueHash,
+							userMissingReferenceValueHash,
+							userModifiedReferenceValue,
+							curValue,
+							currentValueHash,
+							storedHashForTargetLangAndValue
+						}
+					}
+
+					workQueue.push(newTask)
+				} else {
+					if (userModifiedTargetValue) log.d(`User modified target value: hashes differ (${currentValueHash} / ${storedHashForTargetLangAndValue})...`)
+					log.v(`[${targetLang}] ${key} no translation needed.`)
+				}
+			}
 		}
 
-		await tasks.run()
+		let nextTaskDelayMs = 0
+		let totalTasks = workQueue.length
+		let errorsEncountered = 0
+		for (const taskInfoIdx in workQueue) {
+			const taskInfo = workQueue[taskInfoIdx]
+			log.d(taskInfo)
+			const progress = 100 * Math.floor(100 * taskInfoIdx / totalTasks) / 100
+
+			await new Listr([
+				{
+					title: `[${progress}%] Processing ${taskInfo.targetLang}/${taskInfo.key}...`,
+					task: async (ctx, task) => {
+						ctx.nextTaskDelayMs = nextTaskDelayMs
+
+						return task.newListr([
+							{
+								title: 'Translating...',
+								task: async (_, task) => {
+									const translationResult = await processTranslationTask({ taskInfo, listrTask: task, listrCtx: ctx, options, log })
+
+									// TODO: Get this from return value from processTranslationTask()
+									nextTaskDelayMs = translationResult.nextTaskDelayMs
+
+									if (translationResult.error) {
+										++errorsEncountered
+										throw new Error(translationResult.error)
+									}
+
+									// NOTE: Perhaps not needed anymore?
+									// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving
+									// immediately but rendering is far behind
+									await sleep(1)
+								},
+								concurrent: false, // Process languages one by one
+								rendererOptions: { collapse: false, clearOutput: false },
+								exitOnError: false
+							}
+						])
+					}
+				}
+			], {
+				concurrent: false, // Process languages one by one
+				...(options.tty ? { renderer: 'simple' } : {}),
+				rendererOptions: { collapse: false, clearOutput: false },
+				registerSignalListeners: true,
+				collapseSubtasks: false
+			}).run()
+		}
+
+		if (totalTasks > 0) {
+			let str = `[100%] `
+			if (errorsEncountered > 0) str += `Finished with ${errorsEncountered} error${errorsEncountered > 1 ? 's' : ''}`
+			else str += `Done`
+			log.i(`\x1B[38;2;44;190;78m✔\x1B[0m ${str}`)
+		} else {
+			log.i('\x1B[38;2;44;190;78m✔\x1B[0m Nothing to do')
+		}
 	} catch (error) {
 		log.e('Error:', error)
 		exitCode = 2
@@ -570,122 +627,177 @@ async function runTranslation({ options, log }) {
 	}
 }
 
-async function translateKeyForLanguage({
-										   task,
-										   ctx,
-										   translationProvider,
-										   apiKey,
-																				 appContextMessage,
-										   referenceValueHash,
-										   storedHashForReferenceValue,
-										   storedHashForLangAndValue,
-										   lang,
-										   key,
-										   refValue,
-										   refContextValue,
-										   curValue,
-										   options: { force, referenceLanguage, maxRetries },
-										   log,
-									   }) {
-	const result = { success: true, translated: false, userModifiedTargetValue: false, newValue: null, error: null }
+const USER_REASONS_FOR_UPDATES = {
+	forced: `Forced update`,
+	outputFileDidNotExist: f => `Output file ${f} did not exist`,
+	userMissingReferenceValueHash: `No reference hash found`,
+	userModifiedReferenceValue: `User modified reference string`,
+	missingOutputKey: `No existing translation found`,
+	missingOutputValueHash: `No hash found in cache file`
+}
 
-	// Skip non-string values (objects, arrays, etc.)
-	if (typeof refValue !== 'string') {
-		result.error = `Value for reference key "${key}" was not a string! Skipping...`
-		result.success = false
-		return result
+async function processTranslationTask({ taskInfo, listrTask, listrCtx, options, log }) {
+	const { key, sourceLang, targetLang, reasonsForTranslationMap, outputData, outputFilePath, writableCache, cacheFilePath, state } = taskInfo
+	const {
+		translationProvider,
+		apiKey,
+		appContextMessage,
+		storedHashForReferenceValue,
+		refValue,
+		refContextValue,
+		referenceValueHash,
+		userMissingReferenceValueHash,
+		userModifiedReferenceValue,
+		curValue,
+		currentValueHash,
+		storedHashForTargetLangAndValue
+	} = state
+
+	let reasons = Object.keys(reasonsForTranslationMap).map(k => USER_REASONS_FOR_UPDATES[k]).join(', ')
+	listrTask.output = reasons
+
+	const {
+		success,
+		translated,
+		nextTaskDelayMs,
+		newValue,
+		error
+	} = await translateKeyForLanguage({
+		listrTask,
+		ctx: listrCtx,
+		translationProvider,
+		apiKey,
+		referenceValueHash,
+		storedHashForReferenceValue,
+		storedHashForTargetLangAndValue,
+		sourceLang,
+		targetLang,
+		key,
+		refValue,
+		refContextValue,
+		curValue,
+		options,
+		log
+	})
+
+	let outputDataModified = false
+
+	if (success) {
+		if (translated) {
+			outputDataModified = true
+			outputData[key] = newValue
+
+			// Write real-time translation updates
+			if (options.realtimeWrites) {
+				await writeJsonFile(outputFilePath, outputData, log)
+				log.v(`Wrote ${outputFilePath}`)
+			}
+
+			const hashForTranslated = calculateHash(newValue)
+			log.d(`Updating hash for translated ${targetLang}.${key}: ${hashForTranslated}`)
+			writableCache.state[targetLang].keyHashes[key] = hashForTranslated
+			listrTask.output = `Translated ${key}: "${newValue}"`
+
+			// Update the hash for the reference key, so we can monitor if the user changed a specific key
+			writableCache.referenceKeyHashes[key] = referenceValueHash
+
+			// Update state file every time, in case the user kills the process
+			if (options.realtimeWrites) {
+				await writeJsonFile(cacheFilePath, writableCache, log)
+				log.v(`Wrote ${cacheFilePath}`)
+			}
+		} else {
+			log.v(`Keeping existing translation and hash for ${targetLang}/${key}...`)
+
+			// Allow the user to directly edit/tweak output key values
+			listrTask.output = `No update needed for ${key}`
+		}
 	}
 
-	const currentValueHash = curValue?.length ? calculateHash(curValue) : null
+	log.d('realtimeWrites', options.realtimeWrites)
+	log.d(outputDataModified)
+	if (!options.realtimeWrites && outputDataModified && !(outputFilePath in appState.filesToWrite)) {
+		log.d(`Noting write-on-quit needed for ${outputFilePath}...`)
+		appState.filesToWrite[outputFilePath] = outputData
+	}
 
-	// Check if translation needs update
-	const missingOutputKey = curValue === null
-	const missingOutputValueHash = storedHashForLangAndValue === null
+	return { nextTaskDelayMs, error }
+}
 
-	// Calculate reference value hash and compare with stored hash
-	const userMissingReferenceValueHash = !storedHashForReferenceValue?.length
-	const userModifiedReferenceValue = referenceValueHash && storedHashForReferenceValue && referenceValueHash !== storedHashForReferenceValue
-	const userModifiedTargetValue = storedHashForLangAndValue && currentValueHash && currentValueHash !== storedHashForLangAndValue
-	result.userModifiedTargetValue = userModifiedTargetValue
+async function translateKeyForLanguage({
+																				 listrTask,
+																				 ctx,
+																				 translationProvider,
+																				 apiKey,
+																				 appContextMessage,
+																				 sourceLang,
+																				 targetLang,
+																				 key,
+																				 refValue,
+																				 refContextValue,
+																				 options: { force, referenceLanguage, maxRetries },
+																				 log
+																			 }) {
+	const result = { success: false, translated: false, newValue: null, nextTaskDelayMs: 0, error: null }
 
-	log.d(`Reference key: "${key}"`)
-	log.d('storedHashForReferenceValue', storedHashForReferenceValue)
-	log.d('referenceValueHash ', referenceValueHash)
-	log.d('userMissingReferenceValueHash', userMissingReferenceValueHash)
-	log.d('userModifiedReferenceValue', userModifiedReferenceValue)
-	log.d('curValue', curValue)
-	log.d('currentValueHash', currentValueHash)
-	log.d('storedHashForLangAndValue', storedHashForLangAndValue)
-	log.d('userModifiedTargetValue ', userModifiedTargetValue)
+	// Call translation provider
+	log.d(`[${targetLang}] Translating "${key}"...`)
+	listrTask.output = `Translating "${key}"...`
 
-	const needsTranslation = force ||
-		userMissingReferenceValueHash ||
-		userModifiedReferenceValue ||
-		userModifiedTargetValue ||
-		missingOutputKey ||
-		missingOutputValueHash
+	const providerName = translationProvider.name()
+	let translated = null
+	let newValue
 
-	if (needsTranslation) {
-		if (force) log.d(`Forcing update...`)
-		if (missingOutputKey) log.d(`No "${key}" in output data...`)
-		if (!storedHashForLangAndValue) log.d(`Hash was not found in storage...`)
-		if (userModifiedTargetValue) log.d(`User modified target value: hashes differ (${currentValueHash} / ${storedHashForLangAndValue})...`)
+	// Because of the simple (naive) way we handle being rate-limited and backing off, we kind of want to retry forever but not forever.
+	// A single key may need to retry many times, since the algorithm is quite simple: if a task is told to retry after 10s,
+	// any subsequent tasks that run will delay 10s also, then those concurrent remaining tasks will all hammer at once, some
+	// will complete (maybe), then we'll wait again, then hammer again. A more proper solution may or may not be forthcoming...
+	for (let attempt = 0; !newValue && attempt <= maxRetries; ++attempt) {
+		const attemptStr = attempt > 0 ? ` [Attempt: ${attempt + 1}]` : ''
+		log.d(`[translate] attempt=${attempt}`)
 
-		// Call translation provider
-		log.d(`[${lang}] Translating "${key}"...`)
-		task.title = `Translating "${key}"...`
-
-		const providerName = translationProvider.name()
-		let translated = null
-		let newValue
-
-		// Because of the simple (naive) way we handle being rate-limited and backing off, we kind of want to retry forever but not forever.
-		// A single key may need to retry many times, since the algorithm is quite simple: if a task is told to retry after 10s,
-		// any subsequent tasks that run will delay 10s also, then those concurrent remaining tasks will all hammer at once, some
-		// will complete (maybe), then we'll wait again, then hammer again. A more proper solution may or may not be forthcoming...
-		for (let attempt = 0; !newValue && attempt <= maxRetries; ++attempt) {
-			const attemptStr = attempt > 0 ? ` [Attempt: ${attempt + 1}]` : ''
-			task.title = `Translating with ${providerName}` + attemptStr
-
-			log.d(`[translate] attempt=${attempt}`)
-
-			log.d('next task delay', ctx.nextTaskDelayMs)
-			if (ctx.nextTaskDelayMs > 0) {
-				const msg = `Rate limited; sleeping for ${Math.floor(ctx.nextTaskDelayMs / 1000)}s...` + attemptStr
-				task.title = msg
-				log.d(msg)
-				await sleep(ctx.nextTaskDelayMs)
-			}
-
-			const translateResult = await translate({
-				task,
-				provider: translationProvider,
-				text: refValue,
-				context: refContextValue,
-				sourceLang: referenceLanguage,
-				targetLang: lang,
-				appContextMessage,
-				apiKey,
-				maxRetries: maxRetries,
-				attemptStr,
-				log,
-			})
-
-			if (translateResult.backoffInterval > 0) {
-				log.d(`backing off... interval: ${translateResult.backoffInterval}`)
-				task.title = 'Rate limited'
-				log.d(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
-				ctx.nextTaskDelayMs = Math.max(ctx.nextTaskDelayMs, translateResult.backoffInterval)
-			} else {
-				newValue = translateResult.translated
-			}
+		log.d('next task delay', ctx.nextTaskDelayMs)
+		if (ctx.nextTaskDelayMs > 0) {
+			const msg = `Rate limited; sleeping for ${Math.floor(ctx.nextTaskDelayMs / 1000)}s...` + attemptStr
+			listrTask.output = msg
+			log.d(msg)
+			await sleep(ctx.nextTaskDelayMs)
 		}
 
-		if (!newValue?.length) throw new Error(`Translation was empty; target lanugage=${lang}; key=${key}; text=${refValue}`)
+		const translateResult = await translate({
+			listrTask,
+			ctx,
+			provider: translationProvider,
+			text: refValue,
+			context: refContextValue,
+			sourceLang,
+			targetLang,
+			appContextMessage,
+			apiKey,
+			maxRetries: maxRetries,
+			attemptStr,
+			log
+		})
 
+		translateResult.backoffInterval = 5000
+
+		if (translateResult.backoffInterval > 0) {
+			log.d(`backing off... interval: ${translateResult.backoffInterval}`)
+			listrTask.output = 'Rate limited'
+			log.d(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
+			result.nextTaskDelayMs = Math.max(ctx.nextTaskDelayMs, translateResult.backoffInterval)
+		} else {
+			newValue = translateResult.translated
+			result.success = true
+		}
+	}
+
+	if (newValue?.length) {
 		log.d('translated text', newValue)
 		result.translated = true
 		result.newValue = newValue
+	} else {
+		result.error = `Translation was empty; target language=${targetLang}; key=${key}; text=${refValue}`
 	}
 
 	return result
@@ -724,9 +836,13 @@ function rmDir(dir, log) {
 }
 
 function shutdown(appState, kill) {
-	const { log, filesToWrite } = appState
+	const { log, errors, filesToWrite } = appState
 
 	if (kill) log.i('Forcing shutdown...')
+
+	if (errors.length) {
+		log.e(`ALT encountered some errors: ${errors.join('\n')}`)
+	}
 
 	// Write any data to disk
 	//log.d('filesToWrite keys:', Object.keys(filesToWrite))
@@ -754,23 +870,26 @@ export function sleep(ms, log) {
 }
 
 async function translate({
-							 task,
-							 provider,
-							 appContextMessage,
-							 text,
-							 context,
-							 sourceLang,
-							 targetLang,
-							 apiKey,
-							 attemptStr,
-							 log,
-						 }) {
-	log.d(`[translate] targetLang=${targetLang}; text=${text}`)
+													 listrTask,
+													 ctx,
+													 provider,
+													 appContextMessage,
+													 text,
+													 context,
+													 sourceLang,
+													 targetLang,
+													 apiKey,
+													 attemptStr,
+													 log
+												 }) {
+	log.d(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
 	const result = { translated: null, backoffInterval: 0 }
+
+	const providerName = provider.name()
 
 	try {
 		const providerName = provider.name()
-		task.title = `Preparing endpoint configuration...`
+		listrTask.output = `Preparing endpoint configuration...`
 		const messages = []
 		messages.push(
 			`You are a professional translator for an application's text from ${sourceLang} to ${targetLang}. `
@@ -789,7 +908,10 @@ async function translate({
 		)
 		log.d(`prompt: `, messages)
 		const { url, params, config } = provider.getTranslationRequestDetails({ messages, apiKey, log })
-		task.title = `Hitting ${providerName} endpoint${attemptStr}...`
+		log.t('url', url)
+		log.t('params', params)
+		log.t('config', config)
+		listrTask.output = `Hitting ${providerName} endpoint${attemptStr}...`
 		const response = await axios.post(url, params, config)
 		log.t('response headers', response.headers)
 		const translated = provider.getResult(response, log)
@@ -806,11 +928,14 @@ async function translate({
 			} else if (error.response.status === 529) { // Unofficial 'overloaded' code
 				result.backoffInterval = OVERLOADED_BACKOFF_INTERVAL_MS
 				log.d(`Overloaded; retrying in ${result.backoffInterval}`)
+				listrTask.output = `${providerName} overloaded; retrying in ${result.backoffInterval / 1000}s `
 			}
 		} else {
 			log.w(`API failed. Error:`, error.message)
 		}
 	}
+
+	log.d(`[translate] `, result)
 
 	return result
 }

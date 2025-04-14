@@ -48,12 +48,12 @@ You can specify an exported variable instead of using `default`. See `--referenc
 2. Running
 ```bash
 ANTHROPIC_API_KEY=<secret>
-alt --reference ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
+alt --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
 ```
 or
 ```bash
 OPENAI_API_KEY=<secret>
-alt --reference ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
+alt --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
 ```
 These commands would iterate across all key/value pairs in the variable exported from `./reference.js` and if needed, translate.
 
@@ -80,7 +80,7 @@ later, you can just delete that key/value pair from the given file.
 
 ## Config file
 [_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
-`--config`. 
+`--config-file`. 
 Example 
 config:
 
@@ -102,56 +102,54 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Usage
 ```
-alt [options] [command]
-
 Options:
   -V, --version                         output the version number
-  -r, --reference <path>                Path to reference JSONC file (default language)
+  -r, --reference-file <path>           Path to reference JSONC file (default language)
   -rl, --reference-language <language>  The reference file's language; overrides any
                                         'referenceLanguage' config setting
   -p, --provider <name>                 AI provider to use for translations (anthropic,
                                         openai); overrides any 'provider' config setting
   -o, --output-dir <path>               Output directory for localized files (default:
-                                        "/home/jonl/dev/alt")
+                                        "/home/jonl/dev/lightwall")
   -l, --target-languages <list>         Comma-separated list of language codes; overrides
-                                        any 'taretLanguages' config setting
+                                        any 'targetLanguages' config setting
   -k, --keys <list>                     Comma-separated list of keys to process
   -j, --reference-var-name <var name>   The exported variable in the reference file, e.g.
-                                        export default = {...} you'd use 'default' (default:
-                                        "default")
+                                        export default = {...} you'd use 'default'
+                                        (default: "default")
   -f, --force                           Force regeneration of all translations (default:
                                         false)
-  -m, --app-context-message <message>   Description of your app to give context. Passed with
-                                        each translation request; overrides any
+  -rtw, --realtime-writes               Write updates to disk immediately, rather than on
+                                        shutdown (default: false)
+  -m, --app-context-message <message>   Description of your app to give context. Passed
+                                        with each translation request; overrides any
                                         'appContextMessage' config setting
   -y, --tty                             Use tty/simple renderer; useful for CI (default:
                                         false)
-  -c, --config <path>                   Path to config file; defaults to <output
+  -c, --config-file <path>              Path to config file; defaults to <output
                                         dir>/config.json
-  -x, --max-retries <integer>           Maximum retries on failure (default: 100)
-  -e, --concurrent <integer>            Maximum # of concurrent tasks (default: 5)
-  -n, --normalize-output-filenames      Normalizes output filenames (to all lower-case)
-                                        (default: false)
-  --context-prefix <value>              String to be prefixed to all keys to search for
-                                        additional context, which are passed along to the AI
-                                        for context (default: "")
-  --context-suffix <value>              String to be suffixed to all keys to search for
-                                        additional context, which are passed along to the AI
-                                        for context (default: "")
-  --look-for-context-data               If specified, ALT will pass any context data
-                                        specified in the reference file to the AI provider
-                                        for translation. At least one of --contextPrefix or
-                                        --contextSuffix must be specified (default: false)
-  -w, --write-on-quit                   Write files to disk only on quit (including
-                                        SIGTERM); useful if running ALT causes your server
-                                        to restart constantly (default: false)
+  -x, --max-retries <integer>           Maximum retries on failure (default: 3)
+  -n, --normalize-output-filenames      Normalizes output filenames (to all lower-case);
+                                        overrides any 'normalizeOutputFilenames' in config
+                                        setting (default: false)
   -v, --verbose                         Enables verbose spew (default: false)
   -d, --debug                           Enables debug spew (default: false)
   -t, --trace                           Enables trace spew (default: false)
-  -h, --help                            display help for comman
-  
+  --context-prefix <value>              String to be prefixed to all keys to search for
+                                        additional context, which are passed along to the
+                                        AI for context
+  --context-suffix <value>              String to be suffixed to all keys to search for
+                                        additional context, which are passed along to the
+                                        AI for context
+  --look-for-context-data               If specified, ALT will pass any context data
+                                        specified in the reference file to the AI provider
+                                        for translation. At least one of --contextPrefix
+                                        or --contextSuffix must be specified (default:
+                                        false)
+  -h, --help                            display help for command
+
 Commands:
-  translate (default)
+  translate
 ``` 
 
 ## Examples
@@ -162,7 +160,7 @@ Commands:
 * Look for context keys starting with `_context:`
 * Write output files to the current working directory
 ```bash
-alt --reference loc.js
+alt --reference-file loc.js
   --reference-var-name data
   --provider anthropic
   --look-for-context-data
@@ -177,8 +175,8 @@ alt --reference loc.js
 * Write to disk repeatedly, as changes are processed
 * Write files to `./localization`
 ```bash
-alt --config ./localization-config.json
-  --reference loc.js
+alt --config-file ./localization-config.json
+  --reference-file loc.js
   --output-dir localization
   --provider openai
   --look-for-context-data
@@ -188,8 +186,8 @@ alt --config ./localization-config.json
 * Overrides any config's languages
 * Only process the specified strings
 ```bash
-alt --config config.json
-  --reference reference.js
+alt --config-file config.json
+  --reference-file reference.js
   --output-dir localization
   --provider openai
   --look-for-context-data
