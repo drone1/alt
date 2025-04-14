@@ -106,47 +106,53 @@ alt [options] [command]
 
 Options:
   -V, --version                         output the version number
-  -r, --reference-file <path>           Path to reference JSONC file (default language)
+  -r, --reference-file <path>           Path to reference JSONC file (default
+                                        language)
   -rl, --reference-language <language>  The reference file's language; overrides any
                                         'referenceLanguage' config setting
-  -p, --provider <name>                 AI provider to use for translations (anthropic,
-                                        openai); overrides any 'provider' config setting
+  -p, --provider <name>                 AI provider to use for translations
+                                        (anthropic, openai); overrides any
+                                        'provider' config setting
   -o, --output-dir <path>               Output directory for localized files
-  -l, --target-languages <list>         Comma-separated list of language codes; overrides
-                                        any 'targetLanguages' config setting
+  -l, --target-languages <list>         Comma-separated list of language codes;
+                                        overrides any 'targetLanguages' config
+                                        setting
   -k, --keys <list>                     Comma-separated list of keys to process
-  -j, --reference-var-name <var name>   The exported variable in the reference file, e.g.
-                                        export default = {...} you'd use 'default'
-                                        (default: "default")
-  -f, --force                           Force regeneration of all translations (default:
-                                        false)
-  -rtw, --realtime-writes               Write updates to disk immediately, rather than on
-                                        shutdown (default: false)
-  -m, --app-context-message <message>   Description of your app to give context. Passed
-                                        with each translation request; overrides any
-                                        'appContextMessage' config setting
-  -y, --tty                             Use tty/simple renderer; useful for CI (default:
-                                        false)
+  -j, --reference-var-name <var name>   The exported variable in the reference file,
+                                        e.g. export default = {...} you'd use
+                                        'default' (default: "default")
+  -f, --force                           Force regeneration of all translations
+                                        (default: false)
+  -rtw, --realtime-writes               Write updates to disk immediately, rather
+                                        than on shutdown (default: false)
+  -m, --app-context-message <message>   Description of your app to give context.
+                                        Passed with each translation request;
+                                        overrides any 'appContextMessage' config
+                                        setting
+  -y, --tty                             Use tty/simple renderer; useful for CI
+                                        (default: false)
   -c, --config-file <path>              Path to config file; defaults to <output
                                         dir>/config.json
   -x, --max-retries <integer>           Maximum retries on failure (default: 3)
-  -n, --normalize-output-filenames      Normalizes output filenames (to all lower-case);
-                                        overrides any 'normalizeOutputFilenames' in config
-                                        setting (default: false)
+  -n, --normalize-output-filenames      Normalizes output filenames (to all
+                                        lower-case); overrides any
+                                        'normalizeOutputFilenames' in config setting
+                                        (default: false)
   -v, --verbose                         Enables verbose spew (default: false)
   -d, --debug                           Enables debug spew (default: false)
   -t, --trace                           Enables trace spew (default: false)
-  --context-prefix <value>              String to be prefixed to all keys to search for
-                                        additional context, which are passed along to the
-                                        AI for context
-  --context-suffix <value>              String to be suffixed to all keys to search for
-                                        additional context, which are passed along to the
-                                        AI for context
+  --no-logo                             Suppress logo printout
+  --context-prefix <value>              String to be prefixed to all keys to search
+                                        for additional context, which are passed
+                                        along to the AI for context
+  --context-suffix <value>              String to be suffixed to all keys to search
+                                        for additional context, which are passed
+                                        along to the AI for context
   --look-for-context-data               If specified, ALT will pass any context data
-                                        specified in the reference file to the AI provider
-                                        for translation. At least one of --contextPrefix
-                                        or --contextSuffix must be specified (default:
-                                        false)
+                                        specified in the reference file to the AI
+                                        provider for translation. At least one of
+                                        --contextPrefix or --contextSuffix must be
+                                        specified (default: false)
   -h, --help                            display help for command
 
 Commands:
@@ -155,7 +161,8 @@ Commands:
 Environment variables:
   ANTHROPIC_API_KEY                     Your Anthropic API key
   OPENAI_API_KEY                        Your OpenAI API key
-  ALT_LANGUAGE                          CLI display language
+  GOOGLE_API_KEY                        Your Google Gemini API key
+  ALT_LANGUAGE                          POSIX locale used for display
 ``` 
 
 ## Examples
