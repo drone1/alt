@@ -2,31 +2,42 @@ import { program } from 'commander'
 import { Buffer } from 'buffer'
 import { pathToFileURL, fileURLToPath } from 'url'
 import { Listr } from 'listr2'
+import { initLocalizer, isBcp47LanguageTagValid, localize, localizeFormatted } from './localizer/localize.js'
 import axios from 'axios'
 import os from 'os'
-import stripJsonComments from 'strip-json-comments'
 import figlet from 'figlet'
 import gradient from 'gradient-string'
-import * as locale from 'locale-codes'
 import * as fs from 'fs'
 import * as fsp from 'fs/promises'
 import * as crypto from 'crypto'
 import * as path from 'path'
-import { TRANSLATION_FAILED_RESPONSE_TEXT } from './consts.js'
+import { LANGTAG_DEFAULT, TRANSLATION_FAILED_RESPONSE_TEXT } from './consts.js'
+import { assertValidPath, assertIsObj } from './assert.js'
+import { readFileAsText, readJsonFile } from './io.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+const LOCALIZATION_SRC_DIR = path.resolve('localization')
 const DEFAULT_CACHE_FILENAME = '.localization.cache.json'
 const DEFAULT_CONFIG_FILENAME = 'config.json'
 const OVERLOADED_BACKOFF_INTERVAL_MS = 30 * 1000
 
 const CWD = process.cwd()
 const appState = {
+	lang: null,	// The app language, for output display (unrelated to translator)
 	filesToWrite: {},	// Map of file path => JSON data to write
 
 	errors: [],
 
 	log: {
+		// T/D/V blackholed until program options are parsed
+		T: () => {
+		},
+		D: () => {
+		},
+		V: () => {
+		},
+
 		E: function(...args) {
 			console.error(...args)
 		},
@@ -46,7 +57,7 @@ function unique(array) {
 // Helper function to parse comma-separated list
 function languageList(value, log) {
 	const languages = unique(value.split(',').map(item => item.trim()))
-	const invalid = languages.filter(lang => !locale.getByTag(lang))
+	const invalid = languages.filter(tag => !isBcp47LanguageTagValid(tag))
 	if (invalid.length) {
 		log.E(`Found invalid language(s): ${invalid.join(', ')}`)
 		process.exit(1)
@@ -61,32 +72,6 @@ function keyList(value) {
 // Calculate hash of a string
 function calculateHash(content) {
 	return crypto.createHash('sha256').update(content).digest('hex')
-}
-
-async function readFileAsText(filePath) {
-	try {
-		return await fsp.readFile(filePath, 'utf8')
-	} catch (error) {
-		if (error.code === 'ENOENT') {
-			return null
-		}
-		throw error
-	}
-}
-
-function parseJson(s) {
-	try {
-		return JSON.parse(s)
-	} catch (e) {
-		return null
-	}
-}
-
-// Read and parse JSONC file
-async function readJsonFile(filePath, isJSONComments = false) {
-	let content = await readFileAsText(filePath)
-	if (isJSONComments) content = stripJsonComments.stripJsonComments(content)
-	return parseJson(content)
 }
 
 // Dynamically imports the javascript file at filePath, which can be relative or absolute
@@ -245,6 +230,13 @@ export async function run() {
 	const { log } = appState
 
 	try {
+		appState.lang = await initLocalizer({
+			defaultAppLanguage: LANGTAG_DEFAULT,
+			appLanguage: process.env?.LANGUAGE,
+			srcDir: path.resolve(__dirname, LOCALIZATION_SRC_DIR),
+			log
+		})
+
 		const p = await readJsonFile(path.resolve(__dirname, '../package.json'))
 		if (!p) throw new Error(`Couldn't read 'package.json'`)
 
@@ -351,7 +343,7 @@ async function runTranslation({ options, log }) {
 		// Validate provider
 		const provider = options.provider ?? config.provider
 		if (!VALID_TRANSLATION_PROVIDERS.includes(provider)) {
-			log.E(`Error: Unknown provider "${options.provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
+			log.E(`Error: Unknown provider "${provider}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
 			process.exit(2)
 		}
 
@@ -414,7 +406,7 @@ async function runTranslation({ options, log }) {
 		appState.filesToWrite[cacheFilePath] = writableCache
 
 		const { apiKey, api: translationProvider } = await loadTranslationProvider(provider, log)
-		log.V(`translation provider "${options.provider}" loaded`)
+		log.V(`translation provider "${provider}" loaded`)
 
 		const addContextToTranslation = options.lookForContextData || config.lookForContextData
 
@@ -566,18 +558,23 @@ async function runTranslation({ options, log }) {
 		let errorsEncountered = 0
 		for (const taskInfoIdx in workQueue) {
 			const taskInfo = workQueue[taskInfoIdx]
-			log.D(taskInfo)
+			log.T(taskInfo)
 			const progress = 100 * Math.floor(100 * taskInfoIdx / totalTasks) / 100
 
 			await new Listr([
 				{
-					title: `[${progress}%] Processing ${taskInfo.targetLang}/${taskInfo.key}...`,
+					title: localizeFormatted({
+						token: 'msg-processing-lang-and-key',
+						data: { progress, targetLang: taskInfo.targetLang, key: taskInfo.key },
+						lang: appState.lang,
+						log
+					}),
 					task: async (ctx, task) => {
 						ctx.nextTaskDelayMs = nextTaskDelayMs
 
 						return task.newListr([
 							{
-								title: 'Translating...',
+								title: localize({ token: 'msg-translating', lang: appState.lang, log }),
 								task: async (_, task) => {
 									const translationResult = await processTranslationTask({ taskInfo, listrTask: task, listrCtx: ctx, options, log })
 
@@ -612,11 +609,19 @@ async function runTranslation({ options, log }) {
 
 		if (totalTasks > 0) {
 			let str = `[100%] `
-			if (errorsEncountered > 0) str += `Finished with ${errorsEncountered} error${errorsEncountered > 1 ? 's' : ''}`
-			else str += `Done`
+			if (errorsEncountered > 0) {
+				str += localizeFormatted({
+					token: 'msg-finished-with-errors',
+					data: { errorsEncountered, s: errorsEncountered > 1 ? 's' : '' },
+					lang: appState.lang,
+					log
+				})
+			} else {
+				str += `Done`
+			}
 			log.I(`\x1B[38;2;44;190;78m✔\x1B[0m ${str}`)
 		} else {
-			log.I('\x1B[38;2;44;190;78m✔\x1B[0m Nothing to do')
+			log.I(`\x1B[38;2;44;190;78m✔\x1B[0m ${localize({ token: 'msg-nothing-to-do', lang: appState.lang, log })}`)
 		}
 	} catch (error) {
 		log.E('Error:', error)
@@ -628,15 +633,6 @@ async function runTranslation({ options, log }) {
 	if (exitCode > 0) {
 		process.exit(exitCode)
 	}
-}
-
-const USER_REASONS_FOR_UPDATES = {
-	forced: `Forced update`,
-	outputFileDidNotExist: f => `Output file ${f} did not exist`,
-	userMissingReferenceValueHash: `No reference hash found`,
-	userModifiedReferenceValue: `User modified reference string`,
-	missingOutputKey: `No existing translation found`,
-	missingOutputValueHash: `No hash found in cache file`
 }
 
 async function processTranslationTask({ taskInfo, listrTask, listrCtx, options, log }) {
@@ -656,7 +652,9 @@ async function processTranslationTask({ taskInfo, listrTask, listrCtx, options, 
 		storedHashForTargetLangAndValue
 	} = state
 
-	let reasons = Object.keys(reasonsForTranslationMap).map(k => USER_REASONS_FOR_UPDATES[k]).join(', ')
+	let reasons = Object.keys(reasonsForTranslationMap)
+		.map(k => localize({ token: `translation-reason-${k}`, lang: appState.lang, log }))
+		.join(', ')
 	listrTask.output = reasons
 
 	const {
@@ -699,7 +697,7 @@ async function processTranslationTask({ taskInfo, listrTask, listrCtx, options, 
 			const hashForTranslated = calculateHash(newValue)
 			log.D(`Updating hash for translated ${targetLang}.${key}: ${hashForTranslated}`)
 			writableCache.state[targetLang].keyHashes[key] = hashForTranslated
-			listrTask.output = `Translated ${key}: "${newValue}"`
+			listrTask.output = localizeFormatted({ token: 'msg-show-translation-result', data: { key, newValue }, lang: appState.lang, log })
 
 			// Update the hash for the reference key, so we can monitor if the user changed a specific key
 			writableCache.referenceKeyHashes[key] = referenceValueHash
@@ -713,7 +711,7 @@ async function processTranslationTask({ taskInfo, listrTask, listrCtx, options, 
 			log.V(`Keeping existing translation and hash for ${targetLang}/${key}...`)
 
 			// Allow the user to directly edit/tweak output key values
-			listrTask.output = `No update needed for ${key}`
+			listrTask.output = localizeFormatted({ token: 'msg-no-updated-needed-for-key', data: { key }, lang: appState.lang, log })
 		}
 	}
 
@@ -745,7 +743,7 @@ async function translateKeyForLanguage({
 
 	// Call translation provider
 	log.D(`[${targetLang}] Translating "${key}"...`)
-	listrTask.output = `Translating "${key}"...`
+	listrTask.output = localizeFormatted({ token: 'msg-translating-key', data: { key }, lang: appState.lang, log })
 
 	const providerName = translationProvider.name()
 	let translated = null
@@ -761,7 +759,10 @@ async function translateKeyForLanguage({
 
 		log.D('next task delay', ctx.nextTaskDelayMs)
 		if (ctx.nextTaskDelayMs > 0) {
-			const msg = `Rate limited; sleeping for ${Math.floor(ctx.nextTaskDelayMs / 1000)}s...` + attemptStr
+			const msg = localizeFormatted({
+				token: 'msg-no-updated-needed-for-key',
+				data: { interval: Math.floor(ctx.nextTaskDelayMs / 1000), attemptStr }, lang: appState.lang, log
+			})
 			listrTask.output = msg
 			log.D(msg)
 			await sleep(ctx.nextTaskDelayMs)
@@ -782,11 +783,9 @@ async function translateKeyForLanguage({
 			log
 		})
 
-		translateResult.backoffInterval = 5000
-
 		if (translateResult.backoffInterval > 0) {
 			log.D(`backing off... interval: ${translateResult.backoffInterval}`)
-			listrTask.output = 'Rate limited'
+			//listrTask.output = 'Rate limited'
 			log.D(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
 			result.nextTaskDelayMs = Math.max(ctx.nextTaskDelayMs, translateResult.backoffInterval)
 		} else {
@@ -872,32 +871,16 @@ export function sleep(ms, log) {
 	return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function translate({
-													 listrTask,
-													 ctx,
-													 provider,
-													 appContextMessage,
-													 text,
-													 context,
-													 sourceLang,
-													 targetLang,
-													 apiKey,
-													 attemptStr,
-													 log
-												 }) {
-	log.D(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
-	const result = { translated: null, backoffInterval: 0 }
-
-	const providerName = provider.name()
-
+async function translateTextViaProvider({ provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, result, providerName }) {
 	try {
 		const providerName = provider.name()
-		listrTask.output = `Preparing endpoint configuration...`
+		listrTask.output = localize({ token: 'msg-preparing-endpoint-config', lang: appState.lang, log })
 		const messages = []
 		messages.push(
 			`You are a professional translator for an application's text from ${sourceLang} to ${targetLang}. `
-			+ `Translate the text accurately without adding explanations or additional content. Only return the text. `,
-			//+ `If and only if you absolutely cannot translate the text, you can respond with "${TRANSLATION_FAILED_RESPONSE_TEXT}" -- but please try to translate the text if you can. It would be greatly appreciated.`,	// With this, the AI seems to be lazy and use it way too often
+			+ `Translate the text accurately without adding explanations or additional content. Only return the text. `
+			//+ `If and only if you absolutely cannot translate the text, you can respond with "${TRANSLATION_FAILED_RESPONSE_TEXT}" -- but please try to translate the text if you can. It would be greatly
+			// appreciated.`,	// With this, the AI seems to be lazy and use it way too often
 		)
 		if (appContextMessage?.length) {
 			messages.push(`Here is some high-level information about the application you are translating text for: ${appContextMessage}`)
@@ -907,14 +890,12 @@ async function translate({
 		}
 		messages.push(
 			`Here we go. Translate the following text from ${sourceLang} to ${targetLang}:`
-			+ `\n\n${text}`,
+			+ `\n\n${text}`
 		)
 		log.D(`prompt: `, messages)
 		const { url, params, config } = provider.getTranslationRequestDetails({ messages, apiKey, log })
-		log.T('url', url)
-		log.T('params', params)
-		log.T('config', config)
-		listrTask.output = `Hitting ${providerName} endpoint${attemptStr}...`
+		log.T('url: ', url, 'params: ', params, 'config: ', config)
+		listrTask.output = localizeFormatted({ token: 'msg-hitting-provider-endpoint', data: { providerName, attemptStr }, lang: appState.lang, log })
 		const response = await axios.post(url, params, config)
 		log.T('response headers', response.headers)
 		const translated = provider.getResult(response, log)
@@ -937,29 +918,36 @@ async function translate({
 			log.w(`API failed. Error:`, error.message)
 		}
 	}
+}
+
+async function translate({
+													 listrTask,
+													 ctx,
+													 provider,
+													 appContextMessage,
+													 text,
+													 context,
+													 sourceLang,
+													 targetLang,
+													 apiKey,
+													 attemptStr,
+													 log
+												 }) {
+	log.D(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
+	const result = { translated: null, backoffInterval: 0 }
+
+	const providerName = provider.name()
+
+	if (sourceLang === targetLang) {
+		log.D(`Using reference value since source & target language are the same`)
+		result.translated = text
+	} else {
+		await translateTextViaProvider({ provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, result, providerName })
+	}
 
 	log.D(`[translate] `, result)
 
 	return result
-}
-
-function assert(b, msg) {
-	if (!b) {
-		debugger
-		throw new Error(msg || `Assertion failed`)
-	}
-}
-
-function assertIsNonEmptyString(s, msg) {
-	assert(s?.length, msg || `parameter was not a non-empty string`)
-}
-
-function assertValidPath(path, msg) {
-	assertIsNonEmptyString(path, msg || `parameter was not a valid path`)
-}
-
-function assertIsObj(x, msg) {
-	assert(typeof x === 'object', msg || `parameter was not an object`)
 }
 
 // Shutdown in the normal render mode may seem to be failing, but technically it's not; if you're processing all languages,

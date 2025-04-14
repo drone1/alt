@@ -29,11 +29,11 @@ function getHeader(headers, name) {
 }
 
 export function getSleepInterval(headers, log) {
-	log.t(headers)
+	log.T(headers)
 	if (getHeader(headers, 'x-should-retry') !== 'true')
 		return 0
 
 	const retryAfter = parseInt(getHeader(headers, 'retry-after'))
-	log.d('retryAfter', retryAfter)
-	return 1000 * retryAfter
+	log.D('retryAfter', retryAfter)
+	return 1000 * retryAfter + 200
 }
