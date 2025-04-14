@@ -269,7 +269,6 @@ export async function runTranslation({ appState, options, log }) {
 			}
 		}
 
-		let nextTaskDelayMs = 0
 		let totalTasks = workQueue.length
 		let errorsEncountered = 0
 		for (const taskInfoIdx in workQueue) {
@@ -286,8 +285,6 @@ export async function runTranslation({ appState, options, log }) {
 						log
 					}),
 					task: async (ctx, task) => {
-						ctx.nextTaskDelayMs = nextTaskDelayMs
-
 						return task.newListr([
 							{
 								title: localize({ token: 'msg-translating', lang: appState.lang, log }),
@@ -295,8 +292,6 @@ export async function runTranslation({ appState, options, log }) {
 									const translationResult = await processTranslationTask({
 										appState, taskInfo, listrTask: task, listrCtx: ctx, options, log
 									})
-
-									nextTaskDelayMs = translationResult.nextTaskDelayMs
 
 									if (translationResult.error) {
 										++errorsEncountered
@@ -364,7 +359,6 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 	const {
 		success,
 		translated,
-		nextTaskDelayMs,
 		newValue,
 		error
 	} = await translateKeyForLanguage({
@@ -421,7 +415,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 		appState.filesToWrite[outputFilePath] = outputData
 	}
 
-	return { nextTaskDelayMs, error }
+	return { error }
 }
 
 async function translateKeyForLanguage({
@@ -436,7 +430,7 @@ async function translateKeyForLanguage({
 																				 log
 																			 }) {
 	const { translationProvider, apiKey, appContextMessage, refValue, refContextValue } = state
-	const result = { success: false, translated: false, newValue: null, nextTaskDelayMs: 0, error: null }
+	const result = { success: false, translated: false, newValue: null, error: null }
 
 	// Call translation provider
 	log.D(`[${targetLang}] Translating "${key}"...`)
@@ -454,17 +448,6 @@ async function translateKeyForLanguage({
 		const attemptStr = attempt > 0 ? ` [Attempt: ${attempt + 1}]` : ''
 		log.D(`[translate] attempt=${attempt}`)
 
-		log.D('next task delay', ctx.nextTaskDelayMs)
-		if (ctx.nextTaskDelayMs > 0) {
-			const msg = localizeFormatted({
-				token: 'msg-rate-limited-sleeping',
-				data: { interval: Math.floor(ctx.nextTaskDelayMs / 1000), attemptStr }, lang: appState.lang, log
-			})
-			listrTask.output = msg
-			log.D(msg)
-			await sleep(ctx.nextTaskDelayMs)
-		}
-
 		const translateResult = await translate({
 			appState,
 			listrTask,
@@ -480,10 +463,18 @@ async function translateKeyForLanguage({
 			log
 		})
 
-		if (translateResult.backoffInterval > 0) {
-			log.D(`backing off... interval: ${translateResult.backoffInterval}`)
-			log.D(`ctx.nextTaskDelayMs=${ctx.nextTaskDelayMs}`)
-			result.nextTaskDelayMs = translateResult.backoffInterval
+		const { backoffInterval } = translateResult
+		if (backoffInterval > 0) {
+			log.D(`backing off... interval: ${backoffInterval}`)
+
+			if (backoffInterval > 0) {
+				listrTask.output = localizeFormatted({
+					token: 'msg-rate-limited-sleeping',
+					data: { interval: Math.floor(backoffInterval / 1000), attemptStr }, lang: appState.lang, log
+				})
+				await sleep(backoffInterval)
+			}
+
 		} else {
 			newValue = translateResult.translated
 			result.success = true
