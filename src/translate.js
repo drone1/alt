@@ -492,6 +492,36 @@ async function translateKeyForLanguage({
 	return result
 }
 
+async function translate({
+													 appState,
+													 listrTask,
+													 provider,
+													 appContextMessage,
+													 text,
+													 context,
+													 sourceLang,
+													 targetLang,
+													 apiKey,
+													 attemptStr,
+													 log
+												 }) {
+	log.D(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
+	const result = { translated: null, backoffInterval: 0 }
+
+	if (sourceLang === targetLang) {
+		log.D(`Using reference value since source & target language are the same`)
+		result.translated = text
+	} else {
+		await translateTextViaProvider({
+			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName: provider.name(), outResult: result
+		})
+	}
+
+	log.D(`[translate] `, result)
+
+	return result
+}
+
 async function translateTextViaProvider({
 																					appState,
 																					provider,
@@ -561,32 +591,3 @@ async function translateTextViaProvider({
 	}
 }
 
-async function translate({
-													 appState,
-													 listrTask,
-													 provider,
-													 appContextMessage,
-													 text,
-													 context,
-													 sourceLang,
-													 targetLang,
-													 apiKey,
-													 attemptStr,
-													 log
-												 }) {
-	log.D(`[translate] sourceLang=${sourceLang}; targetLang=${targetLang}; text=${text}`)
-	const result = { translated: null, backoffInterval: 0 }
-
-	if (sourceLang === targetLang) {
-		log.D(`Using reference value since source & target language are the same`)
-		result.translated = text
-	} else {
-		await translateTextViaProvider({
-			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName: provider.name(), outResult: result
-		})
-	}
-
-	log.D(`[translate] `, result)
-
-	return result
-}
