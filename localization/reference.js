@@ -20,5 +20,6 @@ export default {
 	'msg-translation-reason-missingOutputValueHash': `No hash found in cache file`,
 
 	'error-value-not-a-string': `Value for reference key "%%key%%" was "%%type%%". Expected a string! Skipping...`,
-	'error-value-not-in-reference-data': `Key "%%key%%" did not exist in reference file`
+	'error-value-not-in-reference-data': `Key "%%key%%" did not exist in reference file`,
+	'error-translation-failed': `Translation failed for target language=%%targetLang%%; key=%%key%%; text=%%refValue%%`
 }

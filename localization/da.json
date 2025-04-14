@@ -1,9 +1,9 @@
 {
-  "msg-nothing-to-do": "Intet at foretage",
-  "msg-finished-with-errors": "Færdig med %%errorsEncountered%% fejl%%s%%",
+  "msg-nothing-to-do": "Intet at gøre",
+  "msg-finished-with-errors": "Afsluttet med %%errorsEncountered%% fejl%%s%%",
   "msg-translating": "Oversætter...",
   "msg-translating-key": "Oversætter %%key%%",
-  "msg-preparing-endpoint-config": "Forbereder endpunktkonfiguration...",
+  "msg-preparing-endpoint-config": "Forbereder slutpunktskonfiguration...",
   "msg-hitting-provider-endpoint": "Rammer %%providerName%% endpoint%%attemptStr%%...",
   "msg-show-translation-result": "Oversat %%key%%: \"%%newValue%%\"",
   "msg-processing-lang-and-key": "[%%progress%%%] Behandler %%targetLang%% – %%key%%...",
@@ -14,13 +14,14 @@
   "translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
   "translation-reason-missingOutputValueHash": "Ingen hash fundet i cache-fil",
   "msg-no-update-needed-for-key": "Ingen opdatering nødvendig for %%key%%",
-  "msg-rate-limited-sleeping": "Rate begrænset; venter i %%interval%%s...%%attemptStr%%",
+  "msg-rate-limited-sleeping": "Hastighedsbegrænset; sover i %%interval%%s...%%attemptStr%%",
   "msg-translation-reason-forced": "Tvungen opdatering",
-  "msg-translation-reason-outputFileDidNotExist": "Outputfil %%outputFile%% eksisterede ikke",
+  "msg-translation-reason-outputFileDidNotExist": "Outputfilen %%outputFile%% fandtes ikke",
   "msg-translation-reason-userMissingReferenceValueHash": "Ingen reference-hash fundet",
-  "msg-translation-reason-userModifiedReferenceValue": "Bruger ændrede referencestreng",
+  "msg-translation-reason-userModifiedReferenceValue": "Bruger modificerede referencestreng",
   "msg-translation-reason-missingOutputKey": "Ingen eksisterende oversættelse fundet",
-  "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cache-fil",
+  "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cachefil",
   "error-value-not-a-string": "Værdien for reference nøglen \"%%key%%\" var \"%%type%%\". Forventede en streng! Springer over...",
-  "error-value-not-in-reference-data": "Nøglen \"%%key%%\" fandtes ikke i referencefilen"
+  "error-value-not-in-reference-data": "Nøglen \"%%key%%\" fandtes ikke i referencefilen",
+  "error-translation-failed": "Oversættelsen mislykkedes for målsprog=%%targetLang%%; nøgle=%%key%%; tekst=%%refValue%%"
 }
