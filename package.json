@@ -8,7 +8,7 @@
     "alt": "./bin.mjs"
   },
   "scripts": {
-    "localize-display-strings": "node ./bin.mjs --reference-file localization/reference.js "
+    "localize-display-strings": "node ./bin.mjs --reference-file localization/reference.js"
   },
   "repository": {
     "type": "git",
