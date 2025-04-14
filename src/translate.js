@@ -548,18 +548,24 @@ async function translateTextViaProvider({
 		if (translated === TRANSLATION_FAILED_RESPONSE_TEXT) throw new Error(`${providerName} failed to translate string to ${targetLang}; string: ${text}`)
 		outResult.translated = translated
 	} catch (error) {
+		let errorHandled = false
+
 		const response = error?.response
 		if (response) {
 			if (response.status === 429) {
 				outResult.backoffInterval = provider.getSleepInterval(response.headers, log)
 				log.D(`Rate limited; retrying in ${outResult.backoffInterval}`)
-			} else if (error.response.status === 529) { // Unofficial 'overloaded' code
+				errorHandled = true
+			} else if (response.status === 529) { // Unofficial 'overloaded' code
 				outResult.backoffInterval = OVERLOADED_BACKOFF_INTERVAL_MS
 				log.D(`Overloaded; retrying in ${outResult.backoffInterval}`)
 				listrTask.output = `${providerName} overloaded; retrying in ${outResult.backoffInterval / 1000}s `
+				errorHandled = true
 			}
-		} else {
-			log.W(`API failed. Error:`, error.message)
+		}
+
+		if (!errorHandled) {
+			log.W(`${providerName} API failed. Error:`, error?.message ?? error)
 		}
 	}
 }
