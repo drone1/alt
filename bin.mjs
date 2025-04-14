@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import('./src/alt.mjs')
+import('./src/main.mjs')
   .then(async mod => await mod.run())
   .catch(err => {
     console.error(err)
