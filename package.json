@@ -8,7 +8,7 @@
     "alt": "./bin.mjs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "localize-display-strings": "node ./bin.mjs --reference-file localization/reference.js "
   },
   "repository": {
     "type": "git",
