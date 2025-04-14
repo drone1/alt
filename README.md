@@ -27,11 +27,7 @@ Translates all strings in a reference `.js` file to all target languages using A
 
 ## Installation
 ```bash
-npm install -g github:drone1/alt
-```
-or
-```bash
-npm install -g https://github.com/drone1/alt.git
+npm install -g @drone1/alt
 ```
 ## Setup
 Create a reference file for your reference data. For example, ``reference.js``:
