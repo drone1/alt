@@ -70,6 +70,7 @@ export async function run() {
 			.option('-v, --verbose', `Enables verbose spew`, false)
 			.option('-d, --debug', `Enables debug spew`, false)
 			.option('-t, --trace', `Enables trace spew`, false)
+			.option('--no-logo', `Suppress logo printout`, true)  // NB: maps to options.logo, not options.noLogo
 			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
@@ -86,17 +87,18 @@ export async function run() {
 			.command('translate', { isDefault: true }) // This makes it the default command
 			.action(async () => {
 				const options = program.opts()
+				if (options.logo) {
+					await printLogo({
+						fontsSrcDir: path.resolve(__dirname, '../assets/figlet-fonts/'),
+						tagline: p.description,
+						log
+					})
+				}
 				initLogFromOptions({ options, log })
 				await runTranslation({ appState, options, log })
 			})
 
 		program.parse(process.argv)
-
-		await printLogo({
-			fontsSrcDir: path.resolve(__dirname, '../assets/figlet-fonts/'),
-			tagline: p.description,
-			log
-		})
 	} catch (error) {
 		log.E(error)
 	}
