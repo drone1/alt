@@ -1,8 +1,7 @@
-import * as fsp from 'fs/promises'
 import * as locale from 'locale-codes'
 import * as path from 'path'
 import { obj2Str, replaceStringVarsWithObjectValues } from '../utils.js'
-import { fileExists, readJsonFile } from '../io.js'
+import { readJsonFile } from '../io.js'
 import { LANGTAG_DEFAULT } from '../consts.js'
 
 const LocalizationMap = {}

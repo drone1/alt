@@ -10,7 +10,7 @@ import {
 	VALID_TRANSLATION_PROVIDERS
 } from './consts.js'
 import { assertValidPath } from './assert.js'
-import { copyFileToTempAndEnsureExtension, importJsFile, mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, rmDir, writeJsonFile } from './io.js'
+import { copyFileToTempAndEnsureExtension, importJsFile, mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from './io.js'
 import { calculateHash, normalizeData, sleep } from './utils.js'
 import { formatContextKeyFromKey, isContextKey } from './context-keys.js'
 import { loadConfig } from './config.js'
