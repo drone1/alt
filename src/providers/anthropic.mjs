@@ -38,11 +38,11 @@ export async function listModels(apiKey) {
 	return allModels
 }
 
-export function getTranslationRequestDetails({ messages, apiKey, log }) {
+export function getTranslationRequestDetails({ model, messages, apiKey, log }) {
 	return {
 		url: 'https://api.anthropic.com/v1/messages',
 		params: {
-			model: 'claude-3-7-sonnet-20250219',
+			model,
 			max_tokens: 1024,
 			messages: messages.map(m => ({ role: 'user', content: m })),
 		},

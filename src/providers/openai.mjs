@@ -45,11 +45,11 @@ export async function listModels(apiKey) {
 	return { data: allModels }
 }
 
-export function getTranslationRequestDetails({ messages, apiKey, log }) {
+export function getTranslationRequestDetails({ model, messages, apiKey, log }) {
 	return {
 		url: 'https://api.openai.com/v1/chat/completions',
 		params: {
-			model: 'gpt-4-turbo',
+			model,
 			messages: messages.map((m, idx) => {
 				return {
 					role: idx === messages.length - 1 ? 'user' : 'system',

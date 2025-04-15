@@ -3,10 +3,10 @@ import { program } from 'commander'
 import { fileURLToPath } from 'url'
 import { initLocalizer } from './localizer/localize.js'
 import {
-	DEFAULT_CONFIG_FILENAME,
+	DEFAULT_CONFIG_FILENAME, DEFAULT_LLM_MODELS,
 	ENV_VARS,
 	LANGTAG_DEFAULT,
-	LOCALIZATION_SRC_DIR,
+	LOCALIZATION_SRC_DIR
 } from './lib/consts.js'
 import { readJsonFile } from './lib/io.js'
 import { printLogo } from './lib/logo.js'
@@ -108,16 +108,17 @@ export async function run() {
 				.command('translate')
 				.requiredOption('-r, --reference-file <path>', 'Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be' +
 					' in the reference language specified by --reference-language')
+				.option('-c, --config-file <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
 				.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
 				.option('-o, --output-dir <path>', 'Output directory for localized files')
 				.option('-l, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
 				.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 				.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
+				.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
 				.option('-f, --force', 'Force regeneration of all translations', false)
 				.option('-rtw, --realtime-writes', 'Write updates to disk immediately, rather than on shutdown', false)
-				.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
 				.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
-				.option('-c, --config-file <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
+				.option('-M, --model <name>', `LLM model name to use; defaults are: ${Object.keys(DEFAULT_LLM_MODELS).map(p => `for "${p}": "${DEFAULT_LLM_MODELS[p]}"`).join(', ')}; use the 'list-models' command to view all models`)
 				.option('-x, --max-retries <integer>', 'Maximum retries on failure', 3)
 				.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
 				.option('-N, --no-logo', `Suppress logo printout`, true)  // NB: maps to options.logo, not options.noLogo
@@ -128,10 +129,10 @@ export async function run() {
 				.option('-d, --debug', `Enables debug spew`, false)
 				.option('-t, --trace', `Enables trace spew`, false)
 				.option('--dev', `Enable dev mode, which prints stack traces with errors`, false)
-				.hook('preAction', (thisCommand) => {
-					const opts = thisCommand.opts()
+				.hook('preAction', cmd => {
+					const opts = cmd.opts()
 					if (opts.lookForContextData && !(opts.contextPrefix?.length || opts.contextSuffix?.length)) {
-						thisCommand.error('--lookForContextData requires at least 1 of --contextPrefix or --contextSuffix be defined and non-empty')
+						cmd.error('--lookForContextData requires at least 1 of --contextPrefix or --contextSuffix be defined and non-empty')
 					}
 				})
 				.action(runCommand)

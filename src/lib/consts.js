@@ -27,3 +27,9 @@ export const SUPPORTED_REFERENCE_FILE_EXTENSIONS = [
 	'json',
 	'jsonc'
 ]
+
+export const DEFAULT_LLM_MODELS = {
+	anthropic: 'claude-3-7-sonnet-20250219',
+	openai: 'gpt-4-turbo'
+}
+

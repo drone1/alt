@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import { Listr } from 'listr2'
 import { localize, localizeFormatted } from '../localizer/localize.js'
 import {
-	DEFAULT_CACHE_FILENAME,
+	DEFAULT_CACHE_FILENAME, DEFAULT_LLM_MODELS,
 	OVERLOADED_BACKOFF_INTERVAL_MS,
 	TRANSLATION_FAILED_RESPONSE_TEXT,
 	VALID_TRANSLATION_PROVIDERS
@@ -416,11 +416,19 @@ async function translateKeyForLanguage({
 																				 targetLang,
 																				 state,
 																				 key,
-																				 options: { maxRetries },
+																				 options: { maxRetries, model },
 																				 log
 																			 }) {
 	const { translationProvider, apiKey, appContextMessage, refValue, refContextValue } = state
 	const result = { success: false, translated: false, newValue: null, error: null }
+
+	const providerName = translationProvider.name().toLowerCase()
+	model = model ?? DEFAULT_LLM_MODELS[providerName]
+	if (!model?.length) {
+		throw new Error(
+			localizeFormatted({ token: 'error-invalid-llm-model', data: { model }, lang: appState.lang, log })
+		)
+	}
 
 	// Call translation provider
 	log.D(`[${targetLang}] Translating "${key}"...`)
@@ -428,10 +436,6 @@ async function translateKeyForLanguage({
 
 	let newValue
 
-	// Because of the simple (naive) way we handle being rate-limited and backing off, we kind of want to retry forever but not forever.
-	// A single key may need to retry many times, since the algorithm is quite simple: if a task is told to retry after 10s,
-	// any subsequent tasks that run will delay 10s also, then those concurrent remaining tasks will all hammer at once, some
-	// will complete (maybe), then we'll wait again, then hammer again. A more proper solution may or may not be forthcoming...
 	for (let attempt = 0; !newValue?.length && attempt <= maxRetries; ++attempt) {
 		const attemptStr = attempt > 0 ? ` [Attempt: ${attempt + 1}]` : ''
 		log.D(`[translate] attempt=${attempt}`)
@@ -446,6 +450,7 @@ async function translateKeyForLanguage({
 			targetLang,
 			appContextMessage,
 			apiKey,
+			model,
 			maxRetries: maxRetries,
 			attemptStr,
 			log
@@ -489,6 +494,7 @@ async function translate({
 													 sourceLang,
 													 targetLang,
 													 apiKey,
+													 model,
 													 attemptStr,
 													 log
 												 }) {
@@ -500,7 +506,7 @@ async function translate({
 		result.translated = text
 	} else {
 		await translateTextViaProvider({
-			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, attemptStr, providerName: provider.name(), outResult: result
+			appState, provider, listrTask, sourceLang, targetLang, appContextMessage, context, text, log, apiKey, model, attemptStr, providerName: provider.name(), outResult: result
 		})
 	}
 
@@ -520,6 +526,7 @@ async function translateTextViaProvider({
 																					text,
 																					log,
 																					apiKey,
+																					model,
 																					attemptStr,
 																					providerName,
 																					outResult
@@ -545,7 +552,7 @@ async function translateTextViaProvider({
 			+ `\n\n${text}`
 		)
 		log.D(`prompt: `, messages)
-		const { url, params, config } = provider.getTranslationRequestDetails({ messages, apiKey, log })
+		const { url, params, config } = provider.getTranslationRequestDetails({ model, messages, apiKey, log })
 		log.T('url: ', url, 'params: ', params, 'config: ', config)
 		listrTask.output = localizeFormatted({ token: 'msg-hitting-provider-endpoint', data: { providerName, attemptStr }, lang: appState.lang, log })
 		const response = await axios.post(url, params, config)
