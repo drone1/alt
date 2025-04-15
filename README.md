@@ -14,10 +14,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # AI Localization Tool
-Translates all strings in a reference `.js` file to all target languages using AI.
+Translates all source strings in a reference (`.js`,`.mjs`,`.json`,`.jsonc`) file to all target languages using AI.
 
 ## Features
-* Loads reference key/value pairs from a reference file 
+* Loads source/reference key/value pairs from a file 
 * Localizes using AI as needed, writing to a .json file per language
 * App-level context can be specified [`appContextMessage`]
 * Additional context can be specified per string [`--contextPrefix`, `--contextSuffix`]
@@ -44,12 +44,12 @@ You can specify an exported variable instead of using `default`. See `--referenc
 2. Running
 ```bash
 ANTHROPIC_API_KEY=<secret>
-alt --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
+alt translate --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
 ```
 or
 ```bash
 OPENAI_API_KEY=<secret>
-alt --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
+alt translate --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
 ```
 These commands would iterate across all key/value pairs in the variable exported from `./reference.js` and if needed, translate.
 
@@ -102,67 +102,63 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Usage
 ```
-alt [options] [command]
+> alt -h
+
+Usage: alt [options] [command]
 
 Options:
-  -V, --version                         output the version number
-  -r, --reference-file <path>           Path to reference JSONC file (default
-                                        language)
-  -rl, --reference-language <language>  The reference file's language; overrides any
-                                        'referenceLanguage' config setting
-  -p, --provider <name>                 AI provider to use for translations
-                                        (anthropic, openai); overrides any
-                                        'provider' config setting
-  -o, --output-dir <path>               Output directory for localized files
-  -l, --target-languages <list>         Comma-separated list of language codes;
-                                        overrides any 'targetLanguages' config
-                                        setting
-  -k, --keys <list>                     Comma-separated list of keys to process
-  -j, --reference-var-name <var name>   The exported variable in the reference file,
-                                        e.g. export default = {...} you'd use
-                                        'default' (default: "default")
-  -f, --force                           Force regeneration of all translations
-                                        (default: false)
-  -rtw, --realtime-writes               Write updates to disk immediately, rather
-                                        than on shutdown (default: false)
-  -m, --app-context-message <message>   Description of your app to give context.
-                                        Passed with each translation request;
-                                        overrides any 'appContextMessage' config
-                                        setting
-  -y, --tty                             Use tty/simple renderer; useful for CI
-                                        (default: false)
-  -c, --config-file <path>              Path to config file; defaults to <output
-                                        dir>/config.json
-  -x, --max-retries <integer>           Maximum retries on failure (default: 3)
-  -n, --normalize-output-filenames      Normalizes output filenames (to all
-                                        lower-case); overrides any
-                                        'normalizeOutputFilenames' in config setting
-                                        (default: false)
-  -v, --verbose                         Enables verbose spew (default: false)
-  -d, --debug                           Enables debug spew (default: false)
-  -t, --trace                           Enables trace spew (default: false)
-  --no-logo                             Suppress logo printout
-  --context-prefix <value>              String to be prefixed to all keys to search
-                                        for additional context, which are passed
-                                        along to the AI for context
-  --context-suffix <value>              String to be suffixed to all keys to search
-                                        for additional context, which are passed
-                                        along to the AI for context
-  --look-for-context-data               If specified, ALT will pass any context data
-                                        specified in the reference file to the AI
-                                        provider for translation. At least one of
-                                        --contextPrefix or --contextSuffix must be
-                                        specified (default: false)
-  -h, --help                            display help for command
+  -V, --version          output the version number
+  -h, --help             display help for command
 
 Commands:
-  translate
+  translate [options]
+  list-models [options]
+  help [command]         display help for command
 
 Environment variables:
   ANTHROPIC_API_KEY                     Your Anthropic API key
   OPENAI_API_KEY                        Your OpenAI API key
-  GOOGLE_API_KEY                        Your Google Gemini API key
   ALT_LANGUAGE                          POSIX locale used for display
+
+---
+> alt help translate
+
+Usage: alt translate [options]
+
+Options:
+  -r, --reference-file <path>                   Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be in the reference language specified by --reference-language
+  -rl, --reference-language <language>          The reference file's language; overrides any 'referenceLanguage' config setting
+  -o, --output-dir <path>                       Output directory for localized files
+  -l, --target-languages <list>                 Comma-separated list of language codes; overrides any 'targetLanguages' config setting
+  -k, --keys <list>                             Comma-separated list of keys to process
+  -R, --reference-exported-var-name <var name>  For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
+  -f, --force                                   Force regeneration of all translations (default: false)
+  -rtw, --realtime-writes                       Write updates to disk immediately, rather than on shutdown (default: false)
+  -m, --app-context-message <message>           Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting
+  -y, --tty                                     Use tty/simple renderer; useful for CI (default: false)
+  -c, --config-file <path>                      Path to config file; defaults to <output dir>/config.json
+  -x, --max-retries <integer>                   Maximum retries on failure (default: 3)
+  -n, --normalize-output-filenames              Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting (default: false)
+  -N, --no-logo                                 Suppress logo printout
+  -cp, --context-prefix <value>                 String to be prefixed to all keys to search for additional context, which are passed along to the AI for context
+  -cs, --context-suffix <value>                 String to be suffixed to all keys to search for additional context, which are passed along to the AI for context
+  -L, --look-for-context-data                   If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified (default: false)
+  -v, --verbose                                 Enables verbose spew (default: false)
+  -d, --debug                                   Enables debug spew (default: false)
+  -t, --trace                                   Enables trace spew (default: false)
+  --dev                                         Enable dev mode, which prints stack traces with errors (default: false)
+  -p, --provider <name>                         AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting
+  -h, --help                                    display help for command
+  
+---
+> alt help list-models
+
+Usage: alt list-models [options]
+
+Options:
+  -p, --provider <name>  AI provider to use for translations (anthropic, openai);
+                         overrides any 'provider' config setting
+  -h, --help             display help for command
 ``` 
 
 ## Examples
@@ -173,7 +169,7 @@ Environment variables:
 * Look for context keys starting with `_context:`
 * Write output files to the current working directory
 ```bash
-alt --reference-file loc.js
+alt translate --reference-file loc.js
   --reference-var-name data
   --provider anthropic
   --look-for-context-data
@@ -188,7 +184,7 @@ alt --reference-file loc.js
 * Write to disk repeatedly, as changes are processed
 * Write files to `./localization`
 ```bash
-alt --config-file ./localization-config.json
+alt translate --config-file ./localization-config.json
   --reference-file loc.js
   --output-dir localization
   --provider openai
@@ -199,7 +195,7 @@ alt --config-file ./localization-config.json
 * Overrides any config's languages
 * Only process the specified strings
 ```bash
-alt --config-file config.json
+alt translate --config-file config.json
   --reference-file reference.js
   --output-dir localization
   --provider openai
