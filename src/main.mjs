@@ -15,7 +15,9 @@ import { keyList, languageList } from './options.js'
 import { runTranslation } from './translate.js'
 import { registerSignalHandlers } from './shutdown.js'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = path.dirname(
+	fileURLToPath(import.meta.url)
+)
 
 // Main function
 export async function run() {
