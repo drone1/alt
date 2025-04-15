@@ -336,7 +336,7 @@ export async function runTranslation({ appState, options, log }) {
 			log.I(`\x1B[38;2;44;190;78m✔\x1B[0m ${localize({ token: 'msg-nothing-to-do', lang: appState.lang, log })}`)
 		}
 	} catch (error) {
-		log.E('Error:', error)
+		log.E(error)
 		exitCode = 2
 	}
 
