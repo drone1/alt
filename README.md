@@ -69,15 +69,6 @@ Note that output files can be lower-cased if you pass the ``--normalize-output-f
 ALT CLI itself has been localized so you can use it many languages. For non-English languages, you can set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit 
 an issue or a PR if you'd like to add another language.
 
-## Rules
-Translation will occur for a given target language & key if any of the following are true:
-* The reference value was modified and translation has not yet occurred for the given language/key
-* If a context value for the given target language/key is found and has been modified. 
-* The `--force` flag is used
-
-Translation will _not_ occur if `alt` detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated 
-later, you can just delete that key/value pair from the given file.
-
 ## Config file
 [_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
 `--config-file`. 
@@ -221,6 +212,15 @@ or
 Internally, there is currently nothing in the prompt about this. I've tested with `%%var%%` syntax, and it hasn't failed yet.
 
 Please submit an issue if it causes you any trouble.
+
+## Rules
+Translation will occur for a given target language & key if any of the following are true:
+* The reference value was modified and translation has not yet occurred for the given language/key
+* If a context value for the given target language/key is found and has been modified.
+* The `--force` flag is used
+
+Translation will _not_ occur if `alt` detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated
+later, you can just delete that key/value pair from the given file.
 
 ## Additional notes
 ### Delayed vs. realtime writes
