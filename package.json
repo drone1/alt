@@ -8,7 +8,8 @@
     "alt": "./alt.mjs"
   },
   "scripts": {
-    "localize-display-strings": "node ./alt.mjs translate --reference-file localization/reference.js"
+    "localize-display-strings": "./alt.mjs translate --reference-file localization/reference.js",
+    "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt"
   },
   "repository": {
     "type": "git",
