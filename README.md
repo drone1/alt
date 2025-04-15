@@ -67,7 +67,7 @@ Note that output files can be lower-cased if you pass the ``--normalize-output-f
 
 ## Display language
 ALT CLI itself has been localized so you can use it many languages. For non-English languages, you can set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit 
-an issue or a PR if you'd like to add another language.
+an issue if you do not see your preferred language.
 
 ## Config file
 [_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
