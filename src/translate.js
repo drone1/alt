@@ -439,7 +439,7 @@ async function translateKeyForLanguage({
 	// A single key may need to retry many times, since the algorithm is quite simple: if a task is told to retry after 10s,
 	// any subsequent tasks that run will delay 10s also, then those concurrent remaining tasks will all hammer at once, some
 	// will complete (maybe), then we'll wait again, then hammer again. A more proper solution may or may not be forthcoming...
-	for (let attempt = 0; !newValue && attempt <= maxRetries; ++attempt) {
+	for (let attempt = 0; !newValue?.length && attempt <= maxRetries; ++attempt) {
 		const attemptStr = attempt > 0 ? ` [Attempt: ${attempt + 1}]` : ''
 		log.D(`[translate] attempt=${attempt}`)
 
