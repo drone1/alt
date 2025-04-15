@@ -26,5 +26,6 @@
   "error-translation-failed": "ᎩᏗᏱᏍᎩᏓᏍᏗ ᎠᏰᎵᏍᏗᏍᎩ ᎤᏲᏒ ᎤᏓᏅᏖ=%%targetLang%%; ᎤᏙᏢᎬ=%%key%%; ᏗᎪᎢᎢ=%%refValue%%",
   "error-bad-reference-file-ext": "ᎤᎾᏓᏡᎬ ᎠᏍᎦᏯ ᎤᏓᏛᏛᎢ ᎠᏍᎦᏯ ᎤᏓᏛᏛᎢ ᎠᏍᎦᏯ \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" ᎠᏂᏴᏫᏯᏍᏗ ᎤᏚᏅᏛ ᎤᏓᏅᏘ ᎤᏙᏢᎬ \"%%referenceFile%%\" ᎠᏍᎦᏯ ᏂᎨᏒᎾ. ᏂᎦᏛ ᎤᏙᏢᎬ ᎠᏂᏴᏫᏯᏍᏗ ᎤᏓᏅᏘ ᎤᏚᏅᏛ ᎤᏙᏢᎬ ᏂᎨᏒᎾ?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "ᎢᎦᏔᏍᏗ ᎦᏚᎩᏍᎩᏂᎨᏍᏗ ᎠᏍᏆᎢᏗ ᏗᏓᎴᏂᏍᏗ ᎠᏍᏆᎢᏗ \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "ᎢᎦᏔᏍᏗ ᎦᏚᎩᏍᎩᏂᎨᏍᏗ ᎠᏍᏆᎢᏗ ᏗᏓᎴᏂᏍᏗ ᎠᏍᏆᎢᏗ \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "ᎤᏚᎵᏍᏗ ᎠᏍᏚᎢᏍᎬᎢ ᎠᏍᎦᏯ ᎤᏓᏅᏛ: %%model%%"
 }

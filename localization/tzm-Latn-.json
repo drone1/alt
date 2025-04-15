@@ -26,5 +26,6 @@
   "error-translation-failed": "Targamt ur tgam ara i tutlayt targit=%%targetLang%%; tikkelt=%%key%%; anɣal=%%refValue%%",
   "error-bad-reference-file-ext": "Anṣuf n ummid n ufaylu \"%%ext%%\" i ufaylu n uskuday",
   "error-reference-var-not-found-in-data": "Ur nufi ad yawi \"%%referenceExportedVarName%%\" deg ufaylu n ugama \"%%referenceFile%%\". Tettat ad tferḍeḍ ɣef wayeḍ seg widayen?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Ur izmir ara tawalt n ufaylu \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Ur izmir ara tawalt n ufaylu \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Amuddu n LLM ur nettat ara: %%model%%"
 }

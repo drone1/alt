@@ -26,5 +26,6 @@
   "error-translation-failed": "ترجمه برای زبان مقصد ناکام ماند=%%targetLang%%؛ کلید=%%key%%؛ متن=%%refValue%%",
   "error-bad-reference-file-ext": "نوع فایل پشتیبانی نشده برای فایل مرجع \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "نتوانستم \"%%referenceExportedVarName%%\" را در فایل مرجع \"%%referenceFile%%\" پیدا کنم. آیا منظور شما یکی از این‌ها بود؟: %%possibleKeys%%",
-  "error-reference-file-load-failed": "ناتوان در بارگذاری فایل مرجع \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "ناتوان در بارگذاری فایل مرجع \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "مدل LLM نامعتبر مشخص شده است: %%model%%"
 }

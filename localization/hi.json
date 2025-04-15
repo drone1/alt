@@ -26,5 +26,6 @@
   "error-translation-failed": "अनुवाद विफल हुआ लक्षित भाषा के लिए=%%targetLang%%; कुंजी=%%key%%; पाठ=%%refValue%%",
   "error-bad-reference-file-ext": "संदर्भ फ़ाइल \"%%ext%%\" के लिए असमर्थित फ़ाइल प्रकार",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" को संदर्भ फ़ाइल \"%%referenceFile%%\" में नहीं पाया जा सका। क्या आपका मतलब इनमें से किसी एक से था?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" संदर्भ फ़ाइल लोड करने में विफल"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" संदर्भ फ़ाइल लोड करने में विफल",
+  "error-invalid-llm-model": "अमान्य LLM मॉडल निर्दिष्ट: %%model%%"
 }

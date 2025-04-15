@@ -26,5 +26,6 @@
   "error-translation-failed": "対象言語=%%targetLang%%; キー=%%key%%; テキスト=%%refValue%%の翻訳に失敗しました。",
   "error-bad-reference-file-ext": "参照ファイル「%%ext%%」のファイル形式はサポートされていません。",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\"が参照ファイル\"%%referenceFile%%\"内に見つかりませんでした。代わりにこれらのいずれかを意味しましたか？: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" リファレンスファイルの読み込みに失敗しました"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" リファレンスファイルの読み込みに失敗しました",
+  "error-invalid-llm-model": "指定されたLLMモデルが無効です: %%model%%"
 }

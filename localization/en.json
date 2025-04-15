@@ -28,5 +28,6 @@
   "error-translation-failed": "Translation failed for target language=%%targetLang%%; key=%%key%%; text=%%refValue%%",
   "error-bad-reference-file-ext": "Unsupported file type for reference file \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Couldn't find \"%%referenceExportedVarName%%\" in reference file \"%%referenceFile%%\". Did you mean one of these instead?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Failed to load reference file \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Failed to load reference file \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Invalid LLM model specified: %%model%%"
 }

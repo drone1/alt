@@ -26,5 +26,6 @@
   "error-translation-failed": "ဘာသာပြန်မှု မအောင်မြင်ပါ။ ရည်ရွယ်သော ဘာသာစကား=%%targetLang%%; သော့=%%key%%; စာသား=%%refValue%%",
   "error-bad-reference-file-ext": "ကိုးကားဖိုင်အတွက် မထောက်ခံသော ဖိုင်အမျိုးအစား \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" ကို \"%%referenceFile%%\" ကိုးကားဖိုင်ထဲတွင် ရှာမတွေ့ပါ။ ဒါမျိုးတွေကို သင်ရည်ညွှန်းနေခဲ့သလား။: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" ကို တင်ရန် မအောင်မြင်ပါ"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" ကို တင်ရန် မအောင်မြင်ပါ",
+  "error-invalid-llm-model": "မှားနေသော LLM မော်ဒယ်ကို သတ်မှတ်ထားသည်။ %%model%%"
 }

@@ -26,5 +26,6 @@
   "error-translation-failed": "Пераклад не атрымаўся для мэтавай мовы=%%targetLang%%; ключ=%%key%%; тэкст=%%refValue%%",
   "error-bad-reference-file-ext": "Непадтрымліваемы тып файла для файла спасылкі \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не ўдалося знайсці \"%%referenceExportedVarName%%\" у файле спасылак \"%%referenceFile%%\". Магчыма, вы мелі на ўвазе адзін з гэтых?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Не ўдалося загрузіць файл спасылкі \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Не ўдалося загрузіць файл спасылкі \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Няправільная мадэль LLM пазначана: %%model%%"
 }

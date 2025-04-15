@@ -26,5 +26,6 @@
   "error-translation-failed": "Përkthimi dështoi për gjuhën e synuar=%%targetLang%%; çelësi=%%key%%; teksti=%%refValue%%",
   "error-bad-reference-file-ext": "Lloji i skedarit të papërkrahur për skedarin referencë \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nuk mund të gjendet \"%%referenceExportedVarName%%\" në skedarin e referencës \"%%referenceFile%%\". A keni dashur të thoni ndonjë nga këto në vend të tij?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Dështoi të ngarkojë skedarin e referencës \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Dështoi të ngarkojë skedarin e referencës \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Modeli i pavlefshëm LLM i specifikuar: %%model%%"
 }

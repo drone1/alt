@@ -26,5 +26,6 @@
   "error-translation-failed": "An treylyans a fyllys rag tavas target=%%targetLang%%; alcwynn=%%key%%; tekst=%%refValue%%",
   "error-bad-reference-file-ext": "Nyns yw an math restren skoodhys rag an restren kevren \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nyns esa kavadow \"%%referenceExportedVarName%%\" a-barth yn restren kevren \"%%referenceFile%%\". Ogh hwi owth kowsel onen a'n re-ma yn le?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Nag es dhe garga \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Nag es dhe garga \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Model LLM anwedhys spesifys: %%model%%"
 }

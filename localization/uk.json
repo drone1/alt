@@ -26,5 +26,6 @@
   "error-translation-failed": "Переклад не вдався для мови призначення=%%targetLang%%; ключ=%%key%%; текст=%%refValue%%",
   "error-bad-reference-file-ext": "Непідтримуваний тип файлу для файлу довідки \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не вдалося знайти \"%%referenceExportedVarName%%\" у файлі довідника \"%%referenceFile%%\". Можливо, ви мали на увазі одне з цих значень?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Не вдалося завантажити файл довідки \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Не вдалося завантажити файл довідки \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Вказано недійсну модель LLM: %%model%%"
 }

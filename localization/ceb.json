@@ -26,5 +26,6 @@
   "error-translation-failed": "Ang paghubad napakyas alang sa piniling pinulongan=%%targetLang%%; yawe=%%key%%; teksto=%%refValue%%",
   "error-bad-reference-file-ext": "Dili suportado nga tipo sa file alang sa reference file \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Wala makita ang \"%%referenceExportedVarName%%\" sa reference file nga \"%%referenceFile%%\". Buot ba nimong ipasabot ang usa niini nga mga mosunod?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Napakyas sa pag-load sa reference file nga \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Napakyas sa pag-load sa reference file nga \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Wala'y balido nga LLM modelo nga gitakda: %%model%%"
 }

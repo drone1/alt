@@ -26,5 +26,6 @@
   "error-translation-failed": "فشل الترجمة للغة الهدف=%%targetLang%%؛ المفتاح=%%key%%؛ النص=%%refValue%%",
   "error-bad-reference-file-ext": "نوع الملف غير مدعوم لملف المرجع \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "تعذر العثور على \"%%referenceExportedVarName%%\" في ملف المرجع \"%%referenceFile%%\". هل قصدت أحد هذه بدلاً من ذلك؟: %%possibleKeys%%",
-  "error-reference-file-load-failed": "فشل في تحميل ملف المرجع \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "فشل في تحميل ملف المرجع \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "تم تحديد نموذج LLM غير صالح: %%model%%"
 }

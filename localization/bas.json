@@ -26,5 +26,6 @@
   "error-translation-failed": "Itzulpenak huts egin du helburuko hizkuntza=%%targetLang%%; gakoa=%%key%%; testua=%%refValue%%",
   "error-bad-reference-file-ext": "Tipo de archivo no soportado para el archivo de referencia \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ezin izan da \"%%referenceExportedVarName%%\" aurkitu \"%%referenceFile%%\" erreferentzia fitxategian. Hauetako bat esan nahi zenuen ala?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Ntchito yolowetsa fayilo yotchulidwa \"%%referenceFile%%\" yapanda kupambana"
+  "error-reference-file-load-failed": "Ntchito yolowetsa fayilo yotchulidwa \"%%referenceFile%%\" yapanda kupambana",
+  "error-invalid-llm-model": "Eredu LLM baliogabea zehaztu da: %%model%%"
 }

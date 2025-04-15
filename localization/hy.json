@@ -26,5 +26,6 @@
   "error-translation-failed": "Չհաջողվեց թարգմանել թղթակցվող լեզվի համար=%%targetLang%%; բանալի=%%key%%; տեքստ=%%refValue%%",
   "error-bad-reference-file-ext": "Չաջակցվող ֆայլի տեսակ հղումների ֆայլի համար «%%ext%%»",
   "error-reference-var-not-found-in-data": "Չհաջողվեց գտնել \"%%referenceExportedVarName%%\" հղումների ֆայլում \"%%referenceFile%%\": Միգուցե նկատի ունեք այսպիսիները՝ %%possibleKeys%%:",
-  "error-reference-file-load-failed": "Չհաջողվեց բեռնել \"%%referenceFile%%\" հղումային ֆայլը"
+  "error-reference-file-load-failed": "Չհաջողվեց բեռնել \"%%referenceFile%%\" հղումային ֆայլը",
+  "error-invalid-llm-model": "Սխալ LLM մոդել նշված է՝ %%model%%"
 }

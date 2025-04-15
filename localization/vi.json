@@ -26,5 +26,6 @@
   "error-translation-failed": "Dịch không thành công cho ngôn ngữ đích=%%targetLang%%; khóa=%%key%%; văn bản=%%refValue%%",
   "error-bad-reference-file-ext": "Loại tệp không được hỗ trợ cho tệp tham khảo \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Không thể tìm thấy \"%%referenceExportedVarName%%\" trong tệp tham khảo \"%%referenceFile%%\". Bạn có muốn nói đến một trong những cái này không?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Không thể tải tệp tham chiếu \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Không thể tải tệp tham chiếu \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Mô hình LLM không hợp lệ được chỉ định: %%model%%"
 }

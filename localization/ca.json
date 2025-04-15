@@ -26,5 +26,6 @@
   "error-translation-failed": "La traducció ha fallat per a l'idioma de destí=%%targetLang%%; clau=%%key%%; text=%%refValue%%",
   "error-bad-reference-file-ext": "Tipus de fitxer no suportat per al fitxer de referència \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "No s'ha pogut trobar \"%%referenceExportedVarName%%\" en el fitxer de referència \"%%referenceFile%%\". Volies dir alguna d'aquestes opcions en lloc seu?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "No s'ha pogut carregar el fitxer de referència \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "No s'ha pogut carregar el fitxer de referència \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "S'ha especificat un model LLM no vàlid: %%model%%"
 }

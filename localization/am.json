@@ -26,5 +26,6 @@
   "error-translation-failed": "ትርጓሜው አልተሳካም ለተመን ቋንቋ=%%targetLang%%; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%",
   "error-bad-reference-file-ext": "የተመከረ ፋይል አይነት ለማጣቀሻ ፋይል \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "በማእከላዊ ፋይል \"%%referenceFile%%\" ውስጥ \"%%referenceExportedVarName%%\" አልተገኘም። በመንኮት የሚመስሉትን ነገሮች ማንኛውን ማለት ነበር?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "የማጣቀሻ ፋይል \"%%referenceFile%%\" መጫን አልተሳካም"
+  "error-reference-file-load-failed": "የማጣቀሻ ፋይል \"%%referenceFile%%\" መጫን አልተሳካም",
+  "error-invalid-llm-model": "የተሳሳተ የLLM ሞዴል ተጠቀሰ: %%model%%"
 }

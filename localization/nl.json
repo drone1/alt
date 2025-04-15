@@ -26,5 +26,6 @@
   "error-translation-failed": "Vertaling mislukt voor doeltaal=%%targetLang%%; sleutel=%%key%%; tekst=%%refValue%%",
   "error-bad-reference-file-ext": "Niet-ondersteund bestandstype voor referentiebestand \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Kan \"%%referenceExportedVarName%%\" niet vinden in referentiebestand \"%%referenceFile%%\". Bedoelde u een van deze?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Kan referentiebestand \"%%referenceFile%%\" niet laden."
+  "error-reference-file-load-failed": "Kan referentiebestand \"%%referenceFile%%\" niet laden.",
+  "error-invalid-llm-model": "Ongeldig LLM-model gespecificeerd: %%model%%"
 }

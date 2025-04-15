@@ -26,5 +26,6 @@
   "error-translation-failed": "Прево́дъ не ᲁѣ успѣ́шь за ѩзы́къ цѣ́льнъ=%%targetLang%%; клѫ́чь=%%key%%; текстъ=%%refValue%%",
   "error-bad-reference-file-ext": "Неподдерживаемый типъ файла для справочнаго файла \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не можахъ найти \"%%referenceExportedVarName%%\" въ списоцѣ \"%%referenceFile%%\". Нѣже ли имѣлъ въ виду єдино изъ сихъ?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Не можахъ възложити датотеку исходьнꙑю \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Не можахъ възложити датотеку исходьнꙑю \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Недѣйствительный LLM модель определена: %%model%%"
 }

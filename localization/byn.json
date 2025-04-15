@@ -26,5 +26,6 @@
   "error-translation-failed": "ትርጓሜ ኣብ ትሕደሕደ ቋንቋ=%%targetLang%% ኣይተሳእነን; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%",
   "error-bad-reference-file-ext": "ቅድመ ምእላይ ፋይል ኣይተመከረን ፋይል ክፍሊት \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "ኣብ ፋይል ምሳኻታት \"%%referenceFile%%\" \"%%referenceExportedVarName%%\" ክርከብ ኣይተረኽበን። እንተኾነን እንታይ ክትምልስ ኣለኻ?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "ኣብ መጻኢ ምምሃብ ፋይል ምውሳድ ክኣለዎ ኣሎ \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "ኣብ መጻኢ ምምሃብ ፋይል ምውሳድ ክኣለዎ ኣሎ \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "ልም ሞዴል ያልተፈቀደ ተጠቅሟል፡ %%model%%"
 }

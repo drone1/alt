@@ -26,5 +26,6 @@
   "error-translation-failed": "Ntumidie no amma %%targetLang%%; bɔkɔ=%%key%%; nkɔmmɔ=%%refValue%%",
   "error-bad-reference-file-ext": "Mfa fael a wɔntumi nnye ho kwan \"%%ext%%\" nni saa fileType no so",
   "error-reference-var-not-found-in-data": "Entumi hu \"%%referenceExportedVarName%%\" wɔ abakɔsɛm fael \"%%referenceFile%%\" mu. Woka sɛnea ɛteɛ sɛ wobɛka eyi anaa?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Ɛnyɛ sɛ ɛbɛtwe abakɔsua fael \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Ɛnyɛ sɛ ɛbɛtwe abakɔsua fael \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Mfomso LLM a wɔahyehyɛ no nni mfaso: %%model%%"
 }

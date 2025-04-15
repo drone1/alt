@@ -26,5 +26,6 @@
   "error-translation-failed": "Translation e bélɛ na esé mɔkɛ́=%%targetLang%%; búkú=%%key%%; mbindi=%%refValue%%",
   "error-bad-reference-file-ext": "Tipo di file non supportato per il file di riferimento \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "E ká mɛnɛ \"%%referenceExportedVarName%%\" na fáílú mɛ́nɛ \"%%referenceFile%%\". Ma wɛ́nɛ mɛnɛ bú ánɛ?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "E kɛnɛ́ mɔ́ yí mɛ́lɛ \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "E kɛnɛ́ mɔ́ yí mɛ́lɛ \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Model LLM nyɛɛ nyɛɛ: %%model%%"
 }

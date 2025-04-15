@@ -26,5 +26,6 @@
   "error-translation-failed": "A traduzzione hà fiascatu per a lingua di destinazione=%%targetLang%%; chjave=%%key%%; testu=%%refValue%%",
   "error-bad-reference-file-ext": "Tipu di schedariu micca supportatu per u schedariu di riferimentu \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ùn pudia truvà \"%%referenceExportedVarName%%\" in u schedariu di riferimentu \"%%referenceFile%%\". Vulìa dì unu di questi invece?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Impossibile caricare il file di riferimento \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Impossibile caricare il file di riferimento \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Mudellu LLM invalidu specificatu: %%model%%"
 }

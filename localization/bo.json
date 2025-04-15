@@ -26,5 +26,6 @@
   "error-translation-failed": "མིང་བསྡུ་བྱས་པའི་སྐད་ཡིག=%%targetLang%%; ལྡེ་མིག=%%key%%; ཚིག་ཡིག=%%refValue%% ལ་མིང་བསྡུ་མ་འགྲོ་བ།",
   "error-bad-reference-file-ext": "བརྡ་ཡིག་གི་དཔེ་གཏུབ་ཡིག་ཆ་འདི་ལ་དགའ་ཤོས་མེད། \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "འཛོལ་བའི་ཡིག་ཆ་ནང་ནས་ \"%%referenceExportedVarName%%\" འདི་མ་ཐོབ། \"%%referenceFile%%\" འདི་ནང་ལས་གསལ་བཤད་འབད་ཡོད་མི། ཁྱེད་ཀྱིས་འདི་དག་གི་སྐོར་བསམ་བཞག་ཡོད་པས། %%possibleKeys%%",
-  "error-reference-file-load-failed": "འཛུལ་ཡིག་ཡིག་ཆ་ \"%%referenceFile%%\" སྣོན་པར་མ་ཐུབ།"
+  "error-reference-file-load-failed": "འཛུལ་ཡིག་ཡིག་ཆ་ \"%%referenceFile%%\" སྣོན་པར་མ་ཐུབ།",
+  "error-invalid-llm-model": "ནུས་མེད་ལོ་གྲིག་བཀོད་པ་བཙུགས་ཡོད། %%model%%"
 }

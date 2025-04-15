@@ -26,5 +26,6 @@
   "error-translation-failed": "Igbanwe asụsụ agaghị ekwe omume maka asụsụ ebumnuche=%%targetLang%%; isi=%%key%%; ederede=%%refValue%%",
   "error-bad-reference-file-ext": "Ụdị faịlụ anaghị akwado maka faịlụ ntụaka \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Enweghị ike ịchọta \"%%referenceExportedVarName%%\" na faịlụ ntụaka \"%%referenceFile%%\". Ọ̀ bụ nke a ka ị pụtara?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Ekwesịghị ibudata faịlụ ntụaka \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Ekwesịghị ibudata faịlụ ntụaka \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Ejighị LLM nlereanya a kpọtụrụ aha: %%model%%"
 }

@@ -26,5 +26,6 @@
   "error-translation-failed": "Falló la traducción pa la llingua de destín=%%targetLang%%; clave=%%key%%; testu=%%refValue%%",
   "error-bad-reference-file-ext": "Tipu de ficheru non soportáu pa'l ficheru de referencia \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nun s'atopó \"%%referenceExportedVarName%%\" nel ficheru de referencia \"%%referenceFile%%\". Quixisti dicir ún d'estos en cuenta?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Falló al cargar el ficheru de referencia \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Falló al cargar el ficheru de referencia \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Modelu LLM inválidu especificáu: %%model%%"
 }

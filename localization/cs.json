@@ -26,5 +26,6 @@
   "error-translation-failed": "Překlad selhal pro cílový jazyk=%%targetLang%%; klíč=%%key%%; text=%%refValue%%",
   "error-bad-reference-file-ext": "Nepodporovaný typ souboru pro referenční soubor \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nepodařilo se najít \"%%referenceExportedVarName%%\" v referenčním souboru \"%%referenceFile%%\". Měli jste na mysli některý z těchto?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Nepodařilo se načíst referenční soubor \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Nepodařilo se načíst referenční soubor \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Byl zadán neplatný model LLM: %%model%%"
 }

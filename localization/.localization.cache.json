@@ -1,5 +1,5 @@
 {
-  "referenceHash": "5e721b42ceec5495f97e8812fc846baa7a16152904b3d872ab6bdbd5f38fc3d1",
+  "referenceHash": "bdca8de182a5cf3a899d83191319e3260e9dd132d354904a40a07fb0a0524036",
   "referenceKeyHashes": {
     "aa": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -23,7 +23,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "af": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -47,7 +48,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "agq": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -71,7 +73,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ak": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -95,7 +98,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "am": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -119,7 +123,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ar": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -143,7 +148,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "as": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -167,7 +173,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "asa": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -191,7 +198,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ast": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -215,7 +223,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "az": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -239,7 +248,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ba": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -263,7 +273,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bas": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -287,7 +298,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "be": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -311,7 +323,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bem": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -335,7 +348,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bez": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -359,7 +373,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bg": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -383,7 +398,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bm": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -407,7 +423,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bn": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -431,7 +448,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bo": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -455,7 +473,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "br": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -479,7 +498,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "brx": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -503,7 +523,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "bs": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -527,7 +548,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "byn": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -551,7 +573,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ca": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -575,7 +598,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ccp": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -599,7 +623,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "cd-RU": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -623,7 +648,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ceb": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -647,7 +673,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "cgg": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -671,7 +698,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "chr": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -695,7 +723,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "co": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -719,7 +748,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "cs": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -743,7 +773,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "cu-RU": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -767,7 +798,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "da": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -791,7 +823,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "de-AT": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -815,7 +848,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "de-CH": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -839,7 +873,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "de-DE": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -863,7 +898,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "dua": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -887,7 +923,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "dv": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -911,7 +948,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "dz": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -935,7 +973,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ebu": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -959,7 +998,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "en": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -983,7 +1023,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "es-ES": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1007,7 +1048,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "es-MX": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1031,7 +1073,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "et": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1055,7 +1098,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "eu": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1079,7 +1123,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "fr-CA": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1103,7 +1148,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "fr-CH": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1127,7 +1173,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "fr-FR": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1151,7 +1198,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "gsw": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1175,7 +1223,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "hi": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1199,7 +1248,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "hr": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1223,7 +1273,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "hy": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1247,7 +1298,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ja": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1271,7 +1323,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ksf": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1295,7 +1348,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "km": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1319,7 +1373,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ku": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1343,7 +1398,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "kw": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1367,7 +1423,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "my": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1391,7 +1448,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "nl": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1415,7 +1473,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "ru": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1439,7 +1498,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "prs": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1463,7 +1523,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "sq": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1487,7 +1548,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "swc": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1511,7 +1573,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "th": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1535,7 +1598,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "tzm-Latn-": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1559,7 +1623,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "uk": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1583,7 +1648,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "vi": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1607,7 +1673,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "zh-Hans": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1631,7 +1698,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "zh-Hant": {
       "msg-finished-with-errors": "785ba4b7e062d66506cf7bce6cb85dd9de9f753902a64dbd50e814cd0d1c9366",
@@ -1655,7 +1723,8 @@
       "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
       "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
       "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+      "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+      "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
     },
     "zh-TW": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1693,12 +1762,13 @@
         "msg-translation-reason-userModifiedReferenceValue": "a1b672d29663fa593e940792df0fded1a0bc279d61f52b76e7b0984c21ec0c89",
         "msg-translation-reason-missingOutputKey": "384a18245acd8439a397086a2a85bf8f3b4e5d362c8775b74860b66ab662bfa4",
         "msg-translation-reason-missingOutputValueHash": "ede9f39097028c89652c4d7c84f88625e877afca8e7563d2ea803db0da25fd46",
-        "error-value-not-a-string": "ba34cc9cfaed7e6e9a7fad5d4aa5c160bd64a391ee8148dfdd8a4325bb9d6459",
+        "error-value-not-a-string": "1cf457c382b367ad1c4213169405761a411873ba7e14c4eb353413aa4b9691ba",
         "error-value-not-in-reference-data": "fb9d4b732c8f22f8ad1760753601b23ec7b14aa72f794f59f6a1c24476136dcd",
         "error-translation-failed": "0c08e8f3200cb447afdb187b7992856bfac480fd8154992931ef165503529c1f",
         "error-bad-reference-file-ext": "ea996c8f3f0e3b3d6b8988ab7ed34090b3ecbe1ae0c0161c2090780632773c82",
         "error-reference-var-not-found-in-data": "c7f849aed0040e500a579f37e669c440ede02d55076f47a28b480d1a44b71c06",
-        "error-reference-file-load-failed": "cc24bc1bb9ccc689f38738aec20b5421299057cacd3f352d9b8bf023916c2fba"
+        "error-reference-file-load-failed": "cc24bc1bb9ccc689f38738aec20b5421299057cacd3f352d9b8bf023916c2fba",
+        "error-invalid-llm-model": "2e0d5a4d26d68c93cac6e4ada1eb95dc3b43ff772903349419686a7847b76b78"
       }
     },
     "zh-TW": {
@@ -1754,7 +1824,8 @@
         "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
         "error-bad-reference-file-ext": "e571d3125c78b9134611e462bd2d3e2be275282dcbd1c1ca92c39c2e4c2e9bf4",
         "error-reference-var-not-found-in-data": "4af7ea8c728a96064ba0464af90dca624763273da0af6601d82888f1df290243",
-        "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff"
+        "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
+        "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c"
       }
     },
     "aa": {
@@ -1786,7 +1857,8 @@
         "error-translation-failed": "aeb11a865aa30f287630b6ac599f19819b8974143ec6b4e2ca082773f294e65c",
         "error-bad-reference-file-ext": "cfe16a8ead82a6421ee5e885e73969b75d1b5caaf254313d992a13ca792da7f4",
         "error-reference-var-not-found-in-data": "258804d6e2ab27f576b5c83b52da0a6103b02b3cd4e432574c83a13a81b0b99b",
-        "error-reference-file-load-failed": "a38b3440459cf534f862ca8a64cef43de636d5fde31c75a6c055a71c68947ffc"
+        "error-reference-file-load-failed": "a38b3440459cf534f862ca8a64cef43de636d5fde31c75a6c055a71c68947ffc",
+        "error-invalid-llm-model": "8c7ddac448f2cec670adcf5f81ae800a1267402a4cde2e017fd8b752c6ccf4bd"
       }
     },
     "af": {
@@ -1818,7 +1890,8 @@
         "error-translation-failed": "cea8d1b9d6cf6e6d850f1e2bbfb355fc6985aafff46e5f9f027338e3f7a837e1",
         "error-bad-reference-file-ext": "60fbccbf5a9bf0417cbdd927e8a2b146c741934290d3c43e28c186140ddcf02b",
         "error-reference-var-not-found-in-data": "dbe59f065dc3a7405c363e0c1ec242e0ac62938246abf25899d718fe5fb06db5",
-        "error-reference-file-load-failed": "ef09280ffb80aedb0000ce360f462b2b7521f0d4d2dac6758cd0d35d07f3ea5c"
+        "error-reference-file-load-failed": "ef09280ffb80aedb0000ce360f462b2b7521f0d4d2dac6758cd0d35d07f3ea5c",
+        "error-invalid-llm-model": "133b3cc36f7345880aabba7c932d34d8cc4442bbd06a4a743e8a0cb40a0b9e5e"
       }
     },
     "agq": {
@@ -1850,7 +1923,8 @@
         "error-translation-failed": "0f58dc015bb5b1b52e53626254eeeec00e300c23273954392664005b285e2da6",
         "error-bad-reference-file-ext": "fd56f0ce4b974a244e36fff5a82afd9369345f7cc148257a402dfea37f5b7ff1",
         "error-reference-var-not-found-in-data": "563e2cc578a2ab2555f4771baa4883fc72b02349cc48c7280f7c39f54e60dd19",
-        "error-reference-file-load-failed": "a2c22b4d9313372d389879c3b4e383988af9d9c92054c9446f80eaf75b485a2f"
+        "error-reference-file-load-failed": "a2c22b4d9313372d389879c3b4e383988af9d9c92054c9446f80eaf75b485a2f",
+        "error-invalid-llm-model": "7053dfec3a61bbdf929e577c4a823ce650d0d00773d0a339e51752469859cf57"
       }
     },
     "ak": {
@@ -1882,7 +1956,8 @@
         "error-translation-failed": "b6daef085b04e5836dbeb20f63b529eeabbfca1983418263d073f705538b702e",
         "error-bad-reference-file-ext": "9c8125fea79ce8fae3538f4fd906d0e45cebd9cb993c0b0722dea0412c58d833",
         "error-reference-var-not-found-in-data": "fee92340faa0cd117ae721ef78cfcaf77580c2e670573ec6918bbd1eae2422bd",
-        "error-reference-file-load-failed": "21f9b64fb33175d83a5fe6f8b1440a3312af623f2ef09b0d9ef24261c8365f6f"
+        "error-reference-file-load-failed": "21f9b64fb33175d83a5fe6f8b1440a3312af623f2ef09b0d9ef24261c8365f6f",
+        "error-invalid-llm-model": "30b420e594ed618978cbb6ddce5fc528fbee35caea7f8988a884c158d63ec91a"
       }
     },
     "am": {
@@ -1914,7 +1989,8 @@
         "error-translation-failed": "8ec8ccbcb15e8412cb352079ccc049e5db32af3cbddff6a006d8dfbc529fc9c0",
         "error-bad-reference-file-ext": "608ec6d39f20263119ee3ce56f31af427015fc650021e9325531308dee3b4e44",
         "error-reference-var-not-found-in-data": "b913ef75cf717e307e013b261b66736a61b30718d1e57c8347834434bae8d40a",
-        "error-reference-file-load-failed": "59184e77acb08a0f1e040212c133cce94adb718c0850fcb297d08f7fdb8539f1"
+        "error-reference-file-load-failed": "59184e77acb08a0f1e040212c133cce94adb718c0850fcb297d08f7fdb8539f1",
+        "error-invalid-llm-model": "9e81167cfbbdd51d0d6b84cd15a2ff9067ce7757e6cd2ab4f53a28b63a5ccbec"
       }
     },
     "ar": {
@@ -1946,7 +2022,8 @@
         "error-translation-failed": "5307d9084fdeaef07cbfd42b57f9778db5a89c72ce8e11f038b2079e79401678",
         "error-bad-reference-file-ext": "ad4fbb813e33d59cf76b1840b2021e9df238748b2bc9ad5220f600c70bb994c5",
         "error-reference-var-not-found-in-data": "637d34c4ec5c85d45e563efdde2fd9c3766e32d5c4712c85f364d090cc779778",
-        "error-reference-file-load-failed": "21443caf57379d19148f7ebd96fa61867699170bcb3be7e926f085bc09c3d8af"
+        "error-reference-file-load-failed": "21443caf57379d19148f7ebd96fa61867699170bcb3be7e926f085bc09c3d8af",
+        "error-invalid-llm-model": "05bd63e365c6e2bf55f04139ea84f13d7c01c27f36c5dbc11ea0f723b52825a5"
       }
     },
     "as": {
@@ -1978,7 +2055,8 @@
         "error-translation-failed": "f254a29f73436f4ffa9c1eeb702490113863825ffd64514c5e20d50795d5bbd7",
         "error-bad-reference-file-ext": "45f75b22643e6fdc992a679bc521f5a7869e8517eb9ffefe62857d9bdff9cfa8",
         "error-reference-var-not-found-in-data": "7eca6399309e9099f86b2d6980ef2d5eddd22aae5c2f86615c94a851dbadeaf4",
-        "error-reference-file-load-failed": "ecc15203db79299feea057c97cceb95d25b9ee5c35d55f53ded15e4a009a9c43"
+        "error-reference-file-load-failed": "ecc15203db79299feea057c97cceb95d25b9ee5c35d55f53ded15e4a009a9c43",
+        "error-invalid-llm-model": "588ae2addb7a88fbc80595299664c27c485c7fab10b6536a544802f9cbbc86be"
       }
     },
     "asa": {
@@ -2010,7 +2088,8 @@
         "error-translation-failed": "440a882ce7000040e32ebbb846265da07c7a32530e69c81e01c1380e6c6161dc",
         "error-bad-reference-file-ext": "60e6fcb3acb99eadef0b017c4562c6df5b901304284a8cc57dd9fcf0d0e64760",
         "error-reference-var-not-found-in-data": "134e2ff6f0aca59c96b24adb172ae6c695e15efe82d2791fd6574fa30894e1db",
-        "error-reference-file-load-failed": "40b92df2b30d3b71843e2351912f4e7d875e68047ffb66f6732037736c08e999"
+        "error-reference-file-load-failed": "40b92df2b30d3b71843e2351912f4e7d875e68047ffb66f6732037736c08e999",
+        "error-invalid-llm-model": "6e796d64a0fe86e6a6a5a2d74c953d7423c4b89a5900d67d61cab9db5d6555fa"
       }
     },
     "ast": {
@@ -2042,7 +2121,8 @@
         "error-translation-failed": "dad1aa032c9d99b1c026540d23eabc52bb8c7f1f1cf5cba26b48e13d0a6b53cf",
         "error-bad-reference-file-ext": "a1cef42350069f69a6117e6978691d010ae939ec605a2bd2ee771fbfec77281d",
         "error-reference-var-not-found-in-data": "1c7d14e6370a47960123fd397c579c19c7602e9fe0b36ddb5d6751aa556f2cee",
-        "error-reference-file-load-failed": "e13eb7dc8a9993467a08f0c64570cbddd2ed00150d6a0c36f53283972012801f"
+        "error-reference-file-load-failed": "e13eb7dc8a9993467a08f0c64570cbddd2ed00150d6a0c36f53283972012801f",
+        "error-invalid-llm-model": "34cfa499e6cba38ffac75dbf4d5854191655bcacc6993e8bcdd81777fbae594d"
       }
     },
     "az": {
@@ -2074,7 +2154,8 @@
         "error-translation-failed": "0a7163c8180180677c17b20f4832c9e3a8427f4a4691053a53b0bb5554ba9a64",
         "error-bad-reference-file-ext": "20a68241b849f375b522b162255b92f83bf09dda8ad40ebe68f9f32fd70a7696",
         "error-reference-var-not-found-in-data": "917a0630a1d34f398fd6a568cc86377647d661560b516fa3d251b6b101242e89",
-        "error-reference-file-load-failed": "0f21165c3a5f23512258021335e44533d5b7be949512820b7c177e08356ab8a7"
+        "error-reference-file-load-failed": "0f21165c3a5f23512258021335e44533d5b7be949512820b7c177e08356ab8a7",
+        "error-invalid-llm-model": "ca67dcc1a378f9c6ae84ea2ee57c0b1cb86be425c74495911c7877f175fc7e52"
       }
     },
     "ba": {
@@ -2106,7 +2187,8 @@
         "error-translation-failed": "9526ec7bece79e31a7fbdc5f5db11aa1e93fbd9b932a3a9ebe9a8ac0dcf5fbca",
         "error-bad-reference-file-ext": "ea4179db1e6d973302f7b2fd737b30cbb88751a2a1890b05f677ee70fde500ed",
         "error-reference-var-not-found-in-data": "910368cea88d6630bc608f2f33ff1dba977ced446f6d55bcf0ae72efdc90be79",
-        "error-reference-file-load-failed": "d1cd221f52c613cb1f11c9bfa31933698e70f9325d2df89068dc5be47880af51"
+        "error-reference-file-load-failed": "d1cd221f52c613cb1f11c9bfa31933698e70f9325d2df89068dc5be47880af51",
+        "error-invalid-llm-model": "f48bab580e1e376d1cdc82645080a7bc75bffa83755cd1776fc10179a6168e92"
       }
     },
     "bas": {
@@ -2138,7 +2220,8 @@
         "error-translation-failed": "01af662d57e30273bac6d29a3403ed8f7572302d9316d416cf0905a1238e4881",
         "error-bad-reference-file-ext": "5516a86b665578026f26ab266b0143e59ef4235165043c36958b9844f8045385",
         "error-reference-var-not-found-in-data": "d18b40b197ff7519cfb7c5786c6e2405a3ba4e404161c99a07f7d58802aec77b",
-        "error-reference-file-load-failed": "f1768326984ae0ead81a9bc321be9963dd23d7092d66dcc3227d312d1999ed6a"
+        "error-reference-file-load-failed": "f1768326984ae0ead81a9bc321be9963dd23d7092d66dcc3227d312d1999ed6a",
+        "error-invalid-llm-model": "c683cf8d9f49302030c4a55dce68e20dc3faa767a2c38b9b1737f33a46674efc"
       }
     },
     "be": {
@@ -2170,7 +2253,8 @@
         "error-translation-failed": "44b00385091a62ec32b213e89893c108feb8bf36393de002ab45c86bd5b35269",
         "error-bad-reference-file-ext": "fab4d90e88b3ad1391d802e1336099993a7bc034be61a53ea3f59377fcdcaac9",
         "error-reference-var-not-found-in-data": "239eba99e7fa201921f45633fbde40bd2e5b0f47a26d89050d81ca4f89c889a9",
-        "error-reference-file-load-failed": "26b7c5bc61d925a5890da31e013ff0647c8dd3ab35d3c0620c10f436f0dbc936"
+        "error-reference-file-load-failed": "26b7c5bc61d925a5890da31e013ff0647c8dd3ab35d3c0620c10f436f0dbc936",
+        "error-invalid-llm-model": "e6f1630a572e2d831a4a1389a5d87f27eaaba620b46c0bfe9921e28ec5c57a30"
       }
     },
     "bem": {
@@ -2202,7 +2286,8 @@
         "error-translation-failed": "657260411879070d3826a4cd5152fbae471f6e038ec2026174d55332cc47198e",
         "error-bad-reference-file-ext": "9f70674cb8a92e3eff54a9a9bdde78ce0d0aa3342f10e0b629e463bbb98e4c6a",
         "error-reference-var-not-found-in-data": "872c6586413cd248572a5a270eda70b828e4ddb29e8d44911ce7c3e7fd0cd7f8",
-        "error-reference-file-load-failed": "a80153b00a23edebbc78b0d0e4aa6037f5864fca68e7859a22fb7a17c167f028"
+        "error-reference-file-load-failed": "a80153b00a23edebbc78b0d0e4aa6037f5864fca68e7859a22fb7a17c167f028",
+        "error-invalid-llm-model": "1390df05f6b65395b5f98946a55eb4c7d5525caa65364876806ec8fccec2e7d1"
       }
     },
     "bez": {
@@ -2234,7 +2319,8 @@
         "error-translation-failed": "c09919a740a1087d0ede49c97626e0fda9b2c87b677178bdac40b959936ab4b9",
         "error-bad-reference-file-ext": "989ee4139437c4a923484dc941ec42bf2d76a5a207694902300581eb83fd6e40",
         "error-reference-var-not-found-in-data": "3f2fc8717a8cd05c69b83b4ea5d2774b8cb3827e8c628a4c24d7b1b6532a80a5",
-        "error-reference-file-load-failed": "df13b74107841612a21029132088cfe6638db815a0981a16561d2c721d12c3c9"
+        "error-reference-file-load-failed": "df13b74107841612a21029132088cfe6638db815a0981a16561d2c721d12c3c9",
+        "error-invalid-llm-model": "24b6500fdd0bedadc0b0601834cd25274021aaeebd43174ba08f11c5dfc05a20"
       }
     },
     "bg": {
@@ -2266,7 +2352,8 @@
         "error-translation-failed": "bd7115100373524e4bb3f75990f3312a95ee1ca4cdeec60bb37bdb9ac5cf903a",
         "error-bad-reference-file-ext": "09cdb3c0d9cc650050b6c657884e1a9e356f01a956a03bed7f2c96e362000d35",
         "error-reference-var-not-found-in-data": "5fd31ca942741dc0e178c64fcb6f11e57180f5c503ed6bb868c675feae8dcda7",
-        "error-reference-file-load-failed": "7080eb831eda2a312a35d847d413e86f98f41ea0f2f536496f335517d3fca247"
+        "error-reference-file-load-failed": "7080eb831eda2a312a35d847d413e86f98f41ea0f2f536496f335517d3fca247",
+        "error-invalid-llm-model": "7698c92bf31d36f519c010e0f17dbbcd140d1812fa13de230e5e19a7cb4f07f0"
       }
     },
     "bm": {
@@ -2298,7 +2385,8 @@
         "error-translation-failed": "434faaab81a176279b17a37f001c1013871aa8f8bd7ed8c34e4b82392e41e986",
         "error-bad-reference-file-ext": "8c7660cf1c0f765e5a9cbd047dae12182cdf57e97e2a007ab47ac02ce9af861f",
         "error-reference-var-not-found-in-data": "444462a2f019d3646d606b63ddcb1debc89d8f4ac1effbd23924424ad53c5690",
-        "error-reference-file-load-failed": "60c21ea044a29c95e3ec37a5df8e32182ce6eeba08b45adb94a0dce27718b93d"
+        "error-reference-file-load-failed": "60c21ea044a29c95e3ec37a5df8e32182ce6eeba08b45adb94a0dce27718b93d",
+        "error-invalid-llm-model": "552c9e50f130b20f6a77d6d47ff4608b44c6b382d6ddc3b3476ab9b02c4c56be"
       }
     },
     "bn": {
@@ -2330,7 +2418,8 @@
         "error-translation-failed": "b3495b0776d64ecf22e19a48381a1bd0b37bcd8b912194def6bd1d6dd03d816a",
         "error-bad-reference-file-ext": "dd1b669df293e2edcad51eb095a35c2244372dda0d699494ef47d1ec4ef5f21e",
         "error-reference-var-not-found-in-data": "ce5291ac8ae605442eccb4b5cea6b9a33ddb0420dcca36e92e257eac27cce891",
-        "error-reference-file-load-failed": "481b45327ce8a6338572dc27acf83b47c765fe503200e1d11097a79b0b3f35c8"
+        "error-reference-file-load-failed": "481b45327ce8a6338572dc27acf83b47c765fe503200e1d11097a79b0b3f35c8",
+        "error-invalid-llm-model": "a53932234e9450defea9d1a37c680ed0f4dc1655575b949d56f2e5d59c45c40a"
       }
     },
     "bo": {
@@ -2362,7 +2451,8 @@
         "error-translation-failed": "b9e5b49ae08c4a4989bfc446eae0fc89209477b3fac1616b573b669210b34dfd",
         "error-bad-reference-file-ext": "a6e15d02247bcd9b1a723a489c3126effe2830e1993e78e4a82e0d59acf41601",
         "error-reference-var-not-found-in-data": "133a1aae9b1a282e7e3818a261358e4d31bab8a474992bd8713a4124408aaf7d",
-        "error-reference-file-load-failed": "3f9f5e7cdc256bc036060993dd1764643f38accf40398e72418bf8eef05f1511"
+        "error-reference-file-load-failed": "3f9f5e7cdc256bc036060993dd1764643f38accf40398e72418bf8eef05f1511",
+        "error-invalid-llm-model": "16955d58dfa062ad63a182543d1c8b65305efb8621f1110a8dc0ba07701eb30b"
       }
     },
     "br": {
@@ -2394,7 +2484,8 @@
         "error-translation-failed": "100ad6fc167bfbd652dfa47117cc3375c7fc022b5903ab4c795842ce90966c86",
         "error-bad-reference-file-ext": "c645631aad7064363beaf5c9d53c35ab0bb6b9320ad80d1de12ec0a41f5aaecc",
         "error-reference-var-not-found-in-data": "4f2dcc9ab3e744f382a76d423cf34ef5bbe2e1ce6fed9422489f6fbaafc2d091",
-        "error-reference-file-load-failed": "d8ded3e6d193de7a8882d1afc63e481ac4816a67f0cd9df7a128b9e089dab568"
+        "error-reference-file-load-failed": "d8ded3e6d193de7a8882d1afc63e481ac4816a67f0cd9df7a128b9e089dab568",
+        "error-invalid-llm-model": "cbdb0d72c9354171043d348259ee4b81eb048f42085cbfd3abe7c3b7ea9caad5"
       }
     },
     "brx": {
@@ -2426,7 +2517,8 @@
         "error-translation-failed": "5404bb014d726e60292401b5b70f30ca17bceb9d8779f87ac8c23412ce4eac26",
         "error-bad-reference-file-ext": "1f69a0ac4db5f1d9f75f0618cd8ccef957981fc38ca2b4680a0be8930e9f3a28",
         "error-reference-var-not-found-in-data": "d5f2106d0f93295a1514ceced9ccadb1c006ec0e24ecaba2b1e64ccc67291723",
-        "error-reference-file-load-failed": "8a03d36740829922ad50ce09655c2cca940057691219b4fdbdd01fcf0da5ed9d"
+        "error-reference-file-load-failed": "8a03d36740829922ad50ce09655c2cca940057691219b4fdbdd01fcf0da5ed9d",
+        "error-invalid-llm-model": "1d42079b8ce1fc12ae78b206beba1b29c5d87065fbe95113823ab09347a84868"
       }
     },
     "bs": {
@@ -2458,7 +2550,8 @@
         "error-translation-failed": "591d408278e7869220210cfac1affe647b90c7bc65f365bf665c0c44bcaae447",
         "error-bad-reference-file-ext": "ea4179db1e6d973302f7b2fd737b30cbb88751a2a1890b05f677ee70fde500ed",
         "error-reference-var-not-found-in-data": "be47035236eb3dc2c49587d6d953c2e917de633761c96b57c8485798465e842c",
-        "error-reference-file-load-failed": "d31e66051889fa9c3ba8f82ffcdd8e534df83b3c14717db538d8b8ab0a85f3eb"
+        "error-reference-file-load-failed": "d31e66051889fa9c3ba8f82ffcdd8e534df83b3c14717db538d8b8ab0a85f3eb",
+        "error-invalid-llm-model": "f48bab580e1e376d1cdc82645080a7bc75bffa83755cd1776fc10179a6168e92"
       }
     },
     "byn": {
@@ -2490,7 +2583,8 @@
         "error-translation-failed": "848b45aa8b45fc28214ed8508500e8ced0ab6e306cb188529d1290642dfb07c7",
         "error-bad-reference-file-ext": "a1f1879609ff8b9abf5276e4230316a0dd29c78381ef07fb9f48de8ad41cfbbb",
         "error-reference-var-not-found-in-data": "eaa7822836e4b2eb8b5e731c30ff8ddac7b0fc0fe2b0d0879c78b321921659cb",
-        "error-reference-file-load-failed": "abd2a3f0815a33945ced1f31a925d6978cf1c80be8e4c49f271fdf32afcc2660"
+        "error-reference-file-load-failed": "abd2a3f0815a33945ced1f31a925d6978cf1c80be8e4c49f271fdf32afcc2660",
+        "error-invalid-llm-model": "635f701727a060dc80b59076e1bc2a2046daea81058faa22dfefe93275b32fd0"
       }
     },
     "ca": {
@@ -2522,7 +2616,8 @@
         "error-translation-failed": "635de86eab8e33d36050e4fc565cd28a3d3858c731ea9eb162ca0e5632c80239",
         "error-bad-reference-file-ext": "8e041a78d77bcc7038f153f497aab9d9d4822cfa906d4f58d6c8c1cc2a4d849e",
         "error-reference-var-not-found-in-data": "f84b027a49e90cab08c0f86ad342843952152e394c58b654e8b57108077e42f9",
-        "error-reference-file-load-failed": "d499f77d11b3f48b3330bddb6252dea7c7b114136ab50d3eaaeb8d328b233148"
+        "error-reference-file-load-failed": "d499f77d11b3f48b3330bddb6252dea7c7b114136ab50d3eaaeb8d328b233148",
+        "error-invalid-llm-model": "8917ff155531fcd1c8f67651cf6e42c13e86c965149c60f43ff0d4e70109b3c3"
       }
     },
     "ccp": {
@@ -2554,7 +2649,8 @@
         "error-translation-failed": "8ca989c6a66a745d4f5df6a9ae2694703c58d2f3e9e4fbe989e9eb4b0f17844e",
         "error-bad-reference-file-ext": "f0c4e9ed65ba5aca094dd8c48ce4715c7ca664456f23973cec58cd11bfaaacd5",
         "error-reference-var-not-found-in-data": "c8884e96197392e2535f64869a4a644bcc4a49a49d1f72266faf211fa04812a2",
-        "error-reference-file-load-failed": "64dac92b40c7341aa00c4f75c4a2cc1097a90020205fbd8257dd06bda8cd9805"
+        "error-reference-file-load-failed": "64dac92b40c7341aa00c4f75c4a2cc1097a90020205fbd8257dd06bda8cd9805",
+        "error-invalid-llm-model": "b117b09fc0f0d29837a9e723ebbcbc9843a4fc228e19b9d10413bb35cb08afa5"
       }
     },
     "cd-RU": {
@@ -2586,7 +2682,8 @@
         "error-translation-failed": "9d8998cb3b6c0d1b4e48200a4a07ce5384b6fc3e03e0471f76f4bc7ac2900310",
         "error-bad-reference-file-ext": "4624871ddef66b41b1a28f921b857a1592e0b1e08c5166ad0d41d2c4ae2eddec",
         "error-reference-var-not-found-in-data": "273117eaa9e86dd274eb2be56b7943c93111ebf811f449f34496af772264d080",
-        "error-reference-file-load-failed": "da0a82be53a81a42b28dadf5eaf0c7ba6ff2f6e4c8af5aa062ce7ea4dd462af6"
+        "error-reference-file-load-failed": "da0a82be53a81a42b28dadf5eaf0c7ba6ff2f6e4c8af5aa062ce7ea4dd462af6",
+        "error-invalid-llm-model": "bc9a7ef26443286b4fec749d46943c44dd455c69d378e8e4d357621c183b4089"
       }
     },
     "ceb": {
@@ -2618,7 +2715,8 @@
         "error-translation-failed": "4920b411157b81575d7b9ecf3bcf3c4e5f9dee872861f03d5fb77012b48dc31a",
         "error-bad-reference-file-ext": "15da8a639237365725c4701fd3c9ca5d59ff6e4c86343c826957e679b028064f",
         "error-reference-var-not-found-in-data": "d57318f0e5ae1a972b98a62bc09145edc1fcc830b30fce78f0e9d5e95d357a62",
-        "error-reference-file-load-failed": "f5a58c9eaf65301d28c0d17b9c6e0961a54d9ac497f77c38e4d59dd41a7f4b29"
+        "error-reference-file-load-failed": "f5a58c9eaf65301d28c0d17b9c6e0961a54d9ac497f77c38e4d59dd41a7f4b29",
+        "error-invalid-llm-model": "d2804a46ea160bc4ce6c3adbb6784645bab24d6037ca3b4f8c6cbba974ef12b5"
       }
     },
     "cgg": {
@@ -2650,7 +2748,8 @@
         "error-translation-failed": "6a7ab0ea593d43e1dcad21c2a20c99fad2cbbbc2686a3eb9a8d0ecbd8a5f3428",
         "error-bad-reference-file-ext": "58e177e972344db0e356de62f21af7eea0fc231f6c784d72141eb69a6448f292",
         "error-reference-var-not-found-in-data": "d83bd905c545c8fa98eeebaf8633df7a9faf6626a71e9e59b73a315fb85b28e7",
-        "error-reference-file-load-failed": "93f79089b0b24c8a207ce3d8aba04c5d66405ff24e2110bb5170383ac5d6913c"
+        "error-reference-file-load-failed": "93f79089b0b24c8a207ce3d8aba04c5d66405ff24e2110bb5170383ac5d6913c",
+        "error-invalid-llm-model": "cb79903c3e924965770ee4502658ee0e4d2103f4dbcd3695e34d3ede3a01457a"
       }
     },
     "chr": {
@@ -2682,7 +2781,8 @@
         "error-translation-failed": "3b929bdf3f3cb20ee5a46d511a4fa7263223aa1cf7636759ff6c58264e900929",
         "error-bad-reference-file-ext": "6af74c9be1f9c2d6805d25650e0c88bc53aa70e8501232b4a9e67ed9824a37b5",
         "error-reference-var-not-found-in-data": "c6628471dd1e1c87452a6f93c44d7e804641b53d70a705892e25cde145899a5e",
-        "error-reference-file-load-failed": "94c43e62d08507a1684f054b23b990bd618a4968db09015a0ede20de0fb0a958"
+        "error-reference-file-load-failed": "94c43e62d08507a1684f054b23b990bd618a4968db09015a0ede20de0fb0a958",
+        "error-invalid-llm-model": "1ca5e21eed6e56f1b69ff4391f033e2b7a1b36b47196b56f27ef3063bad886da"
       }
     },
     "co": {
@@ -2714,7 +2814,8 @@
         "error-translation-failed": "23db4bc0b3db8cf3e23d5f6b71fb5a57d972a8d973a54aadd1013fa93de8b1ca",
         "error-bad-reference-file-ext": "ad1d531aba6a91c351e2cea4de3f925b9f60a47f36e70f6faf2d9e38094d62ca",
         "error-reference-var-not-found-in-data": "4803356ab16c0849bde17555682e0f96ad75151beb040c9118c40ee5a88de306",
-        "error-reference-file-load-failed": "f3dd2556dbe7a7c70d3560991dff7e4023a5bde6ca088842183251157cc2ec4c"
+        "error-reference-file-load-failed": "f3dd2556dbe7a7c70d3560991dff7e4023a5bde6ca088842183251157cc2ec4c",
+        "error-invalid-llm-model": "77fdba3901bb46fbda6d01348e3187965017ad5f7abb1c146c04cfe39cdd531b"
       }
     },
     "cs": {
@@ -2746,7 +2847,8 @@
         "error-translation-failed": "23facdc4aa714e8fec49937a82358ad42617377aa841efd9231b4956a374a335",
         "error-bad-reference-file-ext": "25c5469dab22eb9f42ba9eafdf4d0f523ca38ae911143937a55ca0366858916a",
         "error-reference-var-not-found-in-data": "7b1f2bbcafca253ad5585cc6732143cd7ceb1e8d48d36bf539dfcc736cba8cab",
-        "error-reference-file-load-failed": "28a5a9572643fb2b52e95284d4e839ade777b3a24d8e5856acbcaaa4c7734150"
+        "error-reference-file-load-failed": "28a5a9572643fb2b52e95284d4e839ade777b3a24d8e5856acbcaaa4c7734150",
+        "error-invalid-llm-model": "36451641778e8d132133e4d78baaaca6d1afb5ecc0eba7136164e7f12a858d5d"
       }
     },
     "cu-RU": {
@@ -2778,7 +2880,8 @@
         "error-translation-failed": "202cf0afd87949f5e1827ec4f9769588639733283faabef8cca302017108133a",
         "error-bad-reference-file-ext": "19255a46fa36b1a5abcf0b88b0520f28b0291cd7a21b2831ed49f49b299bc787",
         "error-reference-var-not-found-in-data": "7eb5f0d77411ba3fbc537a7ca6811af2ef189465b5a04a1fc8d75b92a8bfabe7",
-        "error-reference-file-load-failed": "9f4eaeb58602158c49460cf9407acf9a32b615f8ba5bb7de86e4903933373312"
+        "error-reference-file-load-failed": "9f4eaeb58602158c49460cf9407acf9a32b615f8ba5bb7de86e4903933373312",
+        "error-invalid-llm-model": "556db2e2be95c780ea500897f2c138cede60a74fda00e360219749dce55f023e"
       }
     },
     "da": {
@@ -2810,7 +2913,8 @@
         "error-translation-failed": "f1c9d8476561f0c26fe361a72fb9d309291740ac1ed3a1c38a5cd82374fa84c7",
         "error-bad-reference-file-ext": "241a5fc2ff44d04cfa59bdb83d5131b57160a7b53f61ec20b8ca9e31a2d19273",
         "error-reference-var-not-found-in-data": "d57c54388a157a048e7295bc78795e411077594e0358bc3c4ffafa5dc8d5267f",
-        "error-reference-file-load-failed": "698e2fcfbcedd1eaddff77151a5bdbcf2fc0041aa453229a5ef1fc8ca42ed764"
+        "error-reference-file-load-failed": "698e2fcfbcedd1eaddff77151a5bdbcf2fc0041aa453229a5ef1fc8ca42ed764",
+        "error-invalid-llm-model": "f015f504a31255fd6c102732a4a9737ab2fd547c4cd4c1f9f3d6dcb0e95547b9"
       }
     },
     "de-AT": {
@@ -2842,7 +2946,8 @@
         "error-translation-failed": "6307b7a9c0976792720a747758454fb5b50194e524a034947fc7e29c058bf730",
         "error-bad-reference-file-ext": "04490c87358b56899f06f0ae10a6e0a8f1e1bf3e61cf64db7599251c0d923fd4",
         "error-reference-var-not-found-in-data": "8883d093ad78c5b8974db119580db5454a33cc6af4e5c11b808fa825b76e7fee",
-        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1"
+        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1",
+        "error-invalid-llm-model": "c1d80a41ceb252cbdcc1657ac131946e471caccd6af7b7007559eccde763fc9f"
       }
     },
     "de-CH": {
@@ -2874,7 +2979,8 @@
         "error-translation-failed": "bdfe1b970c47445736bdf91f51e479580b0f7abe2392861357ef78c829da7566",
         "error-bad-reference-file-ext": "04490c87358b56899f06f0ae10a6e0a8f1e1bf3e61cf64db7599251c0d923fd4",
         "error-reference-var-not-found-in-data": "bf40bccfc62c9293ab07e736260dcaa6b1d724d3b423794db1407332a5074648",
-        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1"
+        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1",
+        "error-invalid-llm-model": "c1d80a41ceb252cbdcc1657ac131946e471caccd6af7b7007559eccde763fc9f"
       }
     },
     "de-DE": {
@@ -2906,7 +3012,8 @@
         "error-translation-failed": "b40a6bc704c7615a71094ebda7a3a05f3a06fa32d20c289e77b36ddbe9155ed2",
         "error-bad-reference-file-ext": "04490c87358b56899f06f0ae10a6e0a8f1e1bf3e61cf64db7599251c0d923fd4",
         "error-reference-var-not-found-in-data": "1f76502990b0b7b770a65339ef9c234874f1ff1e8749c634d317d54a5767e281",
-        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1"
+        "error-reference-file-load-failed": "3554491e405f2e22d19c665c932b04e63d1fee5d67452a03ab1a5a038450d5d1",
+        "error-invalid-llm-model": "c1d80a41ceb252cbdcc1657ac131946e471caccd6af7b7007559eccde763fc9f"
       }
     },
     "dua": {
@@ -2938,7 +3045,8 @@
         "error-translation-failed": "5ff8dc9bac769b058040d5eeaefe605ed6f77660ebb4160649385ec276baa95a",
         "error-bad-reference-file-ext": "e9520bc94f6a89a4949dbf40dc3c93d01a24f521650a47030e9fc946e1dbc45b",
         "error-reference-var-not-found-in-data": "dd789e2c4ba5ed65ee2230b09baf877aa85c0db0e8a93c591ce9024d58f52391",
-        "error-reference-file-load-failed": "239fd267c3a0835d05a82476e5df67457d509d556b92046b957137ba698523e8"
+        "error-reference-file-load-failed": "239fd267c3a0835d05a82476e5df67457d509d556b92046b957137ba698523e8",
+        "error-invalid-llm-model": "da391022d70e882b3d5bd74f36b99fe76b7962300721cf832545ffd9978de233"
       }
     },
     "dv": {
@@ -2970,7 +3078,8 @@
         "error-translation-failed": "b92908a1e7e3a9e21e1f143578929fd6a33580bbc01edfe54a5f0aa35723289f",
         "error-bad-reference-file-ext": "14c5a811ee38da3746637fd9d03974cae56422c363f5170a991e8d19a7bf3b2a",
         "error-reference-var-not-found-in-data": "fe920cc1aa4a19f39f614a9657fa6a09d1761903685d4a6edd8a791aec12424e",
-        "error-reference-file-load-failed": "d6aad49b4807923ae91daa65e5cb32ba0f4a7bd7bb7f0d2f2ec52b328004fc63"
+        "error-reference-file-load-failed": "d6aad49b4807923ae91daa65e5cb32ba0f4a7bd7bb7f0d2f2ec52b328004fc63",
+        "error-invalid-llm-model": "bde9ae9d8e062c8e79b75cddb5c767d480df4fc71545083331bbb60769a95764"
       }
     },
     "dz": {
@@ -3002,7 +3111,8 @@
         "error-translation-failed": "4cbcc0d8077924a1a041ea7a30759a60581fea913eac66774a419ea97145ad11",
         "error-bad-reference-file-ext": "1853458e4ff373f4ea4a997f742787f73d3d5f19677d7151aa2def83653db9bb",
         "error-reference-var-not-found-in-data": "3161afda687e289092b851996c658049dd98877a623ee98b8409c836a2f810b7",
-        "error-reference-file-load-failed": "3f3b3fffb7aa5c455b32f351df6085eef2a9da7f84535ebceae9264a0c611c1a"
+        "error-reference-file-load-failed": "3f3b3fffb7aa5c455b32f351df6085eef2a9da7f84535ebceae9264a0c611c1a",
+        "error-invalid-llm-model": "12f30143098f161d8a0379c0d5c07bf59010309d8316171598459f826054e533"
       }
     },
     "ebu": {
@@ -3034,7 +3144,8 @@
         "error-translation-failed": "84ac74254455fcb7e986c3fd6493ed7ed6b7ec271d8a6da6dbd98258b96c8900",
         "error-bad-reference-file-ext": "d5aef6e5422ac6c92c22f041f4b408d4e298f621cd63845d7710fdcba8b5a742",
         "error-reference-var-not-found-in-data": "169de9f70dd1cf5c8dc98d725f1ca568b018a7f673136f1cda5e6f7b2bc10a48",
-        "error-reference-file-load-failed": "5d9c18ab3fdb45982480e1bd32b88089c9a106e78bcf634a408d1ff1cfbcca47"
+        "error-reference-file-load-failed": "5d9c18ab3fdb45982480e1bd32b88089c9a106e78bcf634a408d1ff1cfbcca47",
+        "error-invalid-llm-model": "473d115f02eb6a2cf9968ddc1ba3e1bef3e9c6dbf9e15bc7e1f8699d7f52071d"
       }
     },
     "es-ES": {
@@ -3066,7 +3177,8 @@
         "error-translation-failed": "30878bc3f5fd4cc6ebe1b217d10fda08bb5ad161ed829780edd5f3d49a4f6c6d",
         "error-bad-reference-file-ext": "ea996c8f3f0e3b3d6b8988ab7ed34090b3ecbe1ae0c0161c2090780632773c82",
         "error-reference-var-not-found-in-data": "ea949a35977b3d2027e5ab36609ccb22ffcbed10372dd54ba09e8f0af813f6ee",
-        "error-reference-file-load-failed": "36bdf2285f9490b84305e6fa733f8833cd89e746f39ae0d0311ab07dc061868d"
+        "error-reference-file-load-failed": "36bdf2285f9490b84305e6fa733f8833cd89e746f39ae0d0311ab07dc061868d",
+        "error-invalid-llm-model": "4fdcc058fbb34fade8b2b64bab1ac671c7ac3df55090987472fc1663395f3930"
       }
     },
     "et": {
@@ -3098,7 +3210,8 @@
         "error-translation-failed": "bf2e5ae1b99fc45c47131440240559b45b99aa898e965ad2493363a032a87c88",
         "error-bad-reference-file-ext": "83e486ef7d7dc3415e7abf1e300f2a2c85f99f5de25a6d4a37063d20cec9232c",
         "error-reference-var-not-found-in-data": "b19e37b91191e7f1bc28064055a055d60f9d6cd9a842494d53c2bc950c3d2a9d",
-        "error-reference-file-load-failed": "503f7aa9f287c0c95949fdc431fe208fd012ea807490484cc40d7d955804de8a"
+        "error-reference-file-load-failed": "503f7aa9f287c0c95949fdc431fe208fd012ea807490484cc40d7d955804de8a",
+        "error-invalid-llm-model": "1fb5d14a558a5d26728b64791df45aa2f3964095f07036f8834b9c598fbb7dcf"
       }
     },
     "eu": {
@@ -3130,7 +3243,8 @@
         "error-translation-failed": "a44b73f240ff6c2839eb7bcc72aa85e83cce56a88955ec5282d9f29b6bb24424",
         "error-bad-reference-file-ext": "36e8d8d9702761da75cb954ac2ee988e93b0a621c52bd83faf414c4432faca7f",
         "error-reference-var-not-found-in-data": "d18b40b197ff7519cfb7c5786c6e2405a3ba4e404161c99a07f7d58802aec77b",
-        "error-reference-file-load-failed": "2695183e7e99fe71ec322f84c80c5d6a989eb1b986b61b0218cdb9ef6d53da1d"
+        "error-reference-file-load-failed": "2695183e7e99fe71ec322f84c80c5d6a989eb1b986b61b0218cdb9ef6d53da1d",
+        "error-invalid-llm-model": "2107f5485b1aae62ebdc50e7c877b9b78e08c54d92597ee0d482faa9dd83599d"
       }
     },
     "fr-CA": {
@@ -3162,7 +3276,8 @@
         "error-translation-failed": "ae343af4296f345723cd7f7fca532043ea09f705e7b3073b4fb6fd442762bd96",
         "error-bad-reference-file-ext": "5c8afaebddcb6ca1546039549cf274edce6774d976ea4f9bfb9a894c00fccb1f",
         "error-reference-var-not-found-in-data": "5519a392a88f607478a27c3938290e5361e730823349404288f51c8df54d1144",
-        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb"
+        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb",
+        "error-invalid-llm-model": "243563171b269ab64b6e7d5a105081903bf6704379b145e9ec7318573d84d9d4"
       }
     },
     "fr-CH": {
@@ -3194,7 +3309,8 @@
         "error-translation-failed": "ae343af4296f345723cd7f7fca532043ea09f705e7b3073b4fb6fd442762bd96",
         "error-bad-reference-file-ext": "5c8afaebddcb6ca1546039549cf274edce6774d976ea4f9bfb9a894c00fccb1f",
         "error-reference-var-not-found-in-data": "9e60c4be8a7f7f584519ccb11ed7a565dcc5aad19ac0d279e7beabc0b5b8f760",
-        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb"
+        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb",
+        "error-invalid-llm-model": "243563171b269ab64b6e7d5a105081903bf6704379b145e9ec7318573d84d9d4"
       }
     },
     "fr-FR": {
@@ -3226,7 +3342,8 @@
         "error-translation-failed": "ae343af4296f345723cd7f7fca532043ea09f705e7b3073b4fb6fd442762bd96",
         "error-bad-reference-file-ext": "5c8afaebddcb6ca1546039549cf274edce6774d976ea4f9bfb9a894c00fccb1f",
         "error-reference-var-not-found-in-data": "9e60c4be8a7f7f584519ccb11ed7a565dcc5aad19ac0d279e7beabc0b5b8f760",
-        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb"
+        "error-reference-file-load-failed": "9465223e1ae67f6be691451ecd1fe1f0ce7cabb3dd56e1f8b51beb2259f2babb",
+        "error-invalid-llm-model": "243563171b269ab64b6e7d5a105081903bf6704379b145e9ec7318573d84d9d4"
       }
     },
     "gsw": {
@@ -3258,7 +3375,8 @@
         "error-translation-failed": "4c5317c94f9249613b0b085dbf745222682582a58a1761052b1c044bf96454f5",
         "error-bad-reference-file-ext": "80d4abdc4268a5003f79223c4024cf8c4bcffece5a72c9328d6124dc35c94b3c",
         "error-reference-var-not-found-in-data": "c3f6e06b31947179eb3edacfc6ed52c2270f1b73996cd4631d05eb2a9f03492e",
-        "error-reference-file-load-failed": "7572a17e50c332e9949caeafae8e4b2f828c2ff97520e55964aec6a4a0d085dd"
+        "error-reference-file-load-failed": "7572a17e50c332e9949caeafae8e4b2f828c2ff97520e55964aec6a4a0d085dd",
+        "error-invalid-llm-model": "0c6a046aa1e82d12ea553bf5f3f7acd5247794578e8963b4c28c0515e0f557d7"
       }
     },
     "hi": {
@@ -3290,7 +3408,8 @@
         "error-translation-failed": "d5006dfa7ffeef29179b25a425617a0ea1917b455bdf95ef827ba230b1f209a7",
         "error-bad-reference-file-ext": "296f9a2371260ecd53a017e67457c8d5187316e200c6fa8103cf17085d9c1a78",
         "error-reference-var-not-found-in-data": "2c41647260d21c93b287b5423196127efe44d8ab1cf3276786367ce61e78e8e1",
-        "error-reference-file-load-failed": "81e4286a0060407d81772648a66d627fecaa2a43736e60dbc99ffa69bcc88aba"
+        "error-reference-file-load-failed": "81e4286a0060407d81772648a66d627fecaa2a43736e60dbc99ffa69bcc88aba",
+        "error-invalid-llm-model": "b12f314c85f2744dc23da90a56d5c3dcf983f96ad6ec827dcd4511b633c256b5"
       }
     },
     "hr": {
@@ -3322,7 +3441,8 @@
         "error-translation-failed": "591d408278e7869220210cfac1affe647b90c7bc65f365bf665c0c44bcaae447",
         "error-bad-reference-file-ext": "f1ae25843957b24868195e29ff34dbba7364045bc5a1cd1995e9c5844867ee96",
         "error-reference-var-not-found-in-data": "b746a38876bebf72de04b7ef8dbe392152591f2e0d01fe9c3853a573e6bb6d82",
-        "error-reference-file-load-failed": "fd8995d287b142df3424a51a9763b5f36ac9dac003bc9340277481645dbd7233"
+        "error-reference-file-load-failed": "fd8995d287b142df3424a51a9763b5f36ac9dac003bc9340277481645dbd7233",
+        "error-invalid-llm-model": "3ea2bdbf71329c5f3f2950a01c54aba5f2dd976a6086500e547ec400e5da6271"
       }
     },
     "hy": {
@@ -3354,7 +3474,8 @@
         "error-translation-failed": "e70181dd6f5fe2943fe392bfe928c7c11e02bfbb7de3429a87aef201baf52946",
         "error-bad-reference-file-ext": "d3899f46a45d6398fe6ce7248da3811cc92ae281c902a17c44502725b27d4078",
         "error-reference-var-not-found-in-data": "9899b3cbe490c282f6ba67806178bde9a0c224ac8a098c4aa94a7635533f3a46",
-        "error-reference-file-load-failed": "2fe43b4b3a221f99a478f2ffead1739e5c73009f3b8d6d4745b9183a7f00651a"
+        "error-reference-file-load-failed": "2fe43b4b3a221f99a478f2ffead1739e5c73009f3b8d6d4745b9183a7f00651a",
+        "error-invalid-llm-model": "eda36a28f0d70103535b3e58c86642236189ceacf96f4feadb246776039a3362"
       }
     },
     "ja": {
@@ -3386,7 +3507,8 @@
         "error-translation-failed": "22d8b04ba72c342a866768c2e826861bfd125d1ba3a2e5918628660ea3cc4da6",
         "error-bad-reference-file-ext": "70d105e8fb310577ceb1f750bc28440cae0a458cf7634c14c47b9e2edf6cbcd0",
         "error-reference-var-not-found-in-data": "5664780d32dfb2909c9c220ce4f83d73f894a543bf1a3fd80adf177b2d8009bb",
-        "error-reference-file-load-failed": "898a471610f411d465db8fcf1d70b4f21ddd3db6e83133645b63fd74a19fedea"
+        "error-reference-file-load-failed": "898a471610f411d465db8fcf1d70b4f21ddd3db6e83133645b63fd74a19fedea",
+        "error-invalid-llm-model": "f1a23046f54e83223f636f5e63743432dce0e0dfd3214b13f0491fb62980c1d1"
       }
     },
     "ksf": {
@@ -3418,7 +3540,8 @@
         "error-translation-failed": "64a214d6dd05e373f388502771c4ed88455c8c5f8201244e7af92d46e0f6505c",
         "error-bad-reference-file-ext": "c7b9be6763af1a35b1f9cd9be9f6840ac801f35cfb490c7cd94d15c8c66c85c9",
         "error-reference-var-not-found-in-data": "f302e33f60f09cd75c48278fe59bae6ec2055c6ac1f67a14fd7370d1329caca7",
-        "error-reference-file-load-failed": "68b33ec4864f837f30441d7a3f6a04459070e7b296ae8b80b8395e55bd85a92b"
+        "error-reference-file-load-failed": "68b33ec4864f837f30441d7a3f6a04459070e7b296ae8b80b8395e55bd85a92b",
+        "error-invalid-llm-model": "aa7f2d880dfa06dd0c732d07ac2f2901266868a72f99bab40a9fd54c8611f266"
       }
     },
     "km": {
@@ -3450,7 +3573,8 @@
         "error-translation-failed": "f015c64ae413cd0c6799a7f752c0476a74ded09acee4cffe55fa51133bc1bfd5",
         "error-bad-reference-file-ext": "a3004e0051b40e3ee99f869c7d040d77fe179380397979705bbe90b4b77eae1f",
         "error-reference-var-not-found-in-data": "6a578e5402a2667759107261b8d907ddaa7bf9af99c2892515b0f549f1550e37",
-        "error-reference-file-load-failed": "a2fab84c6ff35308c426386b6addb476d29c90610a43885fc643cb1568d8809a"
+        "error-reference-file-load-failed": "a2fab84c6ff35308c426386b6addb476d29c90610a43885fc643cb1568d8809a",
+        "error-invalid-llm-model": "5ed6e2ddb5989874019e1eda75ba702eff8da0c7320708f5b0aa0f71f70ee6c5"
       }
     },
     "ku": {
@@ -3482,7 +3606,8 @@
         "error-translation-failed": "7ec7589e7a77fdd1ebb49dbd783bb0456fce5eb23bafa78b4a35b570f0964ac6",
         "error-bad-reference-file-ext": "5d0bc07d37d39b41936b124eb2231003cf686075d95b8740ace09fa28bb33e2a",
         "error-reference-var-not-found-in-data": "b91aa87a37bdc0a515fdce4213546d58942d8c746853371cee81b13ab4b9e9b5",
-        "error-reference-file-load-failed": "4ee36b8a0ad8b89e3f778e51c2aba36114154e5a50e090988297f300cc9531d3"
+        "error-reference-file-load-failed": "4ee36b8a0ad8b89e3f778e51c2aba36114154e5a50e090988297f300cc9531d3",
+        "error-invalid-llm-model": "f4795e7473b0a7f77a386b6226dd54bc0a76985c493bb2e79ea02553730b297c"
       }
     },
     "kw": {
@@ -3514,7 +3639,8 @@
         "error-translation-failed": "cc3a2ef39820e9008bec966feee8cd99009699e745cc13aea9c7a8aa1909f78b",
         "error-bad-reference-file-ext": "a1f97bd4b30af5d87310a364f668f19845efde7d24e4fb2741939c9c72920923",
         "error-reference-var-not-found-in-data": "6f37e4f5e3f4db6f2a38174d6d3af0b92205c9b85c3a7207df6b4284fb7037da",
-        "error-reference-file-load-failed": "143968af7b595e0bb8753c126ba5b414e055a2b6eda7f40501815cc032644237"
+        "error-reference-file-load-failed": "143968af7b595e0bb8753c126ba5b414e055a2b6eda7f40501815cc032644237",
+        "error-invalid-llm-model": "3c33d47ddc268807102188652388d33973bb8e27f4be068f8a3cf1ee88020342"
       }
     },
     "my": {
@@ -3546,7 +3672,8 @@
         "error-translation-failed": "04f5b94b3de76c154c64d53dcc63bc5e4b5e65615dae2b3cf636c155ebb4e6b9",
         "error-bad-reference-file-ext": "a8ca625a7f747855adbddf5ccd9abe9f4a4ffd1e84853f849960bed63c6b4f6f",
         "error-reference-var-not-found-in-data": "c615266c398003c58d2bfa0a0d1a94f6a92ae306ce514d875e22f4c7e74a6b5a",
-        "error-reference-file-load-failed": "d33ad4c469575272d21036e2e7c23fb3106bbc35f2def05939c1539bfea8aefb"
+        "error-reference-file-load-failed": "d33ad4c469575272d21036e2e7c23fb3106bbc35f2def05939c1539bfea8aefb",
+        "error-invalid-llm-model": "c3207bf476b5c043085a298f26e8fe2e304ae571b2e7a821dfa2897f89015afb"
       }
     },
     "nl": {
@@ -3578,7 +3705,8 @@
         "error-translation-failed": "b8b1a00af29134a0c8c368d5651f44b234ed40e1505995d2b866beed11248cd2",
         "error-bad-reference-file-ext": "de0a7263278c13cddd8cba2f09c4ed0e79edbb1fcf3ac6f66f15caaefd035290",
         "error-reference-var-not-found-in-data": "35422d3a9fc381769bb494af3de633358a25c6f96b832777ad96f7806238c4e6",
-        "error-reference-file-load-failed": "02cf7f32ef29d01a0da93b343427de45aeb5fdbe109ae3c96360df96dcb0dfba"
+        "error-reference-file-load-failed": "02cf7f32ef29d01a0da93b343427de45aeb5fdbe109ae3c96360df96dcb0dfba",
+        "error-invalid-llm-model": "7cae0a3a258585638188c676b2011967f1443565402b8388c4c04dbc3a5da4ec"
       }
     },
     "ru": {
@@ -3610,7 +3738,8 @@
         "error-translation-failed": "9d8998cb3b6c0d1b4e48200a4a07ce5384b6fc3e03e0471f76f4bc7ac2900310",
         "error-bad-reference-file-ext": "4624871ddef66b41b1a28f921b857a1592e0b1e08c5166ad0d41d2c4ae2eddec",
         "error-reference-var-not-found-in-data": "4367d090933e39aed0a5dc0b2b901f9307a4401a31b4dde3ed5f43055925b131",
-        "error-reference-file-load-failed": "da0a82be53a81a42b28dadf5eaf0c7ba6ff2f6e4c8af5aa062ce7ea4dd462af6"
+        "error-reference-file-load-failed": "da0a82be53a81a42b28dadf5eaf0c7ba6ff2f6e4c8af5aa062ce7ea4dd462af6",
+        "error-invalid-llm-model": "bc9a7ef26443286b4fec749d46943c44dd455c69d378e8e4d357621c183b4089"
       }
     },
     "prs": {
@@ -3642,7 +3771,8 @@
         "error-translation-failed": "159bacb3236992010f040d400318c82525ffe0d11e2e763e5b7c3a3cb544a451",
         "error-bad-reference-file-ext": "9533f1779c9e48ea0bae5ff75594019427a910d230ef1aeb2a64cd05bb9d1f33",
         "error-reference-var-not-found-in-data": "9089a73d019bde2cb098bdd1f4216262c9bd484ad79073f6ee3a792e01a2f455",
-        "error-reference-file-load-failed": "0a2ca5f11c9dec9c46c3ee40011eab0d0ac9881ec9ed7798c9ebc0d142a2a003"
+        "error-reference-file-load-failed": "0a2ca5f11c9dec9c46c3ee40011eab0d0ac9881ec9ed7798c9ebc0d142a2a003",
+        "error-invalid-llm-model": "0ac5c8d47dad5f566cb714fab822d7e522d81e2cba9ef88a5753344662fa5fa8"
       }
     },
     "sq": {
@@ -3674,7 +3804,8 @@
         "error-translation-failed": "3fa110f2abd4314a1945b83bf03a11a4028625060e8a37c6d966e45cf377a7a0",
         "error-bad-reference-file-ext": "81931f8e2a0ff1788761960e5fcdea83c6c25447a1bf898ce66501c6a800db3f",
         "error-reference-var-not-found-in-data": "41d3fc38d8efb8cc297fc535aa2ce3d468f9a4dcd466bbdcd2f2b5814b739733",
-        "error-reference-file-load-failed": "b5934041dd417661cdfebb070538be3f66bc4bb35a1f783ca693da8fb6eda05f"
+        "error-reference-file-load-failed": "b5934041dd417661cdfebb070538be3f66bc4bb35a1f783ca693da8fb6eda05f",
+        "error-invalid-llm-model": "6f85ee310a97a9953dc41dcbd16076ae32ac3e17db5af7261f36d478a8fc4d2c"
       }
     },
     "swc": {
@@ -3706,7 +3837,8 @@
         "error-translation-failed": "04ae8e5900f3d66e5f0b555827e450f096ad29a8013e4a47d9297cbc9534a38b",
         "error-bad-reference-file-ext": "13b5406f01205b1c5081964eb568f9a2abca4d0ea6f71d4336483d0f3da4f981",
         "error-reference-var-not-found-in-data": "4c901ab2a678bacd85a6a3f418ecf9919170563aae3c9f5041cc4cc912b080ea",
-        "error-reference-file-load-failed": "36f50aa9a7e29646f8885ed3130d9d0fb0c4e4ae7c4f53c8f49d5b8570561ace"
+        "error-reference-file-load-failed": "36f50aa9a7e29646f8885ed3130d9d0fb0c4e4ae7c4f53c8f49d5b8570561ace",
+        "error-invalid-llm-model": "8fee3b80515ef3491e28773f86bbbb842f9e238be63893c27eb4ea1592f23038"
       }
     },
     "th": {
@@ -3738,7 +3870,8 @@
         "error-translation-failed": "0937fdfb0a8679f70ee6f15eeabf9caf6980865d199ec4994dc9859143649541",
         "error-bad-reference-file-ext": "28426e83b5d01db6e0908abfb7d39cec7b7e75bdeb6c7ae12cea5ab46e420223",
         "error-reference-var-not-found-in-data": "d69cbd784dfc0aecfa9942bad3b770a0c4c9f22a3aa6286aa7127779185de342",
-        "error-reference-file-load-failed": "d3bac7f9ebf5e16ea097e87f9120a171f3ef287236e017bf848e5a0410f56636"
+        "error-reference-file-load-failed": "d3bac7f9ebf5e16ea097e87f9120a171f3ef287236e017bf848e5a0410f56636",
+        "error-invalid-llm-model": "7cdbe3e4bc437f2ec86dbffda64edf842642c0765163cacd3aa097885cf96736"
       }
     },
     "tzm-Latn-": {
@@ -3770,7 +3903,8 @@
         "error-translation-failed": "43386a751aedfca3f5c91d2608552d61eb13fac89498af37c628234cce8ca9fa",
         "error-bad-reference-file-ext": "68566ed30f5d096d43392b63552c7a8cacbfef374fcfdf893f3d490b3085eef7",
         "error-reference-var-not-found-in-data": "f3500ea37d9a0e3044d0fde586ea10a5f62f0e30112d4c45d73aea974fc33624",
-        "error-reference-file-load-failed": "d53efe957f779b05e75c33c1ce1dd5f33ec51cf7b682f20cfa38cb06875b4fe5"
+        "error-reference-file-load-failed": "d53efe957f779b05e75c33c1ce1dd5f33ec51cf7b682f20cfa38cb06875b4fe5",
+        "error-invalid-llm-model": "766c6a8b4a9a8d2cfdf6a4554ceb76a42e9065ebec7772f7ef0361313a38d5a0"
       }
     },
     "uk": {
@@ -3802,7 +3936,8 @@
         "error-translation-failed": "8e77a51ff091ee8156299f2562f9a2c6917b7edd9f3dd5a0d1a1a4f788f5feaf",
         "error-bad-reference-file-ext": "899152a842e6404852e1062e2b2d7d1ff827f0788418efa836d06505682a4b6c",
         "error-reference-var-not-found-in-data": "af53a12f16527844c2030c553f37e6da63274c5c7de624b53670e0c66d3e111a",
-        "error-reference-file-load-failed": "c246913671c31571d14dff5067dfccd6c839062eb6ab827d81f56a4f09c26438"
+        "error-reference-file-load-failed": "c246913671c31571d14dff5067dfccd6c839062eb6ab827d81f56a4f09c26438",
+        "error-invalid-llm-model": "ec5354a76f93f421258a72e0f7f1b8f9fd01e17bbab7ea374d103438ae91b996"
       }
     },
     "vi": {
@@ -3834,7 +3969,8 @@
         "error-translation-failed": "63317e5f3507276555fe0d91886b80bd7ddf3ee187e98a3f1082c42ad40a57bb",
         "error-bad-reference-file-ext": "9ccccc70c9a9d3d1643e2aad7103676f16848724df12ad29e883900a6fa92a80",
         "error-reference-var-not-found-in-data": "833b0dda2b9ba39f1c34c20ad112cd810a301c90f6bfd1bec760e3c6f6d959ab",
-        "error-reference-file-load-failed": "c64cd0a1b425a4f37c8bdb2d1204a10af9d858ae35783f8915c306e1c033ee5a"
+        "error-reference-file-load-failed": "c64cd0a1b425a4f37c8bdb2d1204a10af9d858ae35783f8915c306e1c033ee5a",
+        "error-invalid-llm-model": "bee1fc8f1aa6fe65d3ed925ecfb85bbb99241847198304556e4f2008ae256173"
       }
     },
     "zh-SG": {
@@ -3886,7 +4022,8 @@
         "error-translation-failed": "50c31831846675e31f564af6b84a534016f964af1f4a5cc12f595ac3ab2810a7",
         "error-bad-reference-file-ext": "b1c3959715b6b19b80d2c50b4ccc95d0ac15a63ded7b8d9a46375ceda4d6c467",
         "error-reference-var-not-found-in-data": "1eab1beef48e6a01dc4780a7de3339625308019505db9a950b3b6d5c27dad02c",
-        "error-reference-file-load-failed": "31e7e9884de36a0ec2b4f79840b89b911438590244722f59f833fdb8a5216caf"
+        "error-reference-file-load-failed": "31e7e9884de36a0ec2b4f79840b89b911438590244722f59f833fdb8a5216caf",
+        "error-invalid-llm-model": "27e9998075918b1db2a6878bef59a7895ef56901f94c2275d82575f38086fd2f"
       }
     },
     "zh-Hant": {
@@ -3918,9 +4055,10 @@
         "error-translation-failed": "166dc4c515bf5133ec849722b5713bbacb8299477b6fae31768fbf03d66ba0a7",
         "error-bad-reference-file-ext": "ff78e82ecb0fb0e8e9c331e27f4360e458c83db3d0d1007480661a7f4786193b",
         "error-reference-var-not-found-in-data": "c267d7c05de475d7e67c858ff7932803af0617dd2d23d10267d8778606445353",
-        "error-reference-file-load-failed": "92597c68de01a46670331755ad7b5fd2feb977f13a0d94412ef2a96ad59507c6"
+        "error-reference-file-load-failed": "92597c68de01a46670331755ad7b5fd2feb977f13a0d94412ef2a96ad59507c6",
+        "error-invalid-llm-model": "81e458a9bf9b8f475999ff37953bca8693a4f100436ab1dae398a472d16751c3"
       }
     }
   },
-  "lastRun": "2025-04-15T20:17:35.267Z"
+  "lastRun": "2025-04-15T22:20:54.818Z"
 }

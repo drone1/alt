@@ -26,5 +26,6 @@
   "error-translation-failed": "Prijevod nije uspio za ciljani jezik=%%targetLang%%; ključ=%%key%%; tekst=%%refValue%%",
   "error-bad-reference-file-ext": "Nepodržani tip datoteke za referentnu datoteku \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nije moguće pronaći \"%%referenceExportedVarName%%\" u referentnoj datoteci \"%%referenceFile%%\". Da li ste mislili na jednu od ovih opcija?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Nije uspjelo učitavanje referentne datoteke \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Nije uspjelo učitavanje referentne datoteke \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Nevažeći LLM model naveden: %%model%%"
 }

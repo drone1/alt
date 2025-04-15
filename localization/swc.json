@@ -26,5 +26,6 @@
   "error-translation-failed": "Tafsiri imeshindikana kwa lugha lengwa=%%targetLang%%; ufunguo=%%key%%; maandishi=%%refValue%%",
   "error-bad-reference-file-ext": "Aina ya faili isiyoungwa mkono kwa faili ya marejeleo \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Haikuweza kupata \"%%referenceExportedVarName%%\" katika faili ya marejeo \"%%referenceFile%%\". Ulidhamiria mojawapo ya haya badala yake?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Imeshindikana kupakia faili ya marejeleo \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Imeshindikana kupakia faili ya marejeleo \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Mfano wa LLM usiofaa umetajwa: %%model%%"
 }

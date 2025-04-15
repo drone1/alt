@@ -26,5 +26,6 @@
   "error-translation-failed": "Okuhindura tikashobokire orurimi rw'okugyendererwaho=%%targetLang%%; omugururo=%%key%%; ebigambo=%%refValue%%",
   "error-bad-reference-file-ext": "Ebigambo ebiri mu fayiro ya \"%%ext%%\" tebirukwatsibwa.",
   "error-reference-var-not-found-in-data": "Ntashoboye kubona \"%%referenceExportedVarName%%\" mu fayiro y'okureberaho \"%%referenceFile%%\". Oba waba oshakire aha?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Tikashobora kuteekamu fayiro y'okureeberaho \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Tikashobora kuteekamu fayiro y'okureeberaho \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Eky'obushomerwamu bwa LLM ekirondwa tekirikukwatagana: %%model%%"
 }

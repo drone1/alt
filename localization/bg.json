@@ -26,5 +26,6 @@
   "error-translation-failed": "Преводът не бе успешен за целеви език=%%targetLang%%; ключ=%%key%%; текст=%%refValue%%",
   "error-bad-reference-file-ext": "Неподдържан тип файл за референтен файл \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не можах да намеря \"%%referenceExportedVarName%%\" във файл за справка \"%%referenceFile%%\". Имахте ли предвид някоя от тези вместо това?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Неуспешно зареждане на файл с референции \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Неуспешно зареждане на файл с референции \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Указан е невалиден модел LLM: %%model%%"
 }

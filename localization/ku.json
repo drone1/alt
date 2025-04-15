@@ -26,5 +26,6 @@
   "error-translation-failed": "Wergirîn têk çû ji bo zimanê armanc=%%targetLang%%; key=%%key%%; nivîs=%%refValue%%",
   "error-bad-reference-file-ext": "جۆری پەڕگەیەکی پشتگیری نەکراو بۆ پەڕگەی سەرچاوە \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nemetu \"%%referenceExportedVarName%%\" di pelê referansê \"%%referenceFile%%\" da. Gelo hûn vê yekê dimînin?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "نەتوانرا پەڕگەی سەرچاوە \"%%referenceFile%%\" بار بکرێت"
+  "error-reference-file-load-failed": "نەتوانرا پەڕگەی سەرچاوە \"%%referenceFile%%\" بار بکرێت",
+  "error-invalid-llm-model": "مۆدێلی LLM ی نادروست دیاریکراوە: %%model%%"
 }

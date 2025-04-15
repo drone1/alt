@@ -26,5 +26,6 @@
   "error-translation-failed": "Traduction échoué pour la langue cible=%%targetLang%%; clé=%%key%%; texte=%%refValue%%",
   "error-bad-reference-file-ext": "Nkɔndɛ nkap mbɛŋ a ayi ayɛ \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "È nā̂ pūtɛ \"%%referenceExportedVarName%%\" ná fālā \"%%referenceFile%%\". Wɔ̀ bī nā̂ wɔn nì?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "M̀ bɛn m̀ tɛn fayilu referɛnsi \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "M̀ bɛn m̀ tɛn fayilu referɛnsi \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Modɛl LLM bɛ bɛtɛ: %%model%%"
 }

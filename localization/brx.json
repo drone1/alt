@@ -26,5 +26,6 @@
   "error-translation-failed": "অনুবাদ বিফল হৈল লক্ষ্য ভাষা=%%targetLang%%; চাবি=%%key%%; পাঠ=%%refValue%%",
   "error-bad-reference-file-ext": "\"%%ext%%\" फाइल टाइप रेफरेन्स फाइल खुन नायाबो",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" फाइलो बर' नाइ पाब। अपने एना मनाया खोंजानि?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" थानाय नाइ लोड होनाइ बिफल गेलै"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" थानाय नाइ लोड होनाइ बिफल गेलै",
+  "error-invalid-llm-model": "%%model%% थानाय बेया LLM मोडेल बिथायल:"
 }

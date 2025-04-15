@@ -26,5 +26,6 @@
   "error-translation-failed": "A ghɨ mɨ ghɨmɨ mɨ nɨŋkɨrɨ mɨ nɨŋkɨrɨ mɨ ghɨmɨ mɨ nɨŋkɨrɨ=%%targetLang%%; njyɨ=%%key%%; njyɨ=%%refValue%%",
   "error-bad-reference-file-ext": "M̀bágh m̀ fǎn yí m̀ ghɨ̀ \"%%ext%%\" agha á ká m̀ tûgh m̀ fǎn",
   "error-reference-var-not-found-in-data": "Mɛ̀ bɛ́ wòr \"%%referenceExportedVarName%%\" ná fáìl yì \"%%referenceFile%%\". Mɛ̀ bɛ́ wòr ɛ̀fɛ̀ nɔ́ɔ̀ yì?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "A kɛ mɨ̀nɨ̀nɨ̀ nɛ́ɛ́ mɨ̀nɨ̀nɨ̀ á fáál \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "A kɛ mɨ̀nɨ̀nɨ̀ nɛ́ɛ́ mɨ̀nɨ̀nɨ̀ á fáál \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Mɔ̀dèl LLM à tɨ̀ nɨ̀ɨ̀: %%model%%"
 }

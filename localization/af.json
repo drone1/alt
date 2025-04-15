@@ -26,5 +26,6 @@
   "error-translation-failed": "Vertaling het misluk vir teikentaal=%%targetLang%%; sleutel=%%key%%; teks=%%refValue%%",
   "error-bad-reference-file-ext": "Ondersteunde lêertipe vir verwysingslêer \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Kon nie \"%%referenceExportedVarName%%\" in verwysingslêer \"%%referenceFile%%\" vind nie. Het jy een van hierdie bedoel?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Kon nie verwysingslêer \"%%referenceFile%%\" laai nie."
+  "error-reference-file-load-failed": "Kon nie verwysingslêer \"%%referenceFile%%\" laai nie.",
+  "error-invalid-llm-model": "Ongeldige LLM-model gespesifiseer: %%model%%"
 }

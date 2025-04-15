@@ -26,5 +26,6 @@
   "error-translation-failed": "མིང་བསྡུ་བྱས་པ་མ་ཐུབ་པ་ཡོད་སོང་། སྐད་ཡིག=%%targetLang%%; ལྡེ་མིག=%%key%%; ཚིག་ཡིག=%%refValue%%",
   "error-bad-reference-file-ext": "རིགས་མི་དགོངས་པའི་ཡིག་ཆ་ཁག་གི་ཡིག་ཆ་དོན་ལུ་ \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" বিলক্ষে নাপাওবরি। আপনি কি এইবিলাকের একটি মানে?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" 𑄢𑄧𑄇𑄴𑄘𑄨 𑄟𑄧𑄚𑄴𑄘𑄳𑄠 𑄇𑄧𑄢𑄴𑄚𑄳𑄠 𑄎𑄧𑄚𑄴𑄇𑄳𑄠"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" 𑄢𑄧𑄇𑄴𑄘𑄨 𑄟𑄧𑄚𑄴𑄘𑄳𑄠 𑄇𑄧𑄢𑄴𑄚𑄳𑄠 𑄎𑄧𑄚𑄴𑄇𑄳𑄠",
+  "error-invalid-llm-model": "མིན་བདེན་པའི་ལོ་གཅིག་སྒྲིག་བྱ་དགོས་པའི་མིང་བསྡུས་བཀོད་པས། %%model%%"
 }

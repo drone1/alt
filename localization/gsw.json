@@ -26,5 +26,6 @@
   "error-translation-failed": "D'Übersetzig isch g'scheitert für d' Ziilsproch=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%%",
   "error-bad-reference-file-ext": "Nit unterstützte Dateityp für d'Referenzdatei \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ha kei \"%%referenceExportedVarName%%\" i de Referenzdatei \"%%referenceFile%%\" gfunde. Hesch viellecht eine vo dene gmeint?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Fähler biim Lade vo dr Referenzdatei \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Fähler biim Lade vo dr Referenzdatei \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Ungültigs LLM Modell aagee: %%model%%"
 }

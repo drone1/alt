@@ -26,5 +26,6 @@
   "error-translation-failed": "翻譯目標語言=%%targetLang%%失敗；鍵=%%key%%；文本=%%refValue%%",
   "error-bad-reference-file-ext": "不支援的參考文件類型 \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "找不到參考檔案 \"%%referenceFile%%\" 中的 \"%%referenceExportedVarName%%\"。您是不是想找以下其中一個？: %%possibleKeys%%",
-  "error-reference-file-load-failed": "無法載入參考檔案 \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "無法載入參考檔案 \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "指定的LLM模型無效：%%model%%"
 }

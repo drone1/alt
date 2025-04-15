@@ -26,5 +26,6 @@
   "error-translation-failed": "Die Übersetzung für die Zielsprache=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%% ist fehlgeschlagen.",
   "error-bad-reference-file-ext": "Nicht unterstützter Dateityp für Referenzdatei \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Konnte „%%referenceExportedVarName%%“ in der Referenzdatei „%%referenceFile%%“ nicht finden. Meinten Sie stattdessen einen dieser Einträge?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Fehler beim Laden der Referenzdatei \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Fehler beim Laden der Referenzdatei \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Ungültiges LLM-Modell angegeben: %%model%%"
 }

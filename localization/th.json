@@ -26,5 +26,6 @@
   "error-translation-failed": "การแปลล้มเหลวสำหรับภาษาเป้าหมาย=%%targetLang%%; คีย์=%%key%%; ข้อความ=%%refValue%%",
   "error-bad-reference-file-ext": "ประเภทไฟล์ที่ไม่รองรับสำหรับไฟล์อ้างอิง \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "ไม่พบ \"%%referenceExportedVarName%%\" ในไฟล์อ้างอิง \"%%referenceFile%%\" คุณหมายถึงหนึ่งในนี้หรือไม่?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "ไม่สามารถโหลดไฟล์อ้างอิง \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "ไม่สามารถโหลดไฟล์อ้างอิง \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "ระบุโมเดล LLM ไม่ถูกต้อง: %%model%%"
 }

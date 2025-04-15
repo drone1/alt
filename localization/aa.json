@@ -26,5 +26,6 @@
   "error-translation-failed": "Translation failed for target language=%%targetLang%%; key=%%key%%; text=%%refValue%%",
   "error-bad-reference-file-ext": "Noosih fileelih kaafileelih \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" kee yibeelaytem. Kee tanat yanimtullem?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Unable to load reference file \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Unable to load reference file \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Qaaqabe LLM model kee qusame: %%model%%"
 }

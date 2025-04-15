@@ -26,5 +26,6 @@
   "error-translation-failed": "Tərcümə uğursuz oldu, hədəf dil=%%targetLang%%; açar=%%key%%; mətn=%%refValue%%",
   "error-bad-reference-file-ext": "Dəstəklənməyən fayl növü istinad faylı üçün \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" adlı dəyişən \"%%referenceFile%%\" istinad faylında tapılmadı. Bunlardan birini nəzərdə tutmusunuz?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "\"%%referenceFile%%\" istinad faylını yükləmək mümkün olmadı"
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" istinad faylını yükləmək mümkün olmadı",
+  "error-invalid-llm-model": "Yanlış LLM modeli göstərilib: %%model%%"
 }

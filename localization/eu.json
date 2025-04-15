@@ -26,5 +26,6 @@
   "error-translation-failed": "Itzulpenak huts egin du helburu hizkuntzan=%%targetLang%%; gakoa=%%key%%; testua=%%refValue%%",
   "error-bad-reference-file-ext": "Erreferentzia fitxategirako onartzen ez den fitxategi mota \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ezin izan da \"%%referenceExportedVarName%%\" aurkitu \"%%referenceFile%%\" erreferentzia fitxategian. Hauetako bat esan nahi zenuen ala?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Ezin izan da \"%%referenceFile%%\" erreferentzia fitxategia kargatu"
+  "error-reference-file-load-failed": "Ezin izan da \"%%referenceFile%%\" erreferentzia fitxategia kargatu",
+  "error-invalid-llm-model": "Zehaztutako LLM eredua baliogabea da: %%model%%"
 }

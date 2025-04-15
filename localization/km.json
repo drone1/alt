@@ -26,5 +26,6 @@
   "error-translation-failed": "ការបកប្រែបានបរាជ័យសម្រាប់ភាសាគោលដៅ=%%targetLang%%; កូនសោ=%%key%%; អត្ថបទ=%%refValue%%",
   "error-bad-reference-file-ext": "ប្រភេទឯកសារមិនត្រូវបានគាំទ្រសម្រាប់ឯកសារយោង \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "មិនអាចរកឃើញ \"%%referenceExportedVarName%%\" ក្នុងឯកសារយោង \"%%referenceFile%%\" ទេ។ តើអ្នកមានន័យថាមួយណានេះទេ?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "បរាជ័យក្នុងការផ្ទុកឯកសារយោង \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "បរាជ័យក្នុងការផ្ទុកឯកសារយោង \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "ម៉ូដែល LLM ដែលបានបញ្ជាក់មិនត្រឹមត្រូវ៖ %%model%%"
 }

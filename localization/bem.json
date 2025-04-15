@@ -26,5 +26,6 @@
   "error-translation-failed": "Ukutoloka kwashindikila ku chiyowoyelo chakulengedwa=%%targetLang%%; key=%%key%%; mazgu=%%refValue%%",
   "error-bad-reference-file-ext": "Ubwino bwa fayilo bwa fayilo ya mbilimbo \"%%ext%%\" tebukakamizidwa",
   "error-reference-var-not-found-in-data": "Tawakasanga \"%%referenceExportedVarName%%\" mu fayilo ya ukubomba \"%%referenceFile%%\". Mukachita kung'anamula chimwe mwa ichi pano?: %%possibleKeys%%",
-  "error-reference-file-load-failed": "Elyamo ukulemba ifayile ya maziko \"%%referenceFile%%\""
+  "error-reference-file-load-failed": "Elyamo ukulemba ifayile ya maziko \"%%referenceFile%%\"",
+  "error-invalid-llm-model": "Ukucita kwakupusikidwa kwa LLM: %%model%%"
 }
