@@ -33,7 +33,7 @@ export async function readFileAsText(filePath) {
 
 export async function readJsonFile(filePath, isJSONComments = false) {
 	let content = await readFileAsText(filePath)
-	if (isJSONComments) content = stripJsonComments.stripJsonComments(content)
+	if (isJSONComments) content = stripJsonComments(content)
 	return parseJson(content)
 }
 
