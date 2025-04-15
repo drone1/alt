@@ -61,7 +61,7 @@ export async function run() {
 			.option('-o, --output-dir <path>', 'Output directory for localized files')
 			.option('-l, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
 			.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
-			.option('-j, --reference-var-name <var name>', `The exported variable in the reference file, e.g. export default = {...} you'd use 'default'`, 'default')
+			.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
 			.option('-f, --force', 'Force regeneration of all translations', false)
 			.option('-rtw, --realtime-writes', 'Write updates to disk immediately, rather than on shutdown', false)
 			.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)

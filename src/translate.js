@@ -10,13 +10,14 @@ import {
 	VALID_TRANSLATION_PROVIDERS
 } from './consts.js'
 import { assertValidPath } from './assert.js'
-import { copyFileToTempAndEnsureExtension, importJsFile, mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from './io.js'
+import { mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from './io.js'
 import { calculateHash, normalizeData, sleep } from './utils.js'
 import { formatContextKeyFromKey, isContextKey } from './context-keys.js'
 import { loadConfig } from './config.js'
 import { loadTranslationProvider } from './provider.js'
 import { loadCache } from './cache.js'
 import { shutdown } from './shutdown.js'
+import { loadReferenceFile } from './reference-loader.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -70,15 +71,9 @@ export async function runTranslation({ appState, options, log }) {
 		appState.tmpDir = tmpDir
 
 		// Copy to a temp location first so we can ensure it has an .mjs extension
-		const tmpReferencePath = await copyFileToTempAndEnsureExtension({
-			filePath: options.referenceFile,
-			tmpDir,
-			ext: 'mjs',
-		})
-		const referenceContent = normalizeData(JSON.parse(JSON.stringify(await importJsFile(tmpReferencePath))), log)  // TODO: Don't do this
-		const referenceData = referenceContent[options.referenceVarName]
+		const referenceData = await loadReferenceFile({ appLang: appState.lang, options, tmpDir, log })
 		if (!referenceData) {
-			log.E(`No reference data found in variable "${options.referenceVarName}" in ${options.referenceFile}`)
+			log.E(`No reference data found in variable "${options.referenceExportedVarName}" in ${options.referenceFile}`)
 			process.exit(2)
 		}
 

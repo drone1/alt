@@ -21,3 +21,9 @@ export const DEFAULT_CONFIG_FILENAME = 'config.json'
 export const OVERLOADED_BACKOFF_INTERVAL_MS = 30 * 1000
 export const CWD = process.cwd()
 
+export const SUPPORTED_REFERENCE_FILE_EXTENSIONS = [
+	'js',
+	'mjs',
+	'json',
+	'jsonc'
+]
