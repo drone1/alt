@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Ɛnhwɛ mfomso bi wɔ cache fael mu",
   "error-value-not-a-string": "Ɛyɛ sɛ ɛka a ɛtɔ so \"%%key%%\" ɛyɛ \"%%type%%\". Wɔretwa sɛ ɛbɛyɛ nkɔtɔ! Wɔreto so...",
   "error-value-not-in-reference-data": "Bɔkɔ \"%%key%%\" nni hɔ wɔ abakɔsɛm fael no mu",
-  "error-translation-failed": "Ntumidie no amma %%targetLang%%; bɔkɔ=%%key%%; nkɔmmɔ=%%refValue%%"
+  "error-translation-failed": "Ntumidie no amma %%targetLang%%; bɔkɔ=%%key%%; nkɔmmɔ=%%refValue%%",
+  "error-bad-reference-file-ext": "Mfa fael a wɔntumi nnye ho kwan \"%%ext%%\" nni saa fileType no so",
+  "error-reference-var-not-found-in-data": "Entumi hu \"%%referenceExportedVarName%%\" wɔ abakɔsɛm fael \"%%referenceFile%%\" mu. Woka sɛnea ɛteɛ sɛ wobɛka eyi anaa?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Ɛnyɛ sɛ ɛbɛtwe abakɔsua fael \"%%referenceFile%%\""
 }

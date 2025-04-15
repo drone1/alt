@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Tiada hash dijumpai dalam fail cache",
   "error-value-not-a-string": "Nilai untuk kunci rujukan \"%%key%%\" adalah \"%%type%%\". Dijangka sebuah rentetan! Melangkau...",
   "error-value-not-in-reference-data": "Kunci \"%%key%%\" tidak wujud dalam fail rujukan",
-  "error-translation-failed": "Penterjemahan gagal untuk bahasa sasaran=%%targetLang%%; kunci=%%key%%; teks=%%refValue%%"
+  "error-translation-failed": "Penterjemahan gagal untuk bahasa sasaran=%%targetLang%%; kunci=%%key%%; teks=%%refValue%%",
+  "error-bad-reference-file-ext": "Jenis fail yang tidak disokong untuk fail rujukan \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Tidak dapat mencari \"%%referenceExportedVarName%%\" dalam fail rujukan \"%%referenceFile%%\". Adakah anda bermaksud salah satu daripada ini?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Gagal memuatkan fail rujukan \"%%referenceFile%%\""
 }

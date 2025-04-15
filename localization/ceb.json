@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Walay hash nga nakit-an sa cache file",
   "error-value-not-a-string": "Ang bili alang sa pakisayran nga yawe \"%%key%%\" kay \"%%type%%\". Gipaabot ang usa ka string! Gisalikway...",
   "error-value-not-in-reference-data": "Ang yawe nga \"%%key%%\" wala makit-an sa pakisayran nga file.",
-  "error-translation-failed": "Ang paghubad napakyas alang sa piniling pinulongan=%%targetLang%%; yawe=%%key%%; teksto=%%refValue%%"
+  "error-translation-failed": "Ang paghubad napakyas alang sa piniling pinulongan=%%targetLang%%; yawe=%%key%%; teksto=%%refValue%%",
+  "error-bad-reference-file-ext": "Dili suportado nga tipo sa file alang sa reference file \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Wala makita ang \"%%referenceExportedVarName%%\" sa reference file nga \"%%referenceFile%%\". Buot ba nimong ipasabot ang usa niini nga mga mosunod?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Napakyas sa pag-load sa reference file nga \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Tihaine hash omu fayiro ya cache",
   "error-value-not-a-string": "Ekihango eki ky'orufunguzo \"%%key%%\" kyari \"%%type%%\". Ekiteekwa kwari ekihango ky'ekigambo! Tukireka...",
   "error-value-not-in-reference-data": "Orukurato \"%%key%%\" tibaine omu fayiro erikwatanisa",
-  "error-translation-failed": "Okuhindura tikashobokire orurimi rw'okugyendererwaho=%%targetLang%%; omugururo=%%key%%; ebigambo=%%refValue%%"
+  "error-translation-failed": "Okuhindura tikashobokire orurimi rw'okugyendererwaho=%%targetLang%%; omugururo=%%key%%; ebigambo=%%refValue%%",
+  "error-bad-reference-file-ext": "Ebigambo ebiri mu fayiro ya \"%%ext%%\" tebirukwatsibwa.",
+  "error-reference-var-not-found-in-data": "Ntashoboye kubona \"%%referenceExportedVarName%%\" mu fayiro y'okureberaho \"%%referenceFile%%\". Oba waba oshakire aha?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Tikashobora kuteekamu fayiro y'okureeberaho \"%%referenceFile%%\""
 }

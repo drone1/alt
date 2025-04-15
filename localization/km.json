@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "រកមិនឃើញហាស្ស៍ក្នុងឯកសារឃ្លាំង",
   "error-value-not-a-string": "តម្លៃសម្រាប់កូនសោយោគយល់ \"%%key%%\" គឺ \"%%type%%\"។ រំពឹងថានឹងជាអក្សរសម្រាប់! រំលង...",
   "error-value-not-in-reference-data": "កូនសោ \"%%key%%\" មិនមាននៅក្នុងឯកសារយោង។",
-  "error-translation-failed": "ការបកប្រែបានបរាជ័យសម្រាប់ភាសាគោលដៅ=%%targetLang%%; កូនសោ=%%key%%; អត្ថបទ=%%refValue%%"
+  "error-translation-failed": "ការបកប្រែបានបរាជ័យសម្រាប់ភាសាគោលដៅ=%%targetLang%%; កូនសោ=%%key%%; អត្ថបទ=%%refValue%%",
+  "error-bad-reference-file-ext": "ប្រភេទឯកសារមិនត្រូវបានគាំទ្រសម្រាប់ឯកសារយោង \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "មិនអាចរកឃើញ \"%%referenceExportedVarName%%\" ក្នុងឯកសារយោង \"%%referenceFile%%\" ទេ។ តើអ្នកមានន័យថាមួយណានេះទេ?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "បរាជ័យក្នុងការផ្ទុកឯកសារយោង \"%%referenceFile%%\""
 }

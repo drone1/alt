@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Enweghị hash achọtara na faịlụ cache",
   "error-value-not-a-string": "Uru maka isi ihe odide \"%%key%%\" bụ \"%%type%%\". A tụrụ anya na ọ ga-abụ ederede! Ana-ewepụ...",
   "error-value-not-in-reference-data": "Igodo \"%%key%%\" adịghị na faịlụ ntụaka",
-  "error-translation-failed": "Igbanwe asụsụ agaghị ekwe omume maka asụsụ ebumnuche=%%targetLang%%; isi=%%key%%; ederede=%%refValue%%"
+  "error-translation-failed": "Igbanwe asụsụ agaghị ekwe omume maka asụsụ ebumnuche=%%targetLang%%; isi=%%key%%; ederede=%%refValue%%",
+  "error-bad-reference-file-ext": "Ụdị faịlụ anaghị akwado maka faịlụ ntụaka \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Enweghị ike ịchọta \"%%referenceExportedVarName%%\" na faịlụ ntụaka \"%%referenceFile%%\". Ọ̀ bụ nke a ka ị pụtara?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Ekwesịghị ibudata faịlụ ntụaka \"%%referenceFile%%\""
 }

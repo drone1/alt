@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Ewɔl ɛsɔm na mɔ na kach fichie",
   "error-value-not-a-string": "Valé yâ référence clé \"%%key%%\" édi \"%%type%%\". Abimá na moto yâ ndinga! Túké...",
   "error-value-not-in-reference-data": "Bɛ́lɛ \"%%key%%\" á nyɔ́nɛ na fáyíl yá mbímbá",
-  "error-translation-failed": "Translation e bélɛ na esé mɔkɛ́=%%targetLang%%; búkú=%%key%%; mbindi=%%refValue%%"
+  "error-translation-failed": "Translation e bélɛ na esé mɔkɛ́=%%targetLang%%; búkú=%%key%%; mbindi=%%refValue%%",
+  "error-bad-reference-file-ext": "Tipo di file non supportato per il file di riferimento \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "E ká mɛnɛ \"%%referenceExportedVarName%%\" na fáílú mɛ́nɛ \"%%referenceFile%%\". Ma wɛ́nɛ mɛnɛ bú ánɛ?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "E kɛnɛ́ mɔ́ yí mɛ́lɛ \"%%referenceFile%%\""
 }

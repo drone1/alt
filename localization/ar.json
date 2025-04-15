@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "لم يتم العثور على تجزئة في ملف الذاكرة المؤقتة",
   "error-value-not-a-string": "قيمة المفتاح المرجعي \"%%key%%\" كانت \"%%type%%\". كان من المتوقع أن تكون نصًا! جاري التخطي...",
   "error-value-not-in-reference-data": "المفتاح \"%%key%%\" غير موجود في ملف المرجع",
-  "error-translation-failed": "فشل الترجمة للغة الهدف=%%targetLang%%؛ المفتاح=%%key%%؛ النص=%%refValue%%"
+  "error-translation-failed": "فشل الترجمة للغة الهدف=%%targetLang%%؛ المفتاح=%%key%%؛ النص=%%refValue%%",
+  "error-bad-reference-file-ext": "نوع الملف غير مدعوم لملف المرجع \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "تعذر العثور على \"%%referenceExportedVarName%%\" في ملف المرجع \"%%referenceFile%%\". هل قصدت أحد هذه بدلاً من ذلك؟: %%possibleKeys%%",
+  "error-reference-file-load-failed": "فشل في تحميل ملف المرجع \"%%referenceFile%%\""
 }

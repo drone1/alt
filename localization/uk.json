@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Хеш не знайдено у файлі кешу",
   "error-value-not-a-string": "Значення для ключа посилання \"%%key%%\" було \"%%type%%\". Очікувалася рядкова змінна! Пропускаємо...",
   "error-value-not-in-reference-data": "Ключ \"%%key%%\" не існував у довідковому файлі",
-  "error-translation-failed": "Переклад не вдався для мови призначення=%%targetLang%%; ключ=%%key%%; текст=%%refValue%%"
+  "error-translation-failed": "Переклад не вдався для мови призначення=%%targetLang%%; ключ=%%key%%; текст=%%refValue%%",
+  "error-bad-reference-file-ext": "Непідтримуваний тип файлу для файлу довідки \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Не вдалося знайти \"%%referenceExportedVarName%%\" у файлі довідника \"%%referenceFile%%\". Можливо, ви мали на увазі одне з цих значень?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Не вдалося завантажити файл довідки \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Kei Hash im Cache File gfunde",
   "error-value-not-a-string": "Wärt für Referenzschlüssel \"%%key%%\" isch \"%%type%%\" gsi. Es isch e Zeichechette erwartet worde! Wird übersprunge...",
   "error-value-not-in-reference-data": "Dr Schlüssel \"%%key%%\" isch nit im Referänzedatei vorhande gsi.",
-  "error-translation-failed": "D'Übersetzig isch g'scheitert für d' Ziilsproch=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%%"
+  "error-translation-failed": "D'Übersetzig isch g'scheitert für d' Ziilsproch=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%%",
+  "error-bad-reference-file-ext": "Nit unterstützte Dateityp für d'Referenzdatei \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Ha kei \"%%referenceExportedVarName%%\" i de Referenzdatei \"%%referenceFile%%\" gfunde. Hesch viellecht eine vo dene gmeint?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Fähler biim Lade vo dr Referenzdatei \"%%referenceFile%%\""
 }

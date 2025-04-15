@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "No se encontró ningún hash en el archivo de caché.",
   "error-value-not-a-string": "Valor para la clave de referencia \"%%key%%\" era \"%%type%%\". ¡Se esperaba una cadena! Omitiendo...",
   "error-value-not-in-reference-data": "La clave \"%%key%%\" no existía en el archivo de referencia.",
-  "error-translation-failed": "La traducción ha fallado para el idioma de destino=%%targetLang%%; clave=%%key%%; texto=%%refValue%%"
+  "error-translation-failed": "La traducción ha fallado para el idioma de destino=%%targetLang%%; clave=%%key%%; texto=%%refValue%%",
+  "error-bad-reference-file-ext": "Tipo de archivo no compatible para el archivo de referencia \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "No se pudo encontrar \"%%referenceExportedVarName%%\" en el archivo de referencia \"%%referenceFile%%\". ¿Querías decir uno de estos en su lugar?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Error al cargar el archivo de referencia \"%%referenceFile%%\""
 }

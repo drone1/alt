@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Vahemälus ei leitud räsi",
   "error-value-not-a-string": "Viitevõtme \"%%key%%\" väärtus oli \"%%type%%\". Oodati stringi! Jäetakse vahele...",
   "error-value-not-in-reference-data": "Võti \"%%key%%\" ei eksisteerinud viitefailis",
-  "error-translation-failed": "Tõlge ebaõnnestus sihtkeelele=%%targetLang%%; võti=%%key%%; tekst=%%refValue%%"
+  "error-translation-failed": "Tõlge ebaõnnestus sihtkeelele=%%targetLang%%; võti=%%key%%; tekst=%%refValue%%",
+  "error-bad-reference-file-ext": "Toetatud failitüüp viitefailile \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Ei leidnud \"%%referenceExportedVarName%%\" viitefailist \"%%referenceFile%%\". Kas mõtlesite ühte neist?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Ei õnnestunud laadida viitefaili \"%%referenceFile%%\""
 }

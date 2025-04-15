@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Geen greep gevind in kaslêer nie",
   "error-value-not-a-string": "Waarde vir verwysingsleutel \"%%key%%\" was \"%%type%%\". 'n String was verwag! Oorslaan...",
   "error-value-not-in-reference-data": "Sleutel \"%%key%%\" het nie in verwysingslêer bestaan nie.",
-  "error-translation-failed": "Vertaling het misluk vir teikentaal=%%targetLang%%; sleutel=%%key%%; teks=%%refValue%%"
+  "error-translation-failed": "Vertaling het misluk vir teikentaal=%%targetLang%%; sleutel=%%key%%; teks=%%refValue%%",
+  "error-bad-reference-file-ext": "Ondersteunde lêertipe vir verwysingslêer \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Kon nie \"%%referenceExportedVarName%%\" in verwysingslêer \"%%referenceFile%%\" vind nie. Het jy een van hierdie bedoel?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Kon nie verwysingslêer \"%%referenceFile%%\" laai nie."
 }

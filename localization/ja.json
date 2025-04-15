@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "キャッシュファイルにハッシュが見つかりませんでした。",
   "error-value-not-a-string": "参照キー「%%key%%」の値は「%%type%%」でした。文字列を期待していました！スキップします...",
   "error-value-not-in-reference-data": "参照ファイルに「%%key%%」というキーが存在しませんでした。",
-  "error-translation-failed": "対象言語=%%targetLang%%; キー=%%key%%; テキスト=%%refValue%%の翻訳に失敗しました。"
+  "error-translation-failed": "対象言語=%%targetLang%%; キー=%%key%%; テキスト=%%refValue%%の翻訳に失敗しました。",
+  "error-bad-reference-file-ext": "参照ファイル「%%ext%%」のファイル形式はサポートされていません。",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\"が参照ファイル\"%%referenceFile%%\"内に見つかりませんでした。代わりにこれらのいずれかを意味しましたか？: %%possibleKeys%%",
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" リファレンスファイルの読み込みに失敗しました"
 }

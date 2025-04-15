@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "በካሽ ፋይል ምንም ሃሽ አልተገኘም",
   "error-value-not-a-string": "በማስታወቂያ ቁልፍ \"%%key%%\" የተሰጠው እሴት \"%%type%%\" ነበር። የተጠበቀው የጽሑፍ ነገር ነበር! ተቅርብቷል...",
   "error-value-not-in-reference-data": "ቁልፍ \"%%key%%\" በማጣቀሻ ፋይል ውስጥ አልነበረም",
-  "error-translation-failed": "ትርጓሜው አልተሳካም ለተመን ቋንቋ=%%targetLang%%; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%"
+  "error-translation-failed": "ትርጓሜው አልተሳካም ለተመን ቋንቋ=%%targetLang%%; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%",
+  "error-bad-reference-file-ext": "የተመከረ ፋይል አይነት ለማጣቀሻ ፋይል \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "በማእከላዊ ፋይል \"%%referenceFile%%\" ውስጥ \"%%referenceExportedVarName%%\" አልተገኘም። በመንኮት የሚመስሉትን ነገሮች ማንኛውን ማለት ነበር?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "የማጣቀሻ ፋይል \"%%referenceFile%%\" መጫን አልተሳካም"
 }

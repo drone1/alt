@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "ཁག་གི་ཡིག་ཆ་ནང་འདི་ནང་འདྲི་བའི་མིང་ཚང་མ།",
   "error-value-not-a-string": "དབྱེ་འབྲེལ་ལྡེ་མིག \"%%key%%\" གི་བརྡ་དོན་ནི \"%%type%%\" ཡིན། དབྱེ་བ་ཡིག་གཏུབ་རེད། སྣོན་བརྗོད་བྱེད་པ་བཞག་ཡོད།",
   "error-value-not-in-reference-data": "མིང་ \"%%key%%\" འདི་ གསལ་བྱ་ཡིག་ཆ་ཁུངས་ནང་མེད།",
-  "error-translation-failed": "མིང་བསྡུ་བྱས་པའི་སྐད་ཡིག=%%targetLang%%; ལྡེ་མིག=%%key%%; ཚིག་ཡིག=%%refValue%% ལ་མིང་བསྡུ་མ་འགྲོ་བ།"
+  "error-translation-failed": "མིང་བསྡུ་བྱས་པའི་སྐད་ཡིག=%%targetLang%%; ལྡེ་མིག=%%key%%; ཚིག་ཡིག=%%refValue%% ལ་མིང་བསྡུ་མ་འགྲོ་བ།",
+  "error-bad-reference-file-ext": "བརྡ་ཡིག་གི་དཔེ་གཏུབ་ཡིག་ཆ་འདི་ལ་དགའ་ཤོས་མེད། \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "འཛོལ་བའི་ཡིག་ཆ་ནང་ནས་ \"%%referenceExportedVarName%%\" འདི་མ་ཐོབ། \"%%referenceFile%%\" འདི་ནང་ལས་གསལ་བཤད་འབད་ཡོད་མི། ཁྱེད་ཀྱིས་འདི་དག་གི་སྐོར་བསམ་བཞག་ཡོད་པས། %%possibleKeys%%",
+  "error-reference-file-load-failed": "འཛུལ་ཡིག་ཡིག་ཆ་ \"%%referenceFile%%\" སྣོན་པར་མ་ཐུབ།"
 }

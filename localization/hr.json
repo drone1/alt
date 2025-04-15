@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Nema pronađenog sažetka u predmemoriji datoteke",
   "error-value-not-a-string": "Vrijednost za referentni ključ \"%%key%%\" bila je \"%%type%%\". Očekivan je niz! Preskače se...",
   "error-value-not-in-reference-data": "Ključ \"%%key%%\" nije postojao u referentnoj datoteci",
-  "error-translation-failed": "Prijevod nije uspio za ciljani jezik=%%targetLang%%; ključ=%%key%%; tekst=%%refValue%%"
+  "error-translation-failed": "Prijevod nije uspio za ciljani jezik=%%targetLang%%; ključ=%%key%%; tekst=%%refValue%%",
+  "error-bad-reference-file-ext": "Nepodržana vrsta datoteke za referentnu datoteku \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Nije moguće pronaći \"%%referenceExportedVarName%%\" u referentnoj datoteci \"%%referenceFile%%\". Jeste li možda mislili na jedno od ovih?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Nije uspjelo učitati referentnu datoteku \"%%referenceFile%%\""
 }

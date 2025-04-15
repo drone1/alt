@@ -23,5 +23,8 @@
   "msg-translation-reason-outputFileDidNotExist": "輸出檔案 %%outputFile%% 不存在",
   "error-value-not-a-string": "參考鍵「%%key%%」的值為「%%type%%」。預期為字串！正在跳過...",
   "error-value-not-in-reference-data": "鍵 \"%%key%%\" 在參考文件中不存在",
-  "error-translation-failed": "翻譯目標語言=%%targetLang%%失敗；鍵=%%key%%；文本=%%refValue%%"
+  "error-translation-failed": "翻譯目標語言=%%targetLang%%失敗；鍵=%%key%%；文本=%%refValue%%",
+  "error-bad-reference-file-ext": "不支援的參考文件類型 \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "找不到參考檔案 \"%%referenceFile%%\" 中的 \"%%referenceExportedVarName%%\"。您是不是想找以下其中一個？: %%possibleKeys%%",
+  "error-reference-file-load-failed": "無法載入參考檔案 \"%%referenceFile%%\""
 }

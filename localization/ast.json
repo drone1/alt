@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Nun s'atopó nengún hash nel ficheru de caché",
   "error-value-not-a-string": "El valor pa la clave de referencia \"%%key%%\" yera \"%%type%%\". Esperábase una cadena de testu. Saltando...",
   "error-value-not-in-reference-data": "La clave \"%%key%%\" nun esistía nel ficheru de referencia.",
-  "error-translation-failed": "Falló la traducción pa la llingua de destín=%%targetLang%%; clave=%%key%%; testu=%%refValue%%"
+  "error-translation-failed": "Falló la traducción pa la llingua de destín=%%targetLang%%; clave=%%key%%; testu=%%refValue%%",
+  "error-bad-reference-file-ext": "Tipu de ficheru non soportáu pa'l ficheru de referencia \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Nun s'atopó \"%%referenceExportedVarName%%\" nel ficheru de referencia \"%%referenceFile%%\". Quixisti dicir ún d'estos en cuenta?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Falló al cargar el ficheru de referencia \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Intet hash fundet i cachefil",
   "error-value-not-a-string": "Værdien for reference nøglen \"%%key%%\" var \"%%type%%\". Forventede en streng! Springer over...",
   "error-value-not-in-reference-data": "Nøglen \"%%key%%\" fandtes ikke i referencefilen",
-  "error-translation-failed": "Oversættelsen mislykkedes for målsprog=%%targetLang%%; nøgle=%%key%%; tekst=%%refValue%%"
+  "error-translation-failed": "Oversættelsen mislykkedes for målsprog=%%targetLang%%; nøgle=%%key%%; tekst=%%refValue%%",
+  "error-bad-reference-file-ext": "Ikke-understøttet filtype for referencefil \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Kunne ikke finde \"%%referenceExportedVarName%%\" i referencefilen \"%%referenceFile%%\". Mente du en af disse i stedet?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Kunne ikke indlæse referencefilen \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-outputFileDidNotExist": "输出文件 %%outputFile%% 不存在",
   "error-value-not-a-string": "引用键“%%key%%”的值为“%%type%%”。预期为字符串！正在跳过...",
   "error-value-not-in-reference-data": "键“%%key%%”在参考文件中不存在",
-  "error-translation-failed": "翻译失败，目标语言=%%targetLang%%；键=%%key%%；文本=%%refValue%%"
+  "error-translation-failed": "翻译失败，目标语言=%%targetLang%%；键=%%key%%；文本=%%refValue%%",
+  "error-bad-reference-file-ext": "不支持的参考文件类型“%%ext%%”",
+  "error-reference-var-not-found-in-data": "无法在参考文件“%%referenceFile%%”中找到“%%referenceExportedVarName%%”。您是不是想找这些之一？：%%possibleKeys%%",
+  "error-reference-file-load-failed": "无法加载参考文件“%%referenceFile%%”"
 }

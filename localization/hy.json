@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Հեշը չի գտնվել քեշ ֆայլում",
   "error-value-not-a-string": "Տեղեկատվության արժեքը \"%%key%%\" բանալու համար՝ \"%%type%%\": Սպասվում էր տող։ Բաց թողնվում է...",
   "error-value-not-in-reference-data": "Բանալին \"%%key%%\" չկար հղումների ֆայլում",
-  "error-translation-failed": "Չհաջողվեց թարգմանել թղթակցվող լեզվի համար=%%targetLang%%; բանալի=%%key%%; տեքստ=%%refValue%%"
+  "error-translation-failed": "Չհաջողվեց թարգմանել թղթակցվող լեզվի համար=%%targetLang%%; բանալի=%%key%%; տեքստ=%%refValue%%",
+  "error-bad-reference-file-ext": "Չաջակցվող ֆայլի տեսակ հղումների ֆայլի համար «%%ext%%»",
+  "error-reference-var-not-found-in-data": "Չհաջողվեց գտնել \"%%referenceExportedVarName%%\" հղումների ֆայլում \"%%referenceFile%%\": Միգուցե նկատի ունեք այսպիսիները՝ %%possibleKeys%%:",
+  "error-reference-file-load-failed": "Չհաջողվեց բեռնել \"%%referenceFile%%\" հղումային ֆայլը"
 }

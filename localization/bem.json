@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Palibe hashi yapelekeka mu fayilo ya cache",
   "error-value-not-a-string": "Ubwino bwa kiyi ya chikumbutso \"%%key%%\" wali \"%%type%%\". Twalindilila ulusungu! Tuleka...",
   "error-value-not-in-reference-data": "Ukufungulula \"%%key%%\" kulibe mu fayilo ya ukusambilila",
-  "error-translation-failed": "Ukutoloka kwashindikila ku chiyowoyelo chakulengedwa=%%targetLang%%; key=%%key%%; mazgu=%%refValue%%"
+  "error-translation-failed": "Ukutoloka kwashindikila ku chiyowoyelo chakulengedwa=%%targetLang%%; key=%%key%%; mazgu=%%refValue%%",
+  "error-bad-reference-file-ext": "Ubwino bwa fayilo bwa fayilo ya mbilimbo \"%%ext%%\" tebukakamizidwa",
+  "error-reference-var-not-found-in-data": "Tawakasanga \"%%referenceExportedVarName%%\" mu fayilo ya ukubomba \"%%referenceFile%%\". Mukachita kung'anamula chimwe mwa ichi pano?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Elyamo ukulemba ifayile ya maziko \"%%referenceFile%%\""
 }

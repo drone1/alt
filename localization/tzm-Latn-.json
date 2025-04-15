@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Ur nufi kraḍ adrar deg ufaylu n taggayt",
   "error-value-not-a-string": "Azday i usnulfu n ufella \"%%key%%\" d \"%%type%%\". Aɣilif d aṭṭan! Ad nernu...",
   "error-value-not-in-reference-data": "Tasɣunt \"%%key%%\" ur tettuɣal ara deg ufaylu n umeskar",
-  "error-translation-failed": "Targamt ur tgam ara i tutlayt targit=%%targetLang%%; tikkelt=%%key%%; anɣal=%%refValue%%"
+  "error-translation-failed": "Targamt ur tgam ara i tutlayt targit=%%targetLang%%; tikkelt=%%key%%; anɣal=%%refValue%%",
+  "error-bad-reference-file-ext": "Anṣuf n ummid n ufaylu \"%%ext%%\" i ufaylu n uskuday",
+  "error-reference-var-not-found-in-data": "Ur nufi ad yawi \"%%referenceExportedVarName%%\" deg ufaylu n ugama \"%%referenceFile%%\". Tettat ad tferḍeḍ ɣef wayeḍ seg widayen?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Ur izmir ara tawalt n ufaylu \"%%referenceFile%%\""
 }

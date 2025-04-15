@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Nisun hash truvatu in u schedariu di cache",
   "error-value-not-a-string": "Valore per a chjave di riferimentu \"%%key%%\" era \"%%type%%\". Aspettava una stringa! Saltendu...",
   "error-value-not-in-reference-data": "A chjave \"%%key%%\" ùn esistia micca in u schedariu di riferimentu",
-  "error-translation-failed": "A traduzzione hà fiascatu per a lingua di destinazione=%%targetLang%%; chjave=%%key%%; testu=%%refValue%%"
+  "error-translation-failed": "A traduzzione hà fiascatu per a lingua di destinazione=%%targetLang%%; chjave=%%key%%; testu=%%refValue%%",
+  "error-bad-reference-file-ext": "Tipu di schedariu micca supportatu per u schedariu di riferimentu \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Ùn pudia truvà \"%%referenceExportedVarName%%\" in u schedariu di riferimentu \"%%referenceFile%%\". Vulìa dì unu di questi invece?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Impossibile caricare il file di riferimento \"%%referenceFile%%\""
 }

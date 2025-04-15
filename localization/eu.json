@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Ez da aurkitu hashik cache fitxategian",
   "error-value-not-a-string": "Erreferentzia-gakoaren \"%%key%%\" balioa \"%%type%%\" zen. Katea espero zen! Saltatzen...",
   "error-value-not-in-reference-data": "\"%%key%%\" gakoa ez zegoen erreferentzia fitxategian",
-  "error-translation-failed": "Itzulpenak huts egin du helburu hizkuntzan=%%targetLang%%; gakoa=%%key%%; testua=%%refValue%%"
+  "error-translation-failed": "Itzulpenak huts egin du helburu hizkuntzan=%%targetLang%%; gakoa=%%key%%; testua=%%refValue%%",
+  "error-bad-reference-file-ext": "Erreferentzia fitxategirako onartzen ez den fitxategi mota \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Ezin izan da \"%%referenceExportedVarName%%\" aurkitu \"%%referenceFile%%\" erreferentzia fitxategian. Hauetako bat esan nahi zenuen ala?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Ezin izan da \"%%referenceFile%%\" erreferentzia fitxategia kargatu"
 }

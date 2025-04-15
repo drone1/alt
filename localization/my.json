@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "မှတ်ဉာဏ်ဖိုင်ထဲတွင် ဟက်ရှ် မတွေ့ရှိပါ။",
   "error-value-not-a-string": "ကိုးကားချက်သော့ \"%%key%%\" အတွက် တန်ဖိုးသည် \"%%type%%\" ဖြစ်ပါသည်။ စာသားတစ်ခုကို မျှော်လင့်ထားသည်။ ကျော်လွှားနေပါသည်...",
   "error-value-not-in-reference-data": "သော့ \"%%key%%\" သည် ကိုးကားဖိုင်တွင် မရှိခဲ့ပါ။",
-  "error-translation-failed": "ဘာသာပြန်မှု မအောင်မြင်ပါ။ ရည်ရွယ်သော ဘာသာစကား=%%targetLang%%; သော့=%%key%%; စာသား=%%refValue%%"
+  "error-translation-failed": "ဘာသာပြန်မှု မအောင်မြင်ပါ။ ရည်ရွယ်သော ဘာသာစကား=%%targetLang%%; သော့=%%key%%; စာသား=%%refValue%%",
+  "error-bad-reference-file-ext": "ကိုးကားဖိုင်အတွက် မထောက်ခံသော ဖိုင်အမျိုးအစား \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" ကို \"%%referenceFile%%\" ကိုးကားဖိုင်ထဲတွင် ရှာမတွေ့ပါ။ ဒါမျိုးတွေကို သင်ရည်ညွှန်းနေခဲ့သလား။: %%possibleKeys%%",
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" ကို တင်ရန် မအောင်မြင်ပါ"
 }

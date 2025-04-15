@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "ক্যাশ ফাইলে কোনো হ্যাশ পাওয়া যায়নি",
   "error-value-not-a-string": "রেফারেন্স কী \"%%key%%\" এর মান ছিল \"%%type%%\"। একটি স্ট্রিং প্রত্যাশিত! এড়িয়ে যাচ্ছি...",
   "error-value-not-in-reference-data": "\"%%key%%\" কীটি রেফারেন্স ফাইলে ছিল না",
-  "error-translation-failed": "লক্ষ্য ভাষার জন্য অনুবাদ ব্যর্থ হয়েছে=%%targetLang%%; কী=%%key%%; পাঠ্য=%%refValue%%"
+  "error-translation-failed": "লক্ষ্য ভাষার জন্য অনুবাদ ব্যর্থ হয়েছে=%%targetLang%%; কী=%%key%%; পাঠ্য=%%refValue%%",
+  "error-bad-reference-file-ext": "রেফারেন্স ফাইলের জন্য অসমর্থিত ফাইল টাইপ \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" নামক রেফারেন্সটি \"%%referenceFile%%\" ফাইলে পাওয়া যায়নি। আপনি কি এইগুলির কোনো একটি বোঝাতে চেয়েছিলেন?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" রেফারেন্স ফাইল লোড করতে ব্যর্থ হয়েছে"
 }

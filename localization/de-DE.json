@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Kein Hash im Cache gefunden.",
   "error-value-not-a-string": "Wert für Referenzschlüssel \"%%key%%\" war \"%%type%%\". Eine Zeichenkette wurde erwartet! Wird übersprungen...",
   "error-value-not-in-reference-data": "Der Schlüssel \"%%key%%\" existierte nicht in der Referenzdatei.",
-  "error-translation-failed": "Die Übersetzung für die Zielsprache=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%% ist fehlgeschlagen."
+  "error-translation-failed": "Die Übersetzung für die Zielsprache=%%targetLang%%; Schlüssel=%%key%%; Text=%%refValue%% ist fehlgeschlagen.",
+  "error-bad-reference-file-ext": "Nicht unterstützter Dateityp für Referenzdatei \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Konnte „%%referenceExportedVarName%%“ in der Referenzdatei „%%referenceFile%%“ nicht finden. Meinten Sie stattdessen einen dieser Einträge?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Fehler beim Laden der Referenzdatei \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Hakuna hashi iliyopatikana katika faili ya cache",
   "error-value-not-a-string": "Thamani ya ufunguo wa rejea \"%%key%%\" ilikuwa \"%%type%%\". Ilitarajiwa kuwa mnyororo! Inarukwa...",
   "error-value-not-in-reference-data": "Ufunguo \"%%key%%\" haukuwepo katika faili ya marejeo.",
-  "error-translation-failed": "Tafsiri imeshindwa kwa lugha lengwa=%%targetLang%%; ufunguo=%%key%%; maandishi=%%refValue%%"
+  "error-translation-failed": "Tafsiri imeshindwa kwa lugha lengwa=%%targetLang%%; ufunguo=%%key%%; maandishi=%%refValue%%",
+  "error-bad-reference-file-ext": "Aina ya faili haikubaliwi kwa faili ya marejeleo \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Haikupata \"%%referenceExportedVarName%%\" katika faili ya marejeo \"%%referenceFile%%\". Ulidhamiria mojawapo ya hizi badala yake?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Imeshindwa kupakia faili ya marejeleo \"%%referenceFile%%\""
 }

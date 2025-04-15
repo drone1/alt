@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "در فایل کَش هیچ هَش یافت نشد",
   "error-value-not-a-string": "ارزش برای کلید مرجع \"%%key%%\" \"%%type%%\" بود. یک رشته انتظار می‌رفت! در حال نادیده گرفتن...",
   "error-value-not-in-reference-data": "کلید \"%%key%%\" در فایل مرجع وجود نداشت",
-  "error-translation-failed": "ترجمه برای زبان مقصد ناکام ماند=%%targetLang%%؛ کلید=%%key%%؛ متن=%%refValue%%"
+  "error-translation-failed": "ترجمه برای زبان مقصد ناکام ماند=%%targetLang%%؛ کلید=%%key%%؛ متن=%%refValue%%",
+  "error-bad-reference-file-ext": "نوع فایل پشتیبانی نشده برای فایل مرجع \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "نتوانستم \"%%referenceExportedVarName%%\" را در فایل مرجع \"%%referenceFile%%\" پیدا کنم. آیا منظور شما یکی از این‌ها بود؟: %%possibleKeys%%",
+  "error-reference-file-load-failed": "ناتوان در بارگذاری فایل مرجع \"%%referenceFile%%\""
 }

@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Keş faylında heç bir heş tapılmadı",
   "error-value-not-a-string": "Referans açarı \"%%key%%\" üçün dəyər \"%%type%%\" idi. String gözlənilirdi! Atlanır...",
   "error-value-not-in-reference-data": "Açar \"%%key%%\" istinad faylında mövcud deyildi",
-  "error-translation-failed": "Tərcümə uğursuz oldu, hədəf dil=%%targetLang%%; açar=%%key%%; mətn=%%refValue%%"
+  "error-translation-failed": "Tərcümə uğursuz oldu, hədəf dil=%%targetLang%%; açar=%%key%%; mətn=%%refValue%%",
+  "error-bad-reference-file-ext": "Dəstəklənməyən fayl növü istinad faylı üçün \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" adlı dəyişən \"%%referenceFile%%\" istinad faylında tapılmadı. Bunlardan birini nəzərdə tutmusunuz?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" istinad faylını yükləmək mümkün olmadı"
 }

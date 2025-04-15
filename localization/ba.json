@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "Nema hash-a u keš fajlu",
   "error-value-not-a-string": "Vrijednost za referentni ključ \"%%key%%\" bila je \"%%type%%\". Očekivan je string! Preskače se...",
   "error-value-not-in-reference-data": "Кључ \"%%key%%\" није постојао у референтној датотеци",
-  "error-translation-failed": "Prevod nije uspio za ciljni jezik=%%targetLang%%; ključ=%%key%%; tekst=%%refValue%%"
+  "error-translation-failed": "Prevod nije uspio za ciljni jezik=%%targetLang%%; ključ=%%key%%; tekst=%%refValue%%",
+  "error-bad-reference-file-ext": "Nepodržani tip datoteke za referentnu datoteku \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Nije moguće pronaći \"%%referenceExportedVarName%%\" u referentnoj datoteci \"%%referenceFile%%\". Da li ste mislili na neki od ovih?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Неуспешно учитавање референтне датотеке \"%%referenceFile%%\""
 }

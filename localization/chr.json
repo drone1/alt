@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "ᎠᏍᏚᎢᏍᎬ ᎤᏔᎾ ᎤᏓᏛᏗ ᎠᏍᎦᏯ ᎤᏪᏘ ᎤᏍᏗ ᎤᏬᏗᏍᏗ ᎠᎴᏍᏗ ᎤᏍᏗ ᎢᏳᏍᏗ ᎠᎩᏍᎩ.",
   "error-value-not-a-string": "ᎤᏕᏲᎮᎢ ᎤᏓᏅᏖ ᎤᏍᏗ ᎠᏍᏚᎢᏍᎬᎢ \"%%key%%\" ᎾᏍᎩ ᎤᏓᏅᏖ ᎤᏍᏗ \"%%type%%\". ᎠᏍᏚᎢᏍᎬᎢ ᎤᏓᏅᏖ ᎠᎴᏍᏗᏍᎩ ᎤᏓᏅᏖ ᎠᎴᏍᏗᏍᎩ ᎠᏍᏚᎢᏍᎬᎢ! ᎠᏍᏆᏂᏱᏍᎩ...",
   "error-value-not-in-reference-data": "ᎢᏗ \"%%key%%\" ᎤᏚᏅᏓ ᎤᏚᏅᏓ ᎠᏍᎦᏯ ᎤᏓᏅᏘ ᎤᏍᏗ ᎢᏳᏍᏗ ᎠᎴ ᎠᏍᎦᏯ ᎠᏂᏴᏫ ᎤᏍᏗ ᎢᏳᏍᏗ ᎠᎴ",
-  "error-translation-failed": "ᎩᏗᏱᏍᎩᏓᏍᏗ ᎠᏰᎵᏍᏗᏍᎩ ᎤᏲᏒ ᎤᏓᏅᏖ=%%targetLang%%; ᎤᏙᏢᎬ=%%key%%; ᏗᎪᎢᎢ=%%refValue%%"
+  "error-translation-failed": "ᎩᏗᏱᏍᎩᏓᏍᏗ ᎠᏰᎵᏍᏗᏍᎩ ᎤᏲᏒ ᎤᏓᏅᏖ=%%targetLang%%; ᎤᏙᏢᎬ=%%key%%; ᏗᎪᎢᎢ=%%refValue%%",
+  "error-bad-reference-file-ext": "ᎤᎾᏓᏡᎬ ᎠᏍᎦᏯ ᎤᏓᏛᏛᎢ ᎠᏍᎦᏯ ᎤᏓᏛᏛᎢ ᎠᏍᎦᏯ \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" ᎠᏂᏴᏫᏯᏍᏗ ᎤᏚᏅᏛ ᎤᏓᏅᏘ ᎤᏙᏢᎬ \"%%referenceFile%%\" ᎠᏍᎦᏯ ᏂᎨᏒᎾ. ᏂᎦᏛ ᎤᏙᏢᎬ ᎠᏂᏴᏫᏯᏍᏗ ᎤᏓᏅᏘ ᎤᏚᏅᏛ ᎤᏙᏢᎬ ᏂᎨᏒᎾ?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "ᎢᎦᏔᏍᏗ ᎦᏚᎩᏍᎩᏂᎨᏍᏗ ᎠᏍᏆᎢᏗ ᏗᏓᎴᏂᏍᏗ ᎠᏍᏆᎢᏗ \"%%referenceFile%%\""
 }

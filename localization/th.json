@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "ไม่พบแฮชในไฟล์แคช",
   "error-value-not-a-string": "ค่าสำหรับคีย์อ้างอิง \"%%key%%\" คือ \"%%type%%\" คาดว่าจะเป็นสตริง! ข้าม...",
   "error-value-not-in-reference-data": "คีย์ \"%%key%%\" ไม่มีอยู่ในไฟล์อ้างอิง",
-  "error-translation-failed": "การแปลล้มเหลวสำหรับภาษาเป้าหมาย=%%targetLang%%; คีย์=%%key%%; ข้อความ=%%refValue%%"
+  "error-translation-failed": "การแปลล้มเหลวสำหรับภาษาเป้าหมาย=%%targetLang%%; คีย์=%%key%%; ข้อความ=%%refValue%%",
+  "error-bad-reference-file-ext": "ประเภทไฟล์ที่ไม่รองรับสำหรับไฟล์อ้างอิง \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "ไม่พบ \"%%referenceExportedVarName%%\" ในไฟล์อ้างอิง \"%%referenceFile%%\" คุณหมายถึงหนึ่งในนี้หรือไม่?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "ไม่สามารถโหลดไฟล์อ้างอิง \"%%referenceFile%%\""
 }

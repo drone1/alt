@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "ሓሽ ኣብ ፋይል ካሽ ኣይተረኽበን",
   "error-value-not-a-string": "ምልክት ቁልፍ \"%%key%%\" ንምልክት ክልል \"%%type%%\" ነበረ። ቃል ተጠበቀ! ብምውሳኽ...",
   "error-value-not-in-reference-data": "ቁልፍ \"%%key%%\" በምንጭ ፋይል አልነበረም",
-  "error-translation-failed": "ትርጓሜ ኣብ ትሕደሕደ ቋንቋ=%%targetLang%% ኣይተሳእነን; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%"
+  "error-translation-failed": "ትርጓሜ ኣብ ትሕደሕደ ቋንቋ=%%targetLang%% ኣይተሳእነን; ቁልፍ=%%key%%; ጽሑፍ=%%refValue%%",
+  "error-bad-reference-file-ext": "ቅድመ ምእላይ ፋይል ኣይተመከረን ፋይል ክፍሊት \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "ኣብ ፋይል ምሳኻታት \"%%referenceFile%%\" \"%%referenceExportedVarName%%\" ክርከብ ኣይተረኽበን። እንተኾነን እንታይ ክትምልስ ኣለኻ?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "ኣብ መጻኢ ምምሃብ ፋይል ምውሳድ ክኣለዎ ኣሎ \"%%referenceFile%%\""
 }

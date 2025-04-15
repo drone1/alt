@@ -23,5 +23,8 @@
   "msg-translation-reason-userModifiedReferenceValue": "Gebruiker heeft referentietekst gewijzigd",
   "error-value-not-a-string": "Waarde voor referentiesleutel \"%%key%%\" was \"%%type%%\". Er werd een tekenreeks verwacht! Wordt overgeslagen...",
   "error-value-not-in-reference-data": "Sleutel \"%%key%%\" bestond niet in het referentiebestand",
-  "error-translation-failed": "Vertaling mislukt voor doeltaal=%%targetLang%%; sleutel=%%key%%; tekst=%%refValue%%"
+  "error-translation-failed": "Vertaling mislukt voor doeltaal=%%targetLang%%; sleutel=%%key%%; tekst=%%refValue%%",
+  "error-bad-reference-file-ext": "Niet-ondersteund bestandstype voor referentiebestand \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Kan \"%%referenceExportedVarName%%\" niet vinden in referentiebestand \"%%referenceFile%%\". Bedoelde u een van deze?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Kan referentiebestand \"%%referenceFile%%\" niet laden."
 }

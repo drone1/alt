@@ -23,5 +23,8 @@
   "msg-translation-reason-missingOutputValueHash": "कैश फ़ाइल में कोई हैश नहीं मिला",
   "error-value-not-a-string": "संदर्भ कुंजी \"%%key%%\" का मान \"%%type%%\" था। एक स्ट्रिंग की अपेक्षा थी! छोड़ रहे हैं...",
   "error-value-not-in-reference-data": "कुंजी \"%%key%%\" संदर्भ फ़ाइल में मौजूद नहीं थी",
-  "error-translation-failed": "अनुवाद विफल हुआ लक्षित भाषा के लिए=%%targetLang%%; कुंजी=%%key%%; पाठ=%%refValue%%"
+  "error-translation-failed": "अनुवाद विफल हुआ लक्षित भाषा के लिए=%%targetLang%%; कुंजी=%%key%%; पाठ=%%refValue%%",
+  "error-bad-reference-file-ext": "संदर्भ फ़ाइल \"%%ext%%\" के लिए असमर्थित फ़ाइल प्रकार",
+  "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" को संदर्भ फ़ाइल \"%%referenceFile%%\" में नहीं पाया जा सका। क्या आपका मतलब इनमें से किसी एक से था?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "\"%%referenceFile%%\" संदर्भ फ़ाइल लोड करने में विफल"
 }

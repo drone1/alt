@@ -25,5 +25,8 @@
   "msg-translation-reason-missingOutputValueHash": "No hash found in cache file",
   "error-value-not-a-string": "Value for reference key \"%%key%%\" was \"%%type%%\". Expected a string! Skipping...",
   "error-value-not-in-reference-data": "Key \"%%key%%\" did not exist in reference file",
-  "error-translation-failed": "Translation failed for target language=%%targetLang%%; key=%%key%%; text=%%refValue%%"
+  "error-translation-failed": "Translation failed for target language=%%targetLang%%; key=%%key%%; text=%%refValue%%",
+  "error-bad-reference-file-ext": "Unsupported file type for reference file \"%%ext%%\"",
+  "error-reference-var-not-found-in-data": "Couldn't find \"%%referenceExportedVarName%%\" in reference file \"%%referenceFile%%\". Did you mean one of these instead?: %%possibleKeys%%",
+  "error-reference-file-load-failed": "Failed to load reference file \"%%referenceFile%%\""
 }
