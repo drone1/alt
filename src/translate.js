@@ -290,7 +290,7 @@ export async function runTranslation({ appState, options, log }) {
 								title: localize({ token: 'msg-translating', lang: appState.lang, log }),
 								task: async (_, task) => {
 									const translationResult = await processTranslationTask({
-										appState, taskInfo, listrTask: task, listrCtx: ctx, options, log
+										appState, taskInfo, listrTask: task, options, log
 									})
 
 									if (translationResult.error) {
@@ -347,14 +347,13 @@ export async function runTranslation({ appState, options, log }) {
 	}
 }
 
-export async function processTranslationTask({ appState, taskInfo, listrTask, listrCtx, options, log }) {
+export async function processTranslationTask({ appState, taskInfo, listrTask, options, log }) {
 	const { key, sourceLang, targetLang, reasonsForTranslationMap, outputData, outputFilePath, writableCache, cacheFilePath, state } = taskInfo
 	const { referenceValueHash } = state
 
-	let reasons = Object.keys(reasonsForTranslationMap)
+	listrTask.output = Object.keys(reasonsForTranslationMap)
 		.map(k => localize({ token: `msg-translation-reason-${k}`, lang: appState.lang, log }))
 		.join(', ')
-	listrTask.output = reasons
 
 	const {
 		success,
@@ -364,7 +363,6 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 	} = await translateKeyForLanguage({
 		appState,
 		listrTask,
-		ctx: listrCtx,
 		sourceLang,
 		targetLang,
 		key,
@@ -421,7 +419,6 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, li
 async function translateKeyForLanguage({
 																				 appState,
 																				 listrTask,
-																				 ctx,
 																				 sourceLang,
 																				 targetLang,
 																				 state,
@@ -436,8 +433,6 @@ async function translateKeyForLanguage({
 	log.D(`[${targetLang}] Translating "${key}"...`)
 	listrTask.output = localizeFormatted({ token: 'msg-translating-key', data: { key }, lang: appState.lang, log })
 
-	const providerName = translationProvider.name()
-	let translated = null
 	let newValue
 
 	// Because of the simple (naive) way we handle being rate-limited and backing off, we kind of want to retry forever but not forever.
@@ -474,7 +469,6 @@ async function translateKeyForLanguage({
 				})
 				await sleep(backoffInterval)
 			}
-
 		} else {
 			newValue = translateResult.translated
 			result.success = true
