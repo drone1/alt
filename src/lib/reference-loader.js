@@ -1,7 +1,7 @@
 import { copyFileToTempAndEnsureExtension, importJsFile, readJsonFile } from './io.js'
 import { getFileExtension } from './utils.js'
 import { SUPPORTED_REFERENCE_FILE_EXTENSIONS } from './consts.js'
-import { localizeFormatted } from './localizer/localize.js'
+import { localizeFormatted } from '../localizer/localize.js'
 
 export async function loadReferenceFile({ appLang, options: { referenceFile, referenceExportedVarName }, tmpDir, log }) {
 	const ext = getFileExtension(referenceFile)?.toLowerCase()

@@ -1,4 +1,4 @@
-import { rmDir, writeJsonFile } from './io.js'
+import { rmDir, writeJsonFile } from './lib/io.js'
 
 export function shutdown(appState, kill) {
 	const { log, errors, tmpDir, filesToWrite } = appState

@@ -1,4 +1,4 @@
-import { isBcp47LanguageTagValid } from './localizer/localize.js'
+import { isBcp47LanguageTagValid } from '../localizer/localize.js'
 import { unique } from './utils.js'
 
 // Helper function to parse comma-separated list

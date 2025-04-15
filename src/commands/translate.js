@@ -2,24 +2,22 @@ import * as path from 'path'
 import axios from 'axios'
 import { fileURLToPath } from 'url'
 import { Listr } from 'listr2'
-import { localize, localizeFormatted } from './localizer/localize.js'
+import { localize, localizeFormatted } from '../localizer/localize.js'
 import {
 	DEFAULT_CACHE_FILENAME,
 	OVERLOADED_BACKOFF_INTERVAL_MS,
 	TRANSLATION_FAILED_RESPONSE_TEXT,
 	VALID_TRANSLATION_PROVIDERS
-} from './consts.js'
-import { assertValidPath } from './assert.js'
-import { mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from './io.js'
-import { calculateHash, normalizeData, sleep } from './utils.js'
-import { formatContextKeyFromKey, isContextKey } from './context-keys.js'
-import { loadConfig } from './config.js'
-import { loadTranslationProvider } from './provider.js'
-import { loadCache } from './cache.js'
-import { shutdown } from './shutdown.js'
-import { loadReferenceFile } from './reference-loader.js'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+} from '../lib/consts.js'
+import { assertValidPath } from '../lib/assert.js'
+import { mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from '../lib/io.js'
+import { calculateHash, normalizeData, sleep } from '../lib/utils.js'
+import { formatContextKeyFromKey, isContextKey } from '../lib/context-keys.js'
+import { loadConfig } from '../lib/config.js'
+import { loadTranslationProvider } from '../lib/provider.js'
+import { loadCache } from '../lib/cache.js'
+import { shutdown } from '../shutdown.js'
+import { loadReferenceFile } from '../lib/reference-loader.js'
 
 export async function runTranslation({ appState, options, log }) {
 	let exitCode = 0
@@ -93,7 +91,7 @@ export async function runTranslation({ appState, options, log }) {
 		assertValidPath(cacheFilePath)
 		appState.filesToWrite[cacheFilePath] = writableCache
 
-		const { apiKey, api: translationProvider } = await loadTranslationProvider({ __dirname, providerName, log })
+		const { apiKey, api: translationProvider } = await loadTranslationProvider({ __dirname: appState.__dirname, providerName, log })
 		log.V(`translation provider "${providerName}" loaded`)
 
 		const addContextToTranslation = options.lookForContextData || config.lookForContextData

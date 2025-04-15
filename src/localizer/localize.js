@@ -1,8 +1,8 @@
 import * as locale from 'locale-codes'
 import * as path from 'path'
-import { obj2Str, replaceStringVarsWithObjectValues } from '../utils.js'
-import { readJsonFile } from '../io.js'
-import { LANGTAG_DEFAULT } from '../consts.js'
+import { obj2Str, replaceStringVarsWithObjectValues } from '../lib/utils.js'
+import { readJsonFile } from '../lib/io.js'
+import { LANGTAG_DEFAULT } from '../lib/consts.js'
 
 const LocalizationMap = {}
 
