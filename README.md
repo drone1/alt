@@ -102,9 +102,9 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Usage
 ```
-> alt -h
-
 Usage: alt [options] [command]
+
+An AI-powered localization tool
 
 Options:
   -V, --version          output the version number
@@ -121,22 +121,21 @@ Environment variables:
   ALT_LANGUAGE                          POSIX locale used for display
 
 ---
-> alt help translate
-
 Usage: alt translate [options]
 
 Options:
   -r, --reference-file <path>                   Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be in the reference language specified by --reference-language
+  -c, --config-file <path>                      Path to config file; defaults to <output dir>/config.json
   -rl, --reference-language <language>          The reference file's language; overrides any 'referenceLanguage' config setting
   -o, --output-dir <path>                       Output directory for localized files
   -l, --target-languages <list>                 Comma-separated list of language codes; overrides any 'targetLanguages' config setting
   -k, --keys <list>                             Comma-separated list of keys to process
   -R, --reference-exported-var-name <var name>  For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
+  -m, --app-context-message <message>           Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting
   -f, --force                                   Force regeneration of all translations (default: false)
   -rtw, --realtime-writes                       Write updates to disk immediately, rather than on shutdown (default: false)
-  -m, --app-context-message <message>           Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting
   -y, --tty                                     Use tty/simple renderer; useful for CI (default: false)
-  -c, --config-file <path>                      Path to config file; defaults to <output dir>/config.json
+  -M, --model <name>                            LLM model name to use; defaults are: for "anthropic": "claude-3-7-sonnet-20250219", for "openai": "gpt-4-turbo"; use the 'list-models' command to view all models
   -x, --max-retries <integer>                   Maximum retries on failure (default: 3)
   -n, --normalize-output-filenames              Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting (default: false)
   -N, --no-logo                                 Suppress logo printout
@@ -149,15 +148,13 @@ Options:
   --dev                                         Enable dev mode, which prints stack traces with errors (default: false)
   -p, --provider <name>                         AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting
   -h, --help                                    display help for command
-  
----
-> alt help list-models
 
+---
 Usage: alt list-models [options]
 
 Options:
-  -p, --provider <name>  AI provider to use for translations (anthropic, openai);
-                         overrides any 'provider' config setting
+  -p, --provider <name>  AI provider to use for translations (anthropic,
+                         openai); overrides any 'provider' config setting
   -h, --help             display help for command
 ``` 
 
@@ -175,6 +172,7 @@ alt translate --reference-file loc.js
   --look-for-context-data
   --context-prefix _context:
 ```
+
 ### Example II
 * Import config from `./localization-config.json`
 * Import from ``loc.js``
