@@ -106,3 +106,18 @@ export function normalizeData(data) {
 	}
 	return normalizedData
 }
+
+export function pick(o, ...props) {
+	return Object.assign(
+		{},
+		...props.filter(prop => o[prop] !== undefined)
+			.map(prop => ({ [prop]: o[prop] }))
+	)
+}
+
+// Returns the extension without the '.'
+export function getFileExtension(path) {
+	if (path.indexOf('.') < 0) return null
+	return path.split('.').pop()
+}
+
