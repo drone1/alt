@@ -19,7 +19,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Main function
 export async function run() {
-	const log = createLog()
+	const log = createLog(process.argv.includes('--dev'))
 
 	const appState = {
 		lang: null,	// The app language, for output display (unrelated to translator)
@@ -74,6 +74,7 @@ export async function run() {
 			.option('--context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)
 			.option('--look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
+			.option('--dev', `Enable dev mode, which prints stack traces with errors`, false)
 			.hook('preAction', (thisCommand) => {
 				const opts = thisCommand.opts()
 				if (opts.lookForContextData && !(opts.contextPrefix?.length || opts.contextSuffix?.length)) {

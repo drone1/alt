@@ -1,12 +1,12 @@
-export function createLog() {
+export function createLog(isDevMode) {
 	return {
 		// T/D/V blackholed until program options are parsed
 		T: () => { },
 		D: () => { },
 		V: () => { },
 
-		E: function(...args) {
-			console.error(...args)
+		E: function(args) {
+			console.error(isDevMode ? args : (args?.message ?? args))
 		},
 		W: function(...args) {
 			console.warn(...args)
