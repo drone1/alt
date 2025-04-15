@@ -5,10 +5,10 @@
   "description": "An AI-powered localization tool",
   "main": "src/index.mjs",
   "bin": {
-    "alt": "./bin.mjs"
+    "alt": "./alt.mjs"
   },
   "scripts": {
-    "localize-display-strings": "node ./bin.mjs translate --reference-file localization/reference.js"
+    "localize-display-strings": "node ./alt.mjs translate --reference-file localization/reference.js"
   },
   "repository": {
     "type": "git",
