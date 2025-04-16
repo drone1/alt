@@ -33,7 +33,7 @@ export async function runTranslation({ appState, options, log }) {
 		})
 
 		// Validate provider
-		const providerName = options.provider ?? config.provider
+		const providerName = (options.provider ?? config.provider)?.toLowerCase()
 		if (!VALID_TRANSLATION_PROVIDERS.includes(providerName)) {
 			log.E(`Error: Unknown provider "${providerName}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
 			process.exit(2)
