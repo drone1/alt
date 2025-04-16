@@ -13,7 +13,7 @@
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Demo](https://github.com/drone1/alt/raw/refs/heads/media/assets/videos/screenrecording.gif)
+![Demo](https://github.com/drone1/alt/raw/refs/heads/media/assets/videos/alt.gif)
 
 <!--ts-->
 * [AI Localization Tool](#ai-localization-tool)
