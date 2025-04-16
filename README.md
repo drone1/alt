@@ -1,12 +1,3 @@
-```
- ▄▀▀█▄   ▄▀▀▀▀▄      ▄▀▀▀█▀▀▄ 
-▐ ▄▀ ▀▄ █    █      █    █  ▐ 
-  █▄▄▄█ ▐    █      ▐   █     
- ▄▀   █     █          █      
-█   ▄▀    ▄▀▄▄▄▄▄▄▀  ▄▀       
-▐   ▐     █         █         
-          ▐         ▐        
-```
 ![Claude](https://img.shields.io/badge/Anthropic-black?logo=anthropic&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini-4285F4?logo=google&logoColor=white)
