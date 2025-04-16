@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@drone1/alt",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "An AI-powered localization tool",
   "main": "src/index.mjs",
   "bin": {
