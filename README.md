@@ -83,7 +83,7 @@ alt translate --reference-file ./reference.js --reference-language en --target-l
 ```
 This command would iterate across all key/value pairs defined in `./reference.js` and translate if needed.
 
-Here are all supported providers and their required environment variable
+Here are all supported providers and their required environment variables:
 
 | `-p`, `--provider` | <span style="font-weight: normal;">environment variable</span> |
 |-------------------|----------------------------------------------------------------|
