@@ -305,7 +305,7 @@ export async function runTranslation({ appState, options, log }) {
 				}
 			], {
 				concurrent: false, // Process languages one by one
-				...(options.tty ? { renderer: 'simple' } : {}),
+				...((options.tty || options.trace || options.debug || options.verbose) ? { renderer: 'simple' } : {}),
 				rendererOptions: { collapse: false, clearOutput: false },
 				registerSignalListeners: true,
 				collapseSubtasks: false

@@ -125,9 +125,9 @@ export async function run() {
 				.option('-cp, --context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
 				.option('-cs, --context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)
 				.option('-L, --look-for-context-data', `If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified`, false)
-				.option('-v, --verbose', `Enables verbose spew`, false)
-				.option('-d, --debug', `Enables debug spew`, false)
-				.option('-t, --trace', `Enables trace spew`, false)
+				.option('-v, --verbose', `Enables verbose spew; forces --tty mode`, false)
+				.option('-d, --debug', `Enables debug spew; forces --tty mode`, false)
+				.option('-t, --trace', `Enables trace spew; forces --tty mode`, false)
 				.option('--dev', `Enable dev mode, which prints stack traces with errors`, false)
 				.hook('preAction', cmd => {
 					const opts = cmd.opts()
