@@ -22,6 +22,8 @@
 		* [Output](#output)
 	* [Config file](#config-file)
 	* [Adding context](#adding-context)
+		* [Application-level context](#application-level-context)
+		* [String-specific context](#string-specific-context)
 	* [Display language](#display-language)
 	* [Usage](#usage)
 	* [Examples](#examples)
@@ -108,7 +110,7 @@ config:
 {
 	"appContextMessage": "This is a description of my app",
 	"referenceLanguage": "ar",
-	"provider": "anthropic",
+	"provider": "google",
 	"lookForContextData": true,
 	"contextPrefix": "_context:",
 	"contextSuffix": "",
@@ -121,7 +123,34 @@ config:
 Any of the above settings can be specified using command-line arguments (`--app-context-message`, `--reference-language`, `--provider`, `--target-languages`). Command-line arguments take precedence.
 
 ## Adding context
-One can add context for any reference key/value pairs. See the [examples section](#examples)
+Sometimes a string isn't enough to give context to the AI, and as a result, it may give an undesirable translation. ALT allows you to specify additional context for this reason.
+### Application-level context
+A global, application description can be specified `--app-context-message` (or `appContextMessage` in a [config](#config)).
+For example, your config may include something like:
+```json
+	"appContextMessage": "Voided is a MMORPG game based on outer space."
+```
+### String-specific context
+Context can be added for any reference key/value pairs by passing `--look-for-context-data` (or setting `lookForContextData: true` in a [config](#config)).
+
+For example, given the following reference key/value pair:
+
+```json
+	"editor-add-component": '+ Star',
+```
+This may not translate as desired, so ALT allows you to specify additional context in the form of another key/value pair. For example:
+```json
+	"_context:editor-add-component": "This is text for a button the galaxy UI, where a user can create a star"
+```
+`_context:` can be whatever you prefer here. It's specified via `--context-prefix`, or `contextPrefix` in a [config](#config).
+
+A suffix can be specified instead of (or in conjunction with) a prefix, with `--context-suffix`, or `contextSuffix` in a [config](#config). Example:
+```json
+	"editor-add-component[context]": "This is text for a button the graph editor"
+```
+In this case, `[context]` would be specified by passing `--context-suffix '[context]'` or setting `"contextSuffix": "[context]"` in a [config](#config).
+
+Further examples can be found [here](#examples).
 
 ## Display language
 ALT CLI itself has been localized so you can use it many languages. You can optionally set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit
