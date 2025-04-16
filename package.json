@@ -18,15 +18,15 @@
   },
   "keywords": [
     "localization",
-    "i18n",
     "translation",
     "cli",
     "ai",
+    "anthropic",
     "claude",
+    "chatgpt",
     "openai",
     "gemini",
-    "google",
-    "anthropic"
+    "google"
   ],
   "author": "drone1",
   "license": "MIT",
