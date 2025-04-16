@@ -6,12 +6,14 @@ export const LANGTAG_DEFAULT = LANGTAG_ENGLISH
 
 export const VALID_TRANSLATION_PROVIDERS = [
 	'anthropic',
+	'google',
 	'openai'
 ]
 
 export const ENV_VARS = [
 	{ name: 'ANTHROPIC_API_KEY', description: 'Your Anthropic API key' },
 	{ name: 'OPENAI_API_KEY', description: 'Your OpenAI API key' },
+	{ name: 'GOOGLE_API_KEY', description: 'Your Google Gemini API key' },
 	{ name: 'ALT_LANGUAGE', description: 'POSIX locale used for display' }
 ]
 
@@ -30,6 +32,7 @@ export const SUPPORTED_REFERENCE_FILE_EXTENSIONS = [
 
 export const DEFAULT_LLM_MODELS = {
 	anthropic: 'claude-3-7-sonnet-20250219',
+	google: 'gemini-2.0-flash',
 	openai: 'gpt-4-turbo'
 }
 
