@@ -7,8 +7,9 @@
 ▐   ▐     █         █         
           ▐         ▐        
 ```
-![Anthropic](https://img.shields.io/badge/Anthropic-black?logo=anthropic&logoColor=white)
+![Claude](https://img.shields.io/badge/Anthropic-black?logo=anthropic&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-4285F4?logo=google&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
