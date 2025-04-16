@@ -580,7 +580,7 @@ async function translateTextViaProvider({
 		}
 
 		if (!errorHandled) {
-			log.W(`${providerName} API failed. Error:`, error?.message ?? error)
+			log.W(`${providerName} API failed.`, error?.message ?? error)
 		}
 	}
 }
