@@ -14,14 +14,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # AI Localization Tool
-Translates all source strings in a reference (`.js`,`.mjs`,`.json`,`.jsonc`) file to all target languages using AI.
+Translates all source strings in a reference (`js`,`mjs`,`json`,`jsonc`) file to all target languages using AI.
+
+[[_TOC_]]
 
 ## Features
 * Loads source/reference key/value pairs from a file 
 * Localizes using AI as needed, writing to a .json file per language
 * App-level context can be specified [`appContextMessage`]
 * Additional context can be specified per string [`--contextPrefix`, `--contextSuffix`]
-* Supports multiple AI providers: Claude, OpenAI [`--provider`]
+* Supports Claude, Gemini, OpenAI [`--provider`]
 * User-modifications to output files are safe and will not be overwritten
 * Languages are specified using BCP47 tags
 
@@ -30,7 +32,10 @@ Translates all source strings in a reference (`.js`,`.mjs`,`.json`,`.jsonc`) fil
 npm install -g @drone1/alt
 ```
 ## Setup
-Create a reference file for your reference data. For example, ``reference.js``:
+### Create a reference file
+This will house your source strings via key/value pairs in your preferred language.
+
+Here's an example ``reference.js``:
 ```javascript
 export default {
 	'error-msg': `Sorry, we don't know how to do anything`,
@@ -38,22 +43,27 @@ export default {
 	'_context:success-msg': `This text is for a button when a user completes a task`
 }
 ```
-Use whatever filename you prefer, but currently a .js extension is required.
-You can specify an exported variable instead of using `default`. See `--referenceVarName`.
+Use whatever filename you prefer. `js`,`mjs`,`json`,`jsonc` extensions are supported.
 
-2. Running
+For `.js` and `.mjs` files, you can specify the name of an exported variable instead of using `default`, via `--referenceVarName`.
+
+### Running
 ```bash
 ANTHROPIC_API_KEY=<secret>
-alt translate --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider anthropic
+alt translate --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-Hans --provider anthropic
 ```
-or
-```bash
-OPENAI_API_KEY=<secret>
-alt translate --reference-file ./reference.js --reference-language en --target-languages aa,bo,es-MX,hi,zh-SG --provider openai
-```
-These commands would iterate across all key/value pairs in the variable exported from `./reference.js` and if needed, translate.
+This command would iterate across all key/value pairs defined in `./reference.js` and translate if needed.
 
-The examples above would write `aa.json`, `bo.json`, etc., to the current working directory.
+Here are all supported providers and their required environment variable
+
+| `-p`, `--provider` | <span style="font-weight: normal;">environment variable</span> |
+|-------------------|----------------------------------------------------------------|
+| anthropic         | ANTHROPIC_API_KEY                                              |
+| google            | GOOGLE_API_KEY                                                 |
+| openai            | OPENAI_API_KEY                                                 |
+
+### Output
+The example above would write `aa.json`, `bo.json`, etc., to the current working directory.
 
 Sample output:
 ```json
@@ -64,10 +74,6 @@ Sample output:
 ```
 
 Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
-
-## Display language
-ALT CLI itself has been localized so you can use it many languages. For non-English languages, you can set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit 
-an issue if you do not see your preferred language.
 
 ## Config file
 [_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
@@ -91,6 +97,13 @@ config:
 
 Any of the above settings can be specified using command-line arguments (`--app-context-message`, `--reference-language`, `--provider`, `--target-languages`). Command-line arguments take precedence.
 
+## Adding context
+One can add context for any reference key/value pairs. See the [examples section](#examples)
+
+## Display language
+ALT CLI itself has been localized so you can use it many languages. You can optionally set the display language with the `ALT_LANGUAGE` environment variable. Please feel free to submit
+an issue if you do not see your preferred language.
+
 ## Usage
 ```
 Usage: alt [options] [command]
@@ -112,6 +125,7 @@ Environment variables:
   ALT_LANGUAGE                          POSIX locale used for display
 
 ---
+
 Usage: alt translate [options]
 
 Options:
@@ -141,6 +155,7 @@ Options:
   -h, --help                                    display help for command
 
 ---
+
 Usage: alt list-models [options]
 
 Options:
@@ -213,11 +228,14 @@ Internally, there is currently nothing in the prompt about this. I've tested wit
 
 Please submit an issue if it causes you any trouble.
 
-## Rules
-Translation will occur for a given target language & key if any of the following are true:
-* The reference value was modified and translation has not yet occurred for the given language/key
-* If a context value for the given target language/key is found and has been modified.
-* The `--force` flag is used
+## Translation rules
+When does ALT translate a given source string? Translation will occur for a given target language & reference key/value if any of the following are true:
+* The output file does not exist
+* The output file is missing the reference key
+* The reference value was modified
+* A context value for the given target language/key is found and has been modified.
+* `-f` or `--force` are specified
+* The cache file (`.localization.cache.json`) is not present
 
 Translation will _not_ occur if `alt` detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated
 later, you can just delete that key/value pair from the given file.
