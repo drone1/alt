@@ -39,7 +39,7 @@ export async function run() {
 		appState.lang = await initLocalizer({
 			defaultAppLanguage: LANGTAG_DEFAULT,
 			appLanguage: process.env?.ALT_LANGUAGE,
-			srcDir: path.resolve(__dirname, LOCALIZATION_SRC_DIR),
+			srcDir: path.resolve(__dirname, '..', LOCALIZATION_SRC_DIR),
 			log
 		})
 

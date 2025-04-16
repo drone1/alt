@@ -17,7 +17,7 @@ export const ENV_VARS = [
 	{ name: 'ALT_LANGUAGE', description: 'BCP47 language tag used for display' }
 ]
 
-export const LOCALIZATION_SRC_DIR = path.resolve('localization')
+export const LOCALIZATION_SRC_DIR = 'localization'
 export const DEFAULT_CACHE_FILENAME = '.localization.cache.json'
 export const DEFAULT_CONFIG_FILENAME = 'config.json'
 export const OVERLOADED_BACKOFF_INTERVAL_MS = 30 * 1000
