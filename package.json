@@ -9,7 +9,8 @@
   },
   "scripts": {
     "localize-display-strings": "./alt.mjs translate --reference-file localization/reference.js",
-    "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt"
+    "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt",
+    "generate-toc": "./scripts/gh-md-toc --insert README.md && rm -f README.md.orig.* README.md.toc.* && echo '\n**README.md updated with new table of contents**'"
   },
   "repository": {
     "type": "git",
