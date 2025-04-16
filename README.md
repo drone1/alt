@@ -178,7 +178,7 @@ Commands:
 Environment variables:
   ANTHROPIC_API_KEY                     Your Anthropic API key
   OPENAI_API_KEY                        Your OpenAI API key
-  ALT_LANGUAGE                          POSIX locale used for display
+  ALT_LANGUAGE                          BCP47 language tag used for display
 
 ---
 

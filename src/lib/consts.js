@@ -14,7 +14,7 @@ export const ENV_VARS = [
 	{ name: 'ANTHROPIC_API_KEY', description: 'Your Anthropic API key' },
 	{ name: 'OPENAI_API_KEY', description: 'Your OpenAI API key' },
 	{ name: 'GOOGLE_API_KEY', description: 'Your Google Gemini API key' },
-	{ name: 'ALT_LANGUAGE', description: 'POSIX locale used for display' }
+	{ name: 'ALT_LANGUAGE', description: 'BCP47 language tag used for display' }
 ]
 
 export const LOCALIZATION_SRC_DIR = path.resolve('localization')
