@@ -395,7 +395,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 			log.V(`Keeping existing translation and hash for ${targetLang}/${key}...`)
 
 			// Allow the user to directly edit/tweak output key values
-			listrTask.output = localizeFormatted({ token: 'msg-no-updated-needed-for-key', data: { key }, lang: appState.lang, log })
+			listrTask.output = localizeFormatted({ token: 'msg-no-update-needed-for-key', data: { key }, lang: appState.lang, log })
 		}
 	}
 
