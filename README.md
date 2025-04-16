@@ -13,10 +13,33 @@
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+* [AI Localization Tool](#ai-localization-tool)
+	* [Features](#features)
+	* [Installation](#installation)
+	* [Setup](#setup)
+		* [Create a reference file](#create-a-reference-file)
+		* [Running](#running)
+		* [Output](#output)
+	* [Config file](#config-file)
+	* [Adding context](#adding-context)
+	* [Display language](#display-language)
+	* [Usage](#usage)
+	* [Examples](#examples)
+		* [Example I](#example-i)
+		* [Example II](#example-ii)
+		* [Example III](#example-iii)
+		* [Example: ALT's localized display strings](#example-alts-localized-display-strings)
+	* [Formatting](#formatting)
+	* [Translation rules](#translation-rules)
+	* [Additional notes](#additional-notes)
+		* [Delayed vs. realtime writes](#delayed-vs-realtime-writes)
+		* [CI](#ci)
+	* [PR](#pr)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+
 # AI Localization Tool
 Translates all source strings in a reference (`js`,`mjs`,`json`,`jsonc`) file to all target languages using AI.
-
-[[_TOC_]]
 
 ## Features
 * Loads source/reference key/value pairs from a file 
@@ -252,5 +275,5 @@ If you prefer to write updates to disk in real-time (anytime any output data cha
 ### CI
 You may want to use `--tty` for more useful output.
 
-## Issues
+## PR
 Feel free to fix existing issues and submit a PR, or submit a new issue.
