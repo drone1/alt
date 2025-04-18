@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "لم يتم العثور على بيانات مرجعية في المتغير \"%%referenceExportedVarName%%\" في \"%%referenceFile%%\"",
   "error-no-provider-specified": "لم يتم تحديد مزود.",
   "error-copying-file-to-temp-dir": "خطأ في نسخ الملف إلى المجلد المؤقت: %%error%%",
-  "supported-providers": "المزودون المدعومون هم: %%providers%%"
+  "supported-providers": "المزودون المدعومون هم: %%providers%%",
+  "error-no-output-dir-specified": "لم يتم تحديد دليل الإخراج عبر '--output-dir'، أو في ملف التكوين (عبر 'outputDir')، أو في نفس الدليل كملف المرجع الخاص بك (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "فشل في إنشاء الدليل \"%%dir%%\"",
+  "error-no-reference-file-specified": "لم يتم تحديد ملف مرجعي عبر '--reference-file' أو في ملف التكوين (عبر 'referenceFile')"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ez da erreferentzia datuak aurkitu aldagai honetan \"%%referenceExportedVarName%%\" fitxategi honetan \"%%referenceFile%%\"",
   "error-no-provider-specified": "Ez da hornitzaile zehatzik zehaztu.",
   "error-copying-file-to-temp-dir": "Errorea fitxategia temp direktoriora kopiatzean: %%error%%",
-  "supported-providers": "Fournisseurs pris en charge : %%providers%%"
+  "supported-providers": "Fournisseurs pris en charge : %%providers%%",
+  "error-no-output-dir-specified": "Dí báŋánbii é wandi yétna via '--output-dir', i lélɛ nu mut (via 'outputDir'), kíkií i mɔn inyu yétna niŋé wé i ye baséna bôt (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Hia nyenmeha bôn lôn \"%%dir%%\"",
+  "error-no-reference-file-specified": "Mbi biniamene bon biniiga bi bumbe i '--reference-file' to i mi nlôñ bumbe (i 'referenceFile')"
 }

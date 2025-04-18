@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "មិនមានទិន្នន័យយោងត្រូវបានរកឃើញក្នុងអថេរ \"%%referenceExportedVarName%%\" នៅក្នុង \"%%referenceFile%%\" ទេ។",
   "error-no-provider-specified": "មិនបានបញ្ជាក់អ្នកផ្តល់សេវាទេ។",
   "error-copying-file-to-temp-dir": "កំហុសក្នុងការចម្លងឯកសារទៅថតបណ្តោះអាសន្ន៖ %%error%%",
-  "supported-providers": "ក្រុមហ៊ុនដែលគាំទ្រមាន៖ %%providers%%"
+  "supported-providers": "ក្រុមហ៊ុនដែលគាំទ្រមាន៖ %%providers%%",
+  "error-no-output-dir-specified": "មិនបានបញ្ជាក់ថតឯកសារបញ្ចេញតាមរយៈ '--output-dir' ក្នុងឯកសារកំណត់រចនាសម្ព័ន្ធ (តាមរយៈ 'outputDir') ឬនៅក្នុងថតតែមួយជាមួយឯកសារយោងរបស់អ្នក (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "បរាជ័យក្នុងការបង្កើតថត \"%%dir%%\"",
+  "error-no-reference-file-specified": "មិនមានបញ្ជាក់ឯកសារយោងតាមរយៈ '--reference-file' ឬក្នុងឯកសារកំណត់រចនាសម្ព័ន្ធ (តាមរយៈ 'referenceFile')"
 }

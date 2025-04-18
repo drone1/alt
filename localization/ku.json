@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Daneyên referansê di guherbarê \"%%referenceExportedVarName%%\" de di \"%%referenceFile%%\" de nehatine dîtin.",
   "error-no-provider-specified": "Nabêjêrek diyarkirî ne.",
   "error-copying-file-to-temp-dir": "هەڵە لە کۆچکردنی پەڕگە بۆ بوخچەی کاتی: %%error%%",
-  "supported-providers": "Pêşkêşkarên piştgirîkirî: %%providers%%"
+  "supported-providers": "Pêşkêşkarên piştgirîkirî: %%providers%%",
+  "error-no-output-dir-specified": "Ti rêya '--output-dir' ve ti peldanka derketinê nehatiye diyarkirin, di pelê veavakirinê de (bi rêya 'outputDir'), an jî di heman peldankê de wek pelê te yê referansê (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Nehêna ku peldanka \"%%dir%%\" were afirandin",
+  "error-no-reference-file-specified": "Ti riya '--reference-file' an di faylê configuration de (bi riya 'referenceFile') tu pelê referansê nehatiye diyarkirin"
 }

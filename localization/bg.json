@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Не са намерени референтни данни в променлива \"%%referenceExportedVarName%%\" в \"%%referenceFile%%\"",
   "error-no-provider-specified": "Не е посочен доставчик.",
   "error-copying-file-to-temp-dir": "Грешка при копиране на файла във временната директория: %%error%%",
-  "supported-providers": "Поддържани доставчици са: %%providers%%"
+  "supported-providers": "Поддържани доставчици са: %%providers%%",
+  "error-no-output-dir-specified": "Не е указана изходна директория чрез '--output-dir', в конфигурационен файл (чрез 'outputDir') или в същата директория като референтния ви файл (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Неуспешно създаване на директория \"%%dir%%\"",
+  "error-no-reference-file-specified": "Няма посочен референтен файл чрез '--reference-file' или в конфигурационния файл (чрез 'referenceFile')"
 }

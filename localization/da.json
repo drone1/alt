@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ingen referencedata fundet i variablen \"%%referenceExportedVarName%%\" i \"%%referenceFile%%\"",
   "error-no-provider-specified": "Ingen udbyder angivet.",
   "error-copying-file-to-temp-dir": "Fejl ved kopiering af fil til midlertidig mappe: %%error%%",
-  "supported-providers": "Understøttede udbydere er: %%providers%%"
+  "supported-providers": "Understøttede udbydere er: %%providers%%",
+  "error-no-output-dir-specified": "Ingen output-mappe angivet via '--output-dir', i en konfigurationsfil (via 'outputDir') eller i samme mappe som din referencefil (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kunne ikke oprette mappen \"%%dir%%\"",
+  "error-no-reference-file-specified": "Ingen referencefil angivet via '--reference-file' eller i konfigurationsfilen (via 'referenceFile')"
 }

@@ -118,6 +118,6 @@ export function pick(o, ...props) {
 // Returns the extension without the '.'
 export function getFileExtension(path) {
 	if (path.indexOf('.') < 0) return null
-	return path.split('.').pop()
+	return path.split('.').pop().toLowerCase()
 }
 

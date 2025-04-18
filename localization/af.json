@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Geen verwysingsdata gevind in veranderlike \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\" nie.",
   "error-no-provider-specified": "Geen verskaffer gespesifiseer nie.",
   "error-copying-file-to-temp-dir": "Fout met die kopieer van lêer na tydelike gids: %%error%%",
-  "supported-providers": "Ondersteunde verskaffers is: %%providers%%"
+  "supported-providers": "Ondersteunde verskaffers is: %%providers%%",
+  "error-no-output-dir-specified": "Geen uitvoermap gespesifiseer via '--output-dir', in 'n konfigurasielêer (via 'outputDir'), of in dieselfde gids as jou verwysingslêer (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kon nie gids \"%%dir%%\" skep nie",
+  "error-no-reference-file-specified": "Geen verwysingslêer gespesifiseer via '--reference-file' of in konfigurasielêer (via 'referenceFile')"
 }

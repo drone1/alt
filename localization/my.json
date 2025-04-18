@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" အမည်ရှိ ကိန်းဂဏန်းတွင် \"%%referenceFile%%\" တွင် ကိုးကားချက်ဒေတာများ မတွေ့ရှိပါ။",
   "error-no-provider-specified": "ပံ့ပိုးသူမျှမသတ်မှတ်ထားပါ။",
   "error-copying-file-to-temp-dir": "ဖိုင်ကို temp ဖိုင်တွဲသို့ ကူးယူနေစဉ် အမှားဖြစ်ပွားခဲ့သည်။ %%error%%",
-  "supported-providers": "ထောက်ပံ့ပေးသူများမှာ။ %%providers%%"
+  "supported-providers": "ထောက်ပံ့ပေးသူများမှာ။ %%providers%%",
+  "error-no-output-dir-specified": "သင့်ရဲ့ထုတ်လုပ်မှုဒါရိုက်ထရီကို '--output-dir' မှတစ်ဆင့်၊ config ဖိုင်တွင် ('outputDir' မှတစ်ဆင့်) သို့မဟုတ် သင့်ရဲ့ရည်ညွှန်းဖိုင်နှင့် ဒါရိုက်ထရီတူတွင် (\"%%refFileDir%%\") သတ်မှတ်ပေးထားခြင်းမရှိပါ",
+  "error-dir-create-failed": "ဒါရိုက်ထရီ \"%%dir%%\" ကို ဖန်တီးရန် မအောင်မြင်ပါ",
+  "error-no-reference-file-specified": "လုပ်ဆောင်ချက်ဖိုင် '--reference-file' သို့မဟုတ် config ဖိုင် (ဖြင့် 'referenceFile') မှတဆင့် သတ်မှတ်ထားခြင်းမရှိပါ"
 }

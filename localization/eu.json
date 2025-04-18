@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ez da erreferentzia-daturik aurkitu \"%%referenceExportedVarName%%\" aldagaian \"%%referenceFile%%\" fitxategian.",
   "error-no-provider-specified": "Ez da hornitzaile zehatzik zehaztu.",
   "error-copying-file-to-temp-dir": "Fitxategia aldi baterako direktoriora kopiatzean errorea: %%error%%",
-  "supported-providers": "Onartutako hornitzaileak hauek dira: %%providers%%"
+  "supported-providers": "Onartutako hornitzaileak hauek dira: %%providers%%",
+  "error-no-output-dir-specified": "Ez da irteera direktorioa zehaztu ez '--output-dir' bidez, ez konfigurazio fitxategi batean (via 'outputDir'), ez eta zure erreferentziazko fitxategiaren direktorio berean ere (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "\"%%dir%%\" direktorioa sortzen huts egin du",
+  "error-no-reference-file-specified": "Ez da erreferentziazko fitxategirik zehaztu '--reference-file' bidez edo konfigurazio fitxategian (honen bidez: 'referenceFile')"
 }

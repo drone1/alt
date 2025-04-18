@@ -1,17 +1,23 @@
 import * as path from 'path'
 import axios from 'axios'
-import { fileURLToPath } from 'url'
 import { Listr } from 'listr2'
 import { localize, localizeFormatted } from '../localizer/localize.js'
 import {
 	DEFAULT_CACHE_FILENAME, DEFAULT_LLM_MODELS,
 	OVERLOADED_BACKOFF_INTERVAL_MS,
-	TRANSLATION_FAILED_RESPONSE_TEXT,
 	VALID_TRANSLATION_PROVIDERS
 } from '../lib/consts.js'
-import { assertValidPath } from '../lib/assert.js'
-import { mkTmpDir, normalizeOutputPath, readFileAsText, readJsonFile, writeJsonFile } from '../lib/io.js'
-import { calculateHash, normalizeData, sleep } from '../lib/utils.js'
+import { assertIsObj, assertValidPath } from '../lib/assert.js'
+import {
+	dirExists,
+	ensureDir,
+	mkTmpDir,
+	normalizeOutputPath,
+	readFileAsText,
+	readJsonFile,
+	writeJsonFile,
+} from '../lib/io.js'
+import { calculateHash, getFileExtension, normalizeData, sleep } from '../lib/utils.js'
 import { formatContextKeyFromKey, isContextKey } from '../lib/context-keys.js'
 import { loadConfig } from '../lib/config.js'
 import { loadTranslationProvider } from '../lib/provider.js'
@@ -22,15 +28,73 @@ import { loadReferenceFile } from '../lib/reference-loader.js'
 export async function runTranslation({ appState, options, log }) {
 	let exitCode = 0
 	try {
-		const refFileDir = path.dirname(options.referenceFile)
-		let outputDir = options.outputDir ?? refFileDir
-
-		// Load config file or create default
+		// Attempt to load a config file, or return default values
 		const config = await loadConfig({
 			configFile: options.configFile,
-			refFileDir,
 			log
 		})
+		assertIsObj(config)
+
+		const referenceFile = options.referenceFile ?? config.referenceFile
+		if (!referenceFile?.length) {
+			throw new Error(
+				localize({
+					token: 'error-no-reference-file-specified',
+					lang: appState.lang,
+					log
+				})
+			)
+		}
+		log.D(`referenceFile=${referenceFile}`)
+
+		// Resolve referenceExportedVarName
+		let referenceExportedVarName
+		const referenceFileExt = getFileExtension(referenceFile)
+		if (['js','mjs'].includes(referenceFileExt)) {
+			log.D(`Searching for reference exported var name for .${referenceFileExt} extension...`)
+			if (options.referenceExportedVarName?.length) {
+				log.D(`Found reference exported var name via --reference-exported-var-name`)
+				referenceExportedVarName = options.referenceExportedVarName
+			} else if (config.referenceExportedVarName?.length) {
+				log.D(`Found reference exported var name in config, via 'referenceExportedVarName'`)
+				referenceExportedVarName = config.referenceExportedVarName
+			} else {
+				log.D(`No reference exported var name found; `)
+			}
+		}
+		log.D(`referenceExportedVarName=${referenceExportedVarName}`)
+
+		const refFileDir = path.dirname(referenceFile)
+		let outputDir = path.resolve(options.outputDir ?? config.outputDir ?? refFileDir)
+		log.D(`outputDir=${outputDir}`)
+		if (!outputDir?.length) {
+			throw new Error(
+				localizeFormatted({
+					token: 'error-no-output-dir-specified',
+					data: { refFileDir },
+					lang: appState.lang,
+					log
+				})
+			)
+		}
+
+		if (!dirExists(outputDir, log)) {
+			log.V(`Directory "${outputDir}" did not exist -- creating...`)
+			ensureDir(outputDir, log)
+
+			if (!dirExists(outputDir, log)) {
+				throw new Error(
+					localizeFormatted({
+						token: 'error-dir-create-failed',
+						data: { dir: outputDir },
+						lang: appState.lang,
+						log
+					})
+				)
+			}
+		} else {
+			log.D(`Output dir "${outputDir}" existed`)
+		}
 
 		// Validate provider
 		const providerName = (options.provider ?? config.provider)?.toLowerCase()
@@ -89,14 +153,14 @@ export async function runTranslation({ appState, options, log }) {
 		appState.tmpDir = tmpDir
 
 		// Copy to a temp location first so we can ensure it has an .mjs extension
-		const referenceData = await loadReferenceFile({ appLang: appState.lang, options, tmpDir, log })
+		const referenceData = await loadReferenceFile({ appLang: appState.lang, referenceFile, referenceExportedVarName, tmpDir, log })
 		if (!referenceData) {
 			throw new Error(
 				localizeFormatted({
 					token: 'error-no-reference-data-in-variable',
 					data: {
-						referenceExportedVarName: options.referenceExportedVarName,
-						referenceFile: options.referenceFile
+						referenceExportedVarName,
+						referenceFile,
 					},
 					lang: appState.lang,
 					log
@@ -104,7 +168,7 @@ export async function runTranslation({ appState, options, log }) {
 			)
 		}
 
-		const referenceHash = calculateHash(await readFileAsText(options.referenceFile))
+		const referenceHash = calculateHash(await readFileAsText(referenceFile))
 		const referenceChanged = referenceHash !== readOnlyCache.referenceHash
 		if (referenceChanged) {
 			log.V('Reference file has changed since last run')
@@ -571,8 +635,6 @@ async function translateTextViaProvider({
 		messages.push(
 			`You are a professional translator for an application's text from ${sourceLang} to ${targetLang}. `
 			+ `Translate the text accurately without adding explanations or additional content. Only return the text. `
-			//+ `If and only if you absolutely cannot translate the text, you can respond with "${TRANSLATION_FAILED_RESPONSE_TEXT}" -- but please try to translate the text if you can. It would be greatly
-			// appreciated.`,	// With this, the AI seems to be lazy and use it way too often
 		)
 		if (appContextMessage?.length) {
 			messages.push(`Here is some high-level information about the application you are translating text for: ${appContextMessage}`)
@@ -593,7 +655,6 @@ async function translateTextViaProvider({
 		const translated = provider.getResult(response, log)
 		if (!translated?.length) throw new Error(`${providerName} translated text to empty string. You may need to top up your credits.`)
 		log.D(`${translated}`)
-		if (translated === TRANSLATION_FAILED_RESPONSE_TEXT) throw new Error(`${providerName} failed to translate string to ${targetLang}; string: ${text}`)
 		outResult.translated = translated
 	} catch (error) {
 		let errorHandled = false

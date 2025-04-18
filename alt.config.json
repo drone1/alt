@@ -1,7 +1,9 @@
 {
 	"appContextMessage": "An AI-driven translation tool",
 	"referenceLanguage": "en",
-	"provider": "openai",
+	"provider": "anthropic",
+	"outputDir": "localization",
+	"referenceFile": "localization/reference.js",
 	"targetLanguages": [
 		"aa",
 		"af",

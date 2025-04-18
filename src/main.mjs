@@ -105,17 +105,17 @@ export async function run() {
 		addSharedOptions({
 			notRequired: [ 'provider' ],
 			program: program
-				.command('translate')
-				.requiredOption('-r, --reference-file <path>', 'Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be' +
-					' in the reference language specified by --reference-language')
-				.option('-c, --config-file <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
+				.command('translate', { isDefault: true })
+				.option('-c, --config-file <path>', `Path to config file; defaults to "${DEFAULT_CONFIG_FILENAME}" in the current working directory if not specified`)
+				.option('-r, --reference-file <path>', `Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be` +
+					` in the reference language specified by --reference-language; overrides any 'referenceFile' config setting`)
+				.option('-o, --output-dir <path>', `Output directory for localized files; overrides any 'outputDir' config setting`)
 				.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
-				.option('-o, --output-dir <path>', 'Output directory for localized files')
 				.option('-tl, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
-				.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
-				.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
-				.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
-				.option('-f, --force', 'Force regeneration of all translations', false)
+				.option('-k, --keys <list>', 'Comma-separated list of keys to process; if none are processed, all keys in the reference file will be processed', keyList)
+				.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files only, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
+				.option('-m, --app-context-message <message>', `Description of your app, to be passed along to the AI, per translation request; overrides any 'appContextMessage' config setting`)
+				.option('-f, --force', `Force regeneration of all keys; if no '--keys' argument is specified, all keys will be processed`, false)
 				.option('-rtw, --realtime-writes', 'Write updates to disk immediately, rather than on shutdown', false)
 				.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
 				.option('-M, --model <name>', `LLM model name to use; defaults are: ${Object.keys(DEFAULT_LLM_MODELS).map(p => `for "${p}": "${DEFAULT_LLM_MODELS[p]}"`).join(', ')}; use the 'list-models' command to view all models`)

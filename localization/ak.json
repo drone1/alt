@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ennhu sɛdeɛ biara wɔ \"%%referenceExportedVarName%%\" mu wɔ \"%%referenceFile%%\" mu",
   "error-no-provider-specified": "Ɛnnye onipa bi a ɔde bɛkyerɛ.",
   "error-copying-file-to-temp-dir": "Nkɔmbɔ afa fael no kɔ temp dɛrɛktri no mu: %%error%%",
-  "supported-providers": "Ahwɛfo a wɔtwerɛ no yɛ: %%providers%%"
+  "supported-providers": "Ahwɛfo a wɔtwerɛ no yɛ: %%providers%%",
+  "error-no-output-dir-specified": "Wonkyerɛɛ output directory biara nam '--output-dir', config file (nam 'outputDir'), anaa wɔ directory korɔ no ara a wo reference file wɔ mu (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Antumi anyɛ \"%%dir%%\" krado no",
+  "error-no-reference-file-specified": "Wɔamfa nsɛm krataa foforɔ biara amma wɔn amma wɔnhyɛ no ase denam '--reference-file' anaasɛ nhyehyɛe krataa (denam 'referenceFile' so) no mu"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "未在 \"%%referenceFile%%\" 中找到變數 \"%%referenceExportedVarName%%\" 的參考數據。",
   "error-no-provider-specified": "未指定提供者。",
   "error-copying-file-to-temp-dir": "複製文件到臨時目錄時出錯：%%error%%",
-  "supported-providers": "支援的供應商包括：%%providers%%"
+  "supported-providers": "支援的供應商包括：%%providers%%",
+  "error-no-output-dir-specified": "未通過 '--output-dir' 指定輸出目錄，也未在配置文件中（通過 'outputDir'）指定，或未指定為與參考文件（\"%%refFileDir%%\"）相同的目錄",
+  "error-dir-create-failed": "無法建立目錄「%%dir%%」",
+  "error-no-reference-file-specified": "未通過 '--reference-file' 或在配置檔案中（通過 'referenceFile'）指定參考檔案"
 }

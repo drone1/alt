@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nema referentnih podataka pronađenih u varijabli \"%%referenceExportedVarName%%\" u \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nije naveden pružatelj usluga.",
   "error-copying-file-to-temp-dir": "Greška pri kopiranju datoteke u privremeni direktorij: %%error%%",
-  "supported-providers": "Podržani provajderi su: %%providers%%"
+  "supported-providers": "Podržani provajderi su: %%providers%%",
+  "error-no-output-dir-specified": "Nije naveden izlazni direktorij putem '--output-dir', u konfiguracijskoj datoteci (putem 'outputDir') ili u istom direktoriju kao referentna datoteka (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kreiranje direktorija \"%%dir%%\" neuspješno",
+  "error-no-reference-file-specified": "Nije navedena referentna datoteka putem '--reference-file' ili u konfiguracijskoj datoteci (putem 'referenceFile')"
 }

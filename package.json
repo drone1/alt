@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@drone1/alt",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "An AI-powered localization tool",
   "main": "src/index.mjs",
   "bin": {
@@ -12,7 +12,7 @@
     "test:targeted": "ALT_TEST=1 mocha --grep 'multiple target'",
     "test": "ALT_TEST=1 mocha",
     "test:coverage": "ALT_TEST=1 nyc mocha",
-    "localize-display-strings": "./alt.mjs translate --reference-file localization/reference.js",
+    "localize-display-strings": "./alt.mjs",
     "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt",
     "generate-toc": "./scripts/gh-md-toc --insert README.md && rm -f README.md.orig.* README.md.toc.* && echo '\n**README.md updated with new table of contents**'"
   },

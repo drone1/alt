@@ -23,20 +23,21 @@
    * [Display language](#display-language)
    * [Usage](#usage)
    * [Examples](#examples)
-      * [Example I](#example-i)
+      * [Example I: ALT's localized display strings](#example-i-alts-localized-display-strings)
       * [Example II](#example-ii)
       * [Example III](#example-iii)
-      * [Example: ALT's localized display strings](#example-alts-localized-display-strings)
+      * [Example III](#example-iii-1)
    * [Formatting](#formatting)
    * [Translation rules](#translation-rules)
    * [Additional notes](#additional-notes)
+      * [Yes, you should commit your .localization.cache.json](#yes-you-should-commit-your-localizationcachejson)
       * [Delayed vs. realtime writes](#delayed-vs-realtime-writes)
       * [CI](#ci)
    * [Contributing](#contributing)
    * [Feedback](#feedback)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: jonl, at: Fri Apr 18 07:20:52 PM CEST 2025 -->
+<!-- Added by: jonl, at: Fri Apr 18 09:55:42 PM CEST 2025 -->
 
 <!--te-->
 
@@ -101,12 +102,15 @@ Sample output:
 Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
 
 ## Config file
-[_optional_] For convenience, a config file is supported. You can use a config file in conjunction with command-line arguments. Command-line arguments override config file values.
+[_optional_] For convenience, a config file is supported. You can use a config file in conjunction with command-line arguments.
 
-By default, ALT will search the output directory for `config.json`, but you can specify a path explicitly using 
-`--config-file`. 
+Command-line arguments override config file values.
 
-Here's an example config:
+If no explicit config file is specified via `--config-file`, ALT will search for a file with the name `alt.config.json` in the current working directory.
+
+If no config is loaded, you'll need to specify `--reference-file` and `--provider`, otherwise ALT will fail.
+
+Here's an example `alt.config.json` file you might keep in your project's root directory:
 
 ```
 {
@@ -116,13 +120,17 @@ Here's an example config:
 	"lookForContextData": true,
 	"contextPrefix": "_context:",
 	"contextSuffix": "",
+	"outputDir": "localization",
+	"referenceFile": "localization/reference.js",
 	"targetLanguages": [
 		"es-MX", "zh-SG"
 	]
 }
 ```
 
-Any of the above settings can be specified using command-line arguments (`--app-context-message`, `--reference-language`, `--provider`, `--target-languages`). Command-line arguments take precedence.
+Since in most cases these arguments will not change often, a config file is recommended.
+
+Any of the above settings can be specified using command-line arguments, but note the mapping from _camelCase_ to _kebab-case_ (`appContextMessage` => `--app-context-message`, `referenceLanguage` => `--reference-language`, etc.).
 
 ## Adding context
 Sometimes a string isn't enough to give context to the AI, and as a result, it may give an undesirable translation. ALT allows you to specify additional context for this reason.
@@ -186,15 +194,15 @@ Environment variables:
 Usage: alt translate [options]
 
 Options:
-  -r, --reference-file <path>                   Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be in the reference language specified by --reference-language
-  -c, --config-file <path>                      Path to config file; defaults to <output dir>/config.json
+  -c, --config-file <path>                      Path to config file; defaults to <output dir>/alt.config.json
+  -r, --reference-file <path>                   Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be in the reference language specified by --reference-language; overrides any 'referenceFile' config setting
+  -o, --output-dir <path>                       Output directory for localized files; overrides any 'outputDir' config setting
   -rl, --reference-language <language>          The reference file's language; overrides any 'referenceLanguage' config setting
-  -o, --output-dir <path>                       Output directory for localized files
   -tl, --target-languages <list>                Comma-separated list of language codes; overrides any 'targetLanguages' config setting
-  -k, --keys <list>                             Comma-separated list of keys to process
-  -R, --reference-exported-var-name <var name>  For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
-  -m, --app-context-message <message>           Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting
-  -f, --force                                   Force regeneration of all translations (default: false)
+  -k, --keys <list>                             Comma-separated list of keys to process; if none are processed, all keys in the reference file will be processed
+  -R, --reference-exported-var-name <var name>  For .js or .mjs reference files only, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
+  -m, --app-context-message <message>           Description of your app, to be passed along to the AI, per translation request; overrides any 'appContextMessage' config setting
+  -f, --force                                   Force regeneration of all keys; if no '--keys' argument is specified, all keys will be processed (default: false)
   -rtw, --realtime-writes                       Write updates to disk immediately, rather than on shutdown (default: false)
   -y, --tty                                     Use tty/simple renderer; useful for CI (default: false)
   -M, --model <name>                            LLM model name to use; defaults are: for "anthropic": "claude-3-7-sonnet-20250219", for "google": "gemini-2.0-flash", for "openai": "gpt-4-turbo"; use the 'list-models' command to view all models
@@ -222,28 +230,29 @@ Options:
 ```
 
 ## Examples
-### Example I
-* Import from ``loc.js``
-* Look for exported variable ``data``
-* Translate with Claude
-* Look for context keys starting with `_context:`
-* Write output files to the current working directory
-```bash
-alt translate --reference-file loc.js
-  --reference-var-name data
-  --provider anthropic
-  --look-for-context-data
-  --context-prefix _context:
-```
+### Example I: ALT's localized display strings
+The best example is probably the localization for ALT's own display strings.
+
+See [alt.config.js](alt.config.js), which contains a `config.js` file and localization files used for the tool's own display strings.
+
+Generated with `npm run localize-display-strings`
+
 
 ### Example II
-* Import config from `./localization-config.json`
-* Import from ``loc.js``
-* Look for exported ``default`` value
-* Translate with ChatGPT
-* Look for context keys ending with `[context]`
-* Write to disk repeatedly, as changes are processed
-* Write files to `./localization`
+```bash
+alt translate --reference-file loc.js
+--reference-var-name data
+--provider anthropic
+--look-for-context-data
+--context-prefix _context:
+```
+* Imports reference strings from ``loc.js``
+* Looks for exported variable ``data`` (if `loc.js` has `export data = { ... } `)
+* Translates with Claude
+* Looks for context keys starting with `_context:`
+* Writes output files to the current working directory
+
+### Example III
 ```bash
 alt translate --config-file ./localization-config.json
   --reference-file loc.js
@@ -252,26 +261,29 @@ alt translate --config-file ./localization-config.json
   --look-for-context-data
   --context-suffix "[context]"
 ```
+* Imports config from `./localization-config.json`
+* Imports reference strings from ``loc.js``
+* Looks for exported ``default`` value
+* Translates with ChatGPT
+* Looks for context keys ending with `[context]`
+* Writes to disk repeatedly, as changes are processed
+* Writes files to `./localization`
+
 ### Example III
-* Overrides any config's languages
-* Only process the specified strings
 ```bash
 alt translate --config-file config.json
-  --reference-file reference.js
-  --output-dir localization
+  --reference-file localization/reference/source.js
+  --output-dir localization/output
   --provider openai
-  --look-for-context-data
-  --context-suffix "[context]"
   --target-languages vi,aa
   --keys error-msg,title-hero,button-text-send
 ```
-### Example: ALT's localized display strings
-See `/localization`, which contains a `config.js` file and localization files used for the tool's own display strings.
-
-Generated with `npm run localize-display-strings`
+* Overrides any target languages specified in the config
+* Only processes the specified keys (`error-msg`, etc.)
 
 ## Formatting
 If your reference values include formatting information like this:
+
 ```javascript
 "error-msg": "The server returned an error: %%details%%"
 ```
@@ -279,7 +291,7 @@ or
 ```javascript
 "error-msg": "The server returned an error: {{details}}"
 ```
-...or whatever syntax your app may use, I've found the AI's consistently smart enough not to translate `%%details%%` or `{{details}}` into the target language, and will leave it untouched.
+...or whatever syntax your app may use for formatting, the AI's consistently smart enough not to translate `%%details%%` or `{{details}}` into the target language, and will leave it untouched.
 
 Internally, there is currently nothing in the prompt about this. I've tested with `%%var%%` syntax, and it hasn't failed yet.
 
@@ -305,6 +317,9 @@ NOTE: Translation will _not_ occur if ALT detects that the given value in the ta
 later, you can just delete that key/value pair from the given file.
 
 ## Additional notes
+### Yes, you should commit your .localization.cache.json
+If you do not do this, you'll lose important state and need to re-translate everything.
+
 ### Delayed vs. realtime writes
 By default, ALT will not write to disk until the tool is shutting down (including SIGTERM &ndash; yes, `Ctrl+C` is safe).
 

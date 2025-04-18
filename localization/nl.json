@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Geen referentiegegevens gevonden in variabele \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\"",
   "error-no-provider-specified": "Geen aanbieder opgegeven.",
   "error-copying-file-to-temp-dir": "Fout bij het kopiëren van bestand naar tijdelijke map: %%error%%",
-  "supported-providers": "Ondersteunde aanbieders zijn: %%providers%%"
+  "supported-providers": "Ondersteunde aanbieders zijn: %%providers%%",
+  "error-no-output-dir-specified": "Geen uitvoermap opgegeven via '--output-dir', in een configuratiebestand (via 'outputDir') of in dezelfde map als uw referentiebestand (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kan map \"%%dir%%\" niet aanmaken",
+  "error-no-reference-file-specified": "Geen referentiebestand gespecificeerd via '--reference-file' of in configuratiebestand (via 'referenceFile')"
 }

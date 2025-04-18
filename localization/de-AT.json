@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Keine Referenzdaten in der Variablen \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\" gefunden.",
   "error-no-provider-specified": "Kein Anbieter angegeben.",
   "error-copying-file-to-temp-dir": "Fehler beim Kopieren der Datei in das temporäre Verzeichnis: %%error%%",
-  "supported-providers": "Unterstützte Anbieter sind: %%providers%%"
+  "supported-providers": "Unterstützte Anbieter sind: %%providers%%",
+  "error-no-output-dir-specified": "Kein Ausgabeverzeichnis angegeben über '--output-dir', in einer Konfigurationsdatei (über 'outputDir') oder im selben Verzeichnis wie Ihre Referenzdatei (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Fehler beim Erstellen des Verzeichnisses \"%%dir%%\"",
+  "error-no-reference-file-specified": "Keine Referenzdatei über \"--reference-file\" oder in der Konfigurationsdatei (über \"referenceFile\") angegeben"
 }

@@ -58,22 +58,4 @@ describe('main CLI functionality', () => {
     expect(result.stdout).to.include('-r, --reference-file')
     expect(result.stdout).to.include('-tl, --target-languages')
   })
-
-  it('should return error for missing required options', async () => {
-    try {
-      // Run translate command without required options
-      await execa('node', [
-        path.resolve(__dirname, '../alt.mjs'),
-        'translate'
-      ])
-      // Should not reach here as the command should fail
-      expect.fail('Command should have failed with missing required options')
-    } catch (error) {
-      // Check that the command failed
-      expect(error.exitCode).to.not.equal(0)
-
-      // Error should mention missing required option
-      expect(error.stderr).to.include('required option')
-    }
-  })
 })

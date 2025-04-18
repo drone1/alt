@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nenhum dado de referência encontrado na variável \"%%referenceExportedVarName%%\" em \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nenhum fornecedor especificado.",
   "error-copying-file-to-temp-dir": "Erro ao copiar arquivo para o diretório temporário: %%error%%",
-  "supported-providers": "Os provedores suportados são: %%providers%%"
+  "supported-providers": "Os provedores suportados são: %%providers%%",
+  "error-no-output-dir-specified": "Bez lakaet ebet spisaet dre \"--output-dir\", en ur restr kefluniadur (dre \"outputDir\"), pe er memes kavlec'h hag ho restr dave (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Falha ao criar o diretório \"%%dir%%\"",
+  "error-no-reference-file-specified": "Ne spesifiet teuliad daveenn ebet dre '--reference-file' pe er restr gefluniañ (dre 'referenceFile')"
 }

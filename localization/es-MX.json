@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "No se encontraron datos de referencia en la variable \"%%referenceExportedVarName%%\" en \"%%referenceFile%%\"",
   "error-no-provider-specified": "No se especificó ningún proveedor.",
   "error-copying-file-to-temp-dir": "Error al copiar el archivo al directorio temporal: %%error%%",
-  "supported-providers": "Los proveedores compatibles son: %%providers%%"
+  "supported-providers": "Los proveedores compatibles son: %%providers%%",
+  "error-no-output-dir-specified": "No se ha especificado un directorio de salida a través de '--output-dir', en un archivo de configuración (mediante 'outputDir'), o en el mismo directorio que su archivo de referencia (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "No se pudo crear el directorio \"%%dir%%\"",
+  "error-no-reference-file-specified": "No se especificó un archivo de referencia a través de '--reference-file' o en el archivo de configuración (a través de 'referenceFile')"
 }

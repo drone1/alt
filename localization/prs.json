@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "هیچ داده‌ی مرجعی در متغیر \"%%referenceExportedVarName%%\" در \"%%referenceFile%%\" یافت نشد.",
   "error-no-provider-specified": "هیچ فراهم‌کننده‌ای مشخص نشده است.",
   "error-copying-file-to-temp-dir": "خطا در کپی کردن فایل به دایرکتوری موقت: %%error%%",
-  "supported-providers": "پشتیبانی شده تامین کنندگان عبارتند از: %%providers%%"
+  "supported-providers": "پشتیبانی شده تامین کنندگان عبارتند از: %%providers%%",
+  "error-no-output-dir-specified": "هیچ مسیر خروجی از طریق '--output-dir'، در فایل پیکربندی (از طریق 'outputDir')، یا در همان دایرکتوری که فایل مرجع شما قرار دارد (\"%%refFileDir%%\") مشخص نشده است",
+  "error-dir-create-failed": "نتوانست دایرکتوری \"%%dir%%\" را ایجاد کند",
+  "error-no-reference-file-specified": "فایل مرجع از طریق '--reference-file' یا در فایل تنظیمات (از طریق 'referenceFile') مشخص نشده است"
 }

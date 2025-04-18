@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Walay nakitang datos sa pakisayran sa variable nga \"%%referenceExportedVarName%%\" sa \"%%referenceFile%%\"",
   "error-no-provider-specified": "Walay provider nga giila.",
   "error-copying-file-to-temp-dir": "Sayop sa pagkopya sa file ngadto sa temp directory: %%error%%",
-  "supported-providers": "Ang mga suportadong provider mao ang: %%providers%%"
+  "supported-providers": "Ang mga suportadong provider mao ang: %%providers%%",
+  "error-no-output-dir-specified": "Walay gihisgutang direktoryo sa pag-output pinaagi sa '--output-dir', sa file sa configuration (pinaagi sa 'outputDir'), o sa parehas nga direktoryo sa imong file sa reperensya (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Napakyas sa pagmugna og direktoryo \"%%dir%%\"",
+  "error-no-reference-file-specified": "Walay reference file nga gibutang pinaagi sa '--reference-file' o sa config file (pinaagi sa 'referenceFile')"
 }

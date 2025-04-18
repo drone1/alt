@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Не знойдзеныя дадзеныя для спасылкі ў зменнай \"%%referenceExportedVarName%%\" у \"%%referenceFile%%\"",
   "error-no-provider-specified": "Не пазначаны правайдар.",
   "error-copying-file-to-temp-dir": "Памылка капіявання файла ў часовы каталог: %%error%%",
-  "supported-providers": "Падтрымліваюцца наступныя правайдэры: %%providers%%"
+  "supported-providers": "Падтрымліваюцца наступныя правайдэры: %%providers%%",
+  "error-no-output-dir-specified": "Адсутнічае вызначаны каталог вываду праз '--output-dir', у файле канфігурацыі (праз 'outputDir') або ў тым жа каталозе, што і ваш эталонны файл (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "আপনি \"%%dir%%\" ডিরেক্টরি তৈরি করতে ব্যর্থ হয়েছেন",
+  "error-no-reference-file-specified": "কোন ৰেফাৰেন্স ফাইল '--reference-file' ৰ জৰিয়তে বা কনফিগ ফাইলত (ৰেফাৰেন্স ফাইল' ৰ জৰিয়তে) নিৰ্দিষ্ট কৰা হোৱা নাই"
 }

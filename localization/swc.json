@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Hakuna data ya rejea iliyopatikana katika kigezo \"%%referenceExportedVarName%%\" katika \"%%referenceFile%%\"",
   "error-no-provider-specified": "Hakuna mtoa huduma aliyetajwa.",
   "error-copying-file-to-temp-dir": "Kosa la kunakili faili kwenda kwenye saraka ya muda: %%error%%",
-  "supported-providers": "Watoa huduma wanaoungwa mkono ni: %%providers%%"
+  "supported-providers": "Watoa huduma wanaoungwa mkono ni: %%providers%%",
+  "error-no-output-dir-specified": "Hakuna saraka ya kutoa iliyobainishwa kupitia '--output-dir', katika faili ya usanidi (kupitia 'outputDir'), au katika saraka moja na faili yako ya kumbukumbu (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Imeshindwa kuunda saraka \"%%dir%%\"",
+  "error-no-reference-file-specified": "Hakuna faili ya marejeleo iliyotajwa kupitia '--reference-file' au kwenye faili ya usanidi (kupitia 'referenceFile')"
 }

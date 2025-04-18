@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Не найдены данные для ссылки в переменной \"%%referenceExportedVarName%%\" в файле \"%%referenceFile%%\"",
   "error-no-provider-specified": "Не указан провайдер.",
   "error-copying-file-to-temp-dir": "Ошибка копирования файла во временный каталог: %%error%%",
-  "supported-providers": "Поддерживаемые провайдеры: %%providers%%"
+  "supported-providers": "Поддерживаемые провайдеры: %%providers%%",
+  "error-no-output-dir-specified": "Не указан каталог вывода через '--output-dir', в конфигурационном файле (через 'outputDir') или в том же каталоге, что и ваш ссылочный файл (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Не удалось создать директорию \"%%dir%%\"",
+  "error-no-reference-file-specified": "Файл для сравнения не указан через '--reference-file' или в конфигурационном файле (через 'referenceFile')"
 }

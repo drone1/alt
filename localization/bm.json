@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Tiada data rujukan dijumpai dalam pemboleh ubah \"%%referenceExportedVarName%%\" dalam \"%%referenceFile%%\"",
   "error-no-provider-specified": "Tiada penyedia ditentukan.",
   "error-copying-file-to-temp-dir": "Ralat menyalin fail ke direktori sementara: %%error%%",
-  "supported-providers": "Penyedia yang disokong adalah: %%providers%%"
+  "supported-providers": "Penyedia yang disokong adalah: %%providers%%",
+  "error-no-output-dir-specified": "Tiada direktori output yang dinyatakan melalui '--output-dir', dalam fail konfigurasi (melalui 'outputDir'), atau dalam direktori yang sama dengan fail rujukan anda (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Gagal mencipta direktori \"%%dir%%\"",
+  "error-no-reference-file-specified": "Tiada fail rujukan ditetapkan melalui '--reference-file' atau dalam fail konfigurasi (melalui 'referenceFile')"
 }

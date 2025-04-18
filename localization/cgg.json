@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ntihaine amakuru agereranywa agafatirwaho mu murimo \"%%referenceExportedVarName%%\" muri \"%%referenceFile%%\"",
   "error-no-provider-specified": "Tihariho omuhereza atarikwatsirwe.",
   "error-copying-file-to-temp-dir": "Ekyapa kikashobire kuhindurwa omu folda ya temp: %%error%%",
-  "supported-providers": "Abahingi b'obuhingi abashigikirwe nibo: %%providers%%"
+  "supported-providers": "Abahingi b'obuhingi abashigikirwe nibo: %%providers%%",
+  "error-no-output-dir-specified": "Tihaine kuryente ekishengye ky'obushohorozi ekyorekiwe kurabira \"---output-dir\", omu failo erikutegyeka (kurabira \"outputDir\"), nari omu kyishengye kimwe nkarafailo yakwe erikworeka (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kyaremwa kukora folda \"%%dir%%\"",
+  "error-no-reference-file-specified": "Tihaine fairo y'okurefera erikugambwaho omu '--reference-file' nainga omu fairo ya config (kurabira 'referenceFile')"
 }

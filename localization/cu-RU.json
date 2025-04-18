@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Не обрѣтеноѥ исхоженіѥ данныхъ въ переменной \"%%referenceExportedVarName%%\" въ \"%%referenceFile%%\"",
   "error-no-provider-specified": "Не указанъ провайдеръ.",
   "error-copying-file-to-temp-dir": "Ошибъ ꙗко копировати дѣло въ временнꙑи каталогъ: %%error%%",
-  "supported-providers": "Поддържани доставчици сѫтъ: %%providers%%"
+  "supported-providers": "Поддържани доставчици сѫтъ: %%providers%%",
+  "error-no-output-dir-specified": "Не ѹказанъ каталогъ длѧ вꙑвода посрѣдьствомъ '--output-dir', въ файлѣ настроекъ (черезъ 'outputDir'), или въ томъ же каталозѣ, что и эталоннꙑй файлъ (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Не ѹдало сѧ создати каталогъ \"%%dir%%\"",
+  "error-no-reference-file-specified": "Нѣсть ѡ҆прєдѣлѥнъ єтѣрыи фаилъ длѧ поⷣражаниꙗ посрѣⷣствомъ '--reference-file' или въ кѡнфигꙋрационнѣмъ фаилѣ (посрѣⷣствомъ 'referenceFile')"
 }

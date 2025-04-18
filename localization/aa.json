@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Maay tamaan kee data nabaadi goolii \"%%referenceExportedVarName%%\" akka \"%%referenceFile%%\" kee.",
   "error-no-provider-specified": "Provider maqan.",
   "error-copying-file-to-temp-dir": "Nuqul diqqita fayl ila dir temp: %%error%%",
-  "supported-providers": "Taageerayaasha la heli karo waa: %%providers%%"
+  "supported-providers": "Taageerayaasha la heli karo waa: %%providers%%",
+  "error-no-output-dir-specified": "Kaka output directory adangolɛ ye via '--output-dir', nɛ kaka config file nu (via 'outputDir'), aloo nɛ kaka directory koŋ sɔni ŋɔ nɛ file ko nya oo (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Failed to create directory \"%%dir%%\"",
+  "error-no-reference-file-specified": "Gbaŋ co bee hɔɔ maa via '--reference-file' asole config gbaŋ co mli (via 'referenceFile')"
 }

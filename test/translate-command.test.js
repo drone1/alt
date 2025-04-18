@@ -41,7 +41,9 @@ describe('translate command', () => {
 				'-k',
 				'msg-test',
 				'-d'
-			])
+			], {
+				cwd: 'test'
+			})
 
 			// Check command executed successfully
 			expect(result.exitCode).to.equal(0)
@@ -95,7 +97,9 @@ describe('translate command', () => {
 				'fr-FR,es-ES',
 				'-k',
 				'msg-test'
-			])
+			], {
+				cwd: 'test'
+			})
 
 			console.log(result.command)
 

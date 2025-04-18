@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" dəyişənində \"%%referenceFile%%\" faylında heç bir istinad məlumatı tapılmadı.",
   "error-no-provider-specified": "Təchizatçı göstərilməyib.",
   "error-copying-file-to-temp-dir": "Faylı müvəqqəti qovluğa kopyalamaqda səhv: %%error%%",
-  "supported-providers": "Dəstəklənən təminatçılar: %%providers%%"
+  "supported-providers": "Dəstəklənən təminatçılar: %%providers%%",
+  "error-no-output-dir-specified": "Nə \"--output-dir\" vasitəsilə, konfiqurasiya faylında (\"outputDir\" vasitəsilə), nə də istinad faylınızla eyni kataloqda (\"%%refFileDir%%\") çıxış kataloqu göstərilməyib",
+  "error-dir-create-failed": "\"%%dir%%\" qovluğunu yaratmaq alınmadı",
+  "error-no-reference-file-specified": "İstinad faylı '--reference-file' vasitəsilə və ya konfiqurasiya faylında ('referenceFile' vasitəsilə) göstərilməyib"
 }
