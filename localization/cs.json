@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Nepodporovaný typ souboru pro referenční soubor \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nepodařilo se najít \"%%referenceExportedVarName%%\" v referenčním souboru \"%%referenceFile%%\". Měli jste na mysli některý z těchto?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Nepodařilo se načíst referenční soubor \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Byl zadán neplatný model LLM: %%model%%"
+  "error-invalid-llm-model": "Byl zadán neplatný model LLM: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Buď musí být definován kontextový prefix nebo kontextový sufix.",
+  "error-unknown-provider": "Neznámý poskytovatel \"%%providerName%%\". Podporovaní poskytovatelé: %%validTranslationProviders%%",
+  "error-no-reference-language": "Není specifikován referenční jazyk. Použijte možnost --reference-language nebo přidejte 'referenceLanguage' do konfiguračního souboru.",
+  "error-no-target-languages": "Nebyly specifikovány cílové jazyky. Použijte možnost --target-languages nebo přidejte 'targetLanguages' do konfiguračního souboru.",
+  "error-no-reference-data-in-variable": "Nebyla nalezena žádná referenční data ve proměnné \"%%referenceExportedVarName%%\" v \"%%referenceFile%%\"."
 }

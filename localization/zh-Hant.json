@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "不支援的參考文件類型 \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "找不到參考檔案 \"%%referenceFile%%\" 中的 \"%%referenceExportedVarName%%\"。您是不是想找以下其中一個？: %%possibleKeys%%",
   "error-reference-file-load-failed": "無法載入參考檔案 \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "指定的LLM模型無效：%%model%%"
+  "error-invalid-llm-model": "指定的LLM模型無效：%%model%%",
+  "error-context-prefix-and-suffix-not-defined": "必須定義上下文前綴或上下文後綴",
+  "error-unknown-provider": "未知的提供者 \"%%providerName%%\"。支持的提供者有：%%validTranslationProviders%%。",
+  "error-no-reference-language": "未指定參考語言。請使用 --reference-language 選項或在您的配置文件中添加 'referenceLanguage'",
+  "error-no-target-languages": "未指定目標語言。請使用 --target-languages 選項或在您的配置文件中添加 'targetLanguages'",
+  "error-no-reference-data-in-variable": "未在 \"%%referenceFile%%\" 中找到變數 \"%%referenceExportedVarName%%\" 的參考數據。"
 }

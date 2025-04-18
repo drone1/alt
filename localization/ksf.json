@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Nkɔndɛ nkap mbɛŋ a ayi ayɛ \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "È nā̂ pūtɛ \"%%referenceExportedVarName%%\" ná fālā \"%%referenceFile%%\". Wɔ̀ bī nā̂ wɔn nì?: %%possibleKeys%%",
   "error-reference-file-load-failed": "M̀ bɛn m̀ tɛn fayilu referɛnsi \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Modɛl LLM bɛ bɛtɛ: %%model%%"
+  "error-invalid-llm-model": "Modɛl LLM bɛ bɛtɛ: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Nkɔtɔ a kɔntɛksɛ prɛfiksɛ oswa kɔntɛksɛ sɔfiksɛ bɛ́ fɔ dɛfini",
+  "error-unknown-provider": "Fɔndɔŋ nyɔnɔ \"%%providerName%%\" a ká mɔ́. Fɔndɔŋ nyɔnɔ a lɛ mɔ́: %%validTranslationProviders%%",
+  "error-no-reference-language": "Mɔ́ káá mɛ́nɛ́ ásɛ́lɛ́ mbámbɔ́ŋ. Jí --reference-language mɛ́nɛ́ ásɛ́lɛ́ mbámbɔ́ŋ yá mɔ́ ɓá 'referenceLanguage' ná mɔ́ káá mɛ́nɛ́ config file.",
+  "error-no-target-languages": "Nkɔt mbɔŋ a sɔŋɛɛ. Sɔŋɛɛ --target-languages nkɔt mɔ́ mɔ́ mbɔŋ 'targetLanguages' na fàìl config ná wùn.",
+  "error-no-reference-data-in-variable": "Pa gen done referans trouv nan variab \"%%referenceExportedVarName%%\" nan \"%%referenceFile%%\""
 }

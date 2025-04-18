@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Непадтрымліваемы тып файла для файла спасылкі \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не ўдалося знайсці \"%%referenceExportedVarName%%\" у файле спасылак \"%%referenceFile%%\". Магчыма, вы мелі на ўвазе адзін з гэтых?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Не ўдалося загрузіць файл спасылкі \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Няправільная мадэль LLM пазначана: %%model%%"
+  "error-invalid-llm-model": "Няправільная мадэль LLM пазначана: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Альбо прэфікс кантэксту, альбо суфікс кантэксту павінен быць вызначаны.",
+  "error-unknown-provider": "Невядомы пастаўшчык \"%%providerName%%\". Падтрымліваюцца пастаўшчыкі: %%validTranslationProviders%%.",
+  "error-no-reference-language": "Не пазначана мова арыгіналу. Выкарыстоўвайце опцыю --reference-language або дадайце 'referenceLanguage' у ваш канфігурацыйны файл.",
+  "error-no-target-languages": "Не пазначаны мэтавыя мовы. Выкарыстоўвайце опцыю --target-languages або дадайце 'targetLanguages' у ваш канфігурацыйны файл.",
+  "error-no-reference-data-in-variable": "Не знойдзеныя дадзеныя для спасылкі ў зменнай \"%%referenceExportedVarName%%\" у \"%%referenceFile%%\""
 }

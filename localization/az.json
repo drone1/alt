@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Dəstəklənməyən fayl növü istinad faylı üçün \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" adlı dəyişən \"%%referenceFile%%\" istinad faylında tapılmadı. Bunlardan birini nəzərdə tutmusunuz?: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" istinad faylını yükləmək mümkün olmadı",
-  "error-invalid-llm-model": "Yanlış LLM modeli göstərilib: %%model%%"
+  "error-invalid-llm-model": "Yanlış LLM modeli göstərilib: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Ya kontekst prefiksi, ya da kontekst suffiksi müəyyən edilməlidir.",
+  "error-unknown-provider": "Naməlum təchizatçı \"%%providerName%%\". Dəstəklənən təchizatçılar: %%validTranslationProviders%%",
+  "error-no-reference-language": "İstinad dili müəyyən edilməyib. --reference-language seçimindən istifadə edin və ya konfiqurasiya faylınıza 'referenceLanguage' əlavə edin.",
+  "error-no-target-languages": "Hədəf dillər müəyyən edilməyib. --target-languages seçimindən istifadə edin və ya 'targetLanguages' seçimini konfiqurasiya faylınıza əlavə edin.",
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" dəyişənində \"%%referenceFile%%\" faylında heç bir istinad məlumatı tapılmadı."
 }

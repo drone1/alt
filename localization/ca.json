@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Tipus de fitxer no suportat per al fitxer de referència \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "No s'ha pogut trobar \"%%referenceExportedVarName%%\" en el fitxer de referència \"%%referenceFile%%\". Volies dir alguna d'aquestes opcions en lloc seu?: %%possibleKeys%%",
   "error-reference-file-load-failed": "No s'ha pogut carregar el fitxer de referència \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "S'ha especificat un model LLM no vàlid: %%model%%"
+  "error-invalid-llm-model": "S'ha especificat un model LLM no vàlid: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "O bé el prefix de context o bé el sufix de context s'ha de definir.",
+  "error-unknown-provider": "Proveïdor desconegut \"%%providerName%%\". Proveïdors suportats: %%validTranslationProviders%%.",
+  "error-no-reference-language": "No s'ha especificat cap idioma de referència. Utilitzeu l'opció --reference-language o afegiu 'referenceLanguage' al vostre fitxer de configuració.",
+  "error-no-target-languages": "No s'han especificat idiomes de destí. Utilitzeu l'opció --target-languages o afegiu 'targetLanguages' al vostre fitxer de configuració.",
+  "error-no-reference-data-in-variable": "No s'han trobat dades de referència a la variable \"%%referenceExportedVarName%%\" a \"%%referenceFile%%\""
 }

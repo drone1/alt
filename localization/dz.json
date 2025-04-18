@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "རྣམ་གཞི་ཡིག་ཆ་འདི་ལ་གཏོང་བརྡའི་ཡིག་ཆ་བརྡ་དོན་མེད། \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" འདི་གི་ཡིག་ཆ་ཁག་ནང་ \"%%referenceFile%%\" ནང་འདི་མ་ཐོབ། ཁྱེད་ཀྱིས་འདི་ལས་གཞན་གཅིག་བཀོད་ཡོད་པས།: %%possibleKeys%%",
   "error-reference-file-load-failed": "འཛུལ་བའི་ཡིག་ཆ་ཡིག་ཆ་འདི་བསྐྱར་བརྩོན་པ་ཕོགས་པ་མ་ཐུབ། \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "ནུས་མེད་ LLM མོ་ཌེལ་བཀོད་ཡོད།: %%model%%"
+  "error-invalid-llm-model": "ནུས་མེད་ LLM མོ་ཌེལ་བཀོད་ཡོད།: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "གཞི་རིམ་གི་རྩ་བའི་མཐུན་བཀོད་ཡང་ན་གཞི་རིམ་གི་རྗེས་བཀོད་གཅིག་ནི་ངེས་པར་བཀག་དགོས།",
+  "error-unknown-provider": "མི་ཤེས་པའི་འགོ་བཙུགས་པ་ \"%%providerName%%\"། རྩིས་འཛིན་འགོ་བཙུགས་པ་ཚུ་བཟོ་བཅོས་ཆོག་པ་ཡོད། %%validTranslationProviders%%",
+  "error-no-reference-language": "རྩིས་སྒྲིག་སྐད་ཡིག་གདམ་ཁ་མི་འདེམས། --reference-language གདམ་ཁ་བཀོལ་ནས་ཁྱེད་ཀ࿐འི་སྒྲིག་གཞི་ཡིག་ནང་ 'referenceLanguage' བསྐྱར་བཟོ།",
+  "error-no-target-languages": "མཐའ་མེད་སྐད་ཡིག་གསལ་བཀོད་མེད། --target-languages གདམ་ཁ་བཀོལ་བརྡ་འབེབ་བའམ་ཁྱོད་ཀྱི་བསྒྲིག་ཡིག་ནང་ 'targetLanguages' བསྐྱར་བཟོ།",
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" གནས་ཡུལ་ནང་ལས་ \"%%referenceFile%%\" ནང་དུ་གསལ་བཤད་གྲངས་མེད།"
 }

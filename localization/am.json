@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "የተመከረ ፋይል አይነት ለማጣቀሻ ፋይል \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "በማእከላዊ ፋይል \"%%referenceFile%%\" ውስጥ \"%%referenceExportedVarName%%\" አልተገኘም። በመንኮት የሚመስሉትን ነገሮች ማንኛውን ማለት ነበር?: %%possibleKeys%%",
   "error-reference-file-load-failed": "የማጣቀሻ ፋይል \"%%referenceFile%%\" መጫን አልተሳካም",
-  "error-invalid-llm-model": "የተሳሳተ የLLM ሞዴል ተጠቀሰ: %%model%%"
+  "error-invalid-llm-model": "የተሳሳተ የLLM ሞዴል ተጠቀሰ: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "ከኮንቴክስት ፒርፌክስ ወይም ኮንቴክስት ሱፊክስ አንዱ መታወቅ አለበት",
+  "error-unknown-provider": "ያልታወቀ አቅራቢ \"%%providerName%%\"። የተደገፉ አቅራቢዎች፡ %%validTranslationProviders%%",
+  "error-no-reference-language": "በምንም ምንቸኛ ቋንቋ አልተጠናቀቀም። እባክዎን የ--reference-language አማራጭን ይጠቀሙ ወይም 'referenceLanguage' እንዲጨመር በኮንፊግ ፋይልዎ ያክሉ።",
+  "error-no-target-languages": "ተጠቃሚ ቋንቋዎች አልተገለጹም። እባኮትን የተጠቃሚ ቋንቋዎች አማራጭ ይጠቀሙ ወይም 'targetLanguages' እንዲጨመር በኮንፊግ ፋይልዎ ያክሉ",
+  "error-no-reference-data-in-variable": "በ \"%%referenceFile%%\" ውስጥ በተለያዩ ተለዋዋጭ \"%%referenceExportedVarName%%\" ምንም አገናኝ መረጃ አልተገኘም።"
 }

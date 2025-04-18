@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "সমর্থন নকৰা ফাইলৰ ধৰণ \"%%ext%%\"ৰ বাবে তথ্য ফাইল",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" নামৰ তথ্যটো \"%%referenceFile%%\" নামৰ তথ্যসূত্ৰ ফাইলত পোৱা নগ'ল। আপুনি কি এইবোৰৰ কোনোটোৰ কথা ভাবিছিল নেকি?: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" নামৰ ৰেফাৰেন্স ফাইলটো ল'ড কৰিবলৈ বিফল হ'ল।",
-  "error-invalid-llm-model": "অবৈধ LLM মডেল নির্দিষ্ট কৰা হৈছে: %%model%%"
+  "error-invalid-llm-model": "অবৈধ LLM মডেল নির্দিষ্ট কৰা হৈছে: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "প্ৰসংগ উপসৰ্গ বা প্ৰসংগ প্ৰত্যয় অৱশ্যে নিৰ্ধাৰিত হ'ব লাগিব",
+  "error-unknown-provider": "অজ্ঞাত প্ৰদানকাৰী \"%%providerName%%\"। সমৰ্থিত প্ৰদানকাৰীসকল: %%validTranslationProviders%%",
+  "error-no-reference-language": "কোনো উল্লেখ ভাষা নির্দিষ্ট কৰা হোৱা নাই। --reference-language বিকল্প ব্যৱহাৰ কৰক অথবা আপোনাৰ config ফাইলত 'referenceLanguage' যোগ কৰক।",
+  "error-no-target-languages": "কোনো লক্ষ্য ভাষা নির্দিষ্ট কৰা নাই। --target-languages বিকল্প ব্যৱহাৰ কৰক অথবা আপোনাৰ config ফাইলত 'targetLanguages' যোগ কৰক।",
+  "error-no-reference-data-in-variable": "\"%%referenceFile%%\" ত চলিত \"%%referenceExportedVarName%%\" পৰিৱৰ্তনশীলত কোনো তথ্য পোৱা নগ'ল।"
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "نوع الملف غير مدعوم لملف المرجع \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "تعذر العثور على \"%%referenceExportedVarName%%\" في ملف المرجع \"%%referenceFile%%\". هل قصدت أحد هذه بدلاً من ذلك؟: %%possibleKeys%%",
   "error-reference-file-load-failed": "فشل في تحميل ملف المرجع \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "تم تحديد نموذج LLM غير صالح: %%model%%"
+  "error-invalid-llm-model": "تم تحديد نموذج LLM غير صالح: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "يجب تعريف إما بادئة السياق أو لاحقة السياق",
+  "error-unknown-provider": "مزود غير معروف \"%%providerName%%\". المزودون المدعومون: %%validTranslationProviders%%",
+  "error-no-reference-language": "لم يتم تحديد لغة مرجعية. استخدم خيار --reference-language أو أضف 'referenceLanguage' إلى ملف التكوين الخاص بك.",
+  "error-no-target-languages": "لم يتم تحديد لغات الهدف. استخدم خيار --target-languages أو أضف 'targetLanguages' إلى ملف التكوين الخاص بك.",
+  "error-no-reference-data-in-variable": "لم يتم العثور على بيانات مرجعية في المتغير \"%%referenceExportedVarName%%\" في \"%%referenceFile%%\""
 }

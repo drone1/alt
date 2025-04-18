@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Nepodržani tip datoteke za referentnu datoteku \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nije moguće pronaći \"%%referenceExportedVarName%%\" u referentnoj datoteci \"%%referenceFile%%\". Da li ste mislili na jednu od ovih opcija?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Nije uspjelo učitavanje referentne datoteke \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Nevažeći LLM model naveden: %%model%%"
+  "error-invalid-llm-model": "Nevažeći LLM model naveden: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Mora biti definisan ili prefiks konteksta ili sufiks konteksta.",
+  "error-unknown-provider": "Nepoznati pružatelj usluga \"%%providerName%%\". Podržani pružatelji: %%validTranslationProviders%%",
+  "error-no-reference-language": "Nije naveden referentni jezik. Koristite opciju --reference-language ili dodajte 'referenceLanguage' u vašu konfiguracijsku datoteku.",
+  "error-no-target-languages": "Nisu navedeni ciljni jezici. Koristite opciju --target-languages ili dodajte 'targetLanguages' u vašu konfiguracijsku datoteku.",
+  "error-no-reference-data-in-variable": "Nema referentnih podataka pronađenih u varijabli \"%%referenceExportedVarName%%\" u \"%%referenceFile%%\""
 }

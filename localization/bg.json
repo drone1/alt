@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Неподдържан тип файл за референтен файл \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не можах да намеря \"%%referenceExportedVarName%%\" във файл за справка \"%%referenceFile%%\". Имахте ли предвид някоя от тези вместо това?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Неуспешно зареждане на файл с референции \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Указан е невалиден модел LLM: %%model%%"
+  "error-invalid-llm-model": "Указан е невалиден модел LLM: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Трябва да бъде дефиниран или префиксът на контекста, или суфиксът на контекста.",
+  "error-unknown-provider": "Неизвестен доставчик \"%%providerName%%\". Поддържани доставчици: %%validTranslationProviders%%",
+  "error-no-reference-language": "Не е посочен език за референция. Използвайте опцията --reference-language или добавете 'referenceLanguage' към конфигурационния си файл.",
+  "error-no-target-languages": "Не са посочени целеви езици. Използвайте опцията --target-languages или добавете 'targetLanguages' към вашия конфигурационен файл.",
+  "error-no-reference-data-in-variable": "Не са намерени референтни данни в променлива \"%%referenceExportedVarName%%\" в \"%%referenceFile%%\""
 }

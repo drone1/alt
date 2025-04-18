@@ -25,5 +25,14 @@ export default {
 	'error-bad-reference-file-ext': `Unsupported file type for reference file "%%ext%%"`,
 	'error-reference-var-not-found-in-data': `Couldn't find "%%referenceExportedVarName%%" in reference file "%%referenceFile%%". Did you mean one of these instead?: %%possibleKeys%%`,
 	'error-reference-file-load-failed': `Failed to load reference file "%%referenceFile%%"`,
-	'error-invalid-llm-model': `Invalid LLM model specified: %%model%%`
+	'error-invalid-llm-model': `Invalid LLM model specified: %%model%%`,
+	'error-context-prefix-and-suffix-not-defined': `Either the context prefix or context suffix must be defined`,
+	'error-no-provider-specified': `No provider specified.`,
+	'error-unknown-provider': `Unknown provider "%%providerName%%".`,
+	'error-no-reference-language': `No reference language specified. Use --reference-language option or add 'referenceLanguage' to your config file`,
+	'error-no-target-languages': `No target languages specified. Use --target-languages option or add 'targetLanguages' to your config file`,
+	'error-no-reference-data-in-variable': `No reference data found in variable "%%referenceExportedVarName%%" in "%%referenceFile%%"`,
+	'error-copying-file-to-temp-dir': `Error copying file to temp directory: %%error%%`,
+
+	'supported-providers': `Supported providers are: %%providers%%`
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Noosih fileelih kaafileelih \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" kee yibeelaytem. Kee tanat yanimtullem?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Unable to load reference file \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Qaaqabe LLM model kee qusame: %%model%%"
+  "error-invalid-llm-model": "Qaaqabe LLM model kee qusame: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Either taa context prefix or context suffix must be defined",
+  "error-unknown-provider": "Aanbieter \"%%providerName%%\" onbekend. Ondersteunde aanbieders: %%validTranslationProviders%%",
+  "error-no-reference-language": "Maay t'abat qafar eroyti kak temeetele. Furti --reference-language amol raqik yab 'referenceLanguage' naharsi kak config faylal gabat.",
+  "error-no-target-languages": "Maqaa afaanii kaayyoo hin ibsine. Filannoo --target-languages fayyadami yookiin 'targetLanguages' faayilii kee keessatti dabali.",
+  "error-no-reference-data-in-variable": "Maay tamaan kee data nabaadi goolii \"%%referenceExportedVarName%%\" akka \"%%referenceFile%%\" kee."
 }

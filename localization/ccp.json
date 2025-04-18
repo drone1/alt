@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "རིགས་མི་དགོངས་པའི་ཡིག་ཆ་ཁག་གི་ཡིག་ཆ་དོན་ལུ་ \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" বিলক্ষে নাপাওবরি। আপনি কি এইবিলাকের একটি মানে?: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" 𑄢𑄧𑄇𑄴𑄘𑄨 𑄟𑄧𑄚𑄴𑄘𑄳𑄠 𑄇𑄧𑄢𑄴𑄚𑄳𑄠 𑄎𑄧𑄚𑄴𑄇𑄳𑄠",
-  "error-invalid-llm-model": "མིན་བདེན་པའི་ལོ་གཅིག་སྒྲིག་བྱ་དགོས་པའི་མིང་བསྡུས་བཀོད་པས། %%model%%"
+  "error-invalid-llm-model": "མིན་བདེན་པའི་ལོ་གཅིག་སྒྲིག་བྱ་དགོས་པའི་མིང་བསྡུས་བཀོད་པས། %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "གཞི་རྒྱུན་གྱི་སྔོན་ལམ་ཡང་ན་གཞི་རྒྱུན་གྱི་རྗེས་ལམ་གཅིག་ནི་ངེས་པར་བཀག་དགོས།",
+  "error-unknown-provider": "མི་ཤེས་པའི་བཀོལ་མཁན་ \"%%providerName%%\"། བཀོལ་མཁན་ཚད་ལྡན་ཚུ་ནི། %%validTranslationProviders%%",
+  "error-no-reference-language": "མིང་བཤད་གཞི་གི་གནས་སྐོར་མེད། འགོ་བཙུགས་ནང་ '--reference-language' བཀོད་པའི་གདམ་ཁ་བཀོལ་ནས་ཡང་ན་ཁྱེད་ཀྱི་བསྒྲིག་ཡིག་ནང་ 'referenceLanguage' ཁ་སྐོང་བྱས།",
+  "error-no-target-languages": "མཐའ་བཀོད་སྐད་ཡིག་གསལ་བཤད་མེད། བཀོད་མི་སྐད་ཡིག་གསལ་བཤད་བཀོད་པའི་གདམ་ཁ་ལག་ལེན་འཐབ་རོགས། ཡང་ན་ཁྱེད་ཀྱི་བཀོད་ཡིག་ནང་འཇུག་གི་'targetLanguages' བཀོད་པའི་ཡིག་ཆ།",
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" ꯑꯣꯟ ꯂꯩꯄꯥꯏꯕ ꯃꯐꯝꯕ ꯂꯩꯄꯥꯏꯕ ꯃꯤꯇꯩ ꯂꯣꯟꯅꯨ ꯃꯔꯤꯡ ꯑꯣꯟ ꯁꯤꯡ ꯃꯇꯦꯡ."
 }

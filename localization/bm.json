@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Jenis fail yang tidak disokong untuk fail rujukan \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Tidak dapat mencari \"%%referenceExportedVarName%%\" dalam fail rujukan \"%%referenceFile%%\". Adakah anda bermaksud salah satu daripada ini?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Gagal memuatkan fail rujukan \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Model LLM yang ditentukan tidak sah: %%model%%"
+  "error-invalid-llm-model": "Model LLM yang ditentukan tidak sah: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Salah satu daripada awalan konteks atau akhiran konteks mesti ditakrifkan.",
+  "error-unknown-provider": "Penyedia tidak diketahui \"%%providerName%%\". Penyedia yang disokong: %%validTranslationProviders%%",
+  "error-no-reference-language": "Tiada bahasa rujukan yang dinyatakan. Gunakan pilihan --reference-language atau tambah 'referenceLanguage' ke dalam fail konfigurasi anda.",
+  "error-no-target-languages": "Tiada bahasa sasaran yang dinyatakan. Gunakan pilihan --target-languages atau tambah 'targetLanguages' ke dalam fail konfigurasi anda.",
+  "error-no-reference-data-in-variable": "Tiada data rujukan dijumpai dalam pemboleh ubah \"%%referenceExportedVarName%%\" dalam \"%%referenceFile%%\""
 }

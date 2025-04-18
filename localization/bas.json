@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Tipo de archivo no soportado para el archivo de referencia \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ezin izan da \"%%referenceExportedVarName%%\" aurkitu \"%%referenceFile%%\" erreferentzia fitxategian. Hauetako bat esan nahi zenuen ala?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Ntchito yolowetsa fayilo yotchulidwa \"%%referenceFile%%\" yapanda kupambana",
-  "error-invalid-llm-model": "Eredu LLM baliogabea zehaztu da: %%model%%"
+  "error-invalid-llm-model": "Eredu LLM baliogabea zehaztu da: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Ewondo mɔ́ bɛ́ mɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ b",
+  "error-unknown-provider": "Ezin izan da \"%%providerName%%\" hornitzailea aurkitu. Onartutako hornitzaileak: %%validTranslationProviders%%",
+  "error-no-reference-language": "Ez dago erreferentzia-hizkuntzarik zehaztu. Erabili --reference-language aukera edo gehitu 'referenceLanguage' zure konfigurazio fitxategian.",
+  "error-no-target-languages": "Ez da helburu hizkuntzarik zehaztu. Erabili --target-languages aukera edo gehitu 'targetLanguages' zure konfigurazio fitxategian.",
+  "error-no-reference-data-in-variable": "Ez da erreferentzia datuak aurkitu aldagai honetan \"%%referenceExportedVarName%%\" fitxategi honetan \"%%referenceFile%%\""
 }

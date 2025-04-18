@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Tipo de archivo no compatible para el archivo de referencia \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "No se pudo encontrar \"%%referenceExportedVarName%%\" en el archivo de referencia \"%%referenceFile%%\". ¿Querías decir uno de estos en su lugar?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Error al cargar el archivo de referencia \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Modelo LLM no válido especificado: %%model%%"
+  "error-invalid-llm-model": "Modelo LLM no válido especificado: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Debe definirse el prefijo de contexto o el sufijo de contexto.",
+  "error-unknown-provider": "Proveedor desconocido \"%%providerName%%\". Proveedores admitidos: %%validTranslationProviders%%.",
+  "error-no-reference-language": "No se ha especificado un idioma de referencia. Utiliza la opción --reference-language o añade 'referenceLanguage' a tu archivo de configuración.",
+  "error-no-target-languages": "No se han especificado idiomas de destino. Usa la opción --target-languages o añade 'targetLanguages' a tu archivo de configuración.",
+  "error-no-reference-data-in-variable": "No se encontraron datos de referencia en la variable \"%%referenceExportedVarName%%\" en \"%%referenceFile%%\""
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Aina ya faili isiyoungwa mkono kwa faili ya marejeleo \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Haikuweza kupata \"%%referenceExportedVarName%%\" katika faili ya marejeo \"%%referenceFile%%\". Ulidhamiria mojawapo ya haya badala yake?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Imeshindikana kupakia faili ya marejeleo \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Mfano wa LLM usiofaa umetajwa: %%model%%"
+  "error-invalid-llm-model": "Mfano wa LLM usiofaa umetajwa: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Ama kiambishi awali cha muktadha ama kiambishi tamati cha muktadha lazima kiwekwe",
+  "error-unknown-provider": "Mtoa huduma asiyejulikana \"%%providerName%%\". Watoa huduma wanaoungwa mkono: %%validTranslationProviders%%",
+  "error-no-reference-language": "Hakuna lugha ya marejeleo iliyotajwa. Tumia chaguo la --reference-language au ongeza 'referenceLanguage' kwenye faili yako ya usanidi.",
+  "error-no-target-languages": "Hakuna lugha za kusudi zilizobainishwa. Tumia chaguo la --target-languages au ongeza 'targetLanguages' kwenye faili yako ya usanidi.",
+  "error-no-reference-data-in-variable": "Hakuna data ya rejea iliyopatikana katika kigezo \"%%referenceExportedVarName%%\" katika \"%%referenceFile%%\""
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Ikke-understøttet filtype for referencefil \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Kunne ikke finde \"%%referenceExportedVarName%%\" i referencefilen \"%%referenceFile%%\". Mente du en af disse i stedet?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Kunne ikke indlæse referencefilen \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Ugyldig LLM-model specificeret: %%model%%"
+  "error-invalid-llm-model": "Ugyldig LLM-model specificeret: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Enten kontekstpræfikset eller kontekstsuffixet skal defineres.",
+  "error-unknown-provider": "Ukendt udbyder \"%%providerName%%\". Understøttede udbydere: %%validTranslationProviders%%",
+  "error-no-reference-language": "Intet referencesprog specificeret. Brug --reference-language indstillingen eller tilføj 'referenceLanguage' til din konfigurationsfil.",
+  "error-no-target-languages": "Ingen målsprog specificeret. Brug --target-languages indstillingen eller tilføj 'targetLanguages' til din konfigurationsfil.",
+  "error-no-reference-data-in-variable": "Ingen referencedata fundet i variablen \"%%referenceExportedVarName%%\" i \"%%referenceFile%%\""
 }

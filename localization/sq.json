@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Lloji i skedarit të papërkrahur për skedarin referencë \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nuk mund të gjendet \"%%referenceExportedVarName%%\" në skedarin e referencës \"%%referenceFile%%\". A keni dashur të thoni ndonjë nga këto në vend të tij?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Dështoi të ngarkojë skedarin e referencës \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Modeli i pavlefshëm LLM i specifikuar: %%model%%"
+  "error-invalid-llm-model": "Modeli i pavlefshëm LLM i specifikuar: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Ose parashtesa e kontekstit ose prapashtesa e kontekstit duhet të përcaktohet.",
+  "error-unknown-provider": "Ofrues i panjohur \"%%providerName%%\". Ofrues të mbështetur: %%validTranslationProviders%%",
+  "error-no-reference-language": "Nuk është specifikuar gjuha referuese. Përdorni opsionin --reference-language ose shtoni 'referenceLanguage' në skedarin tuaj të konfigurimit.",
+  "error-no-target-languages": "Nuk janë specifikuar gjuhët objektiv. Përdorni opsionin --target-languages ose shtoni 'targetLanguages' në skedarin tuaj të konfigurimit.",
+  "error-no-reference-data-in-variable": "Nuk u gjetën të dhëna referimi në variablin \"%%referenceExportedVarName%%\" në \"%%referenceFile%%\""
 }

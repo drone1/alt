@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Toetatud failitüüp viitefailile \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ei leidnud \"%%referenceExportedVarName%%\" viitefailist \"%%referenceFile%%\". Kas mõtlesite ühte neist?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Ei õnnestunud laadida viitefaili \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Määratud LLM-mudel on kehtetu: %%model%%"
+  "error-invalid-llm-model": "Määratud LLM-mudel on kehtetu: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Kas konteksti prefiks või konteksti sufiks peab olema määratletud",
+  "error-unknown-provider": "Tundmatu teenusepakkuja \"%%providerName%%\". Toetatud teenusepakkujad: %%validTranslationProviders%%",
+  "error-no-reference-language": "Määratlemata viitekeel. Kasutage --reference-language valikut või lisage 'referenceLanguage' oma konfiguratsioonifaili.",
+  "error-no-target-languages": "Sihtkeelti pole määratud. Kasutage --target-languages valikut või lisage 'targetLanguages' oma konfiguratsioonifaili.",
+  "error-no-reference-data-in-variable": "Muutujas \"%%referenceExportedVarName%%\" failis \"%%referenceFile%%\" ei leitud viiteandmeid."
 }

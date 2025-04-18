@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Erreferentzia fitxategirako onartzen ez den fitxategi mota \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ezin izan da \"%%referenceExportedVarName%%\" aurkitu \"%%referenceFile%%\" erreferentzia fitxategian. Hauetako bat esan nahi zenuen ala?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Ezin izan da \"%%referenceFile%%\" erreferentzia fitxategia kargatu",
-  "error-invalid-llm-model": "Zehaztutako LLM eredua baliogabea da: %%model%%"
+  "error-invalid-llm-model": "Zehaztutako LLM eredua baliogabea da: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Kontextuaren aurrizkia edo atzizkia definitu behar da.",
+  "error-unknown-provider": "Ezezaguneko hornitzailea \"%%providerName%%\". Onartutako hornitzaileak: %%validTranslationProviders%%.",
+  "error-no-reference-language": "Ez da erreferentziazko hizkuntzarik zehaztu. Erabili --reference-language aukera edo gehitu 'referenceLanguage' zure konfigurazio fitxategian.",
+  "error-no-target-languages": "Ez da helburu-hizkuntzarik zehaztu. Erabili --target-languages aukera edo gehitu 'targetLanguages' zure konfigurazio-fitxategian.",
+  "error-no-reference-data-in-variable": "Ez da erreferentzia-daturik aurkitu \"%%referenceExportedVarName%%\" aldagaian \"%%referenceFile%%\" fitxategian."
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "\"%%ext%%\" फाइल टाइप रेफरेन्स फाइल खुन नायाबो",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" फाइलो बर' नाइ पाब। अपने एना मनाया खोंजानि?: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" थानाय नाइ लोड होनाइ बिफल गेलै",
-  "error-invalid-llm-model": "%%model%% थानाय बेया LLM मोडेल बिथायल:"
+  "error-invalid-llm-model": "%%model%% थानाय बेया LLM मोडेल बिथायल:",
+  "error-context-prefix-and-suffix-not-defined": "या तो नियामक उपसर्ग या नियामक प्रत्यय निर्धारित होना चाहिए",
+  "error-unknown-provider": "অজানা প্রদানকারী \"%%providerName%%\"। সমর্থিত প্রদানকারীসমূহ: %%validTranslationProviders%%",
+  "error-no-reference-language": "Reference bhasa angni nirdishto nai. '--reference-language' bhasa thagou gwrwthai athba apnar config file gwrw 'referenceLanguage' thagw.",
+  "error-no-target-languages": "कोनो लक्ष्य भाषा निदिष्ट नाइ। --target-languages बिकल्प ब्यबहार करो या आपोन config फाइलमे 'targetLanguages' जोड़ो।",
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" गोथां \"%%referenceFile%%\" बर' नो रेफरेन्स डेटा फाउन्द गावायलै."
 }

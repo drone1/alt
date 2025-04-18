@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Niet-ondersteund bestandstype voor referentiebestand \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Kan \"%%referenceExportedVarName%%\" niet vinden in referentiebestand \"%%referenceFile%%\". Bedoelde u een van deze?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Kan referentiebestand \"%%referenceFile%%\" niet laden.",
-  "error-invalid-llm-model": "Ongeldig LLM-model gespecificeerd: %%model%%"
+  "error-invalid-llm-model": "Ongeldig LLM-model gespecificeerd: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Een van beide, de contextprefix of het contextsuffix, moet worden gedefinieerd.",
+  "error-unknown-provider": "Onbekende aanbieder \"%%providerName%%\". Ondersteunde aanbieders: %%validTranslationProviders%%",
+  "error-no-reference-language": "Geen referentietaal gespecificeerd. Gebruik de optie --reference-language of voeg 'referenceLanguage' toe aan uw configuratiebestand.",
+  "error-no-target-languages": "Geen doeltalen gespecificeerd. Gebruik de optie --target-languages of voeg 'targetLanguages' toe aan uw configuratiebestand.",
+  "error-no-reference-data-in-variable": "Geen referentiegegevens gevonden in variabele \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\""
 }

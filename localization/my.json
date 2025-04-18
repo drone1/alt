@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "ကိုးကားဖိုင်အတွက် မထောက်ခံသော ဖိုင်အမျိုးအစား \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\" ကို \"%%referenceFile%%\" ကိုးကားဖိုင်ထဲတွင် ရှာမတွေ့ပါ။ ဒါမျိုးတွေကို သင်ရည်ညွှန်းနေခဲ့သလား။: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" ကို တင်ရန် မအောင်မြင်ပါ",
-  "error-invalid-llm-model": "မှားနေသော LLM မော်ဒယ်ကို သတ်မှတ်ထားသည်။ %%model%%"
+  "error-invalid-llm-model": "မှားနေသော LLM မော်ဒယ်ကို သတ်မှတ်ထားသည်။ %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "အကြောင်းအရာ အစပိုင်းသို့မဟုတ် အဆုံးပိုင်းကို အတိအကျဖော်ပြရမည်။",
+  "error-unknown-provider": "မသိရှိသော ပံ့ပိုးသူ \"%%providerName%%\"။ ထောက်ခံသည့် ပံ့ပိုးသူများမှာ။ %%validTranslationProviders%%",
+  "error-no-reference-language": "ဘာသာစကားကို သတ်မှတ်မထားပါ။ '--reference-language' ရွေးချယ်စရာကို သုံးပါ (သို့) 'referenceLanguage' ကို config ဖိုင်ထဲတွင် ထည့်ပါ။",
+  "error-no-target-languages": "မည်သည့်ရည်ရွယ်သောဘာသာစကားများမှမပါဝင်ပါ။ --target-languages ရွေးချယ်စရာကိုသုံးပါ (သို့) 'targetLanguages' ကိုသင့် config ဖိုင်ထဲသို့ထည့်ပါ။",
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" အမည်ရှိ ကိန်းဂဏန်းတွင် \"%%referenceFile%%\" တွင် ကိုးကားချက်ဒေတာများ မတွေ့ရှိပါ။"
 }

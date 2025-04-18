@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "ប្រភេទឯកសារមិនត្រូវបានគាំទ្រសម្រាប់ឯកសារយោង \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "មិនអាចរកឃើញ \"%%referenceExportedVarName%%\" ក្នុងឯកសារយោង \"%%referenceFile%%\" ទេ។ តើអ្នកមានន័យថាមួយណានេះទេ?: %%possibleKeys%%",
   "error-reference-file-load-failed": "បរាជ័យក្នុងការផ្ទុកឯកសារយោង \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "ម៉ូដែល LLM ដែលបានបញ្ជាក់មិនត្រឹមត្រូវ៖ %%model%%"
+  "error-invalid-llm-model": "ម៉ូដែល LLM ដែលបានបញ្ជាក់មិនត្រឹមត្រូវ៖ %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "ត្រូវតែកំណត់បុព្វបទបឋមឬបុព្វបទបន្ទាប់ណាមួយ",
+  "error-unknown-provider": "អ្នកផ្តល់សេវាកម្ម \"%%providerName%%\" មិនស្គាល់។ អ្នកផ្តល់សេវាកម្មដែលគាំទ្រ៖ %%validTranslationProviders%%",
+  "error-no-reference-language": "មិនបានបញ្ជាក់ភាសាយោងទេ។ ប្រើជម្រើស --reference-language ឬបន្ថែម 'referenceLanguage' ទៅក្នុងឯកសារកំណត់របស់អ្នក។",
+  "error-no-target-languages": "មិនបានបញ្ជាក់ភាសាគោលដៅទេ។ ប្រើជម្រើស --target-languages ឬបន្ថែម 'targetLanguages' ទៅក្នុងឯកសារកំណត់របស់អ្នក។",
+  "error-no-reference-data-in-variable": "មិនមានទិន្នន័យយោងត្រូវបានរកឃើញក្នុងអថេរ \"%%referenceExportedVarName%%\" នៅក្នុង \"%%referenceFile%%\" ទេ។"
 }

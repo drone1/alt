@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "ቅድመ ምእላይ ፋይል ኣይተመከረን ፋይል ክፍሊት \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "ኣብ ፋይል ምሳኻታት \"%%referenceFile%%\" \"%%referenceExportedVarName%%\" ክርከብ ኣይተረኽበን። እንተኾነን እንታይ ክትምልስ ኣለኻ?: %%possibleKeys%%",
   "error-reference-file-load-failed": "ኣብ መጻኢ ምምሃብ ፋይል ምውሳድ ክኣለዎ ኣሎ \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "ልም ሞዴል ያልተፈቀደ ተጠቅሟል፡ %%model%%"
+  "error-invalid-llm-model": "ልም ሞዴል ያልተፈቀደ ተጠቅሟል፡ %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "እቲ ኣብ መንእሰይ ወይ ኣብ መንእሰይ ድሕሪ ትእዛዝ ተወሲኑ ክኸውን እዩ",
+  "error-unknown-provider": "ዘይብሉ ኣቅራቢ \"%%providerName%%\"። ዝተደገፉ ኣቅራቢታት፡ %%validTranslationProviders%%",
+  "error-no-reference-language": "ይኣክል ቋንቋ ኣይተመርከበን። እቲ ኣማራጺ ቋንቋ ንመልክት ኣብ መደብ ክትጠቀም ወይ ኣብ ኮንፊግ ፋይልኻ 'referenceLanguage' ክትጨምር ኣለኻ።",
+  "error-no-target-languages": "ተለዋዋጭ ቋንቋዎች አልተገለጹም። እባኮትን እንዲሁም በኮንፊግ ፋይልዎ ውስጥ 'targetLanguages' ያክሉ",
+  "error-no-reference-data-in-variable": "ኣብ ተለዋዋጭ \"%%referenceExportedVarName%%\" ኣብ ፋይል \"%%referenceFile%%\" ምእንታዊ መረዳእታ ኣይተረኽበን"
 }

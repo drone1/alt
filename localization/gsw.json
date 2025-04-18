@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Nit unterstützte Dateityp für d'Referenzdatei \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ha kei \"%%referenceExportedVarName%%\" i de Referenzdatei \"%%referenceFile%%\" gfunde. Hesch viellecht eine vo dene gmeint?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Fähler biim Lade vo dr Referenzdatei \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Ungültigs LLM Modell aagee: %%model%%"
+  "error-invalid-llm-model": "Ungültigs LLM Modell aagee: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Entweder s'Muäss d'Kontextpräfix oder d'Kontextsuffix definiert si.",
+  "error-unknown-provider": "Unbekannter Aabieter \"%%providerName%%\". Unterstützti Aabieter: %%validTranslationProviders%%",
+  "error-no-reference-language": "Kei Sprooch für Referenze agäh. Verwänd d'Option --reference-language oder füeg 'referenceLanguage' zu dim Konfigurationsfile dezue.",
+  "error-no-target-languages": "Kei Ziilsprooche aagee. Verwänd d'Option --target-languages oder füeg 'targetLanguages' i dinere Konfigurationsdatei zue.",
+  "error-no-reference-data-in-variable": "Kei Referenzdate gfunde in Variable \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\""
 }

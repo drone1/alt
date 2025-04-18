@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "جۆری پەڕگەیەکی پشتگیری نەکراو بۆ پەڕگەی سەرچاوە \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Nemetu \"%%referenceExportedVarName%%\" di pelê referansê \"%%referenceFile%%\" da. Gelo hûn vê yekê dimînin?: %%possibleKeys%%",
   "error-reference-file-load-failed": "نەتوانرا پەڕگەی سەرچاوە \"%%referenceFile%%\" بار بکرێت",
-  "error-invalid-llm-model": "مۆدێلی LLM ی نادروست دیاریکراوە: %%model%%"
+  "error-invalid-llm-model": "مۆدێلی LLM ی نادروست دیاریکراوە: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "یان پێشگری کۆنتێکست یان دواگری کۆنتێکست پێویستە دیاری بکرێت",
+  "error-unknown-provider": "Pêşkêşkerê nenas \"%%providerName%%\". Pêşkêşkerên piştgirîdar: %%validTranslationProviders%%",
+  "error-no-reference-language": "Zimanê referansê diyar nekirin. Bikar bînin vebijarka --reference-language an 'referenceLanguage' li pelê konfîgê xwe zêde bikin.",
+  "error-no-target-languages": "Zimanên armanc diyar nekirin. Bikar bînin vebijarka --target-languages an zêde bikin 'targetLanguages' li pelê konfîgurasyona xwe.",
+  "error-no-reference-data-in-variable": "Daneyên referansê di guherbarê \"%%referenceExportedVarName%%\" de di \"%%referenceFile%%\" de nehatine dîtin."
 }

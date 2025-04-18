@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Anṣuf n ummid n ufaylu \"%%ext%%\" i ufaylu n uskuday",
   "error-reference-var-not-found-in-data": "Ur nufi ad yawi \"%%referenceExportedVarName%%\" deg ufaylu n ugama \"%%referenceFile%%\". Tettat ad tferḍeḍ ɣef wayeḍ seg widayen?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Ur izmir ara tawalt n ufaylu \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Amuddu n LLM ur nettat ara: %%model%%"
+  "error-invalid-llm-model": "Amuddu n LLM ur nettat ara: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Ihder amezwaru n umeskar neɣ amezwaru n umeskar ameqqran ila ad yili yesɛan.",
+  "error-unknown-provider": "Amgrad ur nettwasen \"%%providerName%%\". Amgraden yettwasnen: %%validTranslationProviders%%",
+  "error-no-reference-language": "Ur tettuɣal tutlayt n umeskar. Sseqdec --reference-language neɣ sser 'referenceLanguage' ɣ usnifel n uɣerbaz nwen.",
+  "error-no-target-languages": "Ulac tutlayin n ummidan yettwaseqdec. Seqdec --target-languages neɣ sser 'targetLanguages' ar tefayt n useqdec.",
+  "error-no-reference-data-in-variable": "Ulac isaffen n umeskar deg umutti \"%%referenceExportedVarName%%\" deg \"%%referenceFile%%\""
 }

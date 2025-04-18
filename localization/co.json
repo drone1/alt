@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Tipu di schedariu micca supportatu per u schedariu di riferimentu \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Ùn pudia truvà \"%%referenceExportedVarName%%\" in u schedariu di riferimentu \"%%referenceFile%%\". Vulìa dì unu di questi invece?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Impossibile caricare il file di riferimento \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Mudellu LLM invalidu specificatu: %%model%%"
+  "error-invalid-llm-model": "Mudellu LLM invalidu specificatu: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "O u prefissu di cuntestu o u suffissu di cuntestu deve esse definitu",
+  "error-unknown-provider": "Fornitore scunnisciutu \"%%providerName%%\". Fornitori supportati: %%validTranslationProviders%%",
+  "error-no-reference-language": "Nisun linguaghju di riferimentu specificatu. Aduprate l'opzione --reference-language o aghjunghjite 'referenceLanguage' à u vostru schedariu di cunfigurazione.",
+  "error-no-target-languages": "Nisun lingua di destinazione specificata. Usate l'opzione --target-languages o aghjunghjite 'targetLanguages' à u vostru schedariu di cunfigurazione.",
+  "error-no-reference-data-in-variable": "Nisun dati di riferimentu truvatu in a variabile \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\""
 }

@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "参照ファイル「%%ext%%」のファイル形式はサポートされていません。",
   "error-reference-var-not-found-in-data": "\"%%referenceExportedVarName%%\"が参照ファイル\"%%referenceFile%%\"内に見つかりませんでした。代わりにこれらのいずれかを意味しましたか？: %%possibleKeys%%",
   "error-reference-file-load-failed": "\"%%referenceFile%%\" リファレンスファイルの読み込みに失敗しました",
-  "error-invalid-llm-model": "指定されたLLMモデルが無効です: %%model%%"
+  "error-invalid-llm-model": "指定されたLLMモデルが無効です: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "コンテキストの接頭辞または接尾辞のいずれかを定義する必要があります。",
+  "error-unknown-provider": "未知のプロバイダー「%%providerName%%」。サポートされているプロバイダー：%%validTranslationProviders%%",
+  "error-no-reference-language": "参照言語が指定されていません。--reference-language オプションを使用するか、設定ファイルに 'referenceLanguage' を追加してください。",
+  "error-no-target-languages": "対象言語が指定されていません。--target-languages オプションを使用するか、設定ファイルに 'targetLanguages' を追加してください。",
+  "error-no-reference-data-in-variable": "変数「%%referenceExportedVarName%%」の参照データが「%%referenceFile%%」で見つかりませんでした。"
 }

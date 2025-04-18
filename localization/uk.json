@@ -27,5 +27,10 @@
   "error-bad-reference-file-ext": "Непідтримуваний тип файлу для файлу довідки \"%%ext%%\"",
   "error-reference-var-not-found-in-data": "Не вдалося знайти \"%%referenceExportedVarName%%\" у файлі довідника \"%%referenceFile%%\". Можливо, ви мали на увазі одне з цих значень?: %%possibleKeys%%",
   "error-reference-file-load-failed": "Не вдалося завантажити файл довідки \"%%referenceFile%%\"",
-  "error-invalid-llm-model": "Вказано недійсну модель LLM: %%model%%"
+  "error-invalid-llm-model": "Вказано недійсну модель LLM: %%model%%",
+  "error-context-prefix-and-suffix-not-defined": "Або префікс контексту, або суфікс контексту має бути визначений.",
+  "error-unknown-provider": "Невідомий провайдер \"%%providerName%%\". Підтримувані провайдери: %%validTranslationProviders%%",
+  "error-no-reference-language": "Не вказано мову довідки. Використовуйте опцію --reference-language або додайте 'referenceLanguage' до вашого конфігураційного файлу.",
+  "error-no-target-languages": "Не вказано мови призначення. Використовуйте опцію --target-languages або додайте 'targetLanguages' до вашого файлу конфігурації.",
+  "error-no-reference-data-in-variable": "Не знайдено даних у змінній \"%%referenceExportedVarName%%\" у файлі \"%%referenceFile%%\""
 }
