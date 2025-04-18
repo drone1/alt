@@ -3,7 +3,7 @@ import { getFileExtension } from './utils.js'
 import { SUPPORTED_REFERENCE_FILE_EXTENSIONS } from './consts.js'
 import { localizeFormatted } from '../localizer/localize.js'
 
-export async function loadReferenceFile({ appLang, options: { referenceFile, referenceExportedVarName }, tmpDir, log }) {
+export async function loadReferenceFile({ appLang, referenceFile, referenceExportedVarName, tmpDir, log }) {
 	const ext = getFileExtension(referenceFile)?.toLowerCase()
 	if (!SUPPORTED_REFERENCE_FILE_EXTENSIONS.includes(ext)) {
 		throw new Error(

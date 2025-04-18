@@ -1,5 +1,3 @@
-import * as path from 'path'
-
 export const LANGTAG_ENGLISH = 'en'
 export const LANGTAG_DEFAULT = LANGTAG_ENGLISH
 
@@ -18,7 +16,7 @@ export const ENV_VARS = [
 
 export const LOCALIZATION_SRC_DIR = 'localization'
 export const DEFAULT_CACHE_FILENAME = '.localization.cache.json'
-export const DEFAULT_CONFIG_FILENAME = 'config.json'
+export const DEFAULT_CONFIG_FILENAME = 'alt.config.json'
 export const OVERLOADED_BACKOFF_INTERVAL_MS = 30 * 1000
 export const CWD = process.cwd()
 
