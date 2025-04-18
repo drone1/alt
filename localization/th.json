@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "ไม่สามารถโหลดไฟล์อ้างอิง \"%%referenceFile%%\"",
   "error-invalid-llm-model": "ระบุโมเดล LLM ไม่ถูกต้อง: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "ต้องกำหนดคำนำหน้าบริบทหรือคำต่อท้ายบริบทอย่างใดอย่างหนึ่ง",
-  "error-unknown-provider": "ไม่รู้จักผู้ให้บริการ \"%%providerName%%\" ผู้ให้บริการที่ได้รับการสนับสนุน: %%validTranslationProviders%%",
+  "error-unknown-provider": "ไม่รู้จักผู้ให้บริการ \"%%providerName%%\".",
   "error-no-reference-language": "ไม่ได้ระบุภาษาอ้างอิง ใช้ตัวเลือก --reference-language หรือเพิ่ม 'referenceLanguage' ลงในไฟล์คอนฟิกของคุณ",
   "error-no-target-languages": "ไม่มีการระบุภาษาเป้าหมาย ใช้ตัวเลือก --target-languages หรือเพิ่ม 'targetLanguages' ลงในไฟล์คอนฟิกของคุณ",
-  "error-no-reference-data-in-variable": "ไม่พบข้อมูลอ้างอิงในตัวแปร \"%%referenceExportedVarName%%\" ใน \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "ไม่พบข้อมูลอ้างอิงในตัวแปร \"%%referenceExportedVarName%%\" ใน \"%%referenceFile%%\"",
+  "error-no-provider-specified": "ไม่ได้ระบุผู้ให้บริการ",
+  "error-copying-file-to-temp-dir": "เกิดข้อผิดพลาดในการคัดลอกไฟล์ไปยังไดเรกทอรีชั่วคราว: %%error%%",
+  "supported-providers": "ผู้ให้บริการที่รองรับคือ: %%providers%%"
 }

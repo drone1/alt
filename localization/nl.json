@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Kan referentiebestand \"%%referenceFile%%\" niet laden.",
   "error-invalid-llm-model": "Ongeldig LLM-model gespecificeerd: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Een van beide, de contextprefix of het contextsuffix, moet worden gedefinieerd.",
-  "error-unknown-provider": "Onbekende aanbieder \"%%providerName%%\". Ondersteunde aanbieders: %%validTranslationProviders%%",
+  "error-unknown-provider": "Onbekende aanbieder \"%%providerName%%\".",
   "error-no-reference-language": "Geen referentietaal gespecificeerd. Gebruik de optie --reference-language of voeg 'referenceLanguage' toe aan uw configuratiebestand.",
   "error-no-target-languages": "Geen doeltalen gespecificeerd. Gebruik de optie --target-languages of voeg 'targetLanguages' toe aan uw configuratiebestand.",
-  "error-no-reference-data-in-variable": "Geen referentiegegevens gevonden in variabele \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Geen referentiegegevens gevonden in variabele \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Geen aanbieder opgegeven.",
+  "error-copying-file-to-temp-dir": "Fout bij het kopiëren van bestand naar tijdelijke map: %%error%%",
+  "supported-providers": "Ondersteunde aanbieders zijn: %%providers%%"
 }

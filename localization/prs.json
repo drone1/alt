@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "ناتوان در بارگذاری فایل مرجع \"%%referenceFile%%\"",
   "error-invalid-llm-model": "مدل LLM نامعتبر مشخص شده است: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "یا پیشوند زمینه یا پسوند زمینه باید تعریف شود",
-  "error-unknown-provider": "نامعلوم فراهم‌کننده \"%%providerName%%\". فراهم‌کننده‌های پشتیبانی‌شده: %%validTranslationProviders%%",
+  "error-unknown-provider": "نامعلوم فراهم کننده \"%%providerName%%\".",
   "error-no-reference-language": "زبان مرجع مشخص نشده است. از گزینه --reference-language استفاده کنید یا 'referenceLanguage' را به فایل تنظیمات خود اضافه کنید.",
   "error-no-target-languages": "هیچ زبان هدفی مشخص نشده است. از گزینه --target-languages استفاده کنید یا 'targetLanguages' را به فایل پیکربندی خود اضافه کنید.",
-  "error-no-reference-data-in-variable": "هیچ داده‌ی مرجعی در متغیر \"%%referenceExportedVarName%%\" در \"%%referenceFile%%\" یافت نشد."
+  "error-no-reference-data-in-variable": "هیچ داده‌ی مرجعی در متغیر \"%%referenceExportedVarName%%\" در \"%%referenceFile%%\" یافت نشد.",
+  "error-no-provider-specified": "هیچ فراهم‌کننده‌ای مشخص نشده است.",
+  "error-copying-file-to-temp-dir": "خطا در کپی کردن فایل به دایرکتوری موقت: %%error%%",
+  "supported-providers": "پشتیبانی شده تامین کنندگان عبارتند از: %%providers%%"
 }

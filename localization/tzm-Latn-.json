@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ur izmir ara tawalt n ufaylu \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Amuddu n LLM ur nettat ara: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Ihder amezwaru n umeskar neɣ amezwaru n umeskar ameqqran ila ad yili yesɛan.",
-  "error-unknown-provider": "Amgrad ur nettwasen \"%%providerName%%\". Amgraden yettwasnen: %%validTranslationProviders%%",
+  "error-unknown-provider": "Amawal ur yezmir ara \"%%providerName%%\".",
   "error-no-reference-language": "Ur tettuɣal tutlayt n umeskar. Sseqdec --reference-language neɣ sser 'referenceLanguage' ɣ usnifel n uɣerbaz nwen.",
   "error-no-target-languages": "Ulac tutlayin n ummidan yettwaseqdec. Seqdec --target-languages neɣ sser 'targetLanguages' ar tefayt n useqdec.",
-  "error-no-reference-data-in-variable": "Ulac isaffen n umeskar deg umutti \"%%referenceExportedVarName%%\" deg \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Ulac isaffen n umeskar deg umutti \"%%referenceExportedVarName%%\" deg \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Ulac amdan yettwassen.",
+  "error-copying-file-to-temp-dir": "Tuccḍa n ufus ar tmudda n ugurru temp: %%error%%",
+  "supported-providers": "Isaffen yettwaskaren d-iyuran: %%providers%%"
 }

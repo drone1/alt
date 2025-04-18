@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "M̀ bɛn m̀ tɛn fayilu referɛnsi \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Modɛl LLM bɛ bɛtɛ: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Nkɔtɔ a kɔntɛksɛ prɛfiksɛ oswa kɔntɛksɛ sɔfiksɛ bɛ́ fɔ dɛfini",
-  "error-unknown-provider": "Fɔndɔŋ nyɔnɔ \"%%providerName%%\" a ká mɔ́. Fɔndɔŋ nyɔnɔ a lɛ mɔ́: %%validTranslationProviders%%",
+  "error-unknown-provider": "Provider inconnu \"%%providerName%%\".",
   "error-no-reference-language": "Mɔ́ káá mɛ́nɛ́ ásɛ́lɛ́ mbámbɔ́ŋ. Jí --reference-language mɛ́nɛ́ ásɛ́lɛ́ mbámbɔ́ŋ yá mɔ́ ɓá 'referenceLanguage' ná mɔ́ káá mɛ́nɛ́ config file.",
   "error-no-target-languages": "Nkɔt mbɔŋ a sɔŋɛɛ. Sɔŋɛɛ --target-languages nkɔt mɔ́ mɔ́ mbɔŋ 'targetLanguages' na fàìl config ná wùn.",
-  "error-no-reference-data-in-variable": "Pa gen done referans trouv nan variab \"%%referenceExportedVarName%%\" nan \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Pa gen done referans trouv nan variab \"%%referenceExportedVarName%%\" nan \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Aucun fournisseur spécifié.",
+  "error-copying-file-to-temp-dir": "Erɛr kɔpi fayil tɔ tɛmp dirɛktɔri: %%error%%",
+  "supported-providers": "Bâ pɛ́ na nkap: %%providers%%"
 }

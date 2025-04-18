@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Не вдалося завантажити файл довідки \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Вказано недійсну модель LLM: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Або префікс контексту, або суфікс контексту має бути визначений.",
-  "error-unknown-provider": "Невідомий провайдер \"%%providerName%%\". Підтримувані провайдери: %%validTranslationProviders%%",
+  "error-unknown-provider": "Невідомий провайдер \"%%providerName%%\".",
   "error-no-reference-language": "Не вказано мову довідки. Використовуйте опцію --reference-language або додайте 'referenceLanguage' до вашого конфігураційного файлу.",
   "error-no-target-languages": "Не вказано мови призначення. Використовуйте опцію --target-languages або додайте 'targetLanguages' до вашого файлу конфігурації.",
-  "error-no-reference-data-in-variable": "Не знайдено даних у змінній \"%%referenceExportedVarName%%\" у файлі \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Не знайдено даних у змінній \"%%referenceExportedVarName%%\" у файлі \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Не вказано жодного провайдера.",
+  "error-copying-file-to-temp-dir": "Помилка копіювання файлу в тимчасову папку: %%error%%",
+  "supported-providers": "Підтримувані провайдери: %%providers%%"
 }

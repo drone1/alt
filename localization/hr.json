@@ -29,9 +29,11 @@
   "error-reference-file-load-failed": "Nije uspjelo učitati referentnu datoteku \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Naveden je nevažeći LLM model: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Ili prefiks konteksta ili sufiks konteksta mora biti definiran.",
-  "error-unknown-provider": "Nepoznati pružatelj usluga \"%%providerName%%\". Podržani pružatelji: %%validTranslationProviders%%",
+  "error-unknown-provider": "Nepoznati pružatelj usluga \"%%providerName%%\".",
   "error-no-reference-language": "Nije naveden referentni jezik. Upotrijebite opciju --reference-language ili dodajte 'referenceLanguage' u svoju konfiguracijsku datoteku.",
   "error-no-target-languages": "Nije specificiran ciljni jezik. Upotrijebite opciju --target-languages ili dodajte 'targetLanguages' u vašu konfiguracijsku datoteku.",
   "error-no-reference-data-in-variable": "Nema referentnih podataka u varijabli \"%%referenceExportedVarName%%\" u \"%%referenceFile%%\"",
-  "error-no-provider-specified": "Nije naveden pružatelj usluge."
+  "error-no-provider-specified": "Nije naveden pružatelj usluge.",
+  "error-copying-file-to-temp-dir": "Greška pri kopiranju datoteke u privremeni direktorij: %%error%%",
+  "supported-providers": "Podržani pružatelji usluga su: %%providers%%"
 }

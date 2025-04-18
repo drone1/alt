@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Չհաջողվեց բեռնել \"%%referenceFile%%\" հղումային ֆայլը",
   "error-invalid-llm-model": "Սխալ LLM մոդել նշված է՝ %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Կամ համատեքստի նախաբառը, կամ համատեքստի հետաբառը պետք է սահմանված լինի։",
-  "error-unknown-provider": "Անհայտ մատակարար \"%%providerName%%\": Աջակցվող մատակարարները՝ %%validTranslationProviders%%",
+  "error-unknown-provider": "Անհայտ մատակարար \"%%providerName%%\":",
   "error-no-reference-language": "Հղումը լեզուն նշված չէ։ Օգտագործեք --reference-language տարբերակը կամ ավելացրեք 'referenceLanguage' ձեր կարգավորման ֆայլում։",
   "error-no-target-languages": "Նշված չեն թղթակցվող լեզուները։ Օգտագործեք --target-languages պարամետրը կամ ավելացրեք 'targetLanguages' Ձեր կարգավորման ֆայլում։",
-  "error-no-reference-data-in-variable": "Չի հայտնաբերվել որևէ հղումային տվյալ \"%%referenceExportedVarName%%\" փոփոխականում \"%%referenceFile%%\" ֆայլում։"
+  "error-no-reference-data-in-variable": "Չի հայտնաբերվել որևէ հղումային տվյալ \"%%referenceExportedVarName%%\" փոփոխականում \"%%referenceFile%%\" ֆայլում։",
+  "error-no-provider-specified": "Մատակարար չի նշված։",
+  "error-copying-file-to-temp-dir": "Ֆայլի պատճենման սխալ դեպի ժամանակավոր թղթապանակը՝ %%error%%",
+  "supported-providers": "Սպասարկող մատակարարներն են՝ %%providers%%"
 }

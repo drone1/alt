@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Не удалось загрузить файл ссылки \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Указана недопустимая модель LLM: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Либо префикс контекста, либо суффикс контекста должен быть определен.",
-  "error-unknown-provider": "Неизвестный провайдер \"%%providerName%%\". Поддерживаемые провайдеры: %%validTranslationProviders%%",
+  "error-unknown-provider": "Неизвестный провайдер \"%%providerName%%\".",
   "error-no-reference-language": "Не указан язык оригинала. Используйте опцию --reference-language или добавьте 'referenceLanguage' в ваш файл конфигурации.",
   "error-no-target-languages": "Не указаны целевые языки. Используйте опцию --target-languages или добавьте 'targetLanguages' в ваш файл конфигурации.",
-  "error-no-reference-data-in-variable": "Не найдены данные для ссылки в переменной \"%%referenceExportedVarName%%\" в файле \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Не найдены данные для ссылки в переменной \"%%referenceExportedVarName%%\" в файле \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Не указан провайдер.",
+  "error-copying-file-to-temp-dir": "Ошибка копирования файла во временный каталог: %%error%%",
+  "supported-providers": "Поддерживаемые провайдеры: %%providers%%"
 }

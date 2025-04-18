@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Nag es dhe garga \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Model LLM anwedhys spesifys: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Na wra ow bos an kontekst prefyks po an kontekst suffyks termynys dhefyne.",
-  "error-unknown-provider": "Provyder anwedhys \"%%providerName%%\". Provydoryon skoodhys: %%validTranslationProviders%%",
+  "error-unknown-provider": "Provyder anwedhys \"%%providerName%%\".",
   "error-no-reference-language": "Nyns yw tavas kavadow spessifys. Usya --reference-language opsyon po keworra 'referenceLanguage' dhe'ga fyl config.",
   "error-no-target-languages": "Nyns yw tavasow gwruthyl spesifys. Usya an opsyon --target-languages po keworra 'targetLanguages' dhe'ga fayl config",
-  "error-no-reference-data-in-variable": "Nyns eus data kevrennow kavadow a-barth an varians \"%%referenceExportedVarName%%\" yn \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Nyns eus data kevrennow kavadow a-barth an varians \"%%referenceExportedVarName%%\" yn \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Nyns eus provyder spesifys.",
+  "error-copying-file-to-temp-dir": "Gwall ow kopia restren dhe'n gever temporyel: %%error%%",
+  "supported-providers": "An provydoryans skoodhys yw: %%providers%%"
 }

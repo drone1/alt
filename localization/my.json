@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "\"%%referenceFile%%\" ကို တင်ရန် မအောင်မြင်ပါ",
   "error-invalid-llm-model": "မှားနေသော LLM မော်ဒယ်ကို သတ်မှတ်ထားသည်။ %%model%%",
   "error-context-prefix-and-suffix-not-defined": "အကြောင်းအရာ အစပိုင်းသို့မဟုတ် အဆုံးပိုင်းကို အတိအကျဖော်ပြရမည်။",
-  "error-unknown-provider": "မသိရှိသော ပံ့ပိုးသူ \"%%providerName%%\"။ ထောက်ခံသည့် ပံ့ပိုးသူများမှာ။ %%validTranslationProviders%%",
+  "error-unknown-provider": "မသိရသော ပံ့ပိုးသူ \"%%providerName%%\"။",
   "error-no-reference-language": "ဘာသာစကားကို သတ်မှတ်မထားပါ။ '--reference-language' ရွေးချယ်စရာကို သုံးပါ (သို့) 'referenceLanguage' ကို config ဖိုင်ထဲတွင် ထည့်ပါ။",
   "error-no-target-languages": "မည်သည့်ရည်ရွယ်သောဘာသာစကားများမှမပါဝင်ပါ။ --target-languages ရွေးချယ်စရာကိုသုံးပါ (သို့) 'targetLanguages' ကိုသင့် config ဖိုင်ထဲသို့ထည့်ပါ။",
-  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" အမည်ရှိ ကိန်းဂဏန်းတွင် \"%%referenceFile%%\" တွင် ကိုးကားချက်ဒေတာများ မတွေ့ရှိပါ။"
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" အမည်ရှိ ကိန်းဂဏန်းတွင် \"%%referenceFile%%\" တွင် ကိုးကားချက်ဒေတာများ မတွေ့ရှိပါ။",
+  "error-no-provider-specified": "ပံ့ပိုးသူမျှမသတ်မှတ်ထားပါ။",
+  "error-copying-file-to-temp-dir": "ဖိုင်ကို temp ဖိုင်တွဲသို့ ကူးယူနေစဉ် အမှားဖြစ်ပွားခဲ့သည်။ %%error%%",
+  "supported-providers": "ထောက်ပံ့ပေးသူများမှာ။ %%providers%%"
 }

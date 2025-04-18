@@ -1676,11 +1676,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
       "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
-      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26"
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "hy": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1707,10 +1709,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "ja": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1737,10 +1742,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "ksf": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1767,10 +1775,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "km": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1797,10 +1808,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "ku": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1827,10 +1841,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "kw": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1857,10 +1874,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "my": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1887,10 +1907,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "nl": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1917,10 +1940,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "ru": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1947,10 +1973,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "prs": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -1977,10 +2006,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "sq": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2007,10 +2039,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "swc": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2037,10 +2072,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "th": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2067,10 +2105,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "tzm-Latn-": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2097,10 +2138,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "uk": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2127,10 +2171,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "vi": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2157,10 +2204,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "zh-Hans": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -2187,10 +2237,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "zh-Hant": {
       "msg-finished-with-errors": "785ba4b7e062d66506cf7bce6cb85dd9de9f753902a64dbd50e814cd0d1c9366",
@@ -2217,10 +2270,13 @@
       "error-reference-file-load-failed": "45a32eebc1a1e02e701da60acf81f6aa608c2c6a5f8651f5781017359d1b45ff",
       "error-invalid-llm-model": "bfa4efbf24929a06485e55d917ec25b3592ea98c9b48bc6d69e0a918a321830c",
       "error-context-prefix-and-suffix-not-defined": "edb4493f412c3dad845abf5682fb066ad827fbc795849d1f8b2315cec4f19a26",
-      "error-unknown-provider": "21888bf25cb79a19b23605e9263636f235ea912c1da9389b3a51641a471ddf27",
+      "error-unknown-provider": "3154f272434c24e332e8c7b8889414c4b5113ca3f6964fd8b1baaec45b390489",
       "error-no-reference-language": "f0f5c7b3e1b1d2885ea9679bb78f63a3f5b3080762a9e65a46ddcd3135629021",
       "error-no-target-languages": "4bfe8bf706c204a609d41deb530f096d510e01ab6e85732e55580838379e1b5f",
-      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0"
+      "error-no-reference-data-in-variable": "342b4b0f71b736f30001947618a73f02440633b23b163888e64649eada194bd0",
+      "error-no-provider-specified": "a08971353e130de6e23f55527c471c848b799be0c3811a0ab18264bdaae40b26",
+      "error-copying-file-to-temp-dir": "30075652874328db9a356f9a0b20019341965cdc40377b68c4c29cbecdf24c25",
+      "supported-providers": "7c7d3f15e91e4d4ac851fb75cce250871e5c1b671bc61c96af4779fb51d1324b"
     },
     "zh-TW": {
       "msg-nothing-to-do": "a288a348be3efa2a83543d173cad038d5768845fe202ea8e12ecfa17b04effb7",
@@ -4340,11 +4396,13 @@
         "error-reference-file-load-failed": "fd8995d287b142df3424a51a9763b5f36ac9dac003bc9340277481645dbd7233",
         "error-invalid-llm-model": "3ea2bdbf71329c5f3f2950a01c54aba5f2dd976a6086500e547ec400e5da6271",
         "error-context-prefix-and-suffix-not-defined": "bd038e21459c2d2cf248201009b0dcc70a07960a71207f5e8847cbab2b27bc5e",
-        "error-unknown-provider": "0b536bd248ea380b6021d31477edef2d9bf7c094ec7e895014e5fbfc1668c1ff",
+        "error-unknown-provider": "934eb5ca0138c1bedf6d394ad2a8c045d147d71989a18457f8436ef19db121c8",
         "error-no-reference-language": "a1da3a4fe3f86bbbd5476ce7bf6d528e234e18fa91dab4a67ff29a8ccef4d4a1",
         "error-no-target-languages": "c1e26b8f1d1ba28d49584d508f9ea53b06615201448818f67730e5df3f2195f0",
         "error-no-reference-data-in-variable": "072eda67d3a728b244989453e8e49de12dce84c03d681df843550acf2dba6e08",
-        "error-no-provider-specified": "9c00cfbcd1ccd26c7bc3e460f84f3bb02598129d511938830683ef50914c75c8"
+        "error-no-provider-specified": "9c00cfbcd1ccd26c7bc3e460f84f3bb02598129d511938830683ef50914c75c8",
+        "error-copying-file-to-temp-dir": "0527d7614fa9ef8fac7f0a5f97876ecabe13ab375397f10c83a9216a432b52d0",
+        "supported-providers": "56c96237a3cf3c6ca0f8e439b18815f8d9dc01e1a39cb9ed2444abb22b5c936f"
       }
     },
     "hy": {
@@ -4379,10 +4437,13 @@
         "error-reference-file-load-failed": "2fe43b4b3a221f99a478f2ffead1739e5c73009f3b8d6d4745b9183a7f00651a",
         "error-invalid-llm-model": "eda36a28f0d70103535b3e58c86642236189ceacf96f4feadb246776039a3362",
         "error-context-prefix-and-suffix-not-defined": "701d0fb75f71c3e1d4bedc5f01982baa92f0e8210603af1bee206513ccfe473b",
-        "error-unknown-provider": "06f6ba0319515ee619bdd9c9c95b0c29c67191d9e64f0a27b9bf2a04a1db8efb",
+        "error-unknown-provider": "8b7cb84c3668e353481fd1f83beaa54b077bb32ed929536c5441c7c579d6f2e2",
         "error-no-reference-language": "3745906247269ddad364f2f9e4cda9e2b44423369e158e94b280739e4509a976",
         "error-no-target-languages": "db5c8450ca7b2feff5446d6a83b1768fd478f7d0bed768f53d24a020c938b0d0",
-        "error-no-reference-data-in-variable": "4b0547f8d96036868ae08d98d254b31f17389ad5ed8ef32f52e1432aca57ef9e"
+        "error-no-reference-data-in-variable": "4b0547f8d96036868ae08d98d254b31f17389ad5ed8ef32f52e1432aca57ef9e",
+        "error-no-provider-specified": "9c53a163935e4bcddec8ab9666633f5a0b5268ec0fc76648e9ae938ffc57308f",
+        "error-copying-file-to-temp-dir": "d3efb2d2de02df6a08cf12e63ca4d2bd0d4899f1aa48d09fc33facfe84b992ee",
+        "supported-providers": "59b46694647a8cafac3de3a8b9e71b2698f6f0c0b47aae1fbb8a99797f1dc209"
       }
     },
     "ja": {
@@ -4417,10 +4478,13 @@
         "error-reference-file-load-failed": "898a471610f411d465db8fcf1d70b4f21ddd3db6e83133645b63fd74a19fedea",
         "error-invalid-llm-model": "f1a23046f54e83223f636f5e63743432dce0e0dfd3214b13f0491fb62980c1d1",
         "error-context-prefix-and-suffix-not-defined": "4284fce3d9bf60782fc89a231803ec416e93658a66e6811bafd5d40a9f75a8a1",
-        "error-unknown-provider": "08542a44042c97fb14ca9651c2581e6f91e16a4355c95bffadf294bff2bbc638",
+        "error-unknown-provider": "f451732fe143035a42a5295f9922725a03d9c65a1efbc32e4e0ed9dd58cb325e",
         "error-no-reference-language": "1bbaabc2548b4ec1a139f901cfba1e520744e65e4c8057525fe66f60037dc782",
         "error-no-target-languages": "b67cb65bf8547c26984687544676644a3af6ea2e4ea4f37f17d9617d8804104f",
-        "error-no-reference-data-in-variable": "512b2ffae38b66ee55298e3cf3282222b9e2235d69cd811d283108abfaa32818"
+        "error-no-reference-data-in-variable": "512b2ffae38b66ee55298e3cf3282222b9e2235d69cd811d283108abfaa32818",
+        "error-no-provider-specified": "c14e606aeb7a85d2c842c59183f247838c6ae881916e4cd503ecb73f4ffc8565",
+        "error-copying-file-to-temp-dir": "2d895551712ff67d7ec007ca0abd615e816e6d4019d3ab7fba9caf479b7497c6",
+        "supported-providers": "9fa2a2a9d94d867154a96c71ea047285105aa165108c3fdeed5aadc13a8420d9"
       }
     },
     "ksf": {
@@ -4455,10 +4519,13 @@
         "error-reference-file-load-failed": "68b33ec4864f837f30441d7a3f6a04459070e7b296ae8b80b8395e55bd85a92b",
         "error-invalid-llm-model": "aa7f2d880dfa06dd0c732d07ac2f2901266868a72f99bab40a9fd54c8611f266",
         "error-context-prefix-and-suffix-not-defined": "7749f3741b7e61505f6f31177c0423313759d68267bc8f4fb39931e3b1867a2e",
-        "error-unknown-provider": "75ea6360c024251fafba32b7f202334a061484488102827d03c7c42c1da73e8e",
+        "error-unknown-provider": "7adba6f8141397434b5fc1f417b4ac93a25914e60355abd7386ca97029b35d72",
         "error-no-reference-language": "b306e58ceb25c19fd250aff8aeae6766e9e00cbfc8fae3312ca15a843f724003",
         "error-no-target-languages": "0d6b51c4cc6847584f32ef33756e553044894efe58d145e8ab6122ddcbce0866",
-        "error-no-reference-data-in-variable": "8d97ba50db37f6133f0dc2405648076d8ab5ec334c1c51e9ea53eff448f45166"
+        "error-no-reference-data-in-variable": "8d97ba50db37f6133f0dc2405648076d8ab5ec334c1c51e9ea53eff448f45166",
+        "error-no-provider-specified": "64e2211af504bd76cfd365ee68e557a20804208bf06cc2132b93f8976ea341ef",
+        "error-copying-file-to-temp-dir": "364b6e1b32a13bcf074ad2b56e0bbccbb0c91167007e186bed5f31292a6fc661",
+        "supported-providers": "c390a9d4724c4c093525f7d0fd8ba5f664fdfa19781a244e22192f33fab6bad3"
       }
     },
     "km": {
@@ -4493,10 +4560,13 @@
         "error-reference-file-load-failed": "a2fab84c6ff35308c426386b6addb476d29c90610a43885fc643cb1568d8809a",
         "error-invalid-llm-model": "5ed6e2ddb5989874019e1eda75ba702eff8da0c7320708f5b0aa0f71f70ee6c5",
         "error-context-prefix-and-suffix-not-defined": "24a1cd96d909a0181523e4d645a0e80ee852bd49076d206a5b6ab16805745cf6",
-        "error-unknown-provider": "32028bad32cf33a9af0f0ed760fc204bdd5b301e0d3099137149113a401961d0",
+        "error-unknown-provider": "d39bceb3d65f053027bf1fcf9cdf200cc9494b90d11658ec2eaaf37e45bd7a67",
         "error-no-reference-language": "0b3bf77fbdc9431c685b324873716848ebaf07e395841efa3fcd76004df35fe8",
         "error-no-target-languages": "a6ebf8a4663f520c6ff4b68530e1d098399fa2d1875ea5b1ef9d3610ab6fc372",
-        "error-no-reference-data-in-variable": "b032528b85d17ddb834a44ff180b8e8360e5763164ae8b560e98869a196ffc09"
+        "error-no-reference-data-in-variable": "b032528b85d17ddb834a44ff180b8e8360e5763164ae8b560e98869a196ffc09",
+        "error-no-provider-specified": "0a357dbd3a1b5119169f869e3fb44310f5b967e5d977f17f0f828294ee5bfa53",
+        "error-copying-file-to-temp-dir": "a031f4833eb5a00f815060cf92b8af683ab0ed8b8cf6c9150a428ceadb61440c",
+        "supported-providers": "a3de373de248ea49fd61e15084b98ddd3dabdd3d41f67a2d6609cb552dbb33ca"
       }
     },
     "ku": {
@@ -4531,10 +4601,13 @@
         "error-reference-file-load-failed": "4ee36b8a0ad8b89e3f778e51c2aba36114154e5a50e090988297f300cc9531d3",
         "error-invalid-llm-model": "f4795e7473b0a7f77a386b6226dd54bc0a76985c493bb2e79ea02553730b297c",
         "error-context-prefix-and-suffix-not-defined": "2ed6e7b291476686acefad118c43dd6688e39d89f2227f2778ec6408f237ad6f",
-        "error-unknown-provider": "f97ca81de6702b9556096b2d45230ec0c5bfb405e57c48b41b964e26ee405a4c",
+        "error-unknown-provider": "a65dcbd67ee6478390099327e9b33dfa23dee675ea5bd88960369a1d8c4a4ed3",
         "error-no-reference-language": "92bd987f24901ec5e7d2990e917a9f5b7c2f95a9c396309e2dda21581a18dd0b",
         "error-no-target-languages": "33c0db02c036bc689333636aa2ec69b3135fce9f42f044a7a0c888c174194a6c",
-        "error-no-reference-data-in-variable": "9ce9b818d412b820d51565cb0fc49c71dbcdf0218b7c48b309e54d81c9981e20"
+        "error-no-reference-data-in-variable": "9ce9b818d412b820d51565cb0fc49c71dbcdf0218b7c48b309e54d81c9981e20",
+        "error-no-provider-specified": "7be8c78d65b71e6a72b9b1843d00b753c6d035a1c44ddd219ccceebe293fd5e2",
+        "error-copying-file-to-temp-dir": "2de8a28155ed6ac041f09af900933564367532353471a88105857e3c8c1057fe",
+        "supported-providers": "e0fe7f76a6ebe240271a1b87f26b1074c528989268c41a2df199af9a2406a4d4"
       }
     },
     "kw": {
@@ -4569,10 +4642,13 @@
         "error-reference-file-load-failed": "143968af7b595e0bb8753c126ba5b414e055a2b6eda7f40501815cc032644237",
         "error-invalid-llm-model": "3c33d47ddc268807102188652388d33973bb8e27f4be068f8a3cf1ee88020342",
         "error-context-prefix-and-suffix-not-defined": "d58c1501d57395f10bb261e0f325856788478e59f3d78311a94ce2e88c2e44f9",
-        "error-unknown-provider": "9dd16e5d927384f5a8f6199aade71d4ca73e33b467ec4876ec7f52a1d0a3a680",
+        "error-unknown-provider": "f1b0caa1c0e2a01bd87a4b8fd821d98013ba8aa52fb4ab3d9b284dfa8f69d06c",
         "error-no-reference-language": "afb2d80a5adfc8d3ccf2b65444160ffcfbe86eee03d40ca743bb291ad76ffa85",
         "error-no-target-languages": "81f194794f7143ed612291651e297c8feb997e5dca4657019fbaaad92066054f",
-        "error-no-reference-data-in-variable": "990ca8860b321deb252b379edb257f3cb69abf5abab427aaca977414c0417bb5"
+        "error-no-reference-data-in-variable": "990ca8860b321deb252b379edb257f3cb69abf5abab427aaca977414c0417bb5",
+        "error-no-provider-specified": "846357b59420bd29d04e9051fbbbead129601a0704da6bc5e1e175e6b41eb25a",
+        "error-copying-file-to-temp-dir": "c20a501ceb5278f7a65e57fcec4da2460430664689092c9e6aafda75fed64ff6",
+        "supported-providers": "cc451fdaf94bf8ead90b15603f9751ac61762d8c4a7937c1738877ed62980f8b"
       }
     },
     "my": {
@@ -4607,10 +4683,13 @@
         "error-reference-file-load-failed": "d33ad4c469575272d21036e2e7c23fb3106bbc35f2def05939c1539bfea8aefb",
         "error-invalid-llm-model": "c3207bf476b5c043085a298f26e8fe2e304ae571b2e7a821dfa2897f89015afb",
         "error-context-prefix-and-suffix-not-defined": "1ffe86a9e286c61c88319835899175d6268f2716effa28843e92def82b6c9b3f",
-        "error-unknown-provider": "b688220eecfbeb5c8575186dade22aec8ddcd2c42f103acb5af4cc677c234162",
+        "error-unknown-provider": "71b098a8c4c57d55a63c3dbcfb2b122fc576273bb4ea02936a96a99ea71915f2",
         "error-no-reference-language": "81f227c88d547e44a16e016dc9a3ff3a167bc3115c48457f35c850adc1539619",
         "error-no-target-languages": "d8514c9fb4d4ff80645d2e405186603dc7076f626fc14798c7c54e285dd0b493",
-        "error-no-reference-data-in-variable": "ba540bfed121cf87040500e0fc1e2cde146c8938fd17fc86f6fc3ed81e492c54"
+        "error-no-reference-data-in-variable": "ba540bfed121cf87040500e0fc1e2cde146c8938fd17fc86f6fc3ed81e492c54",
+        "error-no-provider-specified": "20d8cfc8afe40090a24c71287b7746b04332f704fa81ea732e363472f717e438",
+        "error-copying-file-to-temp-dir": "9e5cdde4b45918fb10aefa6bba921e49c06cbd13aaef09c11eabc3ed29660b99",
+        "supported-providers": "9555311e1ec3cb814280d01f1a6bdbf0ec7e72f097f93032f2871de9b907b5c4"
       }
     },
     "nl": {
@@ -4645,10 +4724,13 @@
         "error-reference-file-load-failed": "02cf7f32ef29d01a0da93b343427de45aeb5fdbe109ae3c96360df96dcb0dfba",
         "error-invalid-llm-model": "7cae0a3a258585638188c676b2011967f1443565402b8388c4c04dbc3a5da4ec",
         "error-context-prefix-and-suffix-not-defined": "070b5d20dd0d5557e2b03fb135398f498dbca8a8ce94ff7bac15d4bc95c6cc4a",
-        "error-unknown-provider": "833d49123778870cb144ba2371bf03ebd41a3bd0138674fc27c59597664b5f52",
+        "error-unknown-provider": "dcfda696bab9779b12eb5fa51d3ed6083634ce910c4441d1f533d21f04b8b63f",
         "error-no-reference-language": "2aca32b31f011f37aec218a5d36c8ce00496e87511e7ef6e1956c0354bbd3859",
         "error-no-target-languages": "d0b47fcbb02b7f00437fdfc0b5cfc41cca65a15d3e11da6da8fa916fe6b97f4e",
-        "error-no-reference-data-in-variable": "5105674768fb11d14248a90b316743bbb5b4d71b9f8e52fe1608795622ff7dc6"
+        "error-no-reference-data-in-variable": "5105674768fb11d14248a90b316743bbb5b4d71b9f8e52fe1608795622ff7dc6",
+        "error-no-provider-specified": "69d7df52dbd7786e70bf9cc68fe22c4937ae4d4d0f783df51f32b636461f0e1f",
+        "error-copying-file-to-temp-dir": "9c52aeef5a327fad2347bf220cb956f56057aa041bf79aa69506a5324b64d410",
+        "supported-providers": "15746faa44f654dcb4b4b72d7a87b39cb6b6439ee5e94ac3d320d31a39337034"
       }
     },
     "ru": {
@@ -4683,10 +4765,13 @@
         "error-reference-file-load-failed": "da0a82be53a81a42b28dadf5eaf0c7ba6ff2f6e4c8af5aa062ce7ea4dd462af6",
         "error-invalid-llm-model": "bc9a7ef26443286b4fec749d46943c44dd455c69d378e8e4d357621c183b4089",
         "error-context-prefix-and-suffix-not-defined": "4a3c475eee02b4117a55d2736a5630527a75a25fae8c51ba4594dd2f2a7c5ca6",
-        "error-unknown-provider": "94ef6fc949af65295f9e7335310e82d1ef19aaed5ee18756d8cad56afe53e956",
+        "error-unknown-provider": "e01b91775a2affc6d7cf08b1b920a8a63b92da1b3d0a120623383979d2fd3cf0",
         "error-no-reference-language": "72a2deaa7bfc130a0fb5bef5f43172dc9bac324c04a3d61c85906838e7b4103e",
         "error-no-target-languages": "31de01d43a2d8f55b7801e0eaeaff075ab4b667931f949debb5619681dca759f",
-        "error-no-reference-data-in-variable": "b9aa683055b66303978b562cfa371e2ad20d4ed3a29beb1d8a4fea531e0436db"
+        "error-no-reference-data-in-variable": "b9aa683055b66303978b562cfa371e2ad20d4ed3a29beb1d8a4fea531e0436db",
+        "error-no-provider-specified": "9773b239af11c09bae687234cc4603f635af7f5fb938ea1cc6ae437441d6cefb",
+        "error-copying-file-to-temp-dir": "1b7f5fdabe27c22c0092fe87641fb583d24b8458bb78b6b152be8609ccb82551",
+        "supported-providers": "6e2ad8029c7e326e1cdb5f48dc061cf106b645309cc52fb94ded5c80c25cfcd0"
       }
     },
     "prs": {
@@ -4721,10 +4806,13 @@
         "error-reference-file-load-failed": "0a2ca5f11c9dec9c46c3ee40011eab0d0ac9881ec9ed7798c9ebc0d142a2a003",
         "error-invalid-llm-model": "0ac5c8d47dad5f566cb714fab822d7e522d81e2cba9ef88a5753344662fa5fa8",
         "error-context-prefix-and-suffix-not-defined": "41148b4b2aec8b83bd981aaf1867b4fbe5fed0d8f31c8bbfb7bbdd0106c95548",
-        "error-unknown-provider": "58caf7884da4e9e95eec05f3fd284c78ea25a882f91d891aa60a618870d2345e",
+        "error-unknown-provider": "5539adae1542503bcf8b5b52fb517a0fc8a53c71bda9dc28eb1320c060f61b92",
         "error-no-reference-language": "d3fca3601da2e13e111dbe4a9f3952aed27a0fd2f5b9a411477950ab216816ed",
         "error-no-target-languages": "a6e1c4c6689b49b2662f8683bb889c44f5675c746c61e02ae9ad69a28520fa13",
-        "error-no-reference-data-in-variable": "a3597ca4413122af3ea3cbcb8a6aac602a7579aed50069a3ba8f695284b50bb5"
+        "error-no-reference-data-in-variable": "a3597ca4413122af3ea3cbcb8a6aac602a7579aed50069a3ba8f695284b50bb5",
+        "error-no-provider-specified": "b89973f84c5825e0a6550991e74a8b13247c8007e3ea03f9243e45c43479cd7d",
+        "error-copying-file-to-temp-dir": "970e05b3b2614c2bad5e6fb489e979c28462552cbd92c96dedfc1bf118e201e9",
+        "supported-providers": "47f201d07de412b8f252def126d9903d8212298ac13e3533c3c0056b95611725"
       }
     },
     "sq": {
@@ -4759,10 +4847,13 @@
         "error-reference-file-load-failed": "b5934041dd417661cdfebb070538be3f66bc4bb35a1f783ca693da8fb6eda05f",
         "error-invalid-llm-model": "6f85ee310a97a9953dc41dcbd16076ae32ac3e17db5af7261f36d478a8fc4d2c",
         "error-context-prefix-and-suffix-not-defined": "461f88de53bd08163c8d28575a57198568de7a9555f2082293db89fc800a8446",
-        "error-unknown-provider": "87a4a841b59dd8fd557fd0f8b1721b798a0a4f492d96d7bdbe24199a6e735432",
+        "error-unknown-provider": "7e4c467d0fb09edb3f2f88acb4ad2b89f27d9e4c6f2b8b582b0afde1f7ca401d",
         "error-no-reference-language": "2533cd169138afea9f4c0539941a96e55775c3a23a5793d2e7e64d8b8910a3a6",
         "error-no-target-languages": "d74c7eeb734435c0e6a3b554f402b58e32cbcca541689a7860499ca084a73295",
-        "error-no-reference-data-in-variable": "037653a8adcdd43aa90d5c3c4078314dfee94bdb7b40031df8e5db22c0b879b9"
+        "error-no-reference-data-in-variable": "037653a8adcdd43aa90d5c3c4078314dfee94bdb7b40031df8e5db22c0b879b9",
+        "error-no-provider-specified": "fe53d8987e5c8d1cdeab67957cf8fca27681170958f4f8d1d6c39989177e1055",
+        "error-copying-file-to-temp-dir": "2fdb635caef8ad05d6ec5db9feef879d76e6b43e44e9fc9b99e4901c2f373ea0",
+        "supported-providers": "fac6fa6a05501629224ba12751e243e2fc55c1d477197cb7f0aa0a8ecd3d592f"
       }
     },
     "swc": {
@@ -4797,10 +4888,13 @@
         "error-reference-file-load-failed": "36f50aa9a7e29646f8885ed3130d9d0fb0c4e4ae7c4f53c8f49d5b8570561ace",
         "error-invalid-llm-model": "8fee3b80515ef3491e28773f86bbbb842f9e238be63893c27eb4ea1592f23038",
         "error-context-prefix-and-suffix-not-defined": "56b1860c5541a1b377a705b91b38dbd5467a7ed897336d67b4fbeae8fb0b55ab",
-        "error-unknown-provider": "37d791912af584d0ea5a2780d8e3c85db6c55aff00b882a0c7e8865875f0dd6c",
+        "error-unknown-provider": "ca9c5a8dec02080ab004c87c1bf3ff2d2c31dff85ebb9d8a28773a57e3e4e052",
         "error-no-reference-language": "0748609286635b92752abd3b97eebea0aba8207e8150935a5ed6b7768f717f94",
         "error-no-target-languages": "4ac80762149ea9b3d33c35f5ceb9609ae0de52a4acb70a3922c51ac250901201",
-        "error-no-reference-data-in-variable": "98a6fe57be0b2f0d2f44655046e23d86862c0ee70369e50206af884cd6fbae5e"
+        "error-no-reference-data-in-variable": "98a6fe57be0b2f0d2f44655046e23d86862c0ee70369e50206af884cd6fbae5e",
+        "error-no-provider-specified": "4f6002e8649d4c813b535da283e3c5bc66146d06dcffc54840bf680399f99e9c",
+        "error-copying-file-to-temp-dir": "e6b6421c38ee51a7bb7a1e98f69f187c2b20b9e49b6c677a2a26ffcef81a5cc2",
+        "supported-providers": "b6851bce8af64072b2331b3990c328ee93253dab9213466bfb7719daf795d955"
       }
     },
     "th": {
@@ -4835,10 +4929,13 @@
         "error-reference-file-load-failed": "d3bac7f9ebf5e16ea097e87f9120a171f3ef287236e017bf848e5a0410f56636",
         "error-invalid-llm-model": "7cdbe3e4bc437f2ec86dbffda64edf842642c0765163cacd3aa097885cf96736",
         "error-context-prefix-and-suffix-not-defined": "36f4d062a0784e44adbf43ae79b76a3648e5e888aaed31a006163fc047987b98",
-        "error-unknown-provider": "8838c471f3ba3c5a6f68f89e20288e01a219327c870c4a2823ca869bee7cd6c5",
+        "error-unknown-provider": "79036ad6ece83ca5a185c320a42db6c06d881c45088b6f2bd2e55fa18e6ad757",
         "error-no-reference-language": "a4a7be5bc2e1548aa2564757d1eca14f7a37f2d3c291caf041b2a3f1d3e8220d",
         "error-no-target-languages": "8fe9b02cf0cd3e2d5b866d88d0e04e27287ea1fa3500761488a4648382cdf017",
-        "error-no-reference-data-in-variable": "483f19e83230ad959c4d0678719a541e03725ab53a238c31a4666b03987b4f13"
+        "error-no-reference-data-in-variable": "483f19e83230ad959c4d0678719a541e03725ab53a238c31a4666b03987b4f13",
+        "error-no-provider-specified": "bd4c369a44da9de08162770cff6c95cc4f8d967809e33339c916f48d6c5166a3",
+        "error-copying-file-to-temp-dir": "9d7275d8d494cf6c5b5660f3bf5044466a0e4be4437b8a90fc73c8eb017fff0a",
+        "supported-providers": "fe07f96848bbb082a434b75cef47054131d7d043bdb666c4589d14c96384dcab"
       }
     },
     "tzm-Latn-": {
@@ -4873,10 +4970,13 @@
         "error-reference-file-load-failed": "d53efe957f779b05e75c33c1ce1dd5f33ec51cf7b682f20cfa38cb06875b4fe5",
         "error-invalid-llm-model": "766c6a8b4a9a8d2cfdf6a4554ceb76a42e9065ebec7772f7ef0361313a38d5a0",
         "error-context-prefix-and-suffix-not-defined": "335ada42d33a23b8edad581a3bbb733aa0ac78cd796b9f054873850c06a4b7a1",
-        "error-unknown-provider": "b0653faa21580112eca328688a3f3adc19b7f16c42679f06255ef0c66b89574c",
+        "error-unknown-provider": "28fe7f704f4830b0fc2c85504d5917e7c66e781bd31d677e768a385ea619817a",
         "error-no-reference-language": "4b5452c922df125ea4f949518caf48326dd0444816a455d98eb723c7c7561c06",
         "error-no-target-languages": "2cb4f2333bcbed8cb34c203420795f9b6b485a77a5469efa08cc91fbd79aa7ee",
-        "error-no-reference-data-in-variable": "71af74ec53456fcfcd09111abd866ecf1a2725b29257f8c8a4e6324538e24b94"
+        "error-no-reference-data-in-variable": "71af74ec53456fcfcd09111abd866ecf1a2725b29257f8c8a4e6324538e24b94",
+        "error-no-provider-specified": "58c96d4016bbaf18093aebd5ccbe37d17cd618a74da96a555036401908011f96",
+        "error-copying-file-to-temp-dir": "bbbf798986b8c5c691027c8949e1dfaee9f17d9e268551ee98f987d3823e9cfa",
+        "supported-providers": "593809b1ed8ef4f953d75046dddf943017b86019bbc111a477a913ee757fc72c"
       }
     },
     "uk": {
@@ -4911,10 +5011,13 @@
         "error-reference-file-load-failed": "c246913671c31571d14dff5067dfccd6c839062eb6ab827d81f56a4f09c26438",
         "error-invalid-llm-model": "ec5354a76f93f421258a72e0f7f1b8f9fd01e17bbab7ea374d103438ae91b996",
         "error-context-prefix-and-suffix-not-defined": "1f102ca597fccac7d07e14e439784654a44ea039569f402ed35ba6999ba733dd",
-        "error-unknown-provider": "ed5c0e335bda5d7212fe5323ea44c89a6fd7bbadeb7231fd162edde198282aba",
+        "error-unknown-provider": "4c72f8d7fb3b4381444904ce380879ea1ec60b86f49bfa3bdc420fca8a09780a",
         "error-no-reference-language": "32df9464a936842c40a6f0b10d7ce05a0651db3a295ef27617ed459e5d4744e0",
         "error-no-target-languages": "ce39581fcc2f0e9b4e4725917c5e689addf91d81475a13c7d19afdc55b006232",
-        "error-no-reference-data-in-variable": "858a4de1209aa36f306d77ee300051dea7d72f3cb2167eed64fb9f2308c150b3"
+        "error-no-reference-data-in-variable": "858a4de1209aa36f306d77ee300051dea7d72f3cb2167eed64fb9f2308c150b3",
+        "error-no-provider-specified": "9c8b8879cd489c6cec5382343292929e62956e6138ed92637b81e56e7c7e2724",
+        "error-copying-file-to-temp-dir": "3dddc7c40c4dcd636562e9b4664a7e29520ede3e69d9335bb66a4c913a6a252e",
+        "supported-providers": "a89df6bb32913bcbefdc5bf46089b5e83a8efbc1329d3ef973912764a1a8b449"
       }
     },
     "vi": {
@@ -4949,10 +5052,13 @@
         "error-reference-file-load-failed": "c64cd0a1b425a4f37c8bdb2d1204a10af9d858ae35783f8915c306e1c033ee5a",
         "error-invalid-llm-model": "bee1fc8f1aa6fe65d3ed925ecfb85bbb99241847198304556e4f2008ae256173",
         "error-context-prefix-and-suffix-not-defined": "57bb772308695f238d5c0fa2dfa0b0fb889dad7e0c5f836045c641d0cbf44ea9",
-        "error-unknown-provider": "0123884427d4a3f70e973e705d4426090bc5fbc074c0463a360170fe1472368c",
+        "error-unknown-provider": "5b5241652617fe0a7168398f6263767ec60bde6a4d54ab1df04e5609b9131b73",
         "error-no-reference-language": "2a8a185a71f55944b621f3e18f09e424700a8f5c5327941ba08aed64ca143450",
         "error-no-target-languages": "f1150bae4e42f0780f2be8883a4329dabb4bc38d1d2ced5adc37442d46e5cd22",
-        "error-no-reference-data-in-variable": "03bbd7d61f9b48f5587204ac5ae7991e8fb49ef5678a97ce1250fe68a3900edd"
+        "error-no-reference-data-in-variable": "03bbd7d61f9b48f5587204ac5ae7991e8fb49ef5678a97ce1250fe68a3900edd",
+        "error-no-provider-specified": "e3d17ca28255db29e5040763ed471864f5e680587f00b34e03a3b9a819ea517a",
+        "error-copying-file-to-temp-dir": "749a87cda4dbec3fa3bec429cdf29b42b0c6ff6364a4d19db0bda2b23222a16a",
+        "supported-providers": "0631b80324825bd64a03c534581a556d8622495aa617ea2df8fbae651059538d"
       }
     },
     "zh-SG": {
@@ -5007,10 +5113,13 @@
         "error-reference-file-load-failed": "31e7e9884de36a0ec2b4f79840b89b911438590244722f59f833fdb8a5216caf",
         "error-invalid-llm-model": "27e9998075918b1db2a6878bef59a7895ef56901f94c2275d82575f38086fd2f",
         "error-context-prefix-and-suffix-not-defined": "5f475a7307081528eadc05cfb1969b63537e516274f054e31b586784940c1726",
-        "error-unknown-provider": "fe74acacd769df0dc5542c2623c76f96858ba0c3d9ed3b704342cf871510341b",
+        "error-unknown-provider": "39b0cd546e7817fdfcd66a9a9c8a946bc85fbdbe627a71fae053d704b3df4093",
         "error-no-reference-language": "36a4dc8fe394ea2bde4d45560f96f4fa7bd3818803bf61e543a73b8723855591",
         "error-no-target-languages": "dfa416aa22c1230ebd2b21dc97b311ed965c661bba5323b4f48b5669fe17214e",
-        "error-no-reference-data-in-variable": "29fd503e5b7ed1868b4c5dd84599be2d5d81e5ec820883955d635b5514d86ff6"
+        "error-no-reference-data-in-variable": "29fd503e5b7ed1868b4c5dd84599be2d5d81e5ec820883955d635b5514d86ff6",
+        "error-no-provider-specified": "d55b0f570884196d1c382281b9188653127958bf3ebd0aa1445237fb58ae269a",
+        "error-copying-file-to-temp-dir": "1aca0b32a9f516044857ee0009cdeb6c88aeb7bec2886dac4899b2ab72d2a6b8",
+        "supported-providers": "25f6d5c6ec4b92f42f98e211753df832c830f2ad2d2bda8087bd68bf15781412"
       }
     },
     "zh-Hant": {
@@ -5045,12 +5154,15 @@
         "error-reference-file-load-failed": "92597c68de01a46670331755ad7b5fd2feb977f13a0d94412ef2a96ad59507c6",
         "error-invalid-llm-model": "81e458a9bf9b8f475999ff37953bca8693a4f100436ab1dae398a472d16751c3",
         "error-context-prefix-and-suffix-not-defined": "24b8c475af51f47aefc712af22e24fc340b1b512b995106622f3ab97ec889971",
-        "error-unknown-provider": "19f72aec4aba11a8629cfe222345e4bece1f37d335e062a6bc77961d49252f6a",
+        "error-unknown-provider": "748c5a554fa6cb14566d7248daa075a7152a0cb2cb610623308e5074d712efa1",
         "error-no-reference-language": "f14a3b6cb6fe747d563e39e54d29836f4ee9014e51965a5161a21a401d3a4ee1",
         "error-no-target-languages": "be7ec9341b0bb832a423eb4c0d2dab722a3bd4df5fb8a4f55c6c445ef8ea3c4c",
-        "error-no-reference-data-in-variable": "e1eee557fc5e7c510c5ae1abc791336f24f269cbb408beb8f4f2c13f36972369"
+        "error-no-reference-data-in-variable": "e1eee557fc5e7c510c5ae1abc791336f24f269cbb408beb8f4f2c13f36972369",
+        "error-no-provider-specified": "d55b0f570884196d1c382281b9188653127958bf3ebd0aa1445237fb58ae269a",
+        "error-copying-file-to-temp-dir": "c42165e780403e96460f87786e64ea2575b6b4a934b7bed82565aa2a4c4c941c",
+        "supported-providers": "6f0ae3731cf21cf119490edb53dc15b7ace6c723876d3d5428779d2619368c4d"
       }
     }
   },
-  "lastRun": "2025-04-18T10:41:22.001Z"
+  "lastRun": "2025-04-18T11:00:45.680Z"
 }

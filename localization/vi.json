@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Không thể tải tệp tham chiếu \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Mô hình LLM không hợp lệ được chỉ định: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Hoặc tiền tố ngữ cảnh hoặc hậu tố ngữ cảnh phải được xác định.",
-  "error-unknown-provider": "Nhà cung cấp không xác định \"%%providerName%%\". Các nhà cung cấp được hỗ trợ: %%validTranslationProviders%%",
+  "error-unknown-provider": "Nhà cung cấp không xác định \"%%providerName%%\".",
   "error-no-reference-language": "Không có ngôn ngữ tham chiếu được chỉ định. Sử dụng tùy chọn --reference-language hoặc thêm 'referenceLanguage' vào tệp cấu hình của bạn.",
   "error-no-target-languages": "Không có ngôn ngữ đích được chỉ định. Sử dụng tùy chọn --target-languages hoặc thêm 'targetLanguages' vào tệp cấu hình của bạn.",
-  "error-no-reference-data-in-variable": "Không tìm thấy dữ liệu tham chiếu trong biến \"%%referenceExportedVarName%%\" trong \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Không tìm thấy dữ liệu tham chiếu trong biến \"%%referenceExportedVarName%%\" trong \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Không có nhà cung cấp được chỉ định.",
+  "error-copying-file-to-temp-dir": "Lỗi khi sao chép tệp vào thư mục tạm thời: %%error%%",
+  "supported-providers": "Các nhà cung cấp được hỗ trợ là: %%providers%%"
 }

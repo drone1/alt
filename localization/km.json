@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "បរាជ័យក្នុងការផ្ទុកឯកសារយោង \"%%referenceFile%%\"",
   "error-invalid-llm-model": "ម៉ូដែល LLM ដែលបានបញ្ជាក់មិនត្រឹមត្រូវ៖ %%model%%",
   "error-context-prefix-and-suffix-not-defined": "ត្រូវតែកំណត់បុព្វបទបឋមឬបុព្វបទបន្ទាប់ណាមួយ",
-  "error-unknown-provider": "អ្នកផ្តល់សេវាកម្ម \"%%providerName%%\" មិនស្គាល់។ អ្នកផ្តល់សេវាកម្មដែលគាំទ្រ៖ %%validTranslationProviders%%",
+  "error-unknown-provider": "កម្មវិធីផ្តល់សេវា \"%%providerName%%\" មិនស្គាល់។",
   "error-no-reference-language": "មិនបានបញ្ជាក់ភាសាយោងទេ។ ប្រើជម្រើស --reference-language ឬបន្ថែម 'referenceLanguage' ទៅក្នុងឯកសារកំណត់របស់អ្នក។",
   "error-no-target-languages": "មិនបានបញ្ជាក់ភាសាគោលដៅទេ។ ប្រើជម្រើស --target-languages ឬបន្ថែម 'targetLanguages' ទៅក្នុងឯកសារកំណត់របស់អ្នក។",
-  "error-no-reference-data-in-variable": "មិនមានទិន្នន័យយោងត្រូវបានរកឃើញក្នុងអថេរ \"%%referenceExportedVarName%%\" នៅក្នុង \"%%referenceFile%%\" ទេ។"
+  "error-no-reference-data-in-variable": "មិនមានទិន្នន័យយោងត្រូវបានរកឃើញក្នុងអថេរ \"%%referenceExportedVarName%%\" នៅក្នុង \"%%referenceFile%%\" ទេ។",
+  "error-no-provider-specified": "មិនបានបញ្ជាក់អ្នកផ្តល់សេវាទេ។",
+  "error-copying-file-to-temp-dir": "កំហុសក្នុងការចម្លងឯកសារទៅថតបណ្តោះអាសន្ន៖ %%error%%",
+  "supported-providers": "ក្រុមហ៊ុនដែលគាំទ្រមាន៖ %%providers%%"
 }

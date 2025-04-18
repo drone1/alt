@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "\"%%referenceFile%%\" リファレンスファイルの読み込みに失敗しました",
   "error-invalid-llm-model": "指定されたLLMモデルが無効です: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "コンテキストの接頭辞または接尾辞のいずれかを定義する必要があります。",
-  "error-unknown-provider": "未知のプロバイダー「%%providerName%%」。サポートされているプロバイダー：%%validTranslationProviders%%",
+  "error-unknown-provider": "未知のプロバイダー \"%%providerName%%\"です。",
   "error-no-reference-language": "参照言語が指定されていません。--reference-language オプションを使用するか、設定ファイルに 'referenceLanguage' を追加してください。",
   "error-no-target-languages": "対象言語が指定されていません。--target-languages オプションを使用するか、設定ファイルに 'targetLanguages' を追加してください。",
-  "error-no-reference-data-in-variable": "変数「%%referenceExportedVarName%%」の参照データが「%%referenceFile%%」で見つかりませんでした。"
+  "error-no-reference-data-in-variable": "変数「%%referenceExportedVarName%%」の参照データが「%%referenceFile%%」で見つかりませんでした。",
+  "error-no-provider-specified": "プロバイダーが指定されていません。",
+  "error-copying-file-to-temp-dir": "一時ディレクトリへのファイルコピー中にエラーが発生しました: %%error%%",
+  "supported-providers": "対応しているプロバイダーは次のとおりです: %%providers%%"
 }
