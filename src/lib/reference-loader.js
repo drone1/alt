@@ -24,6 +24,7 @@ export async function loadReferenceFile({ appLang, options: { referenceFile, ref
 
 			// For .js, we need to copy to a temp location as an .mjs so we can dynamically import
 			const tmpReferencePath = await copyFileToTempAndEnsureExtension({
+				appLang,
 				filePath: referenceFile,
 				tmpDir,
 				ext: 'mjs',

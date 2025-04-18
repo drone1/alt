@@ -35,21 +35,41 @@ export async function runTranslation({ appState, options, log }) {
 		// Validate provider
 		const providerName = (options.provider ?? config.provider)?.toLowerCase()
 		if (!VALID_TRANSLATION_PROVIDERS.includes(providerName)) {
-			log.E(`Error: Unknown provider "${providerName}". Supported providers: ${VALID_TRANSLATION_PROVIDERS.join(', ')}`)
-			process.exit(2)
+			throw new Error(
+				(providerName
+					? localizeFormatted({
+						token: 'error-unknown-provider',
+						data: { providerName },
+						lang: appState.lang,
+						log
+					})
+					: localize({
+						token: 'error-no-provider-specified',
+						lang: appState.lang,
+						log
+					}))
+				+ localizeFormatted({
+					token: 'supported-providers',
+					data: { providers: VALID_TRANSLATION_PROVIDERS.join(', ') },
+					lang: appState.lang,
+					log
+				})
+			)
 		}
 
 		const referenceLanguage = options.referenceLanguage || config.referenceLanguage
 		if (!referenceLanguage || !referenceLanguage.length) {
-			log.E(`Error: No reference language specified. Use --reference-language option or add 'referenceLanguages' to your config file`)
-			process.exit(2)
+			throw new Error(
+				localize({ token: 'error-no-reference-language', lang: appState.lang, log })
+			)
 		}
 
 		// Get target languages from CLI or config
 		const targetLanguages = options.targetLanguages || config.targetLanguages
 		if (!targetLanguages || !targetLanguages.length) {
-			log.E(`Error: No target languages specified. Use --target-languages option or add 'targetLanguages' to your config file`)
-			process.exit(2)
+			throw new Error(
+				localize({ token: 'error-no-target-languages', lang: appState.lang, log })
+			)
 		}
 
 		const normalizeOutputFilenames = options.normalizeOutputFilenames || config.normalizeOutputFilenames
@@ -71,8 +91,17 @@ export async function runTranslation({ appState, options, log }) {
 		// Copy to a temp location first so we can ensure it has an .mjs extension
 		const referenceData = await loadReferenceFile({ appLang: appState.lang, options, tmpDir, log })
 		if (!referenceData) {
-			log.E(`No reference data found in variable "${options.referenceExportedVarName}" in ${options.referenceFile}`)
-			process.exit(2)
+			throw new Error(
+				localizeFormatted({
+					token: 'error-no-reference-data-in-variable',
+					data: {
+						referenceExportedVarName: options.referenceExportedVarName,
+						referenceFile: options.referenceFile
+					},
+					lang: appState.lang,
+					log
+				})
+			)
 		}
 
 		const referenceHash = calculateHash(await readFileAsText(options.referenceFile))
@@ -132,9 +161,11 @@ export async function runTranslation({ appState, options, log }) {
 			if (addContextToTranslation) {
 				keysToProcess = keysToProcess
 					.filter(key => !isContextKey({
+						appLang: appState.lang,
 						key,
 						contextPrefix,
-						contextSuffix
+						contextSuffix,
+						log
 					}))
 			}
 

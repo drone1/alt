@@ -7,6 +7,7 @@ import { ensureExtension, normalizeKey } from './utils.js'
 import { assertIsObj, assertValidPath } from './assert.js'
 import { pathToFileURL } from 'url'
 import { CWD } from './consts.js'
+import { localizeFormatted } from '../localizer/localize.js'
 
 export async function mkTmpDir() {
 	return await fsp.mkdtemp(path.join(os.tmpdir(), 'alt-'))
@@ -57,15 +58,21 @@ export function rmDir(dir, log) {
 }
 
 // This is basically so that we can dynamically import .js files by copying them to temp .mjs files, to avoid errors from node
-export async function copyFileToTempAndEnsureExtension({ filePath, tmpDir, ext }) {
+export async function copyFileToTempAndEnsureExtension({ appLang, filePath, tmpDir, ext, log }) {
 	try {
 		const fileName = ensureExtension(path.basename(filePath), ext)
 		const destPath = path.join(tmpDir, fileName)
 		await fsp.copyFile(filePath, destPath)
 		return destPath
 	} catch (error) {
-		log.E(`Error copying file to temp directory: ${error.message}`)
-		throw error
+		throw new Error(
+			localizeFormatted({
+				token: 'error-copying-file-to-temp-dir',
+				data: { error: error.message },
+				lang: appLang,
+				log
+			})
+		)
 	}
 }
 
