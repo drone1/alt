@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Չի հայտնաբերվել որևէ հղումային տվյալ \"%%referenceExportedVarName%%\" փոփոխականում \"%%referenceFile%%\" ֆայլում։",
   "error-no-provider-specified": "Մատակարար չի նշված։",
   "error-copying-file-to-temp-dir": "Ֆայլի պատճենման սխալ դեպի ժամանակավոր թղթապանակը՝ %%error%%",
-  "supported-providers": "Սպասարկող մատակարարներն են՝ %%providers%%"
+  "supported-providers": "Սպասարկող մատակարարներն են՝ %%providers%%",
+  "error-no-output-dir-specified": "Ելքային պապանակը նշված չէ ո՛չ '--output-dir' միջոցով, ո՛չ կարգավորման ֆայլում (այսպես՝ 'outputDir'), և ո՛չ էլ նույն պապանակում, ինչ որ ձեր հղումային ֆայլն է (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Չհաջողվեց ստեղծել «%%dir%%» թղթապանակը",
+  "error-no-reference-file-specified": "Հղման ֆայլը նշված չէ '--reference-file' միջոցով կամ կոնֆիգուրացիոն ֆայլում (միջոցով 'referenceFile')"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "በ \"%%referenceFile%%\" ውስጥ በተለያዩ ተለዋዋጭ \"%%referenceExportedVarName%%\" ምንም አገናኝ መረጃ አልተገኘም።",
   "error-no-provider-specified": "አንድም አቅራቢ አልተጠናቀቀም።",
   "error-copying-file-to-temp-dir": "ፋይልን ወደ ተረኛ ማውጫ መቅዳት ላይ ስህተት አለ: %%error%%",
-  "supported-providers": "የተደገፉ አገልጋቢዎች ናቸው፡ %%providers%%"
+  "supported-providers": "የተደገፉ አገልጋቢዎች ናቸው፡ %%providers%%",
+  "error-no-output-dir-specified": "በ '--output-dir' በኩል ወይም በውቅር ፋይል (በ 'outputDir') ወይም በእርስዎ የማጣቀሻ ፋይል (\"%%refFileDir%%\") ተመሳሳይ ዳይሬክቶሪ ውስጥ ምንም የውጤት ዳይሬክቶሪ አልተገለጸም",
+  "error-dir-create-failed": "\"%%dir%%\" የሚለውን ዳይሬክቶሪ መፍጠር አልተቻለም",
+  "error-no-reference-file-specified": "ምንም የማጣቀሻ ፋይል አልተገለጸም በ '--reference-file' ወይም በውቅረት ፋይል ውስጥ (በ 'referenceFile' በኩል)"
 }

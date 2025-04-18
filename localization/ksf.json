@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Pa gen done referans trouv nan variab \"%%referenceExportedVarName%%\" nan \"%%referenceFile%%\"",
   "error-no-provider-specified": "Aucun fournisseur spécifié.",
   "error-copying-file-to-temp-dir": "Erɛr kɔpi fayil tɔ tɛmp dirɛktɔri: %%error%%",
-  "supported-providers": "Bâ pɛ́ na nkap: %%providers%%"
+  "supported-providers": "Bâ pɛ́ na nkap: %%providers%%",
+  "error-no-output-dir-specified": "Ngɑ̀ŋà  yi a bǝ̆ yi ntsò kɑ̌s ŏ nga fɛ̀'lǝ̀ njwí mbɛ'tǝ via '--output-dir', ŏ ri nshwùn mbweliŋ (via 'outputDir'), kɛ bɛ sí ŏ sɑ́ŋ ntǝ̀n abǝ̆ fɑ́il yi a bɛ̌ njwí (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kéʼ ghî pʉʼsǝ́ mǝ ntʉk kày lǝtèʼ \"%%dir%%\"",
+  "error-no-reference-file-specified": "Ntáŋ féh cút ajiŋti i a mbә nә tésә via '--reference-file' andә nә fájil kɔnfík (via 'referenceFile')"
 }

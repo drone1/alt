@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nyns eus data kevrennow kavadow a-barth an varians \"%%referenceExportedVarName%%\" yn \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nyns eus provyder spesifys.",
   "error-copying-file-to-temp-dir": "Gwall ow kopia restren dhe'n gever temporyel: %%error%%",
-  "supported-providers": "An provydoryans skoodhys yw: %%providers%%"
+  "supported-providers": "An provydoryans skoodhys yw: %%providers%%",
+  "error-no-output-dir-specified": "Nyns eus Directory iswedh res styrys dre '--output-dir', yn restren cumyans (dre 'outputDir'), po y'n keth directory avel dha restren wonisogethel (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Gwerdhys dhe wul restorva \"%%dir%%\"",
+  "error-no-reference-file-specified": "Nyns eus restren-davarn res via '--reference-file' po y'n restren gefunssyans (via 'referenceFile')"
 }

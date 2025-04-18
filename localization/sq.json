@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nuk u gjetën të dhëna referimi në variablin \"%%referenceExportedVarName%%\" në \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nuk është specifikuar asnjë ofrues.",
   "error-copying-file-to-temp-dir": "Gabim në kopjimin e skedarit në drejtorinë temp: %%error%%",
-  "supported-providers": "Ofruesit e mbështetur janë: %%providers%%"
+  "supported-providers": "Ofruesit e mbështetur janë: %%providers%%",
+  "error-no-output-dir-specified": "Asnjë direktorium daljeje nuk është specifikuar përmes '--output-dir', në një skedar konfigurimi (përmes 'outputDir'), ose në të njëjtin direktorium me skedarin tuaj të referencës (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Dështoi në krijimin e direktorisë \"%%dir%%\"",
+  "error-no-reference-file-specified": "Asnjë skedar reference nuk është specifikuar nëpërmjet '--reference-file' ose në skedarin e konfigurimit (nëpërmjet 'referenceFile')"
 }

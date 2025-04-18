@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "変数「%%referenceExportedVarName%%」の参照データが「%%referenceFile%%」で見つかりませんでした。",
   "error-no-provider-specified": "プロバイダーが指定されていません。",
   "error-copying-file-to-temp-dir": "一時ディレクトリへのファイルコピー中にエラーが発生しました: %%error%%",
-  "supported-providers": "対応しているプロバイダーは次のとおりです: %%providers%%"
+  "supported-providers": "対応しているプロバイダーは次のとおりです: %%providers%%",
+  "error-no-output-dir-specified": "'--output-dir'、設定ファイル（'outputDir'経由）、または参照ファイルと同じディレクトリ（\"%%refFileDir%%\"）を通じて出力ディレクトリが指定されていません",
+  "error-dir-create-failed": "ディレクトリ「%%dir%%」の作成に失敗しました",
+  "error-no-reference-file-specified": "参照ファイルが'--reference-file'オプションまたは設定ファイル（'referenceFile'経由）で指定されていません"
 }

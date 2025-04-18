@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nebyla nalezena žádná referenční data ve proměnné \"%%referenceExportedVarName%%\" v \"%%referenceFile%%\".",
   "error-no-provider-specified": "Nebyl zadán žádný poskytovatel.",
   "error-copying-file-to-temp-dir": "Chyba při kopírování souboru do dočasného adresáře: %%error%%",
-  "supported-providers": "Podporovaní poskytovatelé jsou: %%providers%%"
+  "supported-providers": "Podporovaní poskytovatelé jsou: %%providers%%",
+  "error-no-output-dir-specified": "Není zadán výstupní adresář přes \"--output-dir\", v konfiguračním souboru (přes \"outputDir\") ani ve stejném adresáři jako referenční soubor (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Vytvoření adresáře \"%%dir%%\" se nezdařilo",
+  "error-no-reference-file-specified": "Nebyl zadán žádný referenční soubor pomocí '--reference-file' nebo v konfiguračním souboru (prostřednictvím 'referenceFile')"
 }

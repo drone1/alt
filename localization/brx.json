@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" गोथां \"%%referenceFile%%\" बर' नो रेफरेन्स डेटा फाउन्द गावायलै.",
   "error-no-provider-specified": "Provider khonabw thaido.",
   "error-copying-file-to-temp-dir": "Temp directory gwrthaw file kopai gwdan: %%error%%",
-  "supported-providers": "সমর্থিত প্রদানকারীসমূহ আছে: %%providers%%"
+  "supported-providers": "সমর্থিত প্রদানকারীসমূহ আছে: %%providers%%",
+  "error-no-output-dir-specified": "बाइखौनो आउटपुट डाइरेक्टरि निर्दिष्ट खालामाखै '--output-dir' व', कन्फिग फाइल (via 'outputDir'), एबा गोबां रेफारेन्स फाइलनि मोननै फोलदारावनो (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "\"%%dir%%\" सोरजि खालामनाय जाफ्रुंमोन",
+  "error-no-reference-file-specified": "सामाखौ अरायथि आखुथाय फाइल स्पेसिफाइ खालाखै '--reference-file' -निफ्राय नङाब्ला कनफिग फाइलआव (निफ्राय 'referenceFile')"
 }

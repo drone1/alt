@@ -33,6 +33,9 @@ export default {
 	'error-no-target-languages': `No target languages specified. Use --target-languages option or add 'targetLanguages' to your config file`,
 	'error-no-reference-data-in-variable': `No reference data found in variable "%%referenceExportedVarName%%" in "%%referenceFile%%"`,
 	'error-copying-file-to-temp-dir': `Error copying file to temp directory: %%error%%`,
+	'error-no-output-dir-specified': `No output directory specified via '--output-dir', in a config file (via 'outputDir'), or in the same directory as your reference file ("%%refFileDir%%")`,
+	'error-dir-create-failed': `Failed to create directory "%%dir%%"`,
+	'error-no-reference-file-specified': `No reference file specified via '--reference-file' or in config file (via 'referenceFile')`,
 
 	'supported-providers': `Supported providers are: %%providers%%`
 }

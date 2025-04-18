@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "ኣብ ተለዋዋጭ \"%%referenceExportedVarName%%\" ኣብ ፋይል \"%%referenceFile%%\" ምእንታዊ መረዳእታ ኣይተረኽበን",
   "error-no-provider-specified": "ምንባብ ኣይተመረፀን ኣሎ",
   "error-copying-file-to-temp-dir": "ሕሳብ ፋይል ናብ ክሳድ ዳይሬክቶሪ ኣብ መንቀሳቀስካ ስሕተት፡ %%error%%",
-  "supported-providers": "ተደጋጋሚ ኣባላት እዚ እዮ፡ %%providers%%"
+  "supported-providers": "ተደጋጋሚ ኣባላት እዚ እዮ፡ %%providers%%",
+  "error-no-output-dir-specified": "ዝኾነ ሕደራ ኣውጸ ርአንት ሓበሬታ ኣብ '--output-dir', ኣብ ዝኾነ ዓይነት ሓሳብ ክፍል (ብ 'outputDir') ወይ ስፍራ ሰነድካ (\"%%refFileDir%%\") ብሕድሪ ከም ዘይተሓበረ",
+  "error-dir-create-failed": "ዲረክትሪ \"%%dir%%\" ንምፍጣር ኣይተኻኣለን",
+  "error-no-reference-file-specified": "ኣብ '--reference-file' ወይ ከኣ ኣብ ኮንፊግ ፋይል ('referenceFile') መወከሲ ፋይል ኣይተጠቐሰን"
 }

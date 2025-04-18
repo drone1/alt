@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Hakuna data ya rejea iliyopatikana katika kigezo \"%%referenceExportedVarName%%\" katika faili \"%%referenceFile%%\"",
   "error-no-provider-specified": "Hakuna mtoa huduma aliyetajwa.",
   "error-copying-file-to-temp-dir": "Kosa la kunakili faili kwenda kwenye saraka ya muda: %%error%%",
-  "supported-providers": "Watoaji wanaoungwa mkono ni: %%providers%%"
+  "supported-providers": "Watoaji wanaoungwa mkono ni: %%providers%%",
+  "error-no-output-dir-specified": "Kobaɬitwa tona cha hiivangu kiibaɬitwache viira '--output-dir', viibaɬitwache kiitavuni chakeɬumirwa (viira 'outputDir'), au viira vudu fiiyo chuhiibaɬitwache (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Bo nishindwaga uumba jalada \"%%dir%%\"",
+  "error-no-reference-file-specified": "Owacungwagha fiela yo kutalilia kupitia '--reference-file' au mufira ya usanifi (kupitia 'referenceFile')"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nun s'atoparon datos de referencia na variable \"%%referenceExportedVarName%%\" en \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nun se especificó nengún provisor.",
   "error-copying-file-to-temp-dir": "Error al copiar el ficheru al direutoriu temporal: %%error%%",
-  "supported-providers": "Los proveedores compatibles son: %%providers%%"
+  "supported-providers": "Los proveedores compatibles son: %%providers%%",
+  "error-no-output-dir-specified": "Nun s'especificó l'direutoriu de salida por aciu '--output-dir', nun ficheru de configuración (por aciu 'outputDir'), o nel mesmu direutoriu qu'el to ficheru de referencia (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Fallu al crear el direutoriu \"%%dir%%\"",
+  "error-no-reference-file-specified": "Nun se especificó ficheru de referencia por aciu '--reference-file' o nel ficheru de configuración (per 'referenceFile')"
 }

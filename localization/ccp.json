@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" \"%%referenceFile%%\" ꯑꯣꯟ ꯂꯩꯄꯥꯏꯕ ꯃꯐꯝꯕ ꯂꯩꯄꯥꯏꯕ ꯃꯤꯇꯩ ꯂꯣꯟꯅꯨ ꯃꯔꯤꯡ ꯑꯣꯟ ꯁꯤꯡ ꯃꯇꯦꯡ.",
   "error-no-provider-specified": "གསལ་འཛིན་མ་གསལ།",
   "error-copying-file-to-temp-dir": "བརྡ་ཡིག་འདི་གནས་སྐབས་སྣོན་ཁང་ལ་བརྒྱུད་པ་ནི་འཛོལ་བ་ཡོད།: %%error%%",
-  "supported-providers": "支持的供应商有：%%providers%%"
+  "supported-providers": "支持的供应商有：%%providers%%",
+  "error-no-output-dir-specified": "আউটপুট ডিরেক্টরি উল্লেখ করা অইনি '--output-dir' দোৱারতে, কোনো কনফিগ ফাইলরে ('outputDir' দোৱারতে), বা ত'র রেফারেন্স ফাইলর অইনি ডিরেক্টরিত (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "𑄘𑄨𑄢𑄬𑄇𑄴𑄑𑄧𑄢𑄨 \"%%dir%%\" 𑄌𑄮𑄚𑄟𑄧𑄘𑄴 𑄎𑄢𑄬 𑄃𑄧𑄇𑄳𑄥𑄧𑄟𑄧𑄖𑄴",
+  "error-no-reference-file-specified": "𑄢𑄬𑄜𑄢𑄬𑄚𑄴𑄥𑄧 𑄛𑄴𑄃𑄨𑄣𑄴 '--reference-file' 𑄟𑄢𑄴𑄜𑄮𑄖𑄴 𑄃𑄮𑄮𑄚𑄮𑄇𑄴𑄅 𑄇𑄧𑄚𑄴𑄜𑄨𑄉𑄧𑄢𑄬𑄥𑄧𑄚𑄴 𑄜𑄃𑄨𑄣𑄧𑄖𑄴 ('referenceFile' 𑄟𑄢𑄴𑄜𑄮𑄖𑄴) 𑄚𑄨𑄢𑄴𑄘𑄨𑄥𑄴𑄑𑄮 𑄇𑄧𑄢 𑄃𑄮𑄃𑄨𑄉𑄬"
 }

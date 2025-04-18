@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "མིང་ཚིག་གིས་ \"%%referenceExportedVarName%%\" ནང་འདི་ནང་གི་ \"%%referenceFile%%\" ནང་ལུ་གསལ་བཤད་གྲངས་མི་ཐོབ།",
   "error-no-provider-specified": "གསལ་འཛིན་མེད།",
   "error-copying-file-to-temp-dir": "ཡིག་ཆ་བརྗེ་བའི་ནུས་གསོག་ཁང་ལུ་བཙུགས་ནི་འཛོལ་བ།: %%error%%",
-  "supported-providers": "རྩིས་འཛིན་གྲོགས་པ་རྣམས་ནི། %%providers%%"
+  "supported-providers": "རྩིས་འཛིན་གྲོགས་པ་རྣམས་ནི། %%providers%%",
+  "error-no-output-dir-specified": "གདམ་བྱེད་ '--output-dir' བརྒྱུད་ནས་ཡང་ན་རིམ་སྒྲིག་ཡིག་ཆའི་ནང་དུ ('outputDir' བརྒྱུད་ནས)། ཡང་ན་ཁྱེད་ཀྱི་ཚད་འཛིན་ཡིག་ཆར་(\"%%refFileDir%%\")བཞིན་པའི་དཀར་ཆག་གཅིག་པའི་ནང་དུ་འབྱིན་གཏོང་ཡིག་ཆའི་དཀར་ཆག་གསལ་བཤད་མ་བྱས།",
+  "error-dir-create-failed": "ལམ་བུ་\"%%dir%%\"བཟོ་མ་ཐུབ།",
+  "error-no-reference-file-specified": "ཕྱི་གཏུག་ཡིག་ཆ་ '--reference-file' བརྒྱུད་ནས་སམ་སྒྲིག་སྒྱུར་ཡིག་ཆའི་ནང་ ('referenceFile' བརྒྱུད་ནས་) གསལ་བཀོད་བྱས་མེད།"
 }

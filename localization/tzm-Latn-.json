@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ulac isaffen n umeskar deg umutti \"%%referenceExportedVarName%%\" deg \"%%referenceFile%%\"",
   "error-no-provider-specified": "Ulac amdan yettwassen.",
   "error-copying-file-to-temp-dir": "Tuccḍa n ufus ar tmudda n ugurru temp: %%error%%",
-  "supported-providers": "Isaffen yettwaskaren d-iyuran: %%providers%%"
+  "supported-providers": "Isaffen yettwaskaren d-iyuran: %%providers%%",
+  "error-no-output-dir-specified": "Ur ittwaḥdid umluɣ n uffuɣ s '--output-dir', tammara n usuddes (s 'outputDir'), niɣ ɣ umluɣ-nnes am ufaylu n usmmaqql (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Ur yizmir ad ysnulfu akaram \"%%dir%%\"",
+  "error-no-reference-file-specified": "Ur illi afaylu n timmẓilt yuran s '--reference-file' niɣ ɣ ufaylu n uswuddu (s 'referenceFile')"
 }

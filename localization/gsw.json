@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Kei Referenzdate gfunde in Variable \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\"",
   "error-no-provider-specified": "Kei Aabieter aagee.",
   "error-copying-file-to-temp-dir": "Fähler biim Kopiere vo de Datei i ds temporäre Verzeichnis: %%error%%",
-  "supported-providers": "Unterstützti Aabieter sind: %%providers%%"
+  "supported-providers": "Unterstützti Aabieter sind: %%providers%%",
+  "error-no-output-dir-specified": "Kei Ausgab-Verzeichnis bstimmt übr '--output-dir', inere Config-Datei (übr 'outputDir'), oder im gliiche Verzeichnis wie dini Referänz-Datei (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Han nöd chönne s Verzeichnis \"%%dir%%\" erstelle",
+  "error-no-reference-file-specified": "Kei Referänzdatei aagee via '--reference-file' oder i de Konfigurationsdatei (via 'referenceFile')"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "ไม่พบข้อมูลอ้างอิงในตัวแปร \"%%referenceExportedVarName%%\" ใน \"%%referenceFile%%\"",
   "error-no-provider-specified": "ไม่ได้ระบุผู้ให้บริการ",
   "error-copying-file-to-temp-dir": "เกิดข้อผิดพลาดในการคัดลอกไฟล์ไปยังไดเรกทอรีชั่วคราว: %%error%%",
-  "supported-providers": "ผู้ให้บริการที่รองรับคือ: %%providers%%"
+  "supported-providers": "ผู้ให้บริการที่รองรับคือ: %%providers%%",
+  "error-no-output-dir-specified": "ไม่ได้ระบุไดเรกทอรีสำหรับการส่งออกผ่าน '--output-dir', ในไฟล์การกำหนดค่า (ผ่าน 'outputDir') หรือในไดเรกทอรีเดียวกับไฟล์อ้างอิงของคุณ (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "ไม่สามารถสร้างไดเรกทอรี \"%%dir%%\"",
+  "error-no-reference-file-specified": "ไม่ได้ระบุไฟล์อ้างอิงผ่าน '--reference-file' หรือในไฟล์การกำหนดค่า (ผ่าน 'referenceFile')"
 }

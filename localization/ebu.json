@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Achọtaghị data ndị a na-ezo aka na ya na agbanwe \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\"",
   "error-no-provider-specified": "Enweghị onye na-enye ọrụ a kpọtụrụ aha.",
   "error-copying-file-to-temp-dir": "Njehie n'ịdetuo faịlụ na nchekwa temp: %%error%%",
-  "supported-providers": "Ndị na-enye ọrụ akwadoro bụ: %%providers%%"
+  "supported-providers": "Ndị na-enye ọrụ akwadoro bụ: %%providers%%",
+  "error-no-output-dir-specified": "Gutikorua kwaria kwa kuthirua kuonania ukwithiritwe kugitari '--output-dir', ndene ya faili yaitho (kugitari 'outputDir'), kana ndene ya directory imwe na faili yaku ya reference (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Gutemba kwithia dirĩĩtĩri \"%%dir%%\"",
+  "error-no-reference-file-specified": "Guti reference file itaanetie via '--reference-file' kana kiri config file (via 'referenceFile')"
 }

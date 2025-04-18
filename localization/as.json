@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceFile%%\" ত চলিত \"%%referenceExportedVarName%%\" পৰিৱৰ্তনশীলত কোনো তথ্য পোৱা নগ'ল।",
   "error-no-provider-specified": "কোনো যোগানদাতা নির্দিষ্ট কৰা হোৱা নাই।",
   "error-copying-file-to-temp-dir": "ফাইলটো টেম্প ডিৰেক্টৰীলৈ কপি কৰাৰ সময়ত ত্ৰুটি হৈছে: %%error%%",
-  "supported-providers": "সমর্থিত প্ৰদানকাৰীসমূহ হৈছে: %%providers%%"
+  "supported-providers": "সমর্থিত প্ৰদানকাৰীসমূহ হৈছে: %%providers%%",
+  "error-no-output-dir-specified": "গম্যাদিতা নিৰ্দিষ্ট কৰা হোৱা নাই '--output-dir'ৰ জৰিয়তে, এটা কনফিগ ফাইলত (outputDir'ৰ জৰিয়তে), বা আপোনাৰ ৰেফাৰেন্স ফাইলৰ (\"%%refFileDir%%\") একে টা ডিৰেক্টৰিত",
+  "error-dir-create-failed": "ডিৰেক্টৰী \"%%dir%%\" সৃষ্টি কৰিবলৈ বিফল হৈছে",
+  "error-no-reference-file-specified": "কোনো সন্দৰ্ভ ফাইল নিৰ্দিষ্ট কৰা হোৱা নাই '--reference-file'ৰ জৰিয়তে বা কনফিগ ফাইলত (referenceFile'ৰ জৰিয়তে)"
 }

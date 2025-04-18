@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" চলকে \"%%referenceFile%%\" ফাইলে কোনো রেফারেন্স ডেটা পাওয়া যায়নি।",
   "error-no-provider-specified": "কোনো প্রদানকারী নির্দিষ্ট করা হয়নি।",
   "error-copying-file-to-temp-dir": "টেম্প ডিরেক্টরিতে ফাইল কপি করতে গিয়ে ত্রুটি: %%error%%",
-  "supported-providers": "সমর্থিত প্রদানকারীরা হলেন: %%providers%%"
+  "supported-providers": "সমর্থিত প্রদানকারীরা হলেন: %%providers%%",
+  "error-no-output-dir-specified": "কোন আউটপুট ডিরেক্টরি নির্দিষ্ট করা হয়নি '--output-dir' এর মাধ্যমে, কোন কনফিগ ফাইলে (outputDir' এর মাধ্যমে), অথবা আপনার রেফারেন্স ফাইলের একই ডিরেক্টরিতে (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "\"%%dir%%\" ডিরেক্টরি তৈরি করতে ব্যর্থ হয়েছে",
+  "error-no-reference-file-specified": "কোনো রেফারেন্স ফাইল '--reference-file' এর মাধ্যমে বা কনফিগ ফাইলে (referenceFile এর মাধ্যমে) উল্লেখ করা হয়নি"
 }

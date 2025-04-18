@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Muutujas \"%%referenceExportedVarName%%\" failis \"%%referenceFile%%\" ei leitud viiteandmeid.",
   "error-no-provider-specified": "Tarnija määramata.",
   "error-copying-file-to-temp-dir": "Viga faili kopeerimisel ajutisse kausta: %%error%%",
-  "supported-providers": "Toetatud pakkujad on: %%providers%%"
+  "supported-providers": "Toetatud pakkujad on: %%providers%%",
+  "error-no-output-dir-specified": "Väljundkataloogi pole määratud kas \"--output-dir\" parameetri kaudu, konfiguratsioonifailis (välja \"outputDir\" kaudu) ega Teie viitamiseks kasutatud failiga samas kaustas (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Kataloogi \"%%dir%%\" loomine ebaõnnestus",
+  "error-no-reference-file-specified": "Viitekausta pole määratud '--reference-file' kaudu või seadistuste failis (via 'referenceFile')"
 }

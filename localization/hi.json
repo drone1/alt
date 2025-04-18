@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "चर \"%%referenceExportedVarName%%\" में \"%%referenceFile%%\" से कोई संदर्भ डेटा नहीं मिला।",
   "error-no-provider-specified": "कोई प्रदाता निर्दिष्ट नहीं है।",
   "error-copying-file-to-temp-dir": "फ़ाइल को टेम्प डायरेक्टरी में कॉपी करने में त्रुटि: %%error%%",
-  "supported-providers": "समर्थित प्रदाता हैं: %%providers%%"
+  "supported-providers": "समर्थित प्रदाता हैं: %%providers%%",
+  "error-no-output-dir-specified": "कोई आउटपुट डायरेक्टरी नहीं दी गई है '--output-dir' के माध्यम से, एक कॉन्फिग फ़ाइल में (via 'outputDir'), या आपकी संदर्भ फ़ाइल (\"%%refFileDir%%\") के समान डायरेक्टरी में",
+  "error-dir-create-failed": "\"%%dir%%\" निर्देशिका बनाने में विफल",
+  "error-no-reference-file-specified": "संदर्भ फ़ाइल '--reference-file' के माध्यम से या कॉन्फ़िग फ़ाइल में (via 'referenceFile') निर्दिष्ट नहीं की गई है"
 }

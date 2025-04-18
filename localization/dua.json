@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Ewɔ́ déé mɔ́ ná mɔ́nɔ bɛ́ \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\"",
   "error-no-provider-specified": "Mbɔŋ botɛɛ nɛn mɔ.",
   "error-copying-file-to-temp-dir": "Ero na kopí fayí na diresɛ́rɛ temp: %%error%%",
-  "supported-providers": "Batoŋ ba e pɛɛliŋɛ bɛ́: %%providers%%"
+  "supported-providers": "Batoŋ ba e pɛɛliŋɛ bɛ́: %%providers%%",
+  "error-no-output-dir-specified": "Kei tɔnalirabi dzasiε hle mi kpa'a tso '--output-dir', alo mimlima wolo (tso 'outputDir'), alo nu ko no nya nyaga mimli wolo chu mi chu nε nya kε je kpaŋ (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Mar adwa no ba semu \"%%dir%%\"",
+  "error-no-reference-file-specified": "Ngɛga bidie a di mɔ tɔɔ ye '--reference-file' ɓii a ɲɛɛ config file ka nyanɔ (ka 'referenceFile')"
 }

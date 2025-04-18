@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Не знайдено даних у змінній \"%%referenceExportedVarName%%\" у файлі \"%%referenceFile%%\"",
   "error-no-provider-specified": "Не вказано жодного провайдера.",
   "error-copying-file-to-temp-dir": "Помилка копіювання файлу в тимчасову папку: %%error%%",
-  "supported-providers": "Підтримувані провайдери: %%providers%%"
+  "supported-providers": "Підтримувані провайдери: %%providers%%",
+  "error-no-output-dir-specified": "Не вказано каталог виводу через '--output-dir', у файлі конфігурації (через 'outputDir') або в тому ж каталозі, що й ваш еталонний файл (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Не вдалося створити каталог \"%%dir%%\"",
+  "error-no-reference-file-specified": "Не вказано файл посилань через '--reference-file' або у конфігураційному файлі (через 'referenceFile')"
 }

@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Palibe data ya chikumbutso yapezeka mu variable \"%%referenceExportedVarName%%\" mu \"%%referenceFile%%\"",
   "error-no-provider-specified": "Palibe mupereka wakusankhidwa.",
   "error-copying-file-to-temp-dir": "Ukupoka ifayile ku temp directory: %%error%%",
-  "supported-providers": "Abapenipako abakondwelwa ni: %%providers%%"
+  "supported-providers": "Abapenipako abakondwelwa ni: %%providers%%",
+  "error-no-output-dir-specified": "Tapali incende cabikishapo ukupitila mu '--output-dir', muli ifailo lyakupanga (ukupitila mu 'outputDir'), nangu muli icende cimo ne failo lyenu ilyakusontelwapo (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Palama ukulenga umwakubika ifya \"%%dir%%\"",
+  "error-no-reference-file-specified": "Tapali ifaielo lya cilolele ilingilwe ku '--reference-file' nangu mu ifaielo lya mpangilo (ukupitila mu 'referenceFile')"
 }

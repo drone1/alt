@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Không tìm thấy dữ liệu tham chiếu trong biến \"%%referenceExportedVarName%%\" trong \"%%referenceFile%%\"",
   "error-no-provider-specified": "Không có nhà cung cấp được chỉ định.",
   "error-copying-file-to-temp-dir": "Lỗi khi sao chép tệp vào thư mục tạm thời: %%error%%",
-  "supported-providers": "Các nhà cung cấp được hỗ trợ là: %%providers%%"
+  "supported-providers": "Các nhà cung cấp được hỗ trợ là: %%providers%%",
+  "error-no-output-dir-specified": "Không có thư mục đầu ra được chỉ định qua '--output-dir', trong tệp cấu hình (qua 'outputDir'), hoặc trong cùng thư mục với tệp tham chiếu của bạn (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Không thể tạo thư mục \"%%dir%%\"",
+  "error-no-reference-file-specified": "Không có tệp tham chiếu nào được chỉ định qua '--reference-file' hoặc trong tệp cấu hình (qua 'referenceFile')"
 }

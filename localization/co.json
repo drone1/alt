@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "Nisun dati di riferimentu truvatu in a variabile \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\"",
   "error-no-provider-specified": "Nisun fornitore specificatu.",
   "error-copying-file-to-temp-dir": "Errore copiendu u schedariu à u cartulare tempurariu: %%error%%",
-  "supported-providers": "I pruveditori supportati sò: %%providers%%"
+  "supported-providers": "I pruveditori supportati sò: %%providers%%",
+  "error-no-output-dir-specified": "Nisun direttoriu d'esciuta specificatu via '--output-dir', in un fugliale di cunfigurazione (via 'outputDir'), o in u stessu direttoriu di u vostru fugliale di riferimentu (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "Falimentu à creà u cartulare \"%%dir%%\"",
+  "error-no-reference-file-specified": "Aucu fihceru di referenza specificatu via '--reference-file' or in u fihceru di configurazione (via 'referenceFile')"
 }

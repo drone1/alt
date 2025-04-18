@@ -35,5 +35,8 @@
   "error-no-reference-data-in-variable": "No s'han trobat dades de referència a la variable \"%%referenceExportedVarName%%\" a \"%%referenceFile%%\"",
   "error-no-provider-specified": "No s'ha especificat cap proveïdor.",
   "error-copying-file-to-temp-dir": "Error en copiar el fitxer al directori temporal: %%error%%",
-  "supported-providers": "Els proveïdors compatibles són: %%providers%%"
+  "supported-providers": "Els proveïdors compatibles són: %%providers%%",
+  "error-no-output-dir-specified": "No s'ha especificat el directori de sortida mitjançant '--output-dir', en un fitxer de configuració (mitjançant 'outputDir'), o en el mateix directori que el teu fitxer de referència (\"%%refFileDir%%\")",
+  "error-dir-create-failed": "No s'ha pogut crear el directori \"%%dir%%\"",
+  "error-no-reference-file-specified": "No s'ha especificat cap fitxer de referència mitjançant '--reference-file' o al fitxer de configuració (mitjançant 'referenceFile')"
 }
