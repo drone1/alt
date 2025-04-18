@@ -1,3 +1,4 @@
+[![Run Tests](https://github.com/drone1/alt/actions/workflows/test.yml/badge.svg)](https://github.com/drone1/alt/actions/workflows/test.yml)
 ![Claude](https://img.shields.io/badge/Anthropic-black?logo=anthropic&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini-4285F4?logo=google&logoColor=white)
