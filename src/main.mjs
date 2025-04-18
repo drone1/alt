@@ -81,7 +81,7 @@ export async function run() {
 			const command = this.name()
 			const options = this.opts()
 
-			if (options.logo) {
+			if (options.logo && process.env.ALT_TEST !== '1') {
 				await printLogo({
 					fontsSrcDir: path.resolve(__dirname, '../assets/figlet-fonts/'),
 					tagline: p.description,
