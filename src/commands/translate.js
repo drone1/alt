@@ -571,8 +571,6 @@ async function translateTextViaProvider({
 		messages.push(
 			`You are a professional translator for an application's text from ${sourceLang} to ${targetLang}. `
 			+ `Translate the text accurately without adding explanations or additional content. Only return the text. `
-			//+ `If and only if you absolutely cannot translate the text, you can respond with "${TRANSLATION_FAILED_RESPONSE_TEXT}" -- but please try to translate the text if you can. It would be greatly
-			// appreciated.`,	// With this, the AI seems to be lazy and use it way too often
 		)
 		if (appContextMessage?.length) {
 			messages.push(`Here is some high-level information about the application you are translating text for: ${appContextMessage}`)
@@ -593,7 +591,6 @@ async function translateTextViaProvider({
 		const translated = provider.getResult(response, log)
 		if (!translated?.length) throw new Error(`${providerName} translated text to empty string. You may need to top up your credits.`)
 		log.D(`${translated}`)
-		if (translated === TRANSLATION_FAILED_RESPONSE_TEXT) throw new Error(`${providerName} failed to translate string to ${targetLang}; string: ${text}`)
 		outResult.translated = translated
 	} catch (error) {
 		let errorHandled = false
