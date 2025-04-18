@@ -315,5 +315,8 @@ If you prefer to write updates to disk in real-time (anytime any output data cha
 ### CI
 You may want to use `--tty` for more useful output.
 
-## PR
+## Contributing
 Feel free to fix existing issues and submit a PR, or submit a new issue.
+
+## Feedback
+Feedback is more than welcome. Please feel free to create an issue.
