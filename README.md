@@ -32,10 +32,11 @@
    * [Additional notes](#additional-notes)
       * [Delayed vs. realtime writes](#delayed-vs-realtime-writes)
       * [CI](#ci)
-   * [PR](#pr)
+   * [Contributing](#contributing)
+   * [Feedback](#feedback)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: jonl, at: Wed Apr 16 11:56:33 AM CEST 2025 -->
+<!-- Added by: jonl, at: Fri Apr 18 07:20:52 PM CEST 2025 -->
 
 <!--te-->
 
