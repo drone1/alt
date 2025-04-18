@@ -172,6 +172,7 @@ Commands:
 Environment variables:
   ANTHROPIC_API_KEY                     Your Anthropic API key
   OPENAI_API_KEY                        Your OpenAI API key
+  GOOGLE_API_KEY                        Your Google Gemini API key
   ALT_LANGUAGE                          BCP47 language tag used for display
 
 ---
@@ -183,23 +184,23 @@ Options:
   -c, --config-file <path>                      Path to config file; defaults to <output dir>/config.json
   -rl, --reference-language <language>          The reference file's language; overrides any 'referenceLanguage' config setting
   -o, --output-dir <path>                       Output directory for localized files
-  -l, --target-languages <list>                 Comma-separated list of language codes; overrides any 'targetLanguages' config setting
+  -tl, --target-languages <list>                Comma-separated list of language codes; overrides any 'targetLanguages' config setting
   -k, --keys <list>                             Comma-separated list of keys to process
   -R, --reference-exported-var-name <var name>  For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
   -m, --app-context-message <message>           Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting
   -f, --force                                   Force regeneration of all translations (default: false)
   -rtw, --realtime-writes                       Write updates to disk immediately, rather than on shutdown (default: false)
   -y, --tty                                     Use tty/simple renderer; useful for CI (default: false)
-  -M, --model <name>                            LLM model name to use; defaults are: for "anthropic": "claude-3-7-sonnet-20250219", for "openai": "gpt-4-turbo"; use the 'list-models' command to view all models
+  -M, --model <name>                            LLM model name to use; defaults are: for "anthropic": "claude-3-7-sonnet-20250219", for "google": "gemini-2.0-flash", for "openai": "gpt-4-turbo"; use the 'list-models' command to view all models
   -x, --max-retries <integer>                   Maximum retries on failure (default: 3)
   -n, --normalize-output-filenames              Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting (default: false)
   -N, --no-logo                                 Suppress logo printout
   -cp, --context-prefix <value>                 String to be prefixed to all keys to search for additional context, which are passed along to the AI for context
   -cs, --context-suffix <value>                 String to be suffixed to all keys to search for additional context, which are passed along to the AI for context
   -L, --look-for-context-data                   If specified, ALT will pass any context data specified in the reference file to the AI provider for translation. At least one of --contextPrefix or --contextSuffix must be specified (default: false)
-  -v, --verbose                                 Enables verbose spew (default: false)
-  -d, --debug                                   Enables debug spew (default: false)
-  -t, --trace                                   Enables trace spew (default: false)
+  -v, --verbose                                 Enables verbose spew; forces --tty mode (default: false)
+  -d, --debug                                   Enables debug spew; forces --tty mode (default: false)
+  -t, --trace                                   Enables trace spew; forces --tty mode (default: false)
   --dev                                         Enable dev mode, which prints stack traces with errors (default: false)
   -p, --provider <name>                         AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting
   -h, --help                                    display help for command
@@ -212,7 +213,7 @@ Options:
   -p, --provider <name>  AI provider to use for translations (anthropic,
                          openai); overrides any 'provider' config setting
   -h, --help             display help for command
-``` 
+```
 
 ## Examples
 ### Example I
