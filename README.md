@@ -100,10 +100,12 @@ Sample output:
 Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
 
 ## Config file
-[_optional_] You can create a config file. By default, ALT will search the output directory for `config.json`, but you can specify a path directly using 
+[_optional_] For convenience, a config file is supported. You can use a config file in conjunction with command-line arguments. Command-line arguments override config file values.
+
+By default, ALT will search the output directory for `config.json`, but you can specify a path explicitly using 
 `--config-file`. 
-Example 
-config:
+
+Here's an example config:
 
 ```
 {
@@ -123,12 +125,14 @@ Any of the above settings can be specified using command-line arguments (`--app-
 
 ## Adding context
 Sometimes a string isn't enough to give context to the AI, and as a result, it may give an undesirable translation. ALT allows you to specify additional context for this reason.
+
 ### Application-level context
 A global, application description can be specified `--app-context-message` (or `appContextMessage` in a [config](#config)).
 For example, your config may include something like:
 ```json
 	"appContextMessage": "Voided is a MMORPG game based on outer space."
 ```
+
 ### String-specific context
 Context can be added for any reference key/value pairs by passing `--look-for-context-data` (or setting `lookForContextData: true` in a [config](#config)).
 
