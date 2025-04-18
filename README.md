@@ -100,7 +100,7 @@ Sample output:
 Note that output files can be lower-cased if you pass the ``--normalize-output-filenames`` option, so `fr-FR` translations would write to `fr-fr.json`
 
 ## Config file
-[_optional_] You can create a config file. By default, `ALT` will search the output directory for `config.json`, but you can specify a path directly using 
+[_optional_] You can create a config file. By default, ALT will search the output directory for `config.json`, but you can specify a path directly using 
 `--config-file`. 
 Example 
 config:
@@ -281,20 +281,27 @@ Internally, there is currently nothing in the prompt about this. I've tested wit
 Please submit an issue if it causes you any trouble.
 
 ## Translation rules
-When does ALT translate a given source string? Translation will occur for a given target language & reference key/value if any of the following are true:
+Under what conditions will ALT translate a given source string?
+
+Translation will occur for a given target language & reference key/value if any of the following are true:
+
 * The output file does not exist
+  * Example: You're translating to target language _zh-Hans_ and `zh-Hans.json` doesn't exist
 * The output file is missing the reference key
+  * Example: You're translating reference key _error-msg_ to target language _zh-Hant.jso_ and `zh-Hans.json` does not have a key/value pair for key _error-msg_
 * The reference value was modified
-* A context value for the given target language/key is found and has been modified.
+  * Example: You change the value of _some-key_ in your reference file
+* A context value for the given target language/key is found and has been modified
+  * Example: You modify the value of _context:error-msg_ in your reference file. _error-msg_ will be re-translated for all target languages.
 * `-f` or `--force` are specified
 * The cache file (`.localization.cache.json`) is not present
 
-Translation will _not_ occur if `alt` detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated
+NOTE: Translation will _not_ occur if ALT detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated
 later, you can just delete that key/value pair from the given file.
 
 ## Additional notes
 ### Delayed vs. realtime writes
-By default, `alt` will not write to disk until the tool is shutting down (including SIGTERM &ndash; yes, `Ctrl+C` is safe).
+By default, ALT will not write to disk until the tool is shutting down (including SIGTERM &ndash; yes, `Ctrl+C` is safe).
 
 This behavior is useful if your application is monitoring the output directory and you don't want your server 
 constantly restarting, for example.
