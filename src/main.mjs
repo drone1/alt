@@ -111,7 +111,7 @@ export async function run() {
 				.option('-c, --config-file <path>', `Path to config file; defaults to <output dir>/${DEFAULT_CONFIG_FILENAME}`)
 				.option('-rl, --reference-language <language>', `The reference file's language; overrides any 'referenceLanguage' config setting`)
 				.option('-o, --output-dir <path>', 'Output directory for localized files')
-				.option('-l, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
+				.option('-tl, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
 				.option('-k, --keys <list>', 'Comma-separated list of keys to process', keyList)
 				.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
 				.option('-m, --app-context-message <message>', `Description of your app to give context. Passed with each translation request; overrides any 'appContextMessage' config setting`)
