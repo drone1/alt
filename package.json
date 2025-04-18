@@ -8,6 +8,10 @@
     "alt": "./alt.mjs"
   },
   "scripts": {
+    "test": "ALT_TEST=1 mocha",
+    "test:targeted": "ALT_TEST=1 mocha --grep 'multiple target'",
+    "test": "ALT_TEST=1 mocha",
+    "test:coverage": "ALT_TEST=1 nyc mocha",
     "localize-display-strings": "./alt.mjs translate --reference-file localization/reference.js",
     "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt",
     "generate-toc": "./scripts/gh-md-toc --insert README.md && rm -f README.md.orig.* README.md.toc.* && echo '\n**README.md updated with new table of contents**'"
@@ -46,5 +50,19 @@
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "execa": "^9.5.2",
+    "mocha": "^11.1.0",
+    "nyc": "^17.1.0"
   }
 }

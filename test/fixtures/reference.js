@@ -1,0 +1,5 @@
+export default {
+	'msg-test': `Nothing to do`,
+	'error-finished': `Finished with %%errorsEncountered%% error%%s%%`,
+  '_context:msg-finished': `This is a message displayed at the end of the app run`
+}

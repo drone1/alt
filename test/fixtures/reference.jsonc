@@ -1,0 +1,8 @@
+{
+  // Some great stuff here
+	"msg-test": "Nothing to do",
+	"error-finished": "Finished with %%errorsEncountered%% error%%s%%",
+
+  // Context keys
+  "_context:msg-finished": "This is a message displayed at the end of the app run"
+}
