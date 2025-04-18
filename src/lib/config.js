@@ -16,7 +16,7 @@ export async function loadConfig({ configFile, refFileDir, log }) {
 	return await readJsonFile(configFilePath) || {
 		provider: null,
 		targetLanguages: [],
-		lookForContextData: true,
+		lookForContextData: false,
 		contextPrefix: '',
 		contextSuffix: '',
 		referenceLanguage: null,
