@@ -134,3 +134,8 @@ export function dirExists(dir, log) {
 	}
 }
 
+export function ensureDir(dir, log) {
+	if (dirExists(dir, log)) return
+	fs.mkdirSync(dir, { recursive: true })
+}
+
