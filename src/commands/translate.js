@@ -123,6 +123,8 @@ export async function runTranslation({ appState, options, log }) {
 		const { apiKey, api: translationProvider } = await loadTranslationProvider({ __dirname: appState.__dirname, providerName, log })
 		log.V(`translation provider "${providerName}" loaded`)
 
+		log.D(`options.lookForContextData=${options.lookForContextData}`)
+		log.D(`config.lookForContextData=${config.lookForContextData}`)
 		const addContextToTranslation = options.lookForContextData || config.lookForContextData
 
 		const workQueue = []
