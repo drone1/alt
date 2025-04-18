@@ -23,10 +23,10 @@
    * [Display language](#display-language)
    * [Usage](#usage)
    * [Examples](#examples)
-      * [Example I](#example-i)
+      * [Example I: ALT's localized display strings](#example-i-alts-localized-display-strings)
       * [Example II](#example-ii)
       * [Example III](#example-iii)
-      * [Example: ALT's localized display strings](#example-alts-localized-display-strings)
+      * [Example III](#example-iii-1)
    * [Formatting](#formatting)
    * [Translation rules](#translation-rules)
    * [Additional notes](#additional-notes)
@@ -37,7 +37,7 @@
    * [Feedback](#feedback)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: jonl, at: Fri Apr 18 09:28:38 PM CEST 2025 -->
+<!-- Added by: jonl, at: Fri Apr 18 09:55:42 PM CEST 2025 -->
 
 <!--te-->
 
