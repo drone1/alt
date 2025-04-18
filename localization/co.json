@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Impossibile caricare il file di riferimento \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Mudellu LLM invalidu specificatu: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "O u prefissu di cuntestu o u suffissu di cuntestu deve esse definitu",
-  "error-unknown-provider": "Fornitore scunnisciutu \"%%providerName%%\". Fornitori supportati: %%validTranslationProviders%%",
+  "error-unknown-provider": "Fornitore scunnisciutu \"%%providerName%%\".",
   "error-no-reference-language": "Nisun linguaghju di riferimentu specificatu. Aduprate l'opzione --reference-language o aghjunghjite 'referenceLanguage' à u vostru schedariu di cunfigurazione.",
   "error-no-target-languages": "Nisun lingua di destinazione specificata. Usate l'opzione --target-languages o aghjunghjite 'targetLanguages' à u vostru schedariu di cunfigurazione.",
-  "error-no-reference-data-in-variable": "Nisun dati di riferimentu truvatu in a variabile \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Nisun dati di riferimentu truvatu in a variabile \"%%referenceExportedVarName%%\" in \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Nisun fornitore specificatu.",
+  "error-copying-file-to-temp-dir": "Errore copiendu u schedariu à u cartulare tempurariu: %%error%%",
+  "supported-providers": "I pruveditori supportati sò: %%providers%%"
 }

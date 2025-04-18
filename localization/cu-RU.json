@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Не можахъ възложити датотеку исходьнꙑю \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Недѣйствительный LLM модель определена: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Вѣди сѧ либо̀ прѣдлогъ контекста, либо̀ оконьчаніе контекста доложено быти опредѣлено",
-  "error-unknown-provider": "Невѣдомъ провайдеръ \"%%providerName%%\". Поддерживаеми провайдери: %%validTranslationProviders%%",
+  "error-unknown-provider": "Невѣдомъ творьца \"%%providerName%%\".",
   "error-no-reference-language": "Не указанъ ѩзыкъ оригинала. Используйте опцію --reference-language или добавите 'referenceLanguage' въ вашъ конфигураційный файлъ.",
   "error-no-target-languages": "Не указаны языки перевода. Используйте опцию --target-languages или добавьте 'targetLanguages' в ваш конфигурационный файл.",
-  "error-no-reference-data-in-variable": "Не обрѣтеноѥ исхоженіѥ данныхъ въ переменной \"%%referenceExportedVarName%%\" въ \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Не обрѣтеноѥ исхоженіѥ данныхъ въ переменной \"%%referenceExportedVarName%%\" въ \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Не указанъ провайдеръ.",
+  "error-copying-file-to-temp-dir": "Ошибъ ꙗко копировати дѣло въ временнꙑи каталогъ: %%error%%",
+  "supported-providers": "Поддържани доставчици сѫтъ: %%providers%%"
 }

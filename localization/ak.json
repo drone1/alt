@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ɛnyɛ sɛ ɛbɛtwe abakɔsua fael \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Mfomso LLM a wɔahyehyɛ no nni mfaso: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Ebia na context prefix anaa context suffix no sɛɛso na wɔdefinii no.",
-  "error-unknown-provider": "Provider a ennim \"%%providerName%%\". Providers a wɔtumi ma no: %%validTranslationProviders%%",
+  "error-unknown-provider": "Provider a ennim \"%%providerName%%\".",
   "error-no-reference-language": "Ɛnsi kasa a ɛyɛ adanse no. Fa --reference-language nhwɛso anaa kyerɛw 'referenceLanguage' wɔ wo config fael mu.",
   "error-no-target-languages": "Wɔnhwɛ asɛm biara a wɔde bɛkyerɛ. Fa --target-languages nhwɛso anaa kyerɛ 'targetLanguages' wɔ wo config fael mu.",
-  "error-no-reference-data-in-variable": "Ennhu sɛdeɛ biara wɔ \"%%referenceExportedVarName%%\" mu wɔ \"%%referenceFile%%\" mu"
+  "error-no-reference-data-in-variable": "Ennhu sɛdeɛ biara wɔ \"%%referenceExportedVarName%%\" mu wɔ \"%%referenceFile%%\" mu",
+  "error-no-provider-specified": "Ɛnnye onipa bi a ɔde bɛkyerɛ.",
+  "error-copying-file-to-temp-dir": "Nkɔmbɔ afa fael no kɔ temp dɛrɛktri no mu: %%error%%",
+  "supported-providers": "Ahwɛfo a wɔtwerɛ no yɛ: %%providers%%"
 }

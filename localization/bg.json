@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Неуспешно зареждане на файл с референции \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Указан е невалиден модел LLM: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Трябва да бъде дефиниран или префиксът на контекста, или суфиксът на контекста.",
-  "error-unknown-provider": "Неизвестен доставчик \"%%providerName%%\". Поддържани доставчици: %%validTranslationProviders%%",
+  "error-unknown-provider": "Неизвестен доставчик \"%%providerName%%\".",
   "error-no-reference-language": "Не е посочен език за референция. Използвайте опцията --reference-language или добавете 'referenceLanguage' към конфигурационния си файл.",
   "error-no-target-languages": "Не са посочени целеви езици. Използвайте опцията --target-languages или добавете 'targetLanguages' към вашия конфигурационен файл.",
-  "error-no-reference-data-in-variable": "Не са намерени референтни данни в променлива \"%%referenceExportedVarName%%\" в \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Не са намерени референтни данни в променлива \"%%referenceExportedVarName%%\" в \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Не е посочен доставчик.",
+  "error-copying-file-to-temp-dir": "Грешка при копиране на файла във временната директория: %%error%%",
+  "supported-providers": "Поддържани доставчици са: %%providers%%"
 }

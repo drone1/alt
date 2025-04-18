@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "የማጣቀሻ ፋይል \"%%referenceFile%%\" መጫን አልተሳካም",
   "error-invalid-llm-model": "የተሳሳተ የLLM ሞዴል ተጠቀሰ: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "ከኮንቴክስት ፒርፌክስ ወይም ኮንቴክስት ሱፊክስ አንዱ መታወቅ አለበት",
-  "error-unknown-provider": "ያልታወቀ አቅራቢ \"%%providerName%%\"። የተደገፉ አቅራቢዎች፡ %%validTranslationProviders%%",
+  "error-unknown-provider": "ያልታወቀ አቅራቢ \"%%providerName%%\"።",
   "error-no-reference-language": "በምንም ምንቸኛ ቋንቋ አልተጠናቀቀም። እባክዎን የ--reference-language አማራጭን ይጠቀሙ ወይም 'referenceLanguage' እንዲጨመር በኮንፊግ ፋይልዎ ያክሉ።",
   "error-no-target-languages": "ተጠቃሚ ቋንቋዎች አልተገለጹም። እባኮትን የተጠቃሚ ቋንቋዎች አማራጭ ይጠቀሙ ወይም 'targetLanguages' እንዲጨመር በኮንፊግ ፋይልዎ ያክሉ",
-  "error-no-reference-data-in-variable": "በ \"%%referenceFile%%\" ውስጥ በተለያዩ ተለዋዋጭ \"%%referenceExportedVarName%%\" ምንም አገናኝ መረጃ አልተገኘም።"
+  "error-no-reference-data-in-variable": "በ \"%%referenceFile%%\" ውስጥ በተለያዩ ተለዋዋጭ \"%%referenceExportedVarName%%\" ምንም አገናኝ መረጃ አልተገኘም።",
+  "error-no-provider-specified": "አንድም አቅራቢ አልተጠናቀቀም።",
+  "error-copying-file-to-temp-dir": "ፋይልን ወደ ተረኛ ማውጫ መቅዳት ላይ ስህተት አለ: %%error%%",
+  "supported-providers": "የተደገፉ አገልጋቢዎች ናቸው፡ %%providers%%"
 }

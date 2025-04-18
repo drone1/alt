@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "འཛུལ་ཡིག་ཡིག་ཆ་ \"%%referenceFile%%\" སྣོན་པར་མ་ཐུབ།",
   "error-invalid-llm-model": "ནུས་མེད་ལོ་གྲིག་བཀོད་པ་བཙུགས་ཡོད། %%model%%",
   "error-context-prefix-and-suffix-not-defined": "དཀར་ཆག་གི་རྩིས་འགྲེལ་ཡང་ན་དཀར་ཆག་གི་རྩིས་འགྲེལ་མཐའ་མཚམས་གཅིག་ནི་ངེས་པར་བཀག་དགོས།",
-  "error-unknown-provider": "མི་ཤེས་པའི་འགོ་བཙུགས་པ་ \"%%providerName%%\"། རྩིས་ལག་འགོ་བཙུགས་པ་རྣམས་: %%validTranslationProviders%%",
+  "error-unknown-provider": "མེད་པའི་བཅུད་མཁན་ \"%%providerName%%\"།",
   "error-no-reference-language": "མིང་བསྡུ་སྐད་ཡིག་གསལ་བཤད་མ་བཀོད་པས། --reference-language གདམ་ཁ་བཀོལ་ནས། ཁྱེད་ཀྱི་སྒྲིག་བཀོད་ཡིག་ཆ་འདིར 'referenceLanguage' གསལ་བཤད་དགོས།",
   "error-no-target-languages": "མཐའ་མེད་སྐད་ཡིག་གནས་བཀོད་མེད་པས། --target-languages གདམ་ཁ་བཀོག་འགོད་དགོས་མཁོ་འགོ་བཙུགས་ནི་ཡང་ན་ 'targetLanguages' ཁྱེད་ཀྱི་སྒྲིག་སྒྲིག་ཡིག་ཆ་ནང་བསྐོར་བཞག་གནང་།",
-  "error-no-reference-data-in-variable": "མིང་ཚིག་གིས་ \"%%referenceExportedVarName%%\" ནང་འདི་ནང་གི་ \"%%referenceFile%%\" ནང་ལུ་གསལ་བཤད་གྲངས་མི་ཐོབ།"
+  "error-no-reference-data-in-variable": "མིང་ཚིག་གིས་ \"%%referenceExportedVarName%%\" ནང་འདི་ནང་གི་ \"%%referenceFile%%\" ནང་ལུ་གསལ་བཤད་གྲངས་མི་ཐོབ།",
+  "error-no-provider-specified": "གསལ་འཛིན་མེད།",
+  "error-copying-file-to-temp-dir": "ཡིག་ཆ་བརྗེ་བའི་ནུས་གསོག་ཁང་ལུ་བཙུགས་ནི་འཛོལ་བ།: %%error%%",
+  "supported-providers": "རྩིས་འཛིན་གྲོགས་པ་རྣམས་ནི། %%providers%%"
 }

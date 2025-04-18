@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "فشل في تحميل ملف المرجع \"%%referenceFile%%\"",
   "error-invalid-llm-model": "تم تحديد نموذج LLM غير صالح: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "يجب تعريف إما بادئة السياق أو لاحقة السياق",
-  "error-unknown-provider": "مزود غير معروف \"%%providerName%%\". المزودون المدعومون: %%validTranslationProviders%%",
+  "error-unknown-provider": "مزود غير معروف \"%%providerName%%\".",
   "error-no-reference-language": "لم يتم تحديد لغة مرجعية. استخدم خيار --reference-language أو أضف 'referenceLanguage' إلى ملف التكوين الخاص بك.",
   "error-no-target-languages": "لم يتم تحديد لغات الهدف. استخدم خيار --target-languages أو أضف 'targetLanguages' إلى ملف التكوين الخاص بك.",
-  "error-no-reference-data-in-variable": "لم يتم العثور على بيانات مرجعية في المتغير \"%%referenceExportedVarName%%\" في \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "لم يتم العثور على بيانات مرجعية في المتغير \"%%referenceExportedVarName%%\" في \"%%referenceFile%%\"",
+  "error-no-provider-specified": "لم يتم تحديد مزود.",
+  "error-copying-file-to-temp-dir": "خطأ في نسخ الملف إلى المجلد المؤقت: %%error%%",
+  "supported-providers": "المزودون المدعومون هم: %%providers%%"
 }

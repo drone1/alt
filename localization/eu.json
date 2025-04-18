@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ezin izan da \"%%referenceFile%%\" erreferentzia fitxategia kargatu",
   "error-invalid-llm-model": "Zehaztutako LLM eredua baliogabea da: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Kontextuaren aurrizkia edo atzizkia definitu behar da.",
-  "error-unknown-provider": "Ezezaguneko hornitzailea \"%%providerName%%\". Onartutako hornitzaileak: %%validTranslationProviders%%.",
+  "error-unknown-provider": "Ezezaguna den hornitzailea \"%%providerName%%\".",
   "error-no-reference-language": "Ez da erreferentziazko hizkuntzarik zehaztu. Erabili --reference-language aukera edo gehitu 'referenceLanguage' zure konfigurazio fitxategian.",
   "error-no-target-languages": "Ez da helburu-hizkuntzarik zehaztu. Erabili --target-languages aukera edo gehitu 'targetLanguages' zure konfigurazio-fitxategian.",
-  "error-no-reference-data-in-variable": "Ez da erreferentzia-daturik aurkitu \"%%referenceExportedVarName%%\" aldagaian \"%%referenceFile%%\" fitxategian."
+  "error-no-reference-data-in-variable": "Ez da erreferentzia-daturik aurkitu \"%%referenceExportedVarName%%\" aldagaian \"%%referenceFile%%\" fitxategian.",
+  "error-no-provider-specified": "Ez da hornitzaile zehatzik zehaztu.",
+  "error-copying-file-to-temp-dir": "Fitxategia aldi baterako direktoriora kopiatzean errorea: %%error%%",
+  "supported-providers": "Onartutako hornitzaileak hauek dira: %%providers%%"
 }

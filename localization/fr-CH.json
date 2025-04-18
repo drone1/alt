@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Échec du chargement du fichier de référence \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Modèle LLM invalide spécifié : %%model%%",
   "error-context-prefix-and-suffix-not-defined": "L'un ou l'autre du préfixe de contexte ou du suffixe de contexte doit être défini.",
-  "error-unknown-provider": "Fournisseur inconnu \"%%providerName%%\". Fournisseurs pris en charge : %%validTranslationProviders%%.",
+  "error-unknown-provider": "Fournisseur inconnu \"%%providerName%%\".",
   "error-no-reference-language": "Aucune langue de référence spécifiée. Utilisez l'option --reference-language ou ajoutez 'referenceLanguage' à votre fichier de configuration.",
   "error-no-target-languages": "Aucune langue cible spécifiée. Utilisez l'option --target-languages ou ajoutez 'targetLanguages' à votre fichier de configuration.",
-  "error-no-reference-data-in-variable": "Aucune donnée de référence trouvée dans la variable \"%%referenceExportedVarName%%\" dans \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Aucune donnée de référence trouvée dans la variable \"%%referenceExportedVarName%%\" dans \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Aucun fournisseur spécifié.",
+  "error-copying-file-to-temp-dir": "Erreur lors de la copie du fichier dans le répertoire temporaire : %%error%%",
+  "supported-providers": "Les fournisseurs pris en charge sont : %%providers%%"
 }

@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "ᎢᎦᏔᏍᏗ ᎦᏚᎩᏍᎩᏂᎨᏍᏗ ᎠᏍᏆᎢᏗ ᏗᏓᎴᏂᏍᏗ ᎠᏍᏆᎢᏗ \"%%referenceFile%%\"",
   "error-invalid-llm-model": "ᎤᏚᎵᏍᏗ ᎠᏍᏚᎢᏍᎬᎢ ᎠᏍᎦᏯ ᎤᏓᏅᏛ: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "ᎯᎠ ᎦᏚᎩ ᎤᏙᏢᎬ ᎠᎴ ᎦᏚᎩ ᎤᏙᏢᎸ ᎤᏍᏗ ᎤᏓᏅᏖ ᎠᏍᏆᏂᎪᏗᏍᎩ.",
-  "error-unknown-provider": "ᎣᏍᏛ ᎤᏚᏛᎢ ᎤᏙᏢᏒ \"%%providerName%%\". ᎤᏙᏢᏒ ᏗᎦᎸᏫᏍᎩ: %%validTranslationProviders%%",
+  "error-unknown-provider": "ᎣᏏᏲ ᎡᎶᎯ ᎠᏍᏓᏯᏍᏗ \"%%providerName%%\".",
   "error-no-reference-language": "ᎠᏂᏴᏫᏯ ᎦᏬᏂᎯᏍᏗ ᎤᏙᏢᎬ ᎤᏚᏛᎢ. ᎠᏍᏆᏂᎪᏗᏍᎩ --reference-language ᎦᏍᏗ ᎠᎴ ᎤᏙᏢᎬ 'referenceLanguage' ᎠᏂᎩᏚᏩᎩ ᏂᏚ ᎦᏙᎯ ᎦᏍᏗ ᎦᏙᎯᏳᎯ.",
   "error-no-target-languages": "ᎾᏍᏕᎸᎢ ᏗᎪᏪᎵ ᎤᏁᎦᏍᏗ ᎤᏚᏛᏛᎢᏍᏗ ᎠᏂᏴᏫᏯ. ᎠᏍᎦᎾᏍᏗ --target-languages ᎠᏍᎦᎾᏍᏗ ᎠᎴ ᏓᎦᏘᏏᏍᎩ 'targetLanguages' ᏗᏕᎬᏔᏅᎢ ᎤᏂᏣᎳᎩᏍᎩ ᏗᏕᏘᏴᏒ ᎦᏙᎯ.",
-  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" ᎠᏂᎩᏚᏢᎢ ᎤᏪᏘ ᎤᏓᏅᏖᎸᎢ \"%%referenceFile%%\" ᎠᏂᎩᏚᏢᎢ ᎤᏪᏘ ᎤᏓᏅᏖᎸᎢ"
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" ᎠᏂᎩᏚᏢᎢ ᎤᏪᏘ ᎤᏓᏅᏖᎸᎢ \"%%referenceFile%%\" ᎠᏂᎩᏚᏢᎢ ᎤᏪᏘ ᎤᏓᏅᏖᎸᎢ",
+  "error-no-provider-specified": "ᎩᏄᎩ ᎤᏂᏚᏍᏗ ᎤᎾᏓᏡᎬ ᎤᏪᏥ ᎤᏍᏗ ᎢᏳᏍᏗ ᎾᏍᏛ ᎤᏙᏢᎩ.",
+  "error-copying-file-to-temp-dir": "ᎤᏩᏒᎢ ᎠᏰᎵᏍᏗᏍᎩ ᎠᏂᏴᏫ ᎤᏪᏥ ᎤᏓᏅᏘ ᎠᏍᎦᏯᎢ: %%error%%",
+  "supported-providers": "ᎡᎬ ᏗᏂᏍᏗᎢ ᎤᏙᏢᎩᏍᎩᏂᎨᏒᎢ ᎠᏂᎦᏙᎯ: %%providers%%"
 }

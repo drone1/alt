@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Napakyas sa pag-load sa reference file nga \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Wala'y balido nga LLM modelo nga gitakda: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Kinahanglan nga i-define ang konteksto nga prefix o konteksto nga suffix.",
-  "error-unknown-provider": "Wala mailhi nga provider \"%%providerName%%\". Mga suportadong provider: %%validTranslationProviders%%",
+  "error-unknown-provider": "Wala mailhi nga provider \"%%providerName%%\".",
   "error-no-reference-language": "Wala'y gitakda nga pinulongan nga reperensya. Gamita ang opsyon nga --reference-language o idugang ang 'referenceLanguage' sa imong file sa config.",
   "error-no-target-languages": "Walay gipunting nga mga pinulongan. Gamita ang --target-languages nga kapilian o idugang ang 'targetLanguages' sa imong config file.",
-  "error-no-reference-data-in-variable": "Walay nakitang datos sa pakisayran sa variable nga \"%%referenceExportedVarName%%\" sa \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Walay nakitang datos sa pakisayran sa variable nga \"%%referenceExportedVarName%%\" sa \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Walay provider nga giila.",
+  "error-copying-file-to-temp-dir": "Sayop sa pagkopya sa file ngadto sa temp directory: %%error%%",
+  "supported-providers": "Ang mga suportadong provider mao ang: %%providers%%"
 }

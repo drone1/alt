@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Falló al cargar el ficheru de referencia \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Modelu LLM inválidu especificáu: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Tien de definise o'l prefixu de contestu o'l sufixu de contestu.",
-  "error-unknown-provider": "Proveedor desconocíu \"%%providerName%%\". Proveedores soportaos: %%validTranslationProviders%%",
+  "error-unknown-provider": "Proveedor desconocíu \"%%providerName%%\".",
   "error-no-reference-language": "Nun s'especificó llingua de referencia. Usa la opción --reference-language o amiesta 'referenceLanguage' al to ficheru de configuración.",
   "error-no-target-languages": "Nun s'especificaron llingües destín. Usa la opción --target-languages o amiesta 'targetLanguages' al to ficheru de configuración.",
-  "error-no-reference-data-in-variable": "Nun s'atoparon datos de referencia na variable \"%%referenceExportedVarName%%\" en \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Nun s'atoparon datos de referencia na variable \"%%referenceExportedVarName%%\" en \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Nun se especificó nengún provisor.",
+  "error-copying-file-to-temp-dir": "Error al copiar el ficheru al direutoriu temporal: %%error%%",
+  "supported-providers": "Los proveedores compatibles son: %%providers%%"
 }

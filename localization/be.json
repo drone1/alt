@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Не ўдалося загрузіць файл спасылкі \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Няправільная мадэль LLM пазначана: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Альбо прэфікс кантэксту, альбо суфікс кантэксту павінен быць вызначаны.",
-  "error-unknown-provider": "Невядомы пастаўшчык \"%%providerName%%\". Падтрымліваюцца пастаўшчыкі: %%validTranslationProviders%%.",
+  "error-unknown-provider": "Невядомы пастаўшчык \"%%providerName%%\".",
   "error-no-reference-language": "Не пазначана мова арыгіналу. Выкарыстоўвайце опцыю --reference-language або дадайце 'referenceLanguage' у ваш канфігурацыйны файл.",
   "error-no-target-languages": "Не пазначаны мэтавыя мовы. Выкарыстоўвайце опцыю --target-languages або дадайце 'targetLanguages' у ваш канфігурацыйны файл.",
-  "error-no-reference-data-in-variable": "Не знойдзеныя дадзеныя для спасылкі ў зменнай \"%%referenceExportedVarName%%\" у \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Не знойдзеныя дадзеныя для спасылкі ў зменнай \"%%referenceExportedVarName%%\" у \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Не пазначаны правайдар.",
+  "error-copying-file-to-temp-dir": "Памылка капіявання файла ў часовы каталог: %%error%%",
+  "supported-providers": "Падтрымліваюцца наступныя правайдэры: %%providers%%"
 }

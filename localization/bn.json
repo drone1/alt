@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "\"%%referenceFile%%\" রেফারেন্স ফাইল লোড করতে ব্যর্থ হয়েছে",
   "error-invalid-llm-model": "অবৈধ LLM মডেল নির্দিষ্ট করা হয়েছে: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "প্রেক্ষাপট উপসর্গ অথবা প্রেক্ষাপট প্রত্যয় অবশ্যই নির্ধারিত হতে হবে",
-  "error-unknown-provider": "অজানা প্রদানকারী \"%%providerName%%\"। সমর্থিত প্রদানকারীগণ: %%validTranslationProviders%%",
+  "error-unknown-provider": "অজানা প্রদানকারী \"%%providerName%%\".",
   "error-no-reference-language": "কোনো রেফারেন্স ভাষা নির্দিষ্ট করা হয়নি। --reference-language অপশন ব্যবহার করুন অথবা আপনার কনফিগ ফাইলে 'referenceLanguage' যোগ করুন।",
   "error-no-target-languages": "কোনো লক্ষ্য ভাষা নির্দিষ্ট করা হয়নি। --target-languages অপশন ব্যবহার করুন অথবা আপনার কনফিগ ফাইলে 'targetLanguages' যোগ করুন।",
-  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" চলকে \"%%referenceFile%%\" ফাইলে কোনো রেফারেন্স ডেটা পাওয়া যায়নি।"
+  "error-no-reference-data-in-variable": "\"%%referenceExportedVarName%%\" চলকে \"%%referenceFile%%\" ফাইলে কোনো রেফারেন্স ডেটা পাওয়া যায়নি।",
+  "error-no-provider-specified": "কোনো প্রদানকারী নির্দিষ্ট করা হয়নি।",
+  "error-copying-file-to-temp-dir": "টেম্প ডিরেক্টরিতে ফাইল কপি করতে গিয়ে ত্রুটি: %%error%%",
+  "supported-providers": "সমর্থিত প্রদানকারীরা হলেন: %%providers%%"
 }

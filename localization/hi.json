@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "\"%%referenceFile%%\" संदर्भ फ़ाइल लोड करने में विफल",
   "error-invalid-llm-model": "अमान्य LLM मॉडल निर्दिष्ट: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "या तो संदर्भ उपसर्ग या संदर्भ प्रत्यय निर्धारित होना चाहिए",
-  "error-unknown-provider": "अज्ञात प्रदाता \"%%providerName%%\"। समर्थित प्रदाता: %%validTranslationProviders%%",
+  "error-unknown-provider": "अज्ञात प्रदाता \"%%providerName%%\".",
   "error-no-reference-language": "कोई संदर्भ भाषा निर्दिष्ट नहीं की गई है। '--reference-language' विकल्प का उपयोग करें या अपनी कॉन्फ़िग फ़ाइल में 'referenceLanguage' जोड़ें।",
   "error-no-target-languages": "कोई लक्षित भाषाएं निर्दिष्ट नहीं हैं। --target-languages विकल्प का उपयोग करें या अपनी कॉन्फ़िग फ़ाइल में 'targetLanguages' जोड़ें।",
-  "error-no-reference-data-in-variable": "चर \"%%referenceExportedVarName%%\" में \"%%referenceFile%%\" से कोई संदर्भ डेटा नहीं मिला।"
+  "error-no-reference-data-in-variable": "चर \"%%referenceExportedVarName%%\" में \"%%referenceFile%%\" से कोई संदर्भ डेटा नहीं मिला।",
+  "error-no-provider-specified": "कोई प्रदाता निर्दिष्ट नहीं है।",
+  "error-copying-file-to-temp-dir": "फ़ाइल को टेम्प डायरेक्टरी में कॉपी करने में त्रुटि: %%error%%",
+  "supported-providers": "समर्थित प्रदाता हैं: %%providers%%"
 }

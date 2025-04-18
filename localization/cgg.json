@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Tikashobora kuteekamu fayiro y'okureeberaho \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Eky'obushomerwamu bwa LLM ekirondwa tekirikukwatagana: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Obwo oba orikukira omuzaaro oba omuzaaro omukyanya ogu omu nikikwatirwe.",
-  "error-unknown-provider": "Ekitagata ekitaikirizibwa \"%%providerName%%\". Ebitagata ebishemereirwe: %%validTranslationProviders%%",
+  "error-unknown-provider": "Ekitangaaza ekitamanywa \"%%providerName%%\".",
   "error-no-reference-language": "Tihariire rurimi rw'okureberaho. Koresha --reference-language oba ongeza 'referenceLanguage' mu fayiro yawe ya config.",
   "error-no-target-languages": "Ntaaba z'orurimi z'okuhinduriraho tiine. Koresha --target-languages oba ongye 'targetLanguages' omu fayiro yawe ya config.",
-  "error-no-reference-data-in-variable": "Ntihaine amakuru agereranywa agafatirwaho mu murimo \"%%referenceExportedVarName%%\" muri \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Ntihaine amakuru agereranywa agafatirwaho mu murimo \"%%referenceExportedVarName%%\" muri \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Tihariho omuhereza atarikwatsirwe.",
+  "error-copying-file-to-temp-dir": "Ekyapa kikashobire kuhindurwa omu folda ya temp: %%error%%",
+  "supported-providers": "Abahingi b'obuhingi abashigikirwe nibo: %%providers%%"
 }

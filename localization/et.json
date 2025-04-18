@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ei õnnestunud laadida viitefaili \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Määratud LLM-mudel on kehtetu: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Kas konteksti prefiks või konteksti sufiks peab olema määratletud",
-  "error-unknown-provider": "Tundmatu teenusepakkuja \"%%providerName%%\". Toetatud teenusepakkujad: %%validTranslationProviders%%",
+  "error-unknown-provider": "Tundmatu teenusepakkuja \"%%providerName%%\".",
   "error-no-reference-language": "Määratlemata viitekeel. Kasutage --reference-language valikut või lisage 'referenceLanguage' oma konfiguratsioonifaili.",
   "error-no-target-languages": "Sihtkeelti pole määratud. Kasutage --target-languages valikut või lisage 'targetLanguages' oma konfiguratsioonifaili.",
-  "error-no-reference-data-in-variable": "Muutujas \"%%referenceExportedVarName%%\" failis \"%%referenceFile%%\" ei leitud viiteandmeid."
+  "error-no-reference-data-in-variable": "Muutujas \"%%referenceExportedVarName%%\" failis \"%%referenceFile%%\" ei leitud viiteandmeid.",
+  "error-no-provider-specified": "Tarnija määramata.",
+  "error-copying-file-to-temp-dir": "Viga faili kopeerimisel ajutisse kausta: %%error%%",
+  "supported-providers": "Toetatud pakkujad on: %%providers%%"
 }

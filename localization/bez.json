@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Imeshindikana kupakia faili ya marejeo \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Mfano wa LLM uliotajwa si sahihi: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Imwe kati ya kiambishi awali cha muktadha au kiambishi tamati cha muktadha lazima kiwe kimetajwa.",
-  "error-unknown-provider": "Hajulikani mtoa huduma \"%%providerName%%\". Watoa huduma wanaoungwa mkono: %%validTranslationProviders%%",
+  "error-unknown-provider": "Mtoa huduma asiyefahamika \"%%providerName%%\".",
   "error-no-reference-language": "Hakuna lugha ya rejea iliyotajwa. Tumia chaguo la --reference-language au ongeza 'referenceLanguage' kwenye faili yako ya usanidi.",
   "error-no-target-languages": "Hakuna lugha lengwa iliyobainishwa. Tumia chaguo la --target-languages au ongeza 'targetLanguages' kwenye faili yako ya usanidi.",
-  "error-no-reference-data-in-variable": "Hakuna data ya rejea iliyopatikana katika kigezo \"%%referenceExportedVarName%%\" katika \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Hakuna data ya rejea iliyopatikana katika kigezo \"%%referenceExportedVarName%%\" katika \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Hakuna mtandao uliotajwa.",
+  "error-copying-file-to-temp-dir": "Kosa la kunakili faili kwenda kwenye direktori ya muda: %%error%%",
+  "supported-providers": "Watozaji wanaoungwa mkono ni: %%providers%%"
 }

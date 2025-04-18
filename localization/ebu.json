@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ekwesịghị ibudata faịlụ ntụaka \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Ejighị LLM nlereanya a kpọtụrụ aha: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Otu n'ime ihe ndabere mbido ma ọ bụ ihe ndabere njedebe ga-akọwapụta.",
-  "error-unknown-provider": "Onye na-enye ọrụ amaghị \"%%providerName%%\". Ndị na-enye ọrụ a kwadoro: %%validTranslationProviders%%",
+  "error-unknown-provider": "Aha na-enyeghị ama \"%%providerName%%\".",
   "error-no-reference-language": "Enweghị asụsụ ntụaka akọwapụtara. Jiri nhọrọ --reference-language ma ọ bụ tinye 'referenceLanguage' na faịlụ nhazi gị.",
   "error-no-target-languages": "Enweghị asụsụ ebumnuche akọwapụtara. Jiri nhọrọ --target-languages ma ọ bụ tinye 'targetLanguages' na faịlụ nhazi gị.",
-  "error-no-reference-data-in-variable": "Achọtaghị data ndị a na-ezo aka na ya na agbanwe \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Achọtaghị data ndị a na-ezo aka na ya na agbanwe \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Enweghị onye na-enye ọrụ a kpọtụrụ aha.",
+  "error-copying-file-to-temp-dir": "Njehie n'ịdetuo faịlụ na nchekwa temp: %%error%%",
+  "supported-providers": "Ndị na-enye ọrụ akwadoro bụ: %%providers%%"
 }

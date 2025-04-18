@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Elyamo ukulemba ifayile ya maziko \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Ukucita kwakupusikidwa kwa LLM: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Ukuchita prefix ya contexti kana suffix ya contexti kufunika kusankhika.",
-  "error-unknown-provider": "Ukupela kwa \"%%providerName%%\" kwakuti tukumanya. Abapela batuli: %%validTranslationProviders%%",
+  "error-unknown-provider": "Umupani \"%%providerName%%\" watamfwa.",
   "error-no-reference-language": "Palibe chiyankhulo chakubwerera chasonyezedwa. Gwiritsani ntchito --reference-language njira kapena onjezani 'referenceLanguage' ku fayilo yanu ya config.",
   "error-no-target-languages": "Palibe zilankhulo zomwe zasankhidwa. Gwiritsani ntchito njira ya --target-languages kapena onjezani 'targetLanguages' ku fayilo yanu ya config.",
-  "error-no-reference-data-in-variable": "Palibe data ya chikumbutso yapezeka mu variable \"%%referenceExportedVarName%%\" mu \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Palibe data ya chikumbutso yapezeka mu variable \"%%referenceExportedVarName%%\" mu \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Palibe mupereka wakusankhidwa.",
+  "error-copying-file-to-temp-dir": "Ukupoka ifayile ku temp directory: %%error%%",
+  "supported-providers": "Abapenipako abakondwelwa ni: %%providers%%"
 }

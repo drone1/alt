@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "\"%%referenceFile%%\" নামৰ ৰেফাৰেন্স ফাইলটো ল'ড কৰিবলৈ বিফল হ'ল।",
   "error-invalid-llm-model": "অবৈধ LLM মডেল নির্দিষ্ট কৰা হৈছে: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "প্ৰসংগ উপসৰ্গ বা প্ৰসংগ প্ৰত্যয় অৱশ্যে নিৰ্ধাৰিত হ'ব লাগিব",
-  "error-unknown-provider": "অজ্ঞাত প্ৰদানকাৰী \"%%providerName%%\"। সমৰ্থিত প্ৰদানকাৰীসকল: %%validTranslationProviders%%",
+  "error-unknown-provider": "অজ্ঞাত সরবরাহকাৰী \"%%providerName%%\"।",
   "error-no-reference-language": "কোনো উল্লেখ ভাষা নির্দিষ্ট কৰা হোৱা নাই। --reference-language বিকল্প ব্যৱহাৰ কৰক অথবা আপোনাৰ config ফাইলত 'referenceLanguage' যোগ কৰক।",
   "error-no-target-languages": "কোনো লক্ষ্য ভাষা নির্দিষ্ট কৰা নাই। --target-languages বিকল্প ব্যৱহাৰ কৰক অথবা আপোনাৰ config ফাইলত 'targetLanguages' যোগ কৰক।",
-  "error-no-reference-data-in-variable": "\"%%referenceFile%%\" ত চলিত \"%%referenceExportedVarName%%\" পৰিৱৰ্তনশীলত কোনো তথ্য পোৱা নগ'ল।"
+  "error-no-reference-data-in-variable": "\"%%referenceFile%%\" ত চলিত \"%%referenceExportedVarName%%\" পৰিৱৰ্তনশীলত কোনো তথ্য পোৱা নগ'ল।",
+  "error-no-provider-specified": "কোনো যোগানদাতা নির্দিষ্ট কৰা হোৱা নাই।",
+  "error-copying-file-to-temp-dir": "ফাইলটো টেম্প ডিৰেক্টৰীলৈ কপি কৰাৰ সময়ত ত্ৰুটি হৈছে: %%error%%",
+  "supported-providers": "সমর্থিত প্ৰদানকাৰীসমূহ হৈছে: %%providers%%"
 }

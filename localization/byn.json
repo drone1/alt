@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "ኣብ መጻኢ ምምሃብ ፋይል ምውሳድ ክኣለዎ ኣሎ \"%%referenceFile%%\"",
   "error-invalid-llm-model": "ልም ሞዴል ያልተፈቀደ ተጠቅሟል፡ %%model%%",
   "error-context-prefix-and-suffix-not-defined": "እቲ ኣብ መንእሰይ ወይ ኣብ መንእሰይ ድሕሪ ትእዛዝ ተወሲኑ ክኸውን እዩ",
-  "error-unknown-provider": "ዘይብሉ ኣቅራቢ \"%%providerName%%\"። ዝተደገፉ ኣቅራቢታት፡ %%validTranslationProviders%%",
+  "error-unknown-provider": "ምንም ኣባል \"%%providerName%%\" የለን።",
   "error-no-reference-language": "ይኣክል ቋንቋ ኣይተመርከበን። እቲ ኣማራጺ ቋንቋ ንመልክት ኣብ መደብ ክትጠቀም ወይ ኣብ ኮንፊግ ፋይልኻ 'referenceLanguage' ክትጨምር ኣለኻ።",
   "error-no-target-languages": "ተለዋዋጭ ቋንቋዎች አልተገለጹም። እባኮትን እንዲሁም በኮንፊግ ፋይልዎ ውስጥ 'targetLanguages' ያክሉ",
-  "error-no-reference-data-in-variable": "ኣብ ተለዋዋጭ \"%%referenceExportedVarName%%\" ኣብ ፋይል \"%%referenceFile%%\" ምእንታዊ መረዳእታ ኣይተረኽበን"
+  "error-no-reference-data-in-variable": "ኣብ ተለዋዋጭ \"%%referenceExportedVarName%%\" ኣብ ፋይል \"%%referenceFile%%\" ምእንታዊ መረዳእታ ኣይተረኽበን",
+  "error-no-provider-specified": "ምንባብ ኣይተመረፀን ኣሎ",
+  "error-copying-file-to-temp-dir": "ሕሳብ ፋይል ናብ ክሳድ ዳይሬክቶሪ ኣብ መንቀሳቀስካ ስሕተት፡ %%error%%",
+  "supported-providers": "ተደጋጋሚ ኣባላት እዚ እዮ፡ %%providers%%"
 }

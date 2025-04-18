@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "E kɛnɛ́ mɔ́ yí mɛ́lɛ \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Model LLM nyɛɛ nyɛɛ: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Bótɛ ná mɔ́tɔ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bíyɛlɛ́ bí",
-  "error-unknown-provider": "Bikaŋ bi amu \"%%providerName%%\". Bikaŋ bi amu na: %%validTranslationProviders%%",
+  "error-unknown-provider": "Mbënda esëm \"%%providerName%%\" so a sɔm.",
   "error-no-reference-language": "Esɛ́sɛ́ mɔ́nɔ́nɔ́ bɛ́ a bú nɛ́ mɔ́nɔ́nɔ́ mɛ́nɛ́. Sɔ́sɔ́ --reference-language mɔ́nɔ́nɔ́ bɛ́ tɔ́nɛ́ 'referenceLanguage' na fáílɛ mɔ́ config bú bɛ́.",
   "error-no-target-languages": "Ewɔn ɛsɛsɛ abɛ ba ndɔt aja. Sɔ --target-languages maŋgo ma ɔ bɛ 'targetLanguages' na faŋ fa config maŋgo na.",
-  "error-no-reference-data-in-variable": "Ewɔ́ déé mɔ́ ná mɔ́nɔ bɛ́ \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Ewɔ́ déé mɔ́ ná mɔ́nɔ bɛ́ \"%%referenceExportedVarName%%\" na \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Mbɔŋ botɛɛ nɛn mɔ.",
+  "error-copying-file-to-temp-dir": "Ero na kopí fayí na diresɛ́rɛ temp: %%error%%",
+  "supported-providers": "Batoŋ ba e pɛɛliŋɛ bɛ́: %%providers%%"
 }

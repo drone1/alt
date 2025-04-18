@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Unable to load reference file \"%%referenceFile%%\"",
   "error-invalid-llm-model": "Qaaqabe LLM model kee qusame: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Either taa context prefix or context suffix must be defined",
-  "error-unknown-provider": "Aanbieter \"%%providerName%%\" onbekend. Ondersteunde aanbieders: %%validTranslationProviders%%",
+  "error-unknown-provider": "Provider aan la aqoon \"%%providerName%%\".",
   "error-no-reference-language": "Maay t'abat qafar eroyti kak temeetele. Furti --reference-language amol raqik yab 'referenceLanguage' naharsi kak config faylal gabat.",
   "error-no-target-languages": "Maqaa afaanii kaayyoo hin ibsine. Filannoo --target-languages fayyadami yookiin 'targetLanguages' faayilii kee keessatti dabali.",
-  "error-no-reference-data-in-variable": "Maay tamaan kee data nabaadi goolii \"%%referenceExportedVarName%%\" akka \"%%referenceFile%%\" kee."
+  "error-no-reference-data-in-variable": "Maay tamaan kee data nabaadi goolii \"%%referenceExportedVarName%%\" akka \"%%referenceFile%%\" kee.",
+  "error-no-provider-specified": "Provider maqan.",
+  "error-copying-file-to-temp-dir": "Nuqul diqqita fayl ila dir temp: %%error%%",
+  "supported-providers": "Taageerayaasha la heli karo waa: %%providers%%"
 }

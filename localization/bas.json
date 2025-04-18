@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "Ntchito yolowetsa fayilo yotchulidwa \"%%referenceFile%%\" yapanda kupambana",
   "error-invalid-llm-model": "Eredu LLM baliogabea zehaztu da: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "Ewondo mɔ́ bɛ́ mɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ bɛ́ bɔ́ b",
-  "error-unknown-provider": "Ezin izan da \"%%providerName%%\" hornitzailea aurkitu. Onartutako hornitzaileak: %%validTranslationProviders%%",
+  "error-unknown-provider": "Fournisseur inconnu \"%%providerName%%\".",
   "error-no-reference-language": "Ez dago erreferentzia-hizkuntzarik zehaztu. Erabili --reference-language aukera edo gehitu 'referenceLanguage' zure konfigurazio fitxategian.",
   "error-no-target-languages": "Ez da helburu hizkuntzarik zehaztu. Erabili --target-languages aukera edo gehitu 'targetLanguages' zure konfigurazio fitxategian.",
-  "error-no-reference-data-in-variable": "Ez da erreferentzia datuak aurkitu aldagai honetan \"%%referenceExportedVarName%%\" fitxategi honetan \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "Ez da erreferentzia datuak aurkitu aldagai honetan \"%%referenceExportedVarName%%\" fitxategi honetan \"%%referenceFile%%\"",
+  "error-no-provider-specified": "Ez da hornitzaile zehatzik zehaztu.",
+  "error-copying-file-to-temp-dir": "Errorea fitxategia temp direktoriora kopiatzean: %%error%%",
+  "supported-providers": "Fournisseurs pris en charge : %%providers%%"
 }

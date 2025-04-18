@@ -29,8 +29,11 @@
   "error-reference-file-load-failed": "No s'ha pogut carregar el fitxer de referència \"%%referenceFile%%\"",
   "error-invalid-llm-model": "S'ha especificat un model LLM no vàlid: %%model%%",
   "error-context-prefix-and-suffix-not-defined": "O bé el prefix de context o bé el sufix de context s'ha de definir.",
-  "error-unknown-provider": "Proveïdor desconegut \"%%providerName%%\". Proveïdors suportats: %%validTranslationProviders%%.",
+  "error-unknown-provider": "Proveïdor desconegut \"%%providerName%%\".",
   "error-no-reference-language": "No s'ha especificat cap idioma de referència. Utilitzeu l'opció --reference-language o afegiu 'referenceLanguage' al vostre fitxer de configuració.",
   "error-no-target-languages": "No s'han especificat idiomes de destí. Utilitzeu l'opció --target-languages o afegiu 'targetLanguages' al vostre fitxer de configuració.",
-  "error-no-reference-data-in-variable": "No s'han trobat dades de referència a la variable \"%%referenceExportedVarName%%\" a \"%%referenceFile%%\""
+  "error-no-reference-data-in-variable": "No s'han trobat dades de referència a la variable \"%%referenceExportedVarName%%\" a \"%%referenceFile%%\"",
+  "error-no-provider-specified": "No s'ha especificat cap proveïdor.",
+  "error-copying-file-to-temp-dir": "Error en copiar el fitxer al directori temporal: %%error%%",
+  "supported-providers": "Els proveïdors compatibles són: %%providers%%"
 }
