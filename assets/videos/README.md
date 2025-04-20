@@ -5,7 +5,6 @@ wf-recorder -f alt.mp4
 
 ### Crop and convert to .gif with ffmpeg
 ```
-ffmpeg -ss <start time> -t <duration> -i alt.mp4 -vf "crop=<new width>:<new height>:<x>:<y>" -r 15 alt.gif
+ffmpeg -ss 1.2 -t 19.5 -i alt.mp4 -vf "crop=1100:619:0:0" -r 15 alt.gif
 ```
-`-r` specifies the fps
-
+Change 619 => 630 or something for the next one. The current one is missing bototm padding at the end of the video
