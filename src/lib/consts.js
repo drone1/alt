@@ -28,8 +28,8 @@ export const SUPPORTED_REFERENCE_FILE_EXTENSIONS = [
 ]
 
 export const DEFAULT_LLM_MODELS = {
-	anthropic: 'claude-3-7-sonnet-20250219',
+	anthropic: 'claude-haiku-4-5-20251001',
 	google: 'gemini-2.0-flash',
-	openai: 'gpt-4-turbo'
+	openai: 'gpt-4.1-mini'
 }
 
