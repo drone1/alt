@@ -366,6 +366,11 @@ export async function runTranslation({ appState, options, log }) {
 			log.T(taskInfo)
 			const progress = 100 * Math.floor(100 * taskInfoIdx / totalTasks) / 100
 
+      // Broadcast progress for CI
+      if (process.env.CI) {
+          console.log(`::notice::${progress}% - ${taskInfo.targetLang}/${taskInfo.key}`)
+      }
+
 			await new Listr([
 				{
 					title: localizeFormatted({
