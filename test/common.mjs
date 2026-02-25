@@ -23,7 +23,7 @@ export function cleanupFile(file) {
 
 export function cleanupDir(dir) {
 	if (!fs.existsSync(dir)) return
-	fs.rmdirSync(dir, { recursive: true })
+	fs.rmSync(dir, { recursive: true, force: true })
 }
 
 
