@@ -15,6 +15,7 @@ import { keyList, languageList } from './lib/options.js'
 import { runTranslation } from './commands/translate.js'
 import { registerSignalHandlers } from './shutdown.js'
 import { runListModels } from './commands/list-models.js'
+import { runPrune } from './commands/prune.js'
 
 const __dirname = path.dirname(
 	fileURLToPath(import.meta.url)
@@ -99,6 +100,10 @@ export async function run() {
 				case 'list-models':
 					await runListModels({ appState, options, log })
 					break
+
+				case 'prune':
+					await runPrune({ appState, options, log })
+					break
 			}
 		}
 
@@ -144,6 +149,22 @@ export async function run() {
 				.command('list-models')
 				.action(runCommand)
 		})
+
+		program
+			.command('prune')
+			.description('Remove keys from target files that no longer exist in the reference file')
+			.option('-c, --config-file <path>', `Path to config file; defaults to "${DEFAULT_CONFIG_FILENAME}" in the current working directory if not specified`)
+			.option('-r, --reference-file <path>', `Path to reference file of source strings. This file can be in .js, .mjs, .json, or .jsonc formats; overrides any 'referenceFile' config setting`)
+			.option('-o, --output-dir <path>', `Output directory for localized files; overrides any 'outputDir' config setting`)
+			.option('-tl, --target-languages <list>', `Comma-separated list of language codes; overrides any 'targetLanguages' config setting`, value => languageList(value, log))
+			.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files only, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
+			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
+			.option('--dry-run', 'Show what would be removed without actually modifying files', false)
+			.option('-v, --verbose', `Enables verbose spew`, false)
+			.option('-d, --debug', `Enables debug spew`, false)
+			.option('-t, --trace', `Enables trace spew`, false)
+			.option('--dev', `Enable dev mode, which prints stack traces with errors`, false)
+			.action(runCommand)
 
 		program.parse(process.argv)
 	} catch (error) {
