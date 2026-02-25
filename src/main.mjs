@@ -160,6 +160,7 @@ export async function run() {
 			.option('-R, --reference-exported-var-name <var name>', `For .js or .mjs reference files only, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored.`, 'default')
 			.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
 			.option('--dry-run', 'Show what would be removed without actually modifying files', false)
+			.option('-N, --no-logo', `Suppress logo printout`, true)  // NB: maps to options.logo, not options.noLogo
 			.option('-v, --verbose', `Enables verbose spew`, false)
 			.option('-d, --debug', `Enables debug spew`, false)
 			.option('-t, --trace', `Enables trace spew`, false)
