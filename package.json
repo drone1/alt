@@ -10,7 +10,6 @@
   "scripts": {
     "test": "ALT_TEST=1 mocha",
     "test:targeted": "ALT_TEST=1 mocha --grep 'multiple target'",
-    "test": "ALT_TEST=1 mocha",
     "test:coverage": "ALT_TEST=1 nyc mocha",
     "localize-display-strings": "./alt.mjs",
     "print-all-help": "rm -f help.txt && (./alt.mjs help && echo -e '\n---\n' && ./alt.mjs help translate && echo -e '\n---\n' && ./alt.mjs help list-models) > help.txt",
