@@ -11,6 +11,8 @@ export default {
 	'msg-rate-limited-sleeping': `Rate limited; sleeping for %%interval%%s...%%attemptStr%%`,
 	'msg-show-translation-result': `Translated %%key%%: "%%newValue%%"`,
 	'msg-processing-lang-and-key': `[%%progress%%%] Processing %%targetLang%% – %%key%%...`,
+	'msg-processing-lang-batched': `Processing %%targetLang%% (%%count%% keys in batches)...`,
+	'msg-batch-progress': `[%%targetLang%%] attempt %%attempt%%, batch %%chunkIdx%%/%%chunkCount%% (%%count%% keys)...`,
 
 	'msg-translation-reason-forced': `Forced update`,
 	'msg-translation-reason-outputFileDidNotExist': `Output file %%outputFile%% did not exist`,

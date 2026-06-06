@@ -3,10 +3,16 @@ import { program } from 'commander'
 import { fileURLToPath } from 'url'
 import { initLocalizer } from './localizer/localize.js'
 import {
-	DEFAULT_CONFIG_FILENAME, DEFAULT_LLM_MODELS,
+	DEFAULT_ACCESS_METHOD,
+	DEFAULT_BATCH_SIZE,
+	DEFAULT_CONCURRENCY,
+	DEFAULT_CONFIG_FILENAME,
+	DEFAULT_LLM_MODELS,
 	ENV_VARS,
 	LANGTAG_DEFAULT,
-	LOCALIZATION_SRC_DIR
+	LOCALIZATION_SRC_DIR,
+	PROVIDER_ACCESS_METHODS,
+	VALID_TRANSLATION_PROVIDERS
 } from './lib/consts.js'
 import { readJsonFile } from './lib/io.js'
 import { printLogo } from './lib/logo.js'
@@ -62,7 +68,11 @@ export async function run() {
 		const SHARED_OPTIONS = {
 			'provider': {
 				flags: '-p, --provider <name>',
-				description: `AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting`
+				description: `AI provider vendor to use for translations (${VALID_TRANSLATION_PROVIDERS.join(', ')}); overrides any 'provider' config setting`
+			},
+			'access': {
+				flags: '-a, --access <method>',
+				description: `Access method for the provider. \`api\` uses the vendor's HTTP API with an API key (env: <PROVIDER>_API_KEY). \`harness\` uses the vendor's own CLI tool with that tool's own auth — currently only supported by anthropic via Claude Code. Per-provider support: ${Object.entries(PROVIDER_ACCESS_METHODS).map(([p, ms]) => `${p}: ${ms.join('|')}`).join('; ')}. Defaults to "${DEFAULT_ACCESS_METHOD}"; overrides any 'access' config setting`
 			}
 		}
 
@@ -108,7 +118,7 @@ export async function run() {
 		}
 
 		addSharedOptions({
-			notRequired: [ 'provider' ],
+			notRequired: [ 'provider', 'access' ],
 			program: program
 				.command('translate', { isDefault: true })
 				.option('-c, --config-file <path>', `Path to config file; defaults to "${DEFAULT_CONFIG_FILENAME}" in the current working directory if not specified`)
@@ -123,8 +133,10 @@ export async function run() {
 				.option('-f, --force', `Force regeneration of all keys; if no '--keys' argument is specified, all keys will be processed`, false)
 				.option('-rtw, --realtime-writes', 'Write updates to disk immediately, rather than on shutdown', false)
 				.option('-y, --tty', 'Use tty/simple renderer; useful for CI', false)
-				.option('-M, --model <name>', `LLM model name to use; defaults are: ${Object.keys(DEFAULT_LLM_MODELS).map(p => `for "${p}": "${DEFAULT_LLM_MODELS[p]}"`).join(', ')}; use the 'list-models' command to view all models`)
+				.option('-M, --model <name>', `LLM model name to use; defaults per provider/access: ${Object.entries(DEFAULT_LLM_MODELS).flatMap(([p, methods]) => Object.entries(methods).map(([a, m]) => `${p}/${a}="${m}"`)).join(', ')}; use the 'list-models' command to view all models`)
 				.option('-x, --max-retries <integer>', 'Maximum retries on failure', 3)
+				.option('-bs, --batch-size <integer>', `When the access method supports batched translation (currently only 'harness'), translate this many keys per call. Larger batches amortize CLI cold-start better but lose more work on a failed batch. Defaults to ${DEFAULT_BATCH_SIZE}; overrides any 'batchSize' config setting`, v => parseInt(v, 10))
+				.option('-C, --concurrency <integer>', `When the access method supports batched translation, run this many language batches in parallel. Defaults to ${DEFAULT_CONCURRENCY}; overrides any 'concurrency' config setting`, v => parseInt(v, 10))
 				.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
 				.option('-N, --no-logo', `Suppress logo printout`, true)  // NB: maps to options.logo, not options.noLogo
 				.option('-cp, --context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
@@ -145,6 +157,7 @@ export async function run() {
 
 		addSharedOptions({
 			required: [ 'provider' ],
+			notRequired: [ 'access' ],
 			program: program
 				.command('list-models')
 				.action(runCommand)

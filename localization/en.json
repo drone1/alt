@@ -15,6 +15,8 @@
   "msg-translating": "Translating...",
   "msg-show-translation-result": "Translated %%key%%: \"%%newValue%%\"",
   "msg-processing-lang-and-key": "[%%progress%%%] Processing %%targetLang%% – %%key%%...",
+  "msg-processing-lang-batched": "Processing %%targetLang%% (%%count%% keys in batches)...",
+  "msg-batch-progress": "[%%targetLang%%] attempt %%attempt%%, batch %%chunkIdx%%/%%chunkCount%% (%%count%% keys)...",
   "msg-no-update-needed-for-key": "No update needed for %%key%%",
   "msg-rate-limited-sleeping": "Rate limited; sleeping for %%interval%%s...%%attemptStr%%",
   "msg-translation-reason-forced": "Forced update",

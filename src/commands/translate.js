@@ -3,7 +3,10 @@ import axios from 'axios'
 import { Listr } from 'listr2'
 import { localize, localizeFormatted } from '../localizer/localize.js'
 import {
-	DEFAULT_CACHE_FILENAME, DEFAULT_LLM_MODELS,
+	DEFAULT_BATCH_SIZE,
+	DEFAULT_CACHE_FILENAME,
+	DEFAULT_CONCURRENCY,
+	DEFAULT_LLM_MODELS,
 	OVERLOADED_BACKOFF_INTERVAL_MS,
 	VALID_TRANSLATION_PROVIDERS
 } from '../lib/consts.js'
@@ -184,8 +187,20 @@ export async function runTranslation({ appState, options, log }) {
 		assertValidPath(cacheFilePath)
 		appState.filesToWrite[cacheFilePath] = writableCache
 
-		const { apiKey, api: translationProvider } = await loadTranslationProvider({ __dirname: appState.__dirname, providerName, log })
-		log.V(`translation provider "${providerName}" loaded`)
+		// Resolve access method (CLI > config > default)
+		const accessMethod = (options.access ?? config.access ?? null)?.toLowerCase() || undefined
+		const { apiKey, accessMethod: resolvedAccessMethod, api: translationProvider } = await loadTranslationProvider({
+			__dirname: appState.__dirname,
+			providerName,
+			accessMethod,
+			log
+		})
+		log.V(`translation provider "${providerName}" (access: ${resolvedAccessMethod}) loaded`)
+
+		// Stash on appState so deeper call sites can look up the right default
+		// model and dispatch on access method without re-resolving.
+		appState.providerName = providerName
+		appState.accessMethod = resolvedAccessMethod
 
 		log.D(`options.lookForContextData=${options.lookForContextData}`)
 		log.D(`config.lookForContextData=${config.lookForContextData}`)
@@ -361,58 +376,109 @@ export async function runTranslation({ appState, options, log }) {
 
 		let totalTasks = workQueue.length
 		let errorsEncountered = 0
-		for (const taskInfoIdx in workQueue) {
-			const taskInfo = workQueue[taskInfoIdx]
-			log.T(taskInfo)
-			const progress = 100 * Math.floor(100 * taskInfoIdx / totalTasks) / 100
+		appState.totalCost = 0
 
-      // Broadcast progress for CI
-      if (process.env.CI) {
-          console.log(`::notice::${progress}% - ${taskInfo.targetLang}/${taskInfo.key}`)
-      }
+		const useBatched = typeof translationProvider.translateBatch === 'function'
+		log.D(`using batched path: ${useBatched}`)
 
-			await new Listr([
-				{
-					title: localizeFormatted({
-						token: 'msg-processing-lang-and-key',
-						data: { progress, targetLang: taskInfo.targetLang, key: taskInfo.key },
-						lang: appState.lang,
-						log
-					}),
-					task: async (ctx, task) => {
-						return task.newListr([
-							{
-								title: localize({ token: 'msg-translating', lang: appState.lang, log }),
-								task: async (_, task) => {
-									const translationResult = await processTranslationTask({
-										appState, taskInfo, listrTask: task, options, log
-									})
+		if (useBatched) {
+			// Group tasks by targetLang. All tasks in a group share outputData,
+			// outputFilePath, writableCache, cacheFilePath (set per-lang when the
+			// queue was built).
+			const tasksByLang = new Map()
+			for (const t of workQueue) {
+				if (!tasksByLang.has(t.targetLang)) tasksByLang.set(t.targetLang, [])
+				tasksByLang.get(t.targetLang).push(t)
+			}
 
-									if (translationResult.error) {
-										++errorsEncountered
-										throw new Error(translationResult.error)
-									}
+			const batchSize = options.batchSize ?? config.batchSize ?? DEFAULT_BATCH_SIZE
+			const concurrency = options.concurrency ?? config.concurrency ?? DEFAULT_CONCURRENCY
+			log.D(`batchSize=${batchSize} concurrency=${concurrency}`)
 
-									// NOTE: Perhaps not needed anymore?
-									// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving
-									// immediately but rendering is far behind
-									await sleep(1)
-								},
-								concurrent: false, // Process languages one by one
-								rendererOptions: { collapse: false, clearOutput: false },
-								exitOnError: false
-							}
-						])
-					}
-				}
-			], {
-				concurrent: false, // Process languages one by one
+			const langGroups = [ ...tasksByLang.entries() ]
+			const langTasks = langGroups.map(([ targetLang, taskList ]) => ({
+				title: localizeFormatted({
+					token: 'msg-processing-lang-batched',
+					data: { targetLang, count: taskList.length },
+					lang: appState.lang,
+					log,
+				}),
+				task: async (_, listrTask) => {
+					const result = await processLanguageBatched({
+						appState, taskList, batchSize, options, listrTask, log,
+					})
+					errorsEncountered += result.errorsEncountered
+				},
+				rendererOptions: { collapse: false, clearOutput: false },
+				exitOnError: false,
+			}))
+
+			await new Listr(langTasks, {
+				concurrent: concurrency > 1 ? concurrency : false,
 				...((options.tty || options.trace || options.debug || options.verbose) ? { renderer: 'simple' } : {}),
 				rendererOptions: { collapse: false, clearOutput: false },
 				registerSignalListeners: true,
-				collapseSubtasks: false
+				collapseSubtasks: false,
 			}).run()
+		} else {
+			for (const taskInfoIdx in workQueue) {
+				const taskInfo = workQueue[taskInfoIdx]
+				log.T(taskInfo)
+				const progress = 100 * Math.floor(100 * taskInfoIdx / totalTasks) / 100
+
+				// Broadcast progress for CI
+				if (process.env.CI) {
+					console.log(`::notice::${progress}% - ${taskInfo.targetLang}/${taskInfo.key}`)
+				}
+
+				await new Listr([
+					{
+						title: localizeFormatted({
+							token: 'msg-processing-lang-and-key',
+							data: { progress, targetLang: taskInfo.targetLang, key: taskInfo.key },
+							lang: appState.lang,
+							log
+						}),
+						task: async (ctx, task) => {
+							return task.newListr([
+								{
+									title: localize({ token: 'msg-translating', lang: appState.lang, log }),
+									task: async (_, task) => {
+										const translationResult = await processTranslationTask({
+											appState, taskInfo, listrTask: task, options, log
+										})
+
+										if (translationResult.error) {
+											++errorsEncountered
+											throw new Error(translationResult.error)
+										}
+
+										// NOTE: Perhaps not needed anymore?
+										// This will allow the app to shut down with non-tty/non-simple rendering, where rendering can fall far behind, if all keys are already processed and Promises are resolving
+										// immediately but rendering is far behind
+										await sleep(1)
+									},
+									concurrent: false, // Process languages one by one
+									rendererOptions: { collapse: false, clearOutput: false },
+									exitOnError: false
+								}
+							])
+						}
+					}
+				], {
+					concurrent: false, // Process languages one by one
+					...((options.tty || options.trace || options.debug || options.verbose) ? { renderer: 'simple' } : {}),
+					rendererOptions: { collapse: false, clearOutput: false },
+					registerSignalListeners: true,
+					collapseSubtasks: false
+				}).run()
+			}
 		}
+
+		// End-of-run audit: any reference key missing from any output file is a
+		// silent failure unless we surface it. Skip keys that are themselves
+		// context keys (those are inputs, not translatable values).
+		await runEndOfRunAudit({ appState, workQueue, referenceData, errors, options, config, log })
 
 		if (totalTasks > 0) {
 			let str = `[100%] `
@@ -524,8 +590,10 @@ async function translateKeyForLanguage({
 	const { translationProvider, apiKey, appContextMessage, refValue, refContextValue } = state
 	const result = { success: false, translated: false, newValue: null, error: null }
 
-	const providerName = translationProvider.name().toLowerCase()
-	model = model ?? DEFAULT_LLM_MODELS[providerName]
+	// providerName is the canonical key (matches DEFAULT_LLM_MODELS), set on
+	// appState in runTranslation. provider.name() is just for display.
+	const providerName = appState.providerName
+	model = model ?? DEFAULT_LLM_MODELS[providerName]?.[appState.accessMethod] ?? DEFAULT_LLM_MODELS[providerName]?.api
 	if (!model?.length) {
 		throw new Error(
 			localizeFormatted({ token: 'error-invalid-llm-model', data: { model }, lang: appState.lang, log })
@@ -681,6 +749,216 @@ async function translateTextViaProvider({
 		if (!errorHandled) {
 			log.W(`${providerName} API failed.`, error?.message ?? error)
 		}
+	}
+}
+
+// Recovery cascade for one language group via a batched provider.
+//
+// 1. Run a batch of up to batchSize items.
+// 2. Identify which items came back with a non-empty translation; apply those
+//    results to outputData + cache.
+// 3. Failed items get retried.
+// 4. After two consecutive retries that don't shrink the failure set, drop to
+//    per-item batches (batch size 1) so a single poison key can't keep failing
+//    a 25-item batch.
+// 5. After options.maxRetries total attempts, anything still failing goes into
+//    appState.errors so the end-of-run audit flags it.
+async function processLanguageBatched({ appState, taskList, batchSize, options, listrTask, log }) {
+	const result = { errorsEncountered: 0 }
+	if (!taskList.length) return result
+
+	// All tasks for one language share the same outputData/cache references.
+	const first = taskList[0]
+	const targetLang = first.targetLang
+	const sourceLang = first.sourceLang
+	const { outputData, outputFilePath, writableCache, cacheFilePath } = first
+	const { translationProvider, appContextMessage } = first.state
+
+	const model = options.model
+		?? DEFAULT_LLM_MODELS[appState.providerName]?.[appState.accessMethod]
+		?? DEFAULT_LLM_MODELS[appState.providerName]?.api
+
+	// Index tasks by key for fast result-apply.
+	const tasksByKey = new Map()
+	for (const t of taskList) tasksByKey.set(t.key, t)
+
+	// Build the canonical item list for the batched provider.
+	const itemsByKey = new Map()
+	for (const t of taskList) {
+		itemsByKey.set(t.key, {
+			key: t.key,
+			text: t.state.refValue,
+			context: t.state.refContextValue || null,
+		})
+	}
+
+	const remaining = new Set(taskList.map(t => t.key))
+	const maxRetries = options.maxRetries ?? 3
+
+	let attempt = 0
+	let previousRemainingSize = remaining.size
+	let stableCount = 0
+	let perKeyMode = false
+
+	while (remaining.size > 0 && attempt < maxRetries) {
+		attempt++
+		const remainingKeys = [ ...remaining ]
+		const effectiveBatchSize = perKeyMode ? 1 : batchSize
+		const chunks = []
+		for (let i = 0; i < remainingKeys.length; i += effectiveBatchSize) {
+			chunks.push(remainingKeys.slice(i, i + effectiveBatchSize))
+		}
+
+		log.D(`[${targetLang}] attempt ${attempt}/${maxRetries}: ${remaining.size} remaining, ${chunks.length} chunk(s), batchSize=${effectiveBatchSize}${perKeyMode ? ' (per-key fallback)' : ''}`)
+
+		for (let chunkIdx = 0; chunkIdx < chunks.length; chunkIdx++) {
+			const chunkKeys = chunks[chunkIdx]
+			const items = chunkKeys.map(k => itemsByKey.get(k))
+
+			listrTask.output = localizeFormatted({
+				token: 'msg-batch-progress',
+				data: { targetLang, chunkIdx: chunkIdx + 1, chunkCount: chunks.length, attempt, count: items.length },
+				lang: appState.lang,
+				log,
+			})
+
+			const batchResult = await translationProvider.translateBatch({
+				items,
+				sourceLang,
+				targetLang,
+				model,
+				appContextMessage,
+				log,
+			})
+
+			if (typeof batchResult.cost === 'number') appState.totalCost += batchResult.cost
+
+			if (batchResult.hardFail) {
+				log.E(`[${targetLang}] hard fail: ${batchResult.error}`)
+				appState.errors.push(batchResult.error)
+				// Mark all remaining for this language as errored — no point retrying.
+				for (const k of remaining) appState.errors.push(`[${targetLang}] ${k}: ${batchResult.error}`)
+				result.errorsEncountered += remaining.size
+				return result
+			}
+
+			if (batchResult.error && Object.keys(batchResult.translations).length === 0) {
+				log.W(`[${targetLang}] chunk ${chunkIdx + 1} failed entirely: ${batchResult.error}`)
+				if (batchResult.backoffInterval > 0) {
+					log.D(`backing off ${batchResult.backoffInterval}ms`)
+					await sleep(batchResult.backoffInterval)
+				}
+				continue
+			}
+
+			// Apply successful translations.
+			for (const [ key, newValue ] of Object.entries(batchResult.translations)) {
+				const t = tasksByKey.get(key)
+				if (!t) continue
+				outputData[key] = newValue
+				const hashForTranslated = calculateHash(newValue)
+				writableCache.state[targetLang].keyHashes[key] = hashForTranslated
+				writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
+				writableCache.referenceKeyHashes[targetLang][key] = t.state.referenceValueHash
+				remaining.delete(key)
+			}
+
+			if (options.realtimeWrites) {
+				await writeJsonFile(outputFilePath, outputData, log)
+				await writeJsonFile(cacheFilePath, writableCache, log)
+			}
+		}
+
+		// Detect "no progress" — if two consecutive attempts didn't shrink the
+		// failure set, switch to per-key batches so the model sees one item at a
+		// time and a poison string only blocks itself.
+		if (remaining.size === previousRemainingSize) {
+			stableCount++
+			if (stableCount >= 2 && !perKeyMode) {
+				log.W(`[${targetLang}] no progress for 2 attempts; switching to per-key fallback`)
+				perKeyMode = true
+				stableCount = 0
+			}
+		} else {
+			stableCount = 0
+		}
+		previousRemainingSize = remaining.size
+	}
+
+	// Whatever's left is a real failure — push to errors and let the audit
+	// report it.
+	for (const key of remaining) {
+		const t = tasksByKey.get(key)
+		const msg = localizeFormatted({
+			token: 'error-translation-failed',
+			data: { targetLang, key, refValue: t.state.refValue },
+			lang: appState.lang,
+			log,
+		})
+		appState.errors.push(msg)
+		result.errorsEncountered++
+	}
+
+	// Note the output file for write-on-shutdown if anything changed.
+	if (!options.realtimeWrites && Object.keys(outputData).length > 0 && !(outputFilePath in appState.filesToWrite)) {
+		appState.filesToWrite[outputFilePath] = outputData
+	}
+
+	return result
+}
+
+// End-of-run audit: for each target language, diff requested keys against the
+// resulting output file. Anything that should have been translated but isn't
+// present gets logged as an error. Catches:
+//   - silent failures in the batched cascade
+//   - reference keys explicitly requested via --keys that weren't in the queue
+//   - schema-enforcement bypasses that produced missing values
+// Skips keys flagged as context (those aren't translatable values).
+async function runEndOfRunAudit({ appState, workQueue, referenceData, errors, options, config, log }) {
+	const contextPrefix = options.contextPrefix ?? config.contextPrefix
+	const contextSuffix = options.contextSuffix ?? config.contextSuffix
+	const addContextToTranslation = options.lookForContextData || config.lookForContextData
+
+	// Collect targetLang -> outputData from the workQueue (one entry per lang).
+	const langToOutputData = new Map()
+	for (const t of workQueue) {
+		if (!langToOutputData.has(t.targetLang)) {
+			langToOutputData.set(t.targetLang, t.outputData)
+		}
+	}
+
+	if (!langToOutputData.size) return // nothing was queued — nothing to audit
+
+	const referenceKeys = Object.keys(referenceData).filter(key => {
+		const refValue = referenceData[key]
+		if (typeof refValue !== 'string') return false
+		if (addContextToTranslation && isContextKey({
+			appLang: appState.lang,
+			key,
+			contextPrefix,
+			contextSuffix,
+			log,
+		})) return false
+		return true
+	})
+
+	let missing = 0
+	for (const [ targetLang, outputData ] of langToOutputData) {
+		for (const key of referenceKeys) {
+			const v = outputData[key]
+			if (typeof v !== 'string' || v.length === 0) {
+				const msg = `[audit] ${targetLang}: missing translation for key "${key}"`
+				log.W(msg)
+				errors.push(msg)
+				missing++
+			}
+		}
+	}
+
+	if (missing > 0) {
+		log.W(`[audit] ${missing} missing translation(s) across all languages`)
+	} else {
+		log.D(`[audit] all expected keys present in all output files`)
 	}
 }
 
