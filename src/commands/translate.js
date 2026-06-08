@@ -28,6 +28,42 @@ import { loadCache } from '../lib/cache.js'
 import { shutdown } from '../shutdown.js'
 import { loadReferenceFile } from '../lib/reference-loader.js'
 
+// Anything that looks like %%var%%, {{var}}, %s/%d/%i/%f/%F/%o/%x, or {0}.
+// Used to strip out interpolation tokens before deciding whether a source
+// string contains real translatable content (see hasTranslatableContent).
+const PLACEHOLDER_RE = /(%%[^%]+%%|\{\{[^}]+\}\}|%[sdifFox]|\{\d+\})/g
+const EMOJI_RE = /\p{Extended_Pictographic}/gu
+
+// True if `s`, after stripping placeholders and emojis, contains a run of two
+// or more Latin letters. Used to distinguish "the model returned source
+// because it had nothing to translate" (emoji/placeholder/empty — the source
+// IS the translation; keep it) from "the model returned source because it
+// couldn't translate" (real English words came back verbatim — drop it so
+// the runtime can fall back to source).
+function hasTranslatableContent(s) {
+	if (typeof s !== 'string') return false
+	const stripped = s.replace(PLACEHOLDER_RE, '').replace(EMOJI_RE, '')
+	return /[A-Za-z]{2,}/.test(stripped)
+}
+
+// Mark (targetLang, key) as untranslatable for the current source hash, and
+// remove any prior output/state for it. Shared by single-key + batched paths.
+function markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData }) {
+	if (outputData && key in outputData) delete outputData[key]
+	writableCache.untranslatable = writableCache.untranslatable || {}
+	writableCache.untranslatable[targetLang] = writableCache.untranslatable[targetLang] || {}
+	writableCache.untranslatable[targetLang][key] = referenceValueHash
+	// Clear any stale per-key state hash so a later source-text change still
+	// triggers a fresh attempt (the new source hash won't match the
+	// untranslatable entry, so the upfront skip won't fire either).
+	if (writableCache.state?.[targetLang]?.keyHashes) {
+		delete writableCache.state[targetLang].keyHashes[key]
+	}
+	if (writableCache.referenceKeyHashes?.[targetLang]) {
+		delete writableCache.referenceKeyHashes[targetLang][key]
+	}
+}
+
 export async function runTranslation({ appState, options, log }) {
 	let exitCode = 0
 	try {
@@ -265,6 +301,19 @@ export async function runTranslation({ appState, options, log }) {
 				const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
 				const curValue = (key in outputData) ? outputData[key] : null
 
+				// If a prior run marked this (lang, key) untranslatable AGAINST the
+				// current source hash, skip — re-asking the same provider with the
+				// same input gets the same English-back result. We override on
+				// --force, or if the user has hand-added a target value (curValue
+				// non-empty and different from the source), so a manual fix can
+				// retake the slot.
+				const untranslatableHash = readOnlyCache?.untranslatable?.[targetLang]?.[key]
+				const userProvidedTranslation = typeof curValue === 'string' && curValue.length > 0 && curValue !== refValue
+				if (untranslatableHash && untranslatableHash === referenceValueHash && !options.force && !userProvidedTranslation) {
+					log.D(`Skip ${targetLang}/${key}: cached as untranslatable for current source hash`)
+					continue
+				}
+
 				// Skip non-string values (objects, arrays, etc.)
 				const refValueType = typeof refValue
 				if (refValueType !== 'string') {
@@ -478,7 +527,7 @@ export async function runTranslation({ appState, options, log }) {
 		// End-of-run audit: any reference key missing from any output file is a
 		// silent failure unless we surface it. Skip keys that are themselves
 		// context keys (those are inputs, not translatable values).
-		await runEndOfRunAudit({ appState, workQueue, referenceData, errors, options, config, log })
+		await runEndOfRunAudit({ appState, workQueue, writableCache, referenceData, errors, options, config, log })
 
 		if (totalTasks > 0) {
 			let str = `[100%] `
@@ -510,7 +559,7 @@ export async function runTranslation({ appState, options, log }) {
 
 export async function processTranslationTask({ appState, taskInfo, listrTask, options, log }) {
 	const { key, sourceLang, targetLang, reasonsForTranslationMap, outputData, outputFilePath, writableCache, cacheFilePath, state } = taskInfo
-	const { referenceValueHash } = state
+	const { referenceValueHash, refValue } = state
 
 	listrTask.output = Object.keys(reasonsForTranslationMap)
 		.map(k => localize({ token: `msg-translation-reason-${k}`, lang: appState.lang, log }))
@@ -535,7 +584,26 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 	let outputDataModified = false
 
 	if (success) {
-		if (translated) {
+		// If the provider returned the source verbatim and the source has real
+		// translatable content (not just an emoji/placeholder), treat as
+		// "couldn't translate" — drop the key from the output file and mark
+		// untranslatable so we don't retry. Runtime falls back to source on
+		// missing key, which is what we want instead of shipping English in
+		// a non-English file.
+		if (translated && newValue === refValue && hasTranslatableContent(refValue)) {
+			log.D(`${targetLang}/${key}: provider returned source verbatim; marking untranslatable`)
+			const previouslyHadOutput = key in outputData
+			markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData })
+			if (previouslyHadOutput) outputDataModified = true
+			if (options.realtimeWrites) {
+				if (previouslyHadOutput) {
+					await writeJsonFile(outputFilePath, outputData, log)
+					log.V(`Wrote ${outputFilePath}`)
+				}
+				await writeJsonFile(cacheFilePath, writableCache, log)
+				log.V(`Wrote ${cacheFilePath}`)
+			}
+		} else if (translated) {
 			outputDataModified = true
 			outputData[key] = newValue
 
@@ -855,6 +923,16 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 			for (const [ key, newValue ] of Object.entries(batchResult.translations)) {
 				const t = tasksByKey.get(key)
 				if (!t) continue
+				// Provider returned source verbatim and source has real translatable
+				// content → mark untranslatable instead of writing English back into
+				// the target file. See processTranslationTask for the same rule on
+				// the non-batched path.
+				if (newValue === t.state.refValue && hasTranslatableContent(t.state.refValue)) {
+					log.D(`${targetLang}/${key}: provider returned source verbatim; marking untranslatable`)
+					markUntranslatable({ writableCache, targetLang, key, referenceValueHash: t.state.referenceValueHash, outputData })
+					remaining.delete(key)
+					continue
+				}
 				outputData[key] = newValue
 				const hashForTranslated = calculateHash(newValue)
 				writableCache.state[targetLang].keyHashes[key] = hashForTranslated
@@ -913,8 +991,11 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 //   - silent failures in the batched cascade
 //   - reference keys explicitly requested via --keys that weren't in the queue
 //   - schema-enforcement bypasses that produced missing values
-// Skips keys flagged as context (those aren't translatable values).
-async function runEndOfRunAudit({ appState, workQueue, referenceData, errors, options, config, log }) {
+// Skips:
+//   - keys flagged as context (those aren't translatable values)
+//   - keys marked untranslatable in the cache (intentionally absent from output
+//     so the runtime falls back to source language)
+async function runEndOfRunAudit({ appState, workQueue, writableCache, referenceData, errors, options, config, log }) {
 	const contextPrefix = options.contextPrefix ?? config.contextPrefix
 	const contextSuffix = options.contextSuffix ?? config.contextSuffix
 	const addContextToTranslation = options.lookForContextData || config.lookForContextData
@@ -944,9 +1025,11 @@ async function runEndOfRunAudit({ appState, workQueue, referenceData, errors, op
 
 	let missing = 0
 	for (const [ targetLang, outputData ] of langToOutputData) {
+		const untranslatableForLang = writableCache?.untranslatable?.[targetLang] || {}
 		for (const key of referenceKeys) {
 			const v = outputData[key]
 			if (typeof v !== 'string' || v.length === 0) {
+				if (key in untranslatableForLang) continue // intentionally absent
 				const msg = `[audit] ${targetLang}: missing translation for key "${key}"`
 				log.W(msg)
 				errors.push(msg)
