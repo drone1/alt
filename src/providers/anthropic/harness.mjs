@@ -27,7 +27,15 @@ export async function listModels() {
 
 // Spawn-time timeout per call. A 25-item batch runs in ~8–10s on haiku; pad
 // generously so a sluggish API call doesn't kill us mid-batch.
-const SPAWN_TIMEOUT_MS = 120 * 1000
+//
+// Overridable via ALT_HARNESS_TIMEOUT_MS — slow output scripts (km, my, am,
+// ka, ti) emit many more output tokens per word and routinely brush 120s on
+// 25-item batches.
+const SPAWN_TIMEOUT_MS = (() => {
+	const raw = process.env.ALT_HARNESS_TIMEOUT_MS
+	const parsed = raw ? Number(raw) : NaN
+	return Number.isFinite(parsed) && parsed > 0 ? parsed : 120 * 1000
+})()
 
 // Backoff hint passed back to the orchestrator when the CLI signals an overloaded
 // or rate-limited state.
@@ -132,6 +140,7 @@ export async function translateBatch({ items, sourceLang, targetLang, model, app
 	let stderr = ''
 	let exitCode = null
 	let timedOut = false
+	const startedAtMs = Date.now()
 
 	try {
 		await new Promise((resolve, reject) => {
@@ -152,15 +161,34 @@ export async function translateBatch({ items, sourceLang, targetLang, model, app
 		return result
 	}
 
+	const elapsedMs = Date.now() - startedAtMs
+
+	// Failure-path diagnostics: always surface stderr (or its absence), stdout
+	// shape, and wall-clock elapsed time. Without these, "claude call timed out"
+	// and "claude exited with code 1" are unactionable — the operator can't tell
+	// whether the CLI hung in auth, mid-stream, on a network call, or never
+	// printed anything at all.
+	const dumpFailureDiagnostics = (label) => {
+		const stderrTrimmed = stderr?.trim() || ''
+		const stderrPart = stderrTrimmed.length
+			? `stderr (${stderrTrimmed.length} bytes): ${stderrTrimmed.slice(0, 800)}`
+			: 'stderr: <empty>'
+		const stdoutTrimmed = stdout?.trim() || ''
+		const stdoutPart = stdoutTrimmed.length
+			? `stdout head: ${stdoutTrimmed.slice(0, 200)}`
+			: 'stdout: <empty>'
+		log.W(`${label} — elapsed=${elapsedMs}ms, ${stderrPart}, ${stdoutPart}`)
+	}
+
 	if (timedOut) {
 		result.error = `claude call timed out after ${SPAWN_TIMEOUT_MS / 1000}s`
-		log.W(result.error)
+		dumpFailureDiagnostics(result.error)
 		return result
 	}
 
 	if (exitCode !== 0) {
 		result.error = `claude exited with code ${exitCode}`
-		if (stderr?.length) log.W(`claude stderr: ${stderr.trim().slice(0, 500)}`)
+		dumpFailureDiagnostics(result.error)
 		// "Not logged in" on a fresh box is a hard failure — retrying won't help.
 		if (/not logged in/i.test(stderr) || /unauthor/i.test(stderr)) {
 			result.hardFail = true
