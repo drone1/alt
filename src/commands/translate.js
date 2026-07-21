@@ -27,6 +27,7 @@ import { loadTranslationProvider } from '../lib/provider.js'
 import { loadCache } from '../lib/cache.js'
 import { shutdown } from '../shutdown.js'
 import { loadReferenceFile } from '../lib/reference-loader.js'
+import { validateTranslation } from '../lib/translation-validation.js'
 
 // Anything that looks like %%var%%, {{var}}, %s/%d/%i/%f/%F/%o/%x, or {0}.
 // Used to strip out interpolation tokens before deciding whether a source
@@ -301,19 +302,6 @@ export async function runTranslation({ appState, options, log }) {
 				const referenceValueHash = calculateHash(`${refValue}${refContextValue?.length ? `_${refContextValue}` : ''}`)	// If either of the ref value or the context value change, we'll update
 				const curValue = (key in outputData) ? outputData[key] : null
 
-				// If a prior run marked this (lang, key) untranslatable AGAINST the
-				// current source hash, skip — re-asking the same provider with the
-				// same input gets the same English-back result. We override on
-				// --force, or if the user has hand-added a target value (curValue
-				// non-empty and different from the source), so a manual fix can
-				// retake the slot.
-				const untranslatableHash = readOnlyCache?.untranslatable?.[targetLang]?.[key]
-				const userProvidedTranslation = typeof curValue === 'string' && curValue.length > 0 && curValue !== refValue
-				if (untranslatableHash && untranslatableHash === referenceValueHash && !options.force && !userProvidedTranslation) {
-					log.D(`Skip ${targetLang}/${key}: cached as untranslatable for current source hash`)
-					continue
-				}
-
 				// Skip non-string values (objects, arrays, etc.)
 				const refValueType = typeof refValue
 				if (refValueType !== 'string') {
@@ -337,6 +325,23 @@ export async function runTranslation({ appState, options, log }) {
 							})
 						)
 					}
+					continue
+				}
+
+				const existingValidation = curValue === null || targetLang === sourceLang
+					? { valid: true }
+					: validateTranslation({ source: refValue, translated: curValue })
+
+				// If a prior run marked this (lang, key) untranslatable AGAINST the
+				// current source hash, skip — re-asking the same provider with the
+				// same input gets the same English-back result. We override on
+				// --force, or if the user has hand-added a target value (curValue
+				// non-empty and different from the source), so a manual fix can
+				// retake the slot.
+				const untranslatableHash = readOnlyCache?.untranslatable?.[targetLang]?.[key]
+				const userProvidedTranslation = typeof curValue === 'string' && curValue.length > 0 && curValue !== refValue
+				if (untranslatableHash && untranslatableHash === referenceValueHash && !options.force && !userProvidedTranslation && existingValidation.valid) {
+					log.D(`Skip ${targetLang}/${key}: cached as untranslatable for current source hash`)
 					continue
 				}
 
@@ -364,6 +369,7 @@ export async function runTranslation({ appState, options, log }) {
 				// Map reason key => true/false
 				const possibleReasonsForTranslationMap = {
 					forced: options.force,
+					invalidExistingTranslation: !existingValidation.valid,
 					outputFileDidNotExist,
 					userMissingReferenceValueHash,
 					userModifiedReferenceValue,
@@ -706,8 +712,13 @@ async function translateKeyForLanguage({
 				await sleep(backoffInterval)
 			}
 		} else {
-			newValue = translateResult.translated
-			result.success = true
+			const validation = validateTranslation({ source: refValue, translated: translateResult.translated })
+			if (validation.valid) {
+				newValue = translateResult.translated
+				result.success = true
+			} else {
+				log.W(`[${targetLang}] rejected translation for "${key}": ${validation.reason}`)
+			}
 		}
 	}
 
@@ -923,6 +934,11 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 			for (const [ key, newValue ] of Object.entries(batchResult.translations)) {
 				const t = tasksByKey.get(key)
 				if (!t) continue
+				const validation = validateTranslation({ source: t.state.refValue, translated: newValue })
+				if (!validation.valid) {
+					log.W(`[${targetLang}] rejected translation for "${key}": ${validation.reason}`)
+					continue
+				}
 				// Provider returned source verbatim and source has real translatable
 				// content → mark untranslatable instead of writing English back into
 				// the target file. See processTranslationTask for the same rule on
@@ -1044,4 +1060,3 @@ async function runEndOfRunAudit({ appState, workQueue, writableCache, referenceD
 		log.D(`[audit] all expected keys present in all output files`)
 	}
 }
-
