@@ -11,6 +11,42 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 describe('translate command', () => {
+	it('should copy content when the target matches the reference language', async function() {
+		const randomId = crypto.randomBytes(4).toString('hex')
+		const refFileName = `ref-${randomId}.js`
+		const refFilePath = path.join(SRC_DATA_DIR, refFileName)
+		const outputPath = path.join(SRC_DATA_DIR, 'en.json')
+
+		try {
+			const originalRefPath = path.join(SRC_DATA_DIR, 'reference.js')
+			fs.copyFileSync(originalRefPath, refFilePath)
+
+			const result = await execa('node', [
+				path.resolve(__dirname, '../alt.mjs'),
+				'translate',
+				'-r',
+				refFilePath,
+				'-rl',
+				'en',
+				'-tl',
+				'en',
+				'-o',
+				SRC_DATA_DIR,
+				'--no-logo'
+			], {
+				env: { ANTHROPIC_API_KEY: 'dummy' }
+			})
+
+			expect(result.exitCode).to.equal(0)
+			const outputContent = JSON.parse(fs.readFileSync(outputPath, 'utf8'))
+			expect(outputContent['msg-test']).to.equal('Nothing to do')
+		} finally {
+			cleanupFile(refFilePath)
+			cleanupFile(outputPath)
+			cleanupCacheFile(SRC_DATA_DIR)
+		}
+	})
+
 	it('should translate content to a target language', async function() {
 		this.timeout(10000) // Set timeout to 10s as translation might take time
 

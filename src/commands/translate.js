@@ -328,7 +328,7 @@ export async function runTranslation({ appState, options, log }) {
 					continue
 				}
 
-				const existingValidation = curValue === null || targetLang === sourceLang
+				const existingValidation = curValue === null || targetLang === referenceLanguage
 					? { valid: true }
 					: validateTranslation({ source: refValue, translated: curValue })
 
@@ -596,7 +596,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 		// untranslatable so we don't retry. Runtime falls back to source on
 		// missing key, which is what we want instead of shipping English in
 		// a non-English file.
-		if (translated && newValue === refValue && hasTranslatableContent(refValue)) {
+		if (sourceLang !== targetLang && translated && newValue === refValue && hasTranslatableContent(refValue)) {
 			log.D(`${targetLang}/${key}: provider returned source verbatim; marking untranslatable`)
 			const previouslyHadOutput = key in outputData
 			markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData })
