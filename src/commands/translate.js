@@ -264,12 +264,14 @@ export async function runTranslation({ appState, options, log }) {
 			})
 			log.D(`outputFilePath=${outputFilePath}`)
 
-			// Read existing output data
-			let outputData = normalizeData(await readJsonFile(outputFilePath)) || {}
-			let outputFileDidNotExist = false
-			if (!outputData) {
-				outputFileDidNotExist = true
-			}
+			// Read existing output data. Test for absence BEFORE defaulting to {} —
+			// the `|| {}` used to run first, so `if (!outputData)` could never be
+			// true and outputFileDidNotExist was permanently false. The documented
+			// "output file does not exist" trigger only ever fired incidentally,
+			// via missingOutputKey.
+			const existingOutputData = normalizeData(await readJsonFile(outputFilePath))
+			const outputFileDidNotExist = !existingOutputData
+			let outputData = existingOutputData || {}
 
 			// Initialize language in cache if it doesn't exist
 			if (!writableCache.state[targetLang]) {
@@ -357,7 +359,11 @@ export async function runTranslation({ appState, options, log }) {
 
 				// Check if translation needs update
 				const missingOutputKey = curValue === null
-				const missingOutputValueHash = storedHashForTargetLangAndValue === null
+				// Optional chaining yields undefined, never null, so testing for
+				// `=== null` here meant this reason never once fired. A key present
+				// in the output file with no recorded hash — the case this exists to
+				// catch — was silently treated as up to date.
+				const missingOutputValueHash = storedHashForTargetLangAndValue === undefined || storedHashForTargetLangAndValue === null
 
 				// Calculate reference value hash and compare with stored hash
 				const userMissingReferenceValueHash = !storedHashForReferenceValue?.length
