@@ -49,7 +49,15 @@ function hasTranslatableContent(s) {
 
 // Mark (targetLang, key) as untranslatable for the current source hash, and
 // remove any prior output/state for it. Shared by single-key + batched paths.
-function markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData }) {
+function markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData, sourceLang }) {
+	// Fail closed. This deletes the key from the output file, and when the target
+	// is the reference language that file is the source of truth — there is no
+	// source left to fall back to, so the string is destroyed. Both current call
+	// sites guard on sourceLang !== targetLang; this makes a third one that
+	// forgets impossible rather than silently destructive.
+	if (sourceLang !== undefined && sourceLang === targetLang) {
+		throw new Error(`refusing to mark ${targetLang}/${key} untranslatable: target is the reference language, so deleting it would destroy the source string`)
+	}
 	if (outputData && key in outputData) delete outputData[key]
 	writableCache.untranslatable = writableCache.untranslatable || {}
 	writableCache.untranslatable[targetLang] = writableCache.untranslatable[targetLang] || {}
@@ -599,7 +607,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 		if (sourceLang !== targetLang && translated && newValue === refValue && hasTranslatableContent(refValue)) {
 			log.D(`${targetLang}/${key}: provider returned source verbatim; marking untranslatable`)
 			const previouslyHadOutput = key in outputData
-			markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData })
+			markUntranslatable({ writableCache, targetLang, key, referenceValueHash, outputData, sourceLang })
 			if (previouslyHadOutput) outputDataModified = true
 			if (options.realtimeWrites) {
 				if (previouslyHadOutput) {
@@ -871,6 +879,29 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 		})
 	}
 
+	// Same-language pass: the answer is the source text, so calling a provider to
+	// hand back its own input wastes a round-trip and, worse, invites the model
+	// to "improve" it. The api path has short-circuited this since 7a22f51
+	// (see translateText); this restores parity for the batched path.
+	if (sourceLang === targetLang) {
+		log.D(`[${targetLang}] source and target language match; copying reference values verbatim`)
+		writableCache.state[targetLang] = writableCache.state[targetLang] || { keyHashes: {} }
+		writableCache.state[targetLang].keyHashes = writableCache.state[targetLang].keyHashes || {}
+		writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
+		for (const t of taskList) {
+			outputData[t.key] = t.state.refValue
+			writableCache.state[targetLang].keyHashes[t.key] = calculateHash(t.state.refValue)
+			writableCache.referenceKeyHashes[targetLang][t.key] = t.state.referenceValueHash
+		}
+		if (options.realtimeWrites) {
+			await writeJsonFile(outputFilePath, outputData, log)
+			await writeJsonFile(cacheFilePath, writableCache, log)
+		} else if (Object.keys(outputData).length > 0 && !(outputFilePath in appState.filesToWrite)) {
+			appState.filesToWrite[outputFilePath] = outputData
+		}
+		return result
+	}
+
 	const remaining = new Set(taskList.map(t => t.key))
 	const maxRetries = options.maxRetries ?? 3
 
@@ -943,9 +974,19 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 				// content → mark untranslatable instead of writing English back into
 				// the target file. See processTranslationTask for the same rule on
 				// the non-batched path.
-				if (newValue === t.state.refValue && hasTranslatableContent(t.state.refValue)) {
+				// sourceLang !== targetLang is load-bearing, not defensive. When the
+				// target IS the reference language the provider returning "source
+				// verbatim" is the correct answer, not a failure — but without this
+				// the key gets marked untranslatable, which DELETES it from the
+				// output file. For a target that happens to be the reference
+				// language that output file is the source of truth, so there is
+				// nothing to fall back to and the string is simply gone. That is how
+				// 66 English strings disappeared from a consuming project. The
+				// single-key path has carried this guard since 7a22f51; this copy
+				// was missed.
+				if (sourceLang !== targetLang && newValue === t.state.refValue && hasTranslatableContent(t.state.refValue)) {
 					log.D(`${targetLang}/${key}: provider returned source verbatim; marking untranslatable`)
-					markUntranslatable({ writableCache, targetLang, key, referenceValueHash: t.state.referenceValueHash, outputData })
+					markUntranslatable({ writableCache, targetLang, key, referenceValueHash: t.state.referenceValueHash, outputData, sourceLang })
 					remaining.delete(key)
 					continue
 				}
