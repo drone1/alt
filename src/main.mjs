@@ -138,6 +138,7 @@ export async function run() {
 				.option('-bs, --batch-size <integer>', `When the access method supports batched translation (currently only 'harness'), translate this many keys per call. Larger batches amortize CLI cold-start better but lose more work on a failed batch. Defaults to ${DEFAULT_BATCH_SIZE}; overrides any 'batchSize' config setting`, v => parseInt(v, 10))
 				.option('-C, --concurrency <integer>', `When the access method supports batched translation, run this many language batches in parallel. Defaults to ${DEFAULT_CONCURRENCY}; overrides any 'concurrency' config setting`, v => parseInt(v, 10))
 				.option('-n, --normalize-output-filenames', `Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting`, false)
+			.option('--no-track-target-edits', `Stop recording a hash of every translated string. That record exists only to avoid overwriting hand-edited target values, and is roughly half the cache by size; disable it if you never hand-edit target files`)
 				.option('-N, --no-logo', `Suppress logo printout`, true)  // NB: maps to options.logo, not options.noLogo
 				.option('-cp, --context-prefix <value>', `String to be prefixed to all keys to search for additional context, which are passed along to the AI for context`)
 				.option('-cs, --context-suffix <value>', `String to be suffixed to all keys to search for additional context, which are passed along to the AI for context`)

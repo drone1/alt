@@ -24,7 +24,7 @@ import { calculateHash, getFileExtension, normalizeData, sleep } from '../lib/ut
 import { formatContextKeyFromKey, isContextKey } from '../lib/context-keys.js'
 import { loadConfig } from '../lib/config.js'
 import { loadTranslationProvider } from '../lib/provider.js'
-import { loadCache } from '../lib/cache.js'
+import { deleteReferenceKeyHash, getReferenceKeyHash, loadCache, setReferenceKeyHash } from '../lib/cache.js'
 import { shutdown } from '../shutdown.js'
 import { loadReferenceFile } from '../lib/reference-loader.js'
 import { validateTranslation } from '../lib/translation-validation.js'
@@ -45,6 +45,16 @@ function hasTranslatableContent(s) {
 	if (typeof s !== 'string') return false
 	const stripped = s.replace(PLACEHOLDER_RE, '').replace(EMOJI_RE, '')
 	return /[A-Za-z]{2,}/.test(stripped)
+}
+
+// Record the hash of a translated value, unless target-edit tracking is off.
+// That record exists only to detect a later hand-edit, so when tracking is
+// disabled writing it would cost half the cache for information nothing reads.
+function recordTargetHash({ writableCache, targetLang, key, hash, trackTargetEdits }) {
+	if (!trackTargetEdits) return
+	writableCache.state[targetLang] = writableCache.state[targetLang] || { keyHashes: {} }
+	writableCache.state[targetLang].keyHashes = writableCache.state[targetLang].keyHashes || {}
+	writableCache.state[targetLang].keyHashes[key] = hash
 }
 
 // Mark (targetLang, key) as untranslatable for the current source hash, and
@@ -68,9 +78,7 @@ function markUntranslatable({ writableCache, targetLang, key, referenceValueHash
 	if (writableCache.state?.[targetLang]?.keyHashes) {
 		delete writableCache.state[targetLang].keyHashes[key]
 	}
-	if (writableCache.referenceKeyHashes?.[targetLang]) {
-		delete writableCache.referenceKeyHashes[targetLang][key]
-	}
+	deleteReferenceKeyHash(writableCache, targetLang, key)
 }
 
 export async function runTranslation({ appState, options, log }) {
@@ -185,6 +193,14 @@ export async function runTranslation({ appState, options, log }) {
 		}
 
 		const normalizeOutputFilenames = options.normalizeOutputFilenames || config.normalizeOutputFilenames
+
+		// When off, `state` is neither recorded nor consulted. It exists only to
+		// protect hand-edited target values, and costs roughly half the cache.
+		const trackTargetEdits = options.trackTargetEdits ?? config.trackTargetEdits ?? true
+		log.D(`trackTargetEdits=${trackTargetEdits}`)
+		// Resolved once here (CLI > config > default) and written back so the
+		// batched path, which only receives `options`, sees the same decision.
+		options.trackTargetEdits = trackTargetEdits
 
 		// No app context message is OK
 		const appContextMessage = options.appContextMessage ?? config.appContextMessage ?? null
@@ -308,7 +324,7 @@ export async function runTranslation({ appState, options, log }) {
 					suffix: contextSuffix
 				})
 				log.T(`contextKey=${contextKey}`)
-				const storedHashForReferenceValue = readOnlyCache?.referenceKeyHashes?.[targetLang]?.[key]	// See https://github.com/drone1/alt/issues/1
+				const storedHashForReferenceValue = getReferenceKeyHash(readOnlyCache, targetLang, key)	// See https://github.com/drone1/alt/issues/1
 				const storedHashForTargetLangAndValue = readOnlyCache.state[targetLang]?.keyHashes?.[key]
 				const refValue = referenceData[key]
 				const refContextValue = (contextKey in referenceData) ? referenceData[contextKey] : null
@@ -366,12 +382,18 @@ export async function runTranslation({ appState, options, log }) {
 				// `=== null` here meant this reason never once fired. A key present
 				// in the output file with no recorded hash — the case this exists to
 				// catch — was silently treated as up to date.
-				const missingOutputValueHash = storedHashForTargetLangAndValue === undefined || storedHashForTargetLangAndValue === null
+				//
+				// Gated on trackTargetEdits so the reason is not reported when we
+				// deliberately record no hashes. Measured: removing this gate does
+				// not by itself cause re-translation, so it is about reporting the
+				// honest reason rather than about convergence.
+				const missingOutputValueHash = trackTargetEdits
+					&& (storedHashForTargetLangAndValue === undefined || storedHashForTargetLangAndValue === null)
 
 				// Calculate reference value hash and compare with stored hash
 				const userMissingReferenceValueHash = !storedHashForReferenceValue?.length
 				const userModifiedReferenceValue = Boolean(referenceValueHash) && Boolean(storedHashForReferenceValue) && referenceValueHash !== storedHashForReferenceValue
-				const userModifiedTargetValue = Boolean(storedHashForTargetLangAndValue) && Boolean(currentValueHash) && currentValueHash !== storedHashForTargetLangAndValue
+				const userModifiedTargetValue = trackTargetEdits && Boolean(storedHashForTargetLangAndValue) && Boolean(currentValueHash) && currentValueHash !== storedHashForTargetLangAndValue
 
 				log.D(`Reference key: "${key}"`)
 				log.D('storedHashForReferenceValue', storedHashForReferenceValue)
@@ -581,6 +603,7 @@ export async function runTranslation({ appState, options, log }) {
 }
 
 export async function processTranslationTask({ appState, taskInfo, listrTask, options, log }) {
+	const trackTargetEdits = options.trackTargetEdits ?? true
 	const { key, sourceLang, targetLang, reasonsForTranslationMap, outputData, outputFilePath, writableCache, cacheFilePath, state } = taskInfo
 	const { referenceValueHash, refValue } = state
 
@@ -638,12 +661,11 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 
 			const hashForTranslated = calculateHash(newValue)
 			log.D(`Updating hash for translated ${targetLang}.${key}: ${hashForTranslated}`)
-			writableCache.state[targetLang].keyHashes[key] = hashForTranslated
+			recordTargetHash({ writableCache, targetLang, key, hash: hashForTranslated, trackTargetEdits })
 			listrTask.output = localizeFormatted({ token: 'msg-show-translation-result', data: { key, newValue }, lang: appState.lang, log })
 
 			// Update the hash for the reference key, so we can monitor if the user changed a specific key
-			writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
-			writableCache.referenceKeyHashes[targetLang][key] = referenceValueHash
+			setReferenceKeyHash(writableCache, targetLang, key, referenceValueHash)
 
 			// Update state file every time, in case the user kills the process
 			if (options.realtimeWrites) {
@@ -869,6 +891,7 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 	const sourceLang = first.sourceLang
 	const { outputData, outputFilePath, writableCache, cacheFilePath } = first
 	const { translationProvider, appContextMessage } = first.state
+	const trackTargetEdits = options.trackTargetEdits ?? true
 
 	const model = options.model
 		?? DEFAULT_LLM_MODELS[appState.providerName]?.[appState.accessMethod]
@@ -894,13 +917,10 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 	// (see translateText); this restores parity for the batched path.
 	if (sourceLang === targetLang) {
 		log.D(`[${targetLang}] source and target language match; copying reference values verbatim`)
-		writableCache.state[targetLang] = writableCache.state[targetLang] || { keyHashes: {} }
-		writableCache.state[targetLang].keyHashes = writableCache.state[targetLang].keyHashes || {}
-		writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
 		for (const t of taskList) {
 			outputData[t.key] = t.state.refValue
-			writableCache.state[targetLang].keyHashes[t.key] = calculateHash(t.state.refValue)
-			writableCache.referenceKeyHashes[targetLang][t.key] = t.state.referenceValueHash
+			recordTargetHash({ writableCache, targetLang, key: t.key, hash: calculateHash(t.state.refValue), trackTargetEdits })
+			setReferenceKeyHash(writableCache, targetLang, t.key, t.state.referenceValueHash)
 		}
 		if (options.realtimeWrites) {
 			await writeJsonFile(outputFilePath, outputData, log)
@@ -1001,9 +1021,8 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 				}
 				outputData[key] = newValue
 				const hashForTranslated = calculateHash(newValue)
-				writableCache.state[targetLang].keyHashes[key] = hashForTranslated
-				writableCache.referenceKeyHashes[targetLang] = writableCache.referenceKeyHashes[targetLang] || {}
-				writableCache.referenceKeyHashes[targetLang][key] = t.state.referenceValueHash
+				recordTargetHash({ writableCache, targetLang, key, hash: hashForTranslated, trackTargetEdits })
+				setReferenceKeyHash(writableCache, targetLang, key, t.state.referenceValueHash)
 				remaining.delete(key)
 			}
 

@@ -34,7 +34,13 @@ export async function loadConfig({ configFile, log }) {
 			outputDir: null,
 			referenceFile: null,
 			referenceLanguage: null,
-			normalizeOutputFilenames: false
+			normalizeOutputFilenames: false,
+			// `state` records a hash of every translated string purely so a
+			// hand-edited target value is never overwritten. It is half the cache
+			// by size — 9.6 MB of a 19 MB file in one real project — and projects
+			// that never hand-edit their target files pay it for nothing. Default
+			// true to preserve existing behaviour; set false to stop recording it.
+			trackTargetEdits: true
 		}
 	}
 

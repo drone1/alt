@@ -1,10 +1,125 @@
 import { readJsonFile } from './io.js'
 import { KEY_HASH_LENGTH } from './utils.js'
 
+// referenceKeyHashes stored one key -> hash map PER LANGUAGE, but the value is a
+// hash of the reference text, which is the same text for every language. In a
+// real cache 178,823 pairs collapsed to 6,144 distinct keys with only 322
+// genuine per-language deviations — 9.7 MB to hold ~0.4 MB of information, and a
+// new reference key cost one entry per language instead of one entry.
+//
+// The shape is now a canonical `sourceKeyHashes` plus `sourceKeyHashOverrides`
+// carrying only what actually differs. A deviation means that language is stale
+// for that key. An override of null is a TOMBSTONE: it records "this language
+// has no hash for this key", which absence alone cannot express once a canonical
+// value exists, and which markUntranslatable relies on.
+export function getReferenceKeyHash(cache, lang, key) {
+	const override = cache.sourceKeyHashOverrides?.[lang]
+	if (override && key in override) return override[key] ?? undefined
+	return cache.sourceKeyHashes?.[key]
+}
+
+export function setReferenceKeyHash(cache, lang, key, hash) {
+	cache.sourceKeyHashes = cache.sourceKeyHashes ?? {}
+	cache.sourceKeyHashOverrides = cache.sourceKeyHashOverrides ?? {}
+
+	// First writer defines canonical. Every language in a run writes the same
+	// reference hash for a key, so canonical converges and overrides stay rare.
+	if (!(key in cache.sourceKeyHashes)) {
+		cache.sourceKeyHashes[key] = hash
+	}
+
+	const langOverrides = cache.sourceKeyHashOverrides[lang]
+	if (cache.sourceKeyHashes[key] === hash) {
+		// Matches canonical — any override, including a tombstone, is now wrong.
+		if (langOverrides && key in langOverrides) {
+			delete langOverrides[key]
+			if (!Object.keys(langOverrides).length) delete cache.sourceKeyHashOverrides[lang]
+		}
+		return
+	}
+	cache.sourceKeyHashOverrides[lang] = langOverrides ?? {}
+	cache.sourceKeyHashOverrides[lang][key] = hash
+}
+
+export function deleteReferenceKeyHash(cache, lang, key) {
+	// A tombstone is required rather than a delete: with a canonical value
+	// present, removing the override would resurrect the canonical hash for this
+	// language instead of clearing it.
+	if (cache.sourceKeyHashes && key in cache.sourceKeyHashes) {
+		cache.sourceKeyHashOverrides = cache.sourceKeyHashOverrides ?? {}
+		cache.sourceKeyHashOverrides[lang] = cache.sourceKeyHashOverrides[lang] ?? {}
+		cache.sourceKeyHashOverrides[lang][key] = null
+		return
+	}
+	const langOverrides = cache.sourceKeyHashOverrides?.[lang]
+	if (langOverrides && key in langOverrides) delete langOverrides[key]
+}
+
+// Fold a legacy per-language referenceKeyHashes map into canonical + overrides.
+// Canonical is the most common hash for each key, which minimises overrides.
+export function migrateReferenceKeyHashes(cache) {
+	const legacy = cache.referenceKeyHashes
+	if (!legacy || typeof legacy !== 'object' || !Object.keys(legacy).length) {
+		cache.sourceKeyHashes = cache.sourceKeyHashes ?? {}
+		cache.sourceKeyHashOverrides = cache.sourceKeyHashOverrides ?? {}
+		delete cache.referenceKeyHashes
+		return { cache, canonical: 0, overrides: 0 }
+	}
+
+	const countsByKey = new Map()
+	for (const entries of Object.values(legacy)) {
+		if (!entries || typeof entries !== 'object') continue
+		for (const [key, hash] of Object.entries(entries)) {
+			if (typeof hash !== 'string') continue
+			if (!countsByKey.has(key)) countsByKey.set(key, new Map())
+			const counts = countsByKey.get(key)
+			counts.set(hash, (counts.get(hash) ?? 0) + 1)
+		}
+	}
+
+	const canonical = {}
+	for (const [key, counts] of countsByKey) {
+		let bestHash = null
+		let bestCount = -1
+		for (const [hash, count] of counts) {
+			if (count > bestCount) { bestHash = hash; bestCount = count }
+		}
+		canonical[key] = bestHash
+	}
+
+	const overrides = {}
+	let overrideCount = 0
+	for (const [lang, entries] of Object.entries(legacy)) {
+		if (!entries || typeof entries !== 'object') continue
+		for (const [key, hash] of Object.entries(entries)) {
+			if (typeof hash !== 'string' || canonical[key] === hash) continue
+			overrides[lang] = overrides[lang] ?? {}
+			overrides[lang][key] = hash
+			overrideCount++
+		}
+		// A key this language never had must stay absent for it. Without a
+		// tombstone the canonical hash answers the lookup instead, the key looks
+		// already up to date, and that language never gets it translated at all.
+		for (const key of Object.keys(canonical)) {
+			if (key in entries) continue
+			overrides[lang] = overrides[lang] ?? {}
+			overrides[lang][key] = null
+			overrideCount++
+		}
+	}
+
+	// Pre-existing values win: a partially migrated cache must not be clobbered.
+	cache.sourceKeyHashes = { ...canonical, ...(cache.sourceKeyHashes ?? {}) }
+	cache.sourceKeyHashOverrides = { ...overrides, ...(cache.sourceKeyHashOverrides ?? {}) }
+	delete cache.referenceKeyHashes
+
+	return { cache, canonical: Object.keys(canonical).length, overrides: overrideCount }
+}
+
 // Sections of the cache that are keyed by target language at the top level.
 // Everything in them belongs to exactly one language, so anything under a
 // language we are no longer translating is dead weight.
-const LANGUAGE_KEYED_SECTIONS = Object.freeze(['referenceKeyHashes', 'state', 'untranslatable'])
+const LANGUAGE_KEYED_SECTIONS = Object.freeze(['sourceKeyHashOverrides', 'state', 'untranslatable'])
 
 // Nothing ever evicted from this file. A language dropped from targetLanguages
 // kept its entries forever, and because the whole document is rewritten on every
@@ -87,7 +202,11 @@ export function migrateHashLengths(cache) {
 
 	cache.referenceHash = shorten(cache.referenceHash)
 
-	for (const section of ['referenceKeyHashes', 'untranslatable']) {
+	for (const key of Object.keys(cache.sourceKeyHashes ?? {})) {
+		cache.sourceKeyHashes[key] = shorten(cache.sourceKeyHashes[key])
+	}
+
+	for (const section of ['referenceKeyHashes', 'sourceKeyHashOverrides', 'untranslatable']) {
 		const bucket = cache[section]
 		if (!bucket || typeof bucket !== 'object') continue
 		for (const lang of Object.keys(bucket)) {
@@ -111,6 +230,8 @@ export async function loadCache(path, { targetLanguages = [], referenceLanguage 
 	const cache = {
 		referenceHash: storedCache?.referenceHash ?? '',
 		referenceKeyHashes: storedCache?.referenceKeyHashes ?? {},
+		sourceKeyHashes: storedCache?.sourceKeyHashes ?? {},
+		sourceKeyHashOverrides: storedCache?.sourceKeyHashOverrides ?? {},
 		state: storedCache?.state ?? {},
 		// untranslatable[targetLang][key] = <sourceHash>. Marks a (lang, key) the
 		// provider returned verbatim from a source that *should* have been
@@ -122,6 +243,8 @@ export async function loadCache(path, { targetLanguages = [], referenceLanguage 
 		untranslatable: storedCache?.untranslatable ?? {},
 		lastRun: storedCache?.lastRun ?? null,
 	}
+	const { canonical, overrides } = migrateReferenceKeyHashes(cache)
+	if (canonical && log) log.V(`Cache cleanup: folded referenceKeyHashes into ${canonical} canonical + ${overrides} override(s)`)
 	const { migrated } = migrateHashLengths(cache)
 	if (migrated && log) log.V(`Cache cleanup: shortened ${migrated} oversized hash(es)`)
 	return pruneCache({ cache, targetLanguages, referenceLanguage, log }).cache
