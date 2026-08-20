@@ -41,6 +41,67 @@ const SPAWN_TIMEOUT_MS = (() => {
 // or rate-limited state.
 const DEFAULT_BACKOFF_MS = 30 * 1000
 
+// Anthropic rejects any tool-schema property name that does not match this.
+// Note it constrains the CHARSET as well as the length: `:` is not allowed.
+export const SCHEMA_PROPERTY_NAME_RE = /^[a-zA-Z0-9_.-]{1,64}$/
+
+// Prefix for the opaque property names we send instead of real keys.
+const ALIAS_PREFIX = 'k'
+
+// Localization keys used to travel as the schema's property NAMES, which is the
+// only reason the charset above ever applied to them. Any key longer than 64
+// characters — or containing a colon — made the API reject the request with
+// `400 tools.0.custom.input_schema.properties`, and the damage was never
+// confined to the offending key: the whole chunk failed, so every key in it came
+// back untranslated, and the orchestrator's re-chunking then concentrated the
+// offenders until nearly every retry chunk was poisoned too. Measured against
+// lightwall: 117 offending keys cost ~600 keys per language per run.
+//
+// Aliasing to k0..kN removes the constraint class outright. It deliberately
+// keeps one property per key so `required` still enforces exact per-key identity
+// — that is what lets the orchestrator recover a partial response. Moving keys
+// into schema VALUES would also dodge the charset rule but would give that up.
+//
+// The real keys are still shown to the model as identifier hints, because the
+// key path carries semantic signal worth keeping (`vis-setting-help-...` reads
+// as help prose, not a button label). Nothing depends on the model echoing them.
+export function buildAliasedBatch(items) {
+	const sourceMap = {}
+	const keyByAlias = {}
+	const aliasByKey = {}
+	const contextLines = []
+	const identifierHintLines = []
+
+	items.forEach((item, index) => {
+		const alias = `${ALIAS_PREFIX}${index}`
+		keyByAlias[alias] = item.key
+		aliasByKey[item.key] = alias
+		sourceMap[alias] = item.text
+		identifierHintLines.push(`${alias} = ${item.key}`)
+		if (item.context) contextLines.push(`${alias}: ${item.context}`)
+	})
+
+	const aliases = Object.keys(sourceMap)
+
+	// Fail loudly rather than letting a malformed name reach the API, where it
+	// surfaces as an opaque 400 that costs a whole chunk. Aliases cannot violate
+	// the pattern; this guards against a future change routing raw keys here
+	// again, and a length-only check would have missed the colon key.
+	const invalid = aliases.filter(a => !SCHEMA_PROPERTY_NAME_RE.test(a))
+	if (invalid.length) {
+		throw new Error(`schema property names violate ${SCHEMA_PROPERTY_NAME_RE}: ${invalid.slice(0, 5).join(', ')}`)
+	}
+
+	const schema = {
+		type: 'object',
+		properties: Object.fromEntries(aliases.map(a => [a, { type: 'string' }])),
+		required: aliases,
+		additionalProperties: false,
+	}
+
+	return { sourceMap, schema, keyByAlias, aliasByKey, contextLines, identifierHintLines }
+}
+
 // Translate one batch of items. The orchestrator in translate.js handles the
 // retry-on-partial-success and per-key fallback cascade — this function just
 // does one round-trip.
@@ -60,21 +121,18 @@ export async function translateBatch({ items, sourceLang, targetLang, model, app
 	if (!items?.length) return result
 
 	// Build the source-text map and matching JSON schema in lockstep so the
-	// schema's required[] list is exactly the keys we sent.
-	const sourceMap = {}
-	const contextLines = []
-	for (const item of items) {
-		sourceMap[item.key] = item.text
-		if (item.context) contextLines.push(`${item.key}: ${item.context}`)
+	// schema's required[] list is exactly the aliases we sent.
+	let sourceMap, schema, keyByAlias, contextLines, identifierHintLines
+	try {
+		({ sourceMap, schema, keyByAlias, contextLines, identifierHintLines } = buildAliasedBatch(items))
+	} catch (err) {
+		// Only reachable if aliasing itself is broken, which no retry can fix.
+		result.error = `failed to build request schema: ${err.message}`
+		result.hardFail = true
+		log.W(result.error)
+		return result
 	}
-	const keys = Object.keys(sourceMap)
-
-	const schema = {
-		type: 'object',
-		properties: Object.fromEntries(keys.map(k => [k, { type: 'string' }])),
-		required: keys,
-		additionalProperties: false,
-	}
+	const aliases = Object.keys(sourceMap)
 
 	// System prompt is stable across batches for the same lang pair — keeps
 	// instruction set tight and benefits from any Anthropic prompt caching.
@@ -98,6 +156,13 @@ export async function translateBatch({ items, sourceLang, targetLang, model, app
 	]
 	if (contextLines.length) {
 		userPromptParts.push(``, `Per-key context (use this to inform the translation; do not include in output):`, ...contextLines)
+	}
+	// The identifiers are opaque in the schema, so hand the model the real key
+	// names separately — a key path like `vis-setting-help-...` tells it the
+	// string is help prose rather than a button label. Purely advisory: the
+	// response is keyed by alias and nothing parses these back.
+	if (identifierHintLines.length) {
+		userPromptParts.push(``, `Identifier hints (for context only; do not translate or output these):`, ...identifierHintLines)
 	}
 	const userPrompt = userPromptParts.join('\n')
 
@@ -233,12 +298,14 @@ export async function translateBatch({ items, sourceLang, targetLang, model, app
 		return result
 	}
 
-	// Pull out per-key translations. Empty / whitespace results are filtered so
-	// the orchestrator can mark them as failed and retry.
-	for (const key of keys) {
-		const v = structured[key]
+	// Pull out per-key translations, mapping the opaque aliases back to real
+	// keys so nothing downstream — orchestrator, cache, audit — ever sees an
+	// alias. Empty / whitespace results are filtered so the orchestrator can
+	// mark them as failed and retry.
+	for (const alias of aliases) {
+		const v = structured[alias]
 		if (typeof v === 'string' && v.trim().length > 0) {
-			result.translations[key] = v
+			result.translations[keyByAlias[alias]] = v
 		}
 	}
 
