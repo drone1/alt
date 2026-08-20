@@ -193,7 +193,7 @@ export async function runTranslation({ appState, options, log }) {
 		const cacheFilePath = path.resolve(outputDir, DEFAULT_CACHE_FILENAME)
 
 		log.V(`Attempting to load cache file from "${cacheFilePath}"`)
-		const readOnlyCache = await loadCache(cacheFilePath)
+		const readOnlyCache = await loadCache(cacheFilePath, { targetLanguages, referenceLanguage, log })
 		log.D(`Loaded cache file`)
 
 		// Create a tmp dir for storing the .mjs reference file; we can't dynamically import .js files directly, so we make a copy...
@@ -614,7 +614,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 					await writeJsonFile(outputFilePath, outputData, log)
 					log.V(`Wrote ${outputFilePath}`)
 				}
-				await writeJsonFile(cacheFilePath, writableCache, log)
+				await writeJsonFile(cacheFilePath, writableCache, log, { indent: 0 })
 				log.V(`Wrote ${cacheFilePath}`)
 			}
 		} else if (translated) {
@@ -638,7 +638,7 @@ export async function processTranslationTask({ appState, taskInfo, listrTask, op
 
 			// Update state file every time, in case the user kills the process
 			if (options.realtimeWrites) {
-				await writeJsonFile(cacheFilePath, writableCache, log)
+				await writeJsonFile(cacheFilePath, writableCache, log, { indent: 0 })
 				log.V(`Wrote ${cacheFilePath}`)
 			}
 		} else {
@@ -895,7 +895,7 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 		}
 		if (options.realtimeWrites) {
 			await writeJsonFile(outputFilePath, outputData, log)
-			await writeJsonFile(cacheFilePath, writableCache, log)
+			await writeJsonFile(cacheFilePath, writableCache, log, { indent: 0 })
 		} else if (Object.keys(outputData).length > 0 && !(outputFilePath in appState.filesToWrite)) {
 			appState.filesToWrite[outputFilePath] = outputData
 		}
@@ -1000,7 +1000,7 @@ async function processLanguageBatched({ appState, taskList, batchSize, options, 
 
 			if (options.realtimeWrites) {
 				await writeJsonFile(outputFilePath, outputData, log)
-				await writeJsonFile(cacheFilePath, writableCache, log)
+				await writeJsonFile(cacheFilePath, writableCache, log, { indent: 0 })
 			}
 		}
 
