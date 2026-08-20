@@ -82,8 +82,22 @@ export function unique(array) {
 }
 
 // Calculate hash of a string
+// These hashes exist only to answer "did this string change since last run".
+// A full 64-char sha256 hex spends 48 bytes per entry proving something a 64-bit
+// prefix already proves: across ~6,000 keys in one language the collision
+// probability is around 1e-12, and the sole consequence of a collision is one
+// key not being re-translated — there is no corruption path. Over the ~342,000
+// key/language pairs in a real cache the full digest cost ~16.5 MB.
+//
+// Truncation is a prefix operation on the same digest, so a stored full-length
+// hash truncates to exactly what a fresh call now returns. That is what lets
+// migrateHashLengths rewrite an existing cache without invalidating a single
+// entry. Do not change this length without a matching migration: a mismatch
+// re-translates every key in every language.
+export const KEY_HASH_LENGTH = 16
+
 export function calculateHash(content) {
-	return crypto.createHash('sha256').update(content).digest('hex')
+	return crypto.createHash('sha256').update(content).digest('hex').slice(0, KEY_HASH_LENGTH)
 }
 
 export function normalizeKey(key) {

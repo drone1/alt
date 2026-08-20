@@ -1,4 +1,5 @@
 import { readJsonFile } from './io.js'
+import { KEY_HASH_LENGTH } from './utils.js'
 
 // Sections of the cache that are keyed by target language at the top level.
 // Everything in them belongs to exactly one language, so anything under a
@@ -72,6 +73,39 @@ export function pruneCache({ cache, targetLanguages = [], referenceLanguage = nu
 	return { cache, dropped }
 }
 
+// Shorten any stored hash written before KEY_HASH_LENGTH was introduced.
+// Truncating a prefix of the same digest yields exactly what calculateHash now
+// returns, so every surviving entry still matches and nothing is re-translated.
+// Without this, shortening the digest would invalidate the entire cache.
+export function migrateHashLengths(cache) {
+	let migrated = 0
+	const shorten = (v) => {
+		if (typeof v !== 'string' || v.length <= KEY_HASH_LENGTH) return v
+		migrated++
+		return v.slice(0, KEY_HASH_LENGTH)
+	}
+
+	cache.referenceHash = shorten(cache.referenceHash)
+
+	for (const section of ['referenceKeyHashes', 'untranslatable']) {
+		const bucket = cache[section]
+		if (!bucket || typeof bucket !== 'object') continue
+		for (const lang of Object.keys(bucket)) {
+			const entries = bucket[lang]
+			if (!entries || typeof entries !== 'object') continue
+			for (const key of Object.keys(entries)) entries[key] = shorten(entries[key])
+		}
+	}
+
+	for (const lang of Object.keys(cache.state ?? {})) {
+		const keyHashes = cache.state[lang]?.keyHashes
+		if (!keyHashes || typeof keyHashes !== 'object') continue
+		for (const key of Object.keys(keyHashes)) keyHashes[key] = shorten(keyHashes[key])
+	}
+
+	return { cache, migrated }
+}
+
 export async function loadCache(path, { targetLanguages = [], referenceLanguage = null, log = null } = {}) {
 	const storedCache = await readJsonFile(path)
 	const cache = {
@@ -88,5 +122,7 @@ export async function loadCache(path, { targetLanguages = [], referenceLanguage 
 		untranslatable: storedCache?.untranslatable ?? {},
 		lastRun: storedCache?.lastRun ?? null,
 	}
+	const { migrated } = migrateHashLengths(cache)
+	if (migrated && log) log.V(`Cache cleanup: shortened ${migrated} oversized hash(es)`)
 	return pruneCache({ cache, targetLanguages, referenceLanguage, log }).cache
 }
