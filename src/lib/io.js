@@ -90,7 +90,12 @@ export function normalizeOutputPath({ dir, filename, normalize }) {
 	return path.join(dir, normalize ? filename.toLowerCase() : filename)
 }
 
-export function writeJsonFile(filePath, data, log) {
+// Indent for human-facing output files. The cache is machine-only and passes
+// indent: 0 — pretty-printing it cost 4.4 MB of newlines and padding in one
+// consuming project, in a file no one reads.
+export const DEFAULT_JSON_INDENT = 2
+
+export function writeJsonFile(filePath, data, log, { indent = DEFAULT_JSON_INDENT } = {}) {
 	assertValidPath(filePath)
 	assertIsObj(data)
 	log.V(`Preparing to write ${filePath}...`)
@@ -117,9 +122,14 @@ export function writeJsonFile(filePath, data, log) {
 
 	log.V(`Writing ${filePath}...`)
 	try {
-		fs.writeFileSync(filePath, JSON.stringify(normalizedData, null, 2), 'utf8')
+		fs.writeFileSync(filePath, JSON.stringify(normalizedData, null, indent), 'utf8')
 	} catch (err) {
+		// Rethrow. Swallowing this reported a failed write as a success: the run
+		// finished green, shutdown counted the file as written, and the
+		// translations it contained were simply gone. A write that did not happen
+		// is not a warning.
 		log.E(err)
+		throw err
 	}
 	log.D(`Done.`)
 }
