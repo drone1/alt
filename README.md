@@ -15,6 +15,7 @@
    * [Setup](#setup)
       * [Create a reference file](#create-a-reference-file)
       * [Running](#running)
+      * [Access methods](#access-methods)
       * [Output](#output)
    * [Config file](#config-file)
    * [Adding context](#adding-context)
@@ -26,18 +27,20 @@
       * [Example I: ALT's localized display strings](#example-i-alts-localized-display-strings)
       * [Example II](#example-ii)
       * [Example III](#example-iii)
-      * [Example III](#example-iii-1)
+      * [Example IV](#example-iv)
    * [Formatting](#formatting)
    * [Translation rules](#translation-rules)
+   * [Removing stale keys](#removing-stale-keys)
    * [Additional notes](#additional-notes)
       * [Yes, you should commit your .localization.cache.json](#yes-you-should-commit-your-localizationcachejson)
+      * [Hand-edited target values](#hand-edited-target-values)
       * [Delayed vs. realtime writes](#delayed-vs-realtime-writes)
       * [CI](#ci)
    * [Contributing](#contributing)
    * [Feedback](#feedback)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: jonl, at: Fri Apr 18 09:55:42 PM CEST 2025 -->
+<!-- Added by: jonl, at: Fri Aug 21 07:38:06 PM CEST 2026 -->
 
 <!--te-->
 
@@ -50,7 +53,10 @@ Translates all source strings in a reference (`js`,`mjs`,`json`,`jsonc`) file to
 * App-level context can be specified [`appContextMessage`]
 * Additional context can be specified per string [`--contextPrefix`, `--contextSuffix`]
 * Supports Claude, Gemini, OpenAI [`--provider`]
+* Two ways to reach a provider: its HTTP API with your own key, or its CLI tool with that tool's own auth [`--access`]
+* Many keys per request, and several languages at once, where the access method supports it [`--batch-size`, `--concurrency`]
 * User-modifications to output files are safe and will not be overwritten
+* Removes keys from your target files once they leave the reference file [`alt prune`]
 * Languages are specified using BCP47 tags
 
 ## Installation
@@ -71,7 +77,7 @@ export default {
 ```
 Use whatever filename you prefer. `js`,`mjs`,`json`,`jsonc` extensions are supported.
 
-For `.js` and `.mjs` files, you can specify the name of an exported variable instead of using `default`, via `--referenceVarName`.
+For `.js` and `.mjs` files, you can specify the name of an exported variable instead of using `default`, via `--reference-exported-var-name`.
 
 ### Running
 ```bash
@@ -87,6 +93,27 @@ Here are all supported providers and their required environment variables:
 | anthropic         | ANTHROPIC_API_KEY                                              |
 | google            | GOOGLE_API_KEY                                                 |
 | openai            | OPENAI_API_KEY                                                 |
+
+### Access methods
+`--provider` says _whose_ model to use; `--access` says _how_ to reach it.
+
+| `-a`, `--access` | how it authenticates | providers |
+|------------------|----------------------|-----------|
+| `api` (default)  | the vendor's HTTP API, using the API key in the environment variable above | anthropic, google, openai |
+| `harness`        | the vendor's own CLI tool, using whatever that tool is already logged in as — no API key | anthropic (via [Claude Code](https://github.com/anthropics/claude-code)) |
+
+```bash
+alt translate --provider anthropic --access harness
+```
+
+With `harness`, ALT shells out to the `claude` executable on your `PATH`, so a Claude subscription
+covers the translation instead of API billing. The CLI has to be installed and signed in first.
+
+`harness` also translates in batches: one call carries `--batch-size` keys (25 by default) rather than
+one key, and `--concurrency` languages can be in flight at once (1 by default). Bigger batches amortize
+the CLI's startup cost better, but a batch that comes back empty costs that much more rework. Whatever
+fails is retried up to `--max-retries` times, and if two attempts in a row translate nothing at all ALT
+drops to one key per call, so a single unanswerable string stops blocking the rest of its batch.
 
 ### Output
 The example above would write `aa.json`, `bo.json`, etc., to the current working directory.
@@ -117,11 +144,16 @@ Here's an example `alt.config.json` file you might keep in your project's root d
 	"appContextMessage": "This is a description of my app",
 	"referenceLanguage": "ar",
 	"provider": "google",
+	"access": "api",
 	"lookForContextData": true,
 	"contextPrefix": "_context:",
 	"contextSuffix": "",
 	"outputDir": "localization",
 	"referenceFile": "localization/reference.js",
+	"normalizeOutputFilenames": false,
+	"batchSize": 25,
+	"concurrency": 1,
+	"trackTargetEdits": true,
 	"targetLanguages": [
 		"es-MX", "zh-SG"
 	]
@@ -181,10 +213,12 @@ Options:
 Commands:
   translate [options]
   list-models [options]
+  prune [options]        Remove keys from target files that no longer exist in
+                         the reference file
   help [command]         display help for command
 
 Environment variables:
-  ANTHROPIC_API_KEY                     Your Anthropic API key
+  ANTHROPIC_API_KEY                     Your Anthropic API key (for --provider anthropic --access api)
   OPENAI_API_KEY                        Your OpenAI API key
   GOOGLE_API_KEY                        Your Google Gemini API key
   ALT_LANGUAGE                          BCP47 language tag used for display
@@ -194,7 +228,7 @@ Environment variables:
 Usage: alt translate [options]
 
 Options:
-  -c, --config-file <path>                      Path to config file; defaults to <output dir>/alt.config.json
+  -c, --config-file <path>                      Path to config file; defaults to "alt.config.json" in the current working directory if not specified
   -r, --reference-file <path>                   Path to reference file of source strings to be translated. This file can be in .js, .mjs, .json, or .jsonc formats and is presumed to be in the reference language specified by --reference-language; overrides any 'referenceFile' config setting
   -o, --output-dir <path>                       Output directory for localized files; overrides any 'outputDir' config setting
   -rl, --reference-language <language>          The reference file's language; overrides any 'referenceLanguage' config setting
@@ -205,9 +239,12 @@ Options:
   -f, --force                                   Force regeneration of all keys; if no '--keys' argument is specified, all keys will be processed (default: false)
   -rtw, --realtime-writes                       Write updates to disk immediately, rather than on shutdown (default: false)
   -y, --tty                                     Use tty/simple renderer; useful for CI (default: false)
-  -M, --model <name>                            LLM model name to use; defaults are: for "anthropic": "claude-3-7-sonnet-20250219", for "google": "gemini-2.0-flash", for "openai": "gpt-4-turbo"; use the 'list-models' command to view all models
+  -M, --model <name>                            LLM model name to use; defaults per provider/access: anthropic/api="claude-haiku-4-5-20251001", anthropic/harness="haiku", google/api="gemini-2.0-flash", openai/api="gpt-4.1-mini"; use the 'list-models' command to view all models
   -x, --max-retries <integer>                   Maximum retries on failure (default: 3)
+  -bs, --batch-size <integer>                   When the access method supports batched translation (currently only 'harness'), translate this many keys per call. Larger batches amortize CLI cold-start better but lose more work on a failed batch. Defaults to 25; overrides any 'batchSize' config setting
+  -C, --concurrency <integer>                   When the access method supports batched translation, run this many language batches in parallel. Defaults to 1; overrides any 'concurrency' config setting
   -n, --normalize-output-filenames              Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting (default: false)
+  --no-track-target-edits                       Stop recording a hash of every translated string. That record exists only to avoid overwriting hand-edited target values, and is roughly half the cache by size; disable it if you never hand-edit target files
   -N, --no-logo                                 Suppress logo printout
   -cp, --context-prefix <value>                 String to be prefixed to all keys to search for additional context, which are passed along to the AI for context
   -cs, --context-suffix <value>                 String to be suffixed to all keys to search for additional context, which are passed along to the AI for context
@@ -216,7 +253,29 @@ Options:
   -d, --debug                                   Enables debug spew; forces --tty mode (default: false)
   -t, --trace                                   Enables trace spew; forces --tty mode (default: false)
   --dev                                         Enable dev mode, which prints stack traces with errors (default: false)
-  -p, --provider <name>                         AI provider to use for translations (anthropic, openai); overrides any 'provider' config setting
+  -p, --provider <name>                         AI provider vendor to use for translations (anthropic, google, openai); overrides any 'provider' config setting
+  -a, --access <method>                         Access method for the provider. `api` uses the vendor's HTTP API with an API key (env: <PROVIDER>_API_KEY). `harness` uses the vendor's own CLI tool with that tool's own auth — currently only supported by anthropic via Claude Code. Per-provider support: anthropic: api|harness; google: api; openai: api. Defaults to "api"; overrides any 'access' config setting
+  -h, --help                                    display help for command
+
+---
+
+Usage: alt prune [options]
+
+Remove keys from target files that no longer exist in the reference file
+
+Options:
+  -c, --config-file <path>                      Path to config file; defaults to "alt.config.json" in the current working directory if not specified
+  -r, --reference-file <path>                   Path to reference file of source strings. This file can be in .js, .mjs, .json, or .jsonc formats; overrides any 'referenceFile' config setting
+  -o, --output-dir <path>                       Output directory for localized files; overrides any 'outputDir' config setting
+  -tl, --target-languages <list>                Comma-separated list of language codes; overrides any 'targetLanguages' config setting
+  -R, --reference-exported-var-name <var name>  For .js or .mjs reference files only, this will be the exported variable, e.g. for 'export default = {...}' you'd use 'default' here, or 'data' for 'export const data = { ... }'. For .json or .jsonc reference files, this value is ignored. (default: "default")
+  -n, --normalize-output-filenames              Normalizes output filenames (to all lower-case); overrides any 'normalizeOutputFilenames' in config setting (default: false)
+  --dry-run                                     Show what would be removed without actually modifying files (default: false)
+  -N, --no-logo                                 Suppress logo printout
+  -v, --verbose                                 Enables verbose spew (default: false)
+  -d, --debug                                   Enables debug spew (default: false)
+  -t, --trace                                   Enables trace spew (default: false)
+  --dev                                         Enable dev mode, which prints stack traces with errors (default: false)
   -h, --help                                    display help for command
 
 ---
@@ -224,8 +283,17 @@ Options:
 Usage: alt list-models [options]
 
 Options:
-  -p, --provider <name>  AI provider to use for translations (anthropic,
-                         openai); overrides any 'provider' config setting
+  -p, --provider <name>  AI provider vendor to use for translations (anthropic,
+                         google, openai); overrides any 'provider' config
+                         setting
+  -a, --access <method>  Access method for the provider. `api` uses the
+                         vendor's HTTP API with an API key (env:
+                         <PROVIDER>_API_KEY). `harness` uses the vendor's own
+                         CLI tool with that tool's own auth — currently only
+                         supported by anthropic via Claude Code. Per-provider
+                         support: anthropic: api|harness; google: api; openai:
+                         api. Defaults to "api"; overrides any 'access' config
+                         setting
   -h, --help             display help for command
 ```
 
@@ -233,7 +301,7 @@ Options:
 ### Example I: ALT's localized display strings
 The best example is probably the localization for ALT's own display strings.
 
-See [alt.config.js](alt.config.js), which contains a `config.js` file and localization files used for the tool's own display strings.
+See [alt.config.json](alt.config.json), the config used for the tool's own display strings, and the [localization](localization) directory it writes to.
 
 Generated with `npm run localize-display-strings`
 
@@ -241,7 +309,7 @@ Generated with `npm run localize-display-strings`
 ### Example II
 ```bash
 alt translate --reference-file loc.js
---reference-var-name data
+--reference-exported-var-name data
 --provider anthropic
 --look-for-context-data
 --context-prefix _context:
@@ -266,10 +334,9 @@ alt translate --config-file ./localization-config.json
 * Looks for exported ``default`` value
 * Translates with ChatGPT
 * Looks for context keys ending with `[context]`
-* Writes to disk repeatedly, as changes are processed
 * Writes files to `./localization`
 
-### Example III
+### Example IV
 ```bash
 alt translate --config-file config.json
   --reference-file localization/reference/source.js
@@ -314,11 +381,44 @@ Translation will occur for a given target language & reference key/value if any 
 * The cache file (`.localization.cache.json`) is not present
 
 NOTE: Translation will _not_ occur if ALT detects that the given value in the target language file has been manually modified. If you modify an output value manually and want it to be re-translated
-later, you can just delete that key/value pair from the given file.
+later, you can just delete that key/value pair from the given file. That protection is what `--no-track-target-edits` turns off &ndash; see [Hand-edited target values](#hand-edited-target-values).
+
+There is one more case where a key is deliberately left alone: if the provider hands back the source
+string unchanged for a value that plainly should have been translated &ndash; usually a model that doesn't
+speak that target language and just echoes the source &ndash; ALT records the pair as untranslatable and
+drops the key from the output file, so your app falls back to the source language rather than shipping
+an English string inside a non-English file. The record is keyed by the source string's hash, so editing
+the reference value asks the question again.
+
+## Removing stale keys
+Deleting a key from your reference file doesn't remove it from the target files &ndash; nothing translates it
+any more, but the old translation sits there. `alt prune` cleans that up:
+
+```bash
+alt prune --dry-run
+alt prune
+```
+
+`--dry-run` reports what it would remove without touching anything.
 
 ## Additional notes
 ### Yes, you should commit your .localization.cache.json
 If you do not do this, you'll lose important state and need to re-translate everything.
+
+It is a machine-readable file, not one to review by hand: it's written without indentation, and its
+per-key reference hashes are stored once and shared across languages instead of repeated per language.
+ALT also maintains it as it goes &ndash; a language you remove from `targetLanguages` has its entries dropped
+on the next run, rather than being carried (and re-committed) forever.
+
+### Hand-edited target values
+Alongside the reference hashes, ALT records a hash of every value it writes. That record exists for one
+purpose: noticing that _you_ changed a target value afterwards, so it never overwrites your edit. It is
+also roughly half the cache by size.
+
+If you never hand-edit your target files &ndash; if they're purely generated &ndash; pass `--no-track-target-edits`
+(or set `"trackTargetEdits": false` in your config) and ALT stops recording it. Everything else still
+works: a key missing from a target file is still translated, and a changed reference value still triggers
+a re-translation. The only thing you give up is the "don't clobber my manual edit" guarantee.
 
 ### Delayed vs. realtime writes
 By default, ALT will not write to disk until the tool is shutting down (including SIGTERM &ndash; yes, `Ctrl+C` is safe).
@@ -330,6 +430,12 @@ If you prefer to write updates to disk in real-time (anytime any output data cha
 
 ### CI
 You may want to use `--tty` for more useful output.
+
+Commit the updated output files and `.localization.cache.json` as part of the job; without the cache, the
+next run re-translates everything from scratch.
+
+If you're running `--access harness`, the `claude` CLI has to be installed on the runner and already
+authenticated there &ndash; ALT does not log it in for you.
 
 ## Contributing
 Feel free to fix existing issues and submit a PR, or submit a new issue.
