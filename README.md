@@ -407,8 +407,12 @@ If you do not do this, you'll lose important state and need to re-translate ever
 
 It is a machine-readable file, not one to review by hand: it's written without indentation, and its
 per-key reference hashes are stored once and shared across languages instead of repeated per language.
-ALT also maintains it as it goes &ndash; a language you remove from `targetLanguages` has its entries dropped
-on the next run, rather than being carried (and re-committed) forever.
+ALT also maintains it as it goes &ndash; a language you remove from `targetLanguages` in your config has its
+entries dropped on the next run, rather than being carried (and re-committed) forever.
+
+Eviction follows your **config**, not whatever `--target-languages` a single invocation passes. Narrowing
+one run (`alt translate --target-languages en`, say, as a source-language parity check) translates only
+that language but leaves every other language's cache entries intact.
 
 ### Hand-edited target values
 Alongside the reference hashes, ALT records a hash of every value it writes. That record exists for one
@@ -416,7 +420,8 @@ purpose: noticing that _you_ changed a target value afterwards, so it never over
 also roughly half the cache by size.
 
 If you never hand-edit your target files &ndash; if they're purely generated &ndash; pass `--no-track-target-edits`
-(or set `"trackTargetEdits": false` in your config) and ALT stops recording it. Everything else still
+(or set `"trackTargetEdits": false` in your config) and ALT stops recording it, discarding anything a
+previous tracked run left behind so the space is actually reclaimed. Everything else still
 works: a key missing from a target file is still translated, and a changed reference value still triggers
 a re-translation. The only thing you give up is the "don't clobber my manual edit" guarantee.
 
