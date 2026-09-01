@@ -208,8 +208,24 @@ export async function runTranslation({ appState, options, log }) {
 
 		const cacheFilePath = path.resolve(outputDir, DEFAULT_CACHE_FILENAME)
 
+		// Eviction keys off the languages the PROJECT declares, not the ones this
+		// invocation happens to translate. `--target-languages en` is a legitimate
+		// one-off — a consuming project runs exactly that as an English-parity
+		// check on every reference edit — and reading it as "this project now has
+		// one language" deleted all 30 real languages out of a shared, committed
+		// cache, forcing ~188k re-translations. The union keeps a language the run
+		// adds on the command line from being evicted too.
+		//
+		// With no configured list there is nothing authoritative to compare
+		// against, so the empty array leaves pruneCache's own guard to skip
+		// eviction entirely rather than treat one CLI flag as the whole project.
+		const configuredLanguages = config.targetLanguages ?? []
+		const evictableAgainst = configuredLanguages.length
+			? [ ...new Set([ ...configuredLanguages, ...targetLanguages ]) ]
+			: []
+
 		log.V(`Attempting to load cache file from "${cacheFilePath}"`)
-		const readOnlyCache = await loadCache(cacheFilePath, { targetLanguages, referenceLanguage, log })
+		const readOnlyCache = await loadCache(cacheFilePath, { targetLanguages: evictableAgainst, referenceLanguage, log, trackTargetEdits })
 		log.D(`Loaded cache file`)
 
 		// Create a tmp dir for storing the .mjs reference file; we can't dynamically import .js files directly, so we make a copy...

@@ -116,6 +116,51 @@ export function migrateReferenceKeyHashes(cache) {
 	return { cache, canonical: Object.keys(canonical).length, overrides: overrideCount }
 }
 
+// Re-pick canonical from what the languages actually hold now.
+//
+// `setReferenceKeyHash` defines canonical on first write and never revises it,
+// which is fine until a reference string changes: canonical stays pinned to the
+// old hash and every language then stores an identical override for the new
+// one. That is precisely the per-language duplication canonical exists to
+// remove, and it compounds — one consuming project went from 10,433 overrides
+// to 92,059 in a single run, with canonical stuck at 6,242 keys.
+//
+// Running this on load bounds the damage: overrides are re-derived from the
+// materialized per-language view each time, so a key where everyone now agrees
+// collapses back to canonical alone instead of accumulating forever.
+export function recanonicalizeReferenceKeyHashes(cache, languages) {
+	// The materialized view is what each language would actually read, so
+	// rebuilding from it cannot change any lookup's answer — only where the
+	// answer is stored. A language with no entry for a key stays absent, and
+	// migrateReferenceKeyHashes turns that absence back into a tombstone.
+	const live = languages.filter(lang => typeof lang === 'string' && lang.length)
+	if (!live.length) return { cache, overridesBefore: 0, overridesAfter: 0 }
+
+	const overrides = cache.sourceKeyHashOverrides ?? {}
+	let overridesBefore = 0
+	for (const lang of Object.keys(overrides)) overridesBefore += Object.keys(overrides[lang]).length
+
+	const keys = new Set(Object.keys(cache.sourceKeyHashes ?? {}))
+	for (const lang of Object.keys(overrides)) for (const key of Object.keys(overrides[lang])) keys.add(key)
+
+	const materialized = {}
+	for (const lang of live) {
+		const entries = {}
+		for (const key of keys) {
+			const hash = getReferenceKeyHash(cache, lang, key)
+			if (typeof hash === 'string') entries[key] = hash
+		}
+		materialized[lang] = entries
+	}
+
+	cache.referenceKeyHashes = materialized
+	cache.sourceKeyHashes = {}
+	cache.sourceKeyHashOverrides = {}
+	const { overrides: overridesAfter } = migrateReferenceKeyHashes(cache)
+
+	return { cache, overridesBefore, overridesAfter }
+}
+
 // Sections of the cache that are keyed by target language at the top level.
 // Everything in them belongs to exactly one language, so anything under a
 // language we are no longer translating is dead weight.
@@ -225,7 +270,7 @@ export function migrateHashLengths(cache) {
 	return { cache, migrated }
 }
 
-export async function loadCache(path, { targetLanguages = [], referenceLanguage = null, log = null } = {}) {
+export async function loadCache(path, { targetLanguages = [], referenceLanguage = null, log = null, trackTargetEdits = true } = {}) {
 	const storedCache = await readJsonFile(path)
 	const cache = {
 		referenceHash: storedCache?.referenceHash ?? '',
@@ -247,5 +292,23 @@ export async function loadCache(path, { targetLanguages = [], referenceLanguage 
 	if (canonical && log) log.V(`Cache cleanup: folded referenceKeyHashes into ${canonical} canonical + ${overrides} override(s)`)
 	const { migrated } = migrateHashLengths(cache)
 	if (migrated && log) log.V(`Cache cleanup: shortened ${migrated} oversized hash(es)`)
-	return pruneCache({ cache, targetLanguages, referenceLanguage, log }).cache
+
+	// `state` exists only to protect hand-edited target values. With tracking
+	// off it is never written or consulted again, but a cache migrated from a
+	// tracked run still carries the whole blob and rewrites it every run — 9.7
+	// MB of a 15 MB file in one project. Drop it here so opting out actually
+	// reclaims the space instead of merely freezing it.
+	if (!trackTargetEdits && Object.keys(cache.state ?? {}).length) {
+		if (log) log.V(`Cache cleanup: dropped ${Object.keys(cache.state).length} state language(s) (target-edit tracking is off)`)
+		cache.state = {}
+	}
+
+	const pruned = pruneCache({ cache, targetLanguages, referenceLanguage, log }).cache
+
+	const languages = [ ...targetLanguages, ...(referenceLanguage ? [referenceLanguage] : []) ]
+	const { overridesBefore, overridesAfter } = recanonicalizeReferenceKeyHashes(pruned, languages)
+	if (log && overridesBefore !== overridesAfter) {
+		log.V(`Cache cleanup: re-canonicalized reference hashes, ${overridesBefore} override(s) -> ${overridesAfter}`)
+	}
+	return pruned
 }
